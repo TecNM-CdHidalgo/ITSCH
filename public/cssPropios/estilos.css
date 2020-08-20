@@ -1,0 +1,74 @@
+ /*Posiciona el menu blanco por debajo del menu del gobierno */
+#menuBlan{
+    position:sticky;
+    top: 8%; 
+}
+/*Hace que los sub-menus se vean por encima del menu azul*/
+#menuBlan{            
+    z-index: 1000; 
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;           
+}
+/*Cambia color de menu cuando el raton esta encima*/
+#menuBlan a:hover, #menuGob a:hover, #menuAzul a:hover{
+  color: DimGrey;
+}
+
+/*Posiciona el menu azul por debajo del menu blanco y edita fuentes*/
+#menuAzul{
+    z-index: 500; 
+    position: sticky;
+    top: 16%; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    font-size: 1.1em; 
+    letter-spacing: 1px;
+}
+/*Cambia tamaño de las banderas*/
+.imgBand{
+    height:65%;
+    width:8%;
+}
+/*Cambia tamaño de las imagenes del gobierno*/
+.imgGobi{
+    height:110%;
+    width:100%;
+}
+/*Cambia tamaño de */
+ .imgGobi2{
+    height:90%;
+    width:70%;
+}
+/*Desaparece el encabezado para pantallas pequeñas*/
+@media only screen and (max-width: 700px) {
+ .encab {
+    display: none !important;
+ }
+}
+
+/*footer de la pagina*/
+#foot { 
+    margin-top: 20px;      
+    width: 100%;
+    height: 300px;      
+    position: relative;
+    bottom: 0;
+}
+/*Css noticias*/
+.imgNotices{
+    width: 70%;
+    height: 85%
+}
+/*Css cuadros de noticias*/
+.noticias{
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+/*Css de los cuadros informativos*/
+.info{
+    background-color:  #EEEEEE; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
