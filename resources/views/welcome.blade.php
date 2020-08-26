@@ -3,20 +3,30 @@
 	{{--Carrusel--}}
 	<div id="carr" class="carousel slide" data-ride="carousel">
 		<ul class="carousel-indicators">
+			@php 
+				$ban=true;
+			@endphp
 			@foreach($noticias as $not)
 				@if($not->resaltar==1)
-					@if($loop->first)
-				    	<li data-target="#carr" data-slide-to="{{$not->id}}" class="active"></li>	
+					@if($ban)
+				    	<li data-target="#carr" data-slide-to="{{$not->id}}" class="active"></li>
+				    	@php 
+				    		$ban=false;
+				    	@endphp	
 				    @else
 						<li data-target="#carr" data-slide-to="{{$not->id}}"></li>
+
 				    @endif 
 				@endif   
 			@endforeach
 		</ul>
 		<div class="carousel-inner">
+			@php 
+				$ban=true;
+			@endphp
 			@foreach($noticias as $not)
 				@if($not->resaltar==1)
-					@if($loop->first)
+					@if($ban)
 						<div class="carousel-item active">
 							<a href="{{route('ver',$not->id)}}">
 							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">
@@ -26,6 +36,9 @@
 							    </div>  
 						    </a> 
 						</div>
+						@php 
+				    		$ban=false;
+				    	@endphp	
 					@else
 						<div class="carousel-item">
 						     <a href="{{route('ver',$not->id)}}">

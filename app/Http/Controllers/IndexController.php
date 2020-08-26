@@ -17,7 +17,9 @@ class IndexController extends Controller
     public function index()
     {
         $noticias = Noticias::orderBy('id','asc')->get();
-        $noticias2 = Noticias::orderBy('created_at','desc')->get();        
+       
+        $noticias2 = Noticias::orderBy('created_at','desc')->get(); 
+
         return View('welcome')
         ->with('noticias',$noticias)
         ->with('noticias2',$noticias2);

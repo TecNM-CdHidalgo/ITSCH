@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layouts.plant_admin')
 
 @section('titulo')
     Mi Perfil | Editar

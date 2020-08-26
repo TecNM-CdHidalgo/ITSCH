@@ -95,7 +95,7 @@
                     <p id="section-username" class="no-margins">{{ explode(" ",Auth::User()->name)[0] }}</p>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="#" class="dropdown-item">Mi perfil</a>
+                    <a href="{{route('admin.usuarios.mi_perfil')}}" class="dropdown-item">Mi perfil</a>
                     <a href="{{ route('logout')}}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Cerrar Sesión</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

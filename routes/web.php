@@ -12,11 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Rutas publicas
+Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
+
+Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
+
+
 
 Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
 
+
+//Rutas privadas
 Route::group(['middleware' => 'auth'],function(){
 	Route::get('/home', 'HomeController@index')->name('home');
 
@@ -36,5 +44,12 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('noticias/modificar/{id}','NoticiasController@update')->name('admin.noticias.modificar');
 	Route::get('noticias/eliminar','NoticiasController@destroy')->name('admin.noticias.eliminar');
 	Route::get('noticias/vista_previa/{id}','NoticiasController@view')->name('admin.noticias.ver');
+
+	//Rutas de perfil
+	Route::get('usuarios/perfil','PerfilController@index')->name('admin.usuarios.mi_perfil');
+    Route::get('usuarios/perfil/editar','PerfilController@miPerfilEditar')->name('admin.usuarios.mi_perfil_editar');
+    Route::post('usuarios/perfil/modificar','PerfilController@miPerfilModificar')->name('admin.usuarios.mi_perfil_modificar');
+    Route::get('usuarios/perfil/editar_password','PerfilController@miPerfilEditarPassword')->name('admin.usuarios.mi_perfil_editar_password');
+    Route::post('usuarios/perfil/modificar_password','PerfilController@miPerfilModificarPassword')->name('admin.usuarios.mi_perfil_modificar_password');
 
 });

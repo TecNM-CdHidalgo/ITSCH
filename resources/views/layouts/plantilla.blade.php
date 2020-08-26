@@ -154,9 +154,9 @@
           Oferta educativa
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
+          <a class="dropdown-item" href="{{route('oferta.sistemas')}}">Sistemas Computacionales</a>
+          <a class="dropdown-item" href="{{route('oferta.industrial')}}">Ingenieria Industrial</a>
+          <a class="dropdown-item" href="#">Ingenieria Mecatrónica</a>
         </div>
       </li>
       <li class="nav-item dropdown">

@@ -95,7 +95,7 @@
         {{--Menu de gobierno--}}
         @extends('layouts.menu_gob')
             
-        {{--Menu azul--}}
+        {{--Plantilla--}}
         @extends('layouts.plantilla')       
     </body>
     
