@@ -169,11 +169,11 @@ sup {
   top: -0.5em;
 }
 
-a {
-  color: #3490dc;
+/*a {
+  color: #000;
   text-decoration: none;
   background-color: transparent;
-}
+}*/
 
 a:hover {
   color: #1d68a7;

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Noticias;
+use App\ArchivoNoticia;
+use DB;
 
 class NoticiasController extends Controller
 {
@@ -55,6 +57,8 @@ class NoticiasController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
+        
        if(!Storage::has('public/noticias/imagenes')){
             Storage::makeDirectory('public/noticias/imagenes');
         }
@@ -62,6 +66,27 @@ class NoticiasController extends Controller
         if($article == null){
             return response()->json(array(['type' => 'error', 'message' => 'La noticia no existe']));
         }
+
+         //Codigo para guardar archivos 
+        if(!Storage::has('noticias/archivos')){
+            Storage::makeDirectory('noticias/archivos');
+        }
+
+        if($request->has('archivos')){
+            // Creamos un arrelglo con las extemsiones validas
+            $allowedfileExtension=['pdf','xls','xlsx','docx','doc'];
+            for ($i = 0; $i < count($request->archivos); $i++) {
+               $file = $request->archivos[$i];
+               // Obtenemos la extension original del archivo
+               $extension = strtolower($file->getClientOriginalExtension());
+               // Funcion para saber si la extension se encuentra dentro de las extensiones permitidas
+               $check=in_array($extension,$allowedfileExtension);
+               if(!$check){
+                   return response()->json(array(['type' => 'error', 'message' => 'La extension '. $extension.' no es valida']));
+               }
+            }
+        }
+
         if($request->has('imagen')){
             $file = $request->imagen;
             $imageExtension = $file->getClientOriginalExtension();
@@ -75,6 +100,33 @@ class NoticiasController extends Controller
             }else{
                 return response()->json(array(['type' => 'error', 'message' => 'La extension '.$imageExtension.' no es valida']));
             }
+        }          
+
+
+        if($request->has('archivos'))//Validamos si existe un archivo
+        {
+            DB::table('archivos_noticias')->where('id_not', '=', $id)->delete();
+            //Generamos la ruta donde se guardaran las imagenes de los articulos
+            Storage::deleteDirectory('public/noticias/archivos/'.$article->id);
+            $path=storage_path().'/app/public/noticias/archivos/'.$article->id.'/';
+            $path_to_verify = 'public/noticias/archivos/'.$article->id;
+            if(!Storage::has($path_to_verify)){
+                Storage::makeDirectory($path_to_verify);
+            }            
+            for ($i = 0; $i < count($request->archivos) ; $i++) {
+                //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
+                $file=$request->archivos[$i];
+                //Para evitar nombres repetidos en las imagenes, creamos un nombre antes de guardar
+                $name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
+                //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
+                $file->move($path,$name);
+
+                $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
+                $fileNot->id_not=$article->id;
+                $fileNot->nom_archivo=$name;//Obtiene el nombre de la imagen para guardarlo en la bd
+                $fileNot->save();//Guarda la evidencia en su tabla
+                
+            }
         }
         $article->titulo = $request->titulo;
         $article->contenido = $request->contenido;
@@ -83,6 +135,7 @@ class NoticiasController extends Controller
         $article->fecha_fin = $request->fecha_fin;
         $article->resaltar = $request->resaltar;
         $article->save();
+
         return response()->json(array(['type' => 'success', 'message' => 'Articulo modificado correctamente']));
     }
 
@@ -102,18 +155,21 @@ class NoticiasController extends Controller
         if($article == null){
             return back()->with('error','La noticia no existe');
         }
-        Storage::delete(['public/noticias/imagenes/'.$article->imagen]);
+        Storage::delete('public/noticias/imagenes/'.$article->imagen);
+        Storage::deleteDirectory('public/noticias/archivos/'.$article->id);
         Noticias::destroy($id);
         return redirect()->route('admin.noticias.inicio')->with('success'.'Noticia eliminada correctamente');
     }
 
     /*Funcion para dar de alta las noticias*/
     public function save(Request $request){  
-          
+        
         if(!Storage::has('noticias/imagenes')){
             Storage::makeDirectory('noticias/imagenes');
         }
+
         $article = new Noticias($request->all());
+
         if($request->has('imagen')){
             $file = $request->imagen;
             $imageExtension = $file->getClientOriginalExtension();
@@ -126,12 +182,58 @@ class NoticiasController extends Controller
             }else{
                 return response()->json(array(['type' => 'error', 'message' => 'La extension '.$imageExtension.' no es valida']));
             }
-        }
+        }     
+
         $article->autor = Auth::User()->name;             
         $article->fecha_pub = $request->fecha_pub;
         $article->fecha_fin = $request->fecha_fin;
         $article->resaltar = $request->resaltar;
         $article->save();
+
+        //Codigo para guardar archivos 
+        if(!Storage::has('noticias/archivos')){
+            Storage::makeDirectory('noticias/archivos');
+        }
+
+        if($request->has('archivos')){
+            // Creamos un arrelglo con las extemsiones validas
+            $allowedfileExtension=['pdf','xls','xlsx','docx'];
+            for ($i = 0; $i < count($request->archivos); $i++) {
+               $file = $request->archivos[$i];
+               // Obtenemos la extension original del archivo
+               $extension = strtolower($file->getClientOriginalExtension());
+               // Funcion para saber si la extension se encuentra dentro de las extensiones permitidas
+               $check=in_array($extension,$allowedfileExtension);
+               if(!$check){
+                   return response()->json(array(['type' => 'error', 'message' => 'La extension '. $extension.' no es valida']));
+               }
+            }
+        }
+
+        if($request->has('archivos'))//Validamos si existe un archivo
+        {
+            //Generamos la ruta donde se guardaran las imagenes de los articulos
+            $path=storage_path().'/app/public/noticias/archivos/'.$article->id.'/';
+            $path_to_verify = 'public/noticias/archivos/'.$article->id;
+            if(!Storage::has($path_to_verify)){
+                Storage::makeDirectory($path_to_verify);
+            }
+            for ($i = 0; $i < count($request->archivos) ; $i++) {
+                //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
+                $file=$request->archivos[$i];
+                //Para evitar nombres repetidos en las imagenes, creamos un nombre antes de guardar
+                $name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
+                //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
+                $file->move($path,$name);
+
+                $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
+                $fileNot->id_not=$article->id;
+                $fileNot->nom_archivo=$name;//Obtiene el nombre de la imagen para guardarlo en la bd
+                $fileNot->save();//Guarda la evidencia en su tabla
+                
+            }
+
+        }
         return response()->json(array(['type' => 'success', 'message' => 'Noticia creada correctamente']));
     }
 

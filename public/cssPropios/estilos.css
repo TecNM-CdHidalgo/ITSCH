@@ -1,7 +1,26 @@
- /*Posiciona el menu blanco por debajo del menu del gobierno */
+/*Tamaño de logos de carrera*/
+.logoCarrera{
+    height:50%;
+    width:50%;
+}
+/*Color de texto del menu de gobierno*/
+.menuGob_a{
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+/*Color de terto de las tarjetas colapsables*/
+.tarColaps{
+  color: #000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+
+/*Posiciona el menu blanco por debajo del menu del gobierno */
 #menuBlan{
     position:sticky;
-    top: 8%; 
+    top: 7%; 
 }
 /*Hace que los sub-menus se vean por encima del menu azul*/
 #menuBlan{            
@@ -15,11 +34,18 @@
   color: DimGrey;
 }
 
+/*Color del menu de gobierno*/
+#menuGob{
+    background-color: #13322B;
+    color: #FFF important;
+
+}
+
 /*Posiciona el menu azul por debajo del menu blanco y edita fuentes*/
 #menuAzul{
     z-index: 500; 
     position: sticky;
-    top: 16%; 
+    top: 14%; 
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;
     font-size: 1.1em; 
@@ -80,3 +106,901 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/*Imagen del footer del gobierno federal*/
+.footer-pleca {
+    background-color: #12322B;
+    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
+    background-repeat: repeat-x;
+}
+
+.main-footer {
+    background-color: #13322B;
+    min-height: 56px;
+    color: #FFF;
+    padding: 0px 0 0px;
+    text-align: left;
+    font-weight: 300
+}
+
+.main-footer .list-info {
+    line-height: auto;
+    /*background-color: #12322B;*/
+
+    /* background-image: url(https://framework-gb.cdn.gob.mx/landing/img/fondofooter3.svg); */
+    color: white;
+    background-size: cover;
+    background-position: bottom;
+    padding: 30px 10px 10px;
+    /*margin-bottom: 30px*/
+}
+
+.main-footer .list-info form label {
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 110% color: black;
+}
+
+.main-footer .list-info form .form-group-icon {
+    max-width: none;
+    font-size: 14px
+}
+
+.main-footer .list-info form .form-control {
+    font-size: 14px
+}
+
+.main-footer .list-info h5 {
+    font-weight: 300;
+    margin-bottom: 20px
+}
+
+.main-footer .list-info a {
+    color: #FFF;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.main-footer .list-info a.link-email {
+    color: #fff;
+    font-size: 14px
+}
+
+.main-footer .list-info p {
+    margin-bottom: 15px
+}
+
+.main-footer .list-info ul {
+    margin: 0 0 60px;
+    padding: 0
+}
+
+.main-footer .list-info ul li {
+    list-style-type: none;
+    margin: 0 0 2px;
+    padding: 0;
+    line-height: 110%
+}
+
+.main-footer .row>div {
+    margin-bottom: 15px
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 136%;
+    height: auto;
+    position: static
+}
+
+.gobmx-footer {
+    margin-top: 15px
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/*Estilo de las lineas hr*/
+
+hr.red {
+    margin: 10px 0 70px;
+    border-top-color: #DCE0E0;
+}
+
+hr.red:before {
+    width: 35px;
+    height: 5px;
+    background-color: #B38E5D;
+    position: absolute
+}
+.box a,
+hr.red:before {
+    display: block
+}
+.box.inverted:before,
+hr.red:before {
+    content: " "
+}
+
+/* Estilos de las tablas colapsables*/
+.ficha-collapse dl {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #919191;
+    margin-bottom: 25px;
+    padding-bottom: 20px
+}
+
+.ficha-collapse dl.last {
+    border-bottom: none;
+    margin-bottom: 40px
+}
+
+.ficha-collapse dl dd,
+.ficha-collapse dl dt {
+    display: table-cell;
+    vertical-align: top;
+    font-weight: 300
+}
+
+.ficha-collapse dl dt {
+    width: 48%
+}
+
+.ficha-collapse dl dd {
+    padding-left: 2%;
+    width: 48%
+}
+
+.ficha-collapse dl.dl-vertical {
+    display: block;
+    border-bottom: none
+}
+
+.ficha-collapse dl.dl-vertical dt {
+    margin-top: 10px;
+    font-weight: 600
+}
+
+.ficha-collapse dl.dl-vertical dd,
+.ficha-collapse dl.dl-vertical dt {
+    display: block;
+    width: auto;
+    padding: 0;
+    margin-bottom: 10px
+}
+
+.ficha-collapse dl.dl-vertical b {
+    font-weight: 600
+}
+
+.ficha-collapse .panel-heading {
+    padding: 20px 25px;
+    position: relative
+}
+
+.ficha-collapse .panel-heading:after,
+.ficha-collapse .panel-heading:before {
+    content: " ";
+    display: table
+}
+
+.ficha-collapse .panel-heading h4 {
+    margin-bottom: 0
+}
+
+.ficha-collapse .panel-title a {
+    font-size: 18px;
+    text-decoration: none
+}
+
+.ficha-collapse .panel-body {
+    padding: 30px
+}
+.collpase-button {
+    border: 1px solid #555;
+    outline: 0;
+    background: 0 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -15px
+}
+
+.collpase-button.collapsed:after,
+.collpase-button:before {
+    background-color: #777;
+    position: absolute;
+    display: block;
+    content: " "
+}
+
+.collpase-button:before {
+    width: 18px;
+    height: 1px;
+    top: 50%;
+    left: 5px
+}
+
+.collpase-button.collapsed:after {
+    width: 1px;
+    height: 18px;
+    top: 5px;
+    left: 50%
+}
+
+.collpase-button:focus {
+    outline: 0;
+    box-shadow: none
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd
+}
+/*Tipos de fuentes para la pagina*/
+body {
+    font-family: 'Montserrat';
+    /* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #404041;
+}
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gTD_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3g3D_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gbD_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gfD_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gnD_vx3rCs.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gTD_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3g3D_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gbD_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gfD_vx3rCubqg.woff2) format('woff2');
+unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gnD_vx3rCs.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+.h1, h1 {
+    font-size: 54px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 25px;
+    margin-bottom: 12.5px;
+}
+
+/*Decoracion de botones */
+
+.btn-primary {
+    border: 2px solid #9D2449;
+    box-shadow: 0 0 0 0 #9D2449;
+}
+
+.btn {   
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 300;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.428571429;
+   
+}
+.btn-primary {
+    color: #9D2449;
+    background-color: #FFF;    
+}
+button, select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+
+
+.btn,
+.btn-danger.active,
+.btn-danger:active,
+.btn-default.active,
+.btn-default:active,
+.btn-info.active,
+.btn-info:active,
+.btn-primary.active,
+.btn-primary:active,
+.btn-warning.active,
+.btn-warning:active,
+.btn.active,
+.btn:active,
+.dropdown-menu>.disabled>a:focus,
+.dropdown-menu>.disabled>a:hover,
+.form-control,
+.navbar-toggle,
+.open>.btn-danger.dropdown-toggle,
+.open>.btn-default.dropdown-toggle,
+.open>.btn-info.dropdown-toggle,
+.open>.btn-primary.dropdown-toggle,
+.open>.btn-warning.dropdown-toggle {
+    background-image: none
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+    color: #FFFFFF;
+    background-color: #9D2449;
+    border-color: #9D2449
+}
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:hover,
+.open>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #9D2449;
+    border-color: #9D2449
+}
+
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.btn-primary.dropdown-toggle.focus,
+.open>.btn-primary.dropdown-toggle:focus,
+.open>.btn-primary.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #9D2449;
+    border-color: #9D2449
+}
+
+.btn-primary.disabled,
+.btn-primary.disabled.active,
+.btn-primary.disabled.focus,
+.btn-primary.disabled:active,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled],
+.btn-primary[disabled].active,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:active,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-primary.active,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:hover {
+    color: #FFF;
+    background-color: #9D2449;
+    border-color: #9D2449
+}
+
+.btn-primary .badge {
+    color: #4A90E2;
+    background-color: #fff
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+
+.btn-success.focus,
+.btn-success:focus {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #255625
+}
+
+.btn-success.active,
+.btn-success:active,
+.btn-success:hover,
+.open>.btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439
+}
+
+.btn-success.active.focus,
+.btn-success.active:focus,
+.btn-success.active:hover,
+.btn-success:active.focus,
+.btn-success:active:focus,
+.btn-success:active:hover,
+.open>.btn-success.dropdown-toggle.focus,
+.open>.btn-success.dropdown-toggle:focus,
+.open>.btn-success.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #398439;
+    border-color: #255625
+}
+
+.btn-success.active,
+.btn-success:active,
+.open>.btn-success.dropdown-toggle {
+    background-image: none
+}
+
+.btn-success.disabled,
+.btn-success.disabled.active,
+.btn-success.disabled.focus,
+.btn-success.disabled:active,
+.btn-success.disabled:focus,
+.btn-success.disabled:hover,
+.btn-success[disabled],
+.btn-success[disabled].active,
+.btn-success[disabled].focus,
+.btn-success[disabled]:active,
+.btn-success[disabled]:focus,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success,
+fieldset[disabled] .btn-success.active,
+fieldset[disabled] .btn-success.focus,
+fieldset[disabled] .btn-success:active,
+fieldset[disabled] .btn-success:focus,
+fieldset[disabled] .btn-success:hover {
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+
+.btn-success .badge {
+    color: #5cb85c;
+    background-color: #fff
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.btn-info.focus,
+.btn-info:focus {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #1b6d85
+}
+
+.btn-info.active,
+.btn-info:active,
+.btn-info:hover,
+.open>.btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc
+}
+
+.btn-info.active.focus,
+.btn-info.active:focus,
+.btn-info.active:hover,
+.btn-info:active.focus,
+.btn-info:active:focus,
+.btn-info:active:hover,
+.open>.btn-info.dropdown-toggle.focus,
+.open>.btn-info.dropdown-toggle:focus,
+.open>.btn-info.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #269abc;
+    border-color: #1b6d85
+}
+
+.btn-info.disabled,
+.btn-info.disabled.active,
+.btn-info.disabled.focus,
+.btn-info.disabled:active,
+.btn-info.disabled:focus,
+.btn-info.disabled:hover,
+.btn-info[disabled],
+.btn-info[disabled].active,
+.btn-info[disabled].focus,
+.btn-info[disabled]:active,
+.btn-info[disabled]:focus,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info,
+fieldset[disabled] .btn-info.active,
+fieldset[disabled] .btn-info.focus,
+fieldset[disabled] .btn-info:active,
+fieldset[disabled] .btn-info:focus,
+fieldset[disabled] .btn-info:hover {
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.btn-info .badge {
+    color: #5bc0de;
+    background-color: #fff
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+
+.btn-warning.focus,
+.btn-warning:focus {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #985f0d
+}
+
+.btn-warning.active,
+.btn-warning:active,
+.btn-warning:hover,
+.open>.btn-warning.dropdown-toggle {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512
+}
+
+.btn-warning.active.focus,
+.btn-warning.active:focus,
+.btn-warning.active:hover,
+.btn-warning:active.focus,
+.btn-warning:active:focus,
+.btn-warning:active:hover,
+.open>.btn-warning.dropdown-toggle.focus,
+.open>.btn-warning.dropdown-toggle:focus,
+.open>.btn-warning.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #d58512;
+    border-color: #985f0d
+}
+
+.btn-warning.disabled,
+.btn-warning.disabled.active,
+.btn-warning.disabled.focus,
+.btn-warning.disabled:active,
+.btn-warning.disabled:focus,
+.btn-warning.disabled:hover,
+.btn-warning[disabled],
+.btn-warning[disabled].active,
+.btn-warning[disabled].focus,
+.btn-warning[disabled]:active,
+.btn-warning[disabled]:focus,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning,
+fieldset[disabled] .btn-warning.active,
+fieldset[disabled] .btn-warning.focus,
+fieldset[disabled] .btn-warning:active,
+fieldset[disabled] .btn-warning:focus,
+fieldset[disabled] .btn-warning:hover {
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+
+.btn-warning .badge {
+    color: #f0ad4e;
+    background-color: #fff
+}
+
+.btn-danger {
+    color: #8a6d3b;
+    background-color: #FFFFFF;
+    border-color: #b38e5d
+}
+
+.btn-danger.focus,
+.btn-danger:focus {
+    color: #fff;
+    background-color: #b38e5d;
+    border-color: #b38e5d
+}
+
+.btn-danger.active,
+.btn-danger:active,
+.btn-danger:hover,
+.open>.btn-danger.dropdown-toggle {
+    color: #fff;
+    background-color: #b38e5d;
+    border-color: #b38e5d
+}
+
+.btn-danger.active.focus,
+.btn-danger.active:focus,
+.btn-danger.active:hover,
+.btn-danger:active.focus,
+.btn-danger:active:focus,
+.btn-danger:active:hover,
+.open>.btn-danger.dropdown-toggle.focus,
+.open>.btn-danger.dropdown-toggle:focus,
+.open>.btn-danger.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #b38e5d;
+    border-color: #b38e5d
+}
+
+.btn-danger.disabled,
+.btn-danger.disabled.active,
+.btn-danger.disabled.focus,
+.btn-danger.disabled:active,
+.btn-danger.disabled:focus,
+.btn-danger.disabled:hover,
+.btn-danger[disabled],
+.btn-danger[disabled].active,
+.btn-danger[disabled].focus,
+.btn-danger[disabled]:active,
+.btn-danger[disabled]:focus,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger,
+fieldset[disabled] .btn-danger.active,
+fieldset[disabled] .btn-danger.focus,
+fieldset[disabled] .btn-danger:active,
+fieldset[disabled] .btn-danger:focus,
+fieldset[disabled] .btn-danger:hover {
+    background-color: #b38e5d;
+    border-color: #b38e5d
+}
+
+.btn-danger .badge {
+    color: #d9534f;
+    background-color: #fff
+}
+
+.btn-link {
+    color: #12C;
+    font-weight: 400;
+    border-radius: 0
+}
+
+.btn-link,
+.btn-link.active,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn-link,
+.btn-link:active,
+.btn-link:focus,
+.btn-link:hover {
+    border-color: transparent
+}
+
+.btn-link:focus,
+.btn-link:hover {
+    color: #7B9CF0;
+    text-decoration: underline;
+    background-color: transparent
+}
+
+.btn-link[disabled]:focus,
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:focus,
+fieldset[disabled] .btn-link:hover {
+    color: #777;
+    text-decoration: none
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+    font-size: 21px;
+    line-height: 1.3333333;
+    border-radius: 6px
+}
+
+.btn-block {
+    display: block;
+    width: 100%
+}
+
+.btn-block+.btn-block {
+    margin-top: 5px
+}
+
+input[type=button].btn-block,
+input[type=reset].btn-block,
+input[type=submit].btn-block {
+    width: 100%
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+.panel-default {
+    border-color: #ddd;
+}
+/*Diseño de los modals de informacion*/
+.modal-header {
+    background-color: #393C3E;
+    color: #fff;    
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    min-height: 16.43px;    
+}
+
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid transparent;
+    background-color: rgba(0,0,0,.0001) !important;
+}
+
+.modal-header .close {
+    margin-top: -2px
+}
+
+
+.modal-body {
+    position: relative
+}
+
+.btn-default {
+    color: #000;
+    background-color: #fff; 
+    border: 2px solid #6F7271;
+    box-shadow: 0 0 0 0 #6F7271;   
+}
+
+.btn-default:hover{
+    color: #FFF;
+    background-color: #6F7271;
+    border-color: #6F7271
+}
+
+
+
+
+
+
+
+
+
+
+

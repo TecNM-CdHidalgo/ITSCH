@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 //Rutas publicas
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
-
 Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
-
+Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');
 
 
 Route::get('/','IndexController@index')->name('inicio');

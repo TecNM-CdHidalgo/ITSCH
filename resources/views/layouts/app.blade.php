@@ -98,5 +98,7 @@
         {{--Plantilla--}}
         @extends('layouts.plantilla')       
     </body>
+
+    
     
 </html>

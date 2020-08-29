@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 use App\Noticias;
 
 class IndexController extends Controller
@@ -16,9 +17,17 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $noticias = Noticias::orderBy('id','asc')->get();
+        $fec_act = Carbon::now()->toDateString();
        
-        $noticias2 = Noticias::orderBy('created_at','desc')->get(); 
+        $noticias = Noticias::whereDate('fecha_pub','<=',$fec_act)
+        ->whereDate('fecha_fin','>=',$fec_act)
+        ->orderBy('id','asc')->get();
+
+ 
+       
+        $noticias2 = Noticias::whereDate('fecha_pub','<=',$fec_act)
+        ->whereDate('fecha_fin','>=',$fec_act)
+        ->orderBy('id','desc')->get();
 
         return View('welcome')
         ->with('noticias',$noticias)
