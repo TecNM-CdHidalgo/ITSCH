@@ -22,14 +22,60 @@
     </div>
     <form action="#" method="POST" id="submitForm" enctype="multipart/form-data">
         @csrf
-        <div class="form-group">
-            <label for="nombre">Titulo</label>
-            <input name="titulo" type="text" class="form-control" id="nombre" placeholder="Titulo del articulo" required>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Titulo</span>
+                    </div>            
+                    <input name="titulo" type="text" class="form-control" id="nombre" placeholder="Titulo del articulo" required>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                       <span class="input-group-text">Tipo de publicación</span>
+                    </div>
+                    <select class="form-control" id="tipo" required name="resaltar">  
+                        <option value="">Selecciona un tipo</option>
+                        <option value="0">Sin resaltar</option>
+                        <option value="1">Con resalte</option>
+                    </select>
+                </div>               
+            </div>           
+            <div class="col-sm-2">
+                <div class="box">
+                    <input type="file" name="imagen" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} archivos seleccionados" required/>
+                    <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Imágen&hellip;</span></label>
+                </div>
+            </div>
         </div>
-        <div class="box">
-            <input type="file" name="imagen" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} archivos seleccionados" required/>
-            <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Imágen de encabezado&hellip;</span></label>
+        <div class="row">
+            <div class="col-sm-4">
+                 <div class="input-group mb-3 input-group-sm">
+                     <div class="input-group-prepend">
+                       <span class="input-group-text">Fecha de inicio de la publicación</span>
+                    </div>
+                    <input class="form-control" type="date" name="fecha_pub" required value="@php echo date('Y-m-d'); @endphp">
+                </div>
+            </div>
+            <div class="col-sm-4">
+               <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                       <span class="input-group-text">Fecha de termino de la publicación</span>
+                    </div>
+                    <input class="form-control" type="date" name="fecha_fin" required value="@php echo date('Y-m-d'); @endphp">
+                </div>               
+            </div>
+            <div class="col-sm-4">                
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile" name="archivos[]" data-multiple-caption="{count} archivos seleccionados" multiple>
+                  <label class="custom-file-label" for="customFile">Selecciona los archivos</label>
+                </div>
+            </div>
         </div>
+        
+        
         <div class="input-group mb-2">
             <div class="input-group-prepend">
                 <span class="input-group-text">Sintesis</span>
@@ -37,48 +83,24 @@
             <textarea class="form-control" aria-label="With textarea" name="sintesis" required placeholder="Una breve resumen del contenido del articulo"></textarea>
         </div>
         <textarea id="input" name="contenido" rows="10" required></textarea>
-        <br>
-        <div class="input-group mb-3 input-group-sm">
-             <div class="input-group-prepend">
-               <span class="input-group-text">Fecha de inicio de la publicación</span>
-            </div>
-            <input class="form-control" type="date" name="fecha_pub" required value="@php echo date('Y-m-d'); @endphp">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-               <span class="input-group-text">Fecha de termino de la publicación</span>
-            </div>
-            <input class="form-control" type="date" name="fecha_fin" required value="@php echo date('Y-m-d'); @endphp">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-               <span class="input-group-text">Tipo de publicación</span>
-            </div>
-            <select class="form-control" id="tipo" required name="resaltar">  
-                <option value="">Selecciona un tipo</option>
-                <option value="0">Sin resaltar</option>
-                <option value="1">Resaltado</option>
-            </select>
-        </div>
+        <div class="d-flex">
+            <button type="submit" id="submit-all" class="btn btn-primary mt-2 ml-auto"> Guardar </button>
+        </div>     
         
-        <div class="form-group" style="width:200px; margin-left:auto; margin-right:auto;">
-            <input type="file" name="archivos[]" id="archivos" class="inputfile inputfile-4 subida" data-multiple-caption="{count} archivos seleccionados" multiple required />
-            <label for="archivos" class="subida">
-                <figure class="subida">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" class="subida">
-                        <path class="subida" d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
-                    </svg>
-                </figure> 
-                <span class="subida">Seleccionar archivos&hellip;</span>
-            </label>
-        </div>
-        
-        <button type="submit" id="submit-all" class="btn btn-primary mt-2"> Guardar </button>
     </form>
     <div style="padding: 100px;"></div>
 @endsection
 
 @section('js')
+
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+
     <script src="{{ asset('editor/jquery.cleditor.min.js') }}"></script>
     <script src="{{ asset('CustomFileInputs/js/custom-file-input.js') }}"></script>
     <script>

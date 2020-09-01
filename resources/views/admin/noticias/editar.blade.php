@@ -61,7 +61,7 @@
         </div>
 
         <div class="form-group" style="width:200px; margin-left:auto; margin-right:auto;">
-            <input type="file" name="archivos[]" id="archivos" class="inputfile inputfile-4 subida" data-multiple-caption="{count} archivos seleccionados" multiple required />
+            <input type="file" name="archivos[]" id="archivos" class="inputfile inputfile-4 subida" data-multiple-caption="{count} archivos seleccionados" multiple />
             <label for="archivos" class="subida">
                 <figure class="subida">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" class="subida">

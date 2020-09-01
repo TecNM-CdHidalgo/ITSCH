@@ -93,7 +93,9 @@ class NoticiasController extends Controller
             $imageExtension = strtolower($imageExtension);
             if($imageExtension == 'jpg' || $imageExtension == 'png' || $imageExtension == 'jpeg'){
                 $path = storage_path().'/app/public/noticias/imagenes/';
+                //Cambiar el nombre original por uno diferente en el servidor
                 $name = 'noticia_'.time().'.'.strtolower($imageExtension);
+                //$name = 
                 $file->move($path,$name);
                 Storage::delete(['public/noticias/imagenes/'.$article->imagen]);
                 $article->imagen = $name;
@@ -117,7 +119,8 @@ class NoticiasController extends Controller
                 //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
                 $file=$request->archivos[$i];
                 //Para evitar nombres repetidos en las imagenes, creamos un nombre antes de guardar
-                $name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
+                //$name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
+                 $name=$file->getClientOriginalName();//Obtenemos el nombre original de los archivos
                 //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
                 $file->move($path,$name);
 
@@ -161,6 +164,7 @@ class NoticiasController extends Controller
         return redirect()->route('admin.noticias.inicio')->with('success'.'Noticia eliminada correctamente');
     }
 
+
     /*Funcion para dar de alta las noticias*/
     public function save(Request $request){  
         
@@ -176,7 +180,8 @@ class NoticiasController extends Controller
             $imageExtension = strtolower($imageExtension);
             if($imageExtension == 'jpg' || $imageExtension == 'png' || $imageExtension == "jpeg"){
                 $path = storage_path().'/app/public/noticias/imagenes/';
-                $name = 'noticia_'.time().'.'.strtolower($imageExtension);
+                //Cambiar nombre por uno diferente en el servidor
+                $name = 'noticia_'.time().'.'.strtolower($imageExtension);                
                 $file->move($path,$name);
                 $article->imagen = $name;
             }else{
@@ -197,7 +202,7 @@ class NoticiasController extends Controller
 
         if($request->has('archivos')){
             // Creamos un arrelglo con las extemsiones validas
-            $allowedfileExtension=['pdf','xls','xlsx','docx'];
+            $allowedfileExtension=['pdf','xls','xlsx','docx','doc'];
             for ($i = 0; $i < count($request->archivos); $i++) {
                $file = $request->archivos[$i];
                // Obtenemos la extension original del archivo
@@ -212,7 +217,12 @@ class NoticiasController extends Controller
 
         if($request->has('archivos'))//Validamos si existe un archivo
         {
-            //Generamos la ruta donde se guardaran las imagenes de los articulos
+            //Modificamos la noticia para saber que tiene archivos agregados               
+           $arch = Noticias::find($article->id);
+           $arch->archivos = 1;  
+           $arch->save();
+
+            //Generamos la ruta donde se guardaran los archivos de las noticias
             $path=storage_path().'/app/public/noticias/archivos/'.$article->id.'/';
             $path_to_verify = 'public/noticias/archivos/'.$article->id;
             if(!Storage::has($path_to_verify)){
@@ -221,8 +231,9 @@ class NoticiasController extends Controller
             for ($i = 0; $i < count($request->archivos) ; $i++) {
                 //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
                 $file=$request->archivos[$i];
-                //Para evitar nombres repetidos en las imagenes, creamos un nombre antes de guardar
-                $name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
+                //Para evitar nombres repetidos en las noticias, creamos un nombre antes de guardar
+                //$name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
+                $name=$file->getClientOriginalName();//Obtenemos el nombre original de los archivos
                 //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
                 $file->move($path,$name);
 
@@ -232,7 +243,7 @@ class NoticiasController extends Controller
                 $fileNot->save();//Guarda la evidencia en su tabla
                 
             }
-
+          
         }
         return response()->json(array(['type' => 'success', 'message' => 'Noticia creada correctamente']));
     }
@@ -244,6 +255,10 @@ class NoticiasController extends Controller
             return back()->with('error','La noticia que estas buscando no existe');
         }
         $article = Noticias::find($id);
-        return View('admin.noticias.ver')->with('articulo',$article);
+        $archivos=ArchivoNoticia::where('id_not','=',$id)->get();
+
+        return View('admin.noticias.ver')
+        ->with('archivos',$archivos)
+        ->with('articulo',$article);
     }
 }
