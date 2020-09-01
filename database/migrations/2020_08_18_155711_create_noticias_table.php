@@ -23,7 +23,7 @@ class CreateNoticiasTable extends Migration
             $table->date('fecha_pub');
             $table->date('fecha_fin');
             $table->enum('resaltar', [0,1])->default(0);
-            $table->enum('archivos', [0,1])->default(0);
+            $table->boolean('arch_adj')->default(false);
             $table->timestamps();
         });
         Storage::makeDirectory('noticias/imagenes');

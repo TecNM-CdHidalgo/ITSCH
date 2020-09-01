@@ -86,7 +86,11 @@
 		    </div>  
 		    <div class="row">
 		    	<div class="col-sm-3">
-		    		Archivos
+		    		@if($not->arch_adj)
+			    		<a href="{{route('ver',$not->id)}}">
+			    			Archivos adjuntos.....
+			    		</a>
+		    		@endif
 		    	</div>
 		    	<div class="col-sm-3 blockquote-footer">
 		    		<p>Inicio: {{$not->fecha_pub}}</p>

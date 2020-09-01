@@ -166,7 +166,8 @@ class NoticiasController extends Controller
 
 
     /*Funcion para dar de alta las noticias*/
-    public function save(Request $request){  
+    public function save(Request $request){ 
+
         
         if(!Storage::has('noticias/imagenes')){
             Storage::makeDirectory('noticias/imagenes');
@@ -192,8 +193,9 @@ class NoticiasController extends Controller
         $article->autor = Auth::User()->name;             
         $article->fecha_pub = $request->fecha_pub;
         $article->fecha_fin = $request->fecha_fin;
-        $article->resaltar = $request->resaltar;
-        $article->save();
+        $article->resaltar = $request->resaltar;          
+        //$article->save();
+       
 
         //Codigo para guardar archivos 
         if(!Storage::has('noticias/archivos')){
@@ -215,13 +217,14 @@ class NoticiasController extends Controller
             }
         }
 
+
         if($request->has('archivos'))//Validamos si existe un archivo
         {
-            //Modificamos la noticia para saber que tiene archivos agregados               
-           $arch = Noticias::find($article->id);
-           $arch->archivos = 1;  
-           $arch->save();
 
+           //Modificamos la noticia para saber que tiene archivos agregados             
+           $article->arch_adj = 1;  
+           $article->save();
+           //return response()->json($request->has('archivos')); Comentario para consola AJAX
             //Generamos la ruta donde se guardaran los archivos de las noticias
             $path=storage_path().'/app/public/noticias/archivos/'.$article->id.'/';
             $path_to_verify = 'public/noticias/archivos/'.$article->id;
@@ -245,8 +248,14 @@ class NoticiasController extends Controller
             }
           
         }
+        else
+        {
+             $article->save();
+        }
         return response()->json(array(['type' => 'success', 'message' => 'Noticia creada correctamente']));
     }
+
+
 
     /*Para visualizar las noticias nuevas*/
     public function view($id){
