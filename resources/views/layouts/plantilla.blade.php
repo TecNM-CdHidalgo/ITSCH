@@ -5,7 +5,7 @@
   <div class="col-sm-7">
     <div class="row encab">
       <div class="col-sm-1">
-        
+
       </div>
       <div class="col-sm-4">
         <a href="https://www.gob.mx" target="_blank" id="placa_1">
@@ -22,7 +22,7 @@
           <img loading='lazy' class="imgGobi2" src="{{ asset('images/placa_tecnm.jpg') }}" alt="TecNM">
         </a>
       </div>
-    </div>    
+    </div>
   </div>
 
   {{--Banderas--}}
@@ -35,7 +35,7 @@
     </a>
     <a href="#" title="Calendario Académico" target="_blank">
       <img loading='lazy' class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
-    </a>      
+    </a>
     <a href='?vista=&a#googtrans(es|zh-CN)'>
       <img class="imgBand" src="{{ asset('images/banderas/china_icono.png') }}" title='Mandarín'
         alt='Idioma Mandarín'>
@@ -60,19 +60,19 @@
     <a title="Disminuir letra"  style="color:#1B396A" onclick="zoomOut()">A-</a>
     <a title="Restablecer tamaño"  style="color:#1B396A" onclick="zoomReset()">A </a>
   </div>
-  
+
 </div>
-    
-    
+
+
 
 
 {{--Menu blanco--}}
-<nav class="navbar navbar-expand-sm navbar-light bg-white" id="menuBlan">  
+<nav class="navbar navbar-expand-sm navbar-light bg-white" id="menuBlan">
  {{--Logo--}}
   <a class="navbar-brand" href="{{route('inicio')}}">
     <img loading='lazy'  src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:25px; height: 30px;" />
   </a>
-         
+
   <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -107,7 +107,7 @@
           <a class="dropdown-item" href="#">Link 2</a>
           <a class="dropdown-item" href="#">Link 3</a>
         </div>
-      </li>  
+      </li>
       <li class="nav-item dropdown  ml-auto">
         <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Transparecia
@@ -120,15 +120,15 @@
       </li>
       <li class="nav-item ml-auto">
         <a href="https://cdhidalgo.tecnm.mx:8081/moodle/" class="nav-link active">Moodle</a>
-      </li>  
+      </li>
     </ul>
-  </div>  
-</nav> 
+  </div>
+</nav>
 
 
 
 {{--Menu azul--}}
-<nav class="navbar navbar-expand-sm navbar-dark" style='background-color: #1B396A;' id="menuAzul"> 
+<nav class="navbar navbar-expand-sm navbar-dark" style='background-color: #1B396A;' id="menuAzul">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -158,6 +158,7 @@
           <a class="dropdown-item" href="{{route('oferta.industrial')}}">Ingenieria Industrial</a>
           <a class="dropdown-item" href="#">Ingenieria Mecatrónica</a>
           <a class="dropdown-item" href="{{route('oferta.bioquimica')}}">Ingenieria Bioquímica</a>
+            <a class="dropdown-item" href="{{route('oferta.nano')}}">Ingenieria Nanotecnologia</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -169,7 +170,7 @@
           <a class="dropdown-item" href="#">Link 2</a>
           <a class="dropdown-item" href="#">Link 3</a>
         </div>
-      </li>  
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Vinculación
@@ -179,7 +180,7 @@
           <a class="dropdown-item" href="#">Link 2</a>
           <a class="dropdown-item" href="#">Link 3</a>
         </div>
-      </li>  
+      </li>
     </ul>
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -187,18 +188,18 @@
         @guest
             <li class="nav-item">
                 <a class="nav-link active" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
-            </li>           
+            </li>
         @else
-            <li class="nav-item dropdown">                        
+            <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
-                </a>                           
+                </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a href="{{ route('login') }}" class="dropdown-item">
                       Panel de administración
                     </a>
-                    
+
                     <a class="dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
@@ -209,10 +210,10 @@
                         @csrf
                     </form>
                 </div>
-            </li>                                    
+            </li>
         @endguest
     </ul>
-  </div>  
+  </div>
 </nav>
 
 
@@ -224,9 +225,9 @@
 </div>
 <div class="row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-10">          
-      <section>     
-        @yield('content') 
+    <div class="col-sm-10">
+      <section>
+        @yield('content')
       </section>
     </div>
     <div class="col-sm-1"></div>
@@ -234,7 +235,7 @@
 
 
 {{--Footer--}}
-<footer class="main-footer">     
+<footer class="main-footer">
     <div class="list-info">
       <div class="container">
         <div class="row">
@@ -301,7 +302,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
     <div class="container-fluid footer-pleca">
       <div class="row">
         <div class="col">

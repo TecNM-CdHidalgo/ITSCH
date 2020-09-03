@@ -114,7 +114,7 @@
 
 
             <tr>
-                <th scope="row">Los egresados desarrollarán actividades de docencia facilitando el desarrollo de la sociedad.</td>
+                <td scope="row">Los egresados desarrollarán actividades de docencia facilitando el desarrollo de la sociedad.</td>
                 <td>El egresado se encontrará realizando actividades de docencia en nivel medio superior y superior. </td>
                 <td>20% de los egresados serán docentes. </td>
 
@@ -213,7 +213,7 @@
                 </div>
                 <div class="panel-collapse collapse in" id="panel-01">
                     <div class="panel-body">
-                        <div class="table-responsive"> 
+                        <div class="table-responsive">
                             <table class="table table-hover">
                             <tr>
                                 <th>Archivo</th>
@@ -225,12 +225,12 @@
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
                                 <td>1. BTG-2001 Biología Molecular</td>
-                                <td class="text-center">                                      
+                                <td class="text-center">
                                     <a href="esp2020/1. BTG-2001 Biología Molecular.pdf">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
-                                    </a>                                    
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
@@ -238,12 +238,12 @@
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
                                 <td>2. BTD-2002 Fisiotecnia vegetal.pdf</td>
-                                <td class="text-center">                                  
+                                <td class="text-center">
                                     <a href="esp2020/2. BTD-2002 Fisiotecnia vegetal.pdf">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
-                                    </a>                                
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
@@ -280,11 +280,11 @@
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
-                                    </a>                                
+                                    </a>
                                 </td>
                             </tr>
                             </table>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,7 +305,7 @@
                 </div>
                 <div class="panel-collapse collapse in" id="panel-02">
                     <div class="panel-body">
-                        <div class="table-responsive"> 
+                        <div class="table-responsive">
                             <table class="table table-hover">
                             <tr>
                                 <th>Archivo</th>
@@ -322,13 +322,13 @@
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
                                     </a>
-                                </td>  
+                                </td>
                             </tr>
                             <tr>
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 <td>AC002 Calculo Integral</td>
-                                <td class="text-center">                                
+                                <td class="text-center">
                                     <a href="Progstu/AC002 Calculo Integral.pdf">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
@@ -360,14 +360,14 @@
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
                                     </a></td>
-                                </td>
+
                             </tr>
                             <tr>
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
                                 <td>AC005 Ecuaciones Diferenciales</td>
-                                <td class="text-center">                                
+                                <td class="text-center">
                                     <a href="Progstu/AC005 Ecuaciones Diferenciales.pdf">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
@@ -649,7 +649,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-center"><i class='fas fa-file-download' style='font-size:20px'></i></span></td>
+                                <td class="text-center"><i class='fas fa-file-download' style='font-size:20px'></i></td>
                                 <td>Comportamiento Organizacional</td>
                                 <td class="text-center">
                                     <a href="Progstu/Comportamiento Organizacional.pdf">
@@ -917,7 +917,7 @@
                         <tr>
                             <th scope="row">Lizeth Yazmín Soria Leal</th>
                             <td>JEFA DE DIVISIÓN</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -926,7 +926,7 @@
                         <tr>
                             <th scope="row">Arturo Barajas Mendiola</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -935,7 +935,7 @@
                         <tr>
                             <th scope="row">Cynthia Yaneli Bartolo Guzmán</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -944,7 +944,7 @@
                         <tr>
                             <th scope="row">Mauricio Nahuam Chávez Avilés</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -953,7 +953,7 @@
                         <tr>
                             <th scope="row">Irving Hernández Hernández</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -962,7 +962,7 @@
                         <tr>
                             <th scope="row">Yhoana Laura León Márquez</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -971,7 +971,7 @@
                         <tr>
                             <th scope="row">Luis Alberto Madrigal Pérez</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -980,7 +980,7 @@
                         <tr>
                             <th scope="row">Salvador Orozco Montes</th>
                             <td>DOCENTE</td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -1005,7 +1005,7 @@
                         <tr>
                             <th scope="row">José Alberto Bolaños Guijosa</th>
                             <td>LABORATORISTAS </td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal10" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -1013,7 +1013,7 @@
                         <tr>
                             <th scope="row">Ernesto Alonso Ruiz Hernández</th>
                             <td>LABORATORISTAS </td>
-                            <td> 
+                            <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal11" type="button">
                                     <i class='fas fa-info-circle' style='font-size:20px'></i>
                                 </button>
@@ -1040,7 +1040,7 @@
                     <div class="modal-body">
                         <h4>Formación:</h4>
                         <p>    Ingeniera Bioquímica con especialidad en Alimentos. Maestra en Ciencias en Ingeniería Ambiental. Miembro del Cuerpo Académico en Formación “Bioingeniería” del TecNM campus Ciudad Hidalgo.</p>
-                    
+
                         <h4>E-mail:</h4>
                         <div class="form-group">
                             <p>lsoria@cdhidalgo.tecnm.mx</p>
@@ -1053,7 +1053,7 @@
                         <div class="form-group">
                             <p>Biorremediación microbiana de cuerpos de agua y suelo contaminados por compuestos xenobióticos.</p>
                         </div>
-                    </div>               
+                    </div>
                     <div class="modal-footer ">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
@@ -1061,7 +1061,7 @@
             </div>
         </div>
 
-  
+
 
 
         <div class="modal fade" id="exampleModal1">
@@ -1076,7 +1076,7 @@
                     <div class="modal-body">
                         <h4>Formación:</h4>
                         <p>    Licenciado en Ciencias Físico-Matemáticas. Maestro en Psicopedagogía y Docencia en Educación Media Superior y Superior. </p>
-                    
+
                         <h4>E-mail:</h4>
                         <div class="form-group">
                             <p>abarajam@cdhidalgo.tecnm.mx</p>
@@ -1095,7 +1095,7 @@
                             <p>Aprendizaje basado en problemas aplicado a asignaturas de ciencias básicas.   </p>
 
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
@@ -1128,11 +1128,11 @@
                             <p>Diseño de ingeniería con operaciones unitarias.   </p>
 
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>  
-                </div>              
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1148,7 +1148,7 @@
                     </div>
                     <div class="modal-body">
                         <h4>Formación:</h4>
-                        <p>   Licenciado en Químico Farmacobiología. Maestro en Ciencias en Biología Experimental. Doctor en Ciencias Biológicas opción Biología Experimental. Jefe del Laboratorio de Bioquímica y Biología Molecular. Líder del Cuerpo Académico en Formación “Bioingeniería” del TecNM campus Ciudad Hidalgo. Reconocimiento al Perfil deseable PROMEP. Cultiva la línea de investigación “Biotecnología”.</p>                   
+                        <p>   Licenciado en Químico Farmacobiología. Maestro en Ciencias en Biología Experimental. Doctor en Ciencias Biológicas opción Biología Experimental. Jefe del Laboratorio de Bioquímica y Biología Molecular. Líder del Cuerpo Académico en Formación “Bioingeniería” del TecNM campus Ciudad Hidalgo. Reconocimiento al Perfil deseable PROMEP. Cultiva la línea de investigación “Biotecnología”.</p>
                         <h4>E-mail:</h4>
                         <div class="form-group">
                             <p>nchavez@cdhidalgo.tecnm.mx</p>
@@ -1161,7 +1161,7 @@
                         <div class="form-group">
                             <p> Biocontrol de hongos fitopatógenos causantes de enfermedades de importancia agronómica. Biorremediación (microbiana y vegetal) de cuerpos de agua y suelos, contaminados con xenobióticos (colorantes, agroquímicos, fármacos, metales pesados y plásticos).</p>
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
@@ -1181,7 +1181,7 @@
                     </div>
                     <div class="modal-body">
                         <h4>Formación:</h4>
-                       <p>Ingeniero Bioquímico con especialidad en Biotecnología. Maestro en Ciencias en Producción Agrícola Sustentable. Colaborador del Cuerpo Académico “Bioingeniería” del TecNM campus Ciudad Hidalgo.</p>                    
+                       <p>Ingeniero Bioquímico con especialidad en Biotecnología. Maestro en Ciencias en Producción Agrícola Sustentable. Colaborador del Cuerpo Académico “Bioingeniería” del TecNM campus Ciudad Hidalgo.</p>
                         <h4>E-mail:</h4>
                         <div class="form-group">
                              <p>ihernandez@cdhidalgo.tecnm.mx</p>
@@ -1194,7 +1194,7 @@
                         <div class="form-group">
                             <p> Biocontrol de hongos fitopatógenos causantes de enfermedades de importancia agronómica. Biorremediación microbiana de cuerpos de agua y suelos, contaminados con agroquímicos. Interacción planta – patógeno.       </p>
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
@@ -1203,7 +1203,7 @@
         </div>
 
 
-        
+
         <div class="modal fade" id="exampleModal5">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -1224,11 +1224,11 @@
                         <div class="form-group">
                             <p>Efecto de los extractos etanólicos de Psidium guajava L. sobre el crecimiento de hongos fitopatógenos.</p>
                         </div>
-                    </div>               
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>  
-                </div>              
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1259,11 +1259,11 @@
                         <div class="form-group">
                             <p>Nutrición y bioenergética de levaduras para mejorar la eficiencia en la producción de etanol con fines biotecnológicos. Mecanismos moleculares de fitoquímicos para explicar los efectos fisiológicos y moleculares sobre modelos de mamíferos.</p>
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
 
@@ -1293,11 +1293,11 @@
                         <div class="form-group">
                             <p>Nutrición y bioenergética de levaduras para mejorar la eficiencia en la producción de etanol con fines biotecnológicos. Mecanismos moleculares de fitoquímicos para explicar los efectos fisiológicos y moleculares sobre modelos de mamíferos.</p>
                         </div>
-                    </div>               
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
-                 </div>                
+                 </div>
             </div>
         </div>
 
@@ -1327,11 +1327,11 @@
                         <div class="form-group">
                             <p>Biocontrol de hongos fitopatógenos causantes de enfermedades de importancia agronómica</p>
                         </div>
-                    </div>               
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>  
-                 </div>             
+                    </div>
+                 </div>
             </div>
         </div>
 
@@ -1357,11 +1357,11 @@
                             <p>Simulación de procesos, fotocatálisis.
                             </p>
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div> 
-                </div>               
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1382,11 +1382,11 @@
                         <div class="form-group">
                             <p>jguijosa@cdhidalgo.tecnm.mx</p>
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>  
-                </div>              
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1407,11 +1407,11 @@
                         <div class="form-group">
                             <p>aeruiz@cdhidalgo.tecnm.mx</p>
                         </div>
-                    </div>                
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div> 
-                </div>              
+                    </div>
+                </div>
             </div>
         </div>
 
