@@ -1,0 +1,79 @@
+
+/* 06 : LISA */
+
+
+/* HEADER */
+.is-menu-bar .menu-wrap,
+.is-menu-top.no-featured-area .header-wrap,
+.is-header-row.no-featured-area .header-wrap,
+.is-header-small.no-featured-area .header-wrap {
+	border-bottom: 1px solid #eee;
+	}
+.is-menu-bar .menu-wrap,
+.is-header-row .header-wrap,
+.is-header-small .header-wrap {
+	box-shadow: 0 0 8px rgba(51, 51, 51, 0.09);
+	}
+.search-box #search-field {
+	text-transform: none !important;
+	}
+.featured-area {
+	margin-top: -5px;
+	}
+.is-menu-dark .site-header .social-link,
+.is-menu-dark .toggle-link,
+.is-menu-dark .site-header .shopping-cart {
+	color: #ffb8ce;
+	}
+.toggle-link,
+.site-header .social-link,
+.site-header .shopping-cart {
+	color: #f13361;
+	}
+.shopping-cart > span {
+	background: #8babad;
+	}
+
+/* FOOTER */ 
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 2px; font-size: 10px;
+	}
+
+/* BLOG */
+.more-link,
+input[type=submit], input[type=button], button, a.button,
+.widget input[type=submit], .widget input[type=button], .widget button, .widget a.button {
+	border-radius: 22px; border-width: 1px;
+	}
+.sidebar .mc4wp-form {
+	background: #fff;
+	}
+
+/* BLOG SINGLE */
+.is-comments-boxed-solid .comments-area article {
+	background: #fafafa;
+	}
+.bypostauthor > article:before {
+	font-size: 38px; color: #333;
+	}
+
+/* FORMS */
+.input-text, textarea, select {
+	font-size: 12px;
+	}
+
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) { 
+	
+	/* BLOG */
+	.category-title i {
+		margin-bottom: 8px;	letter-spacing: 4px;
+		}
+
+	/* FOOTER */
+	.footer-subscribe h3 {
+		text-transform: lowercase;
+		}
+	
+}

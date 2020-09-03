@@ -1,0 +1,159 @@
+
+
+.wrap2 {
+	max-width: 800px;
+}
+
+
+/* ============================================================================= */
+
+
+.wrap2 .nav-tab {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.wrap2 .nav-tab-active:hover {
+	cursor: default;
+}
+
+
+/* ============================================================================= */
+
+
+.wrap2 table {
+	border-spacing: 0px;
+	width: 100%;
+}
+
+.wrap2 table table td + td {
+	width: 68%;
+}
+
+.wrap2 .option-left {
+	border-top: 1px solid #eeeeee;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	width: 450px;
+}
+
+.wrap2 .option-right {
+	font-size: 11px;
+	color: #aaaaaa;
+	border-top: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	padding-left: 20px;
+}
+
+.wrap2 table tr:first-child td {
+	border-top: 0px;
+}
+
+.wrap2 table tr:last-child td {
+	border-bottom: 0px;
+}
+
+
+/* ============================================================================= */
+
+
+.wrap2 input[type="text"] {
+	width: 100%;
+}
+
+.wrap2 select {
+	width: 100%;
+	height: auto;
+}
+
+.wrap2 textarea {
+	resize: vertical;
+	width: 100%;
+}
+
+.wrap2 .button-primary {
+	margin-top: 20px;
+}
+
+
+/* ============================================================================= */
+
+
+.wrap2 .status {
+	display: none;
+	position: fixed;
+	top: 44%;
+	left: 44%;
+	z-index: 999;
+	
+	font-size: 20px;
+	color: #333333;
+	background-color: #FFEC8B;
+	border: 1px solid #FC0;
+	padding: 25px;
+	
+	border-radius: 3px;
+	background-clip: padding-box;
+}
+
+
+.wrap2 .status-done {
+	background-color: #C3FF88;
+	border-color: #8DFF1C;
+}
+
+
+.wrap2 .status img {
+	margin-right: 10px;
+}
+
+
+/* ============================================================================= */
+
+
+.color {
+	margin-top: 3px !important;
+	margin-left: 10px !important;
+}
+
+
+/* ============================================================================= */
+
+
+body.post-type-portfolio #post-formats-select label.post-format-aside + br,
+body.post-type-portfolio #post-formats-select input#post-format-aside,
+body.post-type-portfolio #post-formats-select label.post-format-aside,
+body.post-type-portfolio #post-formats-select label.post-format-chat + br,
+body.post-type-portfolio #post-formats-select input#post-format-chat,
+body.post-type-portfolio #post-formats-select label.post-format-chat,
+body.post-type-portfolio #post-formats-select label.post-format-quote + br,
+body.post-type-portfolio #post-formats-select input#post-format-quote,
+body.post-type-portfolio #post-formats-select label.post-format-quote,
+body.post-type-portfolio #post-formats-select label.post-format-status + br,
+body.post-type-portfolio #post-formats-select input#post-format-status,
+body.post-type-portfolio #post-formats-select label.post-format-status {
+	display: none;
+}
+
+
+/* ============================================================================= */
+
+
+#theblogger_featured_video__new_tab,
+.theblogger_featured_video__howto_post,
+.theblogger_featured_video__howto_portfolio {
+	display: none;
+}
+
+
+body.post-type-post .theblogger_featured_video__howto_post {
+	display: block;
+}
+
+
+body.post-type-portfolio #theblogger_featured_video__new_tab,
+body.post-type-portfolio .theblogger_featured_video__howto_portfolio {
+	display: block;
+}
+

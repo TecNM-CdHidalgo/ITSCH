@@ -1,0 +1,37 @@
+
+/* 09 : JOHN */
+
+
+/* HEADER */
+.is-header-small .header-wrap,
+.is-header-row .header-wrap,
+.is-menu-top .header-wrap,
+.is-menu-bar .menu-wrap {
+	border-bottom: 1px solid #eee;
+	}
+
+/* FOOTER */
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 2px; font-size: 10px;
+	}
+
+.featured-area {
+	margin-top: -5px;
+	}
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) { 
+
+	/* BLOG */
+	.more-link,
+	.more a {
+		letter-spacing: 3px;
+		}
+	.entry-meta {
+		letter-spacing: 2px;
+		}
+	.category-title i {
+		margin-bottom: 8px;	letter-spacing: 4px;
+		}
+	
+}

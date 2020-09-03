@@ -1,0 +1,147 @@
+
+
+/* 14 : EMMA */
+
+
+/* HEADER */
+.is-header-small .header-wrap,
+.is-header-row .header-wrap,
+.is-menu-top .header-wrap,
+.is-menu-bar .menu-wrap {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+	}
+
+.is-header-small .smaller .header-wrap,
+.is-header-row .smaller .header-wrap {
+    box-shadow: 0 6px 15px -6px rgba(17, 17, 17, 0.12);
+	}
+	
+
+/* FOOTER */
+.site-footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.07)
+	}
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 2px; font-size: 10px;
+	}
+.footer-subscribe h3 {
+	font-weight: 700;
+	}
+.instagram-pics + p a {
+	font-size: 11px;
+	}
+.footer-subscribe label:not(.error) {
+	font-size: 13px;
+	}
+
+/* LAYOUT */
+.is-body-boxed .site, 
+.is-middle-boxed .site-main, 
+.is-content-boxed .content-area {
+	box-shadow: 0 0 22px rgba(17, 17, 17, 0.1);
+	}
+.featured-area {
+	margin-top: -5px;
+	}
+
+/* SHOP */
+.related.products .hentry:nth-child(4) {
+    display: none; 
+	}
+.shop-filters select {
+	font-size: 13px;
+	}
+.woocommerce span.onsale {
+	font-size: 11px;
+	}
+.woocommerce a.woocommerce-review-link {
+	font-size: 12px;
+	}
+.woocommerce .product_meta {
+	font-size: 11px;
+	}
+.woocommerce #reviews #comments ol.commentlist li .meta time {
+    font-size: 11px;
+	}
+
+/* PORTFOLIO */
+.filters li a,
+.mfp-title {
+	font-size: 12px;
+	}
+.wp-caption-text {
+	font-size: 12px;
+	}
+
+/* BLOG */
+.logged-in-as a {
+	font-weight: bold; letter-spacing: 1px;
+	}
+.tagcloud a, 
+.tagged_as a {
+	font-size: 14px !important;
+	}
+
+/* SHORTCODES */
+.tab-content,
+.toggle-content {
+    font-size: 17px;
+	}
+.service p:not(:first-child) {
+	font-size: 15px; color: #999; opacity: 1;
+	}
+.fun-fact h4 {
+	line-height: 1.5;
+	}
+.event {
+	font-size: 16px;
+	}
+.skill-unit h4 {
+	opacity: 1;
+	}
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) { 
+
+	/* BLOG */
+	.category-description {
+		font-size: 15px;
+		}
+	.more-link,
+	.more a {
+		letter-spacing: 3px;
+		}
+	.category-title i {
+		margin-bottom: 8px;	letter-spacing: 4px;
+		}
+	.comment-content p {
+		font-size: .875rem;
+		}
+	.comment-reply-link {
+		font-size: 12px; font-weight: 700;
+		}
+	.comment-meta .fn {
+		font-size: 15px;
+		}
+	.comment-meta .comment-date {
+		font-size: 11px; letter-spacing: 2px;
+		}
+	
+}
+
+
+/* DESKTOPS MEDIUM */
+@media screen and (min-width: 1400px) { 
+	.is-post-media-overflow .layout-fixed .alignright {
+		margin-right: -20%;
+		}
+	.is-post-media-overflow .layout-fixed .alignleft {
+		margin-left: -20%;
+		}
+	.is-post-media-overflow .layout-fixed .aligncenter:not(.full), 
+	.is-post-media-overflow .layout-fixed .media-wrap, 
+	.is-post-media-overflow .layout-fixed .owl-carousel, 
+	.is-post-media-overflow .layout-fixed .gallery {
+		max-width: 140%; width: 140%; margin-left: -20%;
+		}	
+}

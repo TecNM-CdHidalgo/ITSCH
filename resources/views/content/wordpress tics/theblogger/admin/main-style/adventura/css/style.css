@@ -1,0 +1,47 @@
+
+/* 01 : ADVENTURA */
+
+
+/* HEADER */
+.search-box #search-field {
+    font-weight: bold; letter-spacing: 1px; font-size: 11px; text-transform: uppercase;
+	}
+
+/* FOOTER */
+.footer-subscribe h3 {
+	letter-spacing: 6px;
+	}
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 5px; font-size: 10px;
+	}
+
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) { 
+
+	/* BLOG */
+	.is-single-post-title-with-margins .single .post > .entry-header {
+		max-width: 80%; margin-left: auto; margin-right: auto;
+		}
+	.more-link,
+	.more a {
+		letter-spacing: 3px;
+		}
+	.entry-meta {
+		letter-spacing: 3px;
+		}
+	.category-title i {
+		margin-bottom: 8px;	letter-spacing: 4px;
+		}
+
+	/* FOOTER */
+	.footer-subscribe h3 {
+		letter-spacing: 9px;
+		}
+	
+	/* SIDEBAR */
+	.widget_mc4wp_form_widget label {
+		font-size: 17px; line-height: 1.5;
+		}
+	
+}

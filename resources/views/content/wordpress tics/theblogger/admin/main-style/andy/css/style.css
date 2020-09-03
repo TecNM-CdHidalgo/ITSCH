@@ -1,0 +1,59 @@
+
+/* 15 : ANDY */
+
+
+/* HEADER */
+.is-menu-top.no-featured-area .header-wrap,
+.is-menu-bar .menu-wrap,
+.is-header-small.no-featured-area .header-wrap,
+.is-header-row.no-featured-area .header-wrap {
+	border-bottom: 1px solid #eee;
+	}
+	
+
+/* HEADER */
+.is-menu-top .single .header-wrap {
+	border-bottom: 1px solid #f3efe4;
+	}
+
+/* HEADER */
+.cloned.smaller .header-wrap {
+	box-shadow: 0 0 10px rgba(51, 51, 51, 0.18);
+	}
+
+/* HEADER */
+.search-box #search-field {
+	text-transform: none;
+	}
+
+/* FOOTER */
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 2px; font-size: 10px;
+	}
+.site .footer-subscribe,
+.site-footer .site-info {
+	border-top: 1px solid #eee;
+	}
+	
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) { 
+
+	/* BLOG */
+	.is-single-post-title-with-margins .single .post > .entry-header {
+		max-width: 80%; margin-left: auto; margin-right: auto;
+		}
+	.more-link,
+	.more a {
+		letter-spacing: 3px;
+		}
+	.category-title i {
+		margin-bottom: 8px;	letter-spacing: 4px;
+		}
+
+	/* SIDEBAR */
+	.widget_mc4wp_form_widget label {
+		font-size: 16px; line-height: 1.5;
+		}
+	
+}

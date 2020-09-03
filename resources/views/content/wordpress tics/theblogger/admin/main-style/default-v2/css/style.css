@@ -1,0 +1,24 @@
+
+/* 2017 DEFAULT */
+
+
+/* HEADER */
+.is-menu-top.no-featured-area .header-wrap,
+.is-menu-top .menu-wrap,
+.is-menu-bottom.no-featured-area .menu-wrap,
+.is-header-small.no-featured-area .header-wrap,
+.is-header-row.no-featured-area .header-wrap {
+	border-bottom: 1px solid #eee;
+	}
+.is-menu-bottom.no-featured-area .menu-wrap {
+	border-top: 1px solid #eee;
+	}
+
+/* FOOTER */
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 2px; font-size: 10px;
+	}
+.site .footer-subscribe,
+.site-footer .site-info {
+	border-top: 1px solid #eee;
+	}

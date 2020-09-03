@@ -1,0 +1,70 @@
+
+/* 05 : MISTY */
+
+
+/* HEADER */
+.is-menu-bar .site-navigation .layout-medium,
+.is-header-row .header-wrap,
+.is-header-small .header-wrap {
+	border-bottom: 5px solid #eee;
+	}
+.search-box #search-field {
+	text-transform: none !important;
+	}
+.featured-area {
+	margin-top: -5px;
+	}
+.is-menu-dark .site-header .social-link,
+.is-menu-dark .search-box label {
+	color: rgba(255, 234, 174, 0.7);
+	}
+
+/* FOOTER */
+.footer-subscribe .layout-medium {
+	border-bottom: 6px solid #eee;
+	}
+.site-footer .site-info {
+	text-transform: uppercase; letter-spacing: 2px; font-size: 10px;
+	}
+
+/* BLOG */
+.more-link {
+	padding: 12px 16px;
+	}
+.more-link,
+input[type=submit], input[type=button], button, a.button,
+.widget input[type=submit], .widget input[type=button], .widget button, .widget a.button {
+	font-size: 10px; border-radius: 22px;
+	}
+.sidebar .mc4wp-form {
+	background: #fff;
+	}
+
+/* BLOG SINGLE */
+.is-comments-boxed-solid .comments-area article {
+	background: #fafafa;
+	}
+.bypostauthor > article:before {
+	font-size: 38px; color: #333;
+	}
+
+/* FORMS */
+input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]), textarea, select {
+	font-size: 12px;
+	}
+
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) { 
+	
+	/* BLOG */
+	.category-title i {
+		margin-bottom: 8px;	letter-spacing: 4px;
+		}
+
+	/* FOOTER */
+	.footer-subscribe h3 {
+		text-transform: lowercase;
+		}
+	
+}

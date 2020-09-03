@@ -27,6 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddd7636f-5308-41cb-9826-aa6987963b81" name="Default Changelist" comment="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales">
+      <change beforePath="$PROJECT_DIR$/.idea/ITSCH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITSCH.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
@@ -191,7 +192,7 @@
       <workItem from="1599025682607" duration="1291000" />
       <workItem from="1599043976033" duration="17353000" />
       <workItem from="1599093543517" duration="3534000" />
-      <workItem from="1599144566364" duration="565000" />
+      <workItem from="1599144566364" duration="573000" />
     </task>
     <task id="LOCAL-00001" summary="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales">
       <created>1599093387227</created>
