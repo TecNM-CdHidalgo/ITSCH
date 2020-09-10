@@ -13,15 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Rutas publicas
-
-
-//conocenos
-Route::get('instituto/nuestro-tec',function(){return view('content.instituto.nuestro-tec');})->name('instituto.nuestro-tec');
-
-
-
-
-//oferta educativa
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
 Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
 Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');

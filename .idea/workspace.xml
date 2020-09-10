@@ -29,7 +29,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
     <list default="true" id="ddd7636f-5308-41cb-9826-aa6987963b81" name="Default Changelist" comment="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales">
-      <change beforePath="$PROJECT_DIR$/.idea/ITSCH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITSCH.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
@@ -202,6 +201,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
       <workItem from="1599093543517" duration="3534000" />
+<<<<<<< HEAD
       <workItem from="1599144566364" duration="573000" />
 =======
       <workItem from="1599093543517" duration="952000" />
@@ -209,6 +209,9 @@
 =======
       <workItem from="1599093543517" duration="952000" />
 >>>>>>> parent of a58213c... Creacion de directorios para el Menu
+=======
+      <workItem from="1599144566364" duration="565000" />
+>>>>>>> parent of bdfb35e... Creacion de directorios para el Menu de instituto seccion de nuestro-tec.blade.php
     </task>
     <task id="LOCAL-00001" summary="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales">
       <created>1599093387227</created>
