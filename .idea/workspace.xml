@@ -26,11 +26,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ddd7636f-5308-41cb-9826-aa6987963b81" name="Default Changelist" comment="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales">
       <change beforePath="$PROJECT_DIR$/.idea/ITSCH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITSCH.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
+=======
+    <list default="true" id="ddd7636f-5308-41cb-9826-aa6987963b81" name="Default Changelist" comment="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales" />
+>>>>>>> parent of a58213c... Creacion de directorios para el Menu
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,8 +195,12 @@
       <workItem from="1598987174801" duration="8236000" />
       <workItem from="1599025682607" duration="1291000" />
       <workItem from="1599043976033" duration="17353000" />
+<<<<<<< HEAD
       <workItem from="1599093543517" duration="3534000" />
       <workItem from="1599144566364" duration="573000" />
+=======
+      <workItem from="1599093543517" duration="952000" />
+>>>>>>> parent of a58213c... Creacion de directorios para el Menu
     </task>
     <task id="LOCAL-00001" summary="Actualizacion de Seccion Oferta Educativa Sistemas Computacionales">
       <created>1599093387227</created>
@@ -265,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1920" height="278" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599026928691" />
-    <state x="260" y="93" key="Vcs.Push.Dialog.v2" timestamp="1599095779441">
+    <state x="260" y="93" key="Vcs.Push.Dialog.v2" timestamp="1599094274185">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="260" y="93" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599095779441" />
+    <state x="260" y="93" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599094274185" />
     <state x="765" y="292" key="cloudConfig.SelfSettingsDialog" timestamp="1599094419593">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
