@@ -3,25 +3,25 @@
 	{{--Carrusel--}}
 	<div id="carr" class="carousel slide" data-ride="carousel">
 		<ul class="carousel-indicators">
-			@php 
+			@php
 				$ban=true;
 			@endphp
 			@foreach($noticias as $not)
 				@if($not->resaltar==1)
 					@if($ban)
 				    	<li data-target="#carr" data-slide-to="{{$not->id}}" class="active"></li>
-				    	@php 
+				    	@php
 				    		$ban=false;
-				    	@endphp	
+				    	@endphp
 				    @else
 						<li data-target="#carr" data-slide-to="{{$not->id}}"></li>
 
-				    @endif 
-				@endif   
+				    @endif
+				@endif
 			@endforeach
 		</ul>
 		<div class="carousel-inner">
-			@php 
+			@php
 				$ban=true;
 			@endphp
 			@foreach($noticias as $not)
@@ -33,12 +33,12 @@
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
-							    </div>  
-						    </a> 
+							    </div>
+						    </a>
 						</div>
-						@php 
+						@php
 				    		$ban=false;
-				    	@endphp	
+				    	@endphp
 					@else
 						<div class="carousel-item">
 						     <a href="{{route('ver',$not->id)}}">
@@ -46,11 +46,11 @@
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
-							    </div>  
-						    </a>  
+							    </div>
+						    </a>
 						</div>
-					@endif  
-				@endif 
+					@endif
+				@endif
 			@endforeach
 		</div>
 		<a class="carousel-control-prev" href="#carr" data-slide="prev">
@@ -59,7 +59,7 @@
 		<a class="carousel-control-next" href="#carr" data-slide="next">
 		    <span class="carousel-control-next-icon"></span>
 		</a>
-	</div>	
+	</div>
 @endsection
 
 
@@ -68,10 +68,10 @@
 	<h3>Noticias</h3>
     <hr>
     @foreach($noticias2 as $not)
-	    <div class="noticias">  
+	    <div class="noticias">
 	    	<h5><b>{{$not->titulo}}</b></h5>
 	    	<h6>{{$not->sintesis}}</h6>
-		    <div class="row" >	    	
+		    <div class="row" >
 		    	<div class="col-xl-6">
 		    		<a href="{{route('ver',$not->id)}}">
 						<img loading='lazy'  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
@@ -81,9 +81,9 @@
 		    	<div class="col-xl-6">
 		    		@php
 		                echo $not->contenido;
-		            @endphp		    		
+		            @endphp
 		    	</div>
-		    </div>  
+		    </div>
 		    <div class="row">
 		    	<div class="col-sm-3">
 		    		@if($not->arch_adj)
@@ -104,46 +104,46 @@
 		    </div>
 	    </div>
 	@endforeach
-    
+
 
 
 	{{--Redes sociales--}}
 	<div class="info">
-		<h1>Redes sociales</h1>	
-		<div class="row">
-			<div class="col-xl-4">Twiter</div>
-			<div class="col-xl-4">Youtube</div>
-			<div class="col-xl-4">Facebook</div>
-		</div>
-	</div>
-    
+		<h1>Redes sociales</h1>
+        <div class="col-xl-4"><a class='twitter-timeline' data-lang='es' data-width='350' data-height='525' data-dnt='true' data-theme='light' href='https://twitter.com/TecNM_cdhidalgo'>TecNM</a>
+
+        </div>
+        <div class="col-xl-4">	<iframe style='margin-top:15px;' width='350' height='525' src='https://www.youtube.com/embed/s58wL5reK3I' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
+        <div class="col-xl-4"><iframe style='margin-top:15px;' src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/TecNM.campus.Ciudad.Hidalgo/&tabs=timeline&width=350&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe></div>
+    </div>
+
 	<div class="info">
-		<h1>Sitios de Interés</h1> 	
+		<h1>Sitios de Interés</h1>
 	    <div class="row" >
 			<div class="col-xl-2 mx-auto">
 				<a href='https://www.conacyt.gob.mx/' target='_blank'>
 					<img loading='lazy'  src="{{ asset('images/interes/CONACYT.png') }}" alt='CONACYT' title='CONACYT' class='img-fluid' />
 				</a>
 			</div>
-			
+
 			<div class="col-xl-2 mx-auto">
 				<a href='https://www.conricyt.mx/' target='_blank'>
 					<img loading='lazy' src="{{ asset('images/interes/CONRICYT.png') }}" alt='CONRICYT' title='CONRICYT' class='img-fluid' />
 				</a>
 			</div>
-			
+
 			<div class="col-xl-2 mx-auto">
 				<a href='http://www.ifai.org.mx/' target='_blank'>
 					<img loading='lazy' src="{{ asset('images/interes/INAI.png') }}" alt='INAI' title='INAI' class='img-fluid' />
 				</a>
 			</div>
-			
+
 			<div class="col-xl-2 mx-auto">
 				<a href='http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=10009&amp;idEntidadParametro=33&amp;idSectorParametro=21' target='_blank'>
 					<img loading='lazy' src="{{ asset('images/interes/PNT.png') }}" alt='PNT' title='PNT' class='img-fluid' />
 				</a>
 			</div>
-			
+
 			<div class="col-xl-2 mx-auto">
 				<a href='?vista=Dir_Posgrado'>
 					<img loading='lazy' src="{{ asset('images/interes/contraloria.png') }}" alt='Dir_Posgrado' title='Dir_Posgrado' class='img-fluid' />
