@@ -150,5 +150,55 @@
 				</a>
 			</div>
 		</div>
-	</div>
+
+
+        <section class="cid-rD7PmpFJj8" id="footer2-7" style="padding-bottom:10px" >
+            <div class="">
+                <div class="media-container-row content mbr-white">
+                    <div class="col-12 col-md-3 mbr-fonts-style display-7" style="font-family:Roboto,'Opens Sans', sans-serif" >
+                        <p class="mbr-text" style="color:#fff">
+                            <strong>Dirección</strong>
+                            <br>
+                            <br>Av. Ing. Carlos Rojas Gutiérrez 2120 | Fraccionamiento Valle de la Herradura | Ciudad Hidalgo Michoacán <br>
+                            <br>
+                            <br><strong>Contacto</strong>&nbsp;<br>
+                            <br>Email: contacto@tecnm.mx&nbsp;<br>Tel. (786) 154-90-00 <br>
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-3 mbr-fonts-style display-7" style="font-family:Roboto,'Opens Sans', sans-serif">
+                        <p class="mbr-text"><strong>Enlaces</strong><br>
+                            <br>
+                            <a style="color:#fff" href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin">Portal de Obligaciones de Transparencia</a><br>
+                            <a style="color:#fff" href="http://inicio.ifai.org.mx/SitePages/ifai.aspx">INAI</a><br>
+                            <a style="color:#fff" href="index.html#" data-toggle="modal" data-target="#modalQuejas">Buzón de Sugerencias</a><br>
+
+                            <br>
+                            <!--<br><strong> Número de visitas </strong>-->
+                        </p>
+                    </div>
+                    <div class="contenedor">
+                        <a href='#' title='Ver Ubicación'>
+                            <img src="http://www.cdhidalgo.tecnm.mx/images/footer/Foto_Ubi.JPG" alt="Ubicación" style='width:95%;' />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-lower">
+                    <div class="media-container-row">
+                        <div class="col-sm-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="media-container-row mbr-white" style="font-family:Roboto,'Opens Sans', sans-serif">
+                        <div>
+                            <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
+                                <br />
+                                <p>Última actualización: 11/09/2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
 @endsection
