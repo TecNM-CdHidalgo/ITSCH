@@ -59,7 +59,11 @@
 		<a class="carousel-control-next"href="#carr" data-slide="next">
 		    <span class="carousel-control-next-icon"></span>
 		</a>
-	</div>@section('content')
+	</div>
+
+@endsection	
+
+	@section('content')
 	{{--Contenido de noticias--}}
 	<h3>Noticias</h3>
     <hr>
