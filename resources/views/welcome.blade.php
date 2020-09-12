@@ -29,7 +29,7 @@
 					@if($ban)
 						<div class="carousel-item active">
 							<a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">
+							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%"height="400px">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -42,7 +42,7 @@
 					@else
 						<div class="carousel-item">
 						     <a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">
+							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%"height="400px">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -53,17 +53,13 @@
 				@endif
 			@endforeach
 		</div>
-		<a class="carousel-control-prev" href="#carr" data-slide="prev">
+		<a class="carousel-control-prev"href="#carr" data-slide="prev">
 		    <span class="carousel-control-prev-icon"></span>
 		</a>
-		<a class="carousel-control-next" href="#carr" data-slide="next">
+		<a class="carousel-control-next"href="#carr" data-slide="next">
 		    <span class="carousel-control-next-icon"></span>
 		</a>
-	</div>
-@endsection
-
-
-@section('content')
+	</div>@section('content')
 	{{--Contenido de noticias--}}
 	<h3>Noticias</h3>
     <hr>

@@ -5,20 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ asset('css/font_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/aos.css') }}"">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('SmartPhoto-master/css/smartphoto.min.css') }}">
-    <link rel="shortcut icon" href="{{ asset('images/icons/donation.png') }}" style="filter:invert(1)">
+    <link rel="stylesheet"href="{{ asset('css/font_style.css') }}">
+    <link rel="stylesheet"href="{{ asset('fonts/icomoon/style.css') }}">
+    <link rel="stylesheet"href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/jquery-ui.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet"href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/aos.css') }}"">
+    <link rel="stylesheet"href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet"href="{{ asset('SmartPhoto-master/css/smartphoto.min.css') }}">
+    <link rel="shortcut icon"href="{{ asset('images/icons/donation.png') }}" style="filter:invert(1)">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     @php
@@ -34,27 +34,27 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-      
+
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
         <div class="row align-items-center position-relative">
-          
+
             <div class="site-logo">
               <a href="/" class="text-black"><span class="text-primary">Ciudad del Ni&ntilde;o</a>
             </div>
-            
+
               <nav class="site-navigation text-center ml-auto" role="navigation">
 
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                   <li><a href="{{ route('inicio') }}#home-section" class="nav-link">Inicio</a></li>
                   <li><a href="{{ route('inicio') }}#about-section" class="nav-link">Acerca de</a></li>
-                  @if ($articles)  
+                  @if ($articles)
                     <li><a href="{{ route('inicio') }}#blog-section" class="nav-link">Publicaciones</a></li>
                   @endif
                   <li><a href="{{ route('inicio') }}#gallery-section" class="nav-link"><p style="margin:0;" id="section-gallery">Galeria</p></a></li>
                   <li><a href="{{ route('inicio') }}#help-section" class="nav-link">¿Deseas ayudar?</a></li>
-                  @if ($testimonials)  
+                  @if ($testimonials)
                     <li><a href="{{ route('inicio') }}#testimonials-section" class="nav-link">Testimonios</a></li>
                   @endif
                   <li><a href="{{ route('inicio') }}#contact-section" class="nav-link">Contacto</a></li>
@@ -81,7 +81,7 @@
                         </form>
                       </div>
                     </li>
-                  @else  
+                  @else
                     <li><a href="{{ route('login')}}" class="nav-link">Admin</a></li>
                   @endif
                 </ul>
@@ -90,9 +90,9 @@
 
         </div>
       </div>
-      
+
     </header>
-    
+
     <div style="width:{{ ((new \Jenssegers\Agent\Agent())->isMobile() ? "90%": "80%") }}; margin-left:auto; margin-right:auto; margin-top: 50px;"  id="gallery-section">
         <style>
             .gallery-image{
@@ -120,7 +120,7 @@
             @endforeach
         </div>
         <div class="break-floats"></div>
-    </div>       
+    </div>
 
     <footer class="site-footer">
       <div class="container">
@@ -160,7 +160,7 @@
             </p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </footer>

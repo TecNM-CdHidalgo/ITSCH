@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="stylesheet" href="{{ asset('css/font_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="shortcut icon" href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
+
+    <link rel="stylesheet"href="{{ asset('css/font_style.css') }}">
+    <link rel="stylesheet"href="{{ asset('fonts/icomoon/style.css') }}">
+    <link rel="stylesheet"href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/jquery-ui.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet"href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/style.css') }}">
+    <link rel="shortcut icon"href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    
+
     <style>
       .no-margins{
         margin:0;
@@ -40,7 +40,7 @@
       @yield('titulo')
     </title>
 </head>
- 
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
   <div class="site-wrap"  id="home-section">
@@ -53,16 +53,16 @@
     </div>
     <div class="site-mobile-menu-body"></div>
   </div>
-      
-          
+
+
   <header class="site-navbar js-sticky-header site-navbar-target mds-header" role="banner">
 
     <div class="container">
       <div class="row align-items-center position-relative">
-          <img src="{{ asset('images/itsch.jpg') }}" class="rounded" alt="Logo" width="40" height="50"> &nbsp &nbsp
+          <img src="{{ asset('images/itsch.jpg') }}" class="rounded" alt="Logo" width="40"height="50"> &nbsp &nbsp
           <div class="site-logo">
             <a href="#" class="text-black"><span class="text-primary">ITSCH</a>
-          </div>         
+          </div>
             <nav class="site-navigation text-center ml-auto" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li>
@@ -77,7 +77,7 @@
                   <li>
                     <a href="{{route('admin.usuarios.inicio')}}" class="nav-link"><p id="section-usuarios" class="no-margins">Usuarios</p></a>
                   </li>
-                @endif 
+                @endif
                 <li>
                   <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
                 </li>
@@ -86,7 +86,7 @@
                 </li>
                 <li>
                   <a href="#" class="nav-link" ><p id="section-carousel" class="no-margins">Redes sociales</p></a>
-                </li>             
+                </li>
                 <li>
                   <a href="#" class="nav-link" ><p id="section-informacion" class="no-margins">Info</p></a>
                 </li>
@@ -106,7 +106,7 @@
             </nav>
         <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
       </div>
-    </div>    
+    </div>
   </header>
 
   {{--Sirve para que se vea bien en dispositivos moviles--}}
@@ -118,7 +118,7 @@
           <h4><b>Panel de administración</b></h4>
           <hr>
           @yield('contenido','Default')
-      </div>    
+      </div>
     @else
       <div style="width: 80%; margin:0 auto 0 auto;" >
         <div id="app">
@@ -127,7 +127,7 @@
           <h4><b>Panel de administración</b></h4>
           <hr>
           @yield('contenido','Default')
-      </div>    
+      </div>
   @endif
 
   <footer class="site-footer">
@@ -144,7 +144,7 @@
               <ul class="list-unstyled">
                 <li><a href="{{ route('inicio') }}#about-section">Acerca de</a></li>
                 <li><a href="{{ route('inicio') }}#blog-section">Publicaciones</a></li>
-                <li><a href="{{ route('inicio') }}#gallery-section">Galeria</a></li>                
+                <li><a href="{{ route('inicio') }}#gallery-section">Galeria</a></li>
                 <li><a href="{{ route('inicio') }}#contact-section">Contactanos</a></li>
               </ul>
             </div>
@@ -156,7 +156,7 @@
           <p >Correo: sistemas@cdhidalgo.tecnm.mx</p>
           <a href="https://www.facebook.com/ITSCH-Ingenier%C3%ADa-en-Sistemas-792403974304028" class="smoothscroll pl-0 pr-3">Facebook</a>
         </div>
-      
+
       </div>
       <div class="row pt-5 mt-5 text-center">
         <div class="col-md-12">
@@ -168,7 +168,7 @@
           </p>
           </div>
         </div>
-        
+
       </div>
     </div>
   </footer>
@@ -184,6 +184,6 @@
     })
   </script>
   @yield('js')
- 
+
 </body>
 </html>

@@ -1,11 +1,11 @@
 @extends('template')
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('CustomFileInputs/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('CustomFileInputs/css/component.css') }}">
-    <link rel="stylesheet" href="{{ asset('SmartPhoto-master/css/smartphoto.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('cropper/dist/cropper.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet"href="{{ asset('CustomFileInputs/css/normalize.css') }}">
+    <link rel="stylesheet"href="{{ asset('CustomFileInputs/css/component.css') }}">
+    <link rel="stylesheet"href="{{ asset('SmartPhoto-master/css/smartphoto.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('cropper/dist/cropper.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('fontawesome/css/all.css') }}" crossorigin="anonymous">
     <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 @endsection
 
@@ -55,7 +55,7 @@
         <script src="{{ asset('CustomFileInputs/js/custom-file-input.js') }}"></script>
         <script src="{{ asset('modals/js/jquery.confirmModal.min.js') }}"></script>
         <script src="{{ asset('SmartPhoto-master/js/smartphoto.min.js') }}"></script>
-            
+
         <script>
             var isMobile = "{{ (new Jenssegers\Agent\Agent())->isMobile() }}";
             if(isMobile){
@@ -80,7 +80,7 @@
                     window.location.href = "{{ route('admin.carousel.eliminar') }}"+"?id="+id;
                 });
             });
-           
+
         </script>
         <script>
             document.addEventListener('DOMContentLoaded',function(){

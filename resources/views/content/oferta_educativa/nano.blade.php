@@ -27,11 +27,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="tarColaps" data-parent="#accordion1" data-toggle="collapse" href="#panel-02" aria-expanded="true" aria-controls="panel-02">
+                        <a class="tarColaps" data-parent="#accordion1" data-toggle="collapse"href="#panel-02" aria-expanded="true" aria-controls="panel-02">
                             Consulta y/o descarga
                         </a>
                     </h4>
-                    <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse" href="#panel-02"></button>
+                    <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse"href="#panel-02"></button>
                 </div>
                 <div class="panel-collapse collapse in" id="panel-02">
                     <div class="panel-body">

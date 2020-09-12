@@ -9,17 +9,17 @@
       </div>
       <div class="col-sm-4">
         <a href="https://www.gob.mx" target="_blank" id="placa_1">
-          <img loading='lazy' class="imgGobi" src="{{ asset('images/placa_gob1.png') }}" alt="Gobierno de México">
+          <img class="imgGobi" src="{{ asset('images/placa_gob1.png') }}" alt="Gobierno de México">
         </a>
       </div>
       <div class="col-sm-4">
         <a href="https://www.gob.mx/sep" target="_blank" id="placa_2">
-          <img loading='lazy' class="imgGobi" src="{{ asset('images/placa_edu.png') }}" alt="Educación">
+          <img class="imgGobi" src="{{ asset('images/placa_edu.png') }}" alt="Educación">
         </a>
       </div>
       <div class="col-sm-3">
         <a href="https://www.tecnm.mx"  id="placa_3">
-          <img loading='lazy' class="imgGobi2" src="{{ asset('images/placa_tecnm.jpg') }}" alt="TecNM">
+          <img class="imgGobi2" src="{{ asset('images/placa_tecnm.jpg') }}" alt="TecNM">
         </a>
       </div>
     </div>
@@ -28,13 +28,13 @@
   {{--Banderas--}}
   <div class="col-sm-5">
     <a href="https://globalpage-prod.webex.com/join?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2F%23%2Fmeetings%2Fjoinbynumber%3FTrackID%3D%26hbxref%3D%26goid%3Dattend-meeting" title="Microsoft Teams" target="_blank">
-      <img loading='lazy' class="imgBand" src="{{ asset('images/banderas/microsoft_teams.png') }}" alt="MT">
+      <img class="imgBand" src="{{ asset('images/banderas/microsoft_teams.png') }}" alt="MT">
     </a>
     <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
-      <img loading='lazy' class="imgBand" src="{{ asset('images/banderas/correo_icono.png') }}" alt="Buzón">
+      <img class="imgBand" src="{{ asset('images/banderas/correo_icono.png') }}" alt="Buzón">
     </a>
     <a href="#" title="Calendario Académico" target="_blank">
-      <img loading='lazy' class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
+      <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
     </a>
     <a href='?vista=&a#googtrans(es|zh-CN)'>
       <img class="imgBand" src="{{ asset('images/banderas/china_icono.png') }}" title='Mandarín'
@@ -53,7 +53,7 @@
         alt='Idioma Español'>
     </a>
 
-    <img loading='lazy' class="imgBand" title="Accesibilidad" src="{{ asset('images/banderas/ojo_icono.png') }}" alt="Débil Visual" />
+    <img class="imgBand" title="Accesibilidad" src="{{ asset('images/banderas/ojo_icono.png') }}" alt="Débil Visual" />
     {{--Elementos de accesibilidad--}}
     <a title="Contraste" onclick="contraste()" style="color:#1B396A"><i class='fas fa-adjust' style='font-size:20px'></i></a>
     <a title="Aumentar letra" style="color:#1B396A" onclick="zoomIn()">A+</a>
@@ -70,7 +70,7 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-white" id="menuBlan">
  {{--Logo--}}
   <a class="navbar-brand" href="{{route('inicio')}}">
-    <img loading='lazy'  src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:25px; height: 30px;" />
+    <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:25px; height: 30px;" />
   </a>
 
   <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco">
@@ -78,46 +78,101 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavBlanco">
     <ul class="navbar-nav  ml-auto">
-      <li class="nav-item dropdown  ml-auto">
+
+
+        <li class="nav-item dropdown  ml-auto">
         <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Alumnos
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">SICE</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
+            <a class="   dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8080">Calificaciones SICENET</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/alumnos/prorrogas">Prorrogas</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/Caracterizacion/alumno/index.php">Encuestas Aspirantes</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/evalua_tutor/index.php">Evaluación al tutor</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>
+            <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/encuestasitsch/index.php">Encuesta de servicio</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8082/ServicioSocial/ServicioSocialAlumnos/index.php">Servicio Social</a>
+            <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
+            <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
         </div>
       </li>
+
       <li class="nav-item dropdown  ml-auto">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Academicos
+          <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
+              Academicos
+          </a>
+
+        <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="https://bit.ly/2YxAKad">Sistema Digital de información (SIDI)</a>
+                <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
+        </div>
+
+      </li>
+
+
+
+        <li class="nav-item dropdown  ml-auto">
+        <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
+          Egresados/Empleadores
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
+
+            <a class="dropdown-item" href="">Seguimiento a egresados</a>
+            <a class="dropdown-item" href="">Encuesta de Empleadores</a>
         </div>
       </li>
+
+
+        <li class="nav-item dropdown  ml-auto">
+            <a class="nav-link active dropdown-toggle"href="#" id="navbarfgdgdrop" data-toggle="dropdown">
+            Normativos y Lineamientos
+            </a>
+            <div class="dropdown-menu">
+
+                    <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx/calidad/calidad">Calidad</a>
+                    <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx/igualdad/index.html">Igualdad</a>
+
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/ambiental">Lineamientos</a>
+
+
+                        <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
+                        <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2010">Lineamientos plan 2010 </a>
+                        <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/rippa">RIPPA</a>
+                        <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2015">Lineamiento Plan 2015 </a>
+                        <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/instituto/investigacion/investigacion1">Investigación </a>
+
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/creditos">Lineamiento de Creditos</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/piid_2013_2018">PIID 2013-2018</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
+                    <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/transparencia/acceso_transparencia">Estados Financieros </a>
+                    <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/indicadores.php"> Indicadores  </a>
+
+
+            </div>
+        </li>
+
+
       <li class="nav-item dropdown  ml-auto">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Egresados
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown  ml-auto">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbasdasdasardrop" data-toggle="dropdown">
           Transparecia
         </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
-        </div>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
+          <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
+          <a class="dropdown-item" href="https://bit.ly/2KVOXps">Aviso de privacidad </a>
+          </div>
       </li>
+
+
+
       <li class="nav-item ml-auto">
         <a href="https://cdhidalgo.tecnm.mx:8081/moodle/" class="nav-link active">Moodle</a>
       </li>
@@ -140,45 +195,122 @@
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Conócenos
+        <a class="nav-link active dropdown-toggle" href="#" id="navbddsardrop" data-toggle="dropdown">
+          Instituto
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
+            <a class="dropdown-item" href="https://bit.ly/3dhb5qC">Nuestro Tec </a>
+            <a class="dropdown-item" href="https://bit.ly/3dboRL6">Directorio</a>
+            <a class="dropdown-item" href="https://bit.ly/3fqbHMz">Ubicación</a>
+            <a class="dropdown-item" href="https://bit.ly/2ytcyeK">Programa de capacitación</a>
+
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <a class="nav-link active dropdown-toggle"  href="#" id="navbdadasdardrop" data-toggle="dropdown">
           Oferta educativa
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="{{route('oferta.sistemas')}}">Sistemas Computacionales</a>
-          <a class="dropdown-item" href="{{route('oferta.industrial')}}">Ingenieria Industrial</a>
-          <a class="dropdown-item" href="#">Ingenieria Mecatrónica</a>
-          <a class="dropdown-item" href="{{route('oferta.bioquimica')}}">Ingenieria Bioquímica</a>
-            <a class="dropdown-item" href="{{route('oferta.nano')}}">Ingenieria Nanotecnologia</a>
+          <a class="dropdown-item"  href="{{route('oferta.sistemas')}}">Ingeniería en Sistemas Computacionales</a>
+            <a class="dropdown-item"  href="#">Ingeniería en  Tecnologías de la Información</a>
+            <a class="dropdown-item"  href="{{route('oferta.industrial')}}">Ingeniería  Industrial</a>
+          <a class="dropdown-item"  href="#">Ingeniería en  Mecatrónica</a>
+            <a class="dropdown-item"  href="#">Ingeniería en  Gestión Empresarial</a>
+          <a class="dropdown-item"  href="{{route('oferta.bioquimica')}}">Ingeniería en  Bioquímica</a>
+            <a class="dropdown-item"  href="{{route('oferta.nano')}}">Ingeniería en Nanotecnologia</a>
         </div>
       </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
+                Otros Departamentos
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/prodep.php">Programa para el desarrollo profesional docente (PRODEP)</a>
+                <a class="dropdown-item" href="https://bit.ly/2SBtQgr">Servicio de Caja</a>
+                <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
+                <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
+
+            </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
+                Servicios Escolares
+            </a>
+            <div class="dropdown-menu">
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/servicios.php">Servicios</a>
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/inscripcion-reinscripcion.php">Inscripción/Reinscripción</a>
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/proximos-egresar.php">Próximos a Egresar</a>
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/titulos-y-cedulas.php">Títulos y Cédulas</a>
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/alumnos-traslados.php">Alumnos de traslado</a>
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/becas/becas.php">Becas</a>
+
+            </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarddsadrop" data-toggle="dropdown">
+                Vinculación
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/servicio-social.php">Servicio Social</a>
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/residencias.html">Residencias Profesionales</a>
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/banco_de_datos.php">Banco de Poyectos</a>
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/negocios/incubadora-de-empresas.php">Incubadora de Empresas</a>
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/bolsa-de-trabajo.php">Bolsa de Trabajo</a>
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/convenio_colaboracion.php">Convenios de Colaboraci&oacute;n</a>
+                <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/cultura_deporte.php"> Cultura y deporte</a>
+
+            </div>
+        </li>
+
+
+
+
       <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Investigación
+        <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
+            Lineas de investigación
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
+
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/bio.pdf"> Bioquímica</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/departamentos/tutorias.php">Tutorías</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/geste.pdf"> Gestión Empresarial</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/ind.pdf"> Industrial</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/mec.pdf"> Mecatrónica</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/nan.pdf"> Nanotecnología</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/siscom.pdf"> Sistemas Computacionales</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/lineas_de_inv_19.php"> Lineas de investigación ISC </a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/tics.pdf"> Tecnologías de la Información y Comunicaciones</a>
+            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/lies_18.pdf"> Investigación Educativa</a>
+            <a class="text-black dropdown-item" href="https://bit.ly/2SLwiRx"> Convocatorias CONACYT</a>
+            <a class="text-black dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
+
         </div>
       </li>
+
+
       <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Vinculación
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarddsadrop" data-toggle="dropdown">
+            Centro de lenguas extranjeras
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Residencias Profesionales</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-secundaria.php">Ingles para Secundaria</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-adultos.php">Ingles para Adultos</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/cursoConversacion.php">Curso de conversación</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/cursoToefl.php">Curso de preparación para la certificación (TOEFL)</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/traduccionDocumentos.php">Traducción de documentos</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion-de-ingles.php">Examen de acreditación</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion2013.php">Alumnos inscritos plan 2013 y anteriores</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion2014.php">Alumnos inscritos plan 2014 en adelante</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/becasingles.php">Becas de Idiomas</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/informacion.php">Información General</a>
+            <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>
+
+
         </div>
       </li>
     </ul>
@@ -240,7 +372,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-3">
-            <img src="{{ asset('images/logoheader.svg') }}" style="max-width: 90%;">
+            <img src="{{ asset('images/logoheader.svg') }}" style="max-width: 90%;" alt="">
           </div>
           <div class="col-sm-3">
             <h5>Enlaces</h5>
@@ -296,7 +428,7 @@
                 <a class="fab fa-facebook-f" target="_blank" rel="noopener" title="Enlace abre en ventana nueva" href="https://www.facebook.com/gobmexico" aria-label="Facebook de presidencia"></a>
               </li>
               <li class="list-inline-item">
-                <a class="fab fa-twitter" target="_blank" rel="noopener" title="Enlace abre en ventana nueva" href="https://twitter.com/GobiernoMX" aria-label="Twitter de presidencia"></a>
+                <a class="fab fa-twitter" target="_blank" rel="noopener" title="Enlace abre en ventana nueva" aria-label="Twitter de presidencia"></a>
               </li>
             </ul>
           </div>

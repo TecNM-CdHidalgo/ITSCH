@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- saved from url=(0044)https://tcja.github.io/jQuery-confirm-modal/ -->
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" media="screen"href="css/style.css">
+	<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="js/jquery.confirmModal.js"></script>
@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Confirm box plugin for bootstrap 4">
 <meta property="og:description" content="Confirm box plugin for bootstrap 4">
-<link rel="canonical" href="https://tcja.github.io/jQuery-confirm-modal/">
+<link rel="canonical"href="https://tcja.github.io/jQuery-confirm-modal/">
 <meta property="og:url" content="https://tcja.github.io/jQuery-confirm-modal/">
 <meta property="og:site_name" content="jQuery-confirm-modal">
 <script type="application/ld+json">
@@ -26,17 +26,17 @@
 
   </head>
 
-  <body>		
+  <body>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/tcja/jQuery-confirm-modal">View on GitHub</a>
+          <a id="forkme_banner"href="https://github.com/tcja/jQuery-confirm-modal">View on GitHub</a>
 
           <h1 id="project_title">jQuery-confirm-modal</h1>
           <h2 id="project_tagline">Confirm box plugin for bootstrap 4</h2>
 
-          
+
         </header>
     </div>
 
@@ -67,21 +67,21 @@
 
 <p>We need to make sure that the DOM is ready before we implement the plugin, in this example we use the click event method that jQuery provides.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>         
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
     <span class="nx">$</span><span class="p">(</span><span class="s1">'.confirmModal'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>              
+      <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
       <span class="nx">$</span><span class="p">.</span><span class="nx">confirmModal</span><span class="p">(</span><span class="s1">'Are you sure you want to do this?'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">alert</span><span class="p">(</span><span class="s1">'OK was clicked!'</span><span class="p">);</span>
         <span class="c1">//do something...</span>
       <span class="p">});</span>
-    <span class="p">});</span>          
+    <span class="p">});</span>
   <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 <p>The <strong>first parameter</strong> is the <em>message</em> we want to display, the <strong>second parameter (optional)</strong> provides <em>custom options for a specific modal</em> and <strong>the third one</strong> is the <em>callback function</em> with the current clicked element passed as a parameter (in this case the element being <code class="highlighter-rouge">&lt;a href="" class="confirmModal"&gt;click&lt;/a&gt;</code>).</p>
 
 <script type="text/javascript">
-	$(function() {    
+	$(function() {
 		$('.confirmModal').click(function(e) {
       e.preventDefault();
       if ($defaultsConfirmModal !== undefined) {
@@ -97,7 +97,7 @@
             autoFocusOnConfirmBtn: false
         };
       }
-			$.confirmModal('Are you sure you want to do this?', function(el) {        
+			$.confirmModal('Are you sure you want to do this?', function(el) {
 				alert('OK was clicked!');
 				//do something...
       });
@@ -166,7 +166,7 @@
         <span class="c1">//do something...</span>
       <span class="p">});</span>
     <span class="p">});</span>
-  
+
     <span class="nx">$</span><span class="p">(</span><span class="s1">'.yetAnotherConfirmModal'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
       <span class="c1">//Here we don't specify any custom options so the default values from $defaultsConfirmModal will apply,</span>
@@ -195,7 +195,7 @@
 
     $('.anotherConfirmModal').click(function(e) {
       e.preventDefault();
-      //Now, we want to change the default behavior we set earlier but just for this specific modal, 
+      //Now, we want to change the default behavior we set earlier but just for this specific modal,
       //we'll set a text header, we don't want the auto-focus on the button, we'll center the modal vertically and we want to blur
       //the background, as stated previously those new values will overwrite the default ones set with $defaultsConfirmModal variable
       var options = {
@@ -209,7 +209,7 @@
         //do something...
       });
     });
-  
+
     $('.yetAnotherConfirmModal').click(function(e) {
       e.preventDefault();
       //Here we don't specify any custom options so the default values from $defaultsConfirmModal will apply,
@@ -236,14 +236,14 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        
+
         <p class="copyright">jQuery-confirm-modal maintained by <a href="https://github.com/tcja">tcja</a></p>
-        
+
         <p>Published with <a href="https://pages.github.com/">GitHub Pages</a></p>
       </footer>
     </div>
 
-    
-  
+
+
 
 </body></html>

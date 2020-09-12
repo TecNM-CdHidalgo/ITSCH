@@ -260,11 +260,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-parent="#accordion" data-toggle="collapse1" href="#panel-01" aria-expanded="true" aria-controls="panel-01">
+                        <a data-parent="#accordion" data-toggle="collapse1"href="#panel-01" aria-expanded="true" aria-controls="panel-01">
                             Temario de sistemas computacionales
                         </a>
                     </h4>
-                    <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse" href="#panel-01"></button>
+                    <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse"href="#panel-01"></button>
                 </div>
                 <div class="panel-collapse collapse in" id="panel-01">
                     <div class="panel-body">

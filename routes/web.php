@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Rutas publicas
+
+
+
+Route::get('calidad/calidad',function(){return view('content.calidad.calidad');})->name('calidad.calidad');
+//
+
+
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
 Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
 Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');
@@ -21,6 +28,12 @@ Route::get('oferta_educativa/nano',function(){return view('content.oferta_educat
 Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
+
+//Rutas publicas
+
+
+
+
 
 
 //Rutas privadas

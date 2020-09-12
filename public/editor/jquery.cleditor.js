@@ -50,8 +50,8 @@
                           "margin:4px; font:10pt Arial,Verdana; cursor:text"
         },
 
-        // Define all usable toolbar buttons - the init string property is 
-        //   expanded during initialization back into the buttons object and 
+        // Define all usable toolbar buttons - the init string property is
+        //   expanded during initialization back into the buttons object and
         //   separate object properties are created for each button.
         //   e.g. buttons.size.title = "Font Size"
         buttons: {
@@ -402,7 +402,7 @@
 
         // Toggle source
         if (buttonName === "source") {
-            
+
             // Show the iframe
             if (sourceMode(editor)) {
                 delete editor.range;
@@ -741,7 +741,7 @@
             selection.removeAllRanges();
             selection.addRange(range);
         }
-        
+
         else {
             var success = true, message;
             try { success = editor.doc.execCommand(command, 0, value || null); }
@@ -853,7 +853,7 @@
         doc.write(
             options.docType +
             '<html>' +
-            ((options.docCSSFile === '') ? '' : '<head><link rel="stylesheet" type="text/css" href="' + options.docCSSFile + '" /></head>') +
+            ((options.docCSSFile === '') ? '' : '<head><link rel="stylesheet" type="text/css"href="' + options.docCSSFile + '" /></head>') +
             '<body style="' + options.bodyStyle + '"></body></html>'
         );
         doc.close();
@@ -921,7 +921,7 @@
         // Enable the toolbar buttons and update the textarea as the user types or clicks
         $doc.click(hidePopups)
             .keydown(function (e) {
-                // Prevent Internet Explorer from going to prior page when an image 
+                // Prevent Internet Explorer from going to prior page when an image
                 // is selected and the backspace key is pressed.
                 if (ie && getSelection(editor).type == "Control" && e.keyCode == 8) {
                     getSelection(editor).clear();

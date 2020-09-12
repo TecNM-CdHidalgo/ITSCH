@@ -1,11 +1,11 @@
 @extends('template')
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('CustomFileInputs/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('CustomFileInputs/css/component.css') }}">
-    <link rel="stylesheet" href="{{ asset('SmartPhoto-master/css/smartphoto.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('cropper/dist/cropper.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet"href="{{ asset('CustomFileInputs/css/normalize.css') }}">
+    <link rel="stylesheet"href="{{ asset('CustomFileInputs/css/component.css') }}">
+    <link rel="stylesheet"href="{{ asset('SmartPhoto-master/css/smartphoto.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('cropper/dist/cropper.min.css') }}">
+    <link rel="stylesheet"href="{{ asset('fontawesome/css/all.css') }}" crossorigin="anonymous">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 @endsection
@@ -56,7 +56,7 @@
 
             $image.cropper({
                 aspectRatio: 16 / 9,
-            
+
             });
             // Get the Cropper.js instance after initialized
             var cropper = $image.data('cropper');
@@ -98,7 +98,7 @@
                     dataType: 'json',
                     processData: false,
                     contentType: false,
-                    
+
                     success(response) {
                         $('#mds-alert').fadeIn();
                         console.log('Upload success');

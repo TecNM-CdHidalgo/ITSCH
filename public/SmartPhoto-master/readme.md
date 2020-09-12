@@ -63,7 +63,7 @@ $(function(){
 <a href="./assets/large-rhinoceros.jpg" class="js-smartphoto" data-caption="rhinoceros" data-id="sai" data-group="0">
   <img src="./assets/rhinoceros.jpg" width="360"/>
 </a>
-<link rel="stylesheet" href="./css/smartphoto.min.css">
+<link rel="stylesheet"href="./css/smartphoto.min.css">
 <script src="./js/smartphoto.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
