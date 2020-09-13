@@ -1,5 +1,5 @@
 /*Estilos submenu*/
-@media (min-width: 500px){
+@media (min-width: 600px){
     .dropdown-menu .dropdown-toggle:after{
         border-top: .3em solid transparent;
         border-right: 0;

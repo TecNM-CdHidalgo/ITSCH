@@ -83,7 +83,7 @@
           Alumnos
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item dropdown-toggle" href="#"> Servicios Escolares</a>
+          <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
             <ul class="submenu dropdown-menu">
               <li>
                 <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/servicios.php">Servicios</a> 
@@ -234,7 +234,7 @@
               <a class="dropdown-item" href="https://bit.ly/2SBtQgr">Servicio de Caja</a>
               <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
               <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
-              <li><a class="dropdown-item dropdown-toggle" href="#"> Lenguas Extranjeras</a>
+              <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
                 <ul class="submenu dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-secundaria.php">Ingles para Secundaria</a>

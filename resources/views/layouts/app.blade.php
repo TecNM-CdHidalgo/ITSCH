@@ -34,7 +34,6 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         {{--CSS Propios--}}
@@ -90,44 +89,41 @@
     </head>
     {{--<body style="height:2000px">--}}
     <body style="overflow-x: hidden;">
-        <!--Incluir jQuery  -->
-        <script src="{{asset('jQuery/jquery-3.4.1.js')}}"></script>
 
         {{--Menu de gobierno--}}
-        @extends('layouts.menu_gob')
+        @include('layouts.menu_gob')
 
         {{--Plantilla--}}
-        @extends('layouts.plantilla')
-
-        <script>
-            $(document).ready(function(){
-              $('[data-toggle="tooltip"]').tooltip();             
-            });
-
-           // Prevent closing from click inside dropdown
-            $(document).on('click', '.dropdown-menu', function (e) {
-              e.stopPropagation();
-            });
-
-            // make it as accordion for smaller screens
-            if ($(window).width() < 500) {
-              $('.dropdown-menu a').click(function(e){
-                e.preventDefault();
-                  if($(this).next('.submenu').length){
-                    $(this).next('.submenu').toggle();
-                  }
-                  $('.dropdown').on('hide.bs.dropdown', function () {
-                 $(this).find('.submenu').hide();
-              })
-              });
-            }
-            
-
-           
-        </script>
+        @include('layouts.plantilla')
     </body>
 
+    <!--Incluir jQuery  -->
+    <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>
 
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
 
+        // Prevent closing from click inside dropdown
+        $(document).on('click', '.dropdown-menu', function (e) {
+          e.stopPropagation();
+        });
+
+        // make it as accordion for smaller screens
+        $('.menu-padre').on('click', function(e){
+          if ($(window).width() > 599) return;
+          e.preventDefault();
+          e.stopPropagation();
+
+          if($(this).next('.submenu').length){
+              $(this).next('.submenu').toggle();
+          }
+
+          $('.dropdown').on('hide.bs.dropdown', function () {
+            $(this).find('.submenu').hide();
+          });
+        });
+    </script>
 
 </html>
