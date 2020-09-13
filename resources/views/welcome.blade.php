@@ -60,10 +60,9 @@
 		    <span class="carousel-control-next-icon"></span>
 		</a>
 	</div>
-
 @endsection	
 
-	@section('content')
+@section('content')
 	{{--Contenido de noticias--}}
 	<h3>Noticias</h3>
     <hr>
@@ -109,16 +108,29 @@
 
 	{{--Redes sociales--}}
 	<div class="info">
-		<h1>Redes sociales</h1>
-        <div class="col-xl-4"><a class='twitter-timeline' data-lang='es' data-width='350' data-height='525' data-dnt='true' data-theme='light' href='https://twitter.com/TecNM_cdhidalgo'>TecNM</a>
-
-        </div>
-        <div class="col-xl-4">	<iframe style='margin-top:15px;' width='350' height='525' src='https://www.youtube.com/embed/s58wL5reK3I' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>
-        <div class="col-xl-4"><iframe style='margin-top:15px;' src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/TecNM.campus.Ciudad.Hidalgo/&tabs=timeline&width=350&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe></div>
+		<h2>Redes sociales</h2>
+		<div class="row">
+			<div class="col-sm-4">
+				<a class="twitter-timeline" 
+				data-lang="es"
+				data-width="420" 
+				data-height="500"
+				 data-dnt="true"
+				data-link-color="#404099" 
+				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by juksoto</a> 
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			<div class="col-sm-4">
+				<iframe style='margin-top:15px;' width='350' height='525' src='https://www.youtube.com/embed/s58wL5reK3I' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+			</div>
+			<div class="col-sm-4">
+				<iframe style='margin-top:15px;' src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/TecNM.campus.Ciudad.Hidalgo/&tabs=timeline&width=350&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>
+			</div>
+		</div>      
     </div>
 
 	<div class="info">
-		<h1>Sitios de Interés</h1>
+		<h2>Sitios de Interés</h2>
 	    <div class="row" >
 			<div class="col-xl-2 mx-auto">
 				<a href='https://www.conacyt.gob.mx/' target='_blank'>
@@ -152,7 +164,7 @@
 		</div>
 
 
-        <section  >
+        <section>
             <div class="">
                 <div >
                     <div  >
