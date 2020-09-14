@@ -2,28 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 //Rutas publicas**************************************************************************
-Route::get('calidad/calidad',function(){return view('content.calidad.calidad');})->name('calidad.calidad');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 
-
 //Vinculacion
-
-
-
 Route::get('vinculacion/banco_de datos',function(){return view('content.vinculacion/bando_de_datos');})->name('vinculacion.banco_de_datos');
 
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
@@ -39,15 +24,6 @@ Route::get('vinculacion/informacion',function(){return view('content.vinculacion
 Route::get('vinculacion/residencias',function(){return view('content.vinculacion.residencias');})->name('vinculacion.residencias');
 
 Route::get('vinculacion/servicio-social',function(){return view('content.vinculacion.servicio-social');})->name('vinculacion.servcio-social');
-
-
-
-//
-
-=======
->>>>>>> a6c0985e0469c6167930b16e9889ddc7e6df0efc
-=======
->>>>>>> a6c0985e0469c6167930b16e9889ddc7e6df0efc
 
 //Rutas de oferta educativa
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
@@ -67,8 +43,6 @@ Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
 
 //Rutas publicas
-
-
 
 
 

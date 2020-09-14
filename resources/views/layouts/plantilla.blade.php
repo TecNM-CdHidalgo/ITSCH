@@ -278,13 +278,13 @@
               Vinculación
           </a>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="{{route('vinculacion.servicio-social')}}">Servicio Social</a>
-              <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
-              <a class="dropdown-item" href="{{route('vinculacion.banco_de_datos')}}">Banco de Poyectos</a>
-              <a class="dropdown-item" href="{{route('vinculacion.negocios/incubadora-de-empresas')}}">Incubadora de Empresas</a>
-              <a class="dropdown-item" href="{{route('vinculacion.bolsa-de-trabajo')}}">Bolsa de Trabajo</a>
-              <a class="dropdown-item" href="{{route('vinculacion.convenio_colaboracion')}}">Convenios de Colaboraci&oacute;n</a>
-              <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}"> Cultura y deporte</a>
+              <a class="dropdown-item" href="">Servicio Social</a>
+              <a class="dropdown-item" href="">Residencias Profesionales</a>
+              <a class="dropdown-item" href="">Banco de Poyectos</a>
+              <a class="dropdown-item" href="">Incubadora de Empresas</a>
+              <a class="dropdown-item" href="">Bolsa de Trabajo</a>
+              <a class="dropdown-item" href="">Convenios de Colaboraci&oacute;n</a>
+              <a class="dropdown-item" href=""> Cultura y deporte</a>
 
           </div>
       </li>
