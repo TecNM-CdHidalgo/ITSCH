@@ -70,10 +70,11 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-white" id="menuBlan">
  {{--Logo--}}
   <a class="navbar-brand" href="{{route('inicio')}}">
-    <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:25px; height: 30px;" />
+    <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:30px; height: 35px;" />
   </a>
 
-  <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco">
+  <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco" >
+
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavBlanco">
@@ -176,10 +177,8 @@
           <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
           <a class="dropdown-item" href="https://bit.ly/2KVOXps">Aviso de privacidad </a>
           </div>
-      </li>
-      <li class="nav-item ml-auto">
-        <a href="https://cdhidalgo.tecnm.mx:8081/moodle/" class="nav-link active">Moodle</a>
-      </li>
+      </li>      
+      <a href="https://cdhidalgo.tecnm.mx:8081/moodle/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>     
     </ul>
   </div>
 </nav>

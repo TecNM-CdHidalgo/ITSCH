@@ -104,20 +104,19 @@
 	    </div>
 	@endforeach
 
-
-
 	{{--Redes sociales--}}
 	<div class="info">
 		<h2>Redes sociales</h2>
 		<div class="row">
 			<div class="col-sm-4">
 				<a class="twitter-timeline" 
+				style="margin-top:15px;" 
 				data-lang="es"
-				data-width="420" 
-				data-height="500"
-				 data-dnt="true"
-				data-link-color="#404099" 
-				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by juksoto</a> 
+				data-width="350" 
+				data-height="525"
+				data-dnt="true"
+				data-link-color="#504099" 
+				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by ITSCH</a> 
 				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			<div class="col-sm-4">
@@ -164,43 +163,32 @@
 		</div>
 
 
-        <section>
-            <div class="">
-                <div >
-                    <div  >
-                        <p>
-                            <strong>Dirección</strong>
-                            <br>
-                            <br>Av. Ing. Carlos Rojas Gutiérrez 2120 | Fraccionamiento Valle de la Herradura | Ciudad Hidalgo Michoacán <br>
-                            <br>
-                            <br><strong>Contacto</strong>&nbsp;<br>
-                            <br>Email: contacto@tecnm.mx&nbsp;<br>Tel. (786) 154-90-00 <br>
-                        </p>
-                    </div>
-
-                    <div class="container">
-                        <a href='#' title='Ver Ubicación'>
-                            <img src="http://www.cdhidalgo.tecnm.mx/images/footer/Foto_Ubi.JPG" alt="Ubicación" style='width:95%;' />
-                        </a>
-                    </div>
-                </div>
-                <div >
-                    <div >
-                        <div class="col-sm-12">
-                            <hr>
-                        </div>
-                    </div>
-                    <div >
-                        <div>
-                            <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
-                                <br />
-                                <p>Última actualización: 11/09/2020</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
+       
+	    <div>
+	        <div>
+	            <div>
+	                <p>
+	                    <strong>Dirección</strong>
+	                    <br>
+	                    <br>Av. Ing. Carlos Rojas Gutiérrez 2120 | Fraccionamiento Valle de la Herradura | Ciudad Hidalgo Michoacán <br>
+	                    <br>
+	                    <br><strong>Contacto</strong>&nbsp;<br>
+	                    <br>Email: contacto@tecnm.mx&nbsp;<br>Tel. (786) 154-90-00 <br>
+	                </p>
+	            </div>
+	            <div style="width: 100%" style="text-align: center;">
+	                <a href='#' title='Ver Ubicación'>
+	                    <img src="http://www.cdhidalgo.tecnm.mx/images/footer/Foto_Ubi.JPG" alt="Ubicación" style='width:95%;' />
+	                </a>
+	            </div>
+	        </div>
+	        <div>                
+                <hr>        
+                <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
+                <br>
+                <p><small><b>Última actualización: 11/09/2020</b></small></p>
+                <br>                         
+	        </div>
+	    </div>
     </div>
 @endsection

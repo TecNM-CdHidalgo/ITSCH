@@ -1,3 +1,11 @@
+/*Estilos del moodle*/
+.mood{
+    width:80px; 
+    height: 20px; 
+    vertical-align: middle; 
+}
+
+
 /*Estilos submenu*/
 @media (min-width: 600px){
     .dropdown-menu .dropdown-toggle:after{
@@ -24,6 +32,8 @@
     .dropdown-menu > li:hover > .submenu{
         display: block;
     }
+    
+
 }
 
 
@@ -37,6 +47,8 @@
   color: #fff;
   text-decoration: none;
   background-color: transparent;
+  font-size: 15px;
+  
 }
 /*Color de terto de las tarjetas colapsables*/
 .tarColaps{
@@ -74,7 +86,7 @@
 #menuAzul{
     z-index: 500; 
     position: sticky;
-    top: 14%; 
+    top: 16%; 
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;
     font-size: .9em; 
@@ -104,6 +116,7 @@
  .encab {
     display: none !important;
  }
+ 
 }
 
 /*footer de la pagina*/

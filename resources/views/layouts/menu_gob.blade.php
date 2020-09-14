@@ -1,9 +1,9 @@
 {{--Menu de gobierno--}}
 
-<nav class="navbar navbar-expand fixed-top" id="menuGob">
+<nav class="navbar navbar-expand fixed-top" id="menuGob" >
   <div class="container">
     <!-- Brand/logo -->
-    <a class="navbar-brand"href="https://www.gob.mx/"><img loading="lazy" src="{{ asset('images/logoheader.svg') }}"height="29" alt="Gobierno de México"></a>
+    <a class="navbar-brand "href="https://www.gob.mx/"><img loading="lazy" src="{{ asset('images/logoheader.svg') }}"height="29" alt="Gobierno de México"></a>
 
     <!-- Links -->
     <ul class="navbar-nav ml-auto">
