@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 //Rutas publicas**************************************************************************
 Route::get('calidad/calidad',function(){return view('content.calidad.calidad');})->name('calidad.calidad');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 
@@ -43,6 +44,8 @@ Route::get('vinculacion/servicio-social',function(){return view('content.vincula
 
 //
 
+=======
+>>>>>>> a6c0985e0469c6167930b16e9889ddc7e6df0efc
 =======
 >>>>>>> a6c0985e0469c6167930b16e9889ddc7e6df0efc
 
