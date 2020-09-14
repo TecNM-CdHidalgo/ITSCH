@@ -12,19 +12,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Rutas publicas
-
-
-
+//Rutas publicas**************************************************************************
 Route::get('calidad/calidad',function(){return view('content.calidad.calidad');})->name('calidad.calidad');
-//
 
-
+//Rutas de oferta educativa
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
 Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
 Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');
 Route::get('oferta_educativa/nano',function(){return view('content.oferta_educativa.nano');})->name('oferta.nano');
 
+//Rutas de instituto
+Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nuestro_tec');})->name('instituto.nuestro_tec');
+Route::get('instituto/directorio',function(){return view('content.instituto.directorio');})->name('instituto.directorio');
+Route::get('instituto/ubicacion',function(){return view('content.instituto.ubicacion');})->name('instituto.ubicacion');
+
+
+//Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
@@ -36,7 +39,7 @@ Auth::routes();
 
 
 
-//Rutas privadas
+//Rutas privadas****************************************************************************
 Route::group(['middleware' => 'auth'],function(){
 	Route::get('/home', 'HomeController@index')->name('home');
 

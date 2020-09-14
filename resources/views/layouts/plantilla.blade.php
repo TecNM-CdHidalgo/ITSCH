@@ -202,9 +202,9 @@
           Instituto
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://bit.ly/3dhb5qC">Nuestro Tec </a>
-            <a class="dropdown-item" href="https://bit.ly/3dboRL6">Directorio</a>
-            <a class="dropdown-item" href="https://bit.ly/3fqbHMz">Ubicación</a>
+            <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
+            <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>   
+            <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
             <a class="dropdown-item" href="https://bit.ly/2ytcyeK">Programa de capacitación</a>
 
         </div>
