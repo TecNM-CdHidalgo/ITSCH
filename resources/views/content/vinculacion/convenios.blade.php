@@ -18,9 +18,6 @@
 					<h1 class="page-title">Convenios:</h1>
 				</header>
 				
-                <!-- contenido bruto dinamico-->
-                <?php include_once '../dibujaMantenimiento.php'; dibujarCuadro('../'); ?>
-                
             </article>
 			<!-- /Article -->
 			

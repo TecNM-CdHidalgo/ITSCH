@@ -4,13 +4,7 @@
 @section('content')
 
 
-	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="../index">Inicio</a></li>
-            <li class="active">Vinculación</li>
-			<li class="active">Residencias</li>
-		</ol>
 
 		<div class="row">
 			
@@ -36,5 +30,5 @@
 		
 
 		</div>
-	</div>	<!-- /container -->
+		@endsection
 

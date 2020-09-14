@@ -4,13 +4,6 @@
 @section('content')
 
 
-<div class="container">
-
-		<ol class="breadcrumb">
-			<li><a href="../index">Inicio</a></li>
-            <li class="active">Vinculación</li>
-			<li class="active">Información</li>
-		</ol>
 
 		<div class="row">
 			
@@ -103,9 +96,8 @@
 <p> Descarga el formato para inscripción </p>
 
                            <p align="center">
-<a href='format_dw.docx'><img src='../media/descargas/descarga_word.gif' width='100' height='100' title='Solicitud para inscribirte' border='0'></a> </p> 
-                <!-- contenido bruto dinamico-->
-      
+                                                    <a href='format_dw.docx' type='button' class="btn btn-primary">  </a>           <!-- contenido bruto dinamico-->
+                           </p>
                 
                 <blockquote>A T E N T A M E N T E
 <br><br>
@@ -122,7 +114,6 @@ DEPARTAMENTO DE EXTENSIÓN EDUCATIVA
 			<!-- /Sidebar -->
 
 		</div>
-	</div>	<!-- /container -->
 
 
     @endsection

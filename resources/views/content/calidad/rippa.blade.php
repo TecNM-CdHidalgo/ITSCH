@@ -36,10 +36,15 @@
                 <tbody>
                     <tr>
                         <td width="80%" class="grande">Reglamento.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/rippa/rippa2017.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
+
                         <td>
+
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" type="button">
+                                <i class='fas fa-info-circle' style='font-size:20px'></i>
+                            </button>
                             <a href="../media/departamentos/sistema_de_gestion/rippa/rippa2017.pdf" target="_blank
+
+
                             <button type="button" class="btn btn-default">Básico</button>
                           </a></td>
 
