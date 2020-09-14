@@ -15,13 +15,11 @@
                 
                 
 		<h2><a href="bp20/VACANTES.pdf" download="Banco de proyectos">Descargar Archivo</a></h2>
-                <!-- contenido bruto dinamico-->
-                
+        <!-- contenido bruto dinamico-->
+        
 
-            </article>
-			<!-- /Article -->
-		
-
-		</div>
-		@endsection
+    </article>
+	<!-- /Article -->
+</div>
+@endsection
 
