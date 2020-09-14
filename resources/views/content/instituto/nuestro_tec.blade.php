@@ -3,17 +3,15 @@
 
 @section('content')
 
-    <div style="margin: auto; text-align: center; width: 80%; padding: 5%;">
+<div style="margin: auto; text-align: center; width: 80%; padding: 5%;">
 
 
-<p style="text-align: center;"><embed class="img-fluid" src="{{asset('images/content/instituto/nuestro_tec/tec.jpg')}}" alt="Misión SNIT" width="60%"> </p>
-    
-        
+<p style="text-align: center;"><embed class="img-fluid" src="{{asset('images/content/instituto/nuestro_tec/tec.jpg')}}" alt="Misión SNIT" width="60%"> </p>      
 
 
 <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2" style="text-align: left; font-size:3.6vw;">
     <strong> Visión </strong> 
-    <br />
+    <hr class="red">
 </h2>
 
 
@@ -21,10 +19,9 @@
 “Ser institución de vanguardia; pilar fundamental del desarrollo sustentable y competitivo de los diferentes sectores de la sociedad en la región”.</p>
 
 
-
 <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2" style="text-align: left; font-size:3.6vw;">
     <strong> Misión. </strong> 
-    <br />
+    <hr class="red">
 </h2>
 
 
@@ -34,7 +31,7 @@
 
 <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2" style="text-align: left; font-size:3.6vw;">
     <strong> Objetivo. </strong> 
-    <br />
+    <hr class="red">
 </h2>
 
 

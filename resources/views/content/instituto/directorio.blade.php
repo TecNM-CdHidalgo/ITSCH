@@ -9,7 +9,7 @@
 			<h1 class="page-title">El ITSCH:</h1>
 		</header>        
         <p align="center" style="margin:30px auto 35px auto"><img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}"></p>               
-        <hr>               
+        <hr class="red">               
 		<h3>1.&nbsp;&nbsp;&nbsp; MTRO. Javier Irepan Hacha Director General </h3>
 		<p>&nbsp;
 			</p>
