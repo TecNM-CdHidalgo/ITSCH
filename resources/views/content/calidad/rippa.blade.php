@@ -2,7 +2,10 @@
 @extends('layouts.app')
 
 
-@section('content')<div class="container">
+@section('content')
+
+
+    <div class="container">
 
 		<ol class="breadcrumb">
 			        <a href="../index">Inicio</a>
@@ -35,6 +38,11 @@
                         <td width="80%" class="grande">Reglamento.</td>
                         <td class="media">Descargar</td>
                         <td><a href="../media/departamentos/sistema_de_gestion/rippa/rippa2017.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
+                        <td>
+                            <a href="../media/departamentos/sistema_de_gestion/rippa/rippa2017.pdf" target="_blank
+                            <button type="button" class="btn btn-default">Básico</button>
+                          </a></td>
+
                     </tr>
 
                 </tbody>
@@ -44,4 +52,6 @@
 
           <HR>
 			</article>
-			<!-- /Article -->@section('content')
+			<!-- /Article -->
+
+@endsection

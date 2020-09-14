@@ -1124,19 +1124,19 @@
             </div>
         </div>
 
-        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"> Saul Galvez-Barboza          </h5>
+                        <h5 class="modal-title" id="exampleModalLabel11"> Saul Galvez-Barboza          </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <h4>Formación:</h4>
-                        <p>Ingeniera bioquímica- Maestría en Ciencias Biológicas en Biotecnología- CMEB-UMSNH  </p>
+                        <p>Dcotorado en Ciencias de la Ingeniería Metalúrgica </p>
 
 
                         <h4>E-mail:</h4>

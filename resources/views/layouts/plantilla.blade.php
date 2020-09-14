@@ -121,7 +121,7 @@
      
       <li class="nav-item dropdown  ml-auto">
           <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
-              Academicos
+              Académicos
           </a>
 
         <div class="dropdown-menu">
@@ -150,7 +150,7 @@
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/ambiental">Lineamientos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2010">Lineamientos plan 2010 </a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/rippa">RIPPA</a>
+            <a class="dropdown-item"href='{{route('calidad.rippa')}}'>RIPPA</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2015">Lineamiento Plan 2015 </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/instituto/investigacion/investigacion1">Investigación </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
@@ -202,9 +202,9 @@
           Instituto
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://bit.ly/3dhb5qC">Nuestro Tec </a>
-            <a class="dropdown-item" href="https://bit.ly/3dboRL6">Directorio</a>
-            <a class="dropdown-item" href="https://bit.ly/3fqbHMz">Ubicación</a>
+            <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
+            <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>   
+            <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
             <a class="dropdown-item" href="https://bit.ly/2ytcyeK">Programa de capacitación</a>
 
         </div>
@@ -278,13 +278,13 @@
               Vinculación
           </a>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/servicio-social.php">Servicio Social</a>
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/residencias.html">Residencias Profesionales</a>
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/banco_de_datos.php">Banco de Poyectos</a>
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/negocios/incubadora-de-empresas.php">Incubadora de Empresas</a>
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/bolsa-de-trabajo.php">Bolsa de Trabajo</a>
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/convenio_colaboracion.php">Convenios de Colaboraci&oacute;n</a>
-              <a class="dropdown-item" href="https://www.cdhdialgo.tecnm.mx/vinculacion/cultura_deporte.php"> Cultura y deporte</a>
+              <a class="dropdown-item" href="{{route('vinculacion.servicio-social')}}">Servicio Social</a>
+              <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
+              <a class="dropdown-item" href="{{route('vinculacion.banco_de_datos')}}">Banco de Poyectos</a>
+              <a class="dropdown-item" href="{{route('vinculacion.negocios/incubadora-de-empresas')}}">Incubadora de Empresas</a>
+              <a class="dropdown-item" href="{{route('vinculacion.bolsa-de-trabajo')}}">Bolsa de Trabajo</a>
+              <a class="dropdown-item" href="{{route('vinculacion.convenio_colaboracion')}}">Convenios de Colaboraci&oacute;n</a>
+              <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}"> Cultura y deporte</a>
 
           </div>
       </li>
