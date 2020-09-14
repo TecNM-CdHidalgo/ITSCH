@@ -278,8 +278,8 @@
               Vinculación
           </a>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="">Servicio Social</a>
-              <a class="dropdown-item" href="">Residencias Profesionales</a>
+              <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
+              <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
               <a class="dropdown-item" href="">Banco de Poyectos</a>
               <a class="dropdown-item" href="">Incubadora de Empresas</a>
               <a class="dropdown-item" href="">Bolsa de Trabajo</a>

@@ -5,11 +5,7 @@
 
     <div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="../index">Inicio</a></li>
-            <li class="active">Vinculación</li>
-			<li class="active">Residencias</li>
-		</ol>
+		
 
 		<div class="row">
 			
@@ -285,10 +281,7 @@ d) No contar con ninguna asignatura en condiciones de “Curso Especial”
                 <br> 
             </article>
 			<!-- /Article -->
-			
-			<!-- Sidebar -->
-			<?php include_once '../dibujaSide.php'; dibujarSide('../'); ?>
-			<!-- /Sidebar -->
+		
 
 		</div>
 	</div>	<!-- /container -->
