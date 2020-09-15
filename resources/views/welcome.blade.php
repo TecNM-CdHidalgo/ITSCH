@@ -108,7 +108,9 @@
 	<div class="info">
 		<h2>Redes sociales</h2>
 		<div class="row">
+			{{--Twiter--}}
 			<div class="col-sm-4">
+				<h4>Twitter</h4>
 				<a class="twitter-timeline" 
 				style="margin-top:15px;" 
 				data-lang="es"
@@ -119,11 +121,15 @@
 				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by ITSCH</a> 
 				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
+			{{--Youtube--}}
 			<div class="col-sm-4">
-				<iframe style='margin-top:15px;' width='350' height='525' src='https://www.youtube.com/embed/s58wL5reK3I' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+				<h4>Youtube</h4>
+				<iframe src="https://www.youtube.com/embed/videoseries?list=PLZX0SINrPE8xoidtLXhoMREo_1nGWgf_d" width="350" height="530" src="" frameborder="0" allow="autoplay"></iframe>
 			</div>
+			{{--Facebook--}}
 			<div class="col-sm-4">
-				<iframe style='margin-top:15px;' src='https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/TecNM.campus.Ciudad.Hidalgo/&tabs=timeline&width=350&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId' width='350' height='525' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>
+				<h4>Facebook</h4>
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTecNM.campus.Ciudad.Hidalgo%2F&tabs=timeline%2Cevents%2Cmessages&width=350&height=530&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="530" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 			</div>
 		</div>      
     </div>
