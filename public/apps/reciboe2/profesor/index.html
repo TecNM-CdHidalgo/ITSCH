@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="img/icono.png" />
+    <link rel="stylesheet" href="css/iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Recibos en Linea 2.0 Admin</title>
+</head>
+
+<body class="fondo">
+    <header class="text-center bg-white">
+        <img src="img/header2.png" class="img-fluid" alt="tecnm">
+    </header>
+    <div class="container rounded border shadow p-3 mb-5 bg-white">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card border shadow mt-3">
+                    <div class="card-header">
+                        <h6>Consultar Recibo</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Folio</div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Folio de recibo" id="idFolio">
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button type="button" class="btn btn-primary" id="idConsultar">Consultar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-3">
+            <div class="col"></div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Valido</div>
+                    </div>
+                    <input type="text" class="form-control" id="resultValido" readonly>
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Folio</div>
+                    </div>
+                    <input type="text" class="form-control" id="resultFolio" readonly>
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Numero Control</div>
+                    </div>
+                    <input type="text" class="form-control" id="resultControl" readonly>
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Nombre</div>
+                    </div>
+                    <input type="text" class="form-control" id="resultNombre" readonly>
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Fecha</div>
+                    </div>
+                    <input type="text" class="form-control" id="resultFecha" readonly>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-3">
+            <div class="col"></div>
+            <div class="col">
+                <table class="table table-hover table-striped table-responsive table-sm">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Materia</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="idMaterias">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    
+    <footer class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-5 lineasdobles"></div>
+            <div class="col-2"><img src="img/logo_footer.png" class="img-fluid" alt=""></div>
+            <div class="col-5 lineasdobles"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="text-center">Av. Ing. Carlos Rojas Gutiérrez 2120 | Fraccionamiento Valle de la Herradura
+                    | Ciudad Hidalgo Michoacán | Tel. (786) 154-90-00</p>
+                <p class="text-center">Copyright ITSCH © 2019. Todos los Derechos Reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#idConsultar").click(function(){
+            folio = $("#idFolio").val();
+            $.getJSON("../api/comprobar.php?folio="+folio)
+            .done(function( json ) {
+                console.log( json);
+                $("#resultValido").val(json.valido);
+                $("#resultFolio").val(json.folio);
+                $("#resultControl").val(json.control);
+                $("#resultNombre").val(json.nombre);
+                $("#resultFecha").val(json.fecha);
+                $("#idMaterias").html('');
+                json.conceptos.forEach(concepto => {
+                    if(concepto.tag=='MAT_ACT'){
+                        fila = "<tr><td>"+concepto.concepto+"</td><td>"+concepto.obs+"</td><td>"+concepto.importe+"</td></tr>"
+                        $("#idMaterias").append(fila);
+                    }
+                });
+            })
+            .fail(function( jqxhr, textStatus, error ) {
+                var err = textStatus + ", " + error;
+                console.log( "Request Failed: " + err );
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<ng-include ng-if="$parent.auth" src="'plantillas/menu.html'"></ng-include>
+	<section class="container">
+		<table class="highlight responsive-table">
+			<thead>
+				<tr>
+					<th>Folio</th>
+					<th>Fecha</th>
+					<th>Concepto</th>
+					<th>Monto</th>
+					<th>Status</th>
+					<th></th>
+				</tr>
+			</thead>
+				<tr ng-repeat="recibo in recibos">
+					<td>{{recibo.id_recibo}}</td>
+					<td>{{recibo.fecha | date : 'dd/MMM/yyyy'}}</td>
+					<td>{{recibo.conceptos}}</td>
+					<td>{{recibo.total | currency}}</td>
+					<td>{{recibo.status}}</td>
+					<td>
+						<button class="btn-floating waves-effect waves-light hoverable" ng-click="ver(recibo)"><i class="material-icons">find_in_page</i></button>
+						<button ng-if="recibo.status=='G'" class="btn-floating waves-effect waves-light blue hoverable" ng-click="descargar(recibo.id_recibo)"><i class="material-icons">picture_as_pdf</i></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="fixed-action-btn">
+				<a class="btn-floating btn-large waves-effect waves-light blue" ng-click="recarga()"><i class="material-icons">autorenew</i></a>
+			<button class="btn-floating pulse btn-large waves-effect waves-light" ng-click="recibo()"><i class="material-icons">add</i></button>
+		</div>
+
+	</section>
+
+	<script>
+		$(document).ready(function () {
+			$('.sidenav').sidenav();
+		});
+	</script>

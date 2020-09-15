@@ -1,0 +1,38 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark colorTec">
+    <span class="navbar-brand">SPL Admin</span>
+</nav>
+
+<div class="container rounded border mb-3 shadow bg-white">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col m-3">
+            <div class="card" style="width: 18rem;" ng-cloak>
+                <div class="card-header">
+                    Inicio de Sesión
+                </div>
+                <div class="card-body" ng-keyup="$event.keyCode == 13 && login()">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="material-icons">account_circle</i></div>
+                        </div>
+                        <input type="text" class="form-control" id="user" placeholder="Nombre de usuario"
+                            ng-model="user">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="material-icons">vpn_key</i></div>
+                        </div>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña"
+                            ng-model="pass">
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="button" class="btn btn-primary" id="entrar" ng-click="login()">Entrar <i
+                            class="material-icons align-middle">send</i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<ng-include src="'toast.html'"></ng-include>

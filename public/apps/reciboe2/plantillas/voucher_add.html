@@ -1,0 +1,55 @@
+  <div class="container" id="contenido">
+    <div class="row">
+      <div class="col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title white-text">Agregar Voucher de Banco</span>
+            <p class="z-depth-2 teal lighten-4 black-text center">{{$parent.control+" "+$parent.nombre}}</p>
+            <div class="input-field">
+              <i class="material-icons prefix">account_balance_wallet</i>
+              <input id="folio" type="text" class="validate white-text" name="folio" ng-model="newVoucher.folio">
+              <label for="folio">Folio de voucher</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">account_balance_wallet</i>
+              <input id="confirmar" type="text" class="validate white-text" name="confirmar" ng-model="newVoucher.folio2">
+              <label for="confirmar">Confirmar folio</label>
+              <span ng-hide="newVoucher.folio==newVoucher.folio2" class="z-depth-1 red darken-4">No coinciden los folios</span>
+            </div>
+            <div class="input-field black-text">
+              <i class="material-icons prefix white-text">access_time</i>
+              <input id="hora" type="text" class="timepicker white-text" name="hora" ng-model="newVoucher.hora"  ng-readonly="true">
+              <label for="hora">Hora</label>
+            </div>
+            <div class="input-field black-text">
+              <i class="material-icons prefix white-text">date_range</i>
+              <input id="fecha" type="text" class="datepicker white-text" name="fecha" ng-model="newVoucher.fecha" ng-readonly="true">
+              <label for="fecha" class="active">Fecha</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">attach_money</i>
+              <input id="monto" type="text" class="validate white-text" name="monto" ng-model="newVoucher.monto">
+              <label for="monto">Monto</label>
+            </div>
+          </div>
+
+          <div class="card-action right-align">
+            <button class="btn waves-effect waves-light" type="button" name="cancelar" id="cancelar" ng-click="cancelar()">Cancelar
+              <i class="material-icons right">cancel</i>
+            </button>
+            <button class="btn waves-effect waves-light" type="button" name="guardar" id="guardar" ng-click="guardar()">Guardar
+              <i class="material-icons right">save</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.datepicker').datepicker({format:'yyyy-mm-dd', setDefaultDate:true, defaultDate: new Date()});
+      $('.timepicker').timepicker({twelveHour:false});
+      //$('#folio').characterCounter();
+    });
+  </script>

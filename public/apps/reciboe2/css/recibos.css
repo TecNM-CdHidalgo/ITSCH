@@ -1,0 +1,70 @@
+.round {
+    border-radius: 20px;
+}
+.roundtop{
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px; 
+}
+.margen{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.color-fondo {
+    background-color: #607d8b !important;
+}
+.color-texto{
+    color: #FFFFFF !important;
+}
+
+nav > div > ul li a{
+    color:#fff;
+    display: block;
+    line-height: 20px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+nav > div > ul > li > a span{
+    background: #174459;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: -55px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+nav > div > ul > li > a span .material-icons prefix{
+    display: block;
+    line-height: 60px;
+}
+nav > div > ul > li > a:hover > span{
+    top: 0;
+}
+/* Colores */
+nav div > ul li a .primero{
+    background: #b71c1c;
+}
+nav div > ul li a .segundo{
+    background: #1a237e;
+}
+nav div > ul li a .tercero{
+    background: #f25724;
+}
+nav div > ul li a .cuarto{
+    background: #174459;
+}

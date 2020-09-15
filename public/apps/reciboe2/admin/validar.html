@@ -1,0 +1,164 @@
+<ng-include src="'menu_admin.html'"></ng-include>
+
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-sm-6">
+            <div class="card border shadow mt-3">
+                <div class="card-header">
+                    <h6>Cargar estado de cuenta</h6>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="material-icons">attach_file
+                                </i></div>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFileLangHTML" uploader-model="file">
+                            <label class="custom-file-label" for="customFileLangHTML" data-browse="Archivo">Seleccionar
+                                el
+                                archivo</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="button" class="btn btn-primary" id="subir" ng-click="uploadFile()">Enviar <i
+                            class="material-icons align-middle">file_upload</i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card border shadow mt-3">
+                <div class="card-header">
+                    <h6>Validaci&oacute;n individual</h6>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="material-icons">contacts</i></div>
+                        </div>
+                        <input type="text" class="form-control" id="control" placeholder="N&uacute;mero de control"
+                            ng-model="control" ng-keyup="$event.keyCode == 13 && buscar(1)">
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="button" class="btn btn-primary" id="consultar" ng-click="buscar(1)">Consultar <i
+                            class="material-icons align-middle">search</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col rounded border shadow m-3 bg-white">
+            <div id="listarvouchers" ng-if="vtotalrows>0">
+                <div class="input-group m-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">search</i></div>
+                    </div>
+                    <input id="search" type="search" ng-model="q" class="form-control-plaintext border">
+                </div>
+                <table class="table table-hover table-striped table-responsive-xl table-sm">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Control</th>
+                            <th>Referencia</th>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="voucher in vouchers | filter:q" ng-click="modifica(voucher)">
+                            <td>{{voucher.id_voucher}}</td>
+                            <td>{{voucher.control}}</td>
+                            <td>{{voucher.referencia}}</td>
+                            <td>{{voucher.fecha | date : 'dd/MMM/yyyy'}} {{voucher.hora}}</td>
+                            <td>{{voucher.monto | currency}}</td>
+                            <td>{{voucher.status | voucherStatus}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item" ng-class="{disabled: vpage==1}"><button class="page-link"
+                                ng-disabled="vpage == 1" ng-click="buscar(vpage-1)"><span
+                                    aria-hidden="true">&laquo;</span></button></li>
+                        <li class="page-item" ng-class="{active: vpage==p.no}" ng-repeat="p in vpages"><button
+                                class="page-link" ng-click="buscar(p.no)">{{p.no}}</button></li>
+                        <li class="page-item" ng-class="{disabled: vpage >= vtotalpages}"><button class="page-link"
+                                ng-disabled="vpage >= vtotalpages" ng-click="buscar(vpage+1)"><span
+                                    aria-hidden="true">&raquo;</span></button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalModifica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modificar voucher</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend ">
+                        <div class="input-group-text"><i class="material-icons">account_balance_wallet</i></div>
+                    </div>
+                    <input type="text" class="form-control" id="folio" placeholder="Folio de voucher"
+                        ng-model="voucherMod.referencia">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">access_time</i></div>
+                    </div>
+                    <input type="text" class="form-control" id="hora" placeholder="Hora" ng-model="voucherMod.hora">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">date_range</i></div>
+                    </div>
+                    <input type="text" class="form-control" id="fecha" placeholder="Fecha" ng-model="voucherMod.fecha">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">attach_money</i></div>
+                    </div>
+                    <input type="text" class="form-control" id="monto" placeholder="Monto" ng-model="voucherMod.monto">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">check</i></div>
+                    </div>
+                    <select class="form-control" ng-model="voucherMod.status">
+                        <option value="P">Pendiente</option>
+                        <option value="V">Validado</option>
+                        <option value="U">Utilizado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    ng-click="guardarCambios()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+    aria-hidden="true" id="enespera">
+    <div class="modal-dialog modal-sm">
+        div class="modal-content">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<ng-include src="'toast.html'"></ng-include>

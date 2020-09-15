@@ -1,0 +1,69 @@
+<ng-include src="'menu_admin.html'"></ng-include>
+<div class="container" id="contenido">
+  <div class="row">
+    <div class="col">
+      <div class="card border shadow mt-3">
+        <div class="card-header">
+          <h6>Generar reporte</h6>
+        </div>
+        <div class="card-body">
+          <form class="form-inline">
+            <div class="input-group m-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="material-icons">date_range</i>Inicial</div>
+              </div>
+              <input type="date" class="form-control" id="fechaIni" placeholder="yyyy-MM-dd" ng-model="fechaIni">
+            </div>
+            <div class="input-group m-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="material-icons">date_range</i>Final</div>
+              </div>
+              <input type="date" class="form-control" id="fechaFin" placeholder="yyyy-MM-dd" ng-model="fechaFin">
+            </div>
+            <div class="input-group m-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="material-icons">check</i></div>
+              </div>
+              <select class="form-control" ng-model="reporte">
+                <option value="" disabled selected>Selecciona un reporte</option>
+                <option value="1">Lista de recibos</option>
+                <option value="2">Lista de vouchers</option>
+                <option value="3">Concentrado por concepto</option>
+                <option value="4">Detalle de conceptos</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary m-2" id="consultar" ng-click="consultar()">Consultar <i
+                class="material-icons align-middle">send</i></button>
+            <button type="button" class="btn btn-primary m-2" id="consultar" ng-click="excel()"
+              ng-if="consulta.length>0">Excel <i class="material-icons align-middle">library_books</i></button>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="material-icons">search</i></div>
+            </div>
+            <input id="search" type="search" ng-model="q" class="form-control-plaintext border">
+          </div>
+          <table class="table table-hover table-striped table-responsive-xl table-sm" id="tablaReporte">
+            <thead>
+              <tr>
+                <th ng-repeat="(key, value) in consulta[0]">
+                  {{key}}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="fila in consulta | filter:q">
+                <td ng-repeat="(key, value) in fila">
+                  {{value}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

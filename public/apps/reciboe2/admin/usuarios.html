@@ -1,0 +1,141 @@
+<ng-include src="'menu_admin.html'"></ng-include>
+
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-sm-6">
+            <div class="card border shadow mt-3">
+                <div class="card-header">
+                    <h6>Consultar Alumno</h6>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="material-icons">contacts</i></div>
+                        </div>
+                        <input type="text" class="form-control" id="control" placeholder="N&uacute;mero de control"
+                            ng-model="control">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary" ng-click="buscar()">Consultar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <table class="table table-hover table-striped table-responsive-xl table-sm">
+                        <thead>
+                            <tr>
+                                <th>Control</th>
+                                <th>Nombre</th>
+                                <th>Paterno</th>
+                                <th>Materno</th>
+                                <th>Password</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="usu in alumnos">
+                                <td>{{usu.no_control}}</td>
+                                <td>{{usu.nombre}}</td>
+                                <td>{{usu.a_paterno}}</td>
+                                <td>{{usu.a_materno}}</td>
+                                <td>{{usu.passd}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card border shadow mt-3">
+                <div class="card-header">
+                    <h6>Consultar Externo</h6>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="material-icons">transfer_within_a_station</i></div>
+                        </div>
+                        <input type="text" class="form-control" id="curp" placeholder="N&uacute;mero CURP"
+                            ng-model="curp">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary" ng-click="buscarExterno()">Consultar</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer text-center">
+                    <table class="table table-hover table-striped table-responsive-xl table-sm">
+                        <thead>
+                            <tr>
+                                <th>Curp</th>
+                                <th>Nombre</th>
+                                <th>Paterno</th>
+                                <th>Materno</th>
+                                <th>Password</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="usu in usuarios" ng-click="modExt(usu)">
+                                <td>{{usu.curp}}</td>
+                                <td>{{usu.nombre}}</td>
+                                <td>{{usu.a_paterno}}</td>
+                                <td>{{usu.a_materno}}</td>
+                                <td>{{usu.passd}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalModExt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modificar Usuario Externo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend ">
+                        <div class="input-group-text"><i class="material-icons">mode_edit</i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="CURP" ng-model="usuMod.curp">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">mode_edit</i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nombre" ng-model="usuMod.nombre">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">mode_edit</i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Apellido Paterno" ng-model="usuMod.a_paterno">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">mode_edit</i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Apellido Materno" ng-model="usuMod.a_materno">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">mode_edit</i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Contraseña" ng-model="usuMod.passd">
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    ng-click="guardarCambiosExt()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-include src="'toast.html'"></ng-include>
