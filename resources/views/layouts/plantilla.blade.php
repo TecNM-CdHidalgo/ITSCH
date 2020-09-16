@@ -96,7 +96,7 @@
                 <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/proximos-egresar.php">Próximos a Egresar</a>
               </li>
               <li>
-                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/titulos-y-cedulas.php">Títulos y Cédulas</a>
+                <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
               </li>
               <li>
                 <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/alumnos-traslados.php">Alumnos de traslado</a>

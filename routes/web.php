@@ -38,6 +38,9 @@ Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nue
 Route::get('instituto/directorio',function(){return view('content.instituto.directorio');})->name('instituto.directorio');
 Route::get('instituto/ubicacion',function(){return view('content.instituto.ubicacion');})->name('instituto.ubicacion');
 
+//Servicos escolares
+Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
+Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
