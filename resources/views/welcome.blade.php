@@ -29,8 +29,7 @@
 					@if($ban)
 						<div class="carousel-item active">
 							<a href="{{route('ver',$not->id)}}">
-
-								<img src=src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" class="img-fluid" alt="{{$not->titulo}}">
+							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%"height="400px">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
