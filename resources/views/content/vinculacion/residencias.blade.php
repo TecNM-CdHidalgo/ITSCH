@@ -8,7 +8,7 @@
     </article>
     <article>
       <a href='./vinculacion/residencia.jpg' target='_blank'>
-        <img src='./vinculacion/residencia.jpg' style='width:100%; max-width: 600px; margin: 1%;' >
+        <img src='{{asset('images/content/vinculacion/residencias/residencia.jpg')}}' style='width:100%; max-width: 600px; margin: 1%;' >
       </a>
     </article>
     <br /><!--<article style="text-align:right;">
@@ -51,9 +51,9 @@
       <p align="justify">
 
         <strong>Estructura del reporte</strong> ESTRUCTURA DEL REPORTE PRELIMINAR DE RESIDENCIA PROFESIONAL<br>
-
+       
       <p align="center">
-        <a href='vinculacion/estruc.docx'><img src='vinculacion/doc1.png' width='100' height='100' title='Descargar Portada de residencias' border='0'></a> </p>
+        <a target="_blank" data-toogle="tooltip"  title="Escructura del reporte preliminar de residencia" download href='{{asset('documents/content/vinculacion/residencias/estruc.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
       <p align="center">Clic en la imagen para descargar documento</p>
       <br>
 
