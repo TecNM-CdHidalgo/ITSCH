@@ -95,7 +95,12 @@
 
         {{--Plantilla--}}
         @include('layouts.plantilla')
+
+       
+        
     </body>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="aHshxGf4"></script>
 
     <!--Incluir jQuery  -->
     <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>

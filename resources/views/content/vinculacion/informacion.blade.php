@@ -2,13 +2,14 @@
 
 
 @section('content')
-	<div class="row">
+    <div class="row">
 		<!-- Article main content -->
-		<article class="col-md-8 maincontent">
-			<header class="page-header">
-				<h1 class="page-title">Información General:</h1>
-			</header>       
-	        <span style="margin-bottom:30px;" class="thumbnail"><img src="Vinculacion-2.jpg"></span>                       
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<h1 class="page-title">Información General:</h1>
+			<hr class="red">
+			<img src="{{asset('images/content/vinculacion/informacion/Vinculacion-2.jpg')}}" style="width: 100%; height: 30%">
+
 			<p>Es un espacio de encuentro entre los sectores: privado, público, social y académico. </p>
 			<p>Objetivo: Facilitar el contacto entre los distintos sectores para generar nuevos proyectos en beneficio de la comunidad educativa del Instituto Tecnológico Superior de Ciudad Hidalgo, así como transferir los conocimientos científicos y tecnológicos a los diferentes sectores a nivel regional, nacional e internacional, a través de alianzas estratégicas eficientes e innovadoras.</p>
 
@@ -26,10 +27,8 @@
 			    <h4 style="margin-left: 49.65pt;">
 			•	Convenios de Colaboración</h4> 
 			    <h4 style="margin-left: 49.65pt;">
-			•	Seguimiento a Egresados</h4> 		         
-			                         
-	            <!-- contenido bruto dinamico-->           
-	        </article>
-			<!-- /Article -->
+			•	Seguimiento a Egresados</h4> 
+		</div>
+		<div class="col-sm-2"></div>	
 	</div>
 @endsection
