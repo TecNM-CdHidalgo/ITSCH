@@ -100,7 +100,7 @@
       5.1.- <strong>Carta de terminación.</strong>  <hr class="red">(Hoja membretada y dirigida al jefe de carrera, debe incluir nombre del alumno, nombre de proyecto, asesor por parte de la empresa, fecha de inicio y fecha final de residencias). Entregarlo a la encargada de residencias al final de su residencia.<br>
 
     <p align="center">
-      <a target="_blank" data-toogle="tooltip"  title="Carta de terminacion  de residencias " download href='{{asset('documents/content/vinculacion/residencias/carta_terminacion_ver2.docx.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+      <a target="_blank" data-toogle="tooltip"  title="Carta de terminacion  de residencias " download href='{{asset('documents/content/vinculacion/residencias/carta_terminacion_ver2.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
     <br>
 
 
@@ -120,6 +120,7 @@
       <p>9.- <strong>Formatos de asesoría</strong>  <hr class="red"> V.- anexo V formato de registro de asesoría (esta la llenan junto con su asesor interno en cada revisión de residencias entregar a la encargada de residencias profesionales un formato por cada revisión de residencias, 4 en total).</p>
 
 
+
     <p align="center">
       <a target="_blank" data-toogle="tooltip"  title="Formatos de asesorias  de residencias " download href='{{asset('documents/content/vinculacion/residencias/asesoriaad20.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
 
@@ -136,43 +137,46 @@
 
       11.- <strong>Formato de evaluación XXIX Y XXX </strong> <hr class="red">(debe tener sello y firma de la empresa), Entregarlo a la encargada de residencias al final de su residencia.) NOTA: El Anexo  XXIX se entrega en la segunda y cuarta revision y el formato XXX se entrega en la cuarta revision. En caso de que la empresa no cuenta con sello debe hacer un oficio en hoja membretada donde hace constar que no tiene sello y el alumno lo  entrega a la encargada de residencias profesionales. <br>
 
-    rvxxix
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/rvxxix.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
-      <p align="center">
-        <a href='vinculacion/ad19/rvxxix.doc'><img src='vinculacion/doc1.png' width='100' height='100' title='Descargar Formato de evalución XXIX' border='0'></a> </p>  <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/rvxxx.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
-      <p align="center">
-        <a href='vinculacion/ad19/rvxxx.doc'><img src='vinculacion/doc1.png' width='100' height='100' title='Descargar Formato de evalución XXX' border='0'></a> </p>  <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
 
 
 
       12.- <strong>Autorización de proyecto.</strong>  <hr class="red">
 
-      <p align="center">
-        <a href='vinculacion/carta_autad20.docx'><img src='vinculacion/doc1.png' width='100' height='100' title='Descargar Formato de evalución' border='0'></a> </p>  <p align="center">Clic en la imagen para descargar documento</p>
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Autorizacion del proyecto " download href='{{asset('documents/content/vinculacion/residencias/carta_autad20.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
-      <br>
+
+
+
+
 
       13.- <strong>Entregar disco con su proyecto final. </strong> <hr class="red">(Se sugiere sea en pdf y debe de contener dentro del mismo documento, después de la portada la carta de terminación que expide la empresa y la carta de terminación que expide el asesor interno) Entregarlo a la encargada de residencias al final de su residencia.
       <br>
-      <br>
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Portada del disco " download href='{{asset('documents/content/vinculacion/residencias/portdiscad19V1.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
-      <p align="center">
-        <a href='vinculacion/ad19/portdiscad19V1.docx'><img src='vinculacion/doc1.png' width='100' height='100' title='Descargar portada de discos' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
+
 
       <p>
 
         14.-<strong> Encuesta del asesor externo. </strong> <hr class="red">Entregarlo a la encargada de residencias al final de su residencia.
         <br><br>
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Encuesta del asesor externo " download href='{{asset('documents/content/vinculacion/residencias/encuesta_ases_extad19.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
-      <p align="center">
-        <a href='vinculacion/ad19/encuesta_ases_extad19.docx'><img src='vinculacion/doc1.png' width='100' height='100' title='Descargar evaluación del desempeño de los residentes profesionales' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
 
 
       15.- Encuesta del alumno.  <hr class="red">Al finalizar residencias, el alumno realiza encuesta de residencias profesionales  en la página del ITSCH, toma nota del número de folio que arroja al final y le pasa el número de folio a la encargada de residencias profesionales.<br>
@@ -186,11 +190,11 @@
 
       <h3>Condiciones generales del convenio de Residencias Profesionales</h3>
     <hr class="red">
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Encuesta del asesor externo " download href='{{asset('documents/content/vinculacion/residencias/cgcrp.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
-      <p align="center">
-        <a href='vinculacion/fj19/cgcrp.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar Condiciones generales del convenio de Residencias Profesionales' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
 
 
 
@@ -202,9 +206,14 @@
 
 
     <hr class="red">
-      <p align="center">
-        <a href='vinculacion/lineamiento_para_la_operacion_y_acreditacion_de_la_residencia_profesional.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar Lineamientos para la operacion y acreditación de la residencia profesional' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
+
+
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Lineamientos" download href='{{asset('documents/content/vinculacion/residencias/lineamiento_para_la_operacion_y_acreditacion_de_la_residencia_profesional.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
+
+
+
 
 
 
@@ -216,17 +225,17 @@
 
     <hr class="red">
 
-      <p align="center">
-        <a href='vinculacion/marco_legal_v8.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar marco legal' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
+
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Marco legal" download href='{{asset('documents/content/vinculacion/residencias/marco_legal_v8.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
 
 
 
 
-
-      <!-- contenido bruto dinamico-->
+  <!-- Directorios de empresas-->
 
 
 
@@ -235,54 +244,36 @@
 
       <h3>Directorio de empresas en Michoacán</h3>
     <hr class="red">
-      <p align="center">
-        <a href='vinculacion/dir_emp_michoacan_res.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar directorio de empresas en Queretaro' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
 
 
-
-
-
-    <hr class="red">
-
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Directorio" download href='{{asset('documents/content/vinculacion/residencias/dir_emp_michoacan_res.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
       <h3>Directorio de empresas en Celaya</h3>
     <hr class="red">
-      <p align="center">
-        <a href='vinculacion/dir_emp_celaya_res.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar directorio de empresas en Queretaro' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
-
-
-
-
-
-    <hr class="red">
-
-
-
-
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Directorio" download href='{{asset('documents/content/vinculacion/residencias/dir_emp_celaya_res.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
       <h3>Directorio de empresas en Querétaro</h3>
     <hr class="red">
-      <p align="center">
-        <a href='vinculacion/dir_emp_queretaro_res.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar directorio de empresas en Queretaro' border='0'></a></p>   <p align="center">Clic en la imagen para descargar documento</p>
-      <br>
+
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Directorio" download href='{{asset('documents/content/vinculacion/residencias/dir_emp_queretaro_res.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
-
-
-
-    <hr class="red">
       <h3>Directorio de empresas en Toluca</h3>
     <hr class="red">
 
-      <p align="center">
-        <a href='vinculacion/dir_emp_toluca_res.pdf'><img src='vinculacion/pdf-icon.png' width='100' height='100' title='Descargar directorio de empresas en Toluca' border='0'></a></p>
+
+    <p align="center">
+      <a target="_blank" data-toogle="tooltip"  title="Directorio" download href='{{asset('documents/content/vinculacion/residencias/dir_emp_toluca_res.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
+    <br>
 
 
-      <p align="center">Clic en la imagen para descargar documento</p>
-    <hr class="red">
 
     </article>
   
