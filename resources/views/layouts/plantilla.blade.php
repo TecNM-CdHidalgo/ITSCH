@@ -228,9 +228,8 @@
           <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
               Otros Departamentos
           </a>
-          <ul class="dropdown-menu" style='background-color: #1B396A;'>
-              <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/prodep.php">Programa para el desarrollo profesional docente (PRODEP)</a>
-              <a class="dropdown-item" href="https://bit.ly/2SBtQgr">Servicio de Caja</a>
+          <ul class="dropdown-menu" style='background-color: #1B396A;'>              
+              <a class="dropdown-item" href="{{route('departamentos.caja')}}">Servicio de Caja</a>
               <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
               <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
