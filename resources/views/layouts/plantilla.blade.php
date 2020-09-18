@@ -77,8 +77,8 @@
 
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavBlanco">
-    <ul class="navbar-nav  ml-auto">
+  <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
+    <ul class="navbar-nav  ml-auto bg-white">
       <li class="nav-item dropdown  ml-auto">
         <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Alumnos
@@ -197,7 +197,7 @@
           <i class='fas fa-home' style='font-size:20px'></i>
         </a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" >
         <a class="nav-link active dropdown-toggle" href="#" id="navbddsardrop" data-toggle="dropdown">
           Instituto
         </a>
@@ -228,13 +228,13 @@
           <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
               Otros Departamentos
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style='background-color: #1B396A;'>
               <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/prodep.php">Programa para el desarrollo profesional docente (PRODEP)</a>
               <a class="dropdown-item" href="https://bit.ly/2SBtQgr">Servicio de Caja</a>
               <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
               <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
-                <ul class="submenu dropdown-menu">
+                <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
                   <li>
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-secundaria.php">Ingles para Secundaria</a>
                   </li>
