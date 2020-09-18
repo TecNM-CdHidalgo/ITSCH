@@ -162,13 +162,13 @@
                   <a class="dropdown-item"href="{{route('normativos.ambiental')}}">Lineamientos Ambientales</a>
                 </li>
                 <li>
-                  <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
+                  <a class="dropdown-item"href="{{route('normativos.plan2004')}}">Lineamientos plan 2004 </a>
                 </li>
                 <li>
-                  <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2010">Lineamientos plan 2010 </a>
+                  <a class="dropdown-item"href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
                 </li>
                 <li>
-                   <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2015">Lineamiento Plan 2015 </a>
+                   <a class="dropdown-item"href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
                 </li>
                 <li>
                   <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/creditos">Lineamiento de Creditos</a>
@@ -177,7 +177,7 @@
             </li>             
             
             
-            <a class="dropdown-item"href="{{route('calidad.rippa')}}">RIPPA</a>           
+            <a class="dropdown-item"href="{{route('normativos.rippa')}}">RIPPA</a>           
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/instituto/investigacion/investigacion1">Investigación </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>

@@ -2,13 +2,7 @@
 @extends('layouts.app')
 
 
-@section('content')<div class="container">
-
-		<ol class="breadcrumb">
-			        <a href="../index">Inicio</a>
-            <li class="active">Normativos y lineamientos    
-			<li class="active">Lineamientos Plan 2010    
-		</ol>
+@section('content')
 
 		<div class="row">
 			
@@ -402,26 +396,8 @@
                     </tr>
           
                 </tbody>
-            </table>
-            
-            
-            
-          
-            
+            </table>           
             <hr>
 			</article>
 			<!-- /Article -->
-			
-			<!-- Sidebar -->
-<?php include_once '../dibujaSide.php'; dibujarSide('../'); ?>
-			<!-- /Sidebar -->
-
-		</div>
-	</div>	<!-- /container -->
-
-
-    <!-- JS -->
-    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-
-</body>
-</html
+@endsection
