@@ -38,6 +38,8 @@ Route::get('oferta_educativa/nano',function(){return view('content.oferta_educat
 Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nuestro_tec');})->name('instituto.nuestro_tec');
 Route::get('instituto/directorio',function(){return view('content.instituto.directorio');})->name('instituto.directorio');
 Route::get('instituto/ubicacion',function(){return view('content.instituto.ubicacion');})->name('instituto.ubicacion');
+//Rutas departamentos
+Route::get('departamentos/caja',function(){return view('content.departamentos.caja');})->name('departamentos.caja');
 
 //Servicos escolares
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');

@@ -183,9 +183,7 @@
 	                </p>
 	            </div>
 	            <div style="width: 100%" style="text-align: center;">
-	                <a href='#' title='Ver Ubicación'>
-	                    <img src="http://www.cdhidalgo.tecnm.mx/images/footer/Foto_Ubi.JPG" alt="Ubicación" style='width:95%;' />
-	                </a>
+	               <img src="{{asset('images/tec.jpg')}}" alt="Nuestro Tec" width="50%" height="90%">
 	            </div>
 	        </div>
 	        <div>                
