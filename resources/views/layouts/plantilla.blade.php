@@ -146,7 +146,7 @@
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
-            <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Igualdad</a>
+            <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/ambiental">Lineamientos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2010">Lineamientos plan 2010 </a>
