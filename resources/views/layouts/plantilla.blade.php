@@ -80,11 +80,13 @@
   <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
     <ul class="navbar-nav  ml-auto bg-white">
       <li class="nav-item dropdown  ml-auto">
+        
         <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Alumnos
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
+          <li>
+            <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
             <ul class="submenu dropdown-menu">
               <li>
                 <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/servicios.php">Servicios</a> 
@@ -131,7 +133,9 @@
         </div>
 
       </li>
-        <li class="nav-item dropdown  ml-auto">
+
+
+      <li class="nav-item dropdown  ml-auto">
         <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
           Egresados/Empleadores
         </a>
@@ -140,31 +144,51 @@
             <a class="dropdown-item" href="">Encuesta de Empleadores</a>
         </div>
       </li>
+      
+
       <li class="nav-item dropdown  ml-auto">
           <a class="nav-link active dropdown-toggle"href="#" id="navbarfgdgdrop" data-toggle="dropdown">
           Normativos y Lineamientos
           </a>
-          <div class="dropdown-menu">
+          <ul class="dropdown-menu">
             <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
             <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/ambiental">Lineamientos</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2010">Lineamientos plan 2010 </a>
-            <a class="dropdown-item"href='{{route('calidad.rippa')}}'>RIPPA</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2015">Lineamiento Plan 2015 </a>
+
+           
+            <li>
+              <a class="dropdown-item dropdown-toggle menu-padre" href="#">Lineamientos</a>
+              <ul class="submenu dropdown-menu">
+                <li>
+                  <a class="dropdown-item"href="{{route('normativos.ambiental')}}">Lineamientos Ambientales</a>
+                </li>
+                <li>
+                  <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
+                </li>
+                <li>
+                  <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2010">Lineamientos plan 2010 </a>
+                </li>
+                <li>
+                   <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2015">Lineamiento Plan 2015 </a>
+                </li>
+                <li>
+                  <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/creditos">Lineamiento de Creditos</a>
+                </li>
+              </ul>
+            </li>             
+            
+            
+            <a class="dropdown-item"href="{{route('calidad.rippa')}}">RIPPA</a>           
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/instituto/investigacion/investigacion1">Investigación </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/creditos">Lineamiento de Creditos</a>
+            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>            
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/piid_2013_2018">PIID 2013-2018</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/transparencia/acceso_transparencia">Estados Financieros </a>
+            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>           
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/indicadores.php"> Indicadores  </a>
-          </div>
+          </ul>
       </li>
 
 
@@ -173,9 +197,10 @@
           Transparecia
         </a>
           <div class="dropdown-menu">
-          <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
-          <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
-          <a class="dropdown-item" href="https://bit.ly/2KVOXps">Aviso de privacidad </a>
+            <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
+            <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
+            <a class="dropdown-item" href="https://bit.ly/2KVOXps">Aviso de privacidad </a>
+            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/transparencia/acceso_transparencia">Estados Financieros </a>
           </div>
       </li>      
       <a href="https://cdhidalgo.tecnm.mx:8081/moodle/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>     

@@ -8,7 +8,7 @@
 		</header>
 		<hr class="red">
         <!-- contenido bruto dinamico-->
-        <span class="thumbnail"><img src="{{asset('images/content/normativos/gestion-calidad.png')}}"></span>
+        <span class="thumbnail"><img src="{{asset('images/content/normativos/calidad/gestion-calidad.png')}}"></span>
 		
         
 		<hr class="red">

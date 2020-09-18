@@ -48,6 +48,7 @@ Route::get('servicios_escolares/alumnos-traslados',function(){return view('conte
 //Normativos y lineamientos
 Route::get('normativos/calidad',function(){return view('content.normativos.calidad');})->name('normativos.calidad');
 Route::get('normativos/igualdad',function(){return view('content.normativos.igualdad');})->name('normativos.igualdad');
+Route::get('normativos/ambiental',function(){return view('content.normativos.ambiental');})->name('normativos.ambiental');
 
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
