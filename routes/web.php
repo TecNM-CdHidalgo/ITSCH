@@ -45,6 +45,9 @@ Route::get('departamentos/caja',function(){return view('content.departamentos.ca
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 
+//Normativos y lineamientos
+Route::get('normativos/calidad',function(){return view('content.normativos.calidad');})->name('normativos.calidad');
+
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');

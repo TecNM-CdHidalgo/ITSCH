@@ -126,7 +126,7 @@
 
         <div class="dropdown-menu">
 
-                <a class="dropdown-item" href="https://bit.ly/2YxAKad">Sistema Digital de información (SIDI)</a>
+                <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
                 <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
         </div>
 
@@ -145,7 +145,7 @@
           Normativos y Lineamientos
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx/calidad/calidad">Calidad</a>
+            <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
             <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx/igualdad/index.html">Igualdad</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/ambiental">Lineamientos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/plan2004">Lineamientos plan 2004 </a>
