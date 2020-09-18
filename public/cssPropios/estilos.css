@@ -61,7 +61,7 @@
 /*Posiciona el menu blanco por debajo del menu del gobierno */
 #menuBlan{
     position:sticky;
-    top: 7%; 
+    top: 6.5%; 
     height:9vh; /*altura del puerto de visualización) en lugar de porcentaje. Obtendrá la altura del navegador y lo dimensionará en consecuencia*/
 }
 /*Hace que los sub-menus se vean por encima del menu azul*/
