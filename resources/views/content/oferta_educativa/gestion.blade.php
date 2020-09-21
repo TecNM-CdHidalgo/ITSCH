@@ -346,11 +346,6 @@
                 </h2>
 
 
-        <div class="container">
-
-            <img  class="img-fluid" src="{{ asset('images/content/oferta_educativa/gestion/scan0017.jpg') }}" alt="Responsive image">
-
-        </div>
 
 
               <h3>  JEFA DE DIVISIÓN </h3><br>
@@ -395,7 +390,7 @@
                 División de Ingeniería en Gestión Empresarial<br>
                 TecNM, campus Ciudad Hidalgo<br>
                 garitzmendi@itsch.edu.mx<br>
-
+            <br>
                 6.-Dra. Vanessa Alejandra Delgado May<br>
                 Docente Investigadora de Ing. en Gestión Empresarial de ITSH<br>
                 Licenciatura en Administración de empresas<br>
@@ -474,7 +469,7 @@
         <hr class="red">
 
 
-        <hr class="red">
+
         <div class="panel-group ficha-collapse" id="accordion1">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -511,7 +506,7 @@
                         <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE073-Finanzas en las Organizaciones.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE073-Finanzas en las Organizaciones</strong></a></p>
                         <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE074-Fundamentos de Gestion Empresarial.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE074-Fundamentos de Gestion Empresarial</strong></a></p>
                         <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE075-Gestion del Capital Humano.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE075-Gestion del Capital Humano</strong></a></p>
-                        <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE076-Investigacion de Operaciones.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE076-Investigacion de Operaciones</strong></a></p>
+       <hr class="red">                    <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE076-Investigacion de Operaciones.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE076-Investigacion de Operaciones</strong></a></p>
                         <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE078-Marco Legal de las Organizaciones.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE078-Marco Legal de las Organizaciones</strong></a></p>
                         <p><a href="{{ asset('documents/content/oferta_educativa/gestion/temario/AE082-Software de Aplicacion Ejecutivo.pdf') }}" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>AE082-Software de Aplicacion Ejecutivo</strong></a></p>
 
