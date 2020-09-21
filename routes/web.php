@@ -6,8 +6,6 @@ use Illuminate\Support\Facades\Route;
 //Rutas publicas**************************************************************************
 
 
-Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
-
 //Vinculacion
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.convenio_colaboracion');
@@ -45,6 +43,15 @@ Route::get('departamentos/caja',function(){return view('content.departamentos.ca
 //Servicos escolares
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
+
+//Normativos y lineamientos
+Route::get('normativos/calidad',function(){return view('content.normativos.calidad');})->name('normativos.calidad');
+Route::get('normativos/igualdad',function(){return view('content.normativos.igualdad');})->name('normativos.igualdad');
+Route::get('normativos/ambiental',function(){return view('content.normativos.ambiental');})->name('normativos.ambiental');
+Route::get('normativos/rippa',function(){return view('content.normativos.rippa');})->name('normativos.rippa');
+Route::get('normativos/plan2004',function(){return view('content.normativos.plan2004');})->name('normativos.plan2004');
+Route::get('normativos/plan2010',function(){return view('content.normativos.plan2010');})->name('normativos.plan2010');
+Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
 
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
