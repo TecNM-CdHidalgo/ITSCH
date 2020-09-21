@@ -15,10 +15,12 @@
             <hr class="red">
         </header>
 
+        <div class="text-center">
+            <picture>
+                <img src="{{ asset('images/content/oferta educativa//gestion/logogestion.png') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Bioquímica">
+            </picture>
+        </div>
 
-        <div class="container" align="center">
-
-            <img src="{{ asset('images/content/oferta_educativa/gestion/logogestion.png') }}"  alt="Responsive image">
 
 
         </div>
@@ -329,7 +331,9 @@
 
         <h2><strong>Reticula
                 Ingeniería en Gestion Empresarial IGEM-2009-201</strong></h2>
-        <p align="center">   <a href="/oferta_educativa/gestion/reticula_gestionv1.pdf') }}">
+        <p align="center">
+
+            <a   href="{{ asset('documents/content/oferta_educativa/gestion/reticula_gestionv1.pdf') }}">
                 <button class="btn btn-primary"  type="button">
                     <i class='fas fa-download' style='font-size:20px'></i>
                 </button>
