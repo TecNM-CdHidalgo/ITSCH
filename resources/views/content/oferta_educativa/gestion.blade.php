@@ -18,7 +18,7 @@
 
         <div class="container" align="center">
 
-            <img src="{{ asset('images/content/oferta_educativa/gestion/logogestion.png') }}" class="img-fluid" alt="Responsive image">
+            <img src="{{ asset('images/content/oferta_educativa/gestion/logogestion.png') }}"  alt="Responsive image">
 
 
         </div>
