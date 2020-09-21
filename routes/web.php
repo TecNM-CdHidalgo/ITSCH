@@ -33,6 +33,7 @@ Route::get('oferta_educativa/tics',function(){return view('content.oferta_educat
 Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
 Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');
 Route::get('oferta_educativa/nano',function(){return view('content.oferta_educativa.nano');})->name('oferta.nano');
+Route::get('oferta_educativa/gestion',function(){return view('content.oferta_educativa.gestion');})->name('oferta.gestion');
 
 //Rutas de instituto
 Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nuestro_tec');})->name('instituto.nuestro_tec');
