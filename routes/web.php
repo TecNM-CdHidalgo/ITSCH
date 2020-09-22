@@ -52,6 +52,7 @@ Route::get('normativos/rippa',function(){return view('content.normativos.rippa')
 Route::get('normativos/plan2004',function(){return view('content.normativos.plan2004');})->name('normativos.plan2004');
 Route::get('normativos/plan2010',function(){return view('content.normativos.plan2010');})->name('normativos.plan2010');
 Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
+Route::get('normativos/piid',function(){return view('content.normativos.piid');})->name('normativos.piid');
 
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
