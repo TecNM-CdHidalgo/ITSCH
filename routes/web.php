@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('transparencia/acceso_transparencia',function(){return view('content.transparencia.acceso_transparencia');})->name('transparencia.acceso_transparencia');
 //Vinculacion
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
-Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.convenio_colaboracion');
+Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
 
+Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.convenio_colaboracion');})->name('vinculacion.convenio_colaboracion');
 Route::get('vinculacion/banco_de_datos',function(){return view('content.vinculacion.banco_de_datos');})->name('vinculacion.banco_de_datos');
 
 

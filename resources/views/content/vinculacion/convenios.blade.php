@@ -4,27 +4,13 @@
 @section('content')
 	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="../index">Inicio</a></li>
-            <li class="active">Vinculación</li>
-			<li class="active">Convenios</li>
-		</ol>
+		<header class="page-header">
+		<h2>Convenios</h2>
+<hr class="red">
 
-		<div class="row">
-			
-			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Convenios:</h1>
-				</header>
-				
-            </article>
-			<!-- /Article -->
-			
-		
+		</header>
 
-		</div>
-	</div>	<!-- /container -->
 
+	</div>
 
 @endsection

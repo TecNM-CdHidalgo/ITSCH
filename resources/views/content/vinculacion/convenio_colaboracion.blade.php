@@ -4,38 +4,39 @@
 @section('content')
 	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="../index">Inicio</a></li>
-            <li class="active">Vinculación</li>
-			<li class="active">Convenios</li>
-		</ol>
+		<header class="page-header">
+			<h2>Convenios de colaboración</h2>
+			<hr class="red">
 
-		<div class="row">
-			
-			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
-				<header class="page-header">
-					<h1 class="page-title"> Convenios de colaboraci&oacute;n </h1>
-				</header>
-				
-                
-    <p align="center" ><img src="conv/1.jpg"></p>
-	<p align="center" ><img src="conv/2.jpg"></p>
-	<p align="center" ><img src="conv/3.jpg"></p>
-	<p align="center" ><img src="conv/4.jpg"></p>
-	<p align="center" ><img src="conv/5.jpg"></p>
-	<p align="center" ><img src="conv/6.jpg"></p>
+		</header>
 
-                
-            
-	<p align="center"><a href="conv/dw1.pdf"target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>Descarga el documento en PDF.</strong></a></p>    
-                <!-- contenido bruto dinamico-->
-                
+		<p align="center">
+			<a href="{{ asset('documents/content/vinculacion/convenios/dw1.pdf') }}">
+				<button class="btn btn-primary"  type="button">
+					<i class='fas fa-download' style='font-size:20px'></i>
+				</button>
+			</a>
+		</p>
+	</div>
 
-            </article>
-			<!-- /Article -->
-	
+
+	<hr class="red">
+	<div class="container">
+		<div class="text-center">
+			<picture>
+				<img src="{{ asset('images/content/vinculacion/convenios/1.jpg')}}" alt="imageitsch">
+				<img src="{{ asset('images/content/vinculacion/convenios/2.jpg')}}" alt="imgitsch">
+				<img src="{{ asset('images/content/vinculacion/convenios/3.jpg')}}" alt="imgitsch">
+				<img src="{{ asset('images/content/vinculacion/convenios/4.jpg')}}" alt="imageitsch">
+				<img src="{{ asset('images/content/vinculacion/convenios/5.jpg')}}" alt="imgitsch">
+				<img src="{{ asset('images/content/vinculacion/convenios/6.jpg')}}" alt="imgitsch">
+
+			</picture>
 		</div>
-	</div>	<!-- /container -->
+
+
+
+
+	</div>
 
 @endsection
