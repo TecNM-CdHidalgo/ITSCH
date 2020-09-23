@@ -183,7 +183,7 @@
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>            
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/piid_2013_2018">PIID 2013-2018</a>
+            <a class="dropdown-item"href="{{route('normativos.piid')}}">PIID 2013-2018</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>           
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/indicadores.php"> Indicadores  </a>
           </ul>
