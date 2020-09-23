@@ -73,7 +73,7 @@
 		    <div class="row" >
 		    	<div class="col-xl-6">
 		    		<a href="{{route('ver',$not->id)}}">
-						<img loading='lazy'  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
+						<img loading='lazy' width="100%" style="max-height: 270px; min-height: 250px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
