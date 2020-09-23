@@ -32,6 +32,8 @@ Route::get('oferta_educativa/industrial',function(){return view('content.oferta_
 Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');
 Route::get('oferta_educativa/nano',function(){return view('content.oferta_educativa.nano');})->name('oferta.nano');
 Route::get('oferta_educativa/gestion',function(){return view('content.oferta_educativa.gestion');})->name('oferta.gestion');
+Route::get('oferta_educativa/mecatronica',function(){return view('content.oferta_educativa.mecatronica');})->name('oferta.mecatronica');
+
 
 //Rutas de instituto
 Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nuestro_tec');})->name('instituto.nuestro_tec');
