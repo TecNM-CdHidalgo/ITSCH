@@ -2,6 +2,15 @@
 
 
 @section('content')
+
+
+    <header class="page-header">
+
+
+        <h2 align="justify">Ingeniería Bioquímica</h2>
+
+        <hr class="red">
+    </header>
 <div class="container">
 	<div class="text-center">
         <picture>
@@ -303,6 +312,16 @@
                     </h4>
                     <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse"href="#panel-02"></button>
                 </div>
+
+                <h2>PIID</h2>
+                <hr class="red">
+                <a href="{{asset('documents/content/normativos/piid/PIID1318v1.pdf') }}" >
+                    <button class="btn btn-primary"  type="button">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </button>
+                </a>
+
+
                 <div class="panel-collapse collapse in" id="panel-02">
                     <div class="panel-body">
                         <div class="table-responsive">

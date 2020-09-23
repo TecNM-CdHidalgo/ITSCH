@@ -2,7 +2,16 @@
 
 
 @section('content')
-    <div class="container">
+
+<div class="container">
+    <header class="page-header">
+
+
+        <h2 align="justify">Ingeniería en Nanotecnología</h2>
+
+        <hr class="red">
+    </header>
+
 
 
         <div class="text-center">
@@ -11,595 +20,18 @@
             </picture>
         </div>
         <!-- contenido bruto dinamico-->
-        <p align="center">
 
-        </p>
+
+
+    <div class="container">
         <p align="center"><strong>INAN-2009-203</strong></p>
         <p align="center">Clave de especialidad: <strong>INAE-NMC-2020-02</strong></p>
         <hr class="red">
         <br>
+    </div>
 
 
-        <h2> Programas INAN-2009-203 </h2>
-        <hr class="red">
-
-        <div class="panel-group ficha-collapse" id="accordion1">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="tarColaps" data-parent="#accordion1" data-toggle="collapse"href="#panel-02" aria-expanded="true" aria-controls="panel-02">
-                            Consulta y/o descarga
-                        </a>
-                    </h4>
-                    <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse"href="#panel-02"></button>
-                </div>
-                <div class="panel-collapse collapse in" id="panel-02">
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                            <tr>
-
-                                <th>Archivo</th>
-                                <th>Descargar</th>
-                                <th></th>
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Analisis Numerico</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Analisis Numerico.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Biologia Molecular</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Biologia Molecular.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Caracterizacion de Materiales.pdf</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Caracterizacion de Materiales.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Ciencia e Ingenieria de los Materiales </td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Ciencia e Ingenieria de los Materiales.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Fisica del Estado Solido</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Fisica del Estado Solido.doc.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Fisica del Estado Solido</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Fisica del Estado Solido.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Fisicoquimica</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Fisicoquimica.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Fundamentos de Biologia.pdf</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Fundamentos de Biologia.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Introduccion al Modelado por Computadora</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Introduccion al Modelado por Computadora.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Logica de Programacion</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Logica de Programacion.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Nanobiologia I.pdf</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Nanobiologia I.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Nanobiologia II</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Nanobiologia II.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Nanofisica I</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Nanofisica I.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Nanofisica II</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Nanofisica II.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Nanofisica II.pdf</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Nanofisica II.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Nanoquimica </td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Nanoquimica II.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Ondas y Calor</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Ondas y Calor.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Probabilidad y Estadistica</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Probabilidad y Estadistica.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Probabilidad y Estadistica</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Probabilidad y Estadistica.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia I</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia I.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia II</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia II.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia III</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia III.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia IV</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia IV.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia V.pdf</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia V.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-NME-2003 Gestion de proyectos.pdf</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-NME-2003 Gestion de proyectos.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-NMF-2001 Estructura Ceramica </td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-NMF-2001 Estructura Ceramica.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-NMF-2005 Catalisis </td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-NMF-2005 Catalisis.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-NMJ-2002 Sintesis</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-NMJ-2002 Sintesis.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-NML-2003 Propiedades 2</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-NML-2003 Propiedades 2.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-NML-2006 Propiedades 1</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-NML-2006 Propiedades 1.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
-                                <td>INAN-Quimica Organica II</td>
-                                <td class="text-center">
-
-
-
-                                <td>   <a href="Programas INAN-2009-203/INAN-Quimica Organica II.pdf"><button class="btn btn-primary"  type="button">
-
-                                           <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a></td>
-
-
-
-                            </tr>
-
-
-                        </table>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="container">
 
         <h2>¿En qué se desempeña un ingeniero en nanotecnología?</h2>
         <hr class="red">
@@ -674,6 +106,9 @@
             en orden e interés por la aplicación de la tecnología para diversos ramos y la investigación científica.
         </p>
         <br>
+    </div>
+
+    <div class="container">
 
         <h2>Objetivos educacionales  </h2>
         <hr class="red">
@@ -855,9 +290,11 @@
 
             </tbody>
         </table>
-
+    </div>
 
         <br><br>
+
+    <div class="container">
 
         <h2>Perfil de egreso </h2>
         <hr class="red">
@@ -881,7 +318,10 @@
             materiales nano estructurados.
         </p>
         <hr>
+    </div>
 
+
+    <div class="container">
         <div class="text-center">
             <h2>Estructura de la academia</h2>
             <hr class="red">
@@ -988,7 +428,7 @@
             </table>
 
 
-
+        </div>
         </div>
         <!-- Button trigger modal -->
 
@@ -1321,6 +761,8 @@
             </div>
         </div>
 
+
+    <div class="container">
         <p align="center" style="font-size:20px;"><strong>Laboratorio e infraestructura</strong></p>
         <p align="justify">
             Laboratorio de nanotecnología está orientado a la síntesis y caracterización de materiales,
@@ -1343,20 +785,623 @@
             Instituto de Investigación en Metalurgia y Materiales
         </p>
         <br><br>
+    </div>
 
-
-        <h2>Descargables  </h2>
+        <div class="container">
+        <h2>Retícula  </h2>
         <hr class="red">
 
+            <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Reticula-Nanotecnologia-INAN-2009-203v1.pdf')}}">
+                <button class="btn btn-primary"  type="button">
+                    <i class='fas fa-download' style='font-size:20px'></i>
+                </button>
+            </a>
 
-        <a href="http://tudominio.es/descargas-pdf/pdf-descargable.pdf">Retícula</a>
+            <h2>PIID</h2>
+            <hr class="red">
+            <a href="{{asset('documents/content/normativos/piid/PIID1318v1.pdf') }}" >
+                <button class="btn btn-primary"  type="button">
+                    <i class='fas fa-download' style='font-size:20px'></i>
+                </button>
+            </a>
+
+        </div>
         <br>
-        <a href="http://tudominio.es/descargas-pdf/pdf-descargable.pdf">PIID</a>
+
         <br>
-        <a href="http://tudominio.es/descargas-pdf/pdf-descargable.pdf">Programas</a>
 
 
-        <h1> Contacto    </h1>
+
+    <div class="container">
+
+        <h2> Programas INAN-2009-203 </h2>
+        <hr class="red">
+
+        <div class="panel-group ficha-collapse" id="accordion1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="tarColaps" data-parent="#accordion1" data-toggle="collapse"href="#panel-02" aria-expanded="true" aria-controls="panel-02">
+                            Consulta y/o descarga
+                        </a>
+                    </h4>
+                    <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse"href="#panel-02"></button>
+                </div>
+                <div class="panel-collapse collapse in" id="panel-02">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <tr>
+
+                                    <th>Archivo</th>
+                                    <th>Descargar</th>
+                                    <th></th>
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Analisis Numerico</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>
+
+                                     
+                                        <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Analisis Numerico.pdf')}}">
+                                            
+                                            
+                                            <button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Biologia Molecular</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Biologia Molecular.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Caracterizacion de Materiales.pdf</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Caracterizacion de Materiales.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Ciencia e Ingenieria de los Materiales </td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Ciencia e Ingenieria de los Materiales.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Fisica del Estado Solido</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Fisica del Estado Solido.doc.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Fisica del Estado Solido</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Fisica del Estado Solido.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Fisicoquimica</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Fisicoquimica.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Fundamentos de Biologia.pdf</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Fundamentos de Biologia.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Introduccion al Modelado por Computadora</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Introduccion al Modelado por Computadora.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Logica de Programacion</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Logica de Programacion.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Nanobiologia I.pdf</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Nanobiologia I.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Nanobiologia II</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Nanobiologia II.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Nanofisica I</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Nanofisica I.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Nanofisica II</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Nanofisica II.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Nanofisica II.pdf</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Nanofisica II.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Nanoquimica </td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Nanoquimica II.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Ondas y Calor</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Ondas y Calor.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Probabilidad y Estadistica</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Probabilidad y Estadistica.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Probabilidad y Estadistica</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Probabilidad y Estadistica.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia I</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia I.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia II</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia II.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia III</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia III.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia IV</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia IV.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-2009-203 Topicos de Ingenieria y Tecnologia V.pdf</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-2009-203 Topicos de Ingenieria y Tecnologia V.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-NME-2003 Gestion de proyectos.pdf</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-NME-2003 Gestion de proyectos.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-NMF-2001 Estructura Ceramica </td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-NMF-2001 Estructura Ceramica.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-NMF-2005 Catalisis </td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-NMF-2005 Catalisis.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-NMJ-2002 Sintesis</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-NMJ-2002 Sintesis.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-NML-2003 Propiedades 2</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-NML-2003 Propiedades 2.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-NML-2006 Propiedades 1</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-NML-2006 Propiedades 1.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                                    <td>INAN-Quimica Organica II</td>
+                                    <td class="text-center">
+
+
+
+                                    <td>   <a href="{{ asset('documents/content/oferta_educativa/nanotecnologia/Programas INAN-2009-203/INAN-Quimica Organica II.pdf')}}"><button class="btn btn-primary"  type="button">
+
+                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                            </button></a></td>
+
+
+
+                                </tr>
+
+
+                            </table>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <h2> Contacto    </h2>
         <hr class="red">
 
         <li> Minerva Frutis Murillo</li>
@@ -1434,5 +1479,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection

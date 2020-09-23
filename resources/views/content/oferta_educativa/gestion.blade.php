@@ -462,7 +462,13 @@
 
 
 <br>
-
+    <h2>PIID</h2>
+    <hr class="red">
+    <a href="{{asset('documents/content/normativos/piid/PIID1318v1.pdf') }}" >
+        <button class="btn btn-primary"  type="button">
+            <i class='fas fa-download' style='font-size:20px'></i>
+        </button>
+    </a>
 
         <h2> Programa
             IGEM-2009-201  </h2>
