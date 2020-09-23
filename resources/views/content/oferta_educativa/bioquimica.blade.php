@@ -187,14 +187,14 @@
 
 
         <video width="400" controls>
-            <source src="1. Video Francisco - Industria.mp4" type="video/mp4">
+            <source src="{{ asset('images/content/oferta educativa/bioquimica/videos/1. Video Francisco - Industria.mp4') }}" type="video/mp4">
         </video>
 
         <hr class="red">
 
 
         <video width="400" controls>
-            <source src="2. Video Thelma - Investigación.mp4" type="video/mp4">
+            <source src="{{ asset('images/content/oferta educativa/bioquimica/videos/2. Video Thelma - Investigacion.mp4') }}" type="video/mp4">
             <source src="mov_bbb.ogg" type="video/ogg">
             Your browser does not support HTML video.
         </video>
@@ -226,7 +226,7 @@
                                 </td>
                                 <td>1. BTG-2001 Biología Molecular</td>
                                 <td class="text-center">
-                                    <a href="esp2020/1. BTG-2001 Biología Molecular.pdf">
+                                    <a href="{{ asset('documents/content/oferta_educativa/bioquimica/esp2020/1. BTG-2001 Biología Molecular.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -237,9 +237,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>2. BTD-2002 Fisiotecnia vegetal.pdf</td>
+                                <td>2. BTD-2002 Fisiotecnia vegetal</td>
                                 <td class="text-center">
-                                    <a href="esp2020/2. BTD-2002 Fisiotecnia vegetal.pdf">
+                                    <a href="{{ asset('documents/content/oferta_educativa/bioquimica/esp2020/2. BTD-2002 Fisiotecnia vegetal.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -250,9 +250,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>3. BTG-2003 Biorremediación.pdf</td>
+                                <td>3. BTG-2003 Biorremediación</td>
                                 <td class="text-center">
-                                   <a href="esp2020/3. BTG-2003 Biorremediación.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/esp2020/3. BTG-2003 Biorremediacin.pdf') }}">
                                     <button class="btn btn-primary"  type="button">
                                         <i class='fas fa-download' style='font-size:20px'></i>
                                     </button></a>
@@ -262,9 +262,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>4. BTQ-2004 Temas selectos de biotecnología.pdf</td>
+                                <td>4. BTQ-2004 Temas selectos de biotecnología</td>
                                 <td class="text-center">
-                                    <a href="esp2020/4. BTQ-2004 Temas selectos de biotecnología.pdf">    <button class="btn btn-primary"  type="button">
+                                    <a href="{{ asset('documents/content/oferta_educativa/bioquimica/esp2020/4. BTQ-2004 Temas selectos de biotecnologa.pdf') }}">    <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
                                     </a>
@@ -274,9 +274,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>5. BTD-2005 Ingeniería Metabólica.pdf</td>
+                                <td>5. BTD-2005 Ingeniería Metabólica</td>
                                 <td class="text-center">
-                                    <a href="esp2020/5. BTD-2005 Ingeniería Metabólica.pdf">
+                                    <a href="{{ asset('documents/content/oferta_educativa/bioquimica/esp2020/5. BTD-2005 Ingeniera Metablica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -318,7 +318,7 @@
                                 </td>
                                 <td>AC001 Calculo Diferencial</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC001 Calculo Diferencial.pdf"><button class="btn btn-primary"  type="button">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC001 Calculo Diferencial.pdf') }}"><button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
                                     </a>
@@ -329,7 +329,7 @@
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 <td>AC002 Calculo Integral</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC002 Calculo Integral.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC002 Calculo Integral.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -342,7 +342,7 @@
                                 </td>
                                 <td>AC003 Algebra Lineal</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC003 Algebra Lineal.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC003 Algebra Lineal.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -355,7 +355,7 @@
                                 </td>
                                 <td>AC004 Calculo Vectorial</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC004 Calculo Vectorial.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC004 Calculo Vectorial.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -368,7 +368,7 @@
                                 </td>
                                 <td>AC005 Ecuaciones Diferenciales</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC005 Ecuaciones Diferenciales.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC005 Ecuaciones Diferenciales.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -381,7 +381,7 @@
                                 </td>
                                 <td>AC006 Fundamentos de Investigacion</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC006 Fundamentos de Investigacion.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC006 Fundamentos de Investigacion.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -394,7 +394,7 @@
                                 </td>
                                 <td>AC007 Taller de Etica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC007 Taller de Etica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC007 Taller de Etica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -407,7 +407,7 @@
                                 </td>
                                 <td>AC008 Desarrollo Sustentable</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC008 Desarrollo Sustentable.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC008 Desarrollo Sustentable.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -420,7 +420,7 @@
                                 </td>
                                 <td>AC009 Taller de Investigacion I</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC009 Taller de Investigacion I.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC009 Taller de Investigacion I.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -433,7 +433,7 @@
                                 </td>
                                 <td>AC010 Taller de Investigacion II</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AC010 Taller de Investigacion II.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AC010 Taller de Investigacion II.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -446,7 +446,7 @@
                                 </td>
                                 <td>Administracion y Legislacion Empresas</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Administracion y Legislacion Empresas.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Administracion y Legislacion Empresas.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -457,9 +457,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>AE004 Balance de Materia y Energia.pdf</td>
+                                <td>AE004 Balance de Materia y Energia</td>
                                 <td class="text-center">
-                                    <a href="Progstu/">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE004 Balance de Materia y Energia.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -470,9 +470,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>AE004 Balance de Materia y Energia.pdf</td>
+                                <td>AE004 Balance de Materia y Energia</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE004 Balance de Materia y Energia.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE004 Balance de Materia y Energia.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -485,7 +485,7 @@
                                 </td>
                                 <td>AE005 Biologia</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE005 Biologia.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE005 Biologia.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -498,7 +498,7 @@
                                 </td>
                                 <td>AE007 Bioquimica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE007 Bioquimica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE007 Bioquimica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -509,9 +509,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>AE012 Dibujo Asistido por Computadora.pdf</td>
+                                <td>AE012 Dibujo Asistido por Computadora</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE012 Dibujo Asistido por Computadora.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE012 Dibujo Asistido por Computadora.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -524,7 +524,7 @@
                                 </td>
                                 <td>AE020 Electromagnetismo</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE020 Electromagnetismo.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE020 Electromagnetismo.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -537,7 +537,7 @@
                                 </td>
                                 <td>AE029 Formulacion y Evaluacion de Proyectos</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE029 Formulacion y Evaluacion de Proyectos.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE029 Formulacion y Evaluacion de Proyectos.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -548,9 +548,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>AE039 Instrumentacion y Control.pdf</td>
+                                <td>AE039 Instrumentacion y Control</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE039 Instrumentacion y Control.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE039 Instrumentacion y Control.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -563,7 +563,7 @@
                                 </td>
                                 <td>AE050 Microbiologia</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE050 Microbiologia.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE050 Microbiologia.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -576,7 +576,7 @@
                                 </td>
                                 <td>AE057 Quimica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE057 Quimica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE057 Quimica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -589,7 +589,7 @@
                                 </td>
                                 <td>AE065 Termodinamica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/AE065 Termodinamica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/AE065 Termodinamica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -602,7 +602,7 @@
                                 </td>
                                 <td>Analisis instrumental</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Analisis instrumental.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Analisis instrumental.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -615,7 +615,7 @@
                                 </td>
                                 <td>Aseguramiento de la Calidad</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Aseguramiento de la Calidad.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Aseguramiento de la Calidad.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -626,9 +626,9 @@
                                 <td class="text-center">
                                     <i class='fas fa-file-download' style='font-size:20px'></i>
                                 </td>
-                                <td>Bioqumica del Nitrgeno y Regulacin Gentica.pdf</td>
+                                <td>Bioqumica del Nitrgeno y Regulacin Gentica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Bioqumica del Nitrgeno y Regulacin Gentica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Bioqumica del Nitrgeno y Regulacin Gentica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -641,7 +641,7 @@
                                 </td>
                                 <td>Cintica qumica y biolgica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Cintica qumica y biolgica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Cintica qumica y biolgica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -652,7 +652,7 @@
                                 <td class="text-center"><i class='fas fa-file-download' style='font-size:20px'></i></td>
                                 <td>Comportamiento Organizacional</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Comportamiento Organizacional.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Comportamiento Organizacional.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -665,7 +665,7 @@
                                 </td>
                                 <td>Estadistica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Estadistica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Estadistica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -678,7 +678,7 @@
                                 </td>
                                 <td>Fenómenos de Transporte I</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Fenomenos de Transporte I.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Fenomenos de Transporte I.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -691,7 +691,7 @@
                                 </td>
                                 <td>Fenomenos de Transporte II</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Fenomenos de Transporte II.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Fenomenos de Transporte II.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -704,7 +704,7 @@
                                 </td>
                                 <td>Fisica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Fisica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Fisica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -717,7 +717,7 @@
                                 </td>
                                 <td>Fisicoquimica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Fisicoquimica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Fisicoquimica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -730,7 +730,7 @@
                                 </td>
                                 <td>Higiene y Seguridad</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Higiene y Seguridad.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Higiene y Seguridad.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -743,7 +743,7 @@
                                 </td>
                                 <td>Ingenieria de Biorreactores</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Ingenieria de Biorreactores.pdf"><button class="btn btn-primary"  type="button">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Ingenieria de Biorreactores.pdf') }}"><button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
                                     </a>
@@ -755,7 +755,7 @@
                                 </td>
                                 <td>Ingenieria de Procesos</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Ingenieria de Procesos.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Ingenieria de Procesos.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -768,7 +768,7 @@
                                 </td>
                                 <td>Ingenieria de Proyectos</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Ingenieria de Proyectos.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Ingenieria de Proyectos.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -781,7 +781,7 @@
                                 </td>
                                 <td>Ingenieria Economica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Ingenieria Economica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Ingenieria Economica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -794,7 +794,7 @@
                                 </td>
                                 <td>Ingenieria y Gestion Ambiental</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Ingenieria y Gestion Ambiental.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Ingenieria y Gestion Ambiental.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -807,7 +807,7 @@
                                 </td>
                                 <td>Operaciones Unitarias I</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Operaciones Unitarias I.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Operaciones Unitarias I.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -820,7 +820,7 @@
                                 </td>
                                 <td>Operaciones Unitarias II</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Operaciones Unitarias II.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Operaciones Unitarias II.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -833,7 +833,7 @@
                                 </td>
                                 <td>Operaciones Unitarias III</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Operaciones Unitarias III.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Operaciones Unitarias III.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -846,7 +846,7 @@
                                 </td>
                                 <td>Programacion y Metodos Numericos</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Programacion y Metodos Numericos.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Programacion y Metodos Numericos.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -859,7 +859,7 @@
                                 </td>
                                 <td>Quimica Organica I</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Quimica Organica I.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Quimica Organica I.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -872,7 +872,7 @@
                                 </td>
                                 <td>Quimica Orgnaica II</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Quimica Orgnaica II.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Quimica Orgnaica II.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
@@ -885,7 +885,7 @@
                                 </td>
                                 <td>Quimica Analitica</td>
                                 <td class="text-center">
-                                    <a href="Progstu/Quimica Analitica.pdf">
+                                   <a href="{{ asset('documents/content/oferta_educativa/bioquimica/Progstu/Quimica Analitica.pdf') }}">
                                         <button class="btn btn-primary"  type="button">
                                             <i class='fas fa-download' style='font-size:20px'></i>
                                         </button>
