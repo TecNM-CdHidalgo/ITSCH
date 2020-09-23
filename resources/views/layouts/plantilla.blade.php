@@ -170,9 +170,7 @@
                 <li>
                    <a class="dropdown-item"href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
                 </li>
-                <li>
-                  <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/creditos">Lineamiento de Creditos</a>
-                </li>
+                 
               </ul>
             </li>             
             

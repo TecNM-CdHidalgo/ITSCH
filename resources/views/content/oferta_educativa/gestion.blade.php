@@ -558,11 +558,7 @@
     Titulación</h3>
 
         <hr class="red">
-        <p align="center">   <a
-
-
-
-                    href="{{ asset('documents/content/oferta_educativa/gestion/gestion_titulate.pdf') }}">
+        <p align="center">   <a href="{{ asset('documents/content/oferta_educativa/gestion/gestion_titulate.pdf') }}">
                 <button class="btn btn-primary"  type="button">
                     <i class='fas fa-download' style='font-size:20px'></i>
                 </button>

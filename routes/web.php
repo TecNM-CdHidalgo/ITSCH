@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 
 //Rutas publicas**************************************************************************
-
-
+//Transparecia
+Route::get('transparencia/acceso_transparencia',function(){return view('content.transparencia.acceso_transparencia');})->name('transparencia.acceso_transparencia');
 //Vinculacion
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.convenio_colaboracion');
@@ -51,7 +51,19 @@ Route::get('normativos/ambiental',function(){return view('content.normativos.amb
 Route::get('normativos/rippa',function(){return view('content.normativos.rippa');})->name('normativos.rippa');
 Route::get('normativos/plan2004',function(){return view('content.normativos.plan2004');})->name('normativos.plan2004');
 Route::get('normativos/plan2010',function(){return view('content.normativos.plan2010');})->name('normativos.plan2010');
+
+
 Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
+
+
+
+
+
+
+
+
+
+
 
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');

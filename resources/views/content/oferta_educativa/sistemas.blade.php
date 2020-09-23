@@ -2,32 +2,45 @@
 
 @section('content')
 
-    <div class="container">
+    <header class="page-header">
+
+
+        <h2 align="justify">Ingeniería en Sistemas Computacionales</h2>
+
+        <hr class="red">
+    </header>
 
 
         <div class="text-center">
             <picture>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/lgsititsch.png') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
+                  <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/lgsititsch.png') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM">
             </picture>
         </div>
-        <!-- contenido bruto dinamico-->
 
 
+    <div class="container">
 
 
-            <p align="center"><strong>ISIC-2010-224</strong></p>
-        <p align="center"><strong>La vanguardia de la Tecnología</strong></p>
+            <p><strong>ISIC-2010-224</strong></p>
+        <p><strong>La vanguardia de la Tecnología</strong></p>
 
-    <p><h2><strong>¿QUÉ ES EL INGENIERO EN SISTEMAS COMPUTACIONALES?:</strong></h2>
+    <h2><strong>¿QUÉ ES EL INGENIERO EN SISTEMAS COMPUTACIONALES?:</strong></h2>
+        <hr class="red">
     El ingeniero en Sistemas computacionales es una persona profesional, comprometida con la generación de tecnología para el progreso de México. Es capaz de realizar programas específicos, como aplicaciones de oficina, juegos, películas animadas, software administrativo y científico, aplica y crea nuevas tecnologías y sistemas de administración y redes para intercambio de información, como la internet.    <hr>
-    <p><h2><strong>OBJETIVO GENERAL:</strong></h2>
-    Formar profesionistas líderes, analíticos, críticos y creativos, con visión estratégica y amplio sentido ético, capaces de diseñar, implementar y administrar infraestructura computacional para aportar soluciones innovadoras en beneficio de la sociedad, en un contexto global, multidisciplinario y sustentable.
+
+
+
+                <h2><strong>OBJETIVO GENERAL:</strong></h2>
+        <hr class="red">
+                <p>Formar profesionistas líderes, analíticos, críticos y creativos, con visión estratégica y amplio sentido ético, capaces de diseñar, implementar y administrar infraestructura computacional para aportar soluciones innovadoras en beneficio de la sociedad, en un contexto global, multidisciplinario y sustentable.
     <hr>
 
     <h2><strong>PERFIL DE INGRESO:</strong></h2>
-    <p>Para cubrir el perfil de ingreso, los aspirantes a la Ingeniería en Sistemas Computacionales, durante su bachillerato, se sugiere seleccionar las materias correspondientes al área de ciencias exactas de tal forma que sus conocimientos en cálculo, física y computación básica le permitan asimilar los cursos secuenciales contemplados en los umbrales de la carrera; además los aspirantes deben contar con las siguientes características:</p>
 
-    <ol>
+        <hr class="red">
+        <p>Para cubrir el perfil de ingreso, los aspirantes a la Ingeniería en Sistemas Computacionales, durante su bachillerato, se sugiere seleccionar las materias correspondientes al área de ciencias exactas de tal forma que sus conocimientos en cálculo, física y computación básica le permitan asimilar los cursos secuenciales contemplados en los umbrales de la carrera; además los aspirantes deben contar con las siguientes características:</p>
+
+    <ul>
         <li>Investigación, análisis y síntesis de información.</li>
         <li>Criterio y razonamiento lógico para la solución de problemas.</li>
         <li>Expresión oral y escrita.</li>
@@ -35,20 +48,17 @@
         <li>Interesado en las ciencias básicas y tecnologías de cómputo.</li>
         <li> Asumir una posición activa con respecto al estudio y al desarrollo de los proyectos y trabajos requeridos, coincidentes con el ideario y principios del ITSCH.</li>
 
-    </ol>
-    <p> </p>
-    <br>
+    </ul>
+
     <br>
 
 
 
-    <br>
-    <br>
+
 
     <h2> OBJETIVOS EDUCACIONALES: </h2>
-
-
-    <table id="t01">
+        <hr class="red">
+        <table class="table table-striped">
         <tr>
             <th>Descripción de objetivos educacionales</th>
             <th>Descripción de criterios de desempeño</th>
@@ -85,7 +95,7 @@
 
     <!-- /container
 
-    <span class="media thumbnail"><img src="../media/oferta_educativa/sistemas/obj_itsch.jpg"></span>
+    <span class="media thumbnail">  <button class="btn btn-primary"  type="button"> <img src="../media/oferta_educativa/sistemas/obj_itsch.jpg"></span>
 
     <p align="justify"> Generarán soluciones de sistemas de información con altos estándares de calidad, mejorando la gestión de procesos de negocio   </p>
     <br>
@@ -100,15 +110,14 @@
 
     <hr>
 
-    <br>
-    <br>
+
 
     <h2><strong>ATRIBUTOS DEL EGRESADO</strong></h2>
-
+        <hr class="container">
     <br>
     <br>
 
-    <ol>
+    <ul>
         <li>Identificar, formular y resolver problemas de ingeniería aplicando los principios de las ciencias
             básicas e ingeniería.</li>
         <li>Aplicar, analizar y sintetizar procesos de diseño de ingeniería que resulten en proyectos que
@@ -123,17 +132,15 @@
             localizar, evaluar, integrar y aplicar este conocimiento adecuadamente.</li>
         <li>Trabajar efectivamente en equipos que establecen metas, planean tareas, cumplen fechas
             límite y analizan riesgos e incertidumbre.</li>
-    </ol>
+    </ul>
 
     <br>
-    <br>
-
-
 
 
 
     <h2><strong>PERFIL DE EGRESO:</strong></h2>
-    <ol>
+   <hr class="red">
+    <ul>
         <li>Diseñar,  configurar y administrar redes computacionales aplicando las normas  y&nbsp;estándares vigentes.</li>
         <li>Desarrollar,  implementar y administrar software de sistemas o de aplicación que&nbsp;cumpla  con los estándares de calidad con el fin de apoyar la productividad  y&nbsp;competitividad de las organizaciones.</li>
         <li>Coordinar y  participar en proyectos interdisciplinarios.</li>
@@ -145,19 +152,22 @@
         <li> Desempeñar sus actividades  profesionales considerando los aspectos legales, éticos,&nbsp;sociales y de  desarrollo sustentable.</li>
         <li> Poseer habilidades metodológicas de  investigación que fortalezcan el desarrollo&nbsp;cultural, científico y  tecnológico en el ámbito de sistemas computacionales y&nbsp;disciplinas afines.</li>
         <li> Seleccionar y aplicar herramientas  matemáticas para el modelado, diseño y desarrollo&nbsp;de tecnología  computacional.</li>
-    </ol>
-    <p> </p>
+    </ul>
+
 
 
     <hr>
     <h2><strong>Especialidad de Ingeniería de Software:</strong></h2>
-
+        <hr class="red">
 
     <h2>OBJETIVO DE LA ESPECIALIDAD EN INGENIERIA DE SOFTWARE</h2>
+        <hr class="red">
     <p>Esta especialidad aporta al perfil  del Ingeniero en Sistemas Computacionales las competencias profesionales para aplicar los métodos y técnicas que permitan desarrollar soluciones de software, conforme a las normas organizacionales de manejo y seguridad de la información,utilizando tecnologías emergentes.</p>
 
 
     <h2>MATERIAS</h2>
+
+        <hr class="red">
     <p>La especialidad esta compuesta por seis materias:</p>
     <li>Ingeniería de Requerimientos</li>
     <li>Arquitectura y Diseño de Software</li>
@@ -183,20 +193,20 @@
 
 
     <h2>ANTES NOS IDENTIFICABAN COMO PROGRAMADORES</h2>
-
+        <hr class="red">
         <div class="text-center">
             <picture>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/1.png') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
+                  <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/1.png') }}" class="img-fluid img-thumbnail logoCarrera" alt="imagenes itsch">
             </picture>
         </div>
 
 
     <h2>AHORA SOMOS DESARROLLADORES</h2>
 
-
+        <hr class="red">
 
     <h2>NUESTRO DESARROLLO</h2>
-
+        <hr class="red">
     <li>Trabajamos en Equipo</li>
     <li>Ingenieros Proactivos</li>
     <li>Manejo de Liderazgo</li>
@@ -207,54 +217,65 @@
 
 
     <h2>NUESTRO FUTURO</h2>
-
+        <hr class="red">
     <p>Las necesidades de desarrollador es de software para otros países, donde se ofrecen salarios superior es a nuestra realidad local e inclusive las grandes empresas desarrollador es de software han logrado subcontratar los servicios individuales de ingenieros de software residentes en otros países fundamentalmente laIndia, Pakistán, México lo que nosotros conocemos como outsourcing</p>
 
 
-    <hr>
-    <h2><strong>CAMPO DE TRABAJO:</strong></h2>
 
+    <h2>CAMPO DE TRABAJO:</h2>
+        <hr class="red">
 
-        <div class="text-center">
+        <div>
             <picture>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/siter.jpg') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
-            </picture>
+                  <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/siter.jpg') }}"  alt="">
+        </picture>
+    </div>
+
+  <p>Es uno de los más amplios de las carreras que se ofrecen en el país, ya que los sistemas computacionales se están ampliando en todos los ámbitos, por poner ejemplos mencionaremos la medicina, la educación, la investigación, la industria y el desarrollo. Los cargos que el Ingeniero en Sistemas Computacionales podrá tener son: Gerente de sistemas, director de área de una amplia gama de procesos y proyectos tecnológicos, administrador de centros de cómputo, administrador de bases de datos, administrador de servidores multiplataforma, creador y administrador de proyectos de data warehouse, programador de aplicaciones en los niveles junior, sénior, master, arquitecto de software, consultor de empresas públicas y privadas así como de gobierno, administrador de redes de comunicaciones, creador y verificador de certificados digitales CFDI, web master, etc. Además formar sus propias empresas de creación e instalación de redes, desarrollo de software, administración de bases de datos, diseño, creación y montaje de sitios web, creador de proyectos de comercio electrónico, creación de aplicaciones para dispositivos móviles, mantenimiento preventivo y correctivo de equipo de cómputo.</p>
+<hr>
+
+<h2>ACREDITACIÓN</h2>
+
+
+
+        <div class="container">
+            <div  class="container">
+                <picture>
+                      <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/cacei-sistemas.png') }}"  alt="imagen">
+                </picture>
+            </div>
+
+
+
+            <h2>INFRAESTRUCTURA</h2>
+
+        <hr class="red">
+<p>La carrera de Ingeniería en sistemas computacionales es una de las carreras que en el ITSCH cuenta con la mayor infraestructura para poder brindar un servicio de calidad a todos sus estudiantes además de ser una carrera que cuenta con acreditación CACEI que es un centro de acreditación de carreras a nivel nacional, lo que garantiza que la educación impartida en este programa es de alta calidad, además de que es reconocido a nivel nacional  e internacional. </p>
+
+
+        <div class="container">
+            <picture>
+                  <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura1.JPG') }}"  alt="imagen">
+                  <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura2.JPG') }}"  alt="imagen">
+                </picture>
         </div>
 
 
+            <div class="container">
+                <picture>
+                      <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura3.JPG') }}"  alt="imagen">
+                      <button class="btn btn-primary"  type="button"> <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura4.JPG') }}"  alt="imagen">
+                </picture>
+            </div>
 
-      <p>  Es uno de los más amplios de las carreras que se ofrecen en el país, ya que los sistemas computacionales se están ampliando en todos los ámbitos, por poner ejemplos mencionaremos la medicina, la educación, la investigación, la industria y el desarrollo. Los cargos que el Ingeniero en Sistemas Computacionales podrá tener son: Gerente de sistemas, director de área de una amplia gama de procesos y proyectos tecnológicos, administrador de centros de cómputo, administrador de bases de datos, administrador de servidores multiplataforma, creador y administrador de proyectos de data warehouse, programador de aplicaciones en los niveles junior, sénior, master, arquitecto de software, consultor de empresas públicas y privadas así como de gobierno, administrador de redes de comunicaciones, creador y verificador de certificados digitales CFDI, web master, etc. Además formar sus propias empresas de creación e instalación de redes, desarrollo de software, administración de bases de datos, diseño, creación y montaje de sitios web, creador de proyectos de comercio electrónico, creación de aplicaciones para dispositivos móviles, mantenimiento preventivo y correctivo de equipo de cómputo.</p>
-    <hr>
 
-
-
-    <h2 align="left"><strong>INFRAESTRUCTURA</strong></h2>
-    <p>La carrera de Ingeniería en sistemas computacionales es una de las carreras que en el ITSCH cuenta con la mayor infraestructura para poder brindar un servicio de calidad a todos sus estudiantes además de ser una carrera que cuenta con acreditación CACEI que es un centro de acreditación de carreras a nivel nacional, lo que garantiza que la educación impartida en este programa es de alta calidad, además de que es reconocido a nivel nacional  e internacional. </p>
-
-        <div class="text-center">
-            <picture>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/cacei-sistemas.png') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
-            </picture>
-        </div>
-
-        <div class="text-center">
-            <picture>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura1.JPG') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura2.JPG') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura3.JPG') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
-                <img src="{{ asset('images/content/oferta educativa/sistemas/infraestructura4.JPG') }}" class="img-fluid img-thumbnail logoCarrera" alt="Logo Ingeniería en sistemas computaiconales de ITSCH - TECNM>
+        <diV class="container">
 
 
 
 
-
-            </picture>
-        </div>
-
-
-
-    <p align="center"><a href="#"></p>
-
+<h2>  Temario de sistemas computacionales</h2>
+<hr class="red">
 
         <div class="panel-group ficha-collapse" id="accordion">
             <div class="panel panel-default">
@@ -272,73 +293,73 @@
                         <div class="table-responsive">
                             <table class="table table-hover">
 
-<tr>
+                                <tr>
 
-    <th>Archivo</th>
-    <th>Descargar</th>
-    <th></th>
-</tr>
+                                    <th>Archivo</th>
+                                    <th>Descargar</th>
 
-<tr>
+                                </tr>
 
-
-
-            <tr><td>1.- Ingenieria_de_Requermientos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/1.- Ingenieria_de_Requermientos.pdf') }}">   <i
-                    class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>2 .-Arquitectura_y_Diseno_de_Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/2 .-Arquitectura_y_Diseno_de_Software.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>3.- Desarrollo Personal para Desarrollo de SW.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/3.- Desarrollo Personal para Desarrollo de SW.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>4.- Modelo de Desarrollo Integral.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/4.- Modelo de Desarrollo Integral.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>5.- Verificacion y Validacion del SW.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/5.- Verificacion y Validacion del SW.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>6.- Programacion_en_Moviles.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/6.- Programacion_en_Moviles.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC002-Calculo Integral.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC002-Calculo Integral.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC003-Algebra Lineal.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC003-Algebra Lineal.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC004-Calculo Vectorial.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC004-Calculo Vectorial.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC005-Ecuaciones Diferenciales.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC005-Ecuaciones Diferenciales.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC006-Fundamentos de Investigacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC006-Fundamentos de Investigacion.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC007-Taller de Etica.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC007-Taller de Etica.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC008-Desarollo Sustentable.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC008-Desarollo Sustentable.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC009-Taller de Investigacion I.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC009-Taller de Investigacion I.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AC010-Taller de Investigacion II.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC010-Taller de Investigacion II.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE008-Contabilidad Financiera.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE008-Contabilidad Financiera.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE026-Estructura de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE026-Estructura de Datos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE031-Fundamentos de Bases de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE031-Fundamentos de Bases de Datos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE034-Fundamentos de Telecomunicaciones.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE034-Fundamentos de Telecomunicaciones.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE041-Matematicas Discretas.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE041-Matematicas Discretas.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE052-Probabilidad y Estadistica.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE052-Probabilidad y Estadistica.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE055-Programacion Web.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE055-Programacion Web.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE058-Quimica.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE058-Quimica.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>AE061-Sistemas Operativos I.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE061-Sistemas Operativos I.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Administracion de Base de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Administracion de Base de Datos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Administracion de Redes.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Administracion de Redes.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Arquitectura de Computadoras.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Arquitectura de Computadoras.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Conmutacion y Enrutamiento en Redes de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Conmutacion y Enrutamiento en Redes de Datos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Cultura Empresarial.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Cultura Empresarial.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Fisica General.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Fisica General.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Fundamentos de Ingenieria de Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Fundamentos de Ingenieria de Software.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Fundamentos de Programacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Fundamentos de Programacion.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Gestion de Proyectos de Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Gestion de Proyectos de Software.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Graficacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Graficacion.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Ingenieria de Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Ingenieria de Software.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Inteligencia Artificial.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Inteligencia Artificial.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Investigacion de Operaciones.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Investigacion de Operaciones.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Lenguajes de Interfaz.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Lenguajes de Interfaz.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Lenguajes y Automatas I.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Lenguajes y Automatas I.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Lenguajes y Automatas II.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Lenguajes y Automatas II.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Metodos Numericos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Metodos Numericos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Principios Electricos y Aplicaciones Digitales.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Principios Electricos y Aplicaciones Digitales.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Programacion Logica y Funcional.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Programacion Logica y Funcional.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Programacion Orientada a Objetos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Programacion Orientada a Objetos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Redes de Computadoras.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Redes de Computadoras.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Simulacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Simulacion.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Sistemas Programables.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Sistemas Programables.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Taller de Administracion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Taller de Administracion.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Taller de Base de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Taller de Base de Datos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Taller de Sistemas Operativos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Taller de Sistemas Operativos.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
-            <tr><td>ISIC-2010-224 Topicos Avanzados de Programacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Topicos Avanzados de Programacion.pdf') }}">   <i class='fas fa-download' style='font-size:20px'></i></td></tr>
+                                <tr>
 
 
-        </table>
-    </div>
+
+                                <tr><td>1.- Ingenieria_de_Requermientos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/1.- Ingenieria_de_Requermientos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i
+                                                    class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>2 .-Arquitectura_y_Diseno_de_Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/2 .-Arquitectura_y_Diseno_de_Software.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>3.- Desarrollo Personal para Desarrollo de SW.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/3.- Desarrollo Personal para Desarrollo de SW.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>4.- Modelo de Desarrollo Integral.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/4.- Modelo de Desarrollo Integral.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>5.- Verificacion y Validacion del SW.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/5.- Verificacion y Validacion del SW.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>6.- Programacion_en_Moviles.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/6.- Programacion_en_Moviles.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC002-Calculo Integral.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC002-Calculo Integral.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC003-Algebra Lineal.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC003-Algebra Lineal.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC004-Calculo Vectorial.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC004-Calculo Vectorial.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC005-Ecuaciones Diferenciales.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC005-Ecuaciones Diferenciales.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC006-Fundamentos de Investigacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC006-Fundamentos de Investigacion.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC007-Taller de Etica.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC007-Taller de Etica.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC008-Desarollo Sustentable.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC008-Desarollo Sustentable.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC009-Taller de Investigacion I.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC009-Taller de Investigacion I.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AC010-Taller de Investigacion II.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AC010-Taller de Investigacion II.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE008-Contabilidad Financiera.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE008-Contabilidad Financiera.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE026-Estructura de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE026-Estructura de Datos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE031-Fundamentos de Bases de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE031-Fundamentos de Bases de Datos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE034-Fundamentos de Telecomunicaciones.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE034-Fundamentos de Telecomunicaciones.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE041-Matematicas Discretas.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE041-Matematicas Discretas.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE052-Probabilidad y Estadistica.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE052-Probabilidad y Estadistica.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE055-Programacion Web.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE055-Programacion Web.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE058-Quimica.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE058-Quimica.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>AE061-Sistemas Operativos I.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/AE061-Sistemas Operativos I.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Administracion de Base de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Administracion de Base de Datos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Administracion de Redes.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Administracion de Redes.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Arquitectura de Computadoras.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Arquitectura de Computadoras.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Conmutacion y Enrutamiento en Redes de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Conmutacion y Enrutamiento en Redes de Datos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Cultura Empresarial.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Cultura Empresarial.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Fisica General.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Fisica General.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Fundamentos de Ingenieria de Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Fundamentos de Ingenieria de Software.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Fundamentos de Programacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Fundamentos de Programacion.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Gestion de Proyectos de Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Gestion de Proyectos de Software.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Graficacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Graficacion.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Ingenieria de Software.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Ingenieria de Software.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Inteligencia Artificial.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Inteligencia Artificial.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Investigacion de Operaciones.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Investigacion de Operaciones.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Lenguajes de Interfaz.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Lenguajes de Interfaz.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Lenguajes y Automatas I.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Lenguajes y Automatas I.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Lenguajes y Automatas II.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Lenguajes y Automatas II.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Metodos Numericos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Metodos Numericos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Principios Electricos y Aplicaciones Digitales.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Principios Electricos y Aplicaciones Digitales.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Programacion Logica y Funcional.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Programacion Logica y Funcional.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Programacion Orientada a Objetos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Programacion Orientada a Objetos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Redes de Computadoras.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Redes de Computadoras.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Simulacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Simulacion.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Sistemas Programables.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Sistemas Programables.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Taller de Administracion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Taller de Administracion.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Taller de Base de Datos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Taller de Base de Datos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Taller de Sistemas Operativos.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Taller de Sistemas Operativos.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+                                <tr><td>ISIC-2010-224 Topicos Avanzados de Programacion.pdf</td><td><a href="{{ asset('images/content/oferta educativa/sistemas/temario/ISIC-2010-224 Topicos Avanzados de Programacion.pdf') }}">     <button class="btn btn-primary"  type="button"> <i class='fas fa-download' style='font-size:20px'></i></button></td></tr>
+
+
+                            </table>
+                        </div>
 
 
 
@@ -348,7 +369,8 @@
             </div>
         </div>
 
-
+        </div>
+        </div>
     </div>
 
 
