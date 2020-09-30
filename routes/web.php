@@ -10,11 +10,10 @@ Route::get('transparencia/acceso_transparencia',function(){return view('content.
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
 
-Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.convenio_colaboraciongi');})->name('vinculacion.convenio_colaboracion');
 Route::get('vinculacion/banco_de_datos',function(){return view('content.vinculacion.banco_de_datos');})->name('vinculacion.banco_de_datos');
 
 
-Route::get('vinculacion/convenio_colaboracion',function(){return view('content.vinculacion.convenios');})->name('vinculacion.convenios');
+Route::get('vinculacion/convenio_colaboracion',function(){return view('content.vinculacion.convenio_colaboracion');})->name('vinculacion.convenio_colaboracion');
 
 Route::get('vinculacion/convenios',function(){return view('content.vinculacion.convenios');})->name('vinculacion.convenios');
 
@@ -69,7 +68,7 @@ Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias
 //routas de cle
 
 
-Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avisos');
+Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avios');
 
 
 //Ruta para visualizar las noticias

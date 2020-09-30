@@ -258,7 +258,7 @@
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
                 <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
                   <li>
-                    <a class="dropdown-item" href="#">Ingles para Secundaria</a>
+                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-secundaria.php">Ingles para Secundaria</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-adultos.php">Ingles para Adultos</a>
@@ -288,7 +288,7 @@
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/informacion.php">Información General</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{{route('cle.avisos')}}">Avisos</a>
+                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>
                   </li>
                </ul>
           </li>
@@ -303,10 +303,8 @@
               <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
               <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
               <a class="dropdown-item" href="{{route('vinculacion.banco_de_datos')}}">Banco de Proyectos</a>
-              <a class="dropdown-item" href="{{route('vinculacion.convenio_colaboracion')}}">
-                  Convenio de colaboración</a>
-              <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">
-                  Convenios</a>
+              <a class="dropdown-item" href="{{route('vinculacion.convenio_colaboracion')}}">Convenio de colaboración</a>
+              <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">  Convenios</a>
 
               <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
 
