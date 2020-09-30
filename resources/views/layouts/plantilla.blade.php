@@ -80,7 +80,7 @@
   <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
     <ul class="navbar-nav  ml-auto bg-white">
       <li class="nav-item dropdown  ml-auto">
-        
+
         <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Alumnos
         </a>
@@ -89,7 +89,7 @@
             <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
             <ul class="submenu dropdown-menu">
               <li>
-                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/servicios.php">Servicios</a> 
+                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/servicios.php">Servicios</a>
               </li>
               <li>
                  <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/inscripcion-reinscripcion.php">Inscripción/Reinscripción</a>
@@ -105,7 +105,7 @@
               </li>
               <li>
                 <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/becas/becas.php">Becas</a>
-              </li>             
+              </li>
            </ul>
           </li>
           <a class="   dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
@@ -120,7 +120,7 @@
           <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
         </ul>
       </li>
-     
+
       <li class="nav-item dropdown  ml-auto">
           <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
               Académicos
@@ -144,7 +144,7 @@
             <a class="dropdown-item" href="">Encuesta de Empleadores</a>
         </div>
       </li>
-      
+
 
       <li class="nav-item dropdown  ml-auto">
           <a class="nav-link active dropdown-toggle"href="#" id="navbarfgdgdrop" data-toggle="dropdown">
@@ -154,7 +154,7 @@
             <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
             <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
 
-           
+
             <li>
               <a class="dropdown-item dropdown-toggle menu-padre" href="#">Lineamientos</a>
               <ul class="submenu dropdown-menu">
@@ -170,21 +170,21 @@
                 <li>
                    <a class="dropdown-item"href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
                 </li>
-                 
+
               </ul>
-            </li>             
-            
-            
-            <a class="dropdown-item"href="{{route('normativos.rippa')}}">RIPPA</a>           
+            </li>
+
+
+            <a class="dropdown-item"href="{{route('normativos.rippa')}}">RIPPA</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/instituto/investigacion/investigacion1">Investigación </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>            
+            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
             <a class="dropdown-item"href="{{route('normativos.piid')}}">PIID 2013-2018</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>           
+            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/indicadores.php"> Indicadores  </a>
           </ul>
       </li>
@@ -200,8 +200,8 @@
             <a class="dropdown-item" href="https://bit.ly/2KVOXps">Aviso de privacidad </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/transparencia/acceso_transparencia">Estados Financieros </a>
           </div>
-      </li>      
-      <a href="https://moodle.cdhidalgo.tecnm.mx/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>     
+      </li>
+      <a href="https://moodle.cdhidalgo.tecnm.mx/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
     </ul>
   </div>
 </nav>
@@ -226,7 +226,7 @@
         </a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
-            <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>   
+            <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
             <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
             <a class="dropdown-item" href="https://bit.ly/2ytcyeK">Programa de capacitación</a>
 
@@ -251,7 +251,7 @@
           <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
               Otros Departamentos
           </a>
-          <ul class="dropdown-menu" style='background-color: #1B396A;'>              
+          <ul class="dropdown-menu" style='background-color: #1B396A;'>
               <a class="dropdown-item" href="{{route('departamentos.caja')}}">Servicio de Caja</a>
               <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
               <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
@@ -274,7 +274,7 @@
                   </li>
                   <li>
                      <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion-de-ingles.php">Examen de acreditación</a>
-                  </li> 
+                  </li>
                   <li>
                      <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion2013.php">Alumnos inscritos plan 2013 y anteriores</a>
                   </li>
@@ -288,8 +288,8 @@
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/informacion.php">Información General</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>   
-                  </li>                    
+                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>
+                  </li>
                </ul>
           </li>
           </ul>
@@ -324,7 +324,7 @@
         </a>
         <div class="dropdown-menu">
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
-            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/') }}"> Tutorias</a>
+    <a class="text-black dropdown-item"  href="{{route('tutorias.tutorias')}}"> Tutorias</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/mec.pdf') }}"> Mecatrónica</a>
@@ -336,7 +336,7 @@
             <a class="text-black dropdown-item" href="https://bit.ly/2SLwiRx"> Convocatorias CONACYT</a>
             <a class="text-black dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
         </div>
-      </li>      
+      </li>
     </ul>
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -469,6 +469,3 @@
     </div>
 
 </footer>
-
-
-

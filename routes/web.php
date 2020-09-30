@@ -60,11 +60,10 @@ Route::get('normativos/plan2010',function(){return view('content.normativos.plan
 Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
 Route::get('normativos/piid',function(){return view('content.normativos.piid');})->name('normativos.piid');
 
+Route::get('instituto/ubicacion',function(){return view('content.instituto.ubicacion');})->name('instituto.ubicacion');
 
 
-
-
-
+Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
 
 
 
