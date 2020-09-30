@@ -140,7 +140,7 @@
           Egresados/Empleadores
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="">Seguimiento a egresados</a>
+            <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSf6vB2zpwjLKVX4GdQnrpHLiLQWzcKo3u6J0v_DOYEgryZMig/viewform">Seguimiento a egresados</a>
             <a class="dropdown-item" href="">Encuesta de Empleadores</a>
         </div>
       </li>
