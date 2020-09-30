@@ -67,7 +67,10 @@ Route::get('normativos/piid',function(){return view('content.normativos.piid');}
 //Ruta para tutorias 
 Route::get('tutotias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
 
+//Rutas cle
 
+
+Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avisos');
 
 
 

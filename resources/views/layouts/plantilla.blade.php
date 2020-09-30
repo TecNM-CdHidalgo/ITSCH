@@ -288,7 +288,7 @@
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/informacion.php">Información General</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>   
+                    <a class="dropdown-item"  href="{{route('cle.avisos')}}">Avisos</a>   
                   </li>                    
                </ul>
           </li>
