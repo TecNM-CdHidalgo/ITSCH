@@ -26,8 +26,6 @@ Route::get('vinculacion/residencias',function(){return view('content.vinculacion
 
 Route::get('vinculacion/servicio-social',function(){return view('content.vinculacion.servicio-social');})->name('vinculacion.servcio-social');
 
-Route::get('vinculacion/incubadora_empresas',function(){return view('content.vinculacion.incubadora_empresas');})->name('vinculacion.incubadora_empresas');
-
 //Rutas de oferta educativa
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
 Route::get('oferta_educativa/tics',function(){return view('content.oferta_educativa.tics');})->name('oferta.tics');
@@ -64,13 +62,9 @@ Route::get('normativos/piid',function(){return view('content.normativos.piid');}
 
 
 
-//Ruta para tutorias 
-Route::get('tutotias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
-
-//Rutas cle
 
 
-Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avisos');
+
 
 
 
