@@ -73,7 +73,7 @@
 		    <div class="row" >
 		    	<div class="col-xl-6">
 		    		<a href="{{route('ver',$not->id)}}">
-						<img loading='lazy'  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
+						<img loading='lazy' width="100%" style="max-height: 270px; min-height: 250px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
@@ -190,7 +190,7 @@
                 <hr>        
                 <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
                 <br>
-                <p><small><b>Última actualización: 11/09/2020</b></small></p>
+                <p><small><b>Última actualización: 23/09/2020</b></small></p>
                 <br>                         
 	        </div>
 	    </div>
