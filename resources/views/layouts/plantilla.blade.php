@@ -258,7 +258,7 @@
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
                 <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-secundaria.php">Ingles para Secundaria</a>
+                    <a class="dropdown-item" href="#">Ingles para Secundaria</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-adultos.php">Ingles para Adultos</a>
@@ -288,7 +288,7 @@
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/informacion.php">Información General</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>
+                    <a class="dropdown-item" href="{{route('cle.avisos')}}">Avisos</a>
                   </li>
                </ul>
           </li>

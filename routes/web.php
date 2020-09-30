@@ -66,7 +66,10 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
 
 
+//routas de cle
 
+
+Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avisos');
 
 
 //Ruta para visualizar las noticias
