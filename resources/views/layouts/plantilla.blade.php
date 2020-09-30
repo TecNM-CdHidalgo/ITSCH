@@ -309,6 +309,7 @@
                   Convenios</a>
 
               <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
+ <a class="dropdown-item" href="{{route('vinculacion.incubadora_empresas')}}">Incuabadora de Empresas</a>
 
               <a class="dropdown-item" href="{{route('vinculacion.informacion')}}">Información</a>
 
@@ -324,7 +325,8 @@
         </a>
         <div class="dropdown-menu">
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
-            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/') }}"> Tutorias</a>
+                 <a class="text-black dropdown-item" href="{{route('tutorias.tutorias')}}">Tutorias</a>
+           
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/mec.pdf') }}"> Mecatrónica</a>

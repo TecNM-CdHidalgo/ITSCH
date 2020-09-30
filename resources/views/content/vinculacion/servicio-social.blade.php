@@ -11,7 +11,7 @@
 						<h3>Servicio Social:</h3>
 						<p>
 						<!-- contenido bruto dinamico-->
-						<span class="media thumbnail" style="margin-left: 165px"><img src="./media/vinculacion/servicio-social/slide.jpg"></span>
+					<!--<span class="media thumbnail" style="margin-left: 165px"><img src="./media/vinculacion/servicio-social/slide.jpg"></span>-->
 					</p>
 					</td>
 				</tr>
@@ -70,7 +70,7 @@
 
 						<!-- 
 
-						<h3> Solicitud de registro </h3>
+					
 
 						<p align="center"><a
 								href="./media/tecnologico/formatos-descarga/vinculacion/servicio-social/registro.pdf"
