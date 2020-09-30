@@ -323,16 +323,16 @@
             Investigación
         </a>
         <div class="dropdown-menu">
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/bio.pdf"> Bioquímica</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/departamentos/tutorias.php">Tutorías</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/geste.pdf"> Gestión Empresarial</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/ind.pdf"> Industrial</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/mec.pdf"> Mecatrónica</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/nan.pdf"> Nanotecnología</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/siscom.pdf"> Sistemas Computacionales</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/lineas_de_inv_19.php"> Lineas de investigación ISC </a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/tics.pdf"> Tecnologías de la Información y Comunicaciones</a>
-            <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/instituto/investigacion/lies_18.pdf"> Investigación Educativa</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/') }}"> Tutorias</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/mec.pdf') }}"> Mecatrónica</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/nan.pdf') }}"> Nanotecnología</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/siscom.pdf') }}"> Sistemas Computacionales</a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/lineas_de_inv_19.php') }}">  Lineas de investigación ISC </a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/tics.pdf') }}">  Tecnologías de la Información y Comunicaciones </a>
+            <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/lies_18.pdf') }}">  Investigación Educativa </a>
             <a class="text-black dropdown-item" href="https://bit.ly/2SLwiRx"> Convocatorias CONACYT</a>
             <a class="text-black dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
         </div>
