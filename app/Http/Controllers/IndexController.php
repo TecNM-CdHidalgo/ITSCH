@@ -43,10 +43,17 @@ class IndexController extends Controller
         }
         $article = Noticias::find($id);
         $archivos=ArchivoNoticia::where('id_not','=',$id)->get();
+
        
         return View('notices.vista_notices')
         ->with('articulo',$article)
         ->with('archivos',$archivos);
+    }
+
+    public function getDownload($id_not,$nomImg)
+    {       
+        $pathToFile=storage_path()."/app/public/noticias/archivos/".$id_not."/".$nomImg;
+        return response()->download($pathToFile,$nomImg);       
     }
 
    

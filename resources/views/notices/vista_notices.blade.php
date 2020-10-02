@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col">
                 @foreach($archivos as $ar)
-                    <a target="_blank" data-toggle="tooltip" title="{{$ar->nom_archivo}}" download href="{{ asset( '/storage/noticias/archivos/'.$ar->nom_archivo) }}"><img width="150px"height="170px" src="{{ asset( '/images/file.png') }}" alt="Archivos"> </a>
+                    <a href="/download/{{$ar->id_not}}/{{$ar->nom_archivo}}" target="_blank" data-toggle="tooltip" title="{{$ar->nom_archivo}}" download ><img width="150px"height="170px" src="{{ asset( '/images/file.png') }}" alt="Archivos"> </a>                   
                 @endforeach
             </div>
         </div>

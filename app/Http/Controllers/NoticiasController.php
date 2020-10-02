@@ -270,4 +270,5 @@ class NoticiasController extends Controller
         ->with('archivos',$archivos)
         ->with('articulo',$article);
     }
+   
 }

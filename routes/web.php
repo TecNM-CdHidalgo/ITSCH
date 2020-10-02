@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 
 //Rutas publicas**************************************************************************
+//Rutas para descarga de archivos de noticias
+Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 //Transparecia
 Route::get('transparencia/acceso_transparencia',function(){return view('content.transparencia.acceso_transparencia');})->name('transparencia.acceso_transparencia');
 //Vinculacion
@@ -66,8 +68,6 @@ Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias
 
 
 //routas de cle
-
-
 Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avios');
 
 
