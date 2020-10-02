@@ -78,9 +78,37 @@
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
 		    	<div class="col-xl-7 regContent">
+		    		
 		    		@php
-		                echo $not->contenido;
+		    			
+		    			$tam=strlen($not->contenido);		    			
+		    			if($tam<3000)
+		    			{
+		    				echo $not->contenido;
+		    			}
+		    			else
+		    			{
+		    				$ncar=$tam*.6;
+
+		    				for($x=0; $x<=$ncar; $x++)
+		    				{
+		    					echo $not->contenido[$x];
+		    				}
+		    				echo "...";
+
+		    				echo "<h5><b><a href='Noticias/Ver/$not->id'>(Leer mas...)</a></b></h5>";
+
+		    				//Buscar div para cerrarlos al final
+		    				$divs=substr_count($not->contenido,"<div",0,$ncar);
+		    				$divsFin=substr_count($not->contenido,"</div>",0,$ncar);
+		    				$totDiv=$divs-$divsFin;		    				
+		    				for($y=0;$y<$totDiv;$y++) //Ponemos los divs que faltan por cerrar
+		    				{
+		    					echo "</div>";
+		    				}		    				
+		    			}	                
 		            @endphp
+
 		    	</div>
 		    </div>
 		    <div class="row">
