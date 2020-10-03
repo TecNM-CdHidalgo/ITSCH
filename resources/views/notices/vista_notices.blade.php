@@ -29,7 +29,7 @@
             <img src="{{ asset( '/storage/noticias/imagenes/'.$articulo->imagen) }}" alt="" style="display:block; max-width:100%; max-height:{{ $max_height }}; width:auto; height:auto; margin:auto;">
         </div>
         <br>
-        <div>
+        <div class="regContent">
             <p>{{ convertDate($articulo->created_at) }}</p>
             @php
                 echo $articulo->contenido;
