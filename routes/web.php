@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+//use Intervention\Image\Image;
+//use Image;
+use Intervention\Image\ImageManagerStatic as Image;
+
+//use Intervention\Image\Filters\FilterInterface;
+
 
 //Rutas publicas**************************************************************************
 //Rutas para descarga de archivos de noticias
@@ -76,7 +82,32 @@ Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
 
-//Rutas publicas
+//Ruta para imagenes del carousel
+Route::get('/carousel/{image_name}', function($image_name)
+{
+	Image::configure(array('driver' => 'gd'));
+    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
+    ->widen(1360)
+    ->resizeCanvas(1360, 400, 'top-left', false, '000000')
+    ->sharpen(5);
+    return $img->response('jpg');
+
+})->name('carousel');
+
+//Ruta para imagenes de las noticias
+Route::get('/noticia/{image_name}', function($image_name)
+{
+	Image::configure(array('driver' => 'gd'));
+    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
+    ->widen(500) 
+    ->resizeCanvas(500, 280, 'top-left', false, '000000')  
+    ->sharpen(10);
+    return $img->response('jpg');
+
+})->name('noticia');
+
+
+//Fin Rutas publicas***********************************************************************
 
 
 

@@ -29,7 +29,8 @@
 					@if($ban)
 						<div class="carousel-item active">
 							<a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%"height="400px">
+							    {{--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">--}}
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -42,7 +43,8 @@
 					@else
 						<div class="carousel-item">
 						     <a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%"height="400px">
+							    {{--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">--}}
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -73,7 +75,8 @@
 		    <div class="row">
 		    	<div class="col-xl-5">
 		    		<a href="{{route('ver',$not->id)}}">
-						<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
+						{{--<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>--}}
+						<img src="{{ route('noticia',[$not->imagen]) }}" alt="{{$not->titulo}}" loading="lazy" width="85%">
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
