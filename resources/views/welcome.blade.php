@@ -83,7 +83,7 @@
 		    		@php
 		    			
 		    			$tam=strlen($not2->contenido);		    			
-		    			if($tam<3000)
+		    			if($tam<3500)
 		    			{
 		    				echo $not2->contenido;
 		    			}
@@ -96,6 +96,17 @@
 		    					echo $not2->contenido[$x];
 		    				}
 		    				echo "...";
+
+		    				//Buscar parrafor abiertos para cerrarlos
+		    				$p=substr_count($not2->contenido,"<p",0,$ncar);
+		    				$pfin=substr_count($not2->contenido,"</p>",0,$ncar);
+		    				$totP=$p-$pfin;		    				
+		    				for($y=0;$y<$totP;$y++) //Ponemos los p que faltan por cerrar
+		    				{
+		    					echo "</p>";
+		    				}	
+
+		    				echo "<br>";
 
 		    				echo "<h5><b><a href='Noticias/Ver/$not2->id'>(Leer mas...)</a></b></h5>";
 
