@@ -83,7 +83,7 @@
 		    		@php
 		    			
 		    			$tam=strlen($not2->contenido);		    			
-		    			if($tam<3500)
+		    			if($tam<2800)
 		    			{
 		    				echo $not2->contenido;
 		    			}
