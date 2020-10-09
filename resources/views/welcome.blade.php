@@ -104,6 +104,14 @@
 		    				for($y=0;$y<$totP;$y++) //Ponemos los p que faltan por cerrar
 		    				{
 		    					echo "</p>";
+		    				}
+
+		    				//Buscar comillas abiertos para cerrarlos
+		    				$com=substr_count($not2->contenido,'"',0,$ncar);		    				
+		    				$totCom=$com%2;		    				
+		    				for($y=0;$y<$totCom;$y++) //Ponemos los "" que faltan por cerrar
+		    				{
+		    					echo '"';
 		    				}	
 
 		    				echo "<br>";
