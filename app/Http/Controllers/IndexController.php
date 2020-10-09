@@ -28,7 +28,7 @@ class IndexController extends Controller
         $noticias2 = Noticias::whereDate('fecha_pub','<=',$fec_act)
         ->whereDate('fecha_fin','>=',$fec_act)
         ->orderBy('id','desc')->get();
-
+        
         
         return View('welcome')
         ->with('noticias',$noticias)

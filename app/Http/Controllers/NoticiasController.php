@@ -73,6 +73,7 @@ class NoticiasController extends Controller
         }
 
         if($request->has('archivos')){
+            
             // Creamos un arrelglo con las extemsiones validas
             $allowedfileExtension=['pdf','xls','xlsx','docx','doc'];
             for ($i = 0; $i < count($request->archivos); $i++) {

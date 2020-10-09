@@ -29,8 +29,8 @@
 					@if($ban)
 						<div class="carousel-item active">
 							<a href="{{route('ver',$not->id)}}">
-							    {{--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">--}}
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%">
+							    <!--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">-->
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%" >
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -42,9 +42,8 @@
 				    	@endphp
 					@else
 						<div class="carousel-item">
-						     <a href="{{route('ver',$not->id)}}">
-							    {{--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">--}}
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%">
+						     <a href="{{route('ver',$not->id)}}">							   
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%" >
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -66,28 +65,27 @@
 
 @section('content')
 	{{--Contenido de noticias--}}
-	<h3>Noticias</h3>
+	<h1>Noticias</h1>
     <hr>
-    @foreach($noticias2 as $not)
+    @foreach($noticias2 as $not2)
 	    <div class="noticias">
-	    	<h5><b>{{$not->titulo}}</b></h5>
-	    	<h6>{{$not->sintesis}}</h6>
+	    	<h3><b>{{$not2->titulo}}</b></h3>
+	    	<h5>{{$not2->sintesis}}</h5>
 		    <div class="row">
 		    	<div class="col-xl-5">
-		    		<a href="{{route('ver',$not->id)}}">
-						{{--<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>--}}
-						<img src="{{ route('noticia',[$not->imagen]) }}" alt="{{$not->titulo}}" loading="lazy" width="85%">
+		    		<a href="{{route('ver',$not2->id)}}">
+						<!--<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>-->
+						<img src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}}" loading="lazy" width="85%" title="{{$not->titulo}}" >
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
-		    	<div class="col-xl-7 regContent">
-		    		
+		    	<div class="col-xl-7 regContent">		    		
 		    		@php
 		    			
-		    			$tam=strlen($not->contenido);		    			
+		    			$tam=strlen($not2->contenido);		    			
 		    			if($tam<3000)
 		    			{
-		    				echo $not->contenido;
+		    				echo $not2->contenido;
 		    			}
 		    			else
 		    			{
@@ -95,15 +93,15 @@
 
 		    				for($x=0; $x<=$ncar; $x++)
 		    				{
-		    					echo $not->contenido[$x];
+		    					echo $not2->contenido[$x];
 		    				}
 		    				echo "...";
 
 		    				echo "<h5><b><a href='Noticias/Ver/$not->id'>(Leer mas...)</a></b></h5>";
 
 		    				//Buscar div para cerrarlos al final
-		    				$divs=substr_count($not->contenido,"<div",0,$ncar);
-		    				$divsFin=substr_count($not->contenido,"</div>",0,$ncar);
+		    				$divs=substr_count($not2->contenido,"<div",0,$ncar);
+		    				$divsFin=substr_count($not2->contenido,"</div>",0,$ncar);
 		    				$totDiv=$divs-$divsFin;		    				
 		    				for($y=0;$y<$totDiv;$y++) //Ponemos los divs que faltan por cerrar
 		    				{
@@ -115,21 +113,21 @@
 		    	</div>
 		    </div>
 		    <div class="row">
-		    	<div class="col-sm-3">
-		    		@if($not->arch_adj)
-			    		<a href="{{route('ver',$not->id)}}">
+		    	<div class="col-sm-3">		    		
+		    		@if($not2->arch_adj)
+			    		<a href="{{route('ver',$not2->id)}}">
 			    			Archivos adjuntos.....
 			    		</a>
 		    		@endif
 		    	</div>
 		    	<div class="col-sm-3 blockquote-footer">
-		    		<p>Inicio: {{$not->fecha_pub}}</p>
+		    		<p>Inicio: {{$not2->fecha_pub}}</p>
 		    	</div>
 		    	<div class="col-sm-3 blockquote-footer">
-		    		<p>Fin: {{$not->fecha_fin}}</p>
+		    		<p>Fin: {{$not2->fecha_fin}}</p>
 		    	</div>
 		    	<div class="col-sm-3 blockquote-footer">
-		    		<p>Autor: {{$not->autor}}</p>
+		    		<p>Autor: {{$not2->autor}}</p>
 		    	</div>
 		    </div>
 	    </div>

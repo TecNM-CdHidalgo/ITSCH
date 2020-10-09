@@ -52,9 +52,9 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                 <div class="input-group mb-3 input-group-sm">
+                <div class="input-group mb-3 input-group-sm">
                      <div class="input-group-prepend">
-                       <span class="input-group-text">Fecha de inicio de la publicación</span>
+                       <span class="input-group-text">Inicio</span>
                     </div>
                     <input class="form-control" type="date" name="fecha_pub" required value="@php echo date('Y-m-d'); @endphp">
                 </div>
@@ -62,7 +62,7 @@
             <div class="col-sm-4">
                <div class="input-group mb-3 input-group-sm">
                     <div class="input-group-prepend">
-                       <span class="input-group-text">Fecha de termino de la publicación</span>
+                       <span class="input-group-text">Termino</span>
                     </div>
                     <input class="form-control" type="date" name="fecha_fin" required value="@php echo date('Y-m-d'); @endphp">
                 </div>
@@ -82,7 +82,9 @@
             </div>
             <textarea class="form-control" aria-label="With textarea" name="sintesis" required placeholder="Una breve resumen del contenido del articulo"></textarea>
         </div>
+
         <textarea id="input" name="contenido" rows="10" required></textarea>
+        
         <div class="d-flex">
             <button type="submit" id="submit-all" class="btn btn-primary mt-2 ml-auto"> Guardar </button>
         </div>
