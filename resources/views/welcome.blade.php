@@ -97,7 +97,7 @@
 		    				}
 		    				echo "...";
 
-		    				echo "<h5><b><a href='Noticias/Ver/$not->id'>(Leer mas...)</a></b></h5>";
+		    				echo "<h5><b><a href='Noticias/Ver/$not2->id'>(Leer mas...)</a></b></h5>";
 
 		    				//Buscar div para cerrarlos al final
 		    				$divs=substr_count($not2->contenido,"<div",0,$ncar);
