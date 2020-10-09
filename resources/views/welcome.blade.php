@@ -89,7 +89,7 @@
 		    			}
 		    			else
 		    			{
-		    				$ncar=$tam*.6;
+		    				$ncar=$tam*.5;
 
 		    				for($x=0; $x<=$ncar; $x++)
 		    				{
