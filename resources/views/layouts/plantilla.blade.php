@@ -253,8 +253,8 @@
           </a>
           <ul class="dropdown-menu" style='background-color: #1B396A;'>
               <a class="dropdown-item" href="{{route('departamentos.caja')}}">Servicio de Caja</a>
-              <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
-              <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
+              <a class="dropdown-item" href="{{route('servicio_medico.medico')}}">Servicio Médico</a>
+
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
                 <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
                   <li>

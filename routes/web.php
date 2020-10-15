@@ -71,6 +71,7 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 
 
 Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
+Route::get('servicio/medico.medico',function(){return view('content.servicio_medico.medico');})->name('servicio_medico.medico');
 
 
 //routas de cle
