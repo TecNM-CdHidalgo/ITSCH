@@ -117,7 +117,7 @@ Route::get('/carousel/{image_name}', function($image_name)
 })->name('carousel');
 
 //Ruta para imagenes de las noticias
-Route::get('/noticia/{image_name}', function($image_name)
+/*Route::get('/noticia/{image_name}', function($image_name)
 {
 	//Obtenemos la anchura de la pantalla
 	Image::configure(array('driver' => 'gd'));
@@ -128,7 +128,9 @@ Route::get('/noticia/{image_name}', function($image_name)
     ->sharpen(10);
     return $img->response('jpg');
 
-})->name('noticia');
+})->name('noticia');*/
+
+
 
 
 //Fin Rutas publicas***********************************************************************

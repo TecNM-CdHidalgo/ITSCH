@@ -74,8 +74,9 @@
 		    <div class="row">
 		    	<div class="col-xl-5">
 		    		<a href="{{route('ver',$not2->id)}}">
-						<!--<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>-->
-						<img src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}}" loading="lazy" width="85%" title="{{$not->titulo}}" >
+						<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not2->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
+
+						{{--<img src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}}" loading="lazy" width="85%" title="{{$not->titulo}}" >--}}
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
