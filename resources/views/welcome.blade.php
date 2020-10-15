@@ -30,7 +30,7 @@
 						<div class="carousel-item active">
 							<a href="{{route('ver',$not->id)}}">
 							    <!--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">-->
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%" >
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%"  height="50%">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>
@@ -43,7 +43,7 @@
 					@else
 						<div class="carousel-item">
 						     <a href="{{route('ver',$not->id)}}">							   
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%" >
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%"  height="50%">
 							    <div class="carousel-caption">
 							        <h3>{{$not->titulo}}</h3>
 							        <p>{{$not->sintesis}}</p>

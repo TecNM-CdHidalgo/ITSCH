@@ -85,11 +85,12 @@ Auth::routes();
 //Ruta para imagenes del carousel
 Route::get('/carousel/{image_name}', function($image_name)
 {
-	Image::configure(array('driver' => 'gd'));
-    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
-    ->widen(1360)
-    ->resizeCanvas(1360, 400, 'top-left', false, '000000')
-    ->sharpen(5);
+	//Obtenemos la anchura de la pantalla
+	$ancho = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))->width();
+	$posX=((1600-$ancho)/2);
+	Image::configure(array('driver' => 'gd'));    
+    $img = Image::canvas(1600, 400, '#000')
+    ->insert(storage_path('app/public/noticias/imagenes/'.$image_name),'top-left',$posX,0);  
     return $img->response('jpg');
 
 })->name('carousel');
@@ -97,10 +98,11 @@ Route::get('/carousel/{image_name}', function($image_name)
 //Ruta para imagenes de las noticias
 Route::get('/noticia/{image_name}', function($image_name)
 {
+	//Obtenemos la anchura de la pantalla
 	Image::configure(array('driver' => 'gd'));
     $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
     ->widen(500) 
-    ->resizeCanvas(500, 280, 'top-left', false, '000000')  
+    ->resizeCanvas(500, 280, 'center', false, '000000')  
     ->sharpen(10);
     return $img->response('jpg');
 
