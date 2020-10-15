@@ -228,7 +228,7 @@
             <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
             <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
             <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
-            <a class="dropdown-item" href="https://bit.ly/2ytcyeK">Programa de capacitación</a>
+            <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
 
         </div>
       </li>

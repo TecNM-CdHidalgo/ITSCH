@@ -62,7 +62,7 @@ Route::get('normativos/ambiental',function(){return view('content.normativos.amb
 Route::get('normativos/rippa',function(){return view('content.normativos.rippa');})->name('normativos.rippa');
 Route::get('normativos/plan2004',function(){return view('content.normativos.plan2004');})->name('normativos.plan2004');
 Route::get('normativos/plan2010',function(){return view('content.normativos.plan2010');})->name('normativos.plan2010');
-
+Route::get('programa_capacitacion/programacapacitacion2020.pdf',function(){return view('content.programa_capacitacion.programacapacitacion2020.pdf');})->name('programa_capacitacion.programacapacitacion2020.pdf');
 
 Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
 Route::get('normativos/piid',function(){return view('content.normativos.piid');})->name('normativos.piid');
@@ -99,8 +99,8 @@ Route::get('/noticia/{image_name}', function($image_name)
 {
 	Image::configure(array('driver' => 'gd'));
     $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
-    ->widen(500) 
-    ->resizeCanvas(500, 280, 'top-left', false, '000000')  
+    ->widen(500)
+    ->resizeCanvas(500, 280, 'top-left', false, '000000')
     ->sharpen(10);
     return $img->response('jpg');
 
