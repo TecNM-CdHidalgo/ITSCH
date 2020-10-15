@@ -228,7 +228,7 @@
             <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
             <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
             <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
-            <a class="dropdown-item" href="https://bit.ly/2ytcyeK">Programa de capacitación</a>
+            <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
 
         </div>
       </li>
@@ -253,42 +253,39 @@
           </a>
           <ul class="dropdown-menu" style='background-color: #1B396A;'>
               <a class="dropdown-item" href="{{route('departamentos.caja')}}">Servicio de Caja</a>
-              <a class="dropdown-item" href="https://bit.ly/2W25puy">Servicio Médico</a>
-              <a class="dropdown-item" href="https://bit.ly/2WxGyhA">Servicio Médico</a>
+              <a class="dropdown-item" href="{{route('servicio_medico.medico')}}">Servicio Médico</a>
+
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
                 <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-secundaria.php">Ingles para Secundaria</a>
+                    <a class="dropdown-item" href="{{route('cle.ingles-para-secundaria')}}">Ingles para Secundaria</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/ingles-para-adultos.php">Ingles para Adultos</a>
+                    <a class="dropdown-item" href="{{route('cle.ingles-para-adultos')}}">Ingles para Adultos</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/cursoConversacion.php">Curso de conversación</a>
+                    <a class="dropdown-item" href="{{route('cle.cursoConversacion')}}">Curso de conversación</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/cursoToefl.php">Curso de preparación para la certificación (TOEFL)</a>
+                    <a class="dropdown-item" href="{{route('cle.cursoToefl')}}">Curso de preparación para la certificación (TOEFL)</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/traduccionDocumentos.php">Traducción de documentos</a>
+                    <a class="dropdown-item" href="{{route('cle.traduccionDocumentos')}}">Traducción de documentos</a>
                   </li>
                   <li>
-                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion-de-ingles.php">Examen de acreditación</a>
+                     <a class="dropdown-item" href="{{route('cle.acreditacion-de-ingles')}}">Examen de acreditación</a>
                   </li>
                   <li>
-                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion2013.php">Alumnos inscritos plan 2013 y anteriores</a>
+                     <a class="dropdown-item" href="{{route('cle.acreditacion2013')}}">Alumnos inscritos plan 2013 y anteriores</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/acreditacion2014.php">Alumnos inscritos plan 2014 en adelante</a>
+                    <a class="dropdown-item" href="{{route('cle.acreditacion2014')}}">Alumnos inscritos plan 2014 en adelante</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/becasingles.php">Becas de Idiomas</a>
+                    <a class="dropdown-item" href="{{route('cle.becasingles')}}">Becas de Idiomas</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/informacion.php">Información General</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx/idiomas/Avisos.php">Avisos</a>
+                    <a class="dropdown-item" href="{{route('cle.informacion')}}">Información General</a>
                   </li>
                </ul>
           </li>

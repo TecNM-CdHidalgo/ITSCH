@@ -33,6 +33,26 @@ Route::get('vinculacion/residencias',function(){return view('content.vinculacion
 
 Route::get('vinculacion/servicio-social',function(){return view('content.vinculacion.servicio-social');})->name('vinculacion.servcio-social');
 
+
+//Rutas de cle
+Route::get('cle/acreditacion-de-ingles',function(){return view('content.cle.acreditacion-de-ingles');})->name('cle.acreditacion-de-ingles');
+Route::get('cle/acreditacion2013',function(){return view('content.cle.acreditacion2013');})->name('cle.acreditacion2013');
+Route::get('cle/acreditacion2014',function(){return view('content.cle.acreditacion2014');})->name('cle.acreditacion2014');
+Route::get('cle/becasingles',function(){return view('content.cle.becasingles');})->name('cle.becasingles');
+Route::get('cle/cursoConversacion',function(){return view('content.cle.cursoConversacion');})->name('cle.cursoConversacion');
+Route::get('cle/cursoToefl',function(){return view('content.cle.cursoToefl');})->name('cle.cursoToefl');
+Route::get('cle/diplomado',function(){return view('content.cle.diplomado');})->name('cle.diplomado');
+Route::get('cle/examenAcreditacion',function(){return view('content.cle.examenAcreditacion');})->name('cle.examenAcreditacion');
+Route::get('cle/informacion',function(){return view('content.cle.informacion');})->name('cle.informacion');
+Route::get('cle/ingles-para-adultos',function(){return view('content.cle.ingles-para-adultos');})->name('cle.ingles-para-adultos');
+Route::get('cle/ingles-para-ninos',function(){return view('content.cle.ingles-para-ninos');})->name('cle.ingles-para-ninos');
+Route::get('cle/ingles-para-secundaria',function(){return view('content.cle.ingles-para-secundaria');})->name('cle.ingles-para-secundaria');
+Route::get('cle/traduccionDocumentos',function(){return view('content.cle.traduccionDocumentos');})->name('cle.traduccionDocumentos');
+
+
+
+
+
 //Rutas de oferta educativa
 Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
 Route::get('oferta_educativa/tics',function(){return view('content.oferta_educativa.tics');})->name('oferta.tics');
@@ -62,7 +82,7 @@ Route::get('normativos/ambiental',function(){return view('content.normativos.amb
 Route::get('normativos/rippa',function(){return view('content.normativos.rippa');})->name('normativos.rippa');
 Route::get('normativos/plan2004',function(){return view('content.normativos.plan2004');})->name('normativos.plan2004');
 Route::get('normativos/plan2010',function(){return view('content.normativos.plan2010');})->name('normativos.plan2010');
-
+Route::get('programa_capacitacion/programacapacitacion2020.pdf',function(){return view('content.programa_capacitacion.programacapacitacion2020.pdf');})->name('programa_capacitacion.programacapacitacion2020.pdf');
 
 Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
 Route::get('normativos/piid',function(){return view('content.normativos.piid');})->name('normativos.piid');
@@ -71,6 +91,7 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 
 
 Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
+Route::get('servicio/medico.medico',function(){return view('content.servicio_medico.medico');})->name('servicio_medico.medico');
 
 
 //routas de cle
@@ -101,6 +122,7 @@ Route::get('/noticia/{image_name}', function($image_name)
 	//Obtenemos la anchura de la pantalla
 	Image::configure(array('driver' => 'gd'));
     $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
+
     ->widen(500) 
     ->resizeCanvas(500, 280, 'center', false, '000000')  
     ->sharpen(10);
