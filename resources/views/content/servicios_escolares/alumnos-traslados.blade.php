@@ -21,6 +21,7 @@ Si no lograste terminar tu carrera profesional, pero cuentas con avance académi
 Contactar al Jefe de División de la carrera a la que estas interesado ingresar, para agendar una cita.
 
 Presentar la siguiente documentación:
+</p>
 
 <li>Certificado parcial de estudios con validez oficial</li>
 <li>Copia de los programas de estudio de las materias acreditadas con sello oficial.</li>
@@ -28,8 +29,8 @@ Presentar la siguiente documentación:
 <li>Cumplir con los requisitos marcados en el lineamiento según corresponda en la siguiente liga: https://www.cdhidalgo.tecnm.mx/normativos/plan2015</li>
 
 
-</p>
 
+<table class="table">
 <tr>
 <td>Institución Educativa del Tecnológico Nacional de México</td>
 <td>Capítulo 7. Convalidación de Estudios</td>
@@ -41,7 +42,7 @@ Presentar la siguiente documentación:
 <td>Capítulo 9. Lineamiento para la resolución de equivalencias de estudios</td>
 
 </tr>
-
+</table>
 
 
 </div>
