@@ -44,6 +44,8 @@ Presentar la siguiente documentación:
 </tr>
 </table>
 
+<p>Si tienes alguna otra duda, favor de contactar a la Dirección Académica del Instituto en el teléfono 786-154-9000 ext. 106 o en el correo direccion_academica@cdhidalgo.tecnm.mx</p>
+
 
 </div>
 
