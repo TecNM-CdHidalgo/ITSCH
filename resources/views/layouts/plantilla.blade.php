@@ -177,13 +177,13 @@
             <a class="dropdown-item" href="{{route('investigacion.investigacion')}}">Investigación </a>
             <a class="dropdown-item" href="{{route('calidad.reglamento')}}">Reglamento Alumnos</a>
             <a class="dropdown-item" href="{{route('calidad.reglamento_int')}}">Reglamento Interno</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
+            <a class="dropdown-item" href="{{route('calidad.resultados_evaluacion')}}">Evaluacion Docente</a>
             <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
+            <a class="dropdown-item" href="{{route('calidad.organizacional')}}">Manual de organización</a>
+            <a class="dropdown-item" href="{{route('calidad.procedimientos')}}">Manual de procedimientos</a>
             <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/indicadores.php"> Indicadores  </a>
+            <a class="dropdown-item" href="#"> Indicadores  </a>
           </ul>
       </li>
 

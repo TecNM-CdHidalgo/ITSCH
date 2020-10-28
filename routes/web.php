@@ -73,6 +73,13 @@ Route::get('departamentos/caja',function(){return view('content.departamentos.ca
 //Rutas de instituto
 Route::get('investigacion/investigacion',function(){return view('content.investigacion.investigacion');})->name('investigacion.investigacion');
 Route::get('calidad/proceso_seleccion',function(){return view('content.calidad.proceso_seleccion');})->name('calidad.proceso_seleccion');
+Route::get('calidad/reglamento',function(){return view('content.calidad.reglamento');})->name('calidad.reglamento');
+Route::get('calidad/reglamento_int',function(){return view('content.calidad.reglamento_int');})->name('calidad.reglamento_int');
+Route::get('calidad/resultados_evaluacion',function(){return view('content.calidad.resultados_evaluacion');})->name('calidad.resultados_evaluacion');
+Route::get('calidad/organizacional',function(){return view('content.calidad.organizacional');})->name('calidad.organizacional');
+Route::get('calidad/procedimientos',function(){return view('content.calidad.procedimientos');})->name('calidad.procedimientos');
+Route::get('calidad/procedimientos',function(){return view('content.calidad.procedimientos');})->name('calidad.procedimientos');
+
 
 Route::get('calidad/reglamento',function(){return view('content.calidad.reglamento');})->name('calidad.reglamento');
 Route::get('calidad/reglamento_int',function(){return view('content.calidad.reglamento_int');})->name('calidad.reglamento_int');
@@ -105,6 +112,10 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 
 Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
 Route::get('servicio/medico.medico',function(){return view('content.servicio_medico.medico');})->name('servicio_medico.medico');
+
+
+//evaluacion docente
+Route::get('calidad/resultados_evaluacion',function(){return view('content.calidad.resultados_evaluacion');})->name('calidad.resultados_evaluacion');
 
 
 //routas de cle
