@@ -89,7 +89,7 @@
             <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
             <ul class="submenu dropdown-menu">
               <li>
-                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/servicios.php">Servicios</a>
+                <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
               </li>
               <li>
                  <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/inscripcion-reinscripcion.php">Inscripción/Reinscripción</a>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.19">
+    <root id="1">
+      <ServerVersion>5.7.24</ServerVersion>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="ajaxcrud">
+      <Current>1</Current>
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="3" parent="1" name="ajaxcrudapp">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="badone">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="cleanvoyager">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="6" parent="1" name="constancias">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="7" parent="1" name="constansv1">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="contactos">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="9" parent="1" name="crudity">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="10" parent="1" name="goodone">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="11" parent="1" name="ihc">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="12" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="13" parent="1" name="injh">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="14" parent="1" name="inv1">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="15" parent="1" name="inv2">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="16" parent="1" name="inventario">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="17" parent="1" name="itsch">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="18" parent="1" name="labuena">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="19" parent="1" name="lajax">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="20" parent="1" name="laravel">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="21" parent="1" name="laravel-admin">
+      <Collation>utf8_spanish_ci</Collation>
+    </schema>
+    <schema id="22" parent="1" name="laravel-tips">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="23" parent="1" name="laravel1">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="24" parent="1" name="laravelinertiacrud">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="25" parent="1" name="lavalite">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="26" parent="1" name="litstack">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="27" parent="1" name="mysql">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="28" parent="1" name="newborn">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="29" parent="1" name="nouno">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="30" parent="1" name="performance_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="31" parent="1" name="pingcrm">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="32" parent="1" name="skeleton">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="33" parent="1" name="supreme">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="34" parent="1" name="sys">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="35" parent="1" name="thebest">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="36" parent="1" name="uinventary">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="37" parent="1" name="voyager">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="38" parent="1" name="voycle">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+  </database-model>
+</dataSource>

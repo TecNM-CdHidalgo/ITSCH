@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="6c7dee9a-ef3a-4287-b950-c8bb76b76608" name="TecNM - Hidalgo" url="https://www.cdhidalgo.tecnm.mx">
-        <fileTransfer accessType="SFTP" host="187.216.132.98" port="2222" sshConfigId="7717f64d-d0da-4e8f-a719-4aa3e3e734f0" sshConfig="hackmaster@187.216.132.98:2222:22 password">
+        <fileTransfer rootFolder="/var/www/html/" accessType="SFTP" host="187.216.132.98" port="2222" sshConfigId="7717f64d-d0da-4e8f-a719-4aa3e3e734f0" sshConfig="hackmaster@187.216.132.98:2222:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

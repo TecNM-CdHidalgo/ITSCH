@@ -74,6 +74,12 @@ Route::get('departamentos/caja',function(){return view('content.departamentos.ca
 //Servicos escolares
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
+Route::get('servicios_escolares/servicios',function(){return view('content.servicios_escolares.servicios');})->name('servicios_escolares.servicios');
+
+
+
+
+
 
 //Normativos y lineamientos
 Route::get('normativos/calidad',function(){return view('content.normativos.calidad');})->name('normativos.calidad');
