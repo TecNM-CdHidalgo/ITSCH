@@ -70,6 +70,8 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 //Rutas departamentos
 Route::get('departamentos/caja',function(){return view('content.departamentos.caja');})->name('departamentos.caja');
 
+//Rutas de instituto
+Route::get('investigacion/investigacion',function(){return view('content.investigacion.investigacion');})->name('investigacion.investigacion');
 
 //Servicos escolares
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');

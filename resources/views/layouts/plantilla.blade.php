@@ -163,26 +163,26 @@
                   <a class="dropdown-item"href="{{route('normativos.plan2004')}}">Lineamientos plan 2004 </a>
                 </li>
                 <li>
-                  <a class="dropdown-item"href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
+                  <a class="dropdown-item" href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
                 </li>
                 <li>
-                   <a class="dropdown-item"href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
+                   <a class="dropdown-item" href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
                 </li>
 
               </ul>
             </li>
 
 
-            <a class="dropdown-item"href="{{route('normativos.rippa')}}">RIPPA</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/instituto/investigacion/investigacion1">Investigación </a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
-            <a class="dropdown-item"href="{{route('normativos.piid')}}">PIID 2013-2018</a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
+            <a class="dropdown-item" href="{{route('normativos.rippa')}}">RIPPA</a>
+            <a class="dropdown-item" href="{{route('investigacion.investigacion')}}">Investigación </a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
+            <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
+            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/indicadores.php"> Indicadores  </a>
           </ul>
       </li>
