@@ -178,7 +178,7 @@
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/proceso_seleccion">Proceso de selección de Alumnos</a>
+            <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/procedimientos">Manual de procedimientos</a>
             <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
