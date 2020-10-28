@@ -92,7 +92,7 @@
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
               </li>
               <li>
-                 <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/inscripcion-reinscripcion.php">Inscripción/Reinscripción</a>
+                 <a class="text-black dropdown-item"  href="{{route('servicios_escolares.inscripcion-reinscripcion')}}">Inscripción/Reinscripción</a>
               </li>
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-egreso')}}">Próximos a Egresar</a>
@@ -103,9 +103,7 @@
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
               </li>
-              <li>
-                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/becas/becas.php">Becas</a>
-              </li>
+
            </ul>
           </li>
           <a class="   dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
