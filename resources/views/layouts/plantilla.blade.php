@@ -175,8 +175,8 @@
 
             <a class="dropdown-item" href="{{route('normativos.rippa')}}">RIPPA</a>
             <a class="dropdown-item" href="{{route('investigacion.investigacion')}}">Investigación </a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/reglamento">Reglamento Alumnos</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/reglamento_int">Reglamento Interno</a>
+            <a class="dropdown-item" href="{{route('calidad.reglamento')}}">Reglamento Alumnos</a>
+            <a class="dropdown-item" href="{{route('calidad.reglamento_int')}}">Reglamento Interno</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/evaluacion_docente">Evaluacion Docente</a>
             <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
             <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/calidad/organizacional">Manual de organización</a>
