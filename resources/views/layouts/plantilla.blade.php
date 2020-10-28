@@ -95,7 +95,7 @@
                  <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/inscripcion-reinscripcion.php">Inscripción/Reinscripción</a>
               </li>
               <li>
-                <a class="text-black dropdown-item" href="https://www.cdhidalgo.tecnm.mx/servicios-escolares/proximos-egresar.php">Próximos a Egresar</a>
+                <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-egreso')}}">Próximos a Egresar</a>
               </li>
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
