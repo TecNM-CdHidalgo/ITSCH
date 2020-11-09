@@ -4,18 +4,13 @@
 
 @section('content')
 
-		<div class="row">
+		
 			
 			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Lineamientos plan 2010</h1>
-				</header>
-				
-                <!-- contenido bruto dinamico-->
-               <!-- <span class="thumbnail" style="margin-bottom:30px;"><img src="../media/calidad/genero/equidad-genero.png"></span>-->
-				
-                 <span class="thumbnail" style="margin-bottom:30px;"><img src="<?xml version="1.0" encoding="utf-8"?>
+		
+				<br>
+             <div class="row">
+                <?xml version="1.0" encoding="utf-8"?>
                     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -965,389 +960,269 @@
                     </image>
                     <rect x="54.5" y="339" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="265" height="19.5"/>
                     </svg>
-                    "></span>
+                    </span>
                 
                 
                  <p><h5><strong>En esta seccion encontraras los lineamientos para el plan 2010 disponibles para consultar y descargas.</strong></h5></p>
 				
                 
                 <hr>
-                   
-                 <div class="title-docs">Cuaderno de trabajo de Tutorías del estudiante.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Cuaderno de trabajo de Tutorías del estudiante.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/CUADERNODETRABAJODETUTORIADELESTUDIANTE.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-              <div class="title-docs">Lineamentos de Investigación educativa.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamentos de Investigación educativa.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientodeInvestigacionEducativaV1.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-              <div class="title-docs">Lineamientos para el traslado Estudiantil.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para el traslado Estudiantil.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparaelTrasladoEstudiantil.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-             <div class="title-docs">Lineamiento para la Convalidación de Estudios.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Convalidación de Estudios.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaConvalidaciondeEstudios.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-              <div class="title-docs">Lineamientos para la Integración y Operación de Academias.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamientos para la Integración y Operación de Academias.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaIntegracinyOperacindeAcademias.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-              <div class="title-docs">Lineamiento para la Movilidad Estudiantil .</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Movilidad Estudiantil .</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaMovilidadEstudiantil.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-            
-              <div class="title-docs">Lineamiento para la Operación del Comité Académico.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Operación del Comité Académico.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaOperacindelComitAcadmico.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-              <div class="title-docs">Lineamiento para la Resolución de Equivalencia de Estudios.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Resolución de Equivalencia de Estudios.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaResolucindeEquivalenciadeEstudios.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-             <div class="title-docs">Lineamientos de Educación a Distancia.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamientos de Educación a Distancia.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientodeEducaciónaDistancia.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-                <div class="title-docs">Lineamientos para la Evaluación y Acreditación de Asignaturas.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamientos para la Evaluación y Acreditación de Asignaturas.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaEvaluaciónyAcreditacióndeAsignaturas.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-             <div class="title-docs">Lineamientos para la Integración de Especialidades.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamientos para la Integración de Especialidades.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaIntegraciondeEspecialidades.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-            
-               <div class="title-docs">Lineamientos para la Operación de Cursos de Verano.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamientos para la Operación de Cursos de Verano.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaOperacióndeCursosdeVerano.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-           
-            
-            
-            
-               <div class="title-docs">Lineamiento para la Operación del Programa de Tutoría.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Operación del Programa de Tutoría.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaOperacióndelProgramadeTutoría.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-            
-            
-               <div class="title-docs">Lineamiento para la Operación y Acreditación de las Residencias Profesionales .</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Operación y Acreditación de las Residencias Profesionales .</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaOperaciónyAcreditacióndelaResidenciaProfesional.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-            
-            
-            
-            
-               <div class="title-docs">Lineamiento para la Operación y Acreditación del Servicio Social.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Lineamiento para la Operación y Acreditación del Servicio Social.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaOperaciónyAcreditacióndelServicioSocial.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-           
-            
-            
-            <div class="title-docs"> Lineamiento para la Titulación Integral .</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande"> Lineamiento para la Titulación Integral.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/LineamientoparalaTitulacionIntegral.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
-            
-            
-            
-          
-            
-            <hr>
-           
+
+             </div>
+
+                <div class="container-fluid">
+        
+
               
-            <div class="title-docs">Manual de apertura cancelación.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande"> Manual de apertura cancelación.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/Manualdeaperturacancelacion.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
-          
-                </tbody>
-            </table>
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Cuaderno de trabajo de Tutorías del estudiante.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/CUADERNODETRABAJODETUTORIADELESTUDIANTE.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
             
             
             
           
             
-            <hr>
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamentos de Investigación educativa.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientodeInvestigacionEducativaV1.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
             
-                
-            <div class="title-docs">Manual del Tutor.</div>
-            <table class="table table-docs">
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td width="80%" class="grande">Manual del Tutor.</td>
-                        <td class="media">Descargar</td>
-                        <td><a href="../media/departamentos/sistema_de_gestion/normativos_planes2010/Manualdeltutor.pdf" target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i></a></td>
-                    </tr>
+            
           
-                </tbody>
-            </table>           
-            <hr>
-			</article>
-			<!-- /Article -->
+            
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para el traslado Estudiantil.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparaelTrasladoEstudiantil.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">         
+            
+          
+            
+        
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Convalidación de Estudios.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaConvalidaciondeEstudios.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">          
+            
+            
+          
+            
+          
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamientos para la Integración y Operación de Academias.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaIntegracinyOperacindeAcademias.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">         
+            
+            
+          
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Movilidad Estudiantil .</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaMovilidadEstudiantil.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">      
+            
+            
+          
+      
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Operación del Comité Académico.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaOperacindelComitAcadmico.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
+            
+          
+            
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Resolución de Equivalencia de Estudios.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaResolucindeEquivalenciadeEstudios.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">        
+            
+            
+          
+            
+       
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamientos de Educación a Distancia.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientodeEducaciónaDistancia.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
+            
+          
+            
+        
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamientos para la Evaluación y Acreditación de Asignaturas.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaEvaluaciónyAcreditacióndeAsignaturas.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">        
+            
+          
+        
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamientos para la Integración de Especialidades.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaIntegraciondeEspecialidades.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">      
+            
+            
+          
+            
+        
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamientos para la Operación de Cursos de Verano.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaOperacióndeCursosdeVerano.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
+            
+            
+          
+       
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Operación del Programa de Tutoría.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaOperacióndelProgramadeTutoría.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
+            
+          
+        
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Operación y Acreditación de las Residencias Profesionales .</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaOperaciónyAcreditacióndelaResidenciaProfesional.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">      
+            
+          
+            
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Lineamiento para la Operación y Acreditación del Servicio Social.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaOperaciónyAcreditacióndelServicioSocial.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
+          
+        
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5> Lineamiento para la Titulación Integral.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/LineamientoparalaTitulacionIntegral.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">     
+            
+          
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5> Manual de apertura cancelación.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/Manualdeaperturacancelacion.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">      
+          
+            
+         
+                        <div class="row">
+                    <div class="col-sm-8">
+                        <h5>Manual del Tutor.</h5>  
+                    </div>
+                  
+                        <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/lineaminetos/plan2010/Manualdeltutor.pdf')}}" data-toogle="tooltip" title="acreditación."  target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                    </div>
+               <hr class="red">       
+           
+        </div>
+		
 @endsection
