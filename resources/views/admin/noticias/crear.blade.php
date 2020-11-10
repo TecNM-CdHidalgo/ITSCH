@@ -21,7 +21,7 @@
         <div class="progress-bar progress-bar-striped progress-bar-animated" id="mds-progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
     </div>
     <div class="alert alert-info">
-        <strong>Nota!</strong> La imágenes que se desean poner dentro del carrusel deben de tener al menos 1200 PX de ancho y el alto debe ser de 400 PX.
+        <strong>Nota!</strong> Las imágenes que se desean poner dentro del carrusel deben de tener al menos 1200 PX de ancho y el alto debe ser de 400 PX.
     </div>
     <form action="#" method="POST" id="submitForm" enctype="multipart/form-data">
         @csrf
