@@ -88,10 +88,6 @@ Route::get('calidad/reglamento_int',function(){return view('content.calidad.regl
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 Route::get('servicios_escolares/servicios',function(){return view('content.servicios_escolares.servicios');})->name('servicios_escolares.servicios');
-Route::get('servicios_escolares/alumnos-egreso',function(){return view('content.servicios_escolares.alumnos-egreso');})->name('servicios_escolares.alumnos-egreso');
-Route::get('servicios_escolares/inscripcion-reinscripcion',function(){return view('content.servicios_escolares.inscripcion-reinscripcion');})->name('servicios_escolares.inscripcion-reinscripcion');
-
-
 
 
 

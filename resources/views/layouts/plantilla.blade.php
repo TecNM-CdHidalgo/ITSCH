@@ -90,13 +90,8 @@
             <ul class="submenu dropdown-menu">
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
-              </li>
-              <li>
-                 <a class="text-black dropdown-item"  href="{{route('servicios_escolares.inscripcion-reinscripcion')}}">Inscripción/Reinscripción</a>
-              </li>
-              <li>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-egreso')}}">Próximos a Egresar</a>
-              </li>
+              </li>              
+             
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
               </li>
@@ -106,16 +101,18 @@
 
            </ul>
           </li>
-          <a class="   dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
-          <a class="   dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
-          <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/alumnos/prorrogas">Prorrogas</a>
-          <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/Caracterizacion/alumno/index.php">Encuestas Aspirantes</a>
-          <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/evalua_tutor/index.php">Evaluación al tutor</a>
-          <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>
-          <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/encuestasitsch/index.php">Encuesta de servicio</a>
-          <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8082/ServicioSocial/ServicioSocialAlumnos/index.php">Servicio Social</a>
+          <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
+          <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
+          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/alumnos/prorrogas">Prorrogas</a>
+          
+          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/evalua_tutor/index.php">Evaluación al tutor</a>
+          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>
+          <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/encuestasitsch/index.php">Encuesta de servicio</a>
+          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8888/sed/">Evaluación docente</a>
+          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8082/ServicioSocial/ServicioSocialAlumnos/index.php">Servicio Social</a>
           <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
-          <a class="   dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
+          <a class="dropdown-item"  href="https://eventos.cdhidalgo.tecnm.mx/#!/constancia">Congreso 2019</a>
+          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
         </ul>
       </li>
 
@@ -130,18 +127,7 @@
                 <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
         </div>
 
-      </li>
-
-
-      <li class="nav-item dropdown  ml-auto">
-        <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
-          Egresados/Empleadores
-        </a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSf6vB2zpwjLKVX4GdQnrpHLiLQWzcKo3u6J0v_DOYEgryZMig/viewform">Seguimiento a egresados</a>
-            <a class="dropdown-item" href="">Encuesta de Empleadores</a>
-        </div>
-      </li>
+      </li>     
 
 
       <li class="nav-item dropdown  ml-auto">
@@ -181,10 +167,19 @@
             <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
             <a class="dropdown-item" href="{{route('calidad.organizacional')}}">Manual de organización</a>
             <a class="dropdown-item" href="{{route('calidad.procedimientos')}}">Manual de procedimientos</a>
-            <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
-            <a class="dropdown-item" href="https://cdhidalgo.tecnm.mx/planeacion/proexoe">ProExOE</a>
-            <a class="dropdown-item" href="#"> Indicadores  </a>
+            <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>             
           </ul>
+      </li>
+
+
+       <li class="nav-item dropdown  ml-auto">
+        <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
+          Egresados/Empleadores
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSf6vB2zpwjLKVX4GdQnrpHLiLQWzcKo3u6J0v_DOYEgryZMig/viewform">Seguimiento a egresados</a>
+            <a class="dropdown-item" href="">Encuesta de Empleadores</a>
+        </div>
       </li>
 
 
