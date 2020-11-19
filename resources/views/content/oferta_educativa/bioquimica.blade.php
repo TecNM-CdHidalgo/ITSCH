@@ -1045,8 +1045,7 @@
 
 
 
-        {{--Modals de información de los miembros de la academia--}}
-
+     
         <div class="modal fade mod" id="exampleModal">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
