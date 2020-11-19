@@ -4,11 +4,6 @@
 
 @section('content')<div class="container">
 
-		<ol class="breadcrumb">
-			        <a href="../index">Inicio</a>
-            <li class="active">Normativos y lineamientos
-			<li class="active"> PIID 2013-2018
-		</ol>
 
 		<div class="row">
 
