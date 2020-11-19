@@ -10,7 +10,7 @@
 		</header>        
         <p align="center" style="margin:30px auto 35px auto"><img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}"></p>               
         <hr class="red">               
-		<h3>1.&nbsp;&nbsp;&nbsp; MTRO. Javier Irepan Hacha Director General </h3>
+		<h3>1.&nbsp;&nbsp;&nbsp; MTRA. Paloma Elizabeth Martínez Palomarez</h3>
 		<p>&nbsp;
 			</p>
 		<h4 style="margin-left: 49.65pt;">
@@ -51,7 +51,7 @@
 		<p style="margin-left:92.15pt;">
 			d.&nbsp;&nbsp;&nbsp;MC. Lizeth Yazmin Soria Leal  Jefa de la Divisi&oacute;n de Ingenier&iacute;a Bioqu&iacute;mica</p>
 		<p style="margin-left:92.15pt;">
-			e.&nbsp;&nbsp;&nbsp;ISC. Juan Carlos Madrigal Perez. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n y Comunicaciones</p>
+			e.&nbsp;&nbsp;&nbsp;ISC.Armando L&oacute;pez Hern&aacute;ndez  . Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n y Comunicaciones</p>
 		<p style="margin-left:92.15pt;">
 			f.&nbsp;&nbsp;&nbsp;C.P. Nancy Pérez Reyes. Jefa de la Divisi&oacute;n de Ingenier&iacute;a en Gesti&oacute;n Empresarial</p>
 		<p style="margin-left:92.15pt;">
@@ -79,6 +79,21 @@
 		<h3 class="text-center" style="margin-top:60px;">DOCENTES</h3>
 		<hr />
 
+		<h4 class="text-center"><strong><span>DIV. DE ING. EN SIST. COMP.</span></strong></h4>
+		<p align="center">SOLORZANO SOLORZANO ARMANDO</p>
+		<p align="center">CESAR EDUARDO MORA HERN&Aacute;NDEZ</p>
+		<p align="center">JOSE IRAIC ALCÁNTAR ALCÁNTAR</p>
+		<p align="center">P&Eacute;REZ MAR&Iacute;N HORACIO</p>
+		<p align="center">JUAN CARLOS MADRIGAL P&Eacute;REZ</p>
+		<p align="center">RAMIREZ VARGAS ERIK AUGUSTO</p>
+		<p align="center">ESCOBAR MENDOZA ERIC</p>
+		<p align="center">CHAVEZ MARCIAL MARIELA</p>
+		<p align="center">ARREOLA MAR&Iacute;N MAR&Iacute;A ESMERALDA</p>
+			
+		<p align="center">&nbsp;
+			</p>
+		<p align="center">
+
 		<h4 class="text-center"><span><strong>DIV. DE ING. BIOQU&Iacute;MICA</strong></span></h4>
 		<p align="center">P&Eacute;REZ P&Eacute;REZ RUB&Eacute;N</p>
 		<p align="center">BARTOLO GUZM&Aacute;N CINTHIA YANELI</p>
@@ -100,23 +115,7 @@
 		<p align="center">ESTEBAN GARCÍA RAMÍREZ</p>
 		<p align="center">SUSANA REYES VÁZQUEZ</p>   
 		<p align="center">BLANCA ESTELA URBINA ROSAS</p> 
-		<br><br>
-
-
-		<h4 class="text-center"><strong><span>DIV. DE ING. EN SIST. COMP.</span></strong></h4>
-		<p align="center">SOLORZANO SOLORZANO ARMANDO</p>
-		<p align="center">SAMUEL EFRÉN VIÑAS ÁLVAREZ</p>
-		<p align="center">JOSE IRAIC ALCÁNTAR ALCÁNTAR</p>
-		<p align="center">P&Eacute;REZ MAR&Iacute;N HORACIO</p>
-		<p align="center">L&Oacute;PEZ HERN&Aacute;NDEZ ARMANDO</p>
-		<p align="center">RAMIREZ VARGAS ERIK AUGUSTO</p>
-		<p align="center">ESCOBAR MENDOZA ERIC</p>
-		<p align="center">CHAVEZ MARCIAL MARIELA</p>
-		<p align="center">ARREOLA MARÍN MARÍA ESMERALDA</p>
-			
-		<p align="center">&nbsp;
-			</p>
-		<p align="center">
+		<br><br>	
 
 
 		<h4 class="text-center"><strong><span>DIV. DE ING. EN TIC&acute;S</span></strong></h4>

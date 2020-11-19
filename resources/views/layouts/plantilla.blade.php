@@ -109,7 +109,7 @@
           <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>
           <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/encuestasitsch/index.php">Encuesta de servicio</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8888/sed/">Evaluación docente</a>
-          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8082/ServicioSocial/ServicioSocialAlumnos/index.php">Servicio Social</a>
+          <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
           <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
           <a class="dropdown-item"  href="https://eventos.cdhidalgo.tecnm.mx/#!/constancia">Congreso 2019</a>
           <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
