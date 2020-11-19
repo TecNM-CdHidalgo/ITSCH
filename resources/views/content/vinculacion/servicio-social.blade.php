@@ -131,71 +131,7 @@
     	</li>
     	<li>
     		Los documentos se entregarán en un folder tamaño carta color beige y en la pestaña deberá de llevar su nombre, periodo y carrera.
-    	</li>
-    	<li>
-    		Entregar documentación final.
-    	</li>
-    	<li>
-    		Los documentos que deberán entregar son:
-    		<table class="table">
-    			<body>
-    				<tr>
-    					<td>Informes bimestrales (3)</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME BIMESTRAL (5).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Informe global</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME GLOBAL (6).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Evaluación de la unidad receptora</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LA UNIDAD RECEPTORA (7).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Reporte bimestral (3)</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/REPORTE BIMESTRAL (8).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Evaluación Cualitativa del prestador de servicio (3)</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO SOCIAL (9).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Evaluación de las actividades por el prestador de servicio (3)</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LAS ACTIVIDADES POR EL PRESTADOR DE SERVICIO SOCIAL (10).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Autoevaluación cualitativa del prestador de servicio (3)</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/AUTOEVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO (11).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Carta de terminación</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/CARTA DE TERMINACION (12).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td>Carta de liberación</td>
-    					<td>
-    						<a download href="{{ asset('documents/content/vinculacion/servicio social/EJEMPLO DE CARTA DE LIBERACION (13).doc') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    					</td>
-    				</tr>
-    			</body>
-    		</table>
-    	</li>
+    	</li>   	
     	<li>
     		El prestante podrá solicitar su baja temporal o definitiva del programa en que está participando, quedando a criterio del ENCARGADO DEL AREA en el que se haya realizado la actividad, si se le computa, o no el tiempo acumulado.
     	</li>
@@ -211,16 +147,7 @@
     		Entregar en la fecha indicada todos los formatos para poder acreditarles la MATERIA DE SERVICIO SOCIAL.
     	</li>    	
     </ol>
-    <hr> 
-    <h4> 
-    	<strong>
-    	¡¡¡ ATENCIÓN ALUMNOS !!!
-    	</strong>
-    </h4>
-    <p>
-    	RECUERDA QUE SI NO TIENES TU REGISTRO DE SERVICIO SOCIAL, NO LO REALIZAS, NO TENDRAS TU CARTA DE LIBERACIÓN DEL SERVICIO Y  NO PODRÁS SOLICITAR TU RESIDENCIA PROFESIONAL NI EGRESAR DE LA INSTITUCIÓN.
-    </p>
-    <hr>
+     <hr>
     <h4> 
     	<strong>
     	INICIO DE PROCESO DE SERVICIO SOCIAL
@@ -230,9 +157,20 @@
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvVXD85_cpAk0LCJyCqLgycX5cRhsmPS8tE9xFIj3q8nAhCA/viewform?usp=sf_link">Proceso de solicitud de servicio social</a>
     <hr>
 
+    <table class="table">
+    	<body>
+    		<tr>
+    			<td>Guía para registro de programa</td>
+    			<td>
+    				<a download href="{{ asset('documents/content/vinculacion/servicio social/GUIA PARA REGISTRO DE PROGRAMA (14).docx') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+    			</td>
+    		</tr>
+    	</body>
+    </table>
+    <hr>
     <h4> 
     	<strong>
-    	FORMATOS SOLO PARA ALUMNOS QUE INICIAN SU SERVICIO SOCIAL
+    	FORMATOS PARA ALUMNOS QUE INICIAN SU SERVICIO SOCIAL
     	</strong>
     </h4>
     <table class="table">
@@ -260,68 +198,86 @@
     			<td>
     				<a download href="{{ asset('documents/content/vinculacion/servicio social/EJEMPLO DE CARTA DE ACEPTACION (4).doc') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
     			</td>
-    		</tr>
-    		<tr>
-    			<td>Informes bimestrales (3)</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME BIMESTRAL (5).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Informe global</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME GLOBAL (6).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Evaluación de la unidad receptora</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LA UNIDAD RECEPTORA (7).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Reporte bimestral (3)</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/REPORTE BIMESTRAL (8).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Evaluación Cualitativa del prestador de servicio (3)</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO SOCIAL (9).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Evaluación de las actividades por el prestador de servicio (3)</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LAS ACTIVIDADES POR EL PRESTADOR DE SERVICIO SOCIAL (10).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Autoevaluación cualitativa del prestador de servicio (3)</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/AUTOEVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO (11).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Carta de terminación</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/CARTA DE TERMINACION (12).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Carta de liberación</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/EJEMPLO DE CARTA DE LIBERACION (13).doc') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Guía para registro de programa</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/GUIA PARA REGISTRO DE PROGRAMA (14).docx') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
+    		</tr>    		
     	</body>
     </table>
+
+    <hr>
+   
+	<h4> 
+    	<strong>
+    	FORMATOS PARA ALUMNOS QUE TERMINAN SU SERVICIO SOCIAL
+    	</strong>
+    </h4>   	
+
+	
+	<table class="table">
+		<body>
+			<tr>
+				<td>3 Informes bimestrales (Estado)</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME BIMESTRAL (5).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>Informe global</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME GLOBAL (6).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>Evaluación de la unidad receptora</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LA UNIDAD RECEPTORA (7).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>3 Reportes bimestrales (ITSCH)</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/REPORTE BIMESTRAL (8).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>3 Evaluaciones cualitativa del prestador de servicio</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO SOCIAL (9).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>3 Evaluaciones de las actividades por el prestador de servicio</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LAS ACTIVIDADES POR EL PRESTADOR DE SERVICIO SOCIAL (10).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>3 Autoevaluaciones cualitativa del prestador de servicio</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/AUTOEVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO (11).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>Carta de terminación</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/CARTA DE TERMINACION (12).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+			<tr>
+				<td>Carta de liberación</td>
+				<td>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/EJEMPLO DE CARTA DE LIBERACION (13).doc') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+				</td>
+			</tr>
+		</body>
+	</table>
+    <hr> 
+    <h4> 
+    	<strong>
+    	¡¡¡ ATENCIÓN ALUMNOS !!!
+    	</strong>
+    </h4>
+    <p>
+    	RECUERDA QUE SI NO TIENES TU REGISTRO DE SERVICIO SOCIAL, NO LO REALIZAS, NO TENDRAS TU CARTA DE LIBERACIÓN DEL SERVICIO Y  NO PODRÁS SOLICITAR TU RESIDENCIA PROFESIONAL NI EGRESAR DE LA INSTITUCIÓN.
+    </p>
+   
     <hr>
 @endsection
