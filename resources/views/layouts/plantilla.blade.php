@@ -106,9 +106,9 @@
           <a class="dropdown-item"  href="{{route('alumnos.prorrogas')}}">Prorrogas</a>
 
           
-          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/evalua_tutor/index.php">Evaluación al tutor</a>
+          <a class="dropdown-item"  href="{{route('alumnos.evaluatutor')}}">Evaluación al tutor</a>
           <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>
-          <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/encuestasitsch/index.php">Encuesta de servicio</a>
+          <a class="dropdown-item"  href="{{route('alumnos.encuestasservicio')}}">Encuesta de servicio</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8888/sed/">Evaluación docente</a>
           <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
           <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
@@ -179,7 +179,7 @@
         </a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSf6vB2zpwjLKVX4GdQnrpHLiLQWzcKo3u6J0v_DOYEgryZMig/viewform">Seguimiento a egresados</a>
-            <a class="dropdown-item" href="">Encuesta de Empleadores</a>
+            <a class="dropdown-item" href="{{route('alumnos.empleadores')}}">Encuesta de Empleadores</a>
         </div>
       </li>
 
