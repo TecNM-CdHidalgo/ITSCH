@@ -103,7 +103,8 @@
           </li>
           <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
           <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
-          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/alumnos/prorrogas">Prorrogas</a>
+          <a class="dropdown-item"  href="{{route('alumnos.prorrogas')}}">Prorrogas</a>
+
           
           <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx/apps/evalua_tutor/index.php">Evaluación al tutor</a>
           <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>

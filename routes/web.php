@@ -89,6 +89,9 @@ Route::get('servicios_escolares/titulos_cedulas',function(){return view('content
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 Route::get('servicios_escolares/servicios',function(){return view('content.servicios_escolares.servicios');})->name('servicios_escolares.servicios');
 
+//Alumnos Prorrogas
+Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas');})->name('alumnos.prorrogas');
+
 
 
 //Normativos y lineamientos
