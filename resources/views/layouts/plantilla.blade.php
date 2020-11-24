@@ -90,8 +90,8 @@
             <ul class="submenu dropdown-menu">
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
-              </li>              
-             
+              </li>
+
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
               </li>
@@ -105,10 +105,10 @@
           <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
           <a class="dropdown-item"  href="{{route('alumnos.prorrogas')}}">Prorrogas</a>
 
-          
+
           <a class="dropdown-item"  href="{{route('alumnos.evaluatutor')}}">Evaluación al tutor</a>
-          <a class="dropdown-item" href="http://www.cdhidalgo.tecnm.mx:8081/">Créditos</a>
-          <a class="dropdown-item"  href="{{route('alumnos.encuestasservicio')}}">Encuesta de servicio</a>
+          <a class="dropdown-item" href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
+          <a class="dropdown-item"  href="https://encuestas.cdhidalgo.tecnm.mx">Encuestas de servicios</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8888/sed/">Evaluación docente</a>
           <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
           <a class="   dropdown-item"  href="http://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
@@ -128,7 +128,7 @@
                 <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
         </div>
 
-      </li>     
+      </li>
 
 
       <li class="nav-item dropdown  ml-auto">
@@ -168,7 +168,7 @@
             <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
             <a class="dropdown-item" href="{{route('calidad.organizacional')}}">Manual de organización</a>
             <a class="dropdown-item" href="{{route('calidad.procedimientos')}}">Manual de procedimientos</a>
-            <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>             
+            <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
           </ul>
       </li>
 
