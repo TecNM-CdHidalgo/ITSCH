@@ -106,7 +106,7 @@
           <a class="dropdown-item"  href="{{route('alumnos.prorrogas')}}">Prorrogas</a>
 
 
-          <a class="dropdown-item"  href="{{route('alumnos.evaluatutor')}}">Evaluación al tutor</a>
+          <a class="dropdown-item"  href="https://tutorias.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
           <a class="dropdown-item" href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
           <a class="dropdown-item"  href="https://encuestas.cdhidalgo.tecnm.mx">Encuestas de servicios</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8888/sed/">Evaluación docente</a>
