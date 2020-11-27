@@ -95,6 +95,7 @@ Route::get('alumnos/eventos',function(){return view('content.alumnos.eventos');}
 Route::get('alumnos/empleadores',function(){return view('content.alumnos.empleadores');})->name('alumnos.empleadores');
 Route::get('alumnos/encuestasservicio',function(){return view('content.alumnos.encuestasservicio');})->name('alumnos.encuestasservicio');
 Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluatutor');})->name('alumnos.evaluatutor');
+Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 
 
 
