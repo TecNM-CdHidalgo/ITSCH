@@ -4,12 +4,20 @@
 
 @section('content')
 
+<div class="container">
 
- <div class="container-fluid">
-     <div class="row">
-        <div class="container">
-                                       
-	            <h2 class="page-title">Evaluación Docente 2020</h2>
+    <br>
+<br>
+<h2 class="page-title">Evaluación Docente 2020</h2>
+
+    <iframe class="responsive-iframe" src="https://cdhidalgo.tecnm.mx:8888/sed/index.php"></iframe>
+ 
+
+
+
+
+
+
 		
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -3025,48 +3033,13 @@
    
 
 
-        </div>
-    
-  
-    <hr class="red">
-  
-    
       
-
-<div class="container-fluid">
-
-    <!-- Módulo de carga de calificaciones de alumnos -->
-    <iframe onload="iFrameHeight()"	id="blockrandom"
-       name="iframe"
-    src="https://cdhidalgo.tecnm.mx:8888/sed/index.php"
-    width="100%"
-    height="700"
-    scrolling="auto"
-    frameborder="0"
-    class="wrapper">
-    Esta opción no funcionará correctamente. Lamentablemente, su navegador no soporta URLs embebidas.</iframe>
-     
-    <script type="text/javascript">
-        function iFrameHeight() {
-            var h = 0;
-            if (!document.all) {
-                h = document.getElementById('blockrandom').contentDocument.height;
-                document.getElementById('blockrandom').style.height = h + 60 + 'px';
-            } else if (document.all) {
-                h = document.frames('blockrandom').document.body.scrollHeight;
-                document.all.blockrandom.style.height = h + 20 + 'px';
-            }
-        }
-    </script>
-    <!-- Termina módulo de calificaciones de alumnos -->
-</div>                
-    <hr>    <hr class="red">
-</div>
-
-
-
+    
+  
     <hr class="red">
 </div>
+    <hr class="red">
+
 
 <br>
 <br>
