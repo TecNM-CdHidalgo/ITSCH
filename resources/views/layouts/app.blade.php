@@ -23,7 +23,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="author" content="TecNM">
         <meta name="description" content="Página del Tecnológico Nacional de México/Campus Ciudad Hidalgo Michoacán">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
         <title>TECNM/CDHIDALGO</title>
 
         <!-- Scripts -->
