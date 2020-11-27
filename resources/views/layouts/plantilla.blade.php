@@ -128,7 +128,7 @@
 
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
                 <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
-                <a class="dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx">Encuesta de clima laboral</a>
+                <a class="dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
         </div>
 
       </li>
