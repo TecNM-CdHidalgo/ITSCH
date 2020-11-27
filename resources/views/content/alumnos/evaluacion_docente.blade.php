@@ -9,11 +9,13 @@
     <br>
 <br>
 <h2 class="page-title">Evaluación Docente 2020</h2>
-
-    <iframe class="responsive-iframe" src="https://cdhidalgo.tecnm.mx:8888/sed/index.php"></iframe>
+<iframe src="https://cdhidalgo.tecnm.mx:8888/sed/index.php"
+        allow="http://cdhidalgo.tecnm.mx:8888/sed/index.php"></iframe>
+    <iframe class="responsive-iframe" src="https://www.google.com/search?q=%https://www.cdhidalgo.tecnm.mx:8888/sed/index.php&btnI=Im+Feeling+Lucky
+    "></iframe>
  
 
-
+    
 
 
 
