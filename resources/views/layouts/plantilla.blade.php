@@ -109,12 +109,12 @@
           <a class="dropdown-item"  href="https://tutorias.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
           <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
           <a class="dropdown-item"  href="https://encuestas.cdhidalgo.tecnm.mx">Encuestas de servicios</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8888/sed/">Evaluación docente</a>
+          <a class="dropdown-item"  href="{{route('alumnos.evaluacion_docente')}}">Evaluacion Docente 2020</a>
+
           <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
           <a class="dropdown-item"  href="{{route('alumnos.eventos')}}">Sistema de eventos</a>
           <a class="dropdown-item"  href="https://eventos.cdhidalgo.tecnm.mx/#!/constancia">Congreso 2019</a>
           <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
-          <a class="dropdown-item"  href="{{route('alumnos.evaluacion_docente')}}">Evaluacion Docente 2020</a>
 
         </ul>
       </li>
