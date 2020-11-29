@@ -4,7 +4,7 @@
 
  <div class="container">
   
-  <h2 class="page-title">Evaluación  Docente agosto - diciembre 2020</h2>
+  <h2 class="page-title">Evaluación Docente agosto - diciembre 2020</h2>
   <hr class="red">
   
 
@@ -3024,15 +3024,20 @@
 </p>
    
 
-<h2 class="page-title">Accede al sistema</h2>
+<h2 class="page-title">  Accede al sistema
+</h2>
 <hr class="red">
 
-<p>Para realizar tu evaluación ingresa al sistema con tu numero de control y contraseña proporcionada.</p>
+<p>
+
+  Para realizar tu evaluación ingresa al sistema con tu número de control y contraseña proporcionada.</p>
 
    <div class="embed-responsive embed-responsive-16by9" >
        
-    <iframe  class="embed-responsive-item" src="https://cdhidalgo.tecnm.mx:8888/sed/" ></iframe>
+    <iframe  allow class="embed-responsive-item" src="https://cdhidalgo.tecnm.mx:8888/sed/index.php" ></iframe>
   </div>
   </div>
 
 @endsection
+
+
