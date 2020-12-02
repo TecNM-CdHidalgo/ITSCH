@@ -8,7 +8,7 @@
         <div class="card-body  text-center py-5 px-5 my-5 ">
 
           <h3 class="mb-4">
-            <strong>POLITICA DE IGUALDAD LABOARAL Y NO DISCRIMINACIÓN DEL 
+            <strong>POLITICA DE IGUALDAD LABORAL Y NO DISCRIMINACIÓN DEL 
               TECNOLÓGICO NACIONAL DE MÉXICO
               </strong>
           </h3>
