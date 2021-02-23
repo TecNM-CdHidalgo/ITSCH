@@ -134,13 +134,13 @@ Auth::routes();
 Route::get('/carousel/{image_name}', function($image_name)
 {
 	//Obtenemos la anchura de la pantalla
-	$ancho = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))->width();
-	$posX=((1600-$ancho)/2);
-	Image::configure(array('driver' => 'gd'));
-    $img = Image::canvas(1600, 400, '#000')
-    ->insert(storage_path('app/public/noticias/imagenes/'.$image_name),'top-left',$posX,0);
-    return $img->response('jpg');
-
+	$img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
+	// resize the image to a height of 200 and constrain aspect ratio (auto width)
+	$img->resize(null,400 , function ($constraint) {
+    $constraint->aspectRatio();
+	});
+	return $img->response('jpg');
+    
 })->name('carousel');
 
 //Ruta para imagenes de las noticias

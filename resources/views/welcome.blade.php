@@ -20,26 +20,25 @@
 				@endif
 			@endforeach
 		</ul>
-		<div class="carousel-inner">
+		<div class="carousel-inner" style="background-color: black;">
 			@php
 				$ban=true;
 			@endphp
 			@foreach($noticias as $not)
 				@if($not->resaltar==1)
 					@if($ban)
-						<div class="carousel-item active">
-							<a href="{{route('ver',$not->id)}}">
-							    <!--<img src="{{ asset( '/storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" width="100%" height="400px">-->
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%"  height="50%">							    
+						<div class="carousel-item active text-center" style="background-color: black;">
+							<a href="{{route('ver',$not->id)}}">							  
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">							    
 						    </a>
 						</div>
 						@php
 				    		$ban=false;
 				    	@endphp
 					@else
-						<div class="carousel-item">
+						<div class="carousel-item text-center" style="background-color: black;">
 						     <a href="{{route('ver',$not->id)}}">							   
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" width="100%"  height="50%">							   
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">							   
 						    </a>
 						</div>
 					@endif
@@ -66,8 +65,8 @@
 		    <div class="row">
 		    	<div class="col-xl-5">
 		    		<a href="{{route('ver',$not2->id)}}">
-						<img loading='lazy' width="100%" style="max-height: 200px; min-height: 180px;"  src="{{ asset( '/storage/noticias/imagenes/'.$not2->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='img-fluid rounded imgNotices'/>
-						{{--<img src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}}" loading="lazy" width="85%" title="{{$not->titulo}}" >--}}
+						<img loading='lazy'  height="100%"  src="{{ asset( '/storage/noticias/imagenes/'.$not2->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='rounded imgNotices'/>
+						
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
