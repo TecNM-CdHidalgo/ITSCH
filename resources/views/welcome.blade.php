@@ -28,8 +28,8 @@
 				@if($not->resaltar==1)
 					@if($ban)
 						<div class="carousel-item active text-center" style="background-color: black;">
-							<a href="{{route('ver',$not->id)}}">							  
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">							    
+							<a href="{{route('ver',$not->id)}}">
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
 						    </a>
 						</div>
 						@php
@@ -37,8 +37,8 @@
 				    	@endphp
 					@else
 						<div class="carousel-item text-center" style="background-color: black;">
-						     <a href="{{route('ver',$not->id)}}">							   
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">							   
+						     <a href="{{route('ver',$not->id)}}">
+							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
 						    </a>
 						</div>
 					@endif
@@ -52,7 +52,7 @@
 		    <span class="carousel-control-next-icon"></span>
 		</a>
 	</div>
-@endsection	
+@endsection
 
 @section('content')
 	{{--Contenido de noticias--}}
@@ -65,15 +65,14 @@
 		    <div class="row">
 		    	<div class="col-xl-5">
 		    		<a href="{{route('ver',$not2->id)}}">
-						<img loading='lazy'  height="100%"  src="{{ asset( '/storage/noticias/imagenes/'.$not2->imagen) }}" alt='notice 1' title='{{$not->titulo}}' class='rounded imgNotices'/>
-						
+						<img  height="100%" src="{{ route('carousel',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
-		    	<div class="col-xl-7 regContent">		    		
+		    	<div class="col-xl-7 regContent">
 		    		@php
-		    			
-		    			$tam=strlen($not2->contenido);		    			
+
+		    			$tam=strlen($not2->contenido);
 		    			if($tam<2800)
 		    			{
 		    				echo $not2->contenido;
@@ -91,19 +90,19 @@
 		    				//Buscar parrafor abiertos para cerrarlos
 		    				$p=substr_count($not2->contenido,"<p",0,$ncar);
 		    				$pfin=substr_count($not2->contenido,"</p>",0,$ncar);
-		    				$totP=$p-$pfin;		    				
+		    				$totP=$p-$pfin;
 		    				for($y=0;$y<$totP;$y++) //Ponemos los p que faltan por cerrar
 		    				{
 		    					echo "</p>";
 		    				}
 
 		    				//Buscar comillas abiertos para cerrarlos
-		    				$com=substr_count($not2->contenido,'"',0,$ncar);		    				
-		    				$totCom=$com%2;		    				
+		    				$com=substr_count($not2->contenido,'"',0,$ncar);
+		    				$totCom=$com%2;
 		    				for($y=0;$y<$totCom;$y++) //Ponemos los "" que faltan por cerrar
 		    				{
 		    					echo '"';
-		    				}	
+		    				}
 
 		    				echo "<br>";
 
@@ -112,18 +111,18 @@
 		    				//Buscar div para cerrarlos al final
 		    				$divs=substr_count($not2->contenido,"<div",0,$ncar);
 		    				$divsFin=substr_count($not2->contenido,"</div>",0,$ncar);
-		    				$totDiv=$divs-$divsFin;		    				
+		    				$totDiv=$divs-$divsFin;
 		    				for($y=0;$y<$totDiv;$y++) //Ponemos los divs que faltan por cerrar
 		    				{
 		    					echo "</div>";
-		    				}		    				
-		    			}	                
+		    				}
+		    			}
 		            @endphp
 
 		    	</div>
 		    </div>
 		    <div class="row">
-		    	<div class="col-sm-3">		    		
+		    	<div class="col-sm-3">
 		    		@if($not2->arch_adj)
 			    		<a href="{{route('ver',$not2->id)}}">
 			    			Archivos adjuntos.....
@@ -150,14 +149,14 @@
 			{{--Twiter--}}
 			<div class="col-sm-4">
 				<h4>Twitter</h4>
-				<a class="twitter-timeline" 
-				style="margin-top:15px;" 
+				<a class="twitter-timeline"
+				style="margin-top:15px;"
 				data-lang="es"
-				data-width="350" 
+				data-width="350"
 				data-height="525"
 				data-dnt="true"
-				data-link-color="#504099" 
-				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by ITSCH</a> 
+				data-link-color="#504099"
+				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by ITSCH</a>
 				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			{{--Youtube--}}
@@ -170,7 +169,7 @@
 				<h4>Facebook</h4>
 				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTecNM.campus.Ciudad.Hidalgo%2F&tabs=timeline%2Cevents%2Cmessages&width=350&height=530&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="530" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 			</div>
-		</div>      
+		</div>
     </div>
 
 	<div class="info">
@@ -208,7 +207,7 @@
 		</div>
 
 
-       
+
 	    <div>
 	        <div>
 	            <div>
@@ -225,12 +224,12 @@
 	               <img src="{{asset('images/tec.jpg')}}" alt="Nuestro Tec" width="50%" height="90%">
 	            </div>
 	        </div>
-	        <div>                
-                <hr>        
+	        <div>
+                <hr>
                 <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
                 <br>
                 <p><small><b>Última actualización: 23/09/2020</b></small></p>
-                <br>                         
+                <br>
 	        </div>
 	    </div>
     </div>

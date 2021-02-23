@@ -4,7 +4,7 @@
     Noticias | Vista Previa
 @endsection
 @section('contenido')
-    <div style="max-width: 90%; margin:auto;">
+    <div style="max-width: 100%; margin:auto;">
         @php
             function convertDate($date){
                 $days = ['','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
@@ -28,7 +28,7 @@
         @endif
         <br>
         <div style=" max-height:{{ $max_height }}; max-width:100%;">
-            <img src="{{ asset( '/storage/noticias/imagenes/'.$articulo->imagen) }}" alt="" style="display:block; max-width:100%; max-height:{{ $max_height }}; width:auto; height:auto; margin:auto;">
+            <img src="{{ asset( '/storage/noticias/imagenes/'.$articulo->imagen) }}" alt="" style="display:block; max-width:100%; max-height:{{ $max_height }}">
         </div>
         <br>
         <div>

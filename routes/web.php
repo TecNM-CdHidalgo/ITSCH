@@ -89,7 +89,7 @@ Route::get('servicios_escolares/titulos_cedulas',function(){return view('content
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 Route::get('servicios_escolares/servicios',function(){return view('content.servicios_escolares.servicios');})->name('servicios_escolares.servicios');
 
-//Alumnos 
+//Alumnos
 Route::get('alumnos/eventos',function(){return view('content.alumnos.eventos');})->name('alumnos.eventos');
 Route::get('alumnos/empleadores',function(){return view('content.alumnos.empleadores');})->name('alumnos.empleadores');
 Route::get('alumnos/encuestasservicio',function(){return view('content.alumnos.encuestasservicio');})->name('alumnos.encuestasservicio');
@@ -133,14 +133,14 @@ Auth::routes();
 //Ruta para imagenes del carousel
 Route::get('/carousel/{image_name}', function($image_name)
 {
-	//Obtenemos la anchura de la pantalla
+	//Obtenemos imagen
 	$img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
 	// resize the image to a height of 200 and constrain aspect ratio (auto width)
 	$img->resize(null,400 , function ($constraint) {
     $constraint->aspectRatio();
 	});
 	return $img->response('jpg');
-    
+
 })->name('carousel');
 
 //Ruta para imagenes de las noticias
