@@ -112,7 +112,7 @@
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
           <a class="dropdown-item"  href="https://eventos.cdhidalgo.tecnm.mx/#!/constancia">Congreso 2019</a>
           <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
-          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx.blizmx.com/Caracterizacion/alumno/index.php">Test Psicométrico de Nuevo ingreso</a>
+          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">Test Psicométrico de Nuevo ingreso</a>
 
         </ul>
       </li>
