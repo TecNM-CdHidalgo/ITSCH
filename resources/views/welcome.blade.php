@@ -57,7 +57,19 @@
 @section('content')
 	{{--Contenido de noticias--}}
 	<h1>Noticias</h1>
-    <hr>
+    <hr class="red">
+		<div class="row">			
+			<div class="col-sm-12">
+				<img src="{{ asset('images/Fichas2021.jpg') }}" alt="Fichas" style="width: 100%">
+			</div>						
+		</div>
+		<br>
+		<div style="text-align: right">
+			<a href="https://www.cdhidalgo.tecnm.mx.blizmx.com/ITSCH/public/vinculacion/fichas2021" class="btn btn-success btn-sm" type="button">Obtén tu ficha aquí</a>
+		</div>		
+		<br>		
+		<br>
+	<hr class="red">
     @foreach($noticias2 as $not2)
 	    <div class="noticias">
 	    	<h3><b>{{$not2->titulo}}</b></h3>
