@@ -65,7 +65,7 @@
 		</div>
 		<br>
 		<div style="text-align: right">
-			<a href="https://www.cdhidalgo.tecnm.mx.blizmx.com/ITSCH/public/vinculacion/fichas2021" class="btn btn-success btn-sm" type="button">Obtén tu ficha aquí</a>
+			<a href="{{ asset('/vinculacion/fichas2021') }}" class="btn btn-success btn-sm" type="button">Obtén tu ficha aquí</a>
 		</div>		
 		<br>		
 		<br>
