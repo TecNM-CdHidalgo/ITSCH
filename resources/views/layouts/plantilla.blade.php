@@ -253,6 +253,9 @@
               <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
                 <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
                   <li>
+                    <a class="dropdown-item" href="{{route('cle.informacion')}}">Información General</a>
+                  </li>
+                  <li>
                     <a class="dropdown-item" href="{{route('cle.ingles-para-secundaria')}}">Ingles para Secundaria</a>
                   </li>
                   <li>
@@ -266,22 +269,13 @@
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('cle.traduccionDocumentos')}}">Traducción de documentos</a>
-                  </li>
-                  <li>
-                     <a class="dropdown-item" href="{{route('cle.acreditacion-de-ingles')}}">Examen de acreditación</a>
-                  </li>
+                  </li>                  
                   <li>
                      <a class="dropdown-item" href="{{route('cle.acreditacion2013')}}">Alumnos inscritos plan 2013 y anteriores</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('cle.acreditacion2014')}}">Alumnos inscritos plan 2014 en adelante</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.becasingles')}}">Becas de Idiomas</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.informacion')}}">Información General</a>
-                  </li>
+                  </li>                 
                </ul>
           </li>
           </ul>

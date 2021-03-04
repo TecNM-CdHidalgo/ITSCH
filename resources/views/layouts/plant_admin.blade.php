@@ -83,15 +83,16 @@
                 </li>
                 <li>
                   <a href="#" class="nav-link" ><p id="section-galeria" class="no-margins">Galeria</p></a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link" ><p id="section-carousel" class="no-margins">Redes sociales</p></a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link" ><p id="section-informacion" class="no-margins">Info</p></a>
+                </li>                
+                <li class="dropdown">
+                  <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                    <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
+                    <a class="dropdown-item" href="#">Contenido carreras</a>
+                  </div>
                 </li>
                 <li class="dropdown">
-                  <a href="#" class="nav-link " id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a href="#" class="nav-link" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <p id="section-username" class="no-margins">{{ explode(" ",Auth::User()->name)[0] }}</p>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -144,7 +145,7 @@
               <ul class="list-unstyled">
                 <li><a href="{{ route('inicio') }}#about-section">Acerca de</a></li>
                 <li><a href="{{ route('inicio') }}#blog-section">Publicaciones</a></li>
-                <li><a href="{{ route('inicio') }}#gallery-section">Galeria</a></li>
+                <li><a href="{{ route('inicio') }}#gallery-section">Galeria</a></li>               
                 <li><a href="{{ route('inicio') }}#contact-section">Contactanos</a></li>
               </ul>
             </div>

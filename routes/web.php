@@ -12,30 +12,19 @@ use Intervention\Image\ImageManagerStatic as Image;
 //Rutas publicas**************************************************************************
 //Rutas para descarga de archivos de noticias
 Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
+
 //Transparecia
 Route::get('transparencia/acceso_transparencia',function(){return view('content.transparencia.acceso_transparencia');})->name('transparencia.acceso_transparencia');
-//Vinculacion
-Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
+
+//Rutas de vinculación
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
-
-Route::get('vinculacion/banco_de_datos',function(){return view('content.vinculacion.banco_de_datos');})->name('vinculacion.banco_de_datos');
-
-
-
-
-
+Route::get('vinculacion/banco_de_datos','BancoController@show')->name('vinculacion.banco_de_datos');
 Route::get('vinculacion/fichas2021',function(){return view('content.vinculacion.fichas2021');})->name('vinculacion.fichas2021');
-
 Route::get('vinculacion/convenio_colaboracion',function(){return view('content.vinculacion.convenio_colaboracion');})->name('vinculacion.convenio_colaboracion');
-
 Route::get('vinculacion/convenios',function(){return view('content.vinculacion.convenios');})->name('vinculacion.convenios');
-
 Route::get('vinculacion/cultura_deporte',function(){return view('content.vinculacion.cultura_deporte');})->name('vinculacion.cultura_deporte');
-
 Route::get('vinculacion/informacion',function(){return view('content.vinculacion.informacion');})->name('vinculacion.informacion');
-
 Route::get('vinculacion/residencias',function(){return view('content.vinculacion.residencias');})->name('vinculacion.residencias');
-
 Route::get('vinculacion/servicio-social',function(){return view('content.vinculacion.servicio-social');})->name('vinculacion.servcio-social');
 
 
@@ -43,19 +32,15 @@ Route::get('vinculacion/servicio-social',function(){return view('content.vincula
 Route::get('cle/acreditacion-de-ingles',function(){return view('content.cle.acreditacion-de-ingles');})->name('cle.acreditacion-de-ingles');
 Route::get('cle/acreditacion2013',function(){return view('content.cle.acreditacion2013');})->name('cle.acreditacion2013');
 Route::get('cle/acreditacion2014',function(){return view('content.cle.acreditacion2014');})->name('cle.acreditacion2014');
-Route::get('cle/becasingles',function(){return view('content.cle.becasingles');})->name('cle.becasingles');
 Route::get('cle/cursoConversacion',function(){return view('content.cle.cursoConversacion');})->name('cle.cursoConversacion');
 Route::get('cle/cursoToefl',function(){return view('content.cle.cursoToefl');})->name('cle.cursoToefl');
 Route::get('cle/diplomado',function(){return view('content.cle.diplomado');})->name('cle.diplomado');
-Route::get('cle/examenAcreditacion',function(){return view('content.cle.examenAcreditacion');})->name('cle.examenAcreditacion');
 Route::get('cle/informacion',function(){return view('content.cle.informacion');})->name('cle.informacion');
 Route::get('cle/ingles-para-adultos',function(){return view('content.cle.ingles-para-adultos');})->name('cle.ingles-para-adultos');
 Route::get('cle/ingles-para-ninos',function(){return view('content.cle.ingles-para-ninos');})->name('cle.ingles-para-ninos');
 Route::get('cle/ingles-para-secundaria',function(){return view('content.cle.ingles-para-secundaria');})->name('cle.ingles-para-secundaria');
 Route::get('cle/traduccionDocumentos',function(){return view('content.cle.traduccionDocumentos');})->name('cle.traduccionDocumentos');
-
-
-
+Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avios');
 
 
 //Rutas de oferta educativa
@@ -67,11 +52,11 @@ Route::get('oferta_educativa/nano',function(){return view('content.oferta_educat
 Route::get('oferta_educativa/gestion',function(){return view('content.oferta_educativa.gestion');})->name('oferta.gestion');
 Route::get('oferta_educativa/mecatronica',function(){return view('content.oferta_educativa.mecatronica');})->name('oferta.mecatronica');
 
-
 //Rutas de instituto
 Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nuestro_tec');})->name('instituto.nuestro_tec');
 Route::get('instituto/directorio',function(){return view('content.instituto.directorio');})->name('instituto.directorio');
 Route::get('instituto/ubicacion',function(){return view('content.instituto.ubicacion');})->name('instituto.ubicacion');
+
 //Rutas departamentos
 Route::get('departamentos/caja',function(){return view('content.departamentos.caja');})->name('departamentos.caja');
 
@@ -84,10 +69,9 @@ Route::get('calidad/resultados_evaluacion',function(){return view('content.calid
 Route::get('calidad/organizacional',function(){return view('content.calidad.organizacional');})->name('calidad.organizacional');
 Route::get('calidad/procedimientos',function(){return view('content.calidad.procedimientos');})->name('calidad.procedimientos');
 Route::get('calidad/procedimientos',function(){return view('content.calidad.procedimientos');})->name('calidad.procedimientos');
-
-
 Route::get('calidad/reglamento',function(){return view('content.calidad.reglamento');})->name('calidad.reglamento');
 Route::get('calidad/reglamento_int',function(){return view('content.calidad.reglamento_int');})->name('calidad.reglamento_int');
+Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 
 //Servicos escolares
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
@@ -101,8 +85,6 @@ Route::get('alumnos/encuestasservicio',function(){return view('content.alumnos.e
 Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluatutor');})->name('alumnos.evaluatutor');
 Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 
-
-
 //Normativos y lineamientos
 Route::get('normativos/calidad',function(){return view('content.normativos.calidad');})->name('normativos.calidad');
 Route::get('normativos/igualdad',function(){return view('content.normativos.igualdad');})->name('normativos.igualdad');
@@ -111,28 +93,20 @@ Route::get('normativos/rippa',function(){return view('content.normativos.rippa')
 Route::get('normativos/plan2004',function(){return view('content.normativos.plan2004');})->name('normativos.plan2004');
 Route::get('normativos/plan2010',function(){return view('content.normativos.plan2010');})->name('normativos.plan2010');
 Route::get('programa_capacitacion/programacapacitacion2020.pdf',function(){return view('content.programa_capacitacion.programacapacitacion2020.pdf');})->name('programa_capacitacion.programacapacitacion2020.pdf');
-
 Route::get('normativos/plan2015',function(){return view('content.normativos.plan2015');})->name('normativos.plan2015');
 Route::get('normativos/piid',function(){return view('content.normativos.piid');})->name('normativos.piid');
-
 Route::get('instituto/ubicacion',function(){return view('content.instituto.ubicacion');})->name('instituto.ubicacion');
-
-
 Route::get('tutorias/tutorias',function(){return view('content.tutorias.tutorias');})->name('tutorias.tutorias');
 Route::get('servicio/medico.medico',function(){return view('content.servicio_medico.medico');})->name('servicio_medico.medico');
-
 
 //evaluacion docente
 Route::get('calidad/resultados_evaluacion',function(){return view('content.calidad.resultados_evaluacion');})->name('calidad.resultados_evaluacion');
 
-
-//routas de cle
-Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('cle.avios');
-
-
 //Ruta para visualizar las noticias
 Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
+
+//Rutas de loguin
 Auth::routes();
 
 //Ruta para imagenes del carousel
@@ -197,5 +171,14 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('usuarios/perfil/modificar','PerfilController@miPerfilModificar')->name('admin.usuarios.mi_perfil_modificar');
     Route::get('usuarios/perfil/editar_password','PerfilController@miPerfilEditarPassword')->name('admin.usuarios.mi_perfil_editar_password');
     Route::post('usuarios/perfil/modificar_password','PerfilController@miPerfilModificarPassword')->name('admin.usuarios.mi_perfil_modificar_password');
+
+	//Rutas de contenido de pagina
+	Route::get('contenido/banco_pro','BancoController@index')->name('admin.contenido.banco.index');
+	Route::get('contenido/banco_pro/crear','BancoController@create')->name('admin.contenido.banco.crear');
+	Route::get('contenido/banco_pro/guardar','BancoController@store')->name('admin.contenido.banco.guardar');
+	Route::get('contenido/banco_pro/mostrar','BancoController@show')->name('admin.contenido.banco.mostrar');
+	Route::get('contenido/banco_pro/eliminar/{id}','BancoController@destroy')->name('admin.contenido.banco.eliminar');
+	Route::get('contenido/banco_pro/editar/{id}','BancoController@edit')->name('admin.contenido.banco.editar');
+	Route::get('contenido/banco_pro/modificar/{id}','BancoController@update')->name('admin.contenido.banco.modificar');
 
 });
