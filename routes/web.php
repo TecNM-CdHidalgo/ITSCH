@@ -181,4 +181,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/banco_pro/editar/{id}','BancoController@edit')->name('admin.contenido.banco.editar');
 	Route::get('contenido/banco_pro/modificar/{id}','BancoController@update')->name('admin.contenido.banco.modificar');
 
+	//Carreras
+	Route::get('contenido/carreras','CarrerasController@index')->name('admin.contenido.carreras.index');
+
 });
