@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Programa;
 
 class CarrerasController extends Controller
 {
@@ -13,8 +14,43 @@ class CarrerasController extends Controller
      */
     public function index()
     {
-        return view('admin.contenido.carreras.index');
+        $programas=Programa::all();
+        return view('admin.contenido.carreras.index')->with('programas',$programas);
     }
+
+    /*Metodo para agregar y editar los programas educativos de la institución */
+    public function editCarrera()
+    {
+        $programas=Programa::all();
+        return view('admin.contenido.carreras.editcarreras')->with('programas',$programas);
+    }
+
+    /*Metodo para agregar los programas educativos de la institución */
+    public function storeCarrera(Request $request)
+    {
+        $programa = new Programa;
+        $programa->nombre = $request->nombre;
+        $programa->save();
+        return redirect()->route('carreras.editCarrera');        
+    }
+
+    /*Metodo para modificar los programas educativos de la institución */
+    public function updateCarrera(Request $request, $id)
+    {
+        $programa = Programa::find($id);
+        $programa->nombre = $request->nombre;
+        $programa->save();
+        return redirect()->route('carreras.editCarrera');        
+    }
+
+    /*Metodo para eliminar los programas educativos de la institución */
+    public function destroyCarrera($id)
+    {
+        $programa = Programa::find($id);        
+        $programa->delete();
+        return redirect()->route('carreras.editCarrera');        
+    }
+
 
     /**
      * Show the form for creating a new resource.

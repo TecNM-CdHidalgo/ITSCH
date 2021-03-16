@@ -182,6 +182,9 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/banco_pro/modificar/{id}','BancoController@update')->name('admin.contenido.banco.modificar');
 
 	//Carreras
-	Route::get('contenido/carreras','CarrerasController@index')->name('admin.contenido.carreras.index');
-
+	Route::get('/contenido/carreras','CarrerasController@index')->name('carreras.index');
+	Route::get('/contenido/carreras/editCarrera', 'CarrerasController@editcarrera')->name('carreras.editCarrera');
+	Route::get('/contenido/carreras/storeCarrera', 'CarrerasController@storecarrera')->name('carreras.storeCarrera');
+	Route::get('/contenido/carreras/updateCarrera/{id}', 'CarrerasController@updatecarrera')->name('carreras.updateCarrera');
+	Route::get('/contenido/carreras/destroyCarrera/{id}', 'CarrerasController@destroycarrera')->name('carreras.destroyCarrera');
 });

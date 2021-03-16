@@ -12,15 +12,17 @@
                     <span class="input-group-text">Carrera</span>
                 </div>
                 <select class="form-control form-control-sm" name="nom_carr" id="carrera" required>
-                    <option value="Sistemas">Ingeniería en Sistemas Computacionales</option>
-                    <option value="Industrial">Ingeniería Industrial</option>               
+                    @foreach($programas as $pro)
+                        <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
+                    @endforeach                              
                 </select>
                 <div class="input-group-append">
                     <button class="btn btn-success">Mostrar</button>
                 </div>
             </div>  
             <div class="collapse demo" style="text-align: right;">
-                <button class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</button>
+                
+                <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
             </div>
         </div>        
         <div class="col-sm-2" style="text-align: right">

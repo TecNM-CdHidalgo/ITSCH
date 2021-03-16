@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Programas extends Migration
+class CreateProgramasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,15 +16,15 @@ class Programas extends Migration
         Schema::create('programas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre',100);
-            $table->string('plan_estudios',30);
-            $table->string('definicion',1000);
-            $table->string('mision',1000);
-            $table->string('vision',1000);
-            $table->string('politica',1000);
-            $table->string('objetivo',1000);
-            $table->string('per_ingreso',1000);
-            $table->string('per_egreso',1000);
-            $table->string('campo',1000);
+            $table->string('plan_estudios',30)->nullable();
+            $table->string('definicion',1000)->nullable();
+            $table->string('mision',1000)->nullable();
+            $table->string('vision',1000)->nullable();
+            $table->string('politica',1000)->nullable();
+            $table->string('objetivo',1000)->nullable();
+            $table->string('per_ingreso',1000)->nullable();
+            $table->string('per_egreso',1000)->nullable();
+            $table->string('campo',1000)->nullable();
             $table->timestamps();
         });
     }

@@ -88,7 +88,7 @@
                   <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
                     <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
-                    <a class="dropdown-item" href="{{ route('admin.contenido.carreras.index') }}">Contenido carreras</a>
+                    <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
                   </div>
                 </li>
                 <li class="dropdown">
