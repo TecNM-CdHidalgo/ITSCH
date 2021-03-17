@@ -98,6 +98,9 @@
               <li>
                 <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
               </li>
+              <li>
+                <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
+              </li>
 
            </ul>
           </li>
@@ -269,13 +272,13 @@
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('cle.traduccionDocumentos')}}">Traducción de documentos</a>
-                  </li>                  
+                  </li>
                   <li>
                      <a class="dropdown-item" href="{{route('cle.acreditacion2013')}}">Alumnos inscritos plan 2013 y anteriores</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('cle.acreditacion2014')}}">Alumnos inscritos plan 2014 en adelante</a>
-                  </li>                 
+                  </li>
                </ul>
           </li>
           </ul>
@@ -292,7 +295,7 @@
               <a class="dropdown-item" href="{{route('vinculacion.banco_de_datos')}}">Banco de Proyectos</a>
               <a class="dropdown-item" href="{{route('vinculacion.convenio_colaboracion')}}">Convenio de colaboración</a>
               <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">  Convenios</a>
-              <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>              
+              <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
           </div>
       </li>
 
