@@ -77,6 +77,8 @@ Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->n
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 Route::get('servicios_escolares/servicios',function(){return view('content.servicios_escolares.servicios');})->name('servicios_escolares.servicios');
+Route::get('servicios_escolares/constancia',function(){return view('content.servicios_escolares.constancias');})->name('servicios_escolares.constancias');
+
 
 //Alumnos
 Route::get('alumnos/eventos',function(){return view('content.alumnos.eventos');})->name('alumnos.eventos');
@@ -183,10 +185,13 @@ Route::group(['middleware' => 'auth'],function(){
 
 	//Carreras
 	Route::get('/contenido/carreras','CarrerasController@index')->name('carreras.index');
+    Route::get('/contenido/carreras/{id}','CarrerasController@show')->name('carreras.show');
 	Route::get('/contenido/carreras/editCarrera', 'CarrerasController@editcarrera')->name('carreras.editCarrera');
 	Route::get('/contenido/carreras/storeCarrera', 'CarrerasController@storecarrera')->name('carreras.storeCarrera');
 	Route::get('/contenido/carreras/updateCarrera/{id}', 'CarrerasController@updatecarrera')->name('carreras.updateCarrera');
 	Route::get('/contenido/carreras/destroyCarrera/{id}', 'CarrerasController@destroycarrera')->name('carreras.destroyCarrera');
 	Route::get('/contenido/carreras/showCarrera/{id}', 'CarrerasController@show')->name('carreras.showCarrera');
 	Route::get('/contenido/carreras/updateCarreraCom/{id}', 'CarrerasController@updatecarreracom')->name('carreras.updateCarreraCom');
+    Route::get('/contenido/carreras/editEspecialidad/{id}', 'CarrerasController@editEspecialidad')->name('carreras.editEspecialidad');
+
 });
