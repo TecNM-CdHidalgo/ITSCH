@@ -7,21 +7,22 @@
         </div>
         <div class="col-sm-2"></div>
         <div class="col-sm-5">
-            <div class="input-group mb-3 input-group-sm">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Carrera</span>
-                </div>
-                <select class="form-control form-control-sm" name="nom_carr" id="carrera" required>
-                    @foreach($programas as $pro)
-                        <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
-                    @endforeach                              
-                </select>
-                <div class="input-group-append">
-                    <button class="btn btn-success">Mostrar</button>
-                </div>
-            </div>  
-            <div class="collapse demo" style="text-align: right;">
-                
+            <form id="formMostrar">
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Carrera</span>
+                    </div>
+                    <select class="form-control form-control-sm" id="carrera" required>
+                        @foreach($programas as $pro)
+                            <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
+                        @endforeach                              
+                    </select>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-success" onclick="datosEnviar()">Mostrar</button>
+                    </div>
+                </div>  
+            </form>
+            <div class="collapse demo" style="text-align: right;">                
                 <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
             </div>
         </div>        
@@ -33,12 +34,13 @@
         </div>
     </div>   
     <hr> 
-    <form action="#">
+    <form action="{{ route('carreras.updateCarreraCom',$pro_act->id) }}">
+        <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
         <div class="row">
             <div class="col-sm-8">
-                <h4 id="n_carrera">Ingeniería en Sistemas Computacionales</h4>
+                <h4 id="n_carrera">{{ $pro_act->nombre }}</h4>
                 <div  class="collapse demo">
-                    <input type="text" value="Ingeniería en Sistemas Computacionales" class="form-control">
+                    <input type="text" value="{{ $pro_act->nombre }}" class="form-control">
                 </div>
             </div>
             <div class="col-sm-2"></div>
@@ -56,9 +58,9 @@
                 </div>
                 <br>
                 <br>
-                <h5 id="clave"> <b>ISIC-2010-224</b>   </h5>
+                <h5 id="clave"> <b>{{ $pro_act->clave }}</b>   </h5>
                 <div  class="collapse demo">                    
-                    <input type="text" class="form-control" name="clave" value="ISIC-2010-224">
+                    <input type="text" class="form-control" name="clave" value="{{ $pro_act->clave }}">
                 </div>
                  
                 <h4> <b>ESPECIALIDAD(ES)</b> </h4> 
@@ -490,6 +492,20 @@
                 document.getElementById('p_egreso').style.display = 'block';
                 document.getElementById('p_campo').style.display = 'block';
             }
+
+            //Obtiene datos de la carrera a mostrar
+            function datosEnviar()
+            {
+                var idCarr=$( "#carrera" ).val();   
+                $('#idCarrSel').val(idCarr);            
+                $('#formMostrar').attr('action','{{url('contenido/carreras')}}/showCarrera/'+idCarr);
+            }
+
+            //Seleccionamos la opcion del select elegida por el usuario, cada ves que se carga la pagina
+            $(document).ready(function()
+            {
+                $("#carrera").val({{ $pro_act->id }});
+            });
         </script>
     @endsection
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Programa;
+use Illuminate\Support\Facades\DB;
 
 class CarrerasController extends Controller
 {
@@ -14,8 +15,11 @@ class CarrerasController extends Controller
      */
     public function index()
     {
-        $programas=Programa::all();
-        return view('admin.contenido.carreras.index')->with('programas',$programas);
+        $programas=DB::table('programas')->select('id','nombre')->get();
+        $pro_act=Programa::find(1);
+        return view('admin.contenido.carreras.index')
+        ->with('programas',$programas)
+        ->with('pro_act',$pro_act);
     }
 
     /*Metodo para agregar y editar los programas educativos de la institución */
@@ -34,7 +38,7 @@ class CarrerasController extends Controller
         return redirect()->route('carreras.editCarrera');        
     }
 
-    /*Metodo para modificar los programas educativos de la institución */
+    /*Metodo para modificar solo el nombre del programa educativo de la institución */
     public function updateCarrera(Request $request, $id)
     {
         $programa = Programa::find($id);
@@ -49,6 +53,12 @@ class CarrerasController extends Controller
         $programa = Programa::find($id);        
         $programa->delete();
         return redirect()->route('carreras.editCarrera');        
+    }
+
+    //Metodo para agregar contenido a los programas educativos
+    public function updatecarreracom(Request $request, $id)
+    {
+        dd("Si llega");
     }
 
 
@@ -81,7 +91,11 @@ class CarrerasController extends Controller
      */
     public function show($id)
     {
-        //
+        $programas=DB::table('programas')->select('id','nombre')->get();
+        $pro_act=Programa::find($id);       
+        return view('admin.contenido.carreras.index')
+        ->with('programas',$programas)
+        ->with('pro_act',$pro_act);
     }
 
     /**
