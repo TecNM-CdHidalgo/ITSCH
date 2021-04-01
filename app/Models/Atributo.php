@@ -12,4 +12,10 @@ class Atributo extends Model
     protected $fillable = [
         'numero','descripcion','id_programa'
     ];
+
+    //Relacion con la tablas de Atributos(uno) - Criterios(muchos)
+    public function criterios()
+    {
+        return $this->hasMany('App\Models\Criterio');
+    }
 }

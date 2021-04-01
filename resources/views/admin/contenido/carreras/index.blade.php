@@ -22,10 +22,11 @@
                     </div>
                 </div>  
             </form>
-            <div class="collapse demo" style="text-align: right;">                
 
+            <div class="collapse demo" style="text-align: right;">
                 <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
             </div>
+            
         </div>
         <div class="col-sm-2" style="text-align: right">
             <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target=".demo" onclick="ocultar()" id="btn_editar">Editar</button>
@@ -33,17 +34,14 @@
                 <button type="button" class="btn btn-info btn-sm" data-toggle="collapse" data-target=".demo" onclick="mostrar()">Cancelar</button>
             </div>
         </div>
-
     </div>   
     <hr> 
+
     <form action="{{ route('carreras.updateCarreraCom',$pro_act->id) }}">
         <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
         <div class="row">
             <div class="col-sm-8">
-                <h4 id="n_carrera">{{ $pro_act->nombre }}</h4>
-                <div  class="collapse demo">
-                    <input type="text" value="{{ $pro_act->nombre }}" class="form-control">
-                </div>
+                <h4 id="n_carrera">{{ $pro_act->nombre }}</h4>                
             </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-2"></div>
@@ -60,187 +58,206 @@
                 </div>
                 <br>
                 <br>
-                <h5 id="clave"> <b>{{ $pro_act->clave }}</b>   </h5>
+                <h5 id="clave"> <b>{{ $pro_act->plan_estudios }}</b>   </h5>
                 <div  class="collapse demo">                    
-                    <input type="text" class="form-control" name="clave" value="{{ $pro_act->clave }}">
+                    <input type="text" class="form-control" name="plan_estudios" value="{{ $pro_act->plan_estudios }}">
                 </div>
-                <h4> <b>ESPECIALIDAD(ES)</b> </h4>
-                <div class="collapse demo" style="text-align: right;">
-                    <a href="{{ route('carreras.editEspecialidad',1) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-                </div>
-                <table class="table">
-                    <thead>
-                        <th>Nombre</th>
-                        <th>Clave</th>
-                        <th>Objetivo</th>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Ingenieria de Software</td>
-                        <td>ISIE-ISO-2020-02</td>
-                    </tr>
-                    <tr>
-                        <td>Marketing Digital</td>
-                        <td>ISIE-MKT-2020-01</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <h4> <b>ESPECIALIDAD(ES)</b> </h4>                
             </div>
             <div class="col-sm-2"></div>
         </div>
+        {{-- Tabla de especialidades --}}
+        <div class="collapse demo" style="text-align: right;">
+            <a href="{{ route('carreras.editEspecialidad',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+        </div>
+        <table class="table">
+            <thead>
+                <th style="width: 25%;">Nombre</th>
+                <th style="width: 15%;">Clave</th>
+                <th>Objetivo</th>
+            </thead>
+            <tbody>
+                @foreach ($especialidades as $esp)
+                    <tr>
+                        <td>{{ $esp->nombre }}</td>
+                        <td>{{ $esp->clave }}</td>
+                        <td>{{ $esp->objetivo }}</td>
+                    </tr> 
+                @endforeach                                            
+            </tbody>
+        </table>
 
-        <h3>¿QUE ES UN INGENIERO EN SISTEMAS COMPUTACIONALES?</h3>
+        <h3>¿Que es un ingeniero en {{ $pro_act->nombre }}?</h3>
         <hr>
-        <p id="p_definicion">El ingeniero en Sistemas computacionales es una persona profesional, comprometida
-        con la generación de tecnología para el progreso de México. Es capaz de realizar programas
-        específicos, como aplicaciones de oficina, juegos, películas animadas, software administrativo
-        y científico, aplica y crea nuevas tecnologías y sistemas de administración y redes para
-        intercambio de información, como la internet.</p>
+        <p id="p_definicion">{{ $pro_act->definicion }}</p>
         <div  class="collapse demo">
             <textarea class="form-control" rows="5" id="definicion" name="definicion">
-                El ingeniero en Sistemas computacionales es una persona profesional, comprometida con la generación de tecnología para el progreso de México. Es capaz de realizar programas específicos, como aplicaciones de oficina, juegos, películas animadas, software administrativo y científico, aplica y crea nuevas tecnologías y sistemas de administración y redes para intercambio de información, como la internet.
+                {{ $pro_act->definicion }}
             </textarea>
         </div>
         <br>
 
-        <h3>MISIÓN DE INGENIERÍA EN SISTEMAS COMPUTACIONALES</h3>
+        <h3>Misión de {{ $pro_act->nombre }}</h3>
         <hr>
-        <p id="p_mision">“Formar profesionistas capaces de integrar y administrar sistemas computacionales, que contribuyan a la productividad y el logro de los objetivos estratégicos de las organizaciones; caracterizándose por ser líderes, críticos, competentes, éticos y con visión empresarial, comprometidos con el desarrollo sustentable”.
-            Con esta misión el Programa Educativo busca formar profesionales capaces de influir en su medio ambiente, transformarlo y aplicar tecnología que contribuya al desarrollo regional.</p>
+        <p id="p_mision">{{ $pro_act->mision }}</p>
         <div  class="collapse demo">
             <textarea class="form-control" rows="5" id="mision" name="mision">
-                “Formar profesionistas capaces de integrar y administrar sistemas computacionales, que contribuyan a la productividad y el logro de los objetivos estratégicos de las organizaciones; caracterizándose por ser líderes, críticos, competentes, éticos y con visión empresarial, comprometidos con el desarrollo sustentable”. Con esta misión el Programa Educativo busca formar profesionales capaces de influir en su medio ambiente, transformarlo y aplicar tecnología que contribuya al desarrollo regional.
+                {{ $pro_act->mision }}
             </textarea>
         </div>
         <br>
 
-        <h3>VISIÓN DE INGENIERÍA EN SISTEMAS COMPUTACIONALES</h3>
+        <h3>Visión de {{ $pro_act->nombre }}</h3>
         <hr>
-        <p id="p_vision">“Ser un programa educativo de vanguardia, acreditado y reconocido por su alta calidad académica en la formación de profesionistas en tecnologías de la información y comunicaciones, que sean capaces de desarrollar el sector tecnológico de su entorno de manera sustentable”.
-
-            Con esta visión el Programa Educativo busca contribuir a la transformación de la región, y particularmente de la Educación Superior Tecnológica en México, orientando sus esfuerzos hacia el desarrollo humano sustentable y la competitividad.</p>
+        <p id="p_vision">{{ $pro_act->vision }} </p>
         <div  class="collapse demo">
             <textarea class="form-control" rows="5" id="vision" name="vision">
-                “Ser un programa educativo de vanguardia, acreditado y reconocido por su alta calidad académica en la formación de profesionistas en tecnologías de la información y comunicaciones, que sean capaces de desarrollar el sector tecnológico de su entorno de manera sustentable”. Con esta visión el Programa Educativo busca contribuir a la transformación de la región, y particularmente de la Educación Superior Tecnológica en México, orientando sus esfuerzos hacia el desarrollo humano sustentable y la competitividad.
+                {{ $pro_act->vision }}
             </textarea>
         </div>
         <br>
 
-        <h3>POLITICA DE INGENIERÍA EN SISTEMAS COMPUTACIONALES</h3>
+        <h3>Politica de {{ $pro_act->nombre }}</h3>
         <hr>
-        <p id="p_politica">La carrera de Ingeniería en Sistemas Computacionales forma profesionales líderes en el área Químico – Biológica que generan soluciones prácticas a problemáticas reales en el sector productivo, educativo y científico.</p>
+        <p id="p_politica">{{ $pro_act->politica }}</p>
         <div  class="collapse demo">
             <textarea class="form-control" rows="5" id="politica" name="politica">
-                La carrera de Ingeniería en Sistemas Computacionales forma profesionales líderes en el área Químico – Biológica que generan soluciones prácticas a problemáticas reales en el sector productivo, educativo y científico.
+                {{ $pro_act->politica }}
             </textarea>
         </div>
         <br>
 
-        <h3>OBJETIVO DE INGENIERÍA EN SISTEMAS COMPUTACIONALES</h3>
+        <h3>Objetivo de {{ $pro_act->nombre }}</h3>
         <hr>
-        <p id="p_objetivo">Formar profesionales íntegros de la Ingeniería en Sistemas Computacionales competentes para trabajar en equipos multidisciplinarios y multiculturales que, con sentido ético, crítico, creativo, emprendedor y actitud de liderazgo, diseñe, construya, controle, y optimice sistemas, y tecnologías sustentables para la producción de bienes y servicios que contribuyan a elevar el nivel de vida de la sociedad.</p>
+        <p id="p_objetivo">{{ $pro_act->objetivo }}</p>
         <div  class="collapse demo">
             <textarea class="form-control" rows="5" id="objetivo" name="objetivo">
-                Formar profesionales íntegros de la Ingeniería en Sistemas Computacionales competentes para trabajar en equipos multidisciplinarios y multiculturales que, con sentido ético, crítico, creativo, emprendedor y actitud de liderazgo, diseñe, construya, controle, y optimice sistemas, y tecnologías sustentables para la producción de bienes y servicios que contribuyan a elevar el nivel de vida de la sociedad.
+                {{ $pro_act->objetivo }}
             </textarea>
         </div>
         <br>
 
-        <h3>PERFIL DE INGRESO</h3>
+        <h3>Perfil de ingreso</h3>
         <hr>
-        <p id="p_ingreso">Formar profesionales íntegros de la Ingeniería en Sistemas Computacionales competentes para trabajar en equipos multidisciplinarios y multiculturales que, con sentido ético, crítico, creativo, emprendedor y actitud de liderazgo, diseñe, construya, controle, y optimice sistemas, y tecnologías sustentables para la producción de bienes y servicios que contribuyan a elevar el nivel de vida de la sociedad.</p>
+        <p id="p_ingreso">{{ $pro_act->per_ingreso }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="ingreso" name="ingreso">
-                Formar profesionales íntegros de la Ingeniería en Sistemas Computacionales competentes para trabajar en equipos multidisciplinarios y multiculturales que, con sentido ético, crítico, creativo, emprendedor y actitud de liderazgo, diseñe, construya, controle, y optimice sistemas, y tecnologías sustentables para la producción de bienes y servicios que contribuyan a elevar el nivel de vida de la sociedad.
+            <textarea class="form-control" rows="5" id="ingreso" name="per_ingreso">
+                {{ $pro_act->per_ingreso }}
             </textarea>
         </div>
         <br>
 
-        <h3>PERFIL DE EGRESO</h3>
+        <h3>Perfil de egreso</h3>
         <hr>
-        <p id="p_egreso">Formar profesionales íntegros de la Ingeniería en Sistemas Computacionales competentes para trabajar en equipos multidisciplinarios y multiculturales que, con sentido ético, crítico, creativo, emprendedor y actitud de liderazgo, diseñe, construya, controle, y optimice sistemas, y tecnologías sustentables para la producción de bienes y servicios que contribuyan a elevar el nivel de vida de la sociedad.</p>
+        <p id="p_egreso">{{ $pro_act->per_egreso }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="egreso" name="egreso">
-                Formar profesionales íntegros de la Ingeniería en Sistemas Computacionales competentes para trabajar en equipos multidisciplinarios y multiculturales que, con sentido ético, crítico, creativo, emprendedor y actitud de liderazgo, diseñe, construya, controle, y optimice sistemas, y tecnologías sustentables para la producción de bienes y servicios que contribuyan a elevar el nivel de vida de la sociedad.
+            <textarea class="form-control" rows="5" id="egreso" name="per_egreso">
+                {{ $pro_act->per_egreso }}
             </textarea>
         </div>
         <br>
 
-        <h3>CAMPO LABORAL</h3>
+        <h3>Campo laboral</h3>
         <hr>
-        <p id="p_campo">Es uno de los más amplios de las carreras que se ofrecen en el país, ya que los sistemas computacionales se están ampliando en todos los ámbitos, por poner ejemplos mencionaremos la medicina, la educación, la investigación, la industria y el desarrollo. Los cargos que el Ingeniero en Sistemas Computacionales podrá tener son: Gerente de sistemas, director de área de una amplia gama de procesos y proyectos tecnológicos, administrador de centros de cómputo, administrador de bases de datos, administrador de servidores multiplataforma, creador y administrador de proyectos de data warehouse, programador de aplicaciones en los niveles junior, sénior, master, arquitecto de software, consultor de empresas públicas y privadas así como de gobierno, administrador de redes de comunicaciones, creador y verificador de certificados digitales CFDI, web master, etc. Además formar sus propias empresas de creación e instalación de redes, desarrollo de software, administración de bases de datos, diseño, creación y montaje de sitios web, creador de proyectos de comercio electrónico, creación de aplicaciones para dispositivos móviles, mantenimiento preventivo y correctivo de equipo de cómputo.</p>
+        <p id="p_campo">{{ $pro_act->campo }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="egreso" name="egreso">
-                Es uno de los más amplios de las carreras que se ofrecen en el país, ya que los sistemas computacionales se están ampliando en todos los ámbitos, por poner ejemplos mencionaremos la medicina, la educación, la investigación, la industria y el desarrollo. Los cargos que el Ingeniero en Sistemas Computacionales podrá tener son: Gerente de sistemas, director de área de una amplia gama de procesos y proyectos tecnológicos, administrador de centros de cómputo, administrador de bases de datos, administrador de servidores multiplataforma, creador y administrador de proyectos de data warehouse, programador de aplicaciones en los niveles junior, sénior, master, arquitecto de software, consultor de empresas públicas y privadas así como de gobierno, administrador de redes de comunicaciones, creador y verificador de certificados digitales CFDI, web master, etc. Además formar sus propias empresas de creación e instalación de redes, desarrollo de software, administración de bases de datos, diseño, creación y montaje de sitios web, creador de proyectos de comercio electrónico, creación de aplicaciones para dispositivos móviles, mantenimiento preventivo y correctivo de equipo de cómputo.
+            <textarea class="form-control" rows="5" id="egreso" name="campo">
+                {{ $pro_act->campo }}
             </textarea>
         </div>
         <br>
 
 
-        <h3>OBJETIVOS EDUCACIONALES</h3>
+        <h3>Objetivos educacionales</h3>
         <div class="collapse demo" style="text-align: right;">
-            <button class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</button>
+            <a href="{{ route('carreras.editObjetivos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>                    
+                    <th style="width: 40%">Descripción</th>
+                    <th style="width: 40%">Criterio</th>
+                    <th style="width: 20%">Indicador</th>                    
+                </thead>
+                <tbody>
+                    @foreach ($objetivos as $obj)
+                        <tr>                            
+                            <td>{{ $obj->descripcion }}</td>
+                            <td>{{ $obj->criterio }}</td>
+                            <td>{{ $obj->indicador }}</td>                            
+                        </tr>                
+                    @endforeach           
+                </tbody>
+            </table>            
+        </div>
+        <br>
+
+        <h3>Atributos de egreso</h3>
+        <div class="collapse demo" style="text-align: right;">
+            <a href="{{ route('carreras.editAtributos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
         </div>
         <div class="table-responsive">
             <table class="table table-sm">
-                <thead>
-                <tr>
-                    <th>Descripción</th>
-                    <th>Criterio</th>
-                    <th>Indicador</th>
-                </tr>
+                <thead>            
+                    <th style="width: 5%">Numero</th>
+                    <th style="width: 35%">Descripción</th>                    
+                    <th style="width: 40%">Criterios</th>           
                 </thead>
                 <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+                    @php
+                        $van=0;
+                        $atrAnt="";
+                    @endphp
+                    @foreach ($atributos as $atr ) 
+                        @php                                                          
+                            if($atr->numAtr==$atrAnt)
+                            {
+                                $van=$van+1; 
+                                echo "<tr>";                                                                                                       
+                            }
+                            else 
+                            {
+                                echo "<tr>";
+                                $atrAnt=$atr->numAtr;
+                                $van=0;  
+                                                                                                   
+                            }
+                        @endphp                                              
+                        @if($van==0)                
+                                <td>{{ $atr->numAtr }}</td>
+                                <td>{{ $atr->desAtr }}</td>                                
+                                <td>                                              
+                                    <table class="table table-sm">                                       
+                                        <tbody>
+                                            <tr>
+                                                <td>{{  $atr->numCri }}</td>
+                                                <td>{{  $atr->desCri }}</td>                                               
+                                            </tr>                            
+                                        </tbody>
+                                    </table>                            
+                                </td>                                                                    
+                        @else              
+                            <td></td>
+                            <td></td>                                             
+                            <td>                                                                                                  
+                                <table class="table table-sm">                                                  
+                                    <tbody>
+                                        <tr>
+                                            <td>{{  $atr->numCri }}</td>
+                                            <td>{{  $atr->desCri }}</td>                                            
+                                        </tr>                            
+                                    </tbody>
+                                </table>                                      
+                            </td>
+                       
+                        @endif                              
+                    @endforeach            
                 </tbody>
             </table>
         </div>
         <br>
-
-        <h3>ATRIBUTOS DE EGRESO</h3>
-        <div class="collapse demo" style="text-align: right;">
-            <button class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</button>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-sm">
-                <thead>
-                <tr>
-                    <th>No. Atributo</th>
-                    <th>Descripción</th>
-                    <th>Criterio de desempeño</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
+        
+        
 
         <div class="row">
             <div class="col-sm-4"></div>
@@ -255,23 +272,23 @@
         </div>
         <br>
 
-        <h3>PIID DEL PROGRAMA EDUCATIVO</h3>
+        <h3>PIID del programa educativo</h3>
         <hr>
         <div  class="collapse demo">
             <h6>Seleccona el archipo del PIID</h6>
-            <input type="file" class="form-control-file border" name="acreditacion">
+            <input type="file" class="form-control-file border" name="piid">
         </div>
         <br>
 
-        <h3>RETICULA DEL PROGRAMA EDUCATIVO</h3>
+        <h3>Reticula del programa educativo</h3>
         <hr>
         <div  class="collapse demo">
             <h6>Seleccona el archipo de la reticula</h6>
-            <input type="file" class="form-control-file border" name="acreditacion">
+            <input type="file" class="form-control-file border" name="materia">
         </div>
         <br>
 
-        <h3>PLAN DE ESTUDIO</h3>
+        <h3>Plan de estudios</h3>
         <hr>
 
         <div id="accordion">
@@ -325,7 +342,7 @@
         </div>
         <br>
 
-        <h3>ESTRUCTURA ACADÉMICA</h3>
+        <h3>Estructura académica</h3>
         <hr>
 
         <div class="collapse demo" style="text-align: right;">
@@ -465,8 +482,7 @@
             //Ocultar elementos
             function ocultar()
             {
-                document.getElementById('p_definicion').style.display = 'none';
-                document.getElementById('n_carrera').style.display = 'none';
+                document.getElementById('p_definicion').style.display = 'none';              
                 document.getElementById('btn_editar').style.display = 'none';
                 document.getElementById('p_mision').style.display = 'none';
                 document.getElementById('p_vision').style.display = 'none';
@@ -481,8 +497,7 @@
             //Mostrar elementos
             function mostrar()
             {
-                document.getElementById('p_definicion').style.display = 'block';
-                document.getElementById('n_carrera').style.display = 'block';
+                document.getElementById('p_definicion').style.display = 'block';               
                 document.getElementById('btn_editar').style.display = 'block';
                 document.getElementById('p_mision').style.display = 'block';
                 document.getElementById('p_vision').style.display = 'block';

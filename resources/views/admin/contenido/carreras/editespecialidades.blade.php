@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-    <h4><a href="{{ route('carreras.index') }}"> Carreras/</a>Editar especialidad</h4>
+    <h4><a href="{{ route('carreras.index') }}"> Carreras/</a>Editar especialidad/{{ $programa->nombre }}</h4>
     <hr>
     <div style="text-align: right">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalAltas">
@@ -11,14 +11,29 @@
     </div>
     <table class="table">
         <thead>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Clave</th>
-            <th>Objetivo</th>
-            <th>Acciones</th>
+            <th style="width: 5%">ID</th>
+            <th style="width: 20%">Nombre</th>
+            <th style="width: 15%">Clave</th>
+            <th style="width: 50%">Objetivo</th>
+            <th style="width: 10%">Acciones</th>
         </thead>
         <tbody>
-
+            @foreach ($especialidades as $esp)
+                <tr>
+                    <td>{{ $esp->id }}</td>
+                    <td>{{ $esp->nombre }}</td>
+                    <td>{{ $esp->clave }}</td>
+                    <td>{{ $esp->objetivo }}</td>
+                    <td>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditar({{ $esp }})">
+                            <i class='fas fa-edit' style='font-size:14px'></i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminar({{ $esp }})">
+                            <i class='fas fa-trash-alt' style='font-size:14px'></i>
+                        </button> 
+                    </td>
+                </tr>                
+            @endforeach           
         </tbody>
     </table>
     <br>
@@ -29,7 +44,7 @@
         <div class="modal fade" id="myModalAltas">
             <div class="modal-dialog">
             <div class="modal-content">
-                <form action="{{ route('carreras.storeCarrera') }}">
+                <form action="{{ route('carreras.storeEspecialidad') }}">
                     <!-- Modal Header -->
                     <div class="modal-header">
                     <h4 class="modal-title">Alta de especialidad</h4>
@@ -43,6 +58,9 @@
                         <input class="form-control" name="clave" type="text" required placeholder="Clave de la especialidad">
                         <br>
                         <textarea class="form-control" name="objetivo" id=""  rows="5" placeholder="Objetivo"></textarea>
+                        <br>
+                        <input type="text" class="form-control" value="{{ $programa->nombre }}" readonly>
+                        <input type="hidden" name="id_programa" value="{{ $programa->id }}">
                         <br>
                     </div>
 
@@ -64,13 +82,37 @@
                 <form id="formEditar">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Editar Carrera</h4>
+                    <h4 class="modal-title">Editar Especialidad</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <input type="text" class="form-control" required name="nombre" id="nom_update">
+                        <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Nombre</span>
+                            </div>
+                            <input type="text" class="form-control" required name="nombre" id="nom_update">
+                        </div>
+                        <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Clave</span>
+                            </div>
+                            <input type="text" class="form-control" required name="clave" id="cla_update">
+                        </div>
+                        
+                           
+                        <label>Objetivo</label>                          
+                        <textarea class="form-control" required name="objetivo" id="obj_update" rows="10"></textarea>                            
+                        <br>
+
+                        <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Programa</span>
+                            </div>
+                            <input type="text" class="form-control" id="car_update" readonly value="{{ $programa->nombre }}">
+                        </div>                      
+                        <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                     </div>
 
                     <!-- Modal footer -->
@@ -97,7 +139,8 @@
 
                     <!-- Modal body -->
                     <div class="modal-body">
-                        ¿Estas seguro de eliminar esta carrera?
+                        ¿Estas seguro de eliminar esta especialidad?
+                        <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                     </div>
 
                     <!-- Modal footer -->
@@ -114,18 +157,20 @@
     {{-- Sección js --}}
         @section('js')
             <script>
-                function obtDatEditar(pro)
+                function obtDatEditar(esp)
                 {
 
-                   $("#nom_update").val(pro['nombre']);
-                   r="updateCarrera/"+pro['id'];
+                   $("#nom_update").val(esp['nombre']);
+                   $("#cla_update").val(esp['clave']);
+                   $("#obj_update").val(esp['objetivo']);                  
+                   r="{{url('contenido/carreras')}}/updateEspecialidad/"+esp['id'];
                    $('#formEditar').attr('action', r);
                 }
 
-                function obtDatEliminar(pro)
+                function obtDatEliminar(esp)
                 {
-                   $("#nom_eliminar").text(pro['nombre']);
-                   r="destroyCarrera/"+pro['id'];
+                   $("#nom_eliminar").text(esp['nombre']);
+                   r="{{url('contenido/carreras')}}/destroyEspecialidad/"+esp['id'];
                    $('#formEliminar').attr('action', r);
                 }
             </script>

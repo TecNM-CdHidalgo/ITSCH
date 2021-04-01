@@ -17,14 +17,14 @@ class CreateProgramasTable extends Migration
             $table->id();
             $table->string('nombre',100);
             $table->string('plan_estudios',30)->nullable();
-            $table->string('definicion',1000)->nullable();
-            $table->string('mision',1000)->nullable();
-            $table->string('vision',1000)->nullable();
-            $table->string('politica',1000)->nullable();
-            $table->string('objetivo',1000)->nullable();
-            $table->string('per_ingreso',1000)->nullable();
-            $table->string('per_egreso',1000)->nullable();
-            $table->string('campo',1000)->nullable();
+            $table->string('definicion',2000)->nullable();
+            $table->string('mision',2000)->nullable();
+            $table->string('vision',2000)->nullable();
+            $table->string('politica',2000)->nullable();
+            $table->string('objetivo',2000)->nullable();
+            $table->string('per_ingreso',2000)->nullable();
+            $table->string('per_egreso',2000)->nullable();
+            $table->string('campo',2000)->nullable();
             $table->timestamps();
         });
     }

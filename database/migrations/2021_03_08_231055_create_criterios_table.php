@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCriteriosDesempenoTable extends Migration
+class CreateCriteriosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCriteriosDesempenoTable extends Migration
      */
     public function up()
     {
-        Schema::create('criterios_desempeno', function (Blueprint $table) {
+        Schema::create('criterios', function (Blueprint $table) {
             $table->id();
             $table->string('numero',5);
             $table->string('descripcion',1000);
@@ -30,6 +30,6 @@ class CreateCriteriosDesempenoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('criterios_desempeno');
+        Schema::dropIfExists('criterios');
     }
 }

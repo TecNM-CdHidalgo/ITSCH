@@ -15,7 +15,7 @@ class CreateObjetivosTable extends Migration
     {
         Schema::create('objetivos', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion',200);
+            $table->string('descripcion',1000);
             $table->string('criterio',1000);
             $table->string('indicador',1000);
             $table->bigInteger('id_programa')->unsigned()->nullable();
