@@ -346,7 +346,7 @@
         <hr>
 
         <div class="collapse demo" style="text-align: right;">
-            <button class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</button>
+            <a href="{{ route('carreras.editEstructura',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
         </div>
 
         <div class="table-responsive">

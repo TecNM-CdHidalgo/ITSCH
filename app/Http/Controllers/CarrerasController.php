@@ -9,6 +9,11 @@ use App\Models\Especialidad;
 use App\Models\Objetivo;
 use App\Models\Atributo;
 use App\Models\Criterio;
+use App\Models\Personal;
+use App\Models\Formacion;
+use App\Models\Productos;
+
+
 
 class CarrerasController extends Controller
 {
@@ -266,6 +271,81 @@ class CarrerasController extends Controller
  
     /*Metodo para eliminar criterios */
     public function destroyCriterios(Request $request, $id)
+    {          
+        $criterio = Criterio::find($id);       
+        $criterio->delete();
+        return redirect()->route('carreras.editAtributos',$request->id_programa);
+    }
+
+    //Sección de Estructura academica
+
+   /*Edicion de especialidades*/
+   public function editEstructura($id_pro)
+   {
+       $programa=Programa::find($id_pro);
+
+       $personal=Personal::all();       
+    
+       return view('admin.contenido.carreras.editestructura')
+       ->with('personal',$personal)
+       ->with('programa',$programa);
+       
+   }
+
+   /*Metodo para agregar los programas educativos de la institución */
+   public function storeEstructura(Request $request)
+   {
+       //Guarda todos los campos en una sola linea
+       $personal = new Personal($request->input());         
+       $personal->save();
+       return redirect()->route('carreras.editEstructura',$request->id_programa);
+   }
+
+   /*Metodo para modificar objetivos */
+   public function updateEstructura(Request $request,$id)
+   {dd('Si llega');
+       $atributo = Atributo::find($id);
+       $atributo->numero = $request->numAtr;
+       $atributo->descripcion = $request->desAtr;      
+       $atributo->id_programa = $request->id_programa;
+       $atributo->save();
+       return redirect()->route('carreras.editAtributos',$request->id_programa);
+   }
+
+   /*Metodo para eliminar objetivos */
+   public function destroyEstructura(Request $request, $id)
+   {          
+       $atributo = Atributo::where('id',$id)->where('id_programa',$request->id_programa);       
+       $atributo->delete();
+       return redirect()->route('carreras.editAtributos',$request->id_programa);
+   }
+
+
+   //Sección de Detalles de estructura academica
+
+   /*Metodo para agregar los programas educativos de la institución */
+   public function storeDetalles(Request $request)
+   {
+       $atributo = new Criterio();
+       $atributo->numero = $request->numero;
+       $atributo->descripcion = $request->descripcion;              
+       $atributo->id_atributos = $request->id_atributos;
+       $atributo->save();
+       return redirect()->route('carreras.editAtributos',$request->id_programa);
+   }
+
+    /*Metodo para modificar criterios */
+    public function updateDetalles(Request $request,$id)
+    {
+        $criterio = Criterio::find($id);
+        $criterio->numero = $request->numCri;
+        $criterio->descripcion = $request->desCri;      
+        $criterio->save();
+        return redirect()->route('carreras.editAtributos',$request->id_programa);
+    }
+ 
+    /*Metodo para eliminar criterios */
+    public function destroyDetalles(Request $request, $id)
     {          
         $criterio = Criterio::find($id);       
         $criterio->delete();

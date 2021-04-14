@@ -207,5 +207,12 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/storeCriterios', [CarrerasController::class, 'storeCriterios'])->name('carreras.storeCriterios');
 	Route::get('contenido/carreras/updateCriterios/{id}', [CarrerasController::class, 'updateCriterios'])->name('carreras.updateCriterios');
 	Route::get('contenido/carreras/destroyCriterios/{id}', [CarrerasController::class, 'destroyCriterios'])->name('carreras.destroyCriterios');
+	Route::get('contenido/carreras/editEstructura/{id_pro}', [CarrerasController::class, 'editEstructura'])->name('carreras.editEstructura');
+	Route::get('contenido/carreras/storeEstructura', [CarrerasController::class, 'storeEstructura'])->name('carreras.storeEstructura');
+	Route::get('contenido/carreras/updateEstructura/{id}', [CarrerasController::class, 'updateEstructura'])->name('carreras.updateEstructura');
+	Route::get('contenido/carreras/destroyEstructura/{id}', [CarrerasController::class, 'destroyEstructura'])->name('carreras.destroyEstructura');
+	Route::get('contenido/carreras/storeDetalles', [CarrerasController::class, 'storeDetalles'])->name('carreras.storeDetalles');
+	Route::get('contenido/carreras/updateDetalles/{id}', [CarrerasController::class, 'updateDetalles'])->name('carreras.updateDetalles');
+	Route::get('contenido/carreras/destroyDetalles/{id}', [CarrerasController::class, 'destroyDetalles'])->name('carreras.destroyDetalles');
 
 });
