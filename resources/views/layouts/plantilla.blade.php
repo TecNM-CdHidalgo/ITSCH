@@ -33,8 +33,11 @@
     <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
       <img class="imgBand" src="{{ asset('images/banderas/correo_icono.png') }}" alt="Buzón">
     </a>
-    <a href="#" title="Calendario Académico" target="_blank">
+    <a href="{{ asset('documents/content/documentos_apoyo/CALENDARIO FEB-JUN 2021.pdf') }}" title="Calendario Académico" target="_blank">
       <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
+    </a>
+    <a href="{{ asset('documents/content/documentos_apoyo/horarios_fj2021.pdf') }}" title="Horarios de Grupos" target="_blank">
+      <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
     </a>
     <a href='?vista=&a#googtrans(es|zh-CN)'>
       <img class="imgBand" src="{{ asset('images/banderas/china_icono.png') }}" title='Mandarín'
