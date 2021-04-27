@@ -19,10 +19,9 @@ class CreatePersonalTable extends Migration
             $table->string('ap_paterno',50);
             $table->string('ap_materno',50)->nullable();
             $table->string('email',50);
-            $table->string('puesto',50);
+            $table->string('puesto',200);
             $table->string('telefono',15)->nullable();
-            $table->integer('extension')->nullable();
-            $table->string('facebook',50)->nullable();
+            $table->integer('extension')->nullable();            
             $table->bigInteger('id_programa')->unsigned()->nullable();
             $table->foreign('id_programa')->references('id')->on('programas')->onDelete('cascade');
             $table->timestamps();

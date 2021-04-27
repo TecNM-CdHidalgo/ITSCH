@@ -11,7 +11,7 @@ use App\Models\Atributo;
 use App\Models\Criterio;
 use App\Models\Personal;
 use App\Models\Formacion;
-use App\Models\Productos;
+use App\Models\Producto;
 
 
 
@@ -283,16 +283,19 @@ class CarrerasController extends Controller
    public function editEstructura($id_pro)
    {
        $programa=Programa::find($id_pro);
-
-       $personal=Personal::all();       
-    
+       $personal=Personal::all(); 
+       $formacion=Formacion::all(); 
+       $productos=Producto::all();      
+     
        return view('admin.contenido.carreras.editestructura')
        ->with('personal',$personal)
-       ->with('programa',$programa);
+       ->with('programa',$programa)
+       ->with('formacion',$formacion)
+       ->with('productos',$productos);
        
    }
 
-   /*Metodo para agregar los programas educativos de la institución */
+   /*Metodo para agregar profesores*/
    public function storeEstructura(Request $request)
    {
        //Guarda todos los campos en una sola linea
@@ -301,38 +304,57 @@ class CarrerasController extends Controller
        return redirect()->route('carreras.editEstructura',$request->id_programa);
    }
 
-   /*Metodo para modificar objetivos */
+   /*Metodo para modificar profesores */
    public function updateEstructura(Request $request,$id)
-   {dd('Si llega');
-       $atributo = Atributo::find($id);
-       $atributo->numero = $request->numAtr;
-       $atributo->descripcion = $request->desAtr;      
-       $atributo->id_programa = $request->id_programa;
-       $atributo->save();
-       return redirect()->route('carreras.editAtributos',$request->id_programa);
+   {
+        $personal = Personal::where ('id', $id)->first();
+        $personal->fill($request->all());      
+        $personal->save();
+        return redirect()->route('carreras.editEstructura',$request->id_programa);
    }
 
-   /*Metodo para eliminar objetivos */
+   /*Metodo para eliminar Profesores */
    public function destroyEstructura(Request $request, $id)
-   {          
-       $atributo = Atributo::where('id',$id)->where('id_programa',$request->id_programa);       
-       $atributo->delete();
-       return redirect()->route('carreras.editAtributos',$request->id_programa);
+   {       
+       $personal = Personal::where('id',$id)->where('id_programa',$request->id_programa);       
+       $personal->delete();
+       return redirect()->route('carreras.editEstructura',$request->id_programa);    
    }
 
 
    //Sección de Detalles de estructura academica
 
-   /*Metodo para agregar los programas educativos de la institución */
-   public function storeDetalles(Request $request)
+   //Metodo para llamar la vista de ddetalle y editar formación y productos
+   public function editDetalles($id_pro,$id_per)
    {
-       $atributo = new Criterio();
-       $atributo->numero = $request->numero;
-       $atributo->descripcion = $request->descripcion;              
-       $atributo->id_atributos = $request->id_atributos;
-       $atributo->save();
-       return redirect()->route('carreras.editAtributos',$request->id_programa);
+       $programa=Programa::find($id_pro);
+       $formacion=Formacion::where('id_personal',$id_per)->get(); 
+       $productos=Producto::where('id_personal',$id_per)->get();
+       $personal=Personal::find($id_per);      
+   
+       return view('admin.contenido.carreras.editdetalleestructura')       
+       ->with('programa',$programa)
+       ->with('formacion',$formacion)
+       ->with('productos',$productos)
+       ->with('personal',$personal);
+       
    }
+
+   /*Metodo para agregar la formación academica de los profesores */
+   public function storeDetallesFor(Request $request)
+   {
+       $formacion = new Formacion($request->input());      
+       $formacion->save();       
+       return redirect()->route('carreras.editEstructura',$request->id_programa);
+   }
+
+    /*Metodo para agregar la producción academica de los profesores */
+    public function storeDetallesPro(Request $request)
+    {
+        $produccion = new Producto($request->input());      
+        $produccion->save();       
+        return redirect()->route('carreras.editEstructura',$request->id_programa);
+    }
 
     /*Metodo para modificar criterios */
     public function updateDetalles(Request $request,$id)
