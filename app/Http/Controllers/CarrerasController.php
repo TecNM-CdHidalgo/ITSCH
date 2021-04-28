@@ -19,16 +19,43 @@ class CarrerasController extends Controller
 {
     //Mostramos una carrera inicial
     public function index()
-    {   
-        $idPro=Programa::first('id');        
+    {
+        $idPro=Programa::first('id');
+        if (empty($idPro))
+        {
+            return view('admin.contenido.carreras.inicializar');
+        }
         $programas=DB::table('programas')->select('id','nombre')->get();
         $pro_act=Programa::find($idPro->id);
         $especialidades=Especialidad::where('id_programa',$idPro->id)->get();
         $objetivos=Objetivo::where('id_programa',$idPro->id)->get();
-        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri') 
-        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')            
-        ->where('atributos.id_programa',$idPro->id)           
-        ->get();               
+        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
+        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
+        ->where('atributos.id_programa',$idPro->id)
+        ->get();
+        return view('admin.contenido.carreras.index')
+        ->with('programas',$programas)
+        ->with('pro_act',$pro_act)
+        ->with('especialidades',$especialidades)
+        ->with('objetivos',$objetivos)
+        ->with('atributos',$atributos);
+    }
+
+    //Metodo que inicializa la BD con la primera carrera
+    public function inicializar(Request $request)
+    {
+        $programa = new Programa($request->input());
+        $programa->save();
+
+        $idPro=Programa::first('id');
+        $programas=DB::table('programas')->select('id','nombre')->get();
+        $pro_act=Programa::find($idPro->id);
+        $especialidades=Especialidad::where('id_programa',$idPro->id)->get();
+        $objetivos=Objetivo::where('id_programa',$idPro->id)->get();
+        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
+        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
+        ->where('atributos.id_programa',$idPro->id)
+        ->get();
         return view('admin.contenido.carreras.index')
         ->with('programas',$programas)
         ->with('pro_act',$pro_act)
@@ -41,24 +68,24 @@ class CarrerasController extends Controller
     public function show($id)
     {
         $programas=DB::table('programas')->select('id','nombre')->get();
-        $pro_act=Programa::find($id);       
-        $especialidades=Especialidad::where('id_programa',$id)->get();   
-        $objetivos=Objetivo::where('id_programa',$id)->get(); 
-        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri') 
-        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')            
-        ->where('atributos.id_programa',$id)           
-        ->get();    
+        $pro_act=Programa::find($id);
+        $especialidades=Especialidad::where('id_programa',$id)->get();
+        $objetivos=Objetivo::where('id_programa',$id)->get();
+        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
+        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
+        ->where('atributos.id_programa',$id)
+        ->get();
         return view('admin.contenido.carreras.index')
         ->with('programas',$programas)
         ->with('pro_act',$pro_act)
         ->with('especialidades',$especialidades)
         ->with('objetivos',$objetivos)
-        ->with('atributos',$atributos);    
+        ->with('atributos',$atributos);
     }
 
     /*Metodo para agregar y editar los programas educativos de la institución */
     public function editCarrera()
-    {                
+    {
         $programas=Programa::all();
         return view('admin.contenido.carreras.editcarreras')->with('programas',$programas);
     }
@@ -87,11 +114,11 @@ class CarrerasController extends Controller
         $programa = Programa::find($id);
         $programa->delete();
         return redirect()->route('carreras.editCarrera');
-    }   
+    }
 
     //Metodo para agregar contenido a los programas educativos
     public function updatecarreracom(Request $request, $id)
-    {               
+    {
         $carrera = Programa::find($id);
         $carrera->plan_estudios = $request->plan_estudios;
         $carrera->definicion = $request->definicion;
@@ -105,8 +132,8 @@ class CarrerasController extends Controller
         $carrera->save();
 
         return back()->withInput();
-    } 
-    
+    }
+
 
     //Sección de Especialidades
 
@@ -114,7 +141,7 @@ class CarrerasController extends Controller
     public function editEspecialidad($id)
     {
         $programa=Programa::find($id);
-        $especialidades=Especialidad::where('id_programa', $id)->get();               
+        $especialidades=Especialidad::where('id_programa', $id)->get();
         return view('admin.contenido.carreras.editespecialidades')
         ->with('especialidades',$especialidades)
         ->with('programa',$programa);
@@ -146,8 +173,8 @@ class CarrerasController extends Controller
 
     /*Metodo para eliminar especialidades */
     public function destroyEspecialidad(Request $request, $id)
-    {          
-        $especialidad = Especialidad::where('id',$id)->where('id_programa',$request->id_programa);       
+    {
+        $especialidad = Especialidad::where('id',$id)->where('id_programa',$request->id_programa);
         $especialidad->delete();
         return redirect()->route('carreras.editEspecialidad',$request->id_programa);
     }
@@ -158,7 +185,7 @@ class CarrerasController extends Controller
     public function editObjetivos($id)
     {
         $programa=Programa::find($id);
-        $objetivos=Objetivo::where('id_programa', $id)->get();               
+        $objetivos=Objetivo::where('id_programa', $id)->get();
         return view('admin.contenido.carreras.editobjetivos')
         ->with('objetivos',$objetivos)
         ->with('programa',$programa);
@@ -190,8 +217,8 @@ class CarrerasController extends Controller
 
     /*Metodo para eliminar objetivos */
     public function destroyObjetivos(Request $request, $id)
-    {          
-        $objetivo = Objetivo::where('id',$id)->where('id_programa',$request->id_programa);       
+    {
+        $objetivo = Objetivo::where('id',$id)->where('id_programa',$request->id_programa);
         $objetivo->delete();
         return redirect()->route('carreras.editObjetivos',$request->id_programa);
     }
@@ -204,15 +231,15 @@ class CarrerasController extends Controller
    {
        $programa=Programa::find($id_pro);
 
-       $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri') 
-       ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')            
-       ->where('atributos.id_programa',$id_pro)           
-       ->get();       
-    
+       $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
+       ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
+       ->where('atributos.id_programa',$id_pro)
+       ->get();
+
        return view('admin.contenido.carreras.editatributos')
        ->with('atributos',$atributos)
        ->with('programa',$programa);
-       
+
    }
 
    /*Metodo para agregar los programas educativos de la institución */
@@ -220,7 +247,7 @@ class CarrerasController extends Controller
    {
        $atributo = new Atributo();
        $atributo->numero = $request->numero;
-       $atributo->descripcion = $request->descripcion;              
+       $atributo->descripcion = $request->descripcion;
        $atributo->id_programa = $request->id_programa;
        $atributo->save();
        return redirect()->route('carreras.editAtributos',$request->id_programa);
@@ -231,7 +258,7 @@ class CarrerasController extends Controller
    {
        $atributo = Atributo::find($id);
        $atributo->numero = $request->numAtr;
-       $atributo->descripcion = $request->desAtr;      
+       $atributo->descripcion = $request->desAtr;
        $atributo->id_programa = $request->id_programa;
        $atributo->save();
        return redirect()->route('carreras.editAtributos',$request->id_programa);
@@ -239,8 +266,8 @@ class CarrerasController extends Controller
 
    /*Metodo para eliminar objetivos */
    public function destroyAtributos(Request $request, $id)
-   {          
-       $atributo = Atributo::where('id',$id)->where('id_programa',$request->id_programa);       
+   {
+       $atributo = Atributo::where('id',$id)->where('id_programa',$request->id_programa);
        $atributo->delete();
        return redirect()->route('carreras.editAtributos',$request->id_programa);
    }
@@ -253,7 +280,7 @@ class CarrerasController extends Controller
    {
        $atributo = new Criterio();
        $atributo->numero = $request->numero;
-       $atributo->descripcion = $request->descripcion;              
+       $atributo->descripcion = $request->descripcion;
        $atributo->id_atributos = $request->id_atributos;
        $atributo->save();
        return redirect()->route('carreras.editAtributos',$request->id_programa);
@@ -264,15 +291,15 @@ class CarrerasController extends Controller
     {
         $criterio = Criterio::find($id);
         $criterio->numero = $request->numCri;
-        $criterio->descripcion = $request->desCri;      
+        $criterio->descripcion = $request->desCri;
         $criterio->save();
         return redirect()->route('carreras.editAtributos',$request->id_programa);
     }
- 
+
     /*Metodo para eliminar criterios */
     public function destroyCriterios(Request $request, $id)
-    {          
-        $criterio = Criterio::find($id);       
+    {
+        $criterio = Criterio::find($id);
         $criterio->delete();
         return redirect()->route('carreras.editAtributos',$request->id_programa);
     }
@@ -283,23 +310,23 @@ class CarrerasController extends Controller
    public function editEstructura($id_pro)
    {
        $programa=Programa::find($id_pro);
-       $personal=Personal::all(); 
-       $formacion=Formacion::all(); 
-       $productos=Producto::all();      
-     
+       $personal=Personal::all();
+       $formacion=Formacion::all();
+       $productos=Producto::all();
+
        return view('admin.contenido.carreras.editestructura')
        ->with('personal',$personal)
        ->with('programa',$programa)
        ->with('formacion',$formacion)
        ->with('productos',$productos);
-       
+
    }
 
    /*Metodo para agregar profesores*/
    public function storeEstructura(Request $request)
    {
        //Guarda todos los campos en una sola linea
-       $personal = new Personal($request->input());         
+       $personal = new Personal($request->input());
        $personal->save();
        return redirect()->route('carreras.editEstructura',$request->id_programa);
    }
@@ -308,17 +335,17 @@ class CarrerasController extends Controller
    public function updateEstructura(Request $request,$id)
    {
         $personal = Personal::where ('id', $id)->first();
-        $personal->fill($request->all());      
+        $personal->fill($request->all());
         $personal->save();
         return redirect()->route('carreras.editEstructura',$request->id_programa);
    }
 
    /*Metodo para eliminar Profesores */
    public function destroyEstructura(Request $request, $id)
-   {       
-       $personal = Personal::where('id',$id)->where('id_programa',$request->id_programa);       
+   {
+       $personal = Personal::where('id',$id)->where('id_programa',$request->id_programa);
        $personal->delete();
-       return redirect()->route('carreras.editEstructura',$request->id_programa);    
+       return redirect()->route('carreras.editEstructura',$request->id_programa);
    }
 
 
@@ -328,31 +355,31 @@ class CarrerasController extends Controller
    public function editDetalles($id_pro,$id_per)
    {
        $programa=Programa::find($id_pro);
-       $formacion=Formacion::where('id_personal',$id_per)->get(); 
+       $formacion=Formacion::where('id_personal',$id_per)->get();
        $productos=Producto::where('id_personal',$id_per)->get();
-       $personal=Personal::find($id_per);      
-   
-       return view('admin.contenido.carreras.editdetalleestructura')       
+       $personal=Personal::find($id_per);
+
+       return view('admin.contenido.carreras.editdetalleestructura')
        ->with('programa',$programa)
        ->with('formacion',$formacion)
        ->with('productos',$productos)
        ->with('personal',$personal);
-       
+
    }
 
    /*Metodo para agregar la formación academica de los profesores */
    public function storeDetallesFor(Request $request)
    {
-       $formacion = new Formacion($request->input());      
-       $formacion->save();       
+       $formacion = new Formacion($request->input());
+       $formacion->save();
        return redirect()->route('carreras.editEstructura',$request->id_programa);
    }
 
     /*Metodo para agregar la producción academica de los profesores */
     public function storeDetallesPro(Request $request)
     {
-        $produccion = new Producto($request->input());      
-        $produccion->save();       
+        $produccion = new Producto($request->input());
+        $produccion->save();
         return redirect()->route('carreras.editEstructura',$request->id_programa);
     }
 
@@ -361,18 +388,18 @@ class CarrerasController extends Controller
     {
         $criterio = Criterio::find($id);
         $criterio->numero = $request->numCri;
-        $criterio->descripcion = $request->desCri;      
+        $criterio->descripcion = $request->desCri;
         $criterio->save();
         return redirect()->route('carreras.editAtributos',$request->id_programa);
     }
- 
+
     /*Metodo para eliminar criterios */
     public function destroyDetalles(Request $request, $id)
-    {          
-        $criterio = Criterio::find($id);       
+    {
+        $criterio = Criterio::find($id);
         $criterio->delete();
         return redirect()->route('carreras.editAtributos',$request->id_programa);
     }
-  
+
 
 }
