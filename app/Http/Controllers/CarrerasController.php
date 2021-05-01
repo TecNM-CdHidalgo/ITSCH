@@ -383,22 +383,22 @@ class CarrerasController extends Controller
         return redirect()->route('carreras.editEstructura',$request->id_programa);
     }
 
-    /*Metodo para modificar criterios */
-    public function updateDetalles(Request $request,$id)
-    {
-        $criterio = Criterio::find($id);
-        $criterio->numero = $request->numCri;
-        $criterio->descripcion = $request->desCri;
-        $criterio->save();
-        return redirect()->route('carreras.editAtributos',$request->id_programa);
+    /*Metodo para modificar Formación académica */
+    public function updateDetallesFormacion(Request $request,$id)
+    {   
+        $formacion = Formacion::where ('id', $id)->first();
+        $formacion->fill($request->all());
+        $formacion->save();
+        return redirect()->route('carreras.editEstructura',$request->id_programa);
+
     }
 
-    /*Metodo para eliminar criterios */
-    public function destroyDetalles(Request $request, $id)
+    /*Metodo para eliminar formación */
+    public function destroyDetallesFormacion(Request $request, $id)
     {
-        $criterio = Criterio::find($id);
-        $criterio->delete();
-        return redirect()->route('carreras.editAtributos',$request->id_programa);
+        $formacion = Formacion::find($id);
+        $formacion->delete();
+        return redirect()->route('carreras.editEstructura',$request->id_programa);
     }
 
 

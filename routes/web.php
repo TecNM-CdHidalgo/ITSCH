@@ -215,7 +215,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/editDetalles/{id_pro}/{id_per}', [CarrerasController::class, 'editDetalles'])->name('carreras.editDetalles');
 	Route::get('contenido/carreras/storeDetallesFormacion', [CarrerasController::class, 'storeDetallesFor'])->name('carreras.storeDetallesFor');
 	Route::get('contenido/carreras/storeDetallesProduccion', [CarrerasController::class, 'storeDetallesPro'])->name('carreras.storeDetallesPro');
-	Route::get('contenido/carreras/updateDetalles/{id}', [CarrerasController::class, 'updateDetalles'])->name('carreras.updateDetalles');
-	Route::get('contenido/carreras/destroyDetalles/{id}', [CarrerasController::class, 'destroyDetalles'])->name('carreras.destroyDetalles');
+	Route::get('contenido/carreras/updateDetallesFormacion/{id}', [CarrerasController::class, 'updateDetallesFormacion'])->name('carreras.updateDetallesForm');
+	Route::get('contenido/carreras/destroyDetallesFormacion/{id}', [CarrerasController::class, 'destroyDetallesFormacion'])->name('carreras.destroyDetallesForm');
 
 });
