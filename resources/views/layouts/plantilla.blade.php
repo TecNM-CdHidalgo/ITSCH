@@ -144,6 +144,7 @@
           </a>
           <ul class="dropdown-menu">
             <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
+            <a class="dropdown-item"  href="{{route('normativos.etica')}}">Subcomité de ética</a>
             <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
 
 

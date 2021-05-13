@@ -89,6 +89,7 @@ Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluat
 Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 
 //Normativos y lineamientos
+Route::get('normativos/etica',function(){return view('content.normativos.etica');})->name('normativos.etica');
 Route::get('normativos/calidad',function(){return view('content.normativos.calidad');})->name('normativos.calidad');
 Route::get('normativos/igualdad',function(){return view('content.normativos.igualdad');})->name('normativos.igualdad');
 Route::get('normativos/ambiental',function(){return view('content.normativos.ambiental');})->name('normativos.ambiental');
