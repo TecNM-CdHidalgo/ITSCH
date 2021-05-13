@@ -313,22 +313,78 @@ class CarrerasController extends Controller
     }
 
     /*Metodo para modificar especialidades */
-    public function updateEspecialidad(Request $request,$id)
+    public function updateEspecialidad(Request $request,$id_esp)
     {
-        $especialidad = Especialidad::find($id);
-        $especialidad->nombre = $request->nombre;
-        $especialidad->clave = $request->clave;
-        $especialidad->objetivo = $request->objetivo;
-        $especialidad->id_programa = $request->id_programa;
-        $especialidad->save();
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try 
+        {
+            $especialidad = Especialidad::find($id_esp);
+            $especialidad->nombre = $request->nombre;
+            $especialidad->clave = $request->clave;
+            $especialidad->objetivo = $request->objetivo;
+            $especialidad->id_programa = $request->id_programa;
+            $especialidad->save();
+
+            if(!Storage::has('public/carreras_archivos')){
+                Storage::makeDirectory('public/carreras_archivos');
+            }
+            $reticula = Reticula::where('id_especialidad',$id_esp)->get();
+            if($reticula == null){
+                return response()->json(array(['type' => 'error', 'message' => 'El articulo no existe']));
+            }
+            if($request->has('reticula')){
+                $file = $request->reticula;
+                $imageExtension = $file->getClientOriginalExtension();
+                $imageExtension = strtolower($imageExtension);
+                if($imageExtension == 'pdf'){
+                    $path = storage_path().'/app/public/carreras_archivos/';
+                    $name = 'reticula'.time().'.'.strtolower($imageExtension);
+                    $file->move($path,$name);
+                    Storage::delete(['public/carreras_archivos/'.$reticula[0]->nom_arch_ret]);
+                    $reticula = Reticula::where('id_especialidad',$id_esp)
+                    ->update(['nom_arch_ret' => $name]);                    
+                }else{
+                    return response()->json(array(['type' => 'error', 'message' => 'La extension '.$imageExtension.' no es valida']));
+                }
+            }             
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {        
+            DB::rollback();                
+            return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
+        }
+        // Hacemos los cambios permanentes ya que no han habido errores
+        DB::commit(); 
         return redirect()->route('carreras.editEspecialidad',$request->id_programa);
     }
 
     /*Metodo para eliminar especialidades */
-    public function destroyEspecialidad(Request $request, $id)
+    public function destroyEspecialidad(Request $request, $id_esp)
     {
-        $especialidad = Especialidad::where('id',$id)->where('id_programa',$request->id_programa);
-        $especialidad->delete();
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try 
+        {
+            $especialidad = Especialidad::where('id',$id_esp)->where('id_programa',$request->id_programa);
+            $especialidad->delete();
+                      
+            $reticula = Reticula::where('id_especialidad',$id_esp)->get(); dd($reticula);        
+            if($reticula->isEmpti()){
+                return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error ']));
+            }
+            Storage::delete(['public/carreras_archivos/'.$reticula->nom_arch_ret]);
+            Reticula::where('id_especialidad',$id_esp)->delete();           
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {        
+            DB::rollback();                
+            return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
+        }
+        // Hacemos los cambios permanentes ya que no han habido errores
+        DB::commit(); 
         return redirect()->route('carreras.editEspecialidad',$request->id_programa);
     }
 

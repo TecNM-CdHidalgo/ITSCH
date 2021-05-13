@@ -195,7 +195,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('contenido/carreras/updateCarreraCom/{id}', [CarrerasController::class, 'updatecarreracom'])->name('carreras.updateCarreraCom');
     Route::get('contenido/carreras/editEspecialidad/{id}', [CarrerasController::class, 'editEspecialidad'])->name('carreras.editEspecialidad');
 	Route::post('contenido/carreras/storeEspecialidad', [CarrerasController::class, 'storeEspecialidad'])->name('carreras.storeEspecialidad');
-	Route::get('contenido/carreras/updateEspecialidad/{id}', [CarrerasController::class, 'updateEspecialidad'])->name('carreras.updateEspecialidad');
+	Route::post('contenido/carreras/updateEspecialidad/{id}', [CarrerasController::class, 'updateEspecialidad'])->name('carreras.updateEspecialidad');
 	Route::get('contenido/carreras/destroyEspecialidad/{id}', [CarrerasController::class, 'destroyEspecialidad'])->name('carreras.destroyEspecialidad');
 	Route::get('contenido/carreras/editObjetivos/{id}', [CarrerasController::class, 'editObjetivos'])->name('carreras.editObjetivos');
 	Route::get('contenido/carreras/storeObjetivos', [CarrerasController::class, 'storeObjetivos'])->name('carreras.storeObjetivos');

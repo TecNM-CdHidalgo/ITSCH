@@ -86,11 +86,11 @@
          <div class="modal fade" id="myModalEditar">
             <div class="modal-dialog">
             <div class="modal-content">
-                <form id="formEditar">
+                <form id="formEditar" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Editar Especialidad</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Editar Especialidad</h4>                        
                     </div>
 
                     <!-- Modal body -->
@@ -111,6 +111,9 @@
                            
                         <label>Objetivo</label>                          
                         <textarea class="form-control" required name="objetivo" id="obj_update" rows="10"></textarea>                            
+                        <br>
+
+                        <input type="file" name="reticula" id="Ed_reticula" class="form-control-file border">
                         <br>
 
                         <div class="input-group mb-3 input-group-sm">
