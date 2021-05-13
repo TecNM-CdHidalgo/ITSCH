@@ -14,7 +14,8 @@
             <th style="width: 5%">ID</th>
             <th style="width: 20%">Nombre</th>
             <th style="width: 15%">Clave</th>
-            <th style="width: 50%">Objetivo</th>
+            <th style="width: 45%">Objetivo</th>
+            <th style="width: 5%">Reticula</th>
             <th style="width: 10%">Acciones</th>
         </thead>
         <tbody>
@@ -24,10 +25,14 @@
                     <td>{{ $esp->nombre }}</td>
                     <td>{{ $esp->clave }}</td>
                     <td>{{ $esp->objetivo }}</td>
-                    <td>
+                    <td>                        
+                        <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
+                    </td>
+                    <td>  
                         <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditar({{ $esp }})">
                             <i class='fas fa-edit' style='font-size:14px'></i>
                         </button>
+                    
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminar({{ $esp }})">
                             <i class='fas fa-trash-alt' style='font-size:14px'></i>
                         </button> 
@@ -44,11 +49,11 @@
         <div class="modal fade" id="myModalAltas">
             <div class="modal-dialog">
             <div class="modal-content">
-                <form action="{{ route('carreras.storeEspecialidad') }}">
+                <form action="{{ route('carreras.storeEspecialidad') }}" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Alta de especialidad</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alta de especialidad</h4>                       
                     </div>
 
                     <!-- Modal body -->
@@ -58,6 +63,8 @@
                         <input class="form-control" name="clave" type="text" required placeholder="Clave de la especialidad">
                         <br>
                         <textarea class="form-control" name="objetivo" id=""  rows="5" placeholder="Objetivo"></textarea>
+                        <br>
+                        <input type="file" name="reticula" id="reticula" class="form-control-file border">
                         <br>
                         <input type="text" class="form-control" value="{{ $programa->nombre }}" readonly>
                         <input type="hidden" name="id_programa" value="{{ $programa->id }}">

@@ -192,9 +192,9 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/updateCarrera/{id}', [CarrerasController::class, 'updateCarrera'])->name('carreras.updateCarrera');
 	Route::get('contenido/carreras/destroyCarrera/{id}', [CarrerasController::class, 'destroyCarrera'])->name('carreras.destroyCarrera');
 	Route::get('contenido/carreras/showCarrera/{id}', [CarrerasController::class, 'show'])->name('carreras.showCarrera');
-	Route::get('contenido/carreras/updateCarreraCom/{id}', [CarrerasController::class, 'updatecarreracom'])->name('carreras.updateCarreraCom');
+	Route::post('contenido/carreras/updateCarreraCom/{id}', [CarrerasController::class, 'updatecarreracom'])->name('carreras.updateCarreraCom');
     Route::get('contenido/carreras/editEspecialidad/{id}', [CarrerasController::class, 'editEspecialidad'])->name('carreras.editEspecialidad');
-	Route::get('contenido/carreras/storeEspecialidad', [CarrerasController::class, 'storeEspecialidad'])->name('carreras.storeEspecialidad');
+	Route::post('contenido/carreras/storeEspecialidad', [CarrerasController::class, 'storeEspecialidad'])->name('carreras.storeEspecialidad');
 	Route::get('contenido/carreras/updateEspecialidad/{id}', [CarrerasController::class, 'updateEspecialidad'])->name('carreras.updateEspecialidad');
 	Route::get('contenido/carreras/destroyEspecialidad/{id}', [CarrerasController::class, 'destroyEspecialidad'])->name('carreras.destroyEspecialidad');
 	Route::get('contenido/carreras/editObjetivos/{id}', [CarrerasController::class, 'editObjetivos'])->name('carreras.editObjetivos');
@@ -217,5 +217,12 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/storeDetallesProduccion', [CarrerasController::class, 'storeDetallesPro'])->name('carreras.storeDetallesPro');
 	Route::get('contenido/carreras/updateDetallesFormacion/{id}', [CarrerasController::class, 'updateDetallesFormacion'])->name('carreras.updateDetallesForm');
 	Route::get('contenido/carreras/destroyDetallesFormacion/{id}', [CarrerasController::class, 'destroyDetallesFormacion'])->name('carreras.destroyDetallesForm');
-
+	Route::get('contenido/carreras/updateDetallesProduccion/{id}', [CarrerasController::class, 'updateDetallesProduccion'])->name('carreras.updateDetallesProd');
+	Route::get('contenido/carreras/destroyDetallesProduccion/{id}', [CarrerasController::class, 'destroyDetallesProduccion'])->name('carreras.destroyDetallesProd');
+	Route::get('contenido/carreras/storeContacto/{id}', [CarrerasController::class, 'storeContacto'])->name('carreras.storeContacto');
+	Route::get('contenido/carreras/showContacto/{id}', [CarrerasController::class, 'showContacto'])->name('carreras.showContacto');
+	Route::get('contenido/carreras/showContactoLeido/{id}', [CarrerasController::class, 'showContactoLeido'])->name('carreras.showContactoLeido');
+	Route::get('contenido/carreras/readContacto/{id_pro}', [CarrerasController::class, 'readContacto'])->name('carreras.readContacto');
+	Route::get('contenido/carreras/updateContacto/{id_pro}', [CarrerasController::class, 'updateContacto'])->name('carreras.updateContacto');
+	Route::get('contenido/carreras/destroyContacto/{id_pro}', [CarrerasController::class, 'destroyContacto'])->name('carreras.destroyContacto');	
 });
