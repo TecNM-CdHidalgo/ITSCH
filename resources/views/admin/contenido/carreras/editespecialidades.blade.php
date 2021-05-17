@@ -64,6 +64,7 @@
                         <br>
                         <textarea class="form-control" name="objetivo" id=""  rows="5" placeholder="Objetivo"></textarea>
                         <br>
+                        <label for="reticula">Formato de la retícula completa de la especialidad</label>
                         <input type="file" name="reticula" id="reticula" class="form-control-file border">
                         <br>
                         <input type="text" class="form-control" value="{{ $programa->nombre }}" readonly>
@@ -82,8 +83,8 @@
             </div>
         </div>
 
-         <!-- Modal Editar -->
-         <div class="modal fade" id="myModalEditar">
+        <!-- Modal Editar -->
+        <div class="modal fade" id="myModalEditar">
             <div class="modal-dialog">
             <div class="modal-content">
                 <form id="formEditar" method="POST" enctype="multipart/form-data">
@@ -112,7 +113,7 @@
                         <label>Objetivo</label>                          
                         <textarea class="form-control" required name="objetivo" id="obj_update" rows="10"></textarea>                            
                         <br>
-
+                        <label for="Ed_reticula">Formato de la retícula completa de la especialidad</label>
                         <input type="file" name="reticula" id="Ed_reticula" class="form-control-file border">
                         <br>
 
@@ -143,8 +144,7 @@
                 <form id="formEliminar">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title" id="nom_eliminar"></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="nom_eliminar"></h4>
                     </div>
 
                     <!-- Modal body -->

@@ -179,97 +179,7 @@
             </textarea>
         </div>
         <br>
-
-
-        <h3>Objetivos educacionales</h3>
-        <div class="collapse demo" style="text-align: right;">
-            <a href="{{ route('carreras.editObjetivos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-        </div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>                    
-                    <th style="width: 40%">Descripción</th>
-                    <th style="width: 40%">Criterio</th>
-                    <th style="width: 20%">Indicador</th>                    
-                </thead>
-                <tbody>
-                    @foreach ($objetivos as $obj)
-                        <tr>                            
-                            <td>{{ $obj->descripcion }}</td>
-                            <td>{{ $obj->criterio }}</td>
-                            <td>{{ $obj->indicador }}</td>                            
-                        </tr>                
-                    @endforeach           
-                </tbody>
-            </table>            
-        </div>
-        <br>
-
-        <h3>Atributos de egreso</h3>
-        <div class="collapse demo" style="text-align: right;">
-            <a href="{{ route('carreras.editAtributos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-sm">
-                <thead>            
-                    <th style="width: 5%">Numero</th>
-                    <th style="width: 35%">Descripción</th>                    
-                    <th style="width: 40%">Criterios</th>           
-                </thead>
-                <tbody>
-                    @php
-                        $van=0;
-                        $atrAnt="";
-                    @endphp
-                    @foreach ($atributos as $atr ) 
-                        @php                                                          
-                            if($atr->numAtr==$atrAnt)
-                            {
-                                $van=$van+1; 
-                                echo "<tr>";                                                                                                       
-                            }
-                            else 
-                            {
-                                echo "<tr>";
-                                $atrAnt=$atr->numAtr;
-                                $van=0;  
-                                                                                                   
-                            }
-                        @endphp                                              
-                        @if($van==0)                
-                                <td>{{ $atr->numAtr }}</td>
-                                <td>{{ $atr->desAtr }}</td>                                
-                                <td>                                              
-                                    <table class="table table-sm">                                       
-                                        <tbody>
-                                            <tr>
-                                                <td>{{  $atr->numCri }}</td>
-                                                <td>{{  $atr->desCri }}</td>                                               
-                                            </tr>                            
-                                        </tbody>
-                                    </table>                            
-                                </td>                                                                    
-                        @else              
-                            <td></td>
-                            <td></td>                                             
-                            <td>                                                                                                  
-                                <table class="table table-sm">                                                  
-                                    <tbody>
-                                        <tr>
-                                            <td>{{  $atr->numCri }}</td>
-                                            <td>{{  $atr->desCri }}</td>                                            
-                                        </tr>                            
-                                    </tbody>
-                                </table>                                      
-                            </td>
-                       
-                        @endif                              
-                    @endforeach            
-                </tbody>
-            </table>
-        </div>
-        <br>
-
+        
         <h3>Acreditación CACEI</h3>
             @if(!$archivos->isEmpty())           
                 @if($archivos[0]->nom_arch_acred<>"")
@@ -293,98 +203,10 @@
             <h6>Seleccona el archipo del PIID</h6>
             <input type="file" class="form-control-file border" name="piid">
         </div>
-        <hr class="red">
-        <h3>Plan de estudios</h3>
-        <hr class="red">
-
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header" style="text-align: right">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                        <i class="fa fa-plus-circle" style="font-size:36px"></i>
-                    </a>
-                </div>
-                <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <div class="collapse demo" style="text-align: right;">
-                            <button class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</button>
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="table table-sm">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Clave</th>
-                                    <th>Archivo</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Doe</td>
-                                    <td>002</td>
-                                    <td>xx</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Doe</td>
-                                    <td>002</td>
-                                    <td>xx</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Doe</td>
-                                    <td>002</td>
-                                    <td>xx</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <br>
-
-        <h3>Estructura académica</h3>
-        <hr>
-
-        <div class="collapse demo" style="text-align: right;">
-            <a href="{{ route('carreras.editEstructura',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-        </div>
-
-        <div class="table-responsive">
-            <table class="table">
-                <thead> 
-                    <th style="width: 5%">Numero</th>           
-                    <th style="width: 30%">Nombre</th>
-                    <th style="width: 40%">Area</th>
-                    <th style="width: 25%">Detalle</th>
-                            
-                </thead>
-                <tbody>  
-                    @foreach ($personal as $per)                                        
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $per->nombre }} {{ $per->ap_paterno }} {{ $per->ap_materno }}</td>
-                            <td>{{ $per->puesto }}</td>
-                            <td>                               
-                                <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModalDetalleEst" onclick="obtDetalleEst({{ $per }},{{ $formacion }},{{ $productos }},{{ $per->id }})">
-                                    <i class='far fa-eye' style='font-size:14px'></i>
-                                </button>
-                            </td>                    
-                        </tr>   
-                    @endforeach   
-                </tbody>
-            </table>
-            <br>
-        </div>
         <br>
-
         {{-- Botones de guardar y cancelar --}}
-        <div class="row collapse demo">
+        <div class="row collapse demo">           
             <div class="col-sm-8"></div>
             <div class="col-sm-2">
                 <button class="btn btn-sm btn-info" data-toggle="collapse" data-target=".demo" onclick="mostrar()">Cancelar</button>
@@ -394,6 +216,176 @@
             </div>
         </div>
     </form>
+
+
+    <hr class="red">
+    <h3>Plan de estudios</h3>
+    <hr class="red">
+
+    <div class="collapse demo" style="text-align: right;">
+        <a href="{{ route('carreras.editPlanEstudios',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+    </div>
+    <br>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" style="text-align: right">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                    <i class="fa fa-plus-circle" style="font-size:36px"></i>
+                </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body"> 
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Número</th>
+                                    <th>Nombre</th>
+                                    <th>Clave</th>
+                                    <th>Archivo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Doe</td>
+                                    <td>002</td>
+                                    <td>xx</td>
+                                </tr>                           
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h3>Objetivos educacionales</h3>
+    <div class="collapse demo" style="text-align: right;">
+        <a href="{{ route('carreras.editObjetivos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>                    
+                <th style="width: 40%">Descripción</th>
+                <th style="width: 40%">Criterio</th>
+                <th style="width: 20%">Indicador</th>                    
+            </thead>
+            <tbody>
+                @foreach ($objetivos as $obj)
+                    <tr>                            
+                        <td>{{ $obj->descripcion }}</td>
+                        <td>{{ $obj->criterio }}</td>
+                        <td>{{ $obj->indicador }}</td>                            
+                    </tr>                
+                @endforeach           
+            </tbody>
+        </table>            
+    </div>
+    <br>   
+
+    <h3>Atributos de egreso</h3>
+    <div class="collapse demo" style="text-align: right;">
+        <a href="{{ route('carreras.editAtributos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>            
+                <th style="width: 5%">Numero</th>
+                <th style="width: 35%">Descripción</th>                    
+                <th style="width: 40%">Criterios</th>           
+            </thead>
+            <tbody>
+                @php
+                    $van=0;
+                    $atrAnt="";
+                @endphp
+                @foreach ($atributos as $atr ) 
+                    @php                                                          
+                        if($atr->numAtr==$atrAnt)
+                        {
+                            $van=$van+1; 
+                            echo "<tr>";                                                                                                       
+                        }
+                        else 
+                        {
+                            echo "<tr>";
+                            $atrAnt=$atr->numAtr;
+                            $van=0;  
+                                                                                                
+                        }
+                    @endphp                                              
+                    @if($van==0)                
+                            <td>{{ $atr->numAtr }}</td>
+                            <td>{{ $atr->desAtr }}</td>                                
+                            <td>                                              
+                                <table class="table table-sm">                                       
+                                    <tbody>
+                                        <tr>
+                                            <td>{{  $atr->numCri }}</td>
+                                            <td>{{  $atr->desCri }}</td>                                               
+                                        </tr>                            
+                                    </tbody>
+                                </table>                            
+                            </td>                                                                    
+                    @else              
+                        <td></td>
+                        <td></td>                                             
+                        <td>                                                                                                  
+                            <table class="table table-sm">                                                  
+                                <tbody>
+                                    <tr>
+                                        <td>{{  $atr->numCri }}</td>
+                                        <td>{{  $atr->desCri }}</td>                                            
+                                    </tr>                            
+                                </tbody>
+                            </table>                                      
+                        </td>
+                    
+                    @endif                              
+                @endforeach            
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <h3>Estructura académica</h3>
+    <hr>
+
+    <div class="collapse demo" style="text-align: right;">
+        <a href="{{ route('carreras.editEstructura',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead> 
+                <th style="width: 5%">Numero</th>           
+                <th style="width: 30%">Nombre</th>
+                <th style="width: 40%">Area</th>
+                <th style="width: 25%">Detalle</th>
+                        
+            </thead>
+            <tbody>  
+                @foreach ($personal as $per)                                        
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $per->nombre }} {{ $per->ap_paterno }} {{ $per->ap_materno }}</td>
+                        <td>{{ $per->puesto }}</td>
+                        <td>                               
+                            <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModalDetalleEst" onclick="obtDetalleEst({{ $per }},{{ $formacion }},{{ $productos }},{{ $per->id }})">
+                                <i class='far fa-eye' style='font-size:14px'></i>
+                            </button>
+                        </td>                    
+                    </tr>   
+                @endforeach   
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <br>
+
+
     <br> 
     <h2> Contacto    </h2>
     <hr>   
