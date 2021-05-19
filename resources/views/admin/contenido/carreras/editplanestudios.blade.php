@@ -4,29 +4,30 @@
     <h4><a href="{{ route('carreras.index') }}"> Carreras/</a>Editar plan de estudios/{{ $programa[0]->nom_pro }}</h4>
     <hr>
 
-    <h5 id="nom_especialidad">Materias de la especialidad</h5>
+    <h5 id="nom_especialidad">Materias de la especialidad de {{ $esp_act->nombre }}</h5>
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-3"></div>
         <div class="col-sm-5">
-            <form id="formMostrarMatEsp">
+            <form action="{{ route('carreras.showMateriasEspecialidad',$programa[0]->id_pro) }}">
                 <div class="input-group mb-3 input-group-sm">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Especialidad</span>
                     </div>
-                    <select class="form-control form-control-sm" id="id_especialidad" required>
+                    <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
                         @foreach($especialidad as $esp)
                             <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
                         @endforeach                              
                     </select>
                     <div class="input-group-append">
-                        <button type="submit" class="btn btn-success" onclick="datosEnviar()">Mostrar</button>
+                        <button type="submit" class="btn btn-success">Mostrar</button>
                     </div>
                 </div>  
             </form>
         </div>
     </div>
-    
+    <hr class="red">
+
     <form action="{{ route('carreras.storeMatEsp',$programa[0]->id_pro) }}" method="POST" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="row"> 
@@ -254,16 +255,17 @@
                 $('#formEliminar').attr('action', r);
             }
 
-            //Obtiene datos de la especialidad a mostrar
-            function datosEnviar()
-            {
-                var id_esp=$( "#id_especialidad" ).val();                          
-                $('#formMostrar').attr('action','{{url('contenido/carreras')}}/showMatEspecialidad/'+id_esp);
-            }
+            //Metodo para obtener la especialidad que se esta trabajando
             function obtEspecialidad()
             {
                 $("#id_esp").val($( "#id_especialidad" ).val() );
             }
+
+            //Seleccionamos la opcion del select elegida por el usuario, cada ves que se carga la pagina
+            $(document).ready(function()
+            {
+                $("#id_especialidad").val({{ $esp_act->id }});
+            });
         </script>
     @endsection
     {{-- Fin de sección js --}}   

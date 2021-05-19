@@ -26,12 +26,23 @@ class CarrerasController extends Controller
 {
     //Mostramos una carrera inicial
     public function index()
-    {
+    {        
         $idPro=Programa::first('id');
         if (empty($idPro))
         {
             return view('admin.contenido.carreras.inicializar');
         }
+
+        //Datos para el plan de estudios
+        $programa=Programa::where('programas.id',$idPro->id)
+        ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')        
+        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
+        ->get();         
+        $especialidad=Especialidad::where('id_programa',$idPro->id)->get();  
+        $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
+        $esp_act=Especialidad::first(); 
+        //Fin de datos para el plan de estudios
+
         $archivos=Archivo::where('id_programa',$idPro->id)->get(); 
         $programas=DB::table('programas')->select('id','nombre')->get();
         $pro_act=Programa::find($idPro->id);
@@ -61,7 +72,12 @@ class CarrerasController extends Controller
         ->with('formacion',$formacion)
         ->with('productos',$productos)
         ->with('n_msg',$n_msg)
-        ->with('archivos',$archivos);
+        ->with('archivos',$archivos)
+        //Datos del plan de estudios
+        ->with('programa',$programa)
+        ->with('especialidad',$especialidad)
+        ->with('materias_esp',$materias_esp)
+        ->with('esp_act',$esp_act);
     }    
 
     //Mostramos carrera especifica
@@ -695,11 +711,30 @@ class CarrerasController extends Controller
         ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
         ->get();         
         $especialidad=Especialidad::where('id_programa',$id_pro)->get();  
-        $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get(); 
+        $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
+        $esp_act=Especialidad::first(); 
         return view('admin.contenido.carreras.editplanestudios')
         ->with('programa',$programa)
         ->with('especialidad',$especialidad)
-        ->with('materias_esp',$materias_esp);
+        ->with('materias_esp',$materias_esp)
+        ->with('esp_act',$esp_act);
+    }
+
+    //Metodo para consultar las materias de la especialidad
+    public function showMateriasEspecialidad(Request $request, $id_pro)
+    {     
+        $programa=Programa::where('programas.id',$id_pro)
+        ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')        
+        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
+        ->get();         
+        $especialidad=Especialidad::where('id_programa',$id_pro)->get();  
+        $materias_esp=Materia_especialidad::where('id_especialidad',$request->id_esp)->get(); 
+        $esp_act=Especialidad::find($request->id_esp);
+        return view('admin.contenido.carreras.editplanestudios')
+        ->with('programa',$programa)
+        ->with('especialidad',$especialidad)
+        ->with('materias_esp',$materias_esp)
+        ->with('esp_act',$esp_act);
     }
 
     //Metodo para gusrdar las materias
@@ -742,7 +777,9 @@ class CarrerasController extends Controller
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit(); 
-        return redirect()->route('carreras.editPlanEstudios',$id_pro);  
+        //return redirect()->route('carreras.editPlanEstudios',$id_pro); 
+        //Regresamos a la pagina anterior 
+        return back(); 
     }
 
     
@@ -866,7 +903,9 @@ class CarrerasController extends Controller
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit(); 
-        return redirect()->route('carreras.editPlanEstudios',$id_pro);  
+        //return redirect()->route('carreras.editPlanEstudios',$id_pro); 
+        //Regresamos a la pagina anterior 
+        return back();
     }
 
 }

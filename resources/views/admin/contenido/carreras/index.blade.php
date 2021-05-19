@@ -234,27 +234,84 @@
                 </a>
             </div>
             <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                <div class="card-body"> 
+                <div class="card-body">
+                    <h5 id="nom_especialidad">Materias de la especialidad de {{ $esp_act->nombre }}</h5>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-5">
+                            <form action="{{ route('carreras.showMateriasEspecialidad',$programa[0]->id_pro) }}">
+                                <div class="input-group mb-3 input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Especialidad</span>
+                                    </div>
+                                    <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
+                                        @foreach($especialidad as $esp)
+                                            <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
+                                        @endforeach                              
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-success">Mostrar</button>
+                                    </div>
+                                </div>  
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="red">
+
                     <div class="table-responsive">
                         <table class="table table-sm">
                             <thead>
                                 <tr>
                                     <th>Número</th>
-                                    <th>Nombre</th>
                                     <th>Clave</th>
-                                    <th>Archivo</th>
+                                    <th>Nombre</th>
+                                    <th>Temario</th>                                    
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Doe</td>
-                                    <td>002</td>
-                                    <td>xx</td>
-                                </tr>                           
+                                @foreach ($materias_esp as $me )
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $me->clave }}</td> 
+                                        <td>{{ $me->nombre }}</td>                      
+                                        <td>                           
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$me->nom_pro.'/'.$me->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>                              
+                                        </td>                                       
+                                    </tr> 
+                                @endforeach                                                          
                             </tbody>
                         </table>
                     </div>
+                    <hr class="red">
+                    <br>
+                    
+                    <h5>Materias de tronco común</h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Número</th>
+                                    <th>Clave</th>
+                                    <th>Nombre</th>
+                                    <th>Temario</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($programa as $pro)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $pro->clave }}</td>
+                                        <td>{{ $pro->nombre }}</td>
+                                        <td>                           
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$pro->nom_pro.'/'.$pro->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>                              
+                                        </td>                                       
+                                    </tr>   
+                                @endforeach                                        
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>

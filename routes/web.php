@@ -231,4 +231,5 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('contenido/carreras/updatePlanEstudios/{id_pro}', [CarrerasController::class, 'updatePlanEstudios'])->name('carreras.updatePlanEstudios');
 	Route::get('contenido/carreras/destroyPlanEstudios/{id_asig}', [CarrerasController::class, 'destroyPlanEstudios'])->name('carreras.destroyPlanEstudios');
 	Route::post('contenido/carreras/storeMatEsp/{id_pro}', [CarrerasController::class, 'storeMatEsp'])->name('carreras.storeMatEsp');
+	Route::get('contenido/carreras/showMateriasEspecialidad/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
 });
