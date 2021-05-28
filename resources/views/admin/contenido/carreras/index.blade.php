@@ -235,19 +235,19 @@
             </div>
             <div id="collapseTwo" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-                    <h5 id="nom_especialidad">Materias de la especialidad de {{ $esp_act->nombre }}</h5>
+                    <h5 id="nom_especialidad">Materias de la especialidad de:</h5>
                     <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-3"></div>
                         <div class="col-sm-5">
-                            <form action="{{ route('carreras.showMateriasEspecialidad',$programa[0]->id_pro) }}">
+                            <form action="{{ route('carreras.showMateriasEspecialidad2',$pro_act->id) }}">
                                 <div class="input-group mb-3 input-group-sm">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Especialidad</span>
                                     </div>
                                     <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
-                                        @foreach($especialidad as $esp)
-                                            <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
+                                        @foreach($materias_esp as $esp)
+                                            <option value="{{ $esp->id_especialidad }}">{{ $esp->esp_nombre }}</option>
                                         @endforeach                              
                                     </select>
                                     <div class="input-group-append">

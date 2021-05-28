@@ -37,10 +37,12 @@ class CarrerasController extends Controller
         $programa=Programa::where('programas.id',$idPro->id)
         ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')        
         ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
-        ->get();         
-        $especialidad=Especialidad::where('id_programa',$idPro->id)->get();  
-        $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
-        $esp_act=Especialidad::first(); 
+        ->get(); 
+
+        //Datos de materias de especialidad        
+        $materias_esp=Materia_especialidad::join('especialidades','materias_especialidad.id_especialidad','especialidades.id')
+        ->select('especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
+        ->where('especialidades.id_programa',$idPro->id)->groupBy('especialidades.nombre')->get();
         //Fin de datos para el plan de estudios
 
         $archivos=Archivo::where('id_programa',$idPro->id)->get(); 
@@ -74,10 +76,9 @@ class CarrerasController extends Controller
         ->with('n_msg',$n_msg)
         ->with('archivos',$archivos)
         //Datos del plan de estudios
-        ->with('programa',$programa)
-        ->with('especialidad',$especialidad)
-        ->with('materias_esp',$materias_esp)
-        ->with('esp_act',$esp_act);
+        ->with('programa',$programa)        
+        ->with('materias_esp',$materias_esp);
+        
     }    
 
     //Mostramos carrera especifica
@@ -102,6 +103,19 @@ class CarrerasController extends Controller
         ->where('status',0)
         ->count();
         $archivos=Archivo::where('id_programa',$id)->get(); 
+
+        //Datos para el plan de estudios
+        $programa=Programa::where('programas.id',$id)
+        ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')        
+        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
+        ->get();
+
+        //Datos de las materias de cada especialidad        
+        $materias_esp=Materia_especialidad::join('especialidades','materias_especialidad.id_especialidad','especialidades.id')
+        ->select('especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
+        ->where('especialidades.id_programa',$id)->groupBy('especialidades.nombre')->get();
+        
+        //Fin de datos para el plan de estudios
         return view('admin.contenido.carreras.index')
         ->with('programas',$programas)
         ->with('pro_act',$pro_act)
@@ -112,7 +126,11 @@ class CarrerasController extends Controller
         ->with('formacion',$formacion)
         ->with('productos',$productos)
         ->with('n_msg',$n_msg)
-        ->with('archivos',$archivos);
+        ->with('archivos',$archivos)       
+         //Datos del plan de estudios
+         ->with('programa',$programa)        
+         ->with('materias_esp',$materias_esp);
+       
     }
 
     //Metodo que inicializa la BD con la primera carrera
@@ -736,6 +754,25 @@ class CarrerasController extends Controller
         ->with('materias_esp',$materias_esp)
         ->with('esp_act',$esp_act);
     }
+
+    //Metodo para consultar las materias de la especialidad en index
+    public function showMateriasEspecialidad2(Request $request, $id_pro)
+    {     
+        $programa=Programa::where('programas.id',$id_pro)
+        ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')        
+        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
+        ->get();         
+        //Datos de materias de especialidad        
+        $materias_esp=Materia_especialidad::join('especialidades','materias_especialidad.id_especialidad','especialidades.id')
+        ->select('especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
+        ->where('especialidades.id_programa',$id_pro)->groupBy('especialidades.nombre')->get();
+        //Fin de datos para el plan de estudios
+
+        return view('admin.contenido.carreras.index')
+        ->with('programa',$programa)       
+        ->with('materias_esp',$materias_esp);
+    }
+
 
     //Metodo para gusrdar las materias
     public function storePlanEstudios(Request $request, $id_pro)
