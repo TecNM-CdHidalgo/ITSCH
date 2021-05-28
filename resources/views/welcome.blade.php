@@ -63,7 +63,7 @@
 		<div class="col-sm-3"></div>
 		<div class="col-sm-5"></div>
 		<div class="col-sm-1">
-			<div id="occ-widget"></div>
+			<div id=""></div>
 		</div>
 	</div>
     <hr class="red">
