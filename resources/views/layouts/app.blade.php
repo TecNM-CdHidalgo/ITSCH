@@ -106,7 +106,12 @@
     <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>
 
     {{-- OCC Mundial --}}
-    <script id = "bolsa-widget" type = "text/javascript" charset = "UTF-8" src = "https://jobdiscovery-widget-occ.occ.com.mx/button-bundle.js" key = "1b8v79xAa8DKqYCoM8k5ADxVrrs"> </script>  
+    <script id = "bolsa-widget" 
+      type = "text/javascript" 
+      charset = "UTF-8" 
+      src = "https://jobdiscovery-widget-occ.occ.com.mx/button-bundle.js" 
+      key = "1b8v79xAa8DKqYCoM8k5ADxVrrs"> 
+    </script>  
 
     <script>
         $(document).ready(function(){
