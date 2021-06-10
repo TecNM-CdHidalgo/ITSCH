@@ -58,16 +58,16 @@
 	{{--Contenido de noticias--}}
 	<h1>Noticias</h1>
     <hr class="red">
-		<div class="row">			
+		<div class="row">
 			<div class="col-sm-12">
 				<img src="{{ asset('images/Fichas2021.jpg') }}" alt="Fichas" style="width: 100%">
-			</div>						
+			</div>
 		</div>
 		<br>
 		<div style="text-align: right">
 			<a href="{{ asset('/vinculacion/fichas2021') }}" class="btn btn-success btn-sm" type="button">Obtén tu ficha aquí</a>
-		</div>		
-		<br>		
+		</div>
+		<br>
 		<br>
 	<hr class="red">
     @foreach($noticias2 as $not2)
@@ -77,7 +77,7 @@
 		    <div class="row">
 		    	<div class="col-xl-5">
 		    		<a href="{{route('ver',$not2->id)}}">
-						<img  height="100%" src="{{ route('carousel',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
+						<img  height="30%" src="{{ route('carousel',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
