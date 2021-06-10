@@ -86,7 +86,7 @@
 		    <div class="row">
 		    	<div class="col-xl-5">
 		    		<a href="{{route('ver',$not2->id)}}">
-						<img  height="30%" src="{{ route('carousel',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
+						<img  height="100px" src="{{ route('carousel',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
