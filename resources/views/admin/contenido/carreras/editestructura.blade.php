@@ -30,7 +30,7 @@
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajasEst" onclick="obtDatEliminarEst({{ $per }})">
                             <i class='fas fa-trash-alt' style='font-size:14px'></i>
                         </button>
-                        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModalDetalleEst" onclick="obtDetalleEst({{ $per }},{{ $formacion }},{{ $productos }})">
+                        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModalDetalleEst" onclick="obtDetalleEst({{ $per }},{{ $formacion }},{{ $productos }},{{ $per->id }})">
                             <i class='far fa-eye' style='font-size:14px'></i>
                         </button>
                     </td>                    
@@ -232,18 +232,13 @@
                 <!-- Modal body -->
                 <div class="modal-body">                        
                     <b><h5>Formación:</h5></b>
-                    <div class="form-group">
-                        <p id="formacion"></p>
-                    </div>                
+                    <div id="id_formacion"></div>                                     
+                    <b><h5>Productos:</h5></b>
+                    <div id="id_productos"></div>                 
                     <b><h5>Email:</h5></b>
                     <div class="form-group">
                         <p id="det_email"></p>
-                    </div>                  
-                    <b><h5>Productos:</h5></b>
-                    <div class="form-group">
-                        <p id="productos">Generacion de sistema STA para control de inventario del ITSCH</p>
-                    </div>                 
-                    
+                    </div>
                     <br>
                 </div>
                 <!-- Modal footer -->
@@ -283,12 +278,47 @@
             $('#formEliminarAtr').attr('action', r);
         }
 
-        function obtDetalleEst(per)
+        function obtDetalleEst(per,form,pro,id_prof)
         {   
             $("#nom_per").text(per['nombre']+" "+per['ap_paterno']+" "+per['ap_materno']);
             $("#det_email").text(per['email']);
 
+            //Obtenemos los datos de formacion de cada profesor
+            var r_form=form.length;
+            var cad_f="<table class='table'><thead><tr><th>Especialización</th><th>Institución Formadora</th><th>Cedula</th></tr></thead><tbody>";
+            for(x=0; x<r_form; x++)
+            {   
+                if(form[x]['id_personal']==id_prof)
+                {
+                    cad_f=cad_f+"<tr>";
+                    cad_f=cad_f+"<td>"+form[x]['nombre']+"</td>";
+                    cad_f=cad_f+"<td>"+form[x]['institucion_pro']+"</td>";
+                    cad_f=cad_f+"<td>"+form[x]['cedula']+"</td>";
+                    cad_f=cad_f+"</tr>";
+                }               
+            }  
+            cad_f=cad_f+"</tbody>";          
+            $("#id_formacion").html(cad_f);
+
+            //Obtenemos los datos de productos de cada profesor
+            var r_prod=pro.length;
+            var cad_p="<table class='table'><thead><tr><th>Categoría</th><th>Nombre</th><th>Función desempeñada</th></tr></thead><tbody>";
+            for(x=0; x<r_prod; x++)
+            {   
+                if(pro[x]['id_personal']==id_prof)
+                {
+                    cad_p=cad_p+"<tr>";
+                    cad_p=cad_p+"<td>"+pro[x]['categoria']+"</td>";
+                    cad_p=cad_p+"<td>"+pro[x]['nombre']+"</td>";
+                    cad_p=cad_p+"<td>"+pro[x]['funcion']+"</td>";
+                    cad_p=cad_p+"</tr>";
+                }
+            }  
+            cad_p=cad_p+"</tbody>";          
+            $("#id_productos").html(cad_p);
+
             r="{{url('contenido/carreras')}}/editDetalles/"+per['id_programa']+"/"+per['id'];
+            
             $('#formEditDetalle').attr('action', r);
         }
        

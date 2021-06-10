@@ -56,7 +56,16 @@
 
 @section('content')
 	{{--Contenido de noticias--}}
-	<h1>Noticias</h1>
+	<div class="row">
+		<div class="col-sm-3">
+			<h1>Noticias</h1>
+		</div>
+		<div class="col-sm-3"></div>
+		<div class="col-sm-5"></div>
+		<div class="col-sm-1">
+			<div id="occ-widget"></div>
+		</div>
+	</div>
     <hr class="red">
 		<div class="row">
 			<div class="col-sm-12">
@@ -245,4 +254,8 @@
 	        </div>
 	    </div>
     </div>
+
+
 @endsection
+
+

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Models\Archivo;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $user->tipo = "Administrador";
         $user->password = bcrypt("12345678");
         $user->save();
+
     }
 }
