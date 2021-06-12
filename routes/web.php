@@ -127,18 +127,18 @@ Route::get('/carousel/{image_name}', function($image_name)
 })->name('carousel');
 
 //Ruta para imagenes de las noticias
-/*Route::get('/noticia/{image_name}', function($image_name)
+Route::get('/noticia/{image_name}', function($image_name)
 {
 	//Obtenemos la anchura de la pantalla
 	Image::configure(array('driver' => 'gd'));
-    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
+    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
 
-    ->widen(500)
-    ->resizeCanvas(500, 280, 'center', false, '000000')
-    ->sharpen(10);
+	// resize the image to a height of 200 and constrain aspect ratio (auto width)
+	//$img->resize(300,100);
+
     return $img->response('jpg');
 
-})->name('noticia');*/
+})->name('noticia');
 
 
 

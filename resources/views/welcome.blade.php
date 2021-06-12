@@ -84,9 +84,9 @@
 	    	<h3><b>{{$not2->titulo}}</b></h3>
 	    	<h5>{{$not2->sintesis}}</h5>
 		    <div class="row">
-		    	<div class="col-xl-5">
+		    	<div class="col-xl-5" style="height: 200px">
 		    		<a href="{{route('ver',$not2->id)}}">
-						<img  height="100px" src="{{ route('carousel',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
+						<img src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class="rounded imgNotices" />
 					</a>
 		    	</div>
 		    	{{--Descripcion de la noticia--}}
