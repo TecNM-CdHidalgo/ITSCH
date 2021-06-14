@@ -130,10 +130,12 @@ Route::get('/carousel/{image_name}', function($image_name)
 Route::get('/noticia/{image_name}', function($image_name)
 {
 	//Obtenemos la anchura de la pantalla
+
     $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
 
     // resize the image to a height of 200 and constrain aspect ratio (auto width)
 	$img->resize(500,200);
+
     return $img->response('jpg');
 
 })->name('noticia');
