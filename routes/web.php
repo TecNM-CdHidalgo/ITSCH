@@ -127,18 +127,16 @@ Route::get('/carousel/{image_name}', function($image_name)
 })->name('carousel');
 
 //Ruta para imagenes de las noticias
-/*Route::get('/noticia/{image_name}', function($image_name)
+Route::get('/noticia/{image_name}', function($image_name)
 {
 	//Obtenemos la anchura de la pantalla
-	Image::configure(array('driver' => 'gd'));
-    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name))
+    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
 
-    ->widen(500)
-    ->resizeCanvas(500, 280, 'center', false, '000000')
-    ->sharpen(10);
+    // resize the image to a height of 200 and constrain aspect ratio (auto width)
+	$img->resize(500,200);
     return $img->response('jpg');
 
-})->name('noticia');*/
+})->name('noticia');
 
 
 
@@ -225,7 +223,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/showContactoLeido/{id}', [CarrerasController::class, 'showContactoLeido'])->name('carreras.showContactoLeido');
 	Route::get('contenido/carreras/readContacto/{id_pro}', [CarrerasController::class, 'readContacto'])->name('carreras.readContacto');
 	Route::get('contenido/carreras/updateContacto/{id_pro}', [CarrerasController::class, 'updateContacto'])->name('carreras.updateContacto');
-	Route::get('contenido/carreras/destroyContacto/{id_pro}', [CarrerasController::class, 'destroyContacto'])->name('carreras.destroyContacto');	
+	Route::get('contenido/carreras/destroyContacto/{id_pro}', [CarrerasController::class, 'destroyContacto'])->name('carreras.destroyContacto');
 	Route::get('contenido/carreras/editPlanEstudios/{id_pro}', [CarrerasController::class, 'editPlanEstudios'])->name('carreras.editPlanEstudios');
 	Route::post('contenido/carreras/storePlanEstudios/{id_pro}', [CarrerasController::class, 'storePlanEstudios'])->name('carreras.storePlanEstudios');
 	Route::post('contenido/carreras/updatePlanEstudios/{id_pro}', [CarrerasController::class, 'updatePlanEstudios'])->name('carreras.updatePlanEstudios');
