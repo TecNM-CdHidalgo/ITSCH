@@ -68,12 +68,12 @@
 	</div>
     <hr class="red">
 		<div class="row">
-			<div class="col-sm-12">
-				<img src="{{ asset('images/Fichas2021.jpg') }}" alt="Fichas" style="width: 100%">
+			<div class="col-sm-12" style="text-align: center">
+				<img src="{{ asset('images/fichas2021.jpg') }}" alt="Fichas" style="width: 800px;">
 			</div>
 		</div>
 		<br>
-		<div style="text-align: right">
+		<div style="text-align: center">
 			<a href="{{ asset('/vinculacion/fichas2021') }}" class="btn btn-success btn-sm" type="button">Obtén tu ficha aquí</a>
 		</div>
 		<br>
