@@ -151,7 +151,7 @@
                     Realiza tu registro dando clic en el boton que se encuentra a continuación.
                     <font='red'>¡OJO! Aquí deberas subir los documentos que ya tienes escaneados.</font>
                   </p>
-                  <a class="btn btn-primary" href="https://forms.gle/ECN1hdUjvQ3r3fnLA" role="button">Registro</a>
+                  <a class="btn btn-primary" href="https://forms.gle/8oNLuegLFvZ6U54r8" role="button">Registro</a>
                 </div>
               </div>
               <hr>
