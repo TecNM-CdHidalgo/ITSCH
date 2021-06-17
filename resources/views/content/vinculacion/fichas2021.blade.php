@@ -123,7 +123,7 @@
                         <li>Descarga la solicitud para el Examen de selección</li>
                       </ul>
                   </p>
-                  <a href="{{asset('documents/content/vinculacion/fichas2021/SOLICITUD_PARA_EXAMEN_DE_SELECCION_AGOSTO-DICIEMBRE_2021.pdf')}}" class="btn btn-primary">Descargar Solicitud</a>
+                  <a href="{{asset('documents/content/vinculacion/fichas2021/SOLICITUDE PARA EXAMEN DE SELECCION AD-2021.pdf')}}" class="btn btn-primary">Descargar Solicitud</a>
                 </div>
               </div>
               <hr>
