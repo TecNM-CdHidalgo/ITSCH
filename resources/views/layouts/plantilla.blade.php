@@ -199,7 +199,7 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
             <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
-            <a class="dropdown-item" href="https://bit.ly/2KVOXps">Aviso de privacidad </a>
+            <a class="dropdown-item" href="{{asset('documents/content/aviso_privacidad/aviso_privacidad.pdf')}}">Aviso de privacidad </a>
             <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/transparencia/acceso_transparencia">Estados Financieros </a>
           </div>
       </li>
@@ -275,7 +275,7 @@
                     <a class="dropdown-item" href="{{route('cle.cursoToefl')}}">Curso de preparación para la certificación (TOEFL)</a>
                   </li>
                   <li>
-                  	
+
                     <a class="dropdown-item" href="{{route('cle.traduccionDocumentos')}}">Traducción de documentos</a>
                   </li>
                   <li>
