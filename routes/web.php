@@ -62,6 +62,8 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 Route::get('departamentos/caja',function(){return view('content.departamentos.caja');})->name('departamentos.caja');
 
 //Rutas de instituto
+
+Route::get('investigacion/pitsc',function(){return view('content.investigacion.pitsc');})->name('investigacion.pitsc');
 Route::get('investigacion/investigacion',function(){return view('content.investigacion.investigacion');})->name('investigacion.investigacion');
 Route::get('calidad/proceso_seleccion',function(){return view('content.calidad.proceso_seleccion');})->name('calidad.proceso_seleccion');
 Route::get('calidad/reglamento',function(){return view('content.calidad.reglamento');})->name('calidad.reglamento');

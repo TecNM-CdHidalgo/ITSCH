@@ -313,7 +313,8 @@
         </a>
         <div class="dropdown-menu">
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
-    <a class="text-black dropdown-item"  href="{{route('tutorias.tutorias')}}"> Tutorias</a>
+            <a class="text-black dropdown-item"  href="{{route('investigacion.pitsc')}}"> PICTS</a>
+            <a class="text-black dropdown-item"  href="{{route('tutorias.tutorias')}}"> Tutorias</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/mec.pdf') }}"> Mecatrónica</a>
@@ -326,6 +327,10 @@
             <a class="text-black dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
         </div>
       </li>
+      
+  </li>
+  
+
     </ul>
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">
