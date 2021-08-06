@@ -119,6 +119,7 @@
           <a class="dropdown-item"  href="https://eventos.cdhidalgo.tecnm.mx/#!/constancia">Congreso 2019</a>
           <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">Test Psicométrico de Nuevo ingreso</a>
+          <a class="dropdown-item"  href="http://www.itsch.edu.mx:8080/sgcv3/Procaptura.aspx">Solicitud de prorroga</a>
 
         </ul>
       </li>
@@ -327,9 +328,9 @@
             <a class="text-black dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
         </div>
       </li>
-      
+
   </li>
-  
+
 
     </ul>
     <!-- Right Side Of Navbar -->
