@@ -4872,23 +4872,21 @@ Y93noA17zm1TPRfoCZ8ZPzSe/g/EDC4wOJ4U7gAAAABJRU5ErkJggg==" transform="matrix(1.00
                        descargar los siguientes enlaces:</p>
 
                    <table class="table">
-                       <thead>
-                       <tr>
+                        <thead>
+                        <tr>
                            <th>Documento</th>
                            <th>Descarga</th>
-
-                       </tr>
-                       </thead>
-                       <tbody>
-                       <tr>
-                           <td>Requisitos y Procedimiento de Titulación</td>
-                           <td>  <a type="button" class="btn btn-primary"
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Requisitos y Procedimiento de Titulación</td>
+                            <td>  <a type="button" class="btn btn-primary"
                                     href="{{asset('documents/content/servicios escolares/procedimiento_tit_v12.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." download  target="_blank">
                                    <i class='fas fa-download' style='font-size:20px'></i>
                                </a></td>
-
-                       </tr>
-                       <tr>
+                        </tr>
+                        <tr>
                            <td>Constancia de no Adeudo para alumnos próximos a Titularse</td>
                            <td>  <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/for_no_adeudo_tit_v3.docx ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." download  target="_blank">
                                    <i class='fas fa-download' style='font-size:20px'></i>

@@ -36,7 +36,7 @@
     <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
       <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
     </a>
-    <a href="{{ asset('documents/content/documentos_apoyo/horarios_fj2021.pdf') }}" title="Horarios de Grupos" target="_blank">
+    <a href="{{ asset('documents/content/documentos_apoyo/horarios.pdf') }}" title="Horarios de Grupos" target="_blank">
       <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
     </a>
     <a href='?vista=&a#googtrans(es|zh-CN)'>
