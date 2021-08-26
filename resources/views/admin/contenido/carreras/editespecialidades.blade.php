@@ -25,20 +25,20 @@
                     <td>{{ $esp->nombre }}</td>
                     <td>{{ $esp->clave }}</td>
                     <td>{{ $esp->objetivo }}</td>
-                    <td>                        
+                    <td>
                         <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
                     </td>
-                    <td>  
+                    <td>
                         <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditar({{ $esp }})">
                             <i class='fas fa-edit' style='font-size:14px'></i>
                         </button>
-                    
+
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminar({{ $esp }})">
                             <i class='fas fa-trash-alt' style='font-size:14px'></i>
-                        </button> 
+                        </button>
                     </td>
-                </tr>                
-            @endforeach           
+                </tr>
+            @endforeach
         </tbody>
     </table>
     <br>
@@ -53,7 +53,7 @@
                     {{csrf_field()}}
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Alta de especialidad</h4>                       
+                        <h4 class="modal-title">Alta de especialidad</h4>
                     </div>
 
                     <!-- Modal body -->
@@ -91,7 +91,7 @@
                     {{csrf_field()}}
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Editar Especialidad</h4>                        
+                        <h4 class="modal-title">Editar Especialidad</h4>
                     </div>
 
                     <!-- Modal body -->
@@ -108,10 +108,10 @@
                             </div>
                             <input type="text" class="form-control" required name="clave" id="cla_update">
                         </div>
-                        
-                           
-                        <label>Objetivo</label>                          
-                        <textarea class="form-control" required name="objetivo" id="obj_update" rows="10"></textarea>                            
+
+
+                        <label>Objetivo</label>
+                        <textarea class="form-control" required name="objetivo" id="obj_update" rows="10"></textarea>
                         <br>
                         <label for="Ed_reticula">Formato de la retícula completa de la especialidad</label>
                         <input type="file" name="reticula" id="Ed_reticula" class="form-control-file border">
@@ -122,7 +122,7 @@
                               <span class="input-group-text">Programa</span>
                             </div>
                             <input type="text" class="form-control" id="car_update" readonly value="{{ $programa->nombre }}">
-                        </div>                      
+                        </div>
                         <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                     </div>
 
@@ -172,7 +172,7 @@
 
                    $("#nom_update").val(esp['nombre']);
                    $("#cla_update").val(esp['clave']);
-                   $("#obj_update").val(esp['objetivo']);                  
+                   $("#obj_update").val(esp['objetivo']);
                    r="{{url('contenido/carreras')}}/updateEspecialidad/"+esp['id'];
                    $('#formEditar').attr('action', r);
                 }

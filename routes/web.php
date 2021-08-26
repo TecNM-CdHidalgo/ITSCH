@@ -189,7 +189,7 @@ Route::group(['middleware' => 'auth'],function(){
 
 	//Carreras
 	Route::get('contenido/carreras', [CarrerasController::class, 'index'])->name('carreras.index');
-    Route::get('contenido/carreras/Inicializar', [CarrerasController::class, 'inicializar'])->name('carreras.inicializar');
+    Route::post('contenido/carreras/Inicializar', [CarrerasController::class, 'inicializar'])->name('carreras.inicializar');
 	Route::get('contenido/carreras/editcarrera', [CarrerasController::class, 'editCarrera'])->name('carreras.editCarrera');
 	Route::get('contenido/carreras/storeCarrera', [CarrerasController::class, 'storeCarrera'])->name('carreras.storeCarrera');
 	Route::get('contenido/carreras/updateCarrera/{id}', [CarrerasController::class, 'updateCarrera'])->name('carreras.updateCarrera');
