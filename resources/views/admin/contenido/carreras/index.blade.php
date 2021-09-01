@@ -15,18 +15,20 @@
                     <select class="form-control form-control-sm" id="carrera" required>
                         @foreach($programas as $pro)
                             <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
-                        @endforeach                              
+                        @endforeach
                     </select>
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-success" onclick="datosEnviar()">Mostrar</button>
                     </div>
-                </div>  
+                </div>
             </form>
+            {{-- Permisos para que solo el administrador de de alta las carreras --}}
+            @if (Auth::User()->tipo == "Administrador")
+                <div class="collapse demo" style="text-align: right;">
+                    <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
+                </div>
+            @endif
 
-            <div class="collapse demo" style="text-align: right;">
-                <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
-            </div>
-            
         </div>
         <div class="col-sm-2" style="text-align: right">
             <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target=".demo" onclick="ocultar()" id="btn_editar">Editar</button>
@@ -34,21 +36,21 @@
                 <button type="button" class="btn btn-info btn-sm" data-toggle="collapse" data-target=".demo" onclick="mostrar()">Cancelar</button>
             </div>
         </div>
-    </div>   
-    <hr> 
+    </div>
+    <hr>
 
-    <form enctype="multipart/form-data" method="POST" action="{{ route('carreras.updateCarreraCom',$pro_act->id) }}"> 
+    <form enctype="multipart/form-data" method="POST" action="{{ route('carreras.updateCarreraCom',$pro_act->id) }}">
         {{csrf_field()}}
         <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
         <div class="row">
             <div class="col-sm-8">
-                <h4 id="n_carrera">{{ $pro_act->nombre }}</h4>                                              
+                <h4 id="n_carrera">{{ $pro_act->nombre }}</h4>
             </div>
             <div class="col-sm-3"></div>
             <div class="col-sm-1">
-               
+
                 <a href="{{ route('carreras.showContacto',$pro_act->id) }}"><i class='fas fa-bell' style='font-size:18px;color:red' title="Ver mensajes"></i> {{ $n_msg }}</a>
-               
+
             </div>
         </div>
 
@@ -62,16 +64,18 @@
                     <img src="{{ asset('images/no_img.jpg') }}" alt="img_carrera" style="max-width: 400px; max-heigth:400px;">
                 @endif
                 <div  class="collapse demo">
-                    <h5>Seleccona una imagen para el logo de la carrera</h5>                                                                                                                    
-                    <input type="file" class="form-control-file border" name="logo">                                                                
+                    <h5>Seleccona una imagen para el logo de la carrera</h5>
+                    <input type="file" class="form-control-file border" name="logo">
                 </div>
                 <br>
                 <br>
+                <h6>Clave del plan de estudios</h6>
                 <h5 id="clave"> <b>{{ $pro_act->plan_estudios }}</b>   </h5>
-                <div  class="collapse demo">                    
-                    <input type="text" class="form-control" name="plan_estudios" value="{{ $pro_act->plan_estudios }}">
+                <hr>
+                <div  class="collapse demo">
+                    <input type="text" class="form-control" name="plan_estudios" value="{{ $pro_act->plan_estudios }}" placeholder="Escribe la clave del plan de estudios">
                 </div>
-                <h4> <b>ESPECIALIDAD(ES)</b> </h4>                
+                <h4> <b>ESPECIALIDAD(ES)</b> </h4>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -95,8 +99,8 @@
                         <td>
                             <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" download type="button" class="btn btn-primary btn-sm" title="Descargar reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
                         </td>
-                    </tr> 
-                @endforeach                                            
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 
@@ -179,9 +183,9 @@
             </textarea>
         </div>
         <br>
-        
+
         <h3>Acreditación CACEI</h3>
-            @if(!$archivos->isEmpty())           
+            @if(!$archivos->isEmpty())
                 @if($archivos[0]->nom_arch_acred<>"")
                     <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_acred) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">Acreditación {{ $pro_act->nombre }}</a>
                 @endif
@@ -190,15 +194,15 @@
             <h6>Seleccona una archivo para el certificado de acreditación</h6>
             <input type="file" class="form-control-file border" name="acreditacion">
         </div>
-           
+
         <hr class="red">
 
         <h3>PIID del programa educativo</h3>
-            @if(!$archivos->isEmpty())   
+            @if(!$archivos->isEmpty())
                 @if($archivos[0]->nom_arch_piid<>"")
                     <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_piid) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">PIID {{ $pro_act->nombre }}</a>
                 @endif
-            @endif        
+            @endif
         <div  class="collapse demo">
             <h6>Seleccona el archipo del PIID</h6>
             <input type="file" class="form-control-file border" name="piid">
@@ -206,7 +210,7 @@
         <br>
         <br>
         {{-- Botones de guardar y cancelar --}}
-        <div class="row collapse demo">           
+        <div class="row collapse demo">
             <div class="col-sm-8"></div>
             <div class="col-sm-2">
                 <button class="btn btn-sm btn-info" data-toggle="collapse" data-target=".demo" onclick="mostrar()">Cancelar</button>
@@ -248,12 +252,12 @@
                                     <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
                                         @foreach($materias_esp as $esp)
                                             <option value="{{ $esp->id_especialidad }}">{{ $esp->esp_nombre }}</option>
-                                        @endforeach                              
+                                        @endforeach
                                     </select>
                                     <div class="input-group-append">
                                         <button type="submit" class="btn btn-success">Mostrar</button>
                                     </div>
-                                </div>  
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -266,26 +270,26 @@
                                     <th>Número</th>
                                     <th>Clave</th>
                                     <th>Nombre</th>
-                                    <th>Temario</th>                                    
+                                    <th>Temario</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($materias_esp as $me )
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $me->clave }}</td> 
-                                        <td>{{ $me->nombre }}</td>                      
-                                        <td>                           
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$me->nom_pro.'/'.$me->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>                              
-                                        </td>                                       
-                                    </tr> 
-                                @endforeach                                                          
+                                        <td>{{ $me->clave }}</td>
+                                        <td>{{ $me->nombre }}</td>
+                                        <td>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$me->nom_pro.'/'.$me->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
                     <hr class="red">
                     <br>
-                    
+
                     <h5>Materias de tronco común</h5>
                     <div class="table-responsive">
                         <table class="table table-sm">
@@ -294,7 +298,7 @@
                                     <th>Número</th>
                                     <th>Clave</th>
                                     <th>Nombre</th>
-                                    <th>Temario</th>                                    
+                                    <th>Temario</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -303,11 +307,11 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $pro->clave }}</td>
                                         <td>{{ $pro->nombre }}</td>
-                                        <td>                           
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$pro->nom_pro.'/'.$pro->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>                              
-                                        </td>                                       
-                                    </tr>   
-                                @endforeach                                        
+                                        <td>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$pro->nom_pro.'/'.$pro->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -324,23 +328,23 @@
     </div>
     <div class="table-responsive">
         <table class="table">
-            <thead>                    
+            <thead>
                 <th style="width: 40%">Descripción</th>
                 <th style="width: 40%">Criterio</th>
-                <th style="width: 20%">Indicador</th>                    
+                <th style="width: 20%">Indicador</th>
             </thead>
             <tbody>
                 @foreach ($objetivos as $obj)
-                    <tr>                            
+                    <tr>
                         <td>{{ $obj->descripcion }}</td>
                         <td>{{ $obj->criterio }}</td>
-                        <td>{{ $obj->indicador }}</td>                            
-                    </tr>                
-                @endforeach           
+                        <td>{{ $obj->indicador }}</td>
+                    </tr>
+                @endforeach
             </tbody>
-        </table>            
+        </table>
     </div>
-    <br>   
+    <br>
 
     <h3>Atributos de egreso</h3>
     <div class="collapse demo" style="text-align: right;">
@@ -348,60 +352,60 @@
     </div>
     <div class="table-responsive">
         <table class="table table-sm">
-            <thead>            
+            <thead>
                 <th style="width: 5%">Numero</th>
-                <th style="width: 35%">Descripción</th>                    
-                <th style="width: 40%">Criterios</th>           
+                <th style="width: 35%">Descripción</th>
+                <th style="width: 40%">Criterios</th>
             </thead>
             <tbody>
                 @php
                     $van=0;
                     $atrAnt="";
                 @endphp
-                @foreach ($atributos as $atr ) 
-                    @php                                                          
+                @foreach ($atributos as $atr )
+                    @php
                         if($atr->numAtr==$atrAnt)
                         {
-                            $van=$van+1; 
-                            echo "<tr>";                                                                                                       
+                            $van=$van+1;
+                            echo "<tr>";
                         }
-                        else 
+                        else
                         {
                             echo "<tr>";
                             $atrAnt=$atr->numAtr;
-                            $van=0;  
-                                                                                                
+                            $van=0;
+
                         }
-                    @endphp                                              
-                    @if($van==0)                
+                    @endphp
+                    @if($van==0)
                             <td>{{ $atr->numAtr }}</td>
-                            <td>{{ $atr->desAtr }}</td>                                
-                            <td>                                              
-                                <table class="table table-sm">                                       
+                            <td>{{ $atr->desAtr }}</td>
+                            <td>
+                                <table class="table table-sm">
                                     <tbody>
                                         <tr>
                                             <td>{{  $atr->numCri }}</td>
-                                            <td>{{  $atr->desCri }}</td>                                               
-                                        </tr>                            
+                                            <td>{{  $atr->desCri }}</td>
+                                        </tr>
                                     </tbody>
-                                </table>                            
-                            </td>                                                                    
-                    @else              
+                                </table>
+                            </td>
+                    @else
                         <td></td>
-                        <td></td>                                             
-                        <td>                                                                                                  
-                            <table class="table table-sm">                                                  
+                        <td></td>
+                        <td>
+                            <table class="table table-sm">
                                 <tbody>
                                     <tr>
                                         <td>{{  $atr->numCri }}</td>
-                                        <td>{{  $atr->desCri }}</td>                                            
-                                    </tr>                            
+                                        <td>{{  $atr->desCri }}</td>
+                                    </tr>
                                 </tbody>
-                            </table>                                      
+                            </table>
                         </td>
-                    
-                    @endif                              
-                @endforeach            
+
+                    @endif
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -416,26 +420,26 @@
 
     <div class="table-responsive">
         <table class="table">
-            <thead> 
-                <th style="width: 5%">Numero</th>           
+            <thead>
+                <th style="width: 5%">Numero</th>
                 <th style="width: 30%">Nombre</th>
                 <th style="width: 40%">Area</th>
                 <th style="width: 25%">Detalle</th>
-                        
+
             </thead>
-            <tbody>  
-                @foreach ($personal as $per)                                        
+            <tbody>
+                @foreach ($personal as $per)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $per->nombre }} {{ $per->ap_paterno }} {{ $per->ap_materno }}</td>
                         <td>{{ $per->puesto }}</td>
-                        <td>                               
+                        <td>
                             <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModalDetalleEst" onclick="obtDetalleEst({{ $per }},{{ $formacion }},{{ $productos }},{{ $per->id }})">
                                 <i class='far fa-eye' style='font-size:14px'></i>
                             </button>
-                        </td>                    
-                    </tr>   
-                @endforeach   
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
         <br>
@@ -443,9 +447,10 @@
     <br>
 
 
-    <br> 
+    <br>
+    {{--
     <h2> Contacto    </h2>
-    <hr>   
+    <hr>
     <form action="{{ route('carreras.storeContacto',$pro_act->id) }}">
         <div class="row">
             <div class="col-sm-2"></div>
@@ -470,8 +475,8 @@
                     <select class="form-control form-control-sm" name="id_programa" id="carrera_co" required>
                         <option value="">Selecciona la carrera que deseas contactar</option>
                         @foreach ($programas as $pro )
-                            <option value="{{ $pro->id }}">{{ $pro->nombre }}</option> 
-                        @endforeach                                              
+                            <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
+                        @endforeach
                     </select>
                 </div>
 
@@ -490,6 +495,7 @@
         </div>
     </form>
     <br>
+    --}}
     <h2> Datos de Contacto    </h2>
     <hr>
     @foreach ($personal as $per)
@@ -499,8 +505,8 @@
             <li>Email. {{ $personal[0]->email }} </li>
             <li>{{ $personal[0]->puesto }}, edificio “A” segundo piso.</li>
         @endif
-    @endforeach     
-    <li>Ubicación: Edificio “A” segundo piso.</li>    
+    @endforeach
+    <li>Ubicación: Edificio “A” planta alta.</li>
     <hr class="red">
 
     {{-- Sección de modals --}}
@@ -532,18 +538,18 @@
     <!-- Modal Vista de Detalles -->
     <div class="modal fade" id="myModalDetalleEst">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content">            
+            <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header" style="background-color:#000;">
-                    <h4 class="modal-title" id="nom_per"></h4>            
+                    <h4 class="modal-title" id="nom_per"></h4>
                 </div>
                 <form id="formEditDetalle">
                     <!-- Modal body -->
-                    <div class="modal-body">                        
+                    <div class="modal-body">
                         <b><h5>Formación:</h5></b>
-                        <div id="id_formacion"></div>                                     
+                        <div id="id_formacion"></div>
                         <b><h5>Productos:</h5></b>
-                        <div id="id_productos"></div>                 
+                        <div id="id_productos"></div>
                         <b><h5>Email:</h5></b>
                         <div class="form-group">
                             <p id="det_email"></p>
@@ -551,10 +557,10 @@
                         <br>
                     </div>
                     <!-- Modal footer -->
-                    <div class="modal-footer">                        
+                    <div class="modal-footer">
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</button>
                     </div>
-                </form>           
+                </form>
             </div>
         </div>
     </div>
@@ -565,7 +571,7 @@
             //Ocultar elementos
             function ocultar()
             {
-                document.getElementById('p_definicion').style.display = 'none';              
+                document.getElementById('p_definicion').style.display = 'none';
                 document.getElementById('btn_editar').style.display = 'none';
                 document.getElementById('p_mision').style.display = 'none';
                 document.getElementById('p_vision').style.display = 'none';
@@ -580,7 +586,7 @@
             //Mostrar elementos
             function mostrar()
             {
-                document.getElementById('p_definicion').style.display = 'block';               
+                document.getElementById('p_definicion').style.display = 'block';
                 document.getElementById('btn_editar').style.display = 'block';
                 document.getElementById('p_mision').style.display = 'block';
                 document.getElementById('p_vision').style.display = 'block';
@@ -596,8 +602,8 @@
             //Obtiene datos de la carrera a mostrar
             function datosEnviar()
             {
-                var idCarr=$( "#carrera" ).val();   
-                $('#idCarrSel').val(idCarr);            
+                var idCarr=$( "#carrera" ).val();
+                $('#idCarrSel').val(idCarr);
                 $('#formMostrar').attr('action','{{url('contenido/carreras')}}/showCarrera/'+idCarr);
             }
 
@@ -606,7 +612,7 @@
             {
                 $("#carrera").val({{ $pro_act->id }});
             });
-            
+
             //Obtener ID del option seleccionado
             function obtId()
             {
@@ -616,7 +622,7 @@
 
             //Funcion que llena el modal con los detalles de cada uno de los profesores, mostrando grados académicos y producción
             function obtDetalleEst(per,form,pro,id_prof)
-            {   
+            {
                 $("#nom_per").text(per['nombre']+" "+per['ap_paterno']+" "+per['ap_materno']);
                 $("#det_email").text(per['email']);
 
@@ -624,7 +630,7 @@
                 var r_form=form.length;
                 var cad_f="<table class='table'><thead><tr><th>Especialización</th><th>Institución Formadora</th><th>Cedula</th></tr></thead><tbody>";
                 for(x=0; x<r_form; x++)
-                {   
+                {
                     if(form[x]['id_personal']==id_prof)
                     {
                         cad_f=cad_f+"<tr>";
@@ -632,16 +638,16 @@
                         cad_f=cad_f+"<td>"+form[x]['institucion_pro']+"</td>";
                         cad_f=cad_f+"<td>"+form[x]['cedula']+"</td>";
                         cad_f=cad_f+"</tr>";
-                    }               
-                }  
-                cad_f=cad_f+"</tbody>";          
+                    }
+                }
+                cad_f=cad_f+"</tbody>";
                 $("#id_formacion").html(cad_f);
 
                 //Obtenemos los datos de productos de cada profesor
                 var r_prod=pro.length;
                 var cad_p="<table class='table'><thead><tr><th>Categoría</th><th>Nombre</th><th>Función desempeñada</th></tr></thead><tbody>";
                 for(x=0; x<r_prod; x++)
-                {   
+                {
                     if(pro[x]['id_personal']==id_prof)
                     {
                         cad_p=cad_p+"<tr>";
@@ -650,12 +656,12 @@
                         cad_p=cad_p+"<td>"+pro[x]['funcion']+"</td>";
                         cad_p=cad_p+"</tr>";
                     }
-                }  
-                cad_p=cad_p+"</tbody>";          
+                }
+                cad_p=cad_p+"</tbody>";
                 $("#id_productos").html(cad_p);
 
                 r="{{url('contenido/carreras')}}/editDetalles/"+per['id_programa']+"/"+per['id'];
-                
+
                 $('#formEditDetalle').attr('action', r);
             }
         </script>

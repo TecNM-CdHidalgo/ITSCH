@@ -62,7 +62,6 @@ Route::get('instituto/ubicacion',function(){return view('content.instituto.ubica
 Route::get('departamentos/caja',function(){return view('content.departamentos.caja');})->name('departamentos.caja');
 
 //Rutas de instituto
-
 Route::get('investigacion/pitsc',function(){return view('content.investigacion.pitsc');})->name('investigacion.pitsc');
 Route::get('investigacion/investigacion',function(){return view('content.investigacion.investigacion');})->name('investigacion.investigacion');
 Route::get('calidad/proceso_seleccion',function(){return view('content.calidad.proceso_seleccion');})->name('calidad.proceso_seleccion');
@@ -189,7 +188,7 @@ Route::group(['middleware' => 'auth'],function(){
 
 	//Carreras
 	Route::get('contenido/carreras', [CarrerasController::class, 'index'])->name('carreras.index');
-    Route::get('contenido/carreras/Inicializar', [CarrerasController::class, 'inicializar'])->name('carreras.inicializar');
+    Route::post('contenido/carreras/Inicializar', [CarrerasController::class, 'inicializar'])->name('carreras.inicializar');
 	Route::get('contenido/carreras/editcarrera', [CarrerasController::class, 'editCarrera'])->name('carreras.editCarrera');
 	Route::get('contenido/carreras/storeCarrera', [CarrerasController::class, 'storeCarrera'])->name('carreras.storeCarrera');
 	Route::get('contenido/carreras/updateCarrera/{id}', [CarrerasController::class, 'updateCarrera'])->name('carreras.updateCarrera');

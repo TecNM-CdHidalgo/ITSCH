@@ -22,7 +22,7 @@ class UserController extends Controller
         $usuarios = User::select('id','name','email','tipo')->get();
         return view('admin.usuarios.inicio')
         ->with('usuarios',$usuarios);
-        
+
     }
 
     /**
@@ -36,7 +36,7 @@ class UserController extends Controller
             return redirect()->route('home');
         }
         return View('admin.usuarios.crear');
-        
+
     }
 
     /**
@@ -75,7 +75,7 @@ class UserController extends Controller
         if(!$usuario_existe){
             return redirect()->route('admin.usuario.inicio')->with('error','El usuario no existe');
         }
-        
+
         if($request->get('name') == null){
             return back()->with('error','Debe ingresar el nombre del usuario');
         }
@@ -157,7 +157,7 @@ class UserController extends Controller
         if($correo_duplicado){
             return back()->with('error','El correo '.$request->get('email').' ya ha sido ocupado');
         }
-        
+
         $usuario = new User($request->all());
         $usuario->password = bcrypt($request->get('password'));
         $usuario->save();
