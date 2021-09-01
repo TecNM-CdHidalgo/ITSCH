@@ -22,10 +22,12 @@
                     </div>
                 </div>
             </form>
-
-            <div class="collapse demo" style="text-align: right;">
-                <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
-            </div>
+            {{-- Permisos para que solo el administrador de de alta las carreras --}}
+            @if (Auth::User()->tipo == "Administrador")
+                <div class="collapse demo" style="text-align: right;">
+                    <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
+                </div>
+            @endif
 
         </div>
         <div class="col-sm-2" style="text-align: right">
@@ -446,6 +448,7 @@
 
 
     <br>
+    {{--
     <h2> Contacto    </h2>
     <hr>
     <form action="{{ route('carreras.storeContacto',$pro_act->id) }}">
@@ -492,6 +495,7 @@
         </div>
     </form>
     <br>
+    --}}
     <h2> Datos de Contacto    </h2>
     <hr>
     @foreach ($personal as $per)
@@ -502,7 +506,7 @@
             <li>{{ $personal[0]->puesto }}, edificio “A” segundo piso.</li>
         @endif
     @endforeach
-    <li>Ubicación: Edificio “A” segundo piso.</li>
+    <li>Ubicación: Edificio “A” planta alta.</li>
     <hr class="red">
 
     {{-- Sección de modals --}}

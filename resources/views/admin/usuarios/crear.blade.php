@@ -16,6 +16,7 @@
       <select name="tipo" id="tipo" class="form-control">
         <option value="Miembro" selected>Miembro</option>
         <option value="Administrador">Administrador</option>
+        <option value="Jefe de carrera">Jefe de carrera</option>
       </select>
     </div>
     <div class="form-group">

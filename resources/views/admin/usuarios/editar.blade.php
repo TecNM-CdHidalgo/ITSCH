@@ -24,8 +24,9 @@
         @else
           <option value="Miembro" selected>Miembro</option>
           <option value="Administrador">Administrador</option>
+          <option value="Jefe de carrera">Jefe de carrera</option>
         @endif
-        
+
       </select>
     </div>
     <div class="form-group">

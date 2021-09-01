@@ -59,14 +59,16 @@
 
     <div class="container">
       <div class="row align-items-center position-relative">
+        <a href="{{ route('inicio') }}">
           <img src="{{ asset('images/itsch.jpg') }}" class="rounded" alt="Logo" width="40"height="50"> &nbsp &nbsp
+        </a>
           <div class="site-logo">
-            <a href="#" class="text-black"><span class="text-primary">ITSCH</a>
+            <a href="{{ route('inicio') }}" class="text-black"><span class="text-primary">ITSCH</span></a>
           </div>
             <nav class="site-navigation text-center ml-auto" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li>
-                  <a href="{{ route('inicio') }}" class="nav-link">
+                  <a href="{{ route('home') }}" class="nav-link">
                     <i class='fas fa-home' style='font-size:16px'></i>
                   </a>
                 </li>
@@ -78,12 +80,15 @@
                     <a href="{{route('admin.usuarios.inicio')}}" class="nav-link"><p id="section-usuarios" class="no-margins">Usuarios</p></a>
                   </li>
                 @endif
-                <li>
-                  <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link" ><p id="section-galeria" class="no-margins">Galeria</p></a>
-                </li>                
+                @if (Auth::User()->tipo == "Administrador" || Auth::User()->tipo == "Editor")
+                    <li>
+                    <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
+                    </li>
+                    <li>
+                    <a href="#" class="nav-link" ><p id="section-galeria" class="no-margins">Galeria</p></a>
+                    </li>
+                @endif
+                @if (Auth::User()->tipo == "Administrador" || Auth::User()->tipo == "Jefe de carrera")
                 <li class="dropdown">
                   <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
@@ -91,6 +96,8 @@
                     <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
                   </div>
                 </li>
+                @endif
+                | Usuario:
                 <li class="dropdown">
                   <a href="#" class="nav-link" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <p id="section-username" class="no-margins">{{ explode(" ",Auth::User()->name)[0] }}</p>
@@ -145,7 +152,7 @@
               <ul class="list-unstyled">
                 <li><a href="{{ route('inicio') }}#about-section">Acerca de</a></li>
                 <li><a href="{{ route('inicio') }}#blog-section">Publicaciones</a></li>
-                <li><a href="{{ route('inicio') }}#gallery-section">Galeria</a></li>               
+                <li><a href="{{ route('inicio') }}#gallery-section">Galeria</a></li>
                 <li><a href="{{ route('inicio') }}#contact-section">Contactanos</a></li>
               </ul>
             </div>

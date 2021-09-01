@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Models\Banco;
+use Illuminate\Support\Facades\Auth;
 
 class BancoController extends Controller
 {
@@ -14,8 +13,12 @@ class BancoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $banco = Banco::orderBy('created_at','desc')->paginate(5);            
-        return View('admin.contenido.banco_pro.index')->with('banco',$banco); 
+    {
+        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+            return redirect()->route('home');
+        }
+        $banco = Banco::orderBy('created_at','desc')->paginate(5);
+        return View('admin.contenido.banco_pro.index')->with('banco',$banco);
     }
 
     /**
@@ -25,11 +28,15 @@ class BancoController extends Controller
      */
     public function create()
     {
-        return view('admin.contenido.banco_pro.crear'); 
+        return view('admin.contenido.banco_pro.crear');
     }
 
     public function store(Request $request)
     {
+        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+            return redirect()->route('home');
+        }
+
         $Banco = new Banco;
 
         $Banco->carrera = $request->carrera;
@@ -43,9 +50,9 @@ class BancoController extends Controller
 
         $Banco->save();
 
-        return redirect()->route('admin.contenido.banco.index'); 
+        return redirect()->route('admin.contenido.banco.index');
     }
-   
+
 
     /**
      * Display the specified resource.
@@ -68,8 +75,11 @@ class BancoController extends Controller
      */
     public function edit($id)
     {
-        $banco = Banco::where('id',$id)->get();               
-        return View('admin.contenido.banco_pro.editar')->with('banco',$banco); 
+        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+            return redirect()->route('home');
+        }
+        $banco = Banco::where('id',$id)->get();
+        return View('admin.contenido.banco_pro.editar')->with('banco',$banco);
     }
 
     /**
@@ -92,8 +102,8 @@ class BancoController extends Controller
         $Banco->docente = $request->docente;
 
         $Banco->save();
-        return redirect()->route('admin.contenido.banco.index'); 
-        
+        return redirect()->route('admin.contenido.banco.index');
+
     }
 
     /**
@@ -104,7 +114,11 @@ class BancoController extends Controller
      */
     public function destroy($id)
     {
+        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+            return redirect()->route('home');
+        }
+
         Banco::where('id', $id)->delete();
-        return redirect()->route('admin.contenido.banco.index'); 
+        return redirect()->route('admin.contenido.banco.index');
     }
 }
