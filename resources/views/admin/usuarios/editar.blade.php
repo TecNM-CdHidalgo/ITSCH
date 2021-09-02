@@ -19,12 +19,13 @@
       <label for="tipo">Tipo de Usuario</label>
       <select name="tipo" id="tipo" class="form-control">
         @if ($usuario->tipo == "Administrador")
-          <option value="Editor">Editor</option>
-          <option value="Administrador" selected>Administrador</option>
-          <option value="Jefe de carrera">Jefe de carrera</option>
+            <option value="Editor">Editor</option>
+            <option value="Administrador" selected>Administrador</option>
+            <option value="Jefe de carrera">Jefe de carrera</option>
         @else
-          <option value="Editor" selected>Editor</option>
-          <option value="Jefe de carrera">Jefe de carrera</option>
+            <option value="Editor">Editor</option>
+            <option value="Administrador" selected>Administrador</option>
+            <option value="Jefe de carrera">Jefe de carrera</option>
         @endif
 
       </select>
