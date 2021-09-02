@@ -46,7 +46,7 @@ class CarrerasController extends Controller
         //Datos de materias de especialidad
         $materias_esp=Materia_especialidad::rightJoin('especialidades','materias_especialidad.id_especialidad','especialidades.id')
         ->select('especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
-        ->where('especialidades.id_programa',$idPro->id)->groupBy('especialidades.nombre')->get();
+        ->having('especialidades.id',$idPro->id)->groupBy('especialidades.id','materias_especialidad.id')->get();
 
         //Fin de datos para el plan de estudios
 

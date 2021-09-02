@@ -21,9 +21,9 @@
         @if ($usuario->tipo == "Administrador")
           <option value="Editor">Editor</option>
           <option value="Administrador" selected>Administrador</option>
+          <option value="Jefe de carrera">Jefe de carrera</option>
         @else
           <option value="Editor" selected>Editor</option>
-          <option value="Administrador">Administrador</option>
           <option value="Jefe de carrera">Jefe de carrera</option>
         @endif
 
