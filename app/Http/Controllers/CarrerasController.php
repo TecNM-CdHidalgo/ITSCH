@@ -330,8 +330,7 @@ class CarrerasController extends Controller
                 $file->move($path,$name);
                 Archivo::updateOrCreate(
                     ['id_programa'=>$id_pro],
-                    ['nom_img_carr'=>$name,
-                     'id_programa'=>$id_pro]
+                    ['nom_img_carr'=>$name]
                 );
             }else{
                 return response()->json(array(['type' => 'error', 'message' => 'La extension '.$imageExtension.' no es valida']));
