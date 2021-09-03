@@ -66,6 +66,8 @@
 			<div id="occ-widget"></div>
 		</div>
 	</div>
+	{{-- Seccion de fichas --}}
+	{{--  
     <hr class="red">
 		<div class="row">
 			<div class="col-sm-12" style="text-align: center">
@@ -78,6 +80,7 @@
 		</div>
 		<br>
 		<br>
+	--}}
 	<hr class="red">
     @foreach($noticias2 as $not2)
 	    <div class="noticias">
