@@ -16,7 +16,7 @@ class CreateReticulasTable extends Migration
         Schema::create('reticulas', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_programa')->unsigned()->nullable();
-            $table->string('nom_arch_ret');
+            $table->string('nom_arch_ret')->nullable();
             $table->bigInteger('id_especialidad')->unsigned()->nullable();            
             $table->foreign('id_programa')->references('id')->on('programas')->onDelete('cascade');
             $table->foreign('id_especialidad')->references('id')->on('especialidades')->onDelete('cascade');
