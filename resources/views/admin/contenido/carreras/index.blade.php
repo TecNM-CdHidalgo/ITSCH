@@ -108,9 +108,7 @@
         <hr>
         <p id="p_definicion">{{ $pro_act->definicion }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="definicion" name="definicion">
-                {{ $pro_act->definicion }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="definicion" name="definicion">{{ $pro_act->definicion }}</textarea>
         </div>
         <br>
 
@@ -118,9 +116,7 @@
         <hr>
         <p id="p_mision">{{ $pro_act->mision }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="mision" name="mision">
-                {{ $pro_act->mision }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="mision" name="mision">{{ $pro_act->mision }}</textarea>
         </div>
         <br>
 
@@ -128,9 +124,7 @@
         <hr>
         <p id="p_vision">{{ $pro_act->vision }} </p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="vision" name="vision">
-                {{ $pro_act->vision }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="vision" name="vision">{{ $pro_act->vision }}</textarea>
         </div>
         <br>
 
@@ -138,9 +132,7 @@
         <hr>
         <p id="p_politica">{{ $pro_act->politica }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="politica" name="politica">
-                {{ $pro_act->politica }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="politica" name="politica">{{ $pro_act->politica }}</textarea>
         </div>
         <br>
 
@@ -148,9 +140,7 @@
         <hr>
         <p id="p_objetivo">{{ $pro_act->objetivo }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="objetivo" name="objetivo">
-                {{ $pro_act->objetivo }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="objetivo" name="objetivo">{{ $pro_act->objetivo }}</textarea>
         </div>
         <br>
 
@@ -158,9 +148,7 @@
         <hr>
         <p id="p_ingreso">{{ $pro_act->per_ingreso }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="ingreso" name="per_ingreso">
-                {{ $pro_act->per_ingreso }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="ingreso" name="per_ingreso">{{ $pro_act->per_ingreso }}</textarea>
         </div>
         <br>
 
@@ -168,9 +156,7 @@
         <hr>
         <p id="p_egreso">{{ $pro_act->per_egreso }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="egreso" name="per_egreso">
-                {{ $pro_act->per_egreso }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="egreso" name="per_egreso">{{ $pro_act->per_egreso }}</textarea>
         </div>
         <br>
 
@@ -178,9 +164,7 @@
         <hr>
         <p id="p_campo">{{ $pro_act->campo }}</p>
         <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="egreso" name="campo">
-                {{ $pro_act->campo }}
-            </textarea>
+            <textarea class="form-control" rows="5" id="egreso" name="campo">{{ $pro_act->campo }}</textarea>
         </div>
         <br>
 

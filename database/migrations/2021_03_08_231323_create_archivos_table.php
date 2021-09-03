@@ -15,9 +15,9 @@ class CreateArchivosTable extends Migration
     {
         Schema::create('archivos', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_img_carr',100);            
-            $table->string('nom_arch_piid',100);
-            $table->string('nom_arch_acred',100);
+            $table->string('nom_img_carr',100)->nullable();            
+            $table->string('nom_arch_piid',100)->nullable();
+            $table->string('nom_arch_acred',100)->nullable();
             $table->bigInteger('id_programa')->unsigned()->nullable();
             $table->foreign('id_programa')->references('id')->on('programas')->onDelete('cascade');
             $table->timestamps();
