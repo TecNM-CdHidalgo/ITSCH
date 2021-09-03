@@ -125,7 +125,7 @@ class CarrerasController extends Controller
         //Datos de las materias de cada especialidad
         $materias_esp=Materia_especialidad::rightJoin('especialidades','materias_especialidad.id_especialidad','especialidades.id')
         ->select('especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
-        ->where('especialidades.id_programa',$id)->groupBy('especialidades.nombre')->get();
+        ->having('especialidades.id',$id)->groupBy('especialidades.id','materias_especialidad.id')->get();
 
 
         //Fin de datos para el plan de estudios
@@ -210,7 +210,7 @@ class CarrerasController extends Controller
         //Datos de las materias de cada especialidad
         $materias_esp=Materia_especialidad::rightJoin('especialidades','materias_especialidad.id_especialidad','especialidades.id')
         ->select('especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
-        ->where('especialidades.id_programa',$idPro->id)->groupBy('especialidades.nombre')->get();
+        ->having('especialidades.id',$idPro->id)->groupBy('especialidades.id','materias_especialidad.id')->get();
 
         //Datos para el plan de estudios
         $programa=Programa::where('programas.id',$idPro->id)
