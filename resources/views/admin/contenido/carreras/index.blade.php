@@ -227,28 +227,28 @@
                     <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-3"></div>
-                        <div class="col-sm-5">
-                            <form action="{{ route('carreras.showMateriasEspecialidad2',$pro_act->id) }}">
-                                <div class="input-group mb-3 input-group-sm">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Especialidad</span>
-                                    </div>
-                                    <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
-                                        @foreach($materias_esp as $esp)
-                                            <option value="{{ $esp->id_especialidad }}">{{ $esp->esp_nombre }}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-success">Mostrar</button>
-                                    </div>
+                        <div class="col-sm-5">                           
+                            <div class="input-group mb-3 input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Especialidad</span>
                                 </div>
-                            </form>
+                                {{-- Combo con las especialidades de la carrera --}}
+                                <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required> 
+                                    @foreach($especialidades as $esp)
+                                        <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="input-group-append">
+                                    {{--  <button type="submit" class="btn btn-success">Mostrar</button>--}}
+                                    <button type="button" class="btn btn-success" onclick="act_tabla()">Mostrar</button>
+                                </div>
+                            </div>                           
                         </div>
                     </div>
                     <hr class="red">
 
                     <div class="table-responsive">
-                        <table class="table table-sm">
+                        <table class="table table-sm" id="tabMatEsp">
                             <thead>
                                 <tr>
                                     <th>Número</th>
@@ -552,6 +552,38 @@
 
     @section('js')
         <script>
+
+            //Funcion ajax para actualizar tabla de materias de especialidad
+            function act_tabla()
+            {
+                //Funcion json para pedir datos con get
+                //console.log('especialidad:'+$('#id_especialidad').val());
+                $.getJSON('/contenido/carreras/actualizarTabla/'+$('#id_especialidad').val()).done(
+                    //Funcion en caso de que el servidor devuelva datos
+                    function(datos)
+                    {
+                        //Vaciamos la tabla
+                        $('#tabMatEsp').html('');
+                        let cont = 1;
+                        datos.forEach(me => {
+                            let fila='<tr><td>'+cont+
+                            '</td><td>'+me.clave+
+                            '</td><td>'+me.nombre+
+                            '</td><td>'+
+                                "<a href='"+me.link+"' target='_blank' download type='button' class='btn btn-success btn-sm' title='Descargar temario'><i class='fas fa-book-open' style='font-size:14px'></i></a>"
+                            +'</td></tr>';
+                            $('#tabMatEsp').append(fila);
+                            cont++;
+                        });
+                    }
+                ).fail(
+                    function(error)
+                    {
+                        alert("No se pudo conectar al servidor");
+                    }
+                );
+            }
+
             //Ocultar elementos
             function ocultar()
             {
@@ -595,6 +627,7 @@
             $(document).ready(function()
             {
                 $("#carrera").val({{ $pro_act->id }});
+               
             });
 
             //Obtener ID del option seleccionado

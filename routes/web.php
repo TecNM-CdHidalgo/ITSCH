@@ -234,4 +234,6 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('contenido/carreras/storeMatEsp/{id_pro}', [CarrerasController::class, 'storeMatEsp'])->name('carreras.storeMatEsp');
 	Route::get('contenido/carreras/showMateriasEspecialidad/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
+	Route::get('contenido/carreras/actualizarTabla/{id_esp}', [CarrerasController::class, 'act_tab_esp'])->name('carreras.actualizarTabla');
 });
+
