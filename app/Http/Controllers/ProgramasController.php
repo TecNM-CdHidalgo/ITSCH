@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Programa;
 use Illuminate\Http\Request;
 
 class ProgramasController extends Controller
@@ -13,72 +14,20 @@ class ProgramasController extends Controller
      */
     public function index()
     {
-        //
+       $carreras=Programa::select('programas.id as id_pro','programas.nombre','programas.plan_estudios','archivos.nom_img_carr')
+       ->join('archivos','programas.id','archivos.id_programa')->get();
+
+       $ncarreras=Programa::select('programas.id as id_pro','programas.nombre','programas.plan_estudios','archivos.nom_img_carr')
+       ->join('archivos','programas.id','archivos.id_programa')->get()->count();
+
+       $nfilas=($ncarreras+2)/3;
+       $nfilas=round($nfilas);
+
+       //dd($nfilas);
+
+
+       return view('content.oferta_educativa.index')
+       ->with('carreras',$carreras);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

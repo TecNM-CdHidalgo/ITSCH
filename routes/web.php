@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarrerasController;
+use App\Http\Controllers\ProgramasController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -52,6 +53,7 @@ Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_
 Route::get('oferta_educativa/nano',function(){return view('content.oferta_educativa.nano');})->name('oferta.nano');
 Route::get('oferta_educativa/gestion',function(){return view('content.oferta_educativa.gestion');})->name('oferta.gestion');
 Route::get('oferta_educativa/mecatronica',function(){return view('content.oferta_educativa.mecatronica');})->name('oferta.mecatronica');
+Route::get('oferta_educativa/index', [ProgramasController::class, 'index'])->name('oferta.index');
 
 //Rutas de instituto
 Route::get('instituto/nuestro_tec',function(){return view('content.instituto.nuestro_tec');})->name('instituto.nuestro_tec');
