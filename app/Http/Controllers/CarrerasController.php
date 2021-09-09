@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CarrerasController extends Controller
 {
-    
+
     //Mostramos una carrera inicial
     public function index()
     {
@@ -44,7 +44,7 @@ class CarrerasController extends Controller
         }
 
         //Seleccionamos la especialidad que este en la primera posicion
-        $idEsp=Especialidad::first('id');       
+        $idEsp=Especialidad::first('id');
 
         //Materias de tronco comun para el plan de estudios
         $programa=Programa::where('programas.id',$idPro->id)
@@ -57,14 +57,14 @@ class CarrerasController extends Controller
         ->join('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
         ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
         ->where('especialidades.id',$idEsp->id)
-        ->get();       
+        ->get();
 
         //Seleccionamos los archivos de cada carrera como su reticula, etc.
         $archivos=Archivo::where('id_programa',$idPro->id)->get();
 
         //Seleccionamos el nombre de todos las carreras
         $programas=DB::table('programas')->select('id','nombre')->get();
-        
+
         //Identificamos cual es la carrera que esta seleccionada actualmente
         $pro_act=Programa::find($idPro->id);
 
@@ -100,7 +100,7 @@ class CarrerasController extends Controller
         ->with('n_msg',$n_msg)
         ->with('archivos',$archivos)
         //Datos del plan de estudios
-        ->with('programa',$programa)        
+        ->with('programa',$programa)
         ->with('materias_esp',$materias_esp);
 
     }
@@ -130,8 +130,8 @@ class CarrerasController extends Controller
         $n_msg=Contactos::where('id_programa',$id)
         ->where('status',0)
         ->count();
-        $archivos=Archivo::where('id_programa',$id)->get();       
-       
+        $archivos=Archivo::where('id_programa',$id)->get();
+
         //Materias de tronco comun del programa academico
         $programa=Programa::where('programas.id',$id)
         ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')
@@ -140,7 +140,7 @@ class CarrerasController extends Controller
 
         //Seleccionamos la especialidad que este en la primera posicion
         $idEsp=Especialidad::select('id')->where('id_programa',$id)->get();
-        
+
         if(!$idEsp->isEmpty())
         {
             //Materias de especialidad del programa seleccionado
@@ -148,16 +148,16 @@ class CarrerasController extends Controller
             ->join('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
             ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
             ->where('especialidades.id',$idEsp[0]->id)
-            ->get(); 
+            ->get();
         }
         else
         {
             $materias_esp=Programa::leftjoin('especialidades','especialidades.id_programa', 'programas.id')
             ->leftjoin('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
-            ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')            
+            ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
             ->where('programas.id',$id)
-            ->get(); 
-        }       
+            ->get();
+        }
 
 
         //Fin de datos para el plan de estudios
@@ -173,7 +173,7 @@ class CarrerasController extends Controller
         ->with('n_msg',$n_msg)
         ->with('archivos',$archivos)
         //Datos del plan de estudios
-        ->with('programa',$programa)        
+        ->with('programa',$programa)
         ->with('materias_esp',$materias_esp);
     }
 
@@ -897,7 +897,8 @@ class CarrerasController extends Controller
      {
         $contacto = new Contactos($request->input());
         $contacto->save();
-        return redirect()->route('carreras.showCarrera',$id_pro);
+        return redirect()->route('oferta.showCarrera',$id_pro)
+        ->with('success','¡Tu mensaje se envió correctamente, en breve te responderemos!');
      }
 
     //Metodo para mostrar los mensajes que se han escrito al programa
@@ -945,16 +946,16 @@ class CarrerasController extends Controller
 
     //Metodo para mostrar y editar el plan de estudios del programa
     public function editPlanEstudios($id_pro)
-    {   
+    {
         $programa=Programa::where('programas.id',$id_pro)
         ->leftjoin('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')
         ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
         ->get();
 
-        $especialidad=Especialidad::where('id_programa',$id_pro)->get();        
+        $especialidad=Especialidad::where('id_programa',$id_pro)->get();
         if(!$especialidad->isEmpty())
-        {            
-            $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();       
+        {
+            $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
             $esp_act=Especialidad::first();
             return view('admin.contenido.carreras.editplanestudios')
             ->with('programa',$programa)
@@ -967,7 +968,7 @@ class CarrerasController extends Controller
             return back()
             ->with('error','Primero debe registrarse una especialidad');
         }
-        
+
     }
 
     //Metodo para consultar las materias de la especialidad
@@ -978,7 +979,7 @@ class CarrerasController extends Controller
         ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
         ->where('especialidades.id',$request->id_esp)
         ->get();
-        
+
         $programa=Programa::where('programas.id',$id_pro)
         ->leftjoin('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')
         ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')

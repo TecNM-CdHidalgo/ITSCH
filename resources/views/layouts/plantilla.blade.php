@@ -378,9 +378,12 @@
 <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <section>
-        @yield('content')
-      </section>
+        <section>
+            {{-- Incluye menus emergentes --}}
+            @include('layouts.flash-message')
+            {{-- Contenido --}}
+            @yield('content')
+        </section>
     </div>
     <div class="col-sm-1"></div>
 </div>
