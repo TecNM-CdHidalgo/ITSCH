@@ -466,60 +466,8 @@
                         alert("No se pudo conectar al servidor");
                     }
                 );
-            }
+            }        
 
-            //Ocultar elementos
-            function ocultar()
-            {
-                document.getElementById('p_definicion').style.display = 'none';
-                document.getElementById('btn_editar').style.display = 'none';
-                document.getElementById('p_mision').style.display = 'none';
-                document.getElementById('p_vision').style.display = 'none';
-                document.getElementById('p_politica').style.display = 'none';
-                document.getElementById('clave').style.display = 'none';
-                document.getElementById('p_objetivo').style.display = 'none';
-                document.getElementById('p_ingreso').style.display = 'none';
-                document.getElementById('p_egreso').style.display = 'none';
-                document.getElementById('p_campo').style.display = 'none';
-            }
-
-            //Mostrar elementos
-            function mostrar()
-            {
-                document.getElementById('p_definicion').style.display = 'block';
-                document.getElementById('btn_editar').style.display = 'block';
-                document.getElementById('p_mision').style.display = 'block';
-                document.getElementById('p_vision').style.display = 'block';
-                document.getElementById('p_politica').style.display = 'block';
-                document.getElementById('clave').style.display = 'block';
-                document.getElementById('p_objetivo').style.display = 'block';
-                document.getElementById('p_ingreso').style.display = 'block';
-                document.getElementById('p_egreso').style.display = 'block';
-                document.getElementById('p_campo').style.display = 'block';
-            }
-
-
-            //Obtiene datos de la carrera a mostrar
-            function datosEnviar()
-            {
-                var idCarr=$( "#carrera" ).val();
-                $('#idCarrSel').val(idCarr);
-                $('#formMostrar').attr('action','{{url('contenido/carreras')}}/showCarrera/'+idCarr);
-            }
-
-            //Seleccionamos la opcion del select elegida por el usuario, cada ves que se carga la pagina
-            $(document).ready(function()
-            {
-                $("#carrera").val({{ $pro_act->id }});
-
-            });
-
-            //Obtener ID del option seleccionado
-            function obtId()
-            {
-                id=$("#carrera").val();
-                alert(id);
-            }
 
             //Funcion que llena el modal con los detalles de cada uno de los profesores, mostrando grados académicos y producción
             function obtDetalleEst(per,form,pro,id_prof)
