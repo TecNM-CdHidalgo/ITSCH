@@ -240,13 +240,14 @@
           Oferta educativa
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item"  href="{{route('oferta.sistemas')}}">Ingeniería en Sistemas Computacionales</a>
+            <a class="dropdown-item"  href="{{route('oferta.sistemas')}}">Ingeniería en Sistemas Computacionales</a>
             <a class="dropdown-item"  href="{{route('oferta.tics')}}">Ingeniería en  Tecnologías de la Información</a>
             <a class="dropdown-item"  href="{{route('oferta.industrial')}}">Ingeniería  Industrial</a>
-          <a class="dropdown-item"  href="{{route('oferta.mecatronica')}}">Ingeniería en  Mecatrónica</a>
+            <a class="dropdown-item"  href="{{route('oferta.mecatronica')}}">Ingeniería en  Mecatrónica</a>
             <a class="dropdown-item"  href="{{route('oferta.gestion')}}">Ingeniería en  Gestión Empresarial</a>
-          <a class="dropdown-item"  href="{{route('oferta.bioquimica')}}">Ingeniería en  Bioquímica</a>
+            <a class="dropdown-item"  href="{{route('oferta.bioquimica')}}">Ingeniería en  Bioquímica</a>
             <a class="dropdown-item"  href="{{route('oferta.nano')}}">Ingeniería en Nanotecnologia</a>
+            <a class="dropdown-item"  href="{{ route('oferta.index') }}">Carreras</a>
         </div>
       </li>
 
@@ -377,9 +378,12 @@
 <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <section>
-        @yield('content')
-      </section>
+        <section>
+            {{-- Incluye menus emergentes --}}
+            @include('layouts.flash-message')
+            {{-- Contenido --}}
+            @yield('content')
+        </section>
     </div>
     <div class="col-sm-1"></div>
 </div>

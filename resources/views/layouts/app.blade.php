@@ -96,47 +96,56 @@
         {{--Plantilla--}}
         @include('layouts.plantilla')
 
-       
+        {{-- Seccion para los js --}}
+        @yield('js')
+
         
+
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="aHshxGf4"></script>
+
+        <!--Incluir jQuery  -->
+        <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>
+    
+        {{-- OCC Mundial --}}
+        <script id = "bolsa-widget"
+          type = "text/javascript"
+          charset = "UTF-8"
+          src = "https://jobdiscovery-widget-occ.occ.com.mx/button-bundle.js"
+          key = "1b8v79xAa8DKqYCoM8k5ADxVrrs">
+        </script>
+    
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+    
+            // Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function (e) {
+              e.stopPropagation();
+            });
+    
+            // make it as accordion for smaller screens
+            $('.menu-padre').on('click', function(e){
+              if ($(window).width() > 599) return;
+              e.preventDefault();
+              e.stopPropagation();
+    
+              if($(this).next('.submenu').length){
+                  $(this).next('.submenu').toggle();
+              }
+    
+              $('.dropdown').on('hide.bs.dropdown', function () {
+                $(this).find('.submenu').hide();
+              });
+            });
+    
+            //Cierra los mensajes emergentes
+            $(document).ready(function(event){
+            $('.mdshide').delay(2000).fadeOut(300);
+            })
+        </script>
+
     </body>
 
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="aHshxGf4"></script>
-
-    <!--Incluir jQuery  -->
-    <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>
-
-    {{-- OCC Mundial --}}
-    <script id = "bolsa-widget" 
-      type = "text/javascript" 
-      charset = "UTF-8" 
-      src = "https://jobdiscovery-widget-occ.occ.com.mx/button-bundle.js" 
-      key = "1b8v79xAa8DKqYCoM8k5ADxVrrs"> 
-    </script>  
-
-    <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();
-        });
-
-        // Prevent closing from click inside dropdown
-        $(document).on('click', '.dropdown-menu', function (e) {
-          e.stopPropagation();
-        });
-
-        // make it as accordion for smaller screens
-        $('.menu-padre').on('click', function(e){
-          if ($(window).width() > 599) return;
-          e.preventDefault();
-          e.stopPropagation();
-
-          if($(this).next('.submenu').length){
-              $(this).next('.submenu').toggle();
-          }
-
-          $('.dropdown').on('hide.bs.dropdown', function () {
-            $(this).find('.submenu').hide();
-          });
-        });
-    </script>
-
+  
 </html>

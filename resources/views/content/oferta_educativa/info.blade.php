@@ -1,218 +1,113 @@
-@extends('layouts.plant_admin')
+@extends('layouts.app')
 
-@section('contenido')
+@section('content')
+
+    <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
     <div class="row">
-        <div class="col-sm-3">
-            <h5>Carreras</h5>
-        </div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-5">
-            <form id="formMostrar">
-                <div class="input-group mb-3 input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Carrera</span>
-                    </div>
-                    <select class="form-control form-control-sm" id="carrera" required>
-                        @foreach($programas as $pro)
-                            <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
-                        @endforeach
-                    </select>
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-success" onclick="datosEnviar()">Mostrar</button>
-                    </div>
-                </div>
-            </form>
-            {{-- Permisos para que solo el administrador de de alta las carreras --}}
-            @if (Auth::User()->tipo == "Administrador")
-                <div class="collapse demo" style="text-align: right;">
-                    <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
-                </div>
-            @endif
-
-        </div>
-        <div class="col-sm-2" style="text-align: right">
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target=".demo" onclick="ocultar()" id="btn_editar">Editar</button>
-            <div  class="collapse demo">
-                <button type="button" class="btn btn-info btn-sm" data-toggle="collapse" data-target=".demo" onclick="mostrar()">Cancelar</button>
-            </div>
+        <div class="col-sm-12">
+            <br>
+            <h2 id="n_carrera">{{ $pro_act->nombre }}</h2>
         </div>
     </div>
     <hr>
-
-    <form enctype="multipart/form-data" method="POST" action="{{ route('carreras.updateCarreraCom',$pro_act->id) }}">
-        {{csrf_field()}}
-        <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
-        <div class="row">
-            <div class="col-sm-8">
-                <h4 id="n_carrera">{{ $pro_act->nombre }}</h4>
-            </div>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-1">
-
-                <a href="{{ route('carreras.showContacto',$pro_act->id) }}"><i class='fas fa-bell' style='font-size:18px;color:red' title="Ver mensajes"></i> {{ $n_msg }}</a>
-
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8" style="text-align: center">
-                @if($archivos->count()>0)
-                    <img src="{{ asset('storage/carreras_imagenes/'.$archivos[0]->nom_img_carr) }}" alt="img_carrera" style="max-width: 400px; max-heigth:400px;">
-                @else
-                    <img src="{{ asset('images/no_img.jpg') }}" alt="img_carrera" style="max-width: 400px; max-heigth:400px;">
-                @endif
-                <div  class="collapse demo">
-                    <h5>Seleccona una imagen para el logo de la carrera</h5>
-                    <input type="file" class="form-control-file border" name="logo">
-                </div>
-                <br>
-                <br>
-                <h6>Clave del plan de estudios</h6>
-                <h5 id="clave"> <b>{{ $pro_act->plan_estudios }}</b>   </h5>
-                <hr>
-                <div  class="collapse demo">
-                    <input type="text" class="form-control" name="plan_estudios" value="{{ $pro_act->plan_estudios }}" placeholder="Escribe la clave del plan de estudios">
-                </div>
-                <h4> <b>ESPECIALIDAD(ES)</b> </h4>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-        {{-- Tabla de especialidades --}}
-        <div class="collapse demo" style="text-align: right;">
-            <a href="{{ route('carreras.editEspecialidad',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-        </div>
-        <table class="table">
-            <thead>
-                <th style="width: 25%;">Nombre</th>
-                <th style="width: 15%;">Clave</th>
-                <th>Objetivo</th>
-                <th>Retícula</th>
-            </thead>
-            <tbody>
-                @foreach ($especialidades as $esp)
-                    <tr>
-                        <td>{{ $esp->nombre }}</td>
-                        <td>{{ $esp->clave }}</td>
-                        <td>{{ $esp->objetivo }}</td>
-                        <td>
-                            <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" download type="button" class="btn btn-primary btn-sm" title="Descargar reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-
-        <h3>¿Que es un ingeniero en {{ $pro_act->nombre }}?</h3>
-        <hr>
-        <p id="p_definicion">{{ $pro_act->definicion }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="definicion" name="definicion">{{ $pro_act->definicion }}</textarea>
-        </div>
-        <br>
-
-        <h3>Misión de {{ $pro_act->nombre }}</h3>
-        <hr>
-        <p id="p_mision">{{ $pro_act->mision }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="mision" name="mision">{{ $pro_act->mision }}</textarea>
-        </div>
-        <br>
-
-        <h3>Visión de {{ $pro_act->nombre }}</h3>
-        <hr>
-        <p id="p_vision">{{ $pro_act->vision }} </p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="vision" name="vision">{{ $pro_act->vision }}</textarea>
-        </div>
-        <br>
-
-        <h3>Politica de {{ $pro_act->nombre }}</h3>
-        <hr>
-        <p id="p_politica">{{ $pro_act->politica }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="politica" name="politica">{{ $pro_act->politica }}</textarea>
-        </div>
-        <br>
-
-        <h3>Objetivo de {{ $pro_act->nombre }}</h3>
-        <hr>
-        <p id="p_objetivo">{{ $pro_act->objetivo }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="objetivo" name="objetivo">{{ $pro_act->objetivo }}</textarea>
-        </div>
-        <br>
-
-        <h3>Perfil de ingreso</h3>
-        <hr>
-        <p id="p_ingreso">{{ $pro_act->per_ingreso }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="ingreso" name="per_ingreso">{{ $pro_act->per_ingreso }}</textarea>
-        </div>
-        <br>
-
-        <h3>Perfil de egreso</h3>
-        <hr>
-        <p id="p_egreso">{{ $pro_act->per_egreso }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="egreso" name="per_egreso">{{ $pro_act->per_egreso }}</textarea>
-        </div>
-        <br>
-
-        <h3>Campo laboral</h3>
-        <hr>
-        <p id="p_campo">{{ $pro_act->campo }}</p>
-        <div  class="collapse demo">
-            <textarea class="form-control" rows="5" id="egreso" name="campo">{{ $pro_act->campo }}</textarea>
-        </div>
-        <br>
-
-        <h3>Acreditación CACEI</h3>
-            @if(!$archivos->isEmpty())
-                @if($archivos[0]->nom_arch_acred<>"")
-                    <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_acred) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">Acreditación {{ $pro_act->nombre }}</a>
-                @endif
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8" style="text-align: center">
+            @if($archivos->count()>0)
+                <img src="{{ asset('storage/carreras_imagenes/'.$archivos[0]->nom_img_carr) }}" alt="img_carrera" style="max-width: 400px; max-heigth:400px;">
             @endif
-        <div  class="collapse demo">
-            <h6>Seleccona una archivo para el certificado de acreditación</h6>
-            <input type="file" class="form-control-file border" name="acreditacion">
+            <br>
+            <br>
+            <h6>Clave del plan de estudios</h6>
+            <h5 id="clave"> <b>{{ $pro_act->plan_estudios }}</b>   </h5>
+            <hr>
+            <h4> <b>ESPECIALIDAD(ES)</b> </h4>
         </div>
+        <div class="col-sm-2"></div>
+    </div>
+    {{-- Tabla de especialidades --}}
+    <table class="table">
+        <thead>
+            <th style="width: 25%;">Nombre</th>
+            <th style="width: 15%;">Clave</th>
+            <th>Objetivo</th>
+            <th>Retícula</th>
+        </thead>
+        <tbody>
+            @foreach ($especialidades as $esp)
+                <tr>
+                    <td>{{ $esp->nombre }}</td>
+                    <td>{{ $esp->clave }}</td>
+                    <td>{{ $esp->objetivo }}</td>
+                    <td>
+                        <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" download type="button" class="btn btn-primary btn-sm" title="Descargar reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
-        <hr class="red">
+    <h3>¿Que es un ingeniero en {{ $pro_act->nombre }}?</h3>
+    <hr>
+    <p id="p_definicion">{{ $pro_act->definicion }}</p>
+    <br>
 
-        <h3>PIID del programa educativo</h3>
-            @if(!$archivos->isEmpty())
-                @if($archivos[0]->nom_arch_piid<>"")
-                    <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_piid) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">PIID {{ $pro_act->nombre }}</a>
-                @endif
+    <h3>Misión de {{ $pro_act->nombre }}</h3>
+    <hr>
+    <p id="p_mision">{{ $pro_act->mision }}</p>
+    <br>
+
+    <h3>Visión de {{ $pro_act->nombre }}</h3>
+    <hr>
+    <p id="p_vision">{{ $pro_act->vision }} </p>
+    <br>
+
+    <h3>Politica de {{ $pro_act->nombre }}</h3>
+    <hr>
+    <p id="p_politica">{{ $pro_act->politica }}</p>
+    <br>
+
+    <h3>Objetivo de {{ $pro_act->nombre }}</h3>
+    <hr>
+    <p id="p_objetivo">{{ $pro_act->objetivo }}</p>
+    <br>
+
+    <h3>Perfil de ingreso</h3>
+    <hr>
+    <p id="p_ingreso">{{ $pro_act->per_ingreso }}</p>
+    <br>
+
+    <h3>Perfil de egreso</h3>
+    <hr>
+    <p id="p_egreso">{{ $pro_act->per_egreso }}</p>
+    <br>
+
+    <h3>Campo laboral</h3>
+    <hr>
+    <p id="p_campo">{{ $pro_act->campo }}</p>
+    <br>
+
+    <h3>Acreditación CACEI</h3>
+        @if(!$archivos->isEmpty())
+            @if($archivos[0]->nom_arch_acred<>"")
+                <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_acred) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">Acreditación {{ $pro_act->nombre }}</a>
             @endif
-        <div  class="collapse demo">
-            <h6>Seleccona el archipo del PIID</h6>
-            <input type="file" class="form-control-file border" name="piid">
-        </div>
-        <br>
-        <br>
-        {{-- Botones de guardar y cancelar --}}
-        <div class="row collapse demo">
-            <div class="col-sm-8"></div>
-            <div class="col-sm-2">
-                <button class="btn btn-sm btn-info" data-toggle="collapse" data-target=".demo" onclick="mostrar()">Cancelar</button>
-            </div>
-            <div class="col-sm-2">
-                <button  type="submit" class="btn btn-sm btn-success">Guardar</button>
-            </div>
-        </div>
-    </form>
+        @endif
 
+    <hr class="red">
+
+    <h3>PIID del programa educativo</h3>
+        @if(!$archivos->isEmpty())
+            @if($archivos[0]->nom_arch_piid<>"")
+                <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_piid) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">PIID {{ $pro_act->nombre }}</a>
+            @endif
+        @endif
+    <br>
+    <br>
 
     <hr class="red">
     <h3>Plan de estudios</h3>
     <hr class="red">
-
-    <div class="collapse demo" style="text-align: right;">
-        <a href="{{ route('carreras.editPlanEstudios',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-    </div>
     <br>
     <div id="accordion">
         <div class="card">
@@ -227,13 +122,13 @@
                     <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-3"></div>
-                        <div class="col-sm-5">                           
+                        <div class="col-sm-5">
                             <div class="input-group mb-3 input-group-sm">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Especialidad</span>
                                 </div>
                                 {{-- Combo con las especialidades de la carrera --}}
-                                <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required> 
+                                <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
                                     @foreach($especialidades as $esp)
                                         <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
                                     @endforeach
@@ -242,7 +137,7 @@
                                     {{--  <button type="submit" class="btn btn-success">Mostrar</button>--}}
                                     <button type="button" class="btn btn-success" onclick="act_tabla()">Mostrar</button>
                                 </div>
-                            </div>                           
+                            </div>
                         </div>
                     </div>
                     <hr class="red">
@@ -307,9 +202,6 @@
     <br>
 
     <h3>Objetivos educacionales</h3>
-    <div class="collapse demo" style="text-align: right;">
-        <a href="{{ route('carreras.editObjetivos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-    </div>
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -331,9 +223,6 @@
     <br>
 
     <h3>Atributos de egreso</h3>
-    <div class="collapse demo" style="text-align: right;">
-        <a href="{{ route('carreras.editAtributos',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-    </div>
     <div class="table-responsive">
         <table class="table table-sm">
             <thead>
@@ -398,10 +287,6 @@
     <h3>Estructura académica</h3>
     <hr>
 
-    <div class="collapse demo" style="text-align: right;">
-        <a href="{{ route('carreras.editEstructura',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
-    </div>
-
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -432,7 +317,6 @@
 
 
     <br>
-    {{--
     <h2> Contacto    </h2>
     <hr>
     <form action="{{ route('carreras.storeContacto',$pro_act->id) }}">
@@ -479,7 +363,7 @@
         </div>
     </form>
     <br>
-    --}}
+
     <h2> Datos de Contacto    </h2>
     <hr>
     @foreach ($personal as $per)
@@ -582,60 +466,8 @@
                         alert("No se pudo conectar al servidor");
                     }
                 );
-            }
+            }        
 
-            //Ocultar elementos
-            function ocultar()
-            {
-                document.getElementById('p_definicion').style.display = 'none';
-                document.getElementById('btn_editar').style.display = 'none';
-                document.getElementById('p_mision').style.display = 'none';
-                document.getElementById('p_vision').style.display = 'none';
-                document.getElementById('p_politica').style.display = 'none';
-                document.getElementById('clave').style.display = 'none';
-                document.getElementById('p_objetivo').style.display = 'none';
-                document.getElementById('p_ingreso').style.display = 'none';
-                document.getElementById('p_egreso').style.display = 'none';
-                document.getElementById('p_campo').style.display = 'none';
-            }
-
-            //Mostrar elementos
-            function mostrar()
-            {
-                document.getElementById('p_definicion').style.display = 'block';
-                document.getElementById('btn_editar').style.display = 'block';
-                document.getElementById('p_mision').style.display = 'block';
-                document.getElementById('p_vision').style.display = 'block';
-                document.getElementById('p_politica').style.display = 'block';
-                document.getElementById('clave').style.display = 'block';
-                document.getElementById('p_objetivo').style.display = 'block';
-                document.getElementById('p_ingreso').style.display = 'block';
-                document.getElementById('p_egreso').style.display = 'block';
-                document.getElementById('p_campo').style.display = 'block';
-            }
-
-
-            //Obtiene datos de la carrera a mostrar
-            function datosEnviar()
-            {
-                var idCarr=$( "#carrera" ).val();
-                $('#idCarrSel').val(idCarr);
-                $('#formMostrar').attr('action','{{url('contenido/carreras')}}/showCarrera/'+idCarr);
-            }
-
-            //Seleccionamos la opcion del select elegida por el usuario, cada ves que se carga la pagina
-            $(document).ready(function()
-            {
-                $("#carrera").val({{ $pro_act->id }});
-               
-            });
-
-            //Obtener ID del option seleccionado
-            function obtId()
-            {
-                id=$("#carrera").val();
-                alert(id);
-            }
 
             //Funcion que llena el modal con los detalles de cada uno de los profesores, mostrando grados académicos y producción
             function obtDetalleEst(per,form,pro,id_prof)
