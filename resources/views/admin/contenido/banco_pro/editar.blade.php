@@ -4,7 +4,7 @@
   <h6>Banco de proyectos ITSCH/Modificar</h6>
   <div class="row">
     <div class="col-sm-2"></div>
-    <div class="col-sm-8">      
+    <div class="col-sm-8">
       <form action="{{ route('admin.contenido.banco.modificar',$banco[0]->id ) }}">
         <div class="input-group mb-3 input-group-sm">
            <div class="input-group-prepend">
@@ -22,7 +22,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">Vacantes</span>
           </div>
-          <input type="number" min="1" value="1" class="form-control" name="vacantes" required value="{{ $banco[0]->vacantes }}"> 
+          <input type="number" min="1" value="1" class="form-control" name="vacantes" required value="{{ $banco[0]->vacantes }}">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
@@ -54,11 +54,26 @@
           </div>
           <input type="text" class="form-control" name="docente" value="{{ $banco[0]->docente }}">
         </div>
-        <button type="submit" class="btn btn-sm btn-success">Actualizar</button>        
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Fecha de inicio del proyecto</span>
+            </div>
+            <input type="date" class="form-control" name="inicio" required value="{{ $banco[0]->inicio }}">
+        </div>
+        <div class="form-group">
+            <label for="sel1">Selecciona el status del proyecto</label>
+            <select class="form-control" id="status" name="status" required>
+                <option value=" ">Selecciona una opción</option>
+                <option value="1">Inicio</option>
+                <option value="2">En proceso</option>
+                <option value="3">Terminado</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Actualizar</button>
       </form>
       <br>
     </div>
     <div class="col-sm-2"></div>
   </div>
-  
+
 @endsection
