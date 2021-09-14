@@ -4,55 +4,70 @@
   <h6>Banco de proyectos ITSCH/Crear</h6>
   <div class="row">
     <div class="col-sm-2"></div>
-    <div class="col-sm-8">      
+    <div class="col-sm-8">
       <form action="{{ route('admin.contenido.banco.guardar') }}">
         <div class="input-group mb-3 input-group-sm">
            <div class="input-group-prepend">
              <span class="input-group-text">Carrera</span>
           </div>
-          <input type="text" class="form-control" name="carrera" required>
+          <input type="text" class="form-control" name="carrera" required placeholder="Carrera que dirige el proyecto">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
             <span class="input-group-text">Proyecto</span>
          </div>
-         <input type="text" class="form-control" name="proyecto" required>
+         <input type="text" class="form-control" name="proyecto" required placeholder="Nombre del proyecto">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
-            <span class="input-group-text">Vacantes</span>
+            <span class="input-group-text">Integrantes</span>
           </div>
-          <input type="number" min="1" value="1" class="form-control" name="vacantes" required>
+          <input type="number" min="1" value="1" class="form-control" name="vacantes" required placeholder="Numero de personal o alumnos requerido para laborar en este proyecto">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
             <span class="input-group-text">Empresa/Institución</span>
           </div>
-          <input type="text" class="form-control" name="empresa" required>
+          <input type="text" class="form-control" name="empresa" required placeholder="Nombre de la empresa o institución para la que se elabora el proyecto">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
             <span class="input-group-text">Dirección</span>
           </div>
-          <textarea class="form-control" rows="3" name="direccion"></textarea>
+          <textarea class="form-control" rows="3" name="direccion" placeholder="Dirección de la empresa o institución para la que se elabora el proyecto (opcional)"></textarea>
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
             <span class="input-group-text">Telefono de contacto</span>
           </div>
-          <input type="text" class="form-control" name="telefono">
+          <input type="text" class="form-control" name="telefono" placeholder="Telefono de contacto del responsable del proyecto (opcional)">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
             <span class="input-group-text">Correo de contacto</span>
           </div>
-          <input type="text" class="form-control" name="correo" required>
+          <input type="text" class="form-control" name="correo" required placeholder="Correo de contacto del responsable del proyecto">
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
-            <span class="input-group-text">Docente responsable</span>
+            <span class="input-group-text">Docente responsable o Representante de la emnpresa(institución)</span>
           </div>
-          <input type="text" class="form-control" name="docente">
+          <input type="text" class="form-control" name="docente" placeholder="Nombre del responsable del proyecto">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Fecha de inicio del proyecto</span>
+            </div>
+            <input type="date" class="form-control" name="inicio" required value="<?php echo date("Y-m-d\TH-i") ?>">
+        </div>
+        <div class="form-group">
+            <label for="sel1">Selecciona el status del proyecto</label>
+            <select class="form-control" id="status" name="status" required>
+                <option value=" ">Selecciona una opción</option>
+                <option value="1">Inicio</option>
+                <option value="2">En proceso</option>
+                <option value="3">Terminado</option>
+            </select>
         </div>
         <input type="submit" class="btn btn-sm btn-success">
       </form>
@@ -60,5 +75,5 @@
     </div>
     <div class="col-sm-2"></div>
   </div>
-  
+
 @endsection

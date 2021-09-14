@@ -17,7 +17,7 @@ class BancoController extends Controller
         if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
             return redirect()->route('home');
         }
-        $banco = Banco::orderBy('created_at','desc')->paginate(5);
+        $banco = Banco::orderBy('created_at','desc')->paginate(7);
         return View('admin.contenido.banco_pro.index')->with('banco',$banco);
     }
 
@@ -47,6 +47,8 @@ class BancoController extends Controller
         $Banco->telefono = $request->telefono;
         $Banco->correo = $request->correo;
         $Banco->docente = $request->docente;
+        $Banco->inicio = $request->inicio;
+        $Banco->status = $request->status;
 
         $Banco->save();
 
@@ -100,6 +102,8 @@ class BancoController extends Controller
         $Banco->telefono = $request->telefono;
         $Banco->correo = $request->correo;
         $Banco->docente = $request->docente;
+        $Banco->inicio = $request->inicio;
+        $Banco->status = $request->status;
 
         $Banco->save();
         return redirect()->route('admin.contenido.banco.index');
