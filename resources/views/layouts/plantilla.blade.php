@@ -201,7 +201,7 @@
             <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
             <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
             <a class="dropdown-item" href="{{asset('documents/content/aviso_privacidad/aviso_privacidad.pdf')}}">Aviso de privacidad </a>
-            <a class="dropdown-item"href="https://cdhidalgo.tecnm.mx/transparencia/acceso_transparencia">Estados Financieros </a>
+            <a class="dropdown-item"href="{{ route('transparencia.acceso_transparencia') }}">Estados Financieros </a>
           </div>
       </li>
       <a href="https://moodle.cdhidalgo.tecnm.mx/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>

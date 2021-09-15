@@ -10,26 +10,329 @@
     <!-- Article main content -->
     <article class="col-md-8 maincontent">
         <header class="page-header">
-            <h1 class="page-title">Transparencia - Documentos para descargar:</h1>
+            <h2 class="page-title">Transparencia - Documentos para descargar:</h2>
         </header>
 
-        <!-- contenido bruto dinamico-->
 
-        <div id="custom-search-input" style="margin-bottom:20px; width:60%; float:right">
-            <strong>Busqueda de Archivo</strong>
-            <div class="input-group" style="width:100%;">
-                <input type="search" id='busqueda1'  class="search-query form-control" placeholder="Busqueda sin acentos" />
-                <span class="input-group-btn">
-                            	<button class="btn btn-danger" type="button">
-                                <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-            </div>
-        </div>
-        <div class="clearfix"></div>
 
-        <!-- Tabla Estados Financieros Septiembre 2019 -->
+        <!-- Tabla Estados Financieros -->
         <h3 class="text-center"> Estados Financieros </h3>
+        <hr class="red">
+        <td class="media">Al 31 de marzo del 2021</td>
+        <br>
+        <table class="table">
+            <thead>
+                <th>No.</th>
+                <th>Documento</th>
+                <th>Descargar</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Balanza de comprobacion</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/balanza de comprobacion.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Clasificacion administrativa</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/clasificacion administrativa.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Clasificacion economica</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/clasificacion economica.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Clasificacion funcional</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/clasificacion funcional.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Clasificacion por obj. del gasto</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/clasificacion por obj. del gasto.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Conciliacion entre los egre. presup. y los gast. contables</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/conciliacion entre los egre. presup. y los gast. contables.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Conciliacion entre los ing. presup. y contables</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/conciliacion entre los ing. presup. y contables.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Cuenta estatal</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/cuenta estatal.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Cuenta federal</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/cuenta federal.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Cuenta ingresos propios 2020</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/cuenta ingresos propios 2020.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Cuenta ingresos propios</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/cuenta ingresos propios.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Estado analitico de ing. presup</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado analitico de ing. presup.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Estado analitico de la deuda y otros pasivos</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado analitico de la deuda y otros pasivos.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Estado analitico del activo</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado analitico del activo.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Estado analitico mensual de ingresos</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado analitico mensual de ingresos.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Estado de actividades</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado de actividades.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Estado de cambios en la situacion financiera</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado de cambios en la situacion financiera.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Estado de flujos de efectivo</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado de flujos de efectivo.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Estado de resultados</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado de resultados.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Estado de variacion en la hacienda publica</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estado de variacion en la hacienda publica.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Estados de situacion financiera marzo</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/estados de situacion financiera marzo.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Fondos de inversion pyme asoc. a la cta. 0103891623</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/fondos de inversion pyme asoc. a la cta. 0103891623.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Fondos de inversion pyme cta. estatal</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/fondos de inversion pyme cta. estatal.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Fondos de inversion pyme cta. federal</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/fondos de inversion pyme cta. federal.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Fondos de inversion pyme cta. ingresos propios</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/fondos de inversion pyme cta. ingresos propios.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Fasto por categoria programatica</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/gasto por categoria programatica.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Indicadores de postura final</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/indicadores de postura final.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Notas de los estados financieros</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/notas de los estados financieros.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Prodep 2018</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/prodep 2018.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Proxoe</td>
+                    <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_mar_2021/proxoe.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr class="red">
+            <td class="media">Al 31 de diciembre del 2020</td>
+            <br>
+            <table class="table">
+                <thead>
+                    <th>No.</th>
+                    <th>Documento</th>
+                    <th>Descargar</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>CLASIFICACION ADMINISTRATIVA</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CLASIFICACION ADMINISTRATIVA.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>CLASIFICACION ECONOMICA</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CLASIFICACION ECONOMICA.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CLASIFICACION FUNCIONAL (FINALIDAD Y FUNCION)</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CLASIFICACION FUNCIONAL (FINALIDAD Y FUNCION).pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>CONCILIACION ENTRE LOS EGRESOS PRESP. Y LOS GASTOS CONTABLES</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CONCILIACION ENTRE LOS EGRESOS PRESP. Y LOS GASTOS CONTABLES.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>CONCILIACION ENTRE LOS INGRESOS PRESP. Y CONTABLES</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CONCILIACION ENTRE LOS INGRESOS PRESP. Y CONTABLES.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>CUENTA ESTATAL</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CUENTA ESTATAL.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>CUENTA FEDERAL</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/CUENTA FEDERAL.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>ESTADO ANALITICO DE INGRESOS PRESUPUESTABLES</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO ANALITICO DE INGRESOS PRESUPUESTABLES.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>ESTADO ANALITICO DE LA DEUDA Y OTROS PASIVOS</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO ANALITICO DE LA DEUDA Y OTROS PASIVOS.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>ESTADO ANALITICO DEL ACTIVO</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO ANALITICO DEL ACTIVO.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>ESTADO ANALITICO DEL EJERCICIO DEL PRESP. DE EGRESOS (CLASIFICACION POR OBJETO DEL GASTO)</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO ANALITICO DEL EJERCICIO DEL PRESP. DE EGRESOS (CLASIFICACION POR OBJETO DEL GASTO).pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>ESTADO ANALITICO MENSUAL DE INGRESOS</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO ANALITICO MENSUAL DE INGRESOS.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>ESTADO DE ACTIVIDADES</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO DE ACTIVIDADES.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>ESTADO DE CAMBIOS EN LA SITUACION FINANCIERA</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO DE CAMBIOS EN LA SITUACION FINANCIERA.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>ESTADO DE FLUJOS DE EFECTIVO</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO DE FLUJOS DE EFECTIVO.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>ESTADO DE RESULTADOS</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO DE RESULTADOS.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>ESTADO DE VARIACION EN LA HACIENDA PUBLICA</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADO DE VARIACION EN LA HACIENDA PUBLICA.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>ESTADOS DE SITUACION FINANCIERA</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/ESTADOS DE SITUACION FINANCIERA.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>FONDOS DE INVERSION CUENTA ASOCIADA 0103891623</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/FONDOS DE INVERSION CUENTA ASOCIADA 0103891623.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>FONDOS DE INVERSION CUENTA ESTATAL</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/FONDOS DE INVERSION CUENTA ESTATAL.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>FONDOS DE INVERSION CUENTA FEDERAL</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/FONDOS DE INVERSION CUENTA FEDERAL.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>FONDOS DE INVERSION CUENTA INGRESOS PROPIOS</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/FONDOS DE INVERSION CUENTA INGRESOS PROPIOS.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>INDICADORES DE POSTURA FISCAL</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/INDICADORES DE POSTURA FISCAL.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>INGRESOS PROPIOS 2020</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/INGRESOS PROPIOS 2020.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>INGRESOS PROPIOS</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/INGRESOS PROPIOS.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>NOTAS A LOS ESTADOS FINANCIEROS</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/NOTAS A LOS ESTADOS FINANCIEROS.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>PRODEP 2018</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/PRODEP 2018.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>PROEXOE</td>
+                        <td><a type="button" class="btn btn-primary btn-sm" target="blank" href="{{ asset('documents/content/transparencia/cont_dic_2020/PROEXOE.pdf') }}"> <i class='fas fa-download' style='font-size:10px'></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <hr class="red">
         <div class="title-docs"> al 30 de septiembre del 2019</div>
         <table class="table table-docs">
             <thead>
