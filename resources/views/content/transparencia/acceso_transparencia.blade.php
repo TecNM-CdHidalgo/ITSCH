@@ -2,11 +2,9 @@
 @extends('layouts.app')
 
 
-@section('content')<div class="container">
+@section('content')
 
-
-
-
+<div class="container">
    <!-- Article main content -->
    <article class="col-md-8 maincontent">
       <header class="page-header">
@@ -16,7 +14,7 @@
       <!-- Tabla Estados Financieros -->
       <h3 class="text-center"> Estados Financieros </h3>
       <hr class="red">
-      <h4>Al 31 de Junio del 2021</h4>
+      <h4>Al 30 de Junio del 2021</h4>
       <table class="table table-sm">
          <thead>
             <th>No.</th>
