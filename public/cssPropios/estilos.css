@@ -80,8 +80,8 @@
 /*Posiciona el menu blanco por debajo del menu del gobierno */
 #menuBlan{
     position:sticky;
-    top: 5%; 
-    height:9vh; /*altura del puerto de visualización) en lugar de porcentaje. Obtendrá la altura del navegador y lo dimensionará en consecuencia*/
+    top: 8%; 
+    height:8vh; /*altura del puerto de visualización) en lugar de porcentaje. Obtendrá la altura del navegador y lo dimensionará en consecuencia*/
 }
 /*Hace que los sub-menus se vean por encima del menu azul*/
 #menuBlan{            
@@ -106,12 +106,12 @@
 #menuAzul{
     z-index: 500; 
     position: sticky;
-    top: 12%; 
+    top: 15%; 
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;
     font-size: .9em; 
     letter-spacing: .9px;
-    height:9vh;
+    height:10vh;
 }
 
 /*Cambia tamaño de las banderas*/
@@ -421,9 +421,9 @@ hr.red:before {
 }
 /*Tipos de fuentes para la pagina*/
 body {
-    font-family: 'Montserrat';
-    /* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
-    font-size: 18px;
+    /*font-family: 'Montserrat';*/
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 16px;
     line-height: 1.428571429;
     color: #404041;
 }
@@ -583,9 +583,9 @@ h1, h2, h3 {
 }
 
 .btn {   
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 3px;
-    padding: 10px 25px;
+    padding: 7px 20px;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 0;
