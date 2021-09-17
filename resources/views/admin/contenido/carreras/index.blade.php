@@ -211,7 +211,7 @@
     <hr class="red">
 
     <div class="collapse demo" style="text-align: right;">
-        <a href="{{ route('carreras.editPlanEstudios',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar</a>
+        <a href="{{ route('carreras.editPlanEstudios',$pro_act->id) }}" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i>Editar</a>
     </div>
     <br>
     <div id="accordion">
