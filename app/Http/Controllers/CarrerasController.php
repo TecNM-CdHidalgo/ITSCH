@@ -947,12 +947,12 @@ class CarrerasController extends Controller
     //Metodo para mostrar y editar el plan de estudios del programa
     public function editPlanEstudios($id_pro)
     {
-        $programa=Programa::where('programas.id',$id_pro)
-        ->leftjoin('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')
-        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
-        ->get();
+        $programa=Programa::where('id',$id_pro)->get();
+
+        $mat_com=Asignatura_programa::where('id_programa',$id_pro)->get();
 
         $especialidad=Especialidad::where('id_programa',$id_pro)->get();
+
         if(!$especialidad->isEmpty())
         {
             $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
@@ -961,6 +961,7 @@ class CarrerasController extends Controller
             ->with('programa',$programa)
             ->with('especialidad',$especialidad)
             ->with('materias_esp',$materias_esp)
+            ->with('mat_com',$mat_com)
             ->with('esp_act',$esp_act);
         }
         else
@@ -1148,10 +1149,11 @@ class CarrerasController extends Controller
         try
         {
             $programa=Programa::find($id_pro);
-            //Codigo para cargar los archivos de las carreras
+            //Codigo para modificar los archivos de las carreras
             if(!Storage::has('public/carreras_planes_estudio/'.$programa->nombre)){
                 Storage::makeDirectory('public/carreras_planes_estudio/'.$programa->nombre);
             }
+
             if($request->has('nom_archivo')){
                 $file =$request->nom_archivo;
                 $archExtension = $file->getClientOriginalExtension();
@@ -1160,8 +1162,9 @@ class CarrerasController extends Controller
                     $path = storage_path().'/app/public/carreras_planes_estudio/'.$programa->nombre;
                     $name = $request->clave.'-'.$request->nombre.'.'.strtolower($archExtension);
                     $file->move($path,$name);
-                    //Borramos el archivo del directorio
-                    Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/'.$request->nom_archivo]);
+                    //Borramos el archivo anterior del directorio, para que solo quede el nuevo
+                    $arch_ant=Asignatura_programa::find($request->id_asignatura);
+                    Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/'.$arch_ant->nombre]);
                 }else{
                     return response()->json(array(['type' => 'error', 'message' => 'La extension '.$archExtension.' no es valida']));
                 }
@@ -1186,7 +1189,8 @@ class CarrerasController extends Controller
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
-        return redirect()->route('carreras.editPlanEstudios',$id_pro);
+        return redirect()->route('carreras.editPlanEstudios',$id_pro)
+        ->with("success","¡Materia modificada con exito!");
     }
 
 
