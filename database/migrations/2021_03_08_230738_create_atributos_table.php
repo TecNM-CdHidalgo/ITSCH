@@ -16,7 +16,7 @@ class CreateAtributosTable extends Migration
         Schema::create('atributos', function (Blueprint $table) {
             $table->id();
             $table->string('numero',5);
-            $table->string('descripcion',200);
+            $table->string('descripcion',2000);
             $table->bigInteger('id_programa')->unsigned()->nullable();
             $table->foreign('id_programa')->references('id')->on('programas')->onDelete('cascade');
             $table->timestamps();

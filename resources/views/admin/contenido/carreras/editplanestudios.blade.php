@@ -4,7 +4,7 @@
     <h4><a href="{{ route('carreras.index') }}"> Carreras/</a>Editar plan de estudios/{{ $programa[0]->nombre }}</h4>
     <hr>
 
-    <h5 id="nom_especialidad">Materias de la especialidad de {{ $esp_act->nombre }}</h5>
+    <h5 id="nom_especialidad">Materias de la especialidad de {{ $esp_act[0]->nombre }}</h5>
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-3"></div>
@@ -264,7 +264,7 @@
             //Seleccionamos la opcion del select elegida por el usuario, cada ves que se carga la pagina
             $(document).ready(function()
             {
-                $("#id_especialidad").val({{ $esp_act->id }});
+                $("#id_especialidad").val({{ $esp_act[0]->id }});
             });
         </script>
     @endsection

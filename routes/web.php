@@ -17,6 +17,7 @@ Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 
 //Transparecia
 Route::get('transparencia/acceso_transparencia',function(){return view('content.transparencia.acceso_transparencia');})->name('transparencia.acceso_transparencia');
+Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');
 
 //Rutas de vinculación
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');

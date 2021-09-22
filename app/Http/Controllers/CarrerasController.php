@@ -946,17 +946,18 @@ class CarrerasController extends Controller
 
     //Metodo para mostrar y editar el plan de estudios del programa
     public function editPlanEstudios($id_pro)
-    {
+
         $programa=Programa::where('id',$id_pro)->get();
 
         $mat_com=Asignatura_programa::where('id_programa',$id_pro)->get();
+
 
         $especialidad=Especialidad::where('id_programa',$id_pro)->get();
 
         if(!$especialidad->isEmpty())
         {
-            $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
-            $esp_act=Especialidad::first();
+            $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get(); 
+            $esp_act=Especialidad::where('id_programa',$id_pro)->get();
             return view('admin.contenido.carreras.editplanestudios')
             ->with('programa',$programa)
             ->with('especialidad',$especialidad)
@@ -989,7 +990,7 @@ class CarrerasController extends Controller
         $pro_act=Programa::find($id_pro);
         $especialidad=Especialidad::where('id_programa',$id_pro)->get();
         //$materias_esp=Materia_especialidad::where('id_especialidad',$request->id_esp)->get();
-        $esp_act=Especialidad::find($request->id_esp);
+        $esp_act=Especialidad::where('id',$request->id_esp)->get();
         //Cuenta los mensajes sin leer del programa
         $n_msg=Contactos::where('id_programa',$id_pro)
         ->where('status',0)
@@ -1123,7 +1124,7 @@ class CarrerasController extends Controller
                     $asignatura->id_programa=$id_pro;
                     $asignatura->save();
                 }else{
-                    return response()->json(array(['type' => 'error', 'message' => 'La extension '.$archExtension.' no es valida']));
+                    return back()->with('error','Esta sección solo acepta archivos PDF');
                 }
             }
         }

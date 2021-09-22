@@ -130,12 +130,10 @@
           </a>
 
         <div class="dropdown-menu">
-
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
                 <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
                 <a class="dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
         </div>
-
       </li>
 
 
@@ -200,7 +198,7 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
             <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
-            <a class="dropdown-item" href="{{asset('documents/content/aviso_privacidad/aviso_privacidad.pdf')}}">Aviso de privacidad </a>
+            <a class="dropdown-item" href="{{route('transparencia.aviso_privacidad')}}">Aviso de privacidad </a>
             <a class="dropdown-item"href="{{ route('transparencia.acceso_transparencia') }}">Estados Financieros </a>
           </div>
       </li>
