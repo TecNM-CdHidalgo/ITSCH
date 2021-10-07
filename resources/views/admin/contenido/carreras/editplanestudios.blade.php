@@ -4,16 +4,20 @@
     <h4><a href="{{ route('carreras.index') }}"> Carreras/</a>Editar plan de estudios/{{ $programa[0]->nombre }}</h4>
     <hr>
 
+    <input type="hidden" id="id_pro" value="{{ $id_pro }}">
+
     <h5 id="nom_especialidad">Materias de la especialidad de {{ $esp_act[0]->nombre }}</h5>
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-3"></div>
         <div class="col-sm-5">
-            <form action="{{ route('carreras.showMateriasEspecialidad',$programa[0]->id) }}">
+            <form action="{{ route('carreras.editPlanEstudios',$id_pro) }}" method="GET">
+                <input type="hidden" name="id_pro" value={{ $programa[0]->id }}>
                 <div class="input-group mb-3 input-group-sm">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Especialidad</span>
                     </div>
+
                     <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
                         @foreach($especialidad as $esp)
                             <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
@@ -28,7 +32,7 @@
     </div>
     <hr class="red">
 
-    <form action="{{ route('carreras.storeMatEsp',$programa[0]->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('carreras.storeMatEsp',$id_pro) }}" method="POST" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="row">
             <div class="col-sm-3">
@@ -82,11 +86,11 @@
                         <td>{{ $me->clave }}</td>
                         <td>{{ $me->nombre }}</td>
                         <td>
-                            <a href="{{ asset('storage/carreras_planes_estudio/'.$me->nom_pro.'/'.$me->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                         </td>
                         <td>
-                            <button class="btn btn-warning btn-sm" title="Modificar" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditar({{ $me }})"><i class='fas fa-edit' style='font-size:14px'></i></button>
-                            <button class="btn btn-danger btn-sm" title="Eliminar"><i class='fas fa-trash-alt' style='font-size:14px' data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminar({{ $me }})"></i></button>
+                            <button class="btn btn-warning btn-sm" title="Modificar" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditarEsp({{ $me }})"><i class='fas fa-edit' style='font-size:14px'></i></button>
+                            <button class="btn btn-danger btn-sm" title="Eliminar"><i class='fas fa-trash-alt' style='font-size:14px' data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminarEsp({{ $me }})"></i></button>
                         </td>
                     </tr>
                 @endforeach
@@ -97,7 +101,7 @@
     <br>
 
     <h5>Materias de tronco común</h5>
-    <form action="{{ route('carreras.storePlanEstudios',$programa[0]->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('carreras.storePlanEstudios',$id_pro) }}" method="POST" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="row">
             <div class="col-sm-3">
@@ -151,7 +155,7 @@
                         <td>{{ $mat->clave }}</td>
                         <td>{{ $mat->nombre }}</td>
                         <td>
-                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre."/".$mat->nom_archivo) }}"  download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre."/tron_comun/".$mat->nom_archivo) }}"  download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                         </td>
                         <td>
                             <button class="btn btn-warning btn-sm" title="Modificar" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditar({{ $mat }})"><i class='fas fa-edit' style='font-size:14px'></i></button>
@@ -244,7 +248,7 @@
                 $("#nom_update").val(pro['nombre']);
                 $("#cla_update").val(pro['clave']);
                 $("#id_asignatura").val(pro['id']);
-                r="{{url('contenido/carreras')}}/updatePlanEstudios/"+pro['id_programa'];
+                r="{{url('contenido/carreras')}}/updatePlanEstudios/"+ $("#id_pro").val();;
                 $('#formEditar').attr('action', r);
             }
 
@@ -259,6 +263,25 @@
             function obtEspecialidad()
             {
                 $("#id_esp").val($( "#id_especialidad" ).val() );
+            }
+
+            //Metodo para obtener los datos para modificar las materias de la especialidad
+            function obtDatEditarEsp(pro)
+            {
+
+                $("#nom_update").val(pro['nombre']);
+                $("#cla_update").val(pro['clave']);
+                $("#id_asignatura").val(pro['id']);
+                r="{{url('contenido/carreras')}}/updateMatEspecialidad/"+ $("#id_pro").val();;
+                $('#formEditar').attr('action', r);
+            }
+
+            //Metodo para eliminar materias de especialidad
+            function obtDatEliminarEsp(pro)
+            {
+                $("#nom_eliminar").text(pro['nombre']);
+                r="{{url('contenido/carreras')}}/destroyMatEspecialidad/"+pro['id'];
+                $('#formEliminar').attr('action', r);
             }
 
             //Seleccionamos la opcion del select elegida por el usuario, cada ves que se carga la pagina

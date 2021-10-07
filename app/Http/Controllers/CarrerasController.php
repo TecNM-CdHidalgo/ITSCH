@@ -945,7 +945,8 @@ class CarrerasController extends Controller
     /*Sección para plan de estudios */
 
     //Metodo para mostrar y editar el plan de estudios del programa
-    public function editPlanEstudios($id_pro)
+    public function editPlanEstudios(Request $request,$id_pro)
+    {
 
         $programa=Programa::where('id',$id_pro)->get();
 
@@ -954,16 +955,19 @@ class CarrerasController extends Controller
 
         $especialidad=Especialidad::where('id_programa',$id_pro)->get();
 
-        if(!$especialidad->isEmpty())
+        if(!$especialidad->isEmpty() && !isset($request->id_esp))
         {
-            $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get(); 
+            $materias_esp=Materia_especialidad::where('id_especialidad',$especialidad[0]->id)->get();
             $esp_act=Especialidad::where('id_programa',$id_pro)->get();
-            return view('admin.contenido.carreras.editplanestudios')
-            ->with('programa',$programa)
-            ->with('especialidad',$especialidad)
-            ->with('materias_esp',$materias_esp)
-            ->with('mat_com',$mat_com)
-            ->with('esp_act',$esp_act);
+
+        } else if (isset($request->id_esp)) {
+            $materias_esp=Programa::join('especialidades','especialidades.id_programa', 'programas.id')
+            ->join('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
+            ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
+            ->where('especialidades.id',$request->id_esp)
+            ->get();
+            //$materias_esp=Materia_especialidad::where('id_especialidad',$request->id_esp)->get();
+            $esp_act=Especialidad::where('id',$request->id_esp)->get();
         }
         else
         {
@@ -971,11 +975,20 @@ class CarrerasController extends Controller
             ->with('error','Primero debe registrarse una especialidad');
         }
 
+        return view('admin.contenido.carreras.editplanestudios')
+        ->with('programa',$programa)
+        ->with('especialidad',$especialidad)
+        ->with('materias_esp',$materias_esp)
+        ->with('mat_com',$mat_com)
+        ->with('esp_act',$esp_act)
+        ->with('id_pro',$id_pro);
+
     }
 
     //Metodo para consultar las materias de la especialidad
-    public function showMateriasEspecialidad(Request $request, $id_pro)
+   /*  public function showMateriasEspecialidad(Request $request)
     {
+        $id_pro = $request->id_pro;
         $materias_esp=Programa::join('especialidades','especialidades.id_programa', 'programas.id')
         ->join('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
         ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
@@ -1001,6 +1014,7 @@ class CarrerasController extends Controller
         ->join('reticulas', 'especialidades.id', '=', 'reticulas.id_especialidad')
         ->select('especialidades.id','especialidades.nombre','especialidades.clave','especialidades.objetivo', 'reticulas.nom_arch_ret')
         ->get();
+
         $objetivos=Objetivo::where('id_programa',$id_pro)->get();
         $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
         ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
@@ -1010,6 +1024,7 @@ class CarrerasController extends Controller
         $formacion=Formacion::all();
         $productos=Producto::all();
         return view('admin.contenido.carreras.editplanestudios')
+        ->with('id_pro', $id_pro)
         ->with('programa',$programa)
         ->with('especialidad',$especialidad)
         ->with('materias_esp',$materias_esp)
@@ -1024,7 +1039,7 @@ class CarrerasController extends Controller
         ->with('formacion',$formacion)
         ->with('productos',$productos)
         ->with('esp_act',$esp_act);
-    }
+    } */
 
     //Metodo para consultar las materias de la especialidad en index
     public function showMateriasEspecialidad2(Request $request, $id_pro)
@@ -1105,15 +1120,15 @@ class CarrerasController extends Controller
         {
             $programa=Programa::find($id_pro);
             //Codigo para cargar los archivos de las carreras
-            if(!Storage::has('public/carreras_planes_estudio/'.$programa->nombre)){
-                Storage::makeDirectory('public/carreras_planes_estudio/'.$programa->nombre);
+            if(!Storage::has('public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun')){
+                Storage::makeDirectory('public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun');
             }
             if($request->has('nom_archivo')){
                 $file =$request->nom_archivo;
                 $archExtension = $file->getClientOriginalExtension();
                 $archExtension = strtolower($archExtension);
                 if($archExtension == 'pdf' || $archExtension == 'doc' || $archExtension == "docx"){
-                    $path = storage_path().'/app/public/carreras_planes_estudio/'.$programa->nombre;
+                    $path = storage_path().'/app/public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun';
                     $name = $request->clave.'-'.$request->nombre.'.'.strtolower($archExtension);
                     $file->move($path,$name);
                     //Guardamos el registro en la tabla de asignaturas programa
@@ -1124,7 +1139,8 @@ class CarrerasController extends Controller
                     $asignatura->id_programa=$id_pro;
                     $asignatura->save();
                 }else{
-                    return back()->with('error','Esta sección solo acepta archivos PDF');
+                    return back()
+                    ->with("error","La extension ".$archExtension." no es valida, solo se admiten extenciones de archivos: PDF, DOC, DOCX!");
                 }
             }
         }
@@ -1132,17 +1148,19 @@ class CarrerasController extends Controller
         catch (\Exception $e)
         {
             DB::rollback();
-            return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
+            return back()
+            ->with("success","A ocurrido un error CODIGO_001_1152");
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
         //return redirect()->route('carreras.editPlanEstudios',$id_pro);
         //Regresamos a la pagina anterior
-        return back();
+        return back()
+        ->with("success","¡La materia se dio de alta correctamente!");
     }
 
 
-    //Metodo para modificar las materias
+    //Metodo para modificar las materias de tronco comun
     public function updatePlanEstudios(Request $request, $id_pro)
     {
         //Iniciamos la transacción
@@ -1150,52 +1168,64 @@ class CarrerasController extends Controller
         try
         {
             $programa=Programa::find($id_pro);
-            //Codigo para modificar los archivos de las carreras
-            if(!Storage::has('public/carreras_planes_estudio/'.$programa->nombre)){
-                Storage::makeDirectory('public/carreras_planes_estudio/'.$programa->nombre);
+            //Codigo para modificar los archivos de las materias de tronco comun
+            if(!Storage::has('public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun')){
+                Storage::makeDirectory('public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun');
             }
 
+            //Consultamos los datos del archivo viejo
+            $arch_ant=Asignatura_programa::find($request->id_asignatura);
+            $nameV=$arch_ant->nom_archivo;
+            //Obtenemos la ruta del archivo en cuestión
+            $path = storage_path().'/app/public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun';
             if($request->has('nom_archivo')){
                 $file =$request->nom_archivo;
                 $archExtension = $file->getClientOriginalExtension();
                 $archExtension = strtolower($archExtension);
                 if($archExtension == 'pdf' || $archExtension == 'doc' || $archExtension == "docx"){
-                    $path = storage_path().'/app/public/carreras_planes_estudio/'.$programa->nombre;
-                    $name = $request->clave.'-'.$request->nombre.'.'.strtolower($archExtension);
-                    $file->move($path,$name);
-                    //Borramos el archivo anterior del directorio, para que solo quede el nuevo
-                    $arch_ant=Asignatura_programa::find($request->id_asignatura);
-                    Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/'.$arch_ant->nombre]);
-                }else{
-                    return response()->json(array(['type' => 'error', 'message' => 'La extension '.$archExtension.' no es valida']));
+                    $nameN = $request->clave.'-'.$request->nombre.'.'.strtolower($archExtension);
+                    $file->move($path,$nameN);
+                    //Borramos el archivo viejo para que solo quede el nuevo
+                    Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun/'.$nameV]);
+                }
+                else
+                {
+                    return back()
+                    ->with("error","La extension ".$archExtension." no es valida, solo se admite PDF, DOC, DOCX!");
                 }
             }
             else{
-                $name=Asignatura_programa::where('id',$request->id_asignatura)->select('nom_archivo')->get();
-                $name=$name[0]->nom_archivo;
+                //Obtenemos la extencion del archivo viejo
+                $ext=substr($nameV,strpos($nameV, ".")+1);
+                $nameN=$request->clave."-".$request->nombre.".".$ext;
+
+                //Renombramos el archivo en caso de que solo cambie su nombre
+                Storage::move("public/carreras_planes_estudio/".$programa->nombre."/tron_comun/".$nameV, "public/carreras_planes_estudio/".$programa->nombre."/tron_comun/".$nameN);
             }
             //Guardamos el registro en la tabla de asignaturas programa
             Asignatura_programa::where('id',$request->id_asignatura)
             ->update([
                 'clave'=>$request->clave,
                 'nombre'=>$request->nombre,
-                'nom_archivo' => $name
+                'nom_archivo' => $nameN
             ]);
         }
         // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
         catch (\Exception $e)
         {
             DB::rollback();
-            return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
+            return back()
+            ->with("error","A ocurrido un error al renombrar el archivo por el siguiente error: CODIGO_002_1218");
         }
-        // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
+        // Hacemos los cambios permanentes ya que no han habido errores
         return redirect()->route('carreras.editPlanEstudios',$id_pro)
         ->with("success","¡Materia modificada con exito!");
     }
 
 
-    /*Metodo para eliminar especialidades */
+
+    /*Metodo para eliminar Materias de tronco común */
     public function destroyPlanEstudios(Request $request, $id_asig)
     {
         //Iniciamos la transacción
@@ -1206,22 +1236,27 @@ class CarrerasController extends Controller
             $programa=Programa::find($request->id_programa);
 
             if($asignatura==NULL){
-                return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error ']));
+                return back()
+                ->with("error","No se encontro el archivo correspondiente a esta asignatura");
             }
             //Borramos el archivo del directorio
-            Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/'.$asignatura->nom_archivo]);
+            Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/tron_comun/'.$asignatura->nom_archivo]);
             Asignatura_programa::where('id',$id_asig)->delete();
         }
         // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
         catch (\Exception $e)
         {
             DB::rollback();
-            return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
+            return back()
+            ->with("error","A ocurrido un error: CODIGO_003_1251");
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
-        return redirect()->route('carreras.editPlanEstudios',$programa->id);
+        return redirect()->route('carreras.editPlanEstudios',$programa->id)
+        ->with("warning","¡La materia se elimino correctamente!");
     }
+
+
 
     /*Sección para materias de especialidad */
 
@@ -1253,7 +1288,8 @@ class CarrerasController extends Controller
                     $asignatura->id_especialidad=$request->id_esp;
                     $asignatura->save();
                 }else{
-                    return response()->json(array(['type' => 'error', 'message' => 'La extension '.$archExtension.' no es valida']));
+                    return back()
+                    ->with("error","La extension ".$archExtension." no es valida, solo se admite PDF, DOC, DOCX!");
                 }
             }
         }
@@ -1261,13 +1297,113 @@ class CarrerasController extends Controller
         catch (\Exception $e)
         {
             DB::rollback();
-            return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
+            return back()
+            ->with("error","A ocurrido un error, CODIGO_001_1301");
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
         //return redirect()->route('carreras.editPlanEstudios',$id_pro);
         //Regresamos a la pagina anterior
-        return back();
+        return back()
+        ->with("success","¡La materia se dio de alta correctamente!");
+    }
+
+
+    //Metodo para modificar las materias de especialidad
+    public function updateMatEspecialidad(Request $request, $id_pro)
+    {
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try
+        {
+            $programa=Programa::find($id_pro);
+            //Codigo para modificar los archivos de las materias de especialidad
+            if(!Storage::has('public/carreras_planes_estudio/'.$programa->nombre.'/especialidad')){
+                Storage::makeDirectory('public/carreras_planes_estudio/'.$programa->nombre.'/especialidad');
+            }
+            //Consultamos los datos del archivo viejo
+            $arch_ant=Materia_especialidad::find($request->id_asignatura);
+            $nameV=$arch_ant->nom_archivo;
+            $path = storage_path().'/app/public/carreras_planes_estudio/'.$programa->nombre.'/especialidad';
+            if($request->has('nom_archivo'))
+            {
+                $file =$request->nom_archivo;
+                $archExtension = $file->getClientOriginalExtension();
+                $archExtension = strtolower($archExtension);
+                if($archExtension == 'pdf' || $archExtension == 'doc' || $archExtension == "docx"){
+                    $nameN = $request->clave.'-'.$request->nombre.'.'.strtolower($archExtension);
+                    $file->move($path,$nameN);
+                    //Borramos el archivo viejo para que solo quede el nuevo
+                    Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/especialidad/'.$nameV]);
+                }
+                else
+                {
+                    return back()
+                    ->with("error","La extension ".$archExtension." no es valida, solo se admite PDF, DOC, DOCX!");
+                }
+            }
+            else
+            {
+                //Obtenemos la extencion del archivo viejo
+                $ext=substr($nameV,strpos($nameV, ".")+1);
+                $nameN=$request->clave."-".$request->nombre.".".$ext;
+
+                //Renombramos el archivo en caso de que solo cambie su nombre
+                Storage::move("public/carreras_planes_estudio/".$programa->nombre."/especialidad/".$nameV, "public/carreras_planes_estudio/".$programa->nombre."/especialidad/".$nameN);
+            }
+            //Guardamos el registro en la tabla de asignaturas programa
+            Materia_especialidad::where('id',$request->id_asignatura)
+            ->update([
+                'clave'=>$request->clave,
+                'nombre'=>$request->nombre,
+                'nom_archivo' => $nameN
+            ]);
+
+
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return back()
+            ->with("error","A ocurrido un errol al renombrar el archivo por el siguiente error: CODIGO_002_1369");
+        }
+        DB::commit();
+        // Hacemos los cambios permanentes ya que no han habido errores
+        return redirect()->route('carreras.editPlanEstudios',$id_pro)
+        ->with("warning","¡Materia modificada con exito!");
+    }
+
+
+    /*Metodo para eliminar Materias de especialidad */
+    public function destroyMatEspecialidad(Request $request, $id_asig)
+    {
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try
+        {
+            $asignatura = Materia_especialidad::find($id_asig);
+            $programa=Programa::find($request->id_programa);
+
+            if($asignatura==NULL){
+                return back()
+                    ->with("error","No se encontro el archivo correspondiente a esta asignatura");
+            }
+            //Borramos el archivo del directorio
+            Storage::delete(['public/carreras_planes_estudio/'.$programa->nombre.'/especialidad/'.$asignatura->nom_archivo]);
+            Materia_especialidad::where('id',$id_asig)->delete();
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return back()
+            ->with("error","A ocurrido un error CODIGO_003_1401");
+        }
+        // Hacemos los cambios permanentes ya que no han habido errores
+        DB::commit();
+        return redirect()->route('carreras.editPlanEstudios',$programa->id)
+        ->with("warning","¡La asignatura se elimino con exito!");
     }
 
 }
