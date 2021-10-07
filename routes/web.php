@@ -236,7 +236,9 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('contenido/carreras/updatePlanEstudios/{id_pro}', [CarrerasController::class, 'updatePlanEstudios'])->name('carreras.updatePlanEstudios');
 	Route::get('contenido/carreras/destroyPlanEstudios/{id_asig}', [CarrerasController::class, 'destroyPlanEstudios'])->name('carreras.destroyPlanEstudios');
 	Route::post('contenido/carreras/storeMatEsp/{id_pro}', [CarrerasController::class, 'storeMatEsp'])->name('carreras.storeMatEsp');
-	Route::get('contenido/carreras/showMateriasEspecialidad/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
+    Route::post('contenido/carreras/updateMatEspecialidad/{id_pro}', [CarrerasController::class, 'updateMatEspecialidad'])->name('carreras.updateMatEspecialidad');
+    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');
+	//Route::get('contenido/carreras/showMateriasEspecialidad', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
 	Route::get('contenido/carreras/actualizarTabla/{id_esp}', [CarrerasController::class, 'act_tab_esp'])->name('carreras.actualizarTabla');
 });
