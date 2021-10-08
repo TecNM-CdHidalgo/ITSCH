@@ -25,3 +25,4 @@ Homestead.json
 
 # Ignore composer.lock
 composer.lock
+Copia de .env.example

@@ -4,24 +4,18 @@
 @section('content')
 
 
-
-
-
-<br>
-
 <header class="page-header">
-        <div class="shadow-lg p-3 mb-5 bg-body rounded">
+
+<br><br>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">
 
 
-               
-
-                <div class="fluid">
+    <div class="fluid">
 
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                          viewBox="0 0 1500 400" enable-background="new 0 0 1500 400" xml:space="preserve">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1500 400" enable-background="new 0 0 1500 400" xml:space="preserve">
                         <image overflow="visible" width="auto" height="auto" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
                         EAMCAwYAAC1nAABh1gABF3z/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
                         Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
@@ -2485,20 +2479,22 @@
                         WBwWYe0PlTHZQ06V3gt6xTA+RAcfIJf6KqqeRnyKnMME3LAGJTb96MjgEZHkgcAj08kIjiiOG3JL
                         zFOKSTGh5WWdRxTguPIG4eQPx56vkNVTmm/ilOW3PU5LhOdv/9k=" transform="matrix(0.9999 0 0 0.9999 1 0)"> </image> </svg>
                 
-                </div>
         </div>
+        
 
 
 
 </header>
 
+<div class="container-fluid">
 
 
-<div class="shadow p-3 mb-5 bg-body rounded">
+
+  <div class="shadow p-3 mb-5 bg-body rounded">
 
 
     <h2>
-¿QUÉ ES CULTURA Y DEPORTE?</h2>
+        ¿QUÉ ES CULTURA Y DEPORTE?</h2>
         <hr class="red">
 
 
@@ -2506,12 +2502,13 @@
 
 
 Es el área donde se fomenta y promueve la participación de los estudiantes en actividades de educación física, deporte, recreación, cultural y actividades cívicas para coadyugar en el desarrollo integral del estudiante.
-  </p></div>
+  </p>
+
+
+</div>
         <br>
 
 
-
-        
 
 
         <div class="shadow p-3 mb-5 bg-body rounded">
@@ -2525,17 +2522,14 @@ Fortalecer la formación integral del estudiante en las diferentes disciplinas, 
 </p></div>
         <br>
 
-        <div class="shadow p-3 mb-5 bg-body rounded">
-        <h2> OBJETIVO</h2>
-        <hr class="red">
-
-        <p align="justify">
-
-Establece que todos los estudiantes tienen la misma oportunidad de participar en cualquiera de las actividades de Promoción Cultural, Deportiva y Cívica que ofrece el TECNM / Campus Ciudad Hidalgo. Y en los eventos Pre-Nacionales y Nacionales bajo los lineamientos de la convocatoria emitida por el TECNM.
-</p></div>
-        <br>
 
 
+
+
+
+
+
+        
 
 
 
@@ -2564,6 +2558,7 @@ III.- En caso de no acreditar alguno de los dos semestres, el alumno deberá vol
 
 
 
+        
         <div class="shadow p-3 mb-5 bg-body rounded">
 
 <h2>
@@ -2579,30 +2574,1221 @@ El crédito de CLUBES es obligatorio y se debe cursar necesariamente en los dos 
 Dudas al correo: ext_educativa@cdhidalgo.tecnm.mx
         </p>
 </div>
+        
 
-        <br><br>
 
-        <div class="mx-auto">
+
               
-        <div class="shadow p-3 mb-5 bg-body rounded">
-         <h3 align="center">
-               
-        </h3>
-           
+   <div class="shadow p-3 mb-5 bg-body rounded">
+            <h3>INSTRUCTORES DE CLUBES <span class="badge bg-secondary">DEPORTIVOS</span></h3> 
+                 <hr class="red">
+ 
+                      <div class="text-center">
+                                  <div class="table-responsive">
+                    
+                                            <table class="table">
+                                                <thead class="table-light">
+                                                        <tr align="center">
+                      
+                                                        <th scope="col">NOMBRE DEL INSTRUCTOR</th>
+                                                        <th scope="col">NOMBRE DEL CLUB</th>
+                                                        <th><span> Información</span></th>
 
-              <figure class="text-center">
-                <blockquote class="blockquote">
-                  <p>A T E N T A M E N T E </p>
-                  <hr class="red">
-                </blockquote>
-                <figcaption class="blockquote-footer">
-               <cite title="Source Title"> DEPARTAMENTO DE EXTENSIÓN EDUCATIVA</cite>
-                </figcaption>
-              </figure>
-
+                          
+                                                        </tr>
+                                                </thead>
+                                                     <tbody>
+                                                          <tr>
+                                                          <th scope="row">ADALBERTO DOMÍNGUEZ PIÑÓN  </th>
+                                                            <td>AJEDREZ</td>
+                                                         <td>
+                                                         <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type="button">
+                                                                 <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                                                  </button>
+                                                            </td>
+                                                          </tr>
                 
-</div>   
+                        
+                        <tr>
+                            <th scope="row">L.E.F. GETZEMANÍ GARCÍA GALVÁN </th>
+                            <td>ATLETISMO</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">L.E.F. GETZEMANÍ GARCÍA GALVÁN </th>
+                            <td>FUTBOL SOCCER FEMENIL</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ING. CIRO TELLO PÉREZ </th>
+                            <td>BASQUETBOL FEMENIL Y VARONIL</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">J. ÁNGEL MEDINA HERNÁNDEZ </th>
+                            <td>BEISBOL</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ING. VALDEZ GONZÁLEZ JOSÉ ALBERTO  </th>
+                            <td>BOX</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">LIC. HÉCTOR GARCÍA HERNÁNDEZ </th>
+                            <td>FUTBOL SOCCER VARONIL</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">DAYANARA VERÓNICA TIMAGÉN ESPINO    </th>
+                            <td>SOFTBOL</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal8" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ING. SADY MIREILY CORREA HERNÁNDEZ  </th>
+                            <td>TAE-KWON-DO</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal9" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ALMA DELIA MONTES CAMBRÓN  </th>
+                            <td>VOLEIBOL PLAYA VARONIL </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal10" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ALMA DELIA MONTES CAMBRÓN  </th>
+                            <td>VOLEIBOL SALA VARONIL </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal11" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">IVAN PATIÑO GARCÍA  </th>
+                            <td>VOLEIBOL DE SALA  FEMENIL </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal12" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">IVAN PATIÑO GARCÍA  </th>
+                            <td>VOLEIBOL DE PLAYA  FEMENIL </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal13" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row"> GIOVANNA SANTANA SANDOVAL   </th>
+                            <td>ACTIVIDADES FISICAS PARA LA SALUD Y LA PREVENCIÒN (PRIMEROS AUXILIOS) </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal14" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+              </div>
+
+
+
+             
+
+
+              
+              
+              <div class="shadow p-3 mb-5 bg-body rounded">
+              <h3>INSTRUCTORES DE CLUBES <span class="badge bg-secondary">CULTURALES</span></h3> 
+        <hr class="red">
+ 
+        <div class="text-center">
+            <div class="table-responsive">
+                    
+<table class="table">
+  <thead class="table-light">
+                        <tr align="center">
+                      
+                            <th scope="col">NOMBRE DEL INSTRUCTOR</th>
+                            <th scope="col">NOMBRE DEL CLUB</th>
+                            <th><span> Información</span></th>
+
+                          
+                        </tr>
+  </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ARNOLD STIFF PÉREZ PÉREZ </th>
+                            <td>BAILE MODERNO</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal15" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        
+                        <tr>
+                            <th scope="row">KARLA DANIELA BACA MARTÍNEZ  </th>
+                            <td>BAILE MODERNO</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal16" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ING. MAYRA RÍOS CAMACHO  </th>
+                            <td>PINTURA</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal17" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ING. ROBERTO CARLOS TREJO MEJÍA   </th>
+                            <td>ESCOLTA</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal18" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                        <th scope="row">ING. ROBERTO CARLOS TREJO MEJÍA   </th>
+                            <td>BANDA DE GUERRA</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal19" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ERNESTO JESÚS MONROY ALVAREZ </th>
+                            <td>DANZA FOLCLÓRICA</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal20" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">LIC. JESÚS MANUEL RADA </th>
+                            <td>MÚSICA RONDALLA </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal21" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">DAVID CAMACHO DÍAZ  </th>
+                            <td>MÚSICA VERSÁTIL </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal22" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">KARLA ELIZABETH RAMÍREZ PATIÑO </th>
+                            <td>LECTURA</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal23" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                      
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+              </div>
+
+             
+              
+              <div class="shadow p-3 mb-5 bg-body rounded">
+              <h3>INSTRUCTORES DE CLUBES <span class="badge bg-secondary">ACADEMICOS</span></h3> 
+        <hr class="red">
+ 
+     <div class="text-center">
+         <div class="table-responsive">
+                    
+        <table class="table">
+                    <thead class="table-light">
+                        <tr align="center">
+                      
+                            <th scope="col">NOMBRE DEL INSTRUCTOR</th>
+                            <th scope="col">NOMBRE DEL CLUB</th>
+                            <th><span> Información</span></th>
+
+                          
+                        </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ING. JOAQUÍN CHÁVEZ ARELLANO  </th>
+                            <td>DESARROLLO SUSTENTABLE</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal24" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        
+                        <tr>
+                            <th scope="row">JORGE ALBERTO JUÁREZ PÉREZ   </th>
+                            <td>COMUNIACIÓN ( RADIO, FOTOGRAFÍA Y VIDEO)</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal25" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">JOSÉ ANTONIO LUNA PADILLA </th>
+                            <td>SHG (SOFTWARE, HARTWARE Y GAMING)</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal26" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                    </tbody>
+            </table>
+            </div>
+        </div>
+
+
+
+             
+      
+        </div>    
+    
+        <div class="shadow p-3 mb-5 bg-body rounded">
+            
+     <div class="text-center">
+         <div class="table-responsive">
+                    
+        <table class="table">
+                    <thead class="table-light">
+                        <tr align="center">
+                      
+              <h3> PERSONAL DE OFICINA DE  <span class="badge bg-secondary">EXTENSIÓN EDUCATIVA</span></h3> 
+        <hr class="red"></div>
+ 
+        <div class="text-center">
+            <div class="table-responsive">
+                    
+                <table class="table">
+                    <thead class="table-light">
+                        <tr align="center">
+                      
+                            <th scope="col">NOMBRE </th>
+                            <th scope="col">PUESTO</th>
+                            <th><span> Información</span></th>
+
+                          
+                        </tr>
+                         </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">ING. DAVID AGUILAR ESPINO </th>
+                            <td>JEFE DEL DEPARTAMENTO DE EXTENSIÓN EDUCATIVA</td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal27" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        
+                        <tr>
+                            <th scope="row">ING. SADY MIREILY HERNÁNDEZ CORREA  </th>
+                            <td>COORDINADORA DEPORTIVA  </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal28" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">ING. MAYRA RÌOS CAMACHO </th>
+                            <td>COORDINADORA CULTURAL </td>
+                            <td>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal29" type="button">
+                                    <i class='fas fa-info-circle' style='font-size:20px'></i>
+                                </button>
+                            </td>
+                        </tr>
+                
+                       
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+          <div class="shadow p-3 mb-5 bg-body rounded">
+       
+
+       <figure class="text-center">
+         <blockquote class="blockquote">
+           <p>A T E N T A M E N T E </p>
+           <hr class="red">
+         </blockquote>
+         <figcaption class="blockquote-footer">
+        <cite title="Source Title"> DEPARTAMENTO DE EXTENSIÓN EDUCATIVA</cite>
+         </figcaption>
+       </figure>
+
+       
+    </div>
+        </div>
+
+      
+               
+   
+ 
+
+
+    <div class="modal fade mod" id="exampleModal">
+             <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/ADALBERTO DOMINGUEZ PINON.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                   
+                            <p>club_ajedrez@itsch.edu.mx</p>
+                        </div>
+                      
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+             </div>
+            </div>
+
+          
+
+           <div class="modal fade mod" id="exampleModal2">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/GETZEMANI GARCIA GALVAN.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div><div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_atletismo@itsch.edu.mx </p>
+                        </div>
+                      
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+           </div>
+           </div>
+
+
+           <div class="modal fade mod" id="exampleModal4">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/ING. CIRO TELLO.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_basquet_varonil@itsch.edu.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal3">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/GETZEMANI GARCIA GALVAN.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_fut_soccer_femenil@itsch.edu.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal5">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/J. ANGEL MEDINA HERNANDEZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_beisbol@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal6">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/ING. VALDEZ GONZALEZ JOSE ALBERTO.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_box@itsch.edu.mx             </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal7">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/LIC. HECTOR GARCIA HERNANDEZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_fut_soccer_varonil@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal8">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/DAYANARA VERONICA TIMAGEN ESPINO.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_softbol@itsch.edu.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="modal fade mod" id="exampleModal9">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/ING. SADY MIREILY CORREA HERNANDEZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_tae_kwon_do@itsch.edu.mx  act_deportivas@cdhidalgo.tecnm.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="modal fade mod" id="exampleModal10">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/ALMA DELIA MONTES CAMBRON.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_voleibol_sala@itsch.edu.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal11">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/ALMA DELIA MONTES CAMBRON.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_voleibol_sala@itsch.edu.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal12">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/IVAN PATINO GARCIA.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_voleibol_playa@itsch.edu.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal13">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/IVAN PATINO GARCIA.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_voleibol_playa@itsch.edu.mx  </p>
+
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal15">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/ARNOLD STIFF PEREZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_baile_moderno@itsch.edu.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal14">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_deportivos/GIOVANNA SANTANA SANDOVAL.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>paolag.santanas@gmail.com  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal fade mod" id="exampleModal16">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/KARLA DANIELA BACA MARTINEZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_baile_moderno@itsch.edu.mx    </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal17">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/ING. MAYRA RIOS CAMACHO.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_pintura@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal18">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/ING. ROBERTO CARLOS TREJO MEJIA.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_escolta@itsch.edu.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="modal fade mod" id="exampleModal19">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/ING. ROBERTO CARLOS TREJO MEJIA.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_banda_guerra@itsch.edu.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal20">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/ERNESTO JESUS MONROY ALVAREZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_danza_folklorica@itsch.edu.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal21">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/LIC. JESUS MANUEL RADA.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_musica@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal22">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/DAVID CAMACHO DIAZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_musica_versatil@itsch.edu.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal23">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_culturales/KARLA ELIZABETH RAMIREZ PATINO.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_lectura@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal24">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_academicos/ING. JOAQUiN CHaVEZ ARELLANO.png ') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_desarrollo_sustentable@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal25">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_academicos/JORGE ALBERTO JUAREZ JUAREZ.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>club_comunicacion_radio@itsch.edu.mx   </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal fade mod" id="exampleModal26">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN DEL INSTRUCTOR</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/instructores_academicos/JOSE ANTONIO LUNA PADILLA.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>tony.luna05@gmail.com  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade mod" id="exampleModal27">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN  </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/extension_educativa/ING. DAVID AGUILAR ESPINO.png') }}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>ext_educativa@cdhidalgo.tecnm.mx  </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal fade mod" id="exampleModal28">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/extension_educativa/ING. SADY MIREILY HERNANDEZ CORREA.png')}}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>ext_culturales@cdhidalgo.tecnm.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal fade mod" id="exampleModal29">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="mx-auto" id="exampleModalLabel">INFORMACIÓN </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    
+                    <img src="{{ asset('images/content/vinculacion/cultura y deportes/extension_educativa/ING. MAYRA RIOS CAMACHO.png')}}" class="bd-placeholder-img rounded-circle  rounded mx-auto d-block" width="140" height="140"  role="img" alt="...">
+                </div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <h4>E-mail:</h4>
+                        <p>ext_culturales@cdhidalgo.tecnm.mx </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          </div>
+    </div>
+
 </div>
+ @endsection
 
 
-    @endsection
+
+
