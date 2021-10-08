@@ -313,7 +313,7 @@
         </a>
         <div class="dropdown-menu">
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
-            <a class="text-black dropdown-item"  href="{{route('investigacion.pitsc')}}"> PICTS</a>
+            <a class="text-black dropdown-item"  href="{{route('investigacion.pitsc')}}"> Contraloría Social</a>
             <a class="text-black dropdown-item"  href="{{route('tutorias.tutorias')}}"> Tutorias</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
             <a class="text-black dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>

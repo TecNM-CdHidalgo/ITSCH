@@ -23,9 +23,9 @@
     <div class="text-center">
         
 
-
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
         <div class="card">
-            
+     
             <div class="card-header">
                 
               PRODEP
@@ -41,7 +41,9 @@
           </div>
        <br>
        <br>
+       </div>
 
+       <div class="shadow-lg p-3 mb-5 bg-body rounded">
           <div class="card">
             <div class="card-header">
                 CONTRALORÍA SOCIAL
@@ -55,8 +57,12 @@
 
             </div>
           </div>
-        
+          </div>
+
+
           <br><br>
+
+          <div class="shadow-lg p-3 mb-5 bg-body rounded">
           <div class="card">
             <div class="card-header">
                 Documentos Normativos
@@ -145,20 +151,20 @@
             </div>
             </div>
           
-            
+            </div>
 
             
           </div>
         
                 <br><br>
-
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
 
           <div class="card">
             <div class="card-header">
                 FORMATOS DE LA GUÍA OPERATIVA
             </div>
             <div class="card-body">
-                <div class="panel-group ficha-collapse" id="accordion">
+                <div class="panel-group ficha-collapse" id="accordion2">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -349,7 +355,7 @@
             
           </div>
 
-
+          </div>
 
 
                     <br>
@@ -363,7 +369,119 @@
             </div>
           
           
-         
+            <br>
+            <div class="card">
+                <h5 class="card-header">   Quejas Denuncias, Peticiones o Irregularidades   </h5>
+                        <div class="card-body">
+                              
+
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+      Los Comités de Contraloría Social podrán recibir de los beneficiarios del Programa para el Desarrollo Profesional Docente (PRODEP) las quejas y denuncias, de acuerdo a lo siguiente:      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong>Sobre la aplicación, ejecución y/o asistencia técnica del Programa,</strong>  que puedan dar lugar al fincamiento de responsabilidades administrativas, civiles y/o penales, y turnarlas a las autoridades competentes para su atención.
+        
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+      Para alguna Queja o Denuncia interpuesta deberá de realizar el siguiente procedimiento:
+
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+      <img src="{{ asset('images/content/contraloria/procedimiento_quejas_denuncias.jpg')}}"  class="img-fluid" alt="...">
+
+    <blockquote>  Diagrama 2 Procesos para la Atención o Canalización de Queja o Denuncia de Contraloría Social del PRODEP
+    </blockquote>
+    <h6>
+(Para la descripción del diagrama anterior, favor de remitirse a la Guía Operativa de Contraloría Social en la página 31).
+    </h6>
+    <h4>
+Por lo anterior, y con el propósito de facilitar la comunicación con los beneficiarios del programa, el TecNM, ha dispuesto al personal responsable de acuerdo a lo siguiente:
+</h4></div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      Para el TecNM:
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>Lic. Miguel Ángel Andrade Herrera, Enlace de Contraloría Social del TecNM: </strong> 
+        contraloriasocial_posgrado@tecnm.mx
+
+Las oficinas del Tecnológico Nacional de México, se encuentran ubicadas en Avenida Universidad Núm. 1200, piso 5 sector 5-3, Colonia Xoco, Alcaldía Benito Juárez, C.P. 03330, Ciudad de México, México o bien comunicarse al teléfono (01 55) 36-00-25-11, ext. 65083..      </div>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      A través de la SEP:
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>Para presentar quejas, denuncias, reconocimientos y sugerencias respecto a trámites correspondientes a la Secretaría de Educación Pública </strong>
+        relacionados con la Educación Superior puede consultar la siguiente liga correspondiente al Órgano Interno de Control de la propia Secretaría:
+http://www.oic.sep.gob.mx/portal3/quejas2.php    
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      Por medio de la Secretaría de Función Pública:
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>Para presentar quejas y denuncias, por el posible incumplimiento de las obligaciones de los servidores públicos pueden realizarse a través del portal del Sistema de Denuncia Ciudadana, https://sidec.funcionpublica.gob.mx/#!/, de la Secretaría de la Función Pública.
+<ul></ul>
+<li>La aplicación para teléfono celular 'Denuncia ciudadana de la Corrupción'.
+</li>
+<li>Vía telefónica: En el interior de la República al 800 11 28 700 y en la Ciudad de México, 55 2000 2000.
+</li>
+
+<li> Presencial: En el módulo 3 de la Secretaría de la Función Pública ubicado en Av. Insurgentes Sur 1735, PB, Guadalupe Inn, Álvaro Obregón, Código Postal 01020, Ciudad de México.
+</li>
+<li>Vía correspondencia: Envía tu escrito a la Dirección General de Denuncias e Investigaciones de la Secretaría de la Función Pública en Av. Insurgentes Sur No. 1735, Piso 2 Ala Norte, Guadalupe Inn, Álvaro Obregón, CP 01020, Ciudad de México.
+</li>
+<li>Vía correo electrónico:
+contraloriasocial@funcionpublica.gob.mx
+</li>
+<li>Plataforma: Ciudadanos Alertadores Internos y Externos de la Corrupción. La plataforma de alertadores está diseñada para atender casos graves de corrupción y/o en los que se requiere confidencialidad: https://alertadores.funcionpublica.gob.mx</strong> 
+    
+    </li>     </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      Si desea hacer una consulta o recibir asesoría inmediata respecto a las actividades del Órgano Interno de Control en la SEP o en cuanto a la presentación de peticiones ciudadanas, usted puede:
+
+<li> de manera personal, a las oficinas que ocupa el Área de Quejas de este Órgano Fiscalizador, ubicado en: Av. Universidad 1074, Col. Xoco, C.P. 03330, Alcaldía Benito Juárez, Ciudad de México, en un horario 9:00 a 15:00 y de 16:00 a 18:00 horas, de lunes a viernes.
+</li>
+<li> De igual forma puede ingresar su escrito en Oficialía de Partes Común, localizada en el referido domicilio de 9:00 a 15:00 horas o enviarla a través del correo electrónico: quejas@sep.gob.mx
+</li></button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>Lic. Miguel Ángel Andrade Herrera, Enlace de Contraloría Social del TecNM: </strong> 
+        contraloriasocial_posgrado@tecnm.mx
+
+Las oficinas del Tecnológico Nacional de México, se encuentran ubicadas en Avenida Universidad Núm. 1200, piso 5 sector 5-3, Colonia Xoco, Alcaldía Benito Juárez, C.P. 03330, Ciudad de México, México o bien comunicarse al teléfono (01 55) 36-00-25-11, ext. 65083..      </div>
+    </div>
+  </div>
+</div>
+          
 
 </div>       
          
