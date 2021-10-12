@@ -264,7 +264,8 @@
                                         <td>{{ $me->clave }}</td>
                                         <td>{{ $me->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$me->nom_pro.'/'.$me->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}" 
+                                            download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -286,13 +287,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($programa as $pro)
+                                @foreach ($mat_com as $mat)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $pro->clave }}</td>
-                                        <td>{{ $pro->nombre }}</td>
+                                        <td>{{ $mat->clave }}</td>
+                                        <td>{{ $mat->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$pro->nom_pro.'/'.$pro->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/tron_comun/'.$mat->nom_archivo) }}" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

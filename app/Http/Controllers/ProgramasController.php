@@ -61,11 +61,11 @@ class ProgramasController extends Controller
         ->count();
         $archivos=Archivo::where('id_programa',$id)->get();
 
-        //Materias de tronco comun del programa academico
-        $programa=Programa::where('programas.id',$id)
-        ->join('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')
-        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
-        ->get();
+        //Seleccionamos los datos del programa seleccionado
+        $programa=Programa::where('id',$id)->get(); 
+
+        //Materias de tronco comun para el plan de estudios
+        $mat_com=Asignatura_programa::where('id_programa',$id)->get(); 
 
         //Seleccionamos la especialidad que este en la primera posicion
         $idEsp=Especialidad::select('id')->where('id_programa',$id)->get();
@@ -102,7 +102,8 @@ class ProgramasController extends Controller
         ->with('n_msg',$n_msg)
         ->with('archivos',$archivos)
         ->with('programa',$programa)
-        ->with('materias_esp',$materias_esp);
+        ->with('materias_esp',$materias_esp)
+        ->with('mat_com',$mat_com);
     }
 
 }
