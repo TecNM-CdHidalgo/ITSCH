@@ -123,7 +123,7 @@
             <div class="col-sm-5">
                 <div class="input-group mb-3 input-group-sm">
                     <div class="input-group-prepend">
-                    <span class="input-group-text">Archivo PDF</span>
+                        <span class="input-group-text">Archivo PDF</span>
                     </div>
                     <input type="file" name="nom_archivo" id="arch_materia" required>
                 </div>

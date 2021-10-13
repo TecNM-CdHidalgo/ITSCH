@@ -35,7 +35,7 @@ class CarrerasController extends Controller
         }
 
         //Seleccionamos la carrera que este en la primera posición
-        $idPro=Programa::first('id'); 
+        $idPro=Programa::first('id');
 
         //Si no existe ninguna carrera llamamos al metodo para inicializar al menos una
         if (empty($idPro))
@@ -47,7 +47,7 @@ class CarrerasController extends Controller
         $idEsp=Especialidad::first('id');
 
         //Seleccionamos los datos del programa seleccionado
-        $programa=Programa::where('id',$idPro->id)->get(); 
+        $programa=Programa::where('id',$idPro->id)->get();
 
         //Materias de tronco comun para el plan de estudios
         $mat_com=Asignatura_programa::where('id_programa',$idPro->id)->get();
@@ -110,10 +110,10 @@ class CarrerasController extends Controller
     public function show($id)
     {
         if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
-            return redirect()->route('home'); 
+            return redirect()->route('home');
         }
         dd("Show");
-        $programas=DB::table('programas')->select('id','nombre')->get(); 
+        $programas=DB::table('programas')->select('id','nombre')->get();
         $pro_act=Programa::find($id);
         $especialidades= Especialidad::where('especialidades.id_programa', $id)
         ->join('reticulas', 'especialidades.id', '=', 'reticulas.id_especialidad')
@@ -134,10 +134,10 @@ class CarrerasController extends Controller
         $archivos=Archivo::where('id_programa',$id)->get();
 
         //Seleccionamos los datos del programa seleccionado
-        $programa=Programa::where('id',$id)->get(); 
+        $programa=Programa::where('id',$id)->get();
 
         //Materias de tronco comun para el plan de estudios
-        $mat_com=Asignatura_programa::where('id_programa',$id)->get();       
+        $mat_com=Asignatura_programa::where('id_programa',$id)->get();
 
         //Seleccionamos la especialidad que este en la primera posicion
         $idEsp=Especialidad::select('id')->where('id_programa',$id)->get();
@@ -818,6 +818,60 @@ class CarrerasController extends Controller
 
    }
 
+   //Funcion para guardar la foto del perfil
+   public function act_foto(Request $request, $id_pro)
+   {
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try
+        {
+            $programa=Programa::find($id_pro);
+            //Codigo para cargar los archivos de las carreras
+            if(!Storage::has('public/carreras_imagenes/'.$programa->nombre.'/fotos_personal')){
+                Storage::makeDirectory('public/carreras_imagenes/'.$programa->nombre.'/fotos_personal');
+            }
+            $personal=Personal::find($request->id_per);
+            $nameV=$personal->nom_foto;
+            if($request->has('foto')){
+                $file =$request->foto;
+                $archExtension = $file->getClientOriginalExtension();
+                $archExtension = strtolower($archExtension);
+                if($archExtension == 'jpg' || $archExtension == 'png' || $archExtension == "jpeg"){
+                    //Eliminamos la foto vieja si existe
+                    if($nameV!=null)
+                    {
+                        Storage::delete(['public/carreras_imagenes/'.$programa->nombre.'/fotos_personal/'.$nameV]);
+                    }
+                    $path = storage_path().'/app/public/carreras_imagenes/'.$programa->nombre.'/fotos_personal';
+                    $name = 'foto'.time().'.'.strtolower($archExtension);
+                    $file->move($path,$name);
+                    //Guardamos el registro en la tabla personal
+                    $personal = Personal::find($request->id_per);
+                    $personal->nom_foto = $name;
+                    $personal->save();
+                }
+                else
+                {
+                    return back()
+                    ->with("error","La extension ".$archExtension." no es valida, solo se admiten extenciones de archivos: JPG, PNG, JPEG!");
+                }
+            }
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {dd($e);
+            DB::rollback();
+            return back()
+            ->with("success","A ocurrido un error CODIGO_act_foto_858");
+        }
+        // Hacemos los cambios permanentes ya que no han habido errores
+        DB::commit();
+        //Regresamos a la pagina anterior
+        return back()
+        ->with("success","¡La foto se dio de alta correctamente!");
+   }
+
+
    /*Metodo para agregar la formación academica de los profesores */
    public function storeDetallesFor(Request $request)
    {
@@ -987,61 +1041,7 @@ class CarrerasController extends Controller
 
     }
 
-    //Metodo para consultar las materias de la especialidad
-   /*  public function showMateriasEspecialidad(Request $request)
-    {
-        $id_pro = $request->id_pro;
-        $materias_esp=Programa::join('especialidades','especialidades.id_programa', 'programas.id')
-        ->join('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
-        ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
-        ->where('especialidades.id',$request->id_esp)
-        ->get();
 
-        $programa=Programa::where('programas.id',$id_pro)
-        ->leftjoin('asignaturas_programa', 'programas.id', '=', 'asignaturas_programa.id_programa')
-        ->select('programas.id as id_pro','programas.nombre as nom_pro','asignaturas_programa.*')
-        ->get();
-        $programas=DB::table('programas')->select('id','nombre')->get();
-        $pro_act=Programa::find($id_pro);
-        $especialidad=Especialidad::where('id_programa',$id_pro)->get();
-        //$materias_esp=Materia_especialidad::where('id_especialidad',$request->id_esp)->get();
-        $esp_act=Especialidad::where('id',$request->id_esp)->get();
-        //Cuenta los mensajes sin leer del programa
-        $n_msg=Contactos::where('id_programa',$id_pro)
-        ->where('status',0)
-        ->count();
-        $archivos=Archivo::where('id_programa',$id_pro)->get();
-        //Consulta las especialidades del programa
-        $especialidades= Especialidad::where('especialidades.id_programa', $id_pro)
-        ->join('reticulas', 'especialidades.id', '=', 'reticulas.id_especialidad')
-        ->select('especialidades.id','especialidades.nombre','especialidades.clave','especialidades.objetivo', 'reticulas.nom_arch_ret')
-        ->get();
-
-        $objetivos=Objetivo::where('id_programa',$id_pro)->get();
-        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
-        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
-        ->where('atributos.id_programa',$id_pro)
-        ->get();
-        $personal=Personal::where('id_programa',$id_pro)->get();
-        $formacion=Formacion::all();
-        $productos=Producto::all();
-        return view('admin.contenido.carreras.editplanestudios')
-        ->with('id_pro', $id_pro)
-        ->with('programa',$programa)
-        ->with('especialidad',$especialidad)
-        ->with('materias_esp',$materias_esp)
-        ->with('programas',$programas)
-        ->with('pro_act',$pro_act)
-        ->with('n_msg',$n_msg)
-        ->with('archivos',$archivos)
-        ->with('especialidades',$especialidades)
-        ->with('objetivos',$objetivos)
-        ->with('atributos',$atributos)
-        ->with('personal',$personal)
-        ->with('formacion',$formacion)
-        ->with('productos',$productos)
-        ->with('esp_act',$esp_act);
-    } */
 
     //Metodo para consultar las materias de la especialidad en index
     public function showMateriasEspecialidad2(Request $request, $id_pro)
@@ -1102,9 +1102,9 @@ class CarrerasController extends Controller
          ->get();
 
         //Seleccionamos los datos del programa seleccionado
-        $pro_esp=Especialidad::select('id_programa')->where('id',$id_esp)->get();  
+        $pro_esp=Especialidad::select('id_programa')->where('id',$id_esp)->get();
         $programa=Programa::where('id',$pro_esp[0]->id_programa)->get();
-         
+
 
          //Obtenemos la ruta del archivo de cada materia de especialidad
          $ruta = storage_path().'/app/public/carreras_planes_estudio/';
@@ -1307,7 +1307,6 @@ class CarrerasController extends Controller
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
-        //return redirect()->route('carreras.editPlanEstudios',$id_pro);
         //Regresamos a la pagina anterior
         return back()
         ->with("success","¡La materia se dio de alta correctamente!");

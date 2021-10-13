@@ -10,6 +10,6 @@ class Personal extends Model
     use HasFactory;
     protected $table="personal";
     protected $fillable = [
-        'nombre','ap_paterno','ap_materno','email','puesto','telefono','extension','id_programa'
+        'nombre','ap_paterno','ap_materno','email','puesto','telefono','extension','id_programa','nom_foto'
     ];
 }

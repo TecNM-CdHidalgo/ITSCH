@@ -241,5 +241,6 @@ Route::group(['middleware' => 'auth'],function(){
 	//Route::get('contenido/carreras/showMateriasEspecialidad', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
 	Route::get('contenido/carreras/actualizarTabla/{id_esp}', [CarrerasController::class, 'act_tab_esp'])->name('carreras.actualizarTabla');
+    Route::post('contenido/carreras/foto/{id_pro}', [CarrerasController::class, 'act_foto'])->name('carreras.actualizarFoto');
 });
 

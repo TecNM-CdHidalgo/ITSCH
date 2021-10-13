@@ -3,12 +3,37 @@
 @section('contenido')
 <h4><a href="{{ route('carreras.index') }}"> Carreras/</a><a href="{{ route('carreras.editEstructura',$programa->id) }}">Estructura academica</a>/Ficha: {{ $personal->nombre }} {{ $personal->ap_paterno }} {{ $personal->ap_materno }}</h4>
 <hr>
+<h5>Foto</h5>
+<div class="row">
+    <div class="col-sm-6">
+        <form action="{{ route('carreras.actualizarFoto',$programa->id) }}" method="POST" enctype="multipart/form-data">
+            {{csrf_field()}}
+            <div class="form-group mb-3 form-group-sm">
+                <div class="form-group">
+                    <input type="file" class="form-control-file border" name="foto" required>
+                </div>
+                <button class="btn btn-success btn-sm" type="submit">Subir</button>
+            </div>
+            <input type="hidden" name="id_per" value="{{ $personal->id }}">
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4" style="text-align: center">
+        <h6>Foto personal</h6>
+        @if($personal->nom_foto==null)
+            <img src="{{ asset('images/no_img_per.png') }}" alt="Foto" style="height:60%; width:25%;">
+        @else
+            <img src="{{ asset('storage/carreras_imagenes/'.$programa->nombre.'/fotos_personal/'.$personal->nom_foto) }}" alt="Foto" style="height:60%; width:25%;">
+        @endif
+    </div>
+</div>
+<hr>
 <h5>Formación</h5>
 <div class="d-flex">
     <button class="btn btn-success btn-sm ml-auto" role="button" data-toggle="modal" data-target="#myModalAltasFor"><i class='fas fa-plus' style='font-size:14px'></i> Agregar</button>
 </div>
 <br>
-<div class="table-responsive">                   
+<div class="table-responsive">
     <table class="table table-striped table-sm">
       <thead>
         <tr>
@@ -34,8 +59,8 @@
                         <i class='fas fa-trash-alt' style='font-size:14px'></i>
                     </button>
                 </td>
-            </tr>     
-        @endforeach     
+            </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
@@ -44,7 +69,8 @@
 <div class="d-flex">
     <button class="btn btn-success btn-sm ml-auto" role="button" data-toggle="modal" data-target="#myModalAltasPro"><i class='fas fa-plus' style='font-size:14px'></i> Agregar</button>
 </div>
-<div class="table-responsive">             
+<br>
+<div class="table-responsive">
     <table class="table table-striped table-sm">
       <thead>
         <tr>
@@ -59,7 +85,7 @@
             <tr>
                 <td>{{ $pro->categoria }}</td>
                 <td>{{ $pro->nombre }}</td>
-                <td>{{ $pro->funcion }}</td>                
+                <td>{{ $pro->funcion }}</td>
                 <td>
                     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditarPro" onclick="obtDatEditarPro({{ $pro }})">
                         <i class='fas fa-edit' style='font-size:14px'></i>
@@ -68,8 +94,8 @@
                         <i class='fas fa-trash-alt' style='font-size:14px'></i>
                     </button>
                 </td>
-            </tr>     
-        @endforeach  
+            </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
@@ -84,7 +110,7 @@
             <form action="{{ route('carreras.storeDetallesFor') }}">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Alta de Formación académica</h4>                
+                <h4 class="modal-title">Alta de Formación académica</h4>
                 </div>
 
                 <!-- Modal body -->
@@ -100,7 +126,7 @@
                             <span class="input-group-text">Nombre del Grado</span>
                         </div>
                         <input type="text" class="form-control" name="nombre" placeholder="Ej. Maestria en ciencias de la educación">
-                    </div>  
+                    </div>
                     <div class="input-group mb-3 input-group-sm">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Institución formadora</span>
@@ -113,7 +139,7 @@
                         </div>
                         <input type="text" class="form-control" name="cedula" placeholder="Cedula o numero de identificación">
                     </div>
-                                    
+
                     <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                     <input type="hidden" id="id_personal" name="id_personal" value="{{ $personal->id }}">
                     <br>
@@ -137,7 +163,7 @@
         <form id="formEditarForm">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Editar formación académica</h4>                
+                <h4 class="modal-title">Editar formación académica</h4>
                 </div>
 
                 <!-- Modal body -->
@@ -153,7 +179,7 @@
                             <span class="input-group-text">Nombre</span>
                         </div>
                         <input type="text" class="form-control" name="nombre" id="nombre">
-                    </div>  
+                    </div>
                     <div class="input-group mb-3 input-group-sm">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Institución formadora</span>
@@ -165,7 +191,7 @@
                             <span class="input-group-text">Cedula</span>
                         </div>
                         <input type="text" class="form-control" name="cedula" id="cedula">
-                    </div>                              
+                    </div>
                     <input type="hidden" id="id_programa" readonly name="id_programa" value="{{ $programa->id }}">
                     <input type="hidden" id="id_personal_form" readonly name="id_pesonal">
                     <br>
@@ -189,11 +215,11 @@
             <form id="formEliminarForm">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar la siguiente formación académica?</h4>                
+                <h4 class="modal-title">¿Estas seguro de eliminar la siguiente formación académica?</h4>
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body">                    
+                <div class="modal-body">
                     <b><label id="id_formacion_baja"></label></b>
                     <input type="hidden" readonly id="id_Profesor_baja" name="id_personal">
                     <input type="hidden" readonly id="id_programa_baja" name="id_programa" value="{{ $programa->id }}">
@@ -216,7 +242,7 @@
                 <form action="{{ route('carreras.storeDetallesPro') }}">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Alta de Producción académica</h4>                
+                    <h4 class="modal-title">Alta de Producción académica</h4>
                     </div>
 
                     <!-- Modal body -->
@@ -232,18 +258,18 @@
                                 <span class="input-group-text">Nombre</span>
                             </div>
                             <input type="text" class="form-control" name="nombre" placeholder="Ej. Desarrollo de aplicacion para el control...">
-                        </div>  
+                        </div>
                         <div class="input-group mb-3 input-group-sm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Función desempeñada</span>
                             </div>
                             <select class="form-control" id="sel1" name="funcion">
                                 <option value="Responsable" selected>Responsable</option>
-                                <option value="Colaborador">Colaborador</option>                           
+                                <option value="Colaborador">Colaborador</option>
                             </select>
                         </div>
-                        
-                                        
+
+
                         <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                         <input type="hidden" id="id_personal" name="id_personal" value="{{ $personal->id }}">
                         <br>
@@ -266,7 +292,7 @@
             <form id="formEditarPro">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Editar producción académica</h4>                
+                    <h4 class="modal-title">Editar producción académica</h4>
                     </div>
 
                     <!-- Modal body -->
@@ -282,17 +308,17 @@
                                 <span class="input-group-text">Nombre</span>
                             </div>
                             <input type="text" class="form-control" name="nombre" id="nombre_pro">
-                        </div>  
+                        </div>
                         <div class="input-group mb-3 input-group-sm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Función desempeñada</span>
                             </div>
                             <select class="form-control" id="funcion" name="funcion">
                                 <option value="Responsable" selected>Responsable</option>
-                                <option value="Colaborador">Colaborador</option>                           
+                                <option value="Colaborador">Colaborador</option>
                             </select>
                         </div>
-                                                    
+
                         <input type="hidden" id="id_programa" readonly name="id_programa" value="{{ $programa->id }}">
                         <input type="hidden" id="id_personal_pro" readonly name="id_pesonal">
                         <br>
@@ -316,11 +342,11 @@
             <form id="formEliminarPro">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar la siguiente producción académica?</h4>                
+                <h4 class="modal-title">¿Estas seguro de eliminar la siguiente producción académica?</h4>
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body">                    
+                <div class="modal-body">
                     <b><label id="id_produccion_baja"></label></b>
                     <input type="hidden" readonly id="id_Profesor_baja" name="id_personal">
                     <input type="hidden" readonly id="id_programa_baja" name="id_programa" value="{{ $programa->id }}">
@@ -342,13 +368,13 @@
 @section('js')
     <script>
         function obtDatEditarFor(form)
-        { 
+        {
             $("#grado").val(form['grado']);
-            $("#nombre").val(form['nombre']);  
-            $("#institucion_pro").val(form['institucion_pro']); 
+            $("#nombre").val(form['nombre']);
+            $("#institucion_pro").val(form['institucion_pro']);
             $("#cedula").val(form['cedula']);
-            $("#id_personal_form").val(form['id_personal']); 
-                                        
+            $("#id_personal_form").val(form['id_personal']);
+
             r="{{url('contenido/carreras')}}/updateDetallesFormacion/"+form['id'];
             $('#formEditarForm').attr('action', r);
         }
@@ -361,12 +387,12 @@
         }
 
         function obtDatEditarPro(prod)
-        { 
+        {
             $("#categoria").val(prod['categoria']);
-            $("#nombre_pro").val(prod['nombre']);  
-            $("#funcion").val(prod['funcion']);             
-            $("#id_personal_pro").val(prod['id_personal']); 
-                                        
+            $("#nombre_pro").val(prod['nombre']);
+            $("#funcion").val(prod['funcion']);
+            $("#id_personal_pro").val(prod['id_personal']);
+
             r="{{url('contenido/carreras')}}/updateDetallesProduccion/"+prod['id'];
             $('#formEditarPro').attr('action', r);
         }

@@ -21,7 +21,8 @@ class CreatePersonalTable extends Migration
             $table->string('email',50);
             $table->string('puesto',200);
             $table->string('telefono',15)->nullable();
-            $table->integer('extension')->nullable();            
+            $table->integer('extension')->nullable();
+            $table->string('nom_foto',60);
             $table->bigInteger('id_programa')->unsigned()->nullable();
             $table->foreign('id_programa')->references('id')->on('programas')->onDelete('cascade');
             $table->timestamps();
