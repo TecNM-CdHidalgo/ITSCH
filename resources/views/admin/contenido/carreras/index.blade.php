@@ -1,6 +1,8 @@
 @extends('layouts.plant_admin')
 
 @section('contenido')
+    {{-- Campo para guardar el nombre de la carrera en toda la pagina --}}
+    <input type="hidden" id="nom_pro" readonly value="{{ $programa[0]->nombre }}">
     <div class="row">
         <div class="col-sm-3">
             <h5>Carreras</h5>
@@ -227,13 +229,13 @@
                     <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-3"></div>
-                        <div class="col-sm-5">                           
+                        <div class="col-sm-5">
                             <div class="input-group mb-3 input-group-sm">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Especialidad</span>
                                 </div>
                                 {{-- Combo con las especialidades de la carrera --}}
-                                <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required> 
+                                <select class="form-control form-control-sm" id="id_especialidad" name="id_esp" required>
                                     @foreach($especialidades as $esp)
                                         <option value="{{ $esp->id }}">{{ $esp->nombre }}</option>
                                     @endforeach
@@ -242,7 +244,7 @@
                                     {{--  <button type="submit" class="btn btn-success">Mostrar</button>--}}
                                     <button type="button" class="btn btn-success" onclick="act_tabla()">Mostrar</button>
                                 </div>
-                            </div>                           
+                            </div>
                         </div>
                     </div>
                     <hr class="red">
@@ -264,7 +266,7 @@
                                         <td>{{ $me->clave }}</td>
                                         <td>{{ $me->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}" 
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}"
                                             download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
@@ -410,7 +412,6 @@
                 <th style="width: 30%">Nombre</th>
                 <th style="width: 40%">Area</th>
                 <th style="width: 25%">Detalle</th>
-
             </thead>
             <tbody>
                 @foreach ($personal as $per)
@@ -431,56 +432,6 @@
     </div>
     <br>
 
-
-    <br>
-    {{--
-    <h2> Contacto    </h2>
-    <hr>
-    <form action="{{ route('carreras.storeContacto',$pro_act->id) }}">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div class="form-group">
-                    <label class="control-label" for="nombre_co">Nombre completo:</label>
-                    <input class="form-control" id="nombre_co" name="nombre" placeholder="Nombre" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="email_co">Correo electrónico:</label>
-                    <input class="form-control" id="email_co" name="email" placeholder="Correo electrónico" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="telefono_co">Teléfono</label>
-                    <input class="form-control" id="telefono_co" name="telefono" placeholder="telefono" type="text">
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="password-01">Carrera de preferencia</label>
-                    <select class="form-control form-control-sm" name="id_programa" id="carrera_co" required>
-                        <option value="">Selecciona la carrera que deseas contactar</option>
-                        @foreach ($programas as $pro )
-                            <option value="{{ $pro->id }}">{{ $pro->nombre }}</option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label" for="email-01">Pregunta(s) y/ó comentario(s):</label>
-                    <textarea class="form-control" name="comentarios" id="comentario_co" cols="30" rows="6"></textarea>
-                </div>
-
-                <div style="text-align: right">
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        ENVIAR
-                    </button>
-                </div>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-    </form>
-    <br>
-    --}}
     <h2> Datos de Contacto    </h2>
     <hr>
     @foreach ($personal as $per)
@@ -502,8 +453,8 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Nombre de profesor</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Nombre de profesor</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
@@ -531,6 +482,9 @@
                 <form id="formEditDetalle">
                     <!-- Modal body -->
                     <div class="modal-body">
+                        <div class="text-center">
+                            <img alt="Foto" style="height:40%; width:25%;" id="img_per">
+                        </div>
                         <b><h5>Formación:</h5></b>
                         <div id="id_formacion"></div>
                         <b><h5>Productos:</h5></b>
@@ -628,7 +582,7 @@
             $(document).ready(function()
             {
                 $("#carrera").val({{ $pro_act->id }});
-               
+
             });
 
             //Obtener ID del option seleccionado
@@ -643,6 +597,17 @@
             {
                 $("#nom_per").text(per['nombre']+" "+per['ap_paterno']+" "+per['ap_materno']);
                 $("#det_email").text(per['email']);
+
+                //Asignamos la ruta de la foto del personal
+                if(per['nom_foto']==null)
+                {   //Ruta para cuando no tiene imagen asignada
+                    $("#img_per").attr("src","{{ asset('images/no_img_per.png') }}");
+                }
+                else
+                {
+                    //Ruta para cuando ya tiene una imagen
+                    $("#img_per").attr("src","{{ asset('storage/carreras_imagenes') }}"+"/"+ $("#nom_pro").val()+"/fotos_personal/"+ per['nom_foto'] +"");
+                }
 
                 //Obtenemos los datos de formacion de cada profesor
                 var r_form=form.length;

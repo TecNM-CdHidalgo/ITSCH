@@ -112,7 +112,7 @@ class CarrerasController extends Controller
         if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
             return redirect()->route('home');
         }
-        dd("Show");
+
         $programas=DB::table('programas')->select('id','nombre')->get();
         $pro_act=Programa::find($id);
         $especialidades= Especialidad::where('especialidades.id_programa', $id)
