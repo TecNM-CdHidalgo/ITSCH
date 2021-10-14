@@ -3,6 +3,8 @@
 @section('content')
 
     <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
+    {{-- Campo para guardar el nombre de la carrera en toda la pagina --}}
+    <input type="hidden" id="nom_pro" readonly value="{{ $pro_act->nombre }}">
     <div class="row">
         <div class="col-sm-12">
             <br>
@@ -159,7 +161,7 @@
                                         <td>{{ $me->clave }}</td>
                                         <td>{{ $me->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$me->nom_pro.'/'.$me->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -181,13 +183,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($programa as $pro)
+                                @foreach ($mat_com as $mat)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $pro->clave }}</td>
-                                        <td>{{ $pro->nombre }}</td>
+                                        <td>{{ $mat->clave }}</td>
+                                        <td>{{ $mat->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$pro->nom_pro.'/'.$pro->nom_archivo) }}" target="_blank" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/tron_comun/'.$mat->nom_archivo) }}" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -381,25 +383,24 @@
     <!-- Modal detalles de profesores -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
-        <div class="modal-content">
+            <div class="modal-content">
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-            <h4 class="modal-title">Nombre de profesor</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Nombre de profesor</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
             </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-            Modal body..
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-
-        </div>
         </div>
     </div>
 
@@ -414,6 +415,9 @@
                 <form id="formEditDetalle">
                     <!-- Modal body -->
                     <div class="modal-body">
+                        <div class="text-center">
+                            <img alt="Foto" style="height:40%; width:25%;" id="img_per">
+                        </div>
                         <b><h5>Formación:</h5></b>
                         <div id="id_formacion"></div>
                         <b><h5>Productos:</h5></b>
@@ -449,6 +453,8 @@
                         //Vaciamos la tabla
                         $('#tabMatEsp').html('');
                         let cont = 1;
+                        let head='<thead><tr> <th>Número</th><th>Clave</th><th>Nombre</th><th>Temario</th></tr></thead>';
+                        $('#tabMatEsp').append(head);
                         datos.forEach(me => {
                             let fila='<tr><td>'+cont+
                             '</td><td>'+me.clave+
@@ -466,7 +472,7 @@
                         alert("No se pudo conectar al servidor");
                     }
                 );
-            }        
+            }
 
 
             //Funcion que llena el modal con los detalles de cada uno de los profesores, mostrando grados académicos y producción
@@ -474,6 +480,17 @@
             {
                 $("#nom_per").text(per['nombre']+" "+per['ap_paterno']+" "+per['ap_materno']);
                 $("#det_email").text(per['email']);
+
+                //Asignamos la ruta de la foto del personal
+                if(per['nom_foto']==null)
+                {   //Ruta para cuando no tiene imagen asignada
+                    $("#img_per").attr("src","{{ asset('images/no_img_per.png') }}");
+                }
+                else
+                {
+                    //Ruta para cuando ya tiene una imagen
+                    $("#img_per").attr("src","{{ asset('storage/carreras_imagenes') }}"+"/"+ $("#nom_pro").val()+"/fotos_personal/"+ per['nom_foto'] +"");
+                }
 
                 //Obtenemos los datos de formacion de cada profesor
                 var r_form=form.length;

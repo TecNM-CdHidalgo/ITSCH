@@ -63,429 +63,482 @@
           <br><br>
 
           <div class="shadow-lg p-3 mb-5 bg-body rounded">
-          <div class="card">
-            <div class="card-header">
-                Documentos Normativos
-            </div>
-            <div class="card-body">
-            
-              <div class="panel-group ficha-collapse" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="tarColaps" data-parent="#accordion" data-toggle="collapse"href="#panel-01" aria-expanded="false" aria-controls="panel-01">
-                                Sección de documentos Normativos
-                            </a>
-                        </h4>
-                        <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse"href="#panel-01"></button>
+                <div class="card">
+                    <div class="card-header">
+                        Documentos Normativos
                     </div>
-                    <div class="panel-collapse collapse in" id="panel-01">
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                <tr>
-                                    
-                                    <th>Documento</th>
-                                    <th>Descargar</th>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <i class='fas fa-file-download' style='font-size:20px'></i>
-                                    </td>
-                                    <td>Lineamientos
-                                        </td>
-                                    <td class="text-center">
-                                        <a href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\1_Lineamientos_CS_28102016.pdf') }}">
-                                            <button class="btn btn-primary"  type="button">
-                                                <i class='fas fa-download' style='font-size:20px'></i>
-                                            </button>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <i class='fas fa-file-download' style='font-size:20px'></i>
-                                    </td>
-                                    <td>Esquema de Contraloría Social 2021
-                                        </td>
-                                    <td class="text-center">
-                                      <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\2_Esquema_de_Contraloría_Social_2021.pdf') }}">
-                                            <button class="btn btn-primary"  type="button">
-                                                <i class='fas fa-download' style='font-size:20px'></i>
-                                            </button>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <i class='fas fa-file-download' style='font-size:20px'></i>
-                                    </td>
-                                    <td>Programa Anual de Trabajo de Contraloría Social “PATCS” 2021 </td>
-                                    <td class="text-center">
-                                        <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\3_Formato_1_PATCS_CS_2021.pdf') }}">
-
-                                        <button class="btn btn-primary"  type="button">
-                                            <i class='fas fa-download' style='font-size:20px'></i>
-                                        </button></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <i class='fas fa-file-download' style='font-size:20px'></i>
-                                    </td>
-                                    <td>Guía operativa de Contraloría Social 2021</td>
-                                    <td class="text-center">
-                                        <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\4_Guia_Contraloria_Social_2021.pdf') }}">
-
-                                            <button class="btn btn-primary"  type="button">
-                                                <i class='fas fa-download' style='font-size:20px'></i>
-                                            </button></a>
-                                        </a>
-                                    </td>
-                                </tr>
-                                </table>
+                    <div class="card-body">
+                    
+                    <div class="panel-group ficha-collapse" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="tarColaps" data-parent="#accordion" data-toggle="collapse"href="#panel-01" aria-expanded="false" aria-controls="panel-01">
+                                        Sección de documentos Normativos
+                                    </a>
+                                </h4>
+                                <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse"href="#panel-01"></button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-          
-            </div>
-
-            
-          </div>
-        
-                <br><br>
-                <div class="shadow-lg p-3 mb-5 bg-body rounded">
-
-          <div class="card">
-            <div class="card-header">
-                FORMATOS DE LA GUÍA OPERATIVA
-            </div>
-            <div class="card-body">
-                <div class="panel-group ficha-collapse" id="accordion2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="tarColaps" data-parent="#accordion" data-toggle="collapse"href="#panel-02" aria-expanded="false" aria-controls="panel-02">
-                                    Sección de Formatos de la Guía Operativa
-                                </a>
-                            </h4>
-                            <button type="button" class="collpase-button collapsed" data-parent="#accordion2" data-toggle="collapse"href="#panel-02"></button>
-                        </div>
-                        <div class="panel-collapse collapse in" id="panel-02">
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                    <tr>
-                                        
-                                        <th>Documento</th>
-                                        <th>Descargar</th>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Formato PITCS CS 2021
+                            <div class="panel-collapse collapse in" id="panel-01">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                        <tr>
+                                            
+                                            <th>Documento</th>
+                                            <th>Descargar</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class='fas fa-file-download' style='font-size:20px'></i>
                                             </td>
-                                        <td class="text-center">
-                                            <a href="{{ asset('documents\investigacion\pitsc\Formatos de la Guia Operativa\Formato 2 PATCS CS 2021.xlsx') }}">
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Acta de registro de Comité
+                                            <td>Lineamientos
+                                                </td>
+                                            <td class="text-center">
+                                                <a href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\1_Lineamientos_CS_28102016.pdf') }}">
+                                                    <button class="btn btn-primary"  type="button">
+                                                        <i class='fas fa-download' style='font-size:20px'></i>
+                                                    </button>
+                                                </a>
                                             </td>
-                                        <td class="text-center">
-                                            <a href="{{ asset('documents\investigacion\pitsc\Formatos de la Guia Operativa\Formato 3 Acta de Registro de Comite.docx') }}">
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Minuta de Reunión de Comite </td>
-                                        <td class="text-center">
-                                            <a href="{{ asset('documents\investigacion\pitsc\Formatos de la Guia Operativa\Formato 4 Minuta de Reunión de Comite.docx') }}">
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class='fas fa-file-download' style='font-size:20px'></i>
+                                            </td>
+                                            <td>Esquema de Contraloría Social 2021
+                                                </td>
+                                            <td class="text-center">
+                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\2_Esquema_de_Contraloría_Social_2021.pdf') }}">
+                                                    <button class="btn btn-primary"  type="button">
+                                                        <i class='fas fa-download' style='font-size:20px'></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class='fas fa-file-download' style='font-size:20px'></i>
+                                            </td>
+                                            <td>Programa Anual de Trabajo de Contraloría Social “PATCS” 2021 </td>
+                                            <td class="text-center">
+                                                <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\3_Formato_1_PATCS_CS_2021.pdf') }}">
 
-                                            <button class="btn btn-primary"  type="button">
-                                                <i class='fas fa-download' style='font-size:20px'></i>
-                                            </button></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Escrito Libre</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 5 Escrito Libre.docx') }}">
-    
                                                 <button class="btn btn-primary"  type="button">
                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                 </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-                                
-                                
-                                
-                                
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Informe de Comité CS 2021</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 6 Informe de Comité CS 2021.xlsx') }}">
-    
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class='fas fa-file-download' style='font-size:20px'></i>
+                                            </td>
+                                            <td>Guía operativa de Contraloría Social 2021</td>
+                                            <td class="text-center">
+                                                <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\4_Guia_Contraloria_Social_2021.pdf') }}">
 
-
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Acta Sustitución de Integrante de Comité</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\Formato 7 Acta Sustitución de Integrante de Comité.docx') }}">
-    
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-
-
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Quejas, Denuncias, Peticiones o Irregularidad</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 8 Quejas, Denuncias, Peticiones o Irregularidad.docx') }}">
-    
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-
-
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Informe de Quejas, Denuncias o Peticiones</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 9 Infome de Quejas, Denuncias o Peticiones.xlsx') }}">
-    
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-
-
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Entrega de Material Difusión y Capacitación Impartidas</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 10 Entrega de Material Difusión y Capacitación Impartidas.xlsx') }}">
-    
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-
-
-                                    <tr>
-                                        <td class="text-center">
-                                            <i class='fas fa-file-download' style='font-size:20px'></i>
-                                        </td>
-                                        <td>Registro Integrantes de Comités 2021</td>
-                                        <td class="text-center">
-                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 11 Registro Integrantes de Comités 2021(DIRECTORIO).xlsx') }}">
-    
-                                                <button class="btn btn-primary"  type="button">
-                                                    <i class='fas fa-download' style='font-size:20px'></i>
-                                                </button></a>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-
-                                </table>
+                                                    <button class="btn btn-primary"  type="button">
+                                                        <i class='fas fa-download' style='font-size:20px'></i>
+                                                    </button></a>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-          
-            </div>
-            
-          </div>
+                    </div>
+                
+                    </div>
 
-          </div>
+                    
+                </div>
+        
+                <br><br>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+
+                        <div class="card">
+                            <div class="card-header">
+                                FORMATOS DE LA GUÍA OPERATIVA
+                            </div>
+                            <div class="card-body">
+                                <div class="panel-group ficha-collapse" id="accordion2">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a class="tarColaps" data-parent="#accordion" data-toggle="collapse"href="#panel-02" aria-expanded="false" aria-controls="panel-02">
+                                                    Sección de Formatos de la Guía Operativa
+                                                </a>
+                                            </h4>
+                                            <button type="button" class="collpase-button collapsed" data-parent="#accordion2" data-toggle="collapse"href="#panel-02"></button>
+                                        </div>
+                                        <div class="panel-collapse collapse in" id="panel-02">
+                                            <div class="panel-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover">
+                                                    <tr>
+                                                        
+                                                        <th>Documento</th>
+                                                        <th>Descargar</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Formato PITCS CS 2021
+                                                            </td>
+                                                        <td class="text-center">
+                                                            <a href="{{ asset('documents\investigacion\pitsc\Formatos de la Guia Operativa\Formato 2 PATCS CS 2021.xlsx') }}">
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Acta de registro de Comité
+                                                            </td>
+                                                        <td class="text-center">
+                                                            <a href="{{ asset('documents\investigacion\pitsc\Formatos de la Guia Operativa\Formato 3 Acta de Registro de Comite.docx') }}">
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Minuta de Reunión de Comite </td>
+                                                        <td class="text-center">
+                                                            <a href="{{ asset('documents\investigacion\pitsc\Formatos de la Guia Operativa\Formato 4 Minuta de Reunión de Comite.docx') }}">
+
+                                                            <button class="btn btn-primary"  type="button">
+                                                                <i class='fas fa-download' style='font-size:20px'></i>
+                                                            </button></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Escrito Libre</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 5 Escrito Libre.docx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                
+                                                
+                                                
+                                                
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Informe de Comité CS 2021</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 6 Informe de Comité CS 2021.xlsx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Acta Sustitución de Integrante de Comité</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\Formato 7 Acta Sustitución de Integrante de Comité.docx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Quejas, Denuncias, Peticiones o Irregularidad</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 8 Quejas, Denuncias, Peticiones o Irregularidad.docx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Informe de Quejas, Denuncias o Peticiones</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 9 Infome de Quejas, Denuncias o Peticiones.xlsx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Entrega de Material Difusión y Capacitación Impartidas</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 10 Entrega de Material Difusión y Capacitación Impartidas.xlsx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <i class='fas fa-file-download' style='font-size:20px'></i>
+                                                        </td>
+                                                        <td>Registro Integrantes de Comités 2021</td>
+                                                        <td class="text-center">
+                                                            <a  href="{{ asset('documents\content\investigacion\pitsc\documentos normativos\Formato 11 Registro Integrantes de Comités 2021(DIRECTORIO).xlsx') }}">
+                    
+                                                                <button class="btn btn-primary"  type="button">
+                                                                    <i class='fas fa-download' style='font-size:20px'></i>
+                                                                </button></a>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+                                                </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                            
+                        </div>
+
+               </div>
 
 
                     <br>
-            <div class="card">
-                <h5 class="card-header">   INFORMES TRIMESTRALES   </h5>
-                        <div class="card-body">
-                              <h5 class="card-title">Información de las actividades de Contraloría Social</h5>
-                                        <p class="card-text">Año 2021</p>
-                                            <a href="#" class="btn btn-primary">Descargar</a>
-                        </div>
-            </div>
-          
+                    <div class="card">
+                        <h5 class="card-header">   INFORMES TRIMESTRALES   </h5>
+                                <div class="card-body">
+                                    <h5 class="card-title">Información de las actividades de Contraloría Social</h5>
+                                                <p class="card-text">Año 2021</p>
+                                                    <a href="#" class="btn btn-primary">Descargar</a>
+                                </div>
+                    </div>
+                
           
             <br>
             <div class="card">
                 <h5 class="card-header">   Quejas Denuncias, Peticiones o Irregularidades   </h5>
                         <div class="card-body">
                               
-
                         <div class="accordion" id="accordionPanelsStayOpenExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-      Los Comités de Contraloría Social podrán recibir de los beneficiarios del Programa para el Desarrollo Profesional Docente (PRODEP) las quejas y denuncias, de acuerdo a lo siguiente:      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body">
-        <strong>Sobre la aplicación, ejecución y/o asistencia técnica del Programa,</strong>  que puedan dar lugar al fincamiento de responsabilidades administrativas, civiles y/o penales, y turnarlas a las autoridades competentes para su atención.
-        
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-      Para alguna Queja o Denuncia interpuesta deberá de realizar el siguiente procedimiento:
 
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body">
-      <img src="{{ asset('images/content/contraloria/procedimiento_quejas_denuncias.jpg')}}"  class="img-fluid" alt="...">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Los Comités de Contraloría Social podrán recibir de los beneficiarios del Programa para el Desarrollo Profesional Docente (PRODEP) las quejas y denuncias, de acuerdo a lo siguiente:      </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <strong>Sobre la aplicación, ejecución y/o asistencia técnica del Programa,</strong>  que puedan dar lugar al fincamiento de responsabilidades administrativas, civiles y/o penales, y turnarlas a las autoridades competentes para su atención.
+                                
+                            </div>
+                            </div>
+                        </div>
 
-    <blockquote>  Diagrama 2 Procesos para la Atención o Canalización de Queja o Denuncia de Contraloría Social del PRODEP
-    </blockquote>
-    <h6>
-(Para la descripción del diagrama anterior, favor de remitirse a la Guía Operativa de Contraloría Social en la página 31).
-    </h6>
-    <h4>
-Por lo anterior, y con el propósito de facilitar la comunicación con los beneficiarios del programa, el TecNM, ha dispuesto al personal responsable de acuerdo a lo siguiente:
-</h4></div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-      Para el TecNM:
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-        <strong>Lic. Miguel Ángel Andrade Herrera, Enlace de Contraloría Social del TecNM: </strong> 
-        contraloriasocial_posgrado@tecnm.mx
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Para alguna Queja o Denuncia interpuesta deberá de realizar el siguiente procedimiento:
 
-Las oficinas del Tecnológico Nacional de México, se encuentran ubicadas en Avenida Universidad Núm. 1200, piso 5 sector 5-3, Colonia Xoco, Alcaldía Benito Juárez, C.P. 03330, Ciudad de México, México o bien comunicarse al teléfono (01 55) 36-00-25-11, ext. 65083..      </div>
-    </div>
-    </div>
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingfour">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-      A través de la SEP:
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-        <strong>Para presentar quejas, denuncias, reconocimientos y sugerencias respecto a trámites correspondientes a la Secretaría de Educación Pública </strong>
-        relacionados con la Educación Superior puede consultar la siguiente liga correspondiente al Órgano Interno de Control de la propia Secretaría:
-http://www.oic.sep.gob.mx/portal3/quejas2.php    
-    </div>
-    </div>
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingfive">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-      Por medio de la Secretaría de Función Pública:
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-        <strong>Para presentar quejas y denuncias, por el posible incumplimiento de las obligaciones de los servidores públicos pueden realizarse a través del portal del Sistema de Denuncia Ciudadana, https://sidec.funcionpublica.gob.mx/#!/, de la Secretaría de la Función Pública.
-<ul></ul>
-<li>La aplicación para teléfono celular 'Denuncia ciudadana de la Corrupción'.
-</li>
-<li>Vía telefónica: En el interior de la República al 800 11 28 700 y en la Ciudad de México, 55 2000 2000.
-</li>
+                            </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                            <img src="{{ asset('images/content/contraloria/procedimiento_quejas_denuncias.jpg')}}"  class="img-fluid" alt="...">
 
-<li> Presencial: En el módulo 3 de la Secretaría de la Función Pública ubicado en Av. Insurgentes Sur 1735, PB, Guadalupe Inn, Álvaro Obregón, Código Postal 01020, Ciudad de México.
-</li>
-<li>Vía correspondencia: Envía tu escrito a la Dirección General de Denuncias e Investigaciones de la Secretaría de la Función Pública en Av. Insurgentes Sur No. 1735, Piso 2 Ala Norte, Guadalupe Inn, Álvaro Obregón, CP 01020, Ciudad de México.
-</li>
-<li>Vía correo electrónico:
-contraloriasocial@funcionpublica.gob.mx
-</li>
-<li>Plataforma: Ciudadanos Alertadores Internos y Externos de la Corrupción. La plataforma de alertadores está diseñada para atender casos graves de corrupción y/o en los que se requiere confidencialidad: https://alertadores.funcionpublica.gob.mx</strong> 
-    
-    </li>     </div>
-    </div>
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-      Si desea hacer una consulta o recibir asesoría inmediata respecto a las actividades del Órgano Interno de Control en la SEP o en cuanto a la presentación de peticiones ciudadanas, usted puede:
+                                    <blockquote>  Diagrama 2 Procesos para la Atención o Canalización de Queja o Denuncia de Contraloría Social del PRODEP
+                                    </blockquote>
+                                    <h6>
+                                    (Para la descripción del diagrama anterior, favor de remitirse a la Guía Operativa de Contraloría Social en la página 31).
+                                    </h6>
+                                    <h4>
+                                    Por lo anterior, y con el propósito de facilitar la comunicación con los beneficiarios del programa, el TecNM, ha dispuesto al personal responsable de acuerdo a lo siguiente:
+                                        </h4></div>
+                            </div>
+                        </div>
 
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Para el TecNM:
+                            </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <strong>Lic. Miguel Ángel Andrade Herrera, Enlace de Contraloría Social del TecNM: </strong> 
+                                contraloriasocial_posgrado@tecnm.mx
+
+                                Las oficinas del Tecnológico Nacional de México, se encuentran ubicadas en Avenida Universidad Núm. 1200, piso 5 sector 5-3, Colonia Xoco, Alcaldía Benito Juárez, C.P. 03330, Ciudad de México, México o bien comunicarse al teléfono (01 55) 36-00-25-11, ext. 65083..      </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            A través de la SEP:
+                            </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <strong>Para presentar quejas, denuncias, reconocimientos y sugerencias respecto a trámites correspondientes a la Secretaría de Educación Pública </strong>
+                                relacionados con la Educación Superior puede consultar la siguiente liga correspondiente al Órgano Interno de Control de la propia Secretaría:
+                            http://www.oic.sep.gob.mx/portal3/quejas2.php    
+                            </div>
+                            </div>
+                                
+
+                        </div>       
+                            
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Para alguna Queja o Denuncia interpuesta deberá de realizar el siguiente procedimiento:
+
+                            </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                            <img src="{{ asset('images/content/contraloria/procedimiento_quejas_denuncias.jpg')}}"  class="img-fluid" alt="...">
+
+                            <blockquote>  Diagrama 2 Procesos para la Atención o Canalización de Queja o Denuncia de Contraloría Social del PRODEP
+                            </blockquote>
+                            <h6>
+                            (Para la descripción del diagrama anterior, favor de remitirse a la Guía Operativa de Contraloría Social en la página 31).
+                            </h6>
+                            <h4>
+                            Por lo anterior, y con el propósito de facilitar la comunicación con los beneficiarios del programa, el TecNM, ha dispuesto al personal responsable de acuerdo a lo siguiente:
+                                </h4></div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Por medio de la Secretaría de Función Pública:
+                            </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEleven">
+                            <div class="accordion-body">
+                            Para presentar quejas y denuncias, por el posible incumplimiento de las obligaciones de los servidores públicos pueden realizarse a través del portal del Sistema de Denuncia Ciudadana, https://sidec.funcionpublica.gob.mx/#!/, de la Secretaría de la Función Pública.
+                                <ul>
+                                <br>
+                                <li>La aplicación para teléfono celular 'Denuncia ciudadana de la Corrupción'</li>
+                                    <br>
+                                    <li>Vía telefónica: En el interior de la República al 800 11 28 700 y en la Ciudad de México, 55 2000 2000.
+                                    </li>
+                                            <br>
+                                            <li> Presencial: En el módulo 3 de la Secretaría de la Función Pública ubicado en Av. Insurgentes Sur 1735, PB, Guadalupe Inn, Álvaro Obregón, Código Postal 01020, Ciudad de México.
+                                            </li>
+                                            <br>
+                                            <li>Vía correspondencia: Envía tu escrito a la Dirección General de Denuncias e Investigaciones de la Secretaría de la Función Pública en Av. Insurgentes Sur No. 1735, Piso 2 Ala Norte, Guadalupe Inn, Álvaro Obregón, CP 01020, Ciudad de México.
+                                            </li>
+                                            <br>
+                                            <li>Vía correo electrónico:
+                                            contraloriasocial@funcionpublica.gob.mx
+                                            </li>
+                                            <br>
+                                            <li>Plataforma: Ciudadanos Alertadores Internos y Externos de la Corrupción. La plataforma de alertadores está diseñada para atender casos graves de corrupción y/o en los que se requiere confidencialidad: https://alertadores.funcionpublica.gob.mx</strong> 
+                                                
+                                                </li> 
+                                            </ul>
+                            </div>
+                            </div>
+                            </div>
+
+
+                          
+
+
+
+   
+
+
+
+           </div> 
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Si desea hacer una consulta o recibir asesoría inmediata respecto a las actividades del Órgano Interno de Control en la SEP o en cuanto a la presentación de peticiones ciudadanas, usted puede:
+
+                            </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                            <div class="accordion-body">
+                                <ul>
+                                <br>
+                               
 <li> de manera personal, a las oficinas que ocupa el Área de Quejas de este Órgano Fiscalizador, ubicado en: Av. Universidad 1074, Col. Xoco, C.P. 03330, Alcaldía Benito Juárez, Ciudad de México, en un horario 9:00 a 15:00 y de 16:00 a 18:00 horas, de lunes a viernes.
 </li>
 <li> De igual forma puede ingresar su escrito en Oficialía de Partes Común, localizada en el referido domicilio de 9:00 a 15:00 horas o enviarla a través del correo electrónico: quejas@sep.gob.mx
-</li></button>
-    </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
-        <strong>Lic. Miguel Ángel Andrade Herrera, Enlace de Contraloría Social del TecNM: </strong> 
+</li>
+                                            </ul>
+
+
+                                            <strong>Lic. Miguel Ángel Andrade Herrera, Enlace de Contraloría Social del TecNM: </strong> 
         contraloriasocial_posgrado@tecnm.mx
 
 Las oficinas del Tecnológico Nacional de México, se encuentran ubicadas en Avenida Universidad Núm. 1200, piso 5 sector 5-3, Colonia Xoco, Alcaldía Benito Juárez, C.P. 03330, Ciudad de México, México o bien comunicarse al teléfono (01 55) 36-00-25-11, ext. 65083..      </div>
-    </div>
-  </div>
-</div>
-          
+ 
+                            </div>
+                            </div>
+                        </div>
 
-</div>       
-         
-
-</div>
+   </div>
 <br><br>
 @endsection
