@@ -230,7 +230,6 @@
             <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
             <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
             <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
-
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -245,7 +244,8 @@
             <a class="dropdown-item"  href="{{route('oferta.gestion')}}">Ingeniería en  Gestión Empresarial</a>
             <a class="dropdown-item"  href="{{route('oferta.bioquimica')}}">Ingeniería en  Bioquímica</a>
             <a class="dropdown-item"  href="{{route('oferta.nano')}}">Ingeniería en Nanotecnologia</a>
-            <a class="dropdown-item"  href="{{ route('oferta.index') }}">Carreras</a>
+            <a class="dropdown-item"  href="{{ route('oferta.index',1) }}">Ingenierías</a>
+            <a class="dropdown-item"  href="{{ route('oferta.index',2) }}">Posgrados</a>
         </div>
       </li>
 

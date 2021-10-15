@@ -301,6 +301,7 @@ class CarrerasController extends Controller
 
         $programa = new Programa;
         $programa->nombre = $request->nombre;
+        $programa->tipo=$request->tipo;
         $programa->save();
         return redirect()->route('carreras.editCarrera');
     }
@@ -314,6 +315,7 @@ class CarrerasController extends Controller
 
         $programa = Programa::find($id);
         $programa->nombre = $request->nombre;
+        $programa->tipo=$request->tipo;
         $programa->save();
         return redirect()->route('carreras.editCarrera');
     }
@@ -1151,7 +1153,7 @@ class CarrerasController extends Controller
         }
         // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
         catch (\Exception $e)
-        { dd($e);
+        { 
             DB::rollback();
             return back()
             ->with("success","A ocurrido un error CODIGO_001_1152");
