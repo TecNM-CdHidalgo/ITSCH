@@ -7,16 +7,13 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Especialidad;
 use App\Models\Objetivo;
 use App\Models\Atributo;
-use App\Models\Criterio;
 use App\Models\Personal;
 use App\Models\Formacion;
 use App\Models\Producto;
 use App\Models\Contactos;
 use App\Models\Archivo;
-use App\Models\Reticula;
 use App\Models\Asignatura_programa;
-use App\Models\Materia_especialidad;
-use Illuminate\Support\Facades\Auth;
+
 
 
 class ProgramasController extends Controller
@@ -26,14 +23,17 @@ class ProgramasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($tipo)
     {
-        $carreras=Programa::select('programas.id as id_pro','programas.nombre','programas.plan_estudios','archivos.nom_img_carr')
-        ->join('archivos','programas.id','archivos.id_programa')->get();
+        $carreras=Programa::select('programas.id as id_pro','programas.nombre','programas.plan_estudios','programas.tipo as tipo','archivos.nom_img_carr')
+        ->join('archivos','programas.id','archivos.id_programa')
+        ->where('tipo',$tipo)
+        ->get();
 
 
         return view('content.oferta_educativa.index')
-        ->with('carreras',$carreras);
+        ->with('carreras',$carreras)
+        ->with('tipo',$tipo);
     }
 
 

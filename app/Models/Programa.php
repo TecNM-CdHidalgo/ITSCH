@@ -10,6 +10,6 @@ class Programa extends Model
     use HasFactory;
     protected $table="programas";
     protected $fillable = [
-        'nombre','plan_estudios','definicion','mision','vision','politica','objetivo','per_ingreso','per_egreso','campo'
+        'nombre','plan_estudios','definicion','mision','vision','politica','objetivo','per_ingreso','per_egreso','campo','tipo'
     ];
 }

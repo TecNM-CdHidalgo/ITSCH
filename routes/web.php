@@ -54,7 +54,7 @@ Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_
 Route::get('oferta_educativa/nano',function(){return view('content.oferta_educativa.nano');})->name('oferta.nano');
 Route::get('oferta_educativa/gestion',function(){return view('content.oferta_educativa.gestion');})->name('oferta.gestion');
 Route::get('oferta_educativa/mecatronica',function(){return view('content.oferta_educativa.mecatronica');})->name('oferta.mecatronica');
-Route::get('oferta_educativa/index', [ProgramasController::class, 'index'])->name('oferta.index');
+Route::get('oferta_educativa/index/{tipo}', [ProgramasController::class, 'index'])->name('oferta.index');
 Route::get('oferta_educativa/showCarrera/{id}', [ProgramasController::class, 'show'])->name('oferta.showCarrera');
 Route::get('contenido/carreras/storeContacto/{id_pro}', [CarrerasController::class, 'storeContacto'])->name('carreras.storeContacto');
 
