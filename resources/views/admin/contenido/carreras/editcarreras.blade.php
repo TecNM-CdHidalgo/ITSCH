@@ -12,6 +12,7 @@
         <thead>
             <th>ID</th>
             <th>Nombre</th>
+            <th>Tipo</th>
             <th>Acciones</th>
         </thead>
         <tbody>
@@ -19,6 +20,14 @@
                 <tr>
                     <td> {{ $pro->id }}</td>
                     <td> {{ $pro->nombre }} </td>
+                    <td>
+                        {{-- Ponemos el tipo de programa educativo del que se trata --}}
+                        @if($pro->tipo==1)
+                            Ingeniería
+                        @else
+                            Maestría
+                        @endif
+                    </td>
                     <td>
                         <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditar" onclick="obtDatEditar({{ $pro }})">
                             <i class='fas fa-edit' style='font-size:14px'></i>
@@ -48,7 +57,14 @@
                     
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <input class="form-control" name="nombre" type="text" required placeholder="Nombre de la carrera">
+                        <label for="nombre">Nombre del programa</label>
+                        <input class="form-control" name="nombre" type="text" required placeholder="Nombre del programa" id="nombre">
+                        <label for="tipo">Tipo de programa</label>
+                        <select name="tipo" id="tipo" class="form-control" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="1">Ingeniería</option>
+                            <option value="2">Maestría</option>
+                        </select>
                     </div>
                     
                     <!-- Modal footer -->
@@ -75,7 +91,14 @@
                     
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <input type="text" class="form-control" required name="nombre" id="nom_update">
+                        <label for="nombre">Nombre del programa</label>
+                        <input type="text" class="form-control" required name="nombre" id="nom_update" id="nombre">
+                        <label for="tipo">Tipo de programa</label>
+                        <select name="tipo" id="tipo" class="form-control" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="1">Ingeniería</option>
+                            <option value="2">Maestría</option>
+                        </select>
                     </div>
                     
                     <!-- Modal footer -->

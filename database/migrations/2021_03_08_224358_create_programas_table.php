@@ -25,6 +25,7 @@ class CreateProgramasTable extends Migration
             $table->string('per_ingreso',2000)->nullable();
             $table->string('per_egreso',2000)->nullable();
             $table->string('campo',2000)->nullable();
+            $table->integer('tipo')->nullable();
             $table->timestamps();
         });
     }

@@ -1,9 +1,15 @@
 @extends('layouts.app')
 
-@section('content')
-        
-        <div class="row">
-            @foreach ($carreras as $car)
+@section('content')  
+    <div style="text-align: center">
+        @if($tipo==1)
+            <h2>Ingenierías</h2>
+        @else
+            <h2>Posgrados</h2>
+        @endif
+    </div>
+    <div class="row">
+        @foreach ($carreras as $car)               
                 <div class="col-sm-4 mt-4">                    
                     <div class="card" style="width:60%; height:100%; margin-left: 20%;">
                         <a href="{{ route('oferta.showCarrera',$car->id_pro) }}">
@@ -22,10 +28,9 @@
                     <br>
                     <br>
                     <br>
-                @endif
-            @endforeach
-        </div>
-
+                @endif       
+        @endforeach
+    </div>
     <br>
     <br>
 @endsection

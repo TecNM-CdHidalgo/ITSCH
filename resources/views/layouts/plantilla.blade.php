@@ -110,15 +110,15 @@
           <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
           <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
           <a class="dropdown-item"  href="https://tutorias.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
-          <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
+          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
           <a class="dropdown-item"  href="https://encuestas.cdhidalgo.tecnm.mx">Encuestas de servicios</a>
           <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8087/sed/">Evaluacion Docente</a>
 
           <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistema de eventos</a>
-          <a class="dropdown-item"  href="https://eventos.cdhidalgo.tecnm.mx/#!/constancia">Congreso 2019</a>
+          {{-- <aclass="dropdown-item"href="https://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistemadeeventos</a> --}}
+          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Congreso 2019</a>
           <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">Test Psicométrico de Nuevo ingreso</a>
+          {{-- <aclass="dropdown-item"href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">TestPsicométricodeNuevoingreso</a> --}}
           <a class="dropdown-item"  href="http://www.itsch.edu.mx:8080/sgcv3/Procaptura.aspx">Solicitud de prorroga</a>
 
         </ul>
@@ -202,7 +202,7 @@
             <a class="dropdown-item"href="{{ route('transparencia.acceso_transparencia') }}">Estados Financieros </a>
           </div>
       </li>
-      <a href="https://moodle.cdhidalgo.tecnm.mx/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
+      <a href="https://cdhidalgo.tecnm.mx:8083/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
     </ul>
   </div>
 </nav>
@@ -230,7 +230,6 @@
             <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
             <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
             <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
-
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -245,7 +244,8 @@
             <a class="dropdown-item"  href="{{route('oferta.gestion')}}">Ingeniería en  Gestión Empresarial</a>
             <a class="dropdown-item"  href="{{route('oferta.bioquimica')}}">Ingeniería en  Bioquímica</a>
             <a class="dropdown-item"  href="{{route('oferta.nano')}}">Ingeniería en Nanotecnologia</a>
-            <a class="dropdown-item"  href="{{ route('oferta.index') }}">Carreras</a>
+            <a class="dropdown-item"  href="{{ route('oferta.index',1) }}">Ingenierías</a>
+            <a class="dropdown-item"  href="{{ route('oferta.index',2) }}">Posgrados</a>
         </div>
       </li>
 

@@ -301,6 +301,7 @@ class CarrerasController extends Controller
 
         $programa = new Programa;
         $programa->nombre = $request->nombre;
+        $programa->tipo=$request->tipo;
         $programa->save();
         return redirect()->route('carreras.editCarrera');
     }
@@ -314,6 +315,7 @@ class CarrerasController extends Controller
 
         $programa = Programa::find($id);
         $programa->nombre = $request->nombre;
+        $programa->tipo=$request->tipo;
         $programa->save();
         return redirect()->route('carreras.editCarrera');
     }
@@ -1116,7 +1118,7 @@ class CarrerasController extends Controller
     }
 
 
-    //Metodo para gusrdar las materias
+    //Metodo para gusrdar las materias de tronco común
     public function storePlanEstudios(Request $request, $id_pro)
     {
         //Iniciamos la transacción
