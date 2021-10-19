@@ -109,9 +109,9 @@
           </li>
           <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
           <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
-          <a class="dropdown-item"  href="https://tutorias.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
+          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
           <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
-          <a class="dropdown-item"  href="https://encuestas.cdhidalgo.tecnm.mx">Encuestas de servicios</a>
+          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8085/">Encuestas de servicios</a>
           <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8087/sed/">Evaluacion Docente</a>
 
           <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
@@ -132,7 +132,7 @@
         <div class="dropdown-menu">
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
                 <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
-                <a class="dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
+                <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
         </div>
       </li>
 

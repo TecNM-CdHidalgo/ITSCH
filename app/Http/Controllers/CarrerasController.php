@@ -1153,7 +1153,7 @@ class CarrerasController extends Controller
         }
         // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
         catch (\Exception $e)
-        { 
+        {   dd($e);
             DB::rollback();
             return back()
             ->with("success","A ocurrido un error CODIGO_001_1152");
