@@ -15,9 +15,9 @@ class CreateProductosTable extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->string('categoria',100);
-            $table->string('nombre',100);
-            $table->string('funcion',50);
+            $table->string('categoria',500);
+            $table->string('nombre',500);
+            $table->string('funcion',100);
             $table->bigInteger('id_personal')->unsigned()->nullable();
             $table->foreign('id_personal')->references('id')->on('personal')->onDelete('cascade');
             $table->timestamps();

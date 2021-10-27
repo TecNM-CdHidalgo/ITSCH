@@ -370,10 +370,10 @@
     <hr>
     @foreach ($personal as $per)
         @if((strpos($per->puesto,'Jefe')!==false||strpos($per->puesto,'jefe')!==false||strpos($per->puesto,'Jefa')!==false||strpos($per->puesto,'jefa')!==false) && $per->id_programa==$pro_act->id)
-            <li>{{ $personal[0]->nombre }} {{ $personal[0]->ap_paterno }} {{ $personal[0]->ap_materno }}</li>
-            <li>Tel. {{ $personal[0]->telefono }} Ext. {{ $personal[0]->extension }} </li>
-            <li>Email. {{ $personal[0]->email }} </li>
-            <li>{{ $personal[0]->puesto }}</li>
+            <li>{{ $per->nombre }} {{ $per->ap_paterno }} {{ $per->ap_materno }}</li>
+            <li>Tel. {{ $per->telefono }} Ext. {{ $per->extension }} </li>
+            <li>Email. {{ $per->email }} </li>
+            <li>{{ $per->puesto }}</li>
         @endif
     @endforeach
     <li>Ubicación: Edificio “A” planta alta.</li>
