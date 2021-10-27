@@ -78,7 +78,9 @@ class CarrerasController extends Controller
         $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
         ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
         ->where('atributos.id_programa',$idPro->id)
+        ->orderBy('numAtr')
         ->get();
+
         $personal=Personal::where('id_programa',$idPro->id)->get();
         $formacion=Formacion::all();
         $productos=Producto::all();
@@ -86,7 +88,6 @@ class CarrerasController extends Controller
         $n_msg=Contactos::where('id_programa',$idPro->id)
         ->where('status',0)
         ->count();
-
 
         return view('admin.contenido.carreras.index')
         ->with('programas',$programas)
@@ -123,6 +124,7 @@ class CarrerasController extends Controller
         $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
         ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
         ->where('atributos.id_programa',$id)
+        ->orderBy('numAtr')
         ->get();
         $personal=Personal::where('id_programa',$id)->get();
         $formacion=Formacion::all();
@@ -159,7 +161,6 @@ class CarrerasController extends Controller
             ->where('programas.id',$id)
             ->get();
         }
-
 
         //Fin de datos para el plan de estudios
         return view('admin.contenido.carreras.index')
@@ -641,7 +642,7 @@ class CarrerasController extends Controller
 
     //Sección de atributos
 
-   /*Edicion de especialidades*/
+   /*Edicion de atributos*/
    public function editAtributos($id_pro)
    {
         if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
@@ -653,6 +654,7 @@ class CarrerasController extends Controller
        $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
        ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
        ->where('atributos.id_programa',$id_pro)
+       ->orderBy('numAtr')
        ->get();
 
        return view('admin.contenido.carreras.editatributos')

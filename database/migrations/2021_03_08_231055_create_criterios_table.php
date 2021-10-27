@@ -15,8 +15,8 @@ class CreateCriteriosTable extends Migration
     {
         Schema::create('criterios', function (Blueprint $table) {
             $table->id();
-            $table->string('numero',5);
-            $table->string('descripcion',1000);
+            $table->string('numero',10);
+            $table->string('descripcion',1500);
             $table->bigInteger('id_atributos')->unsigned()->nullable();
             $table->foreign('id_atributos')->references('id')->on('atributos')->onDelete('cascade');
             $table->timestamps();
