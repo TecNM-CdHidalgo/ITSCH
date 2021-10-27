@@ -369,11 +369,11 @@
     <h2> Datos de Contacto    </h2>
     <hr>
     @foreach ($personal as $per)
-        @if((strpos($per->puesto,'Jefe')!== false||strpos($per->puesto,'jefe')!== false) && $per->id_programa==$pro_act->id)
+        @if((strpos($per->puesto,'Jefe')!==false||strpos($per->puesto,'jefe')!==false||strpos($per->puesto,'Jefa')!==false||strpos($per->puesto,'jefa')!==false) && $per->id_programa==$pro_act->id)
             <li>{{ $personal[0]->nombre }} {{ $personal[0]->ap_paterno }} {{ $personal[0]->ap_materno }}</li>
             <li>Tel. {{ $personal[0]->telefono }} Ext. {{ $personal[0]->extension }} </li>
             <li>Email. {{ $personal[0]->email }} </li>
-            <li>{{ $personal[0]->puesto }}, edificio “A” segundo piso.</li>
+            <li>{{ $personal[0]->puesto }}</li>
         @endif
     @endforeach
     <li>Ubicación: Edificio “A” planta alta.</li>
