@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarrerasController;
 use App\Http\Controllers\ProgramasController;
+use App\Http\Controllers\TransparenciaController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -242,5 +243,10 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
 	Route::get('contenido/carreras/actualizarTabla/{id_esp}', [CarrerasController::class, 'act_tab_esp'])->name('carreras.actualizarTabla');
     Route::post('contenido/carreras/foto/{id_pro}', [CarrerasController::class, 'act_foto'])->name('carreras.actualizarFoto');
+
+    //Rutas de transparencia
+    Route::get('contenido/transparencia/index', [TransparenciaController::class, 'index'])->name('transparencia.index');
+    Route::get('contenido/transparencia/create', [TransparenciaController::class, 'create'])->name('transparencia.create');
+    Route::post('contenido/transparencia/store', [TransparenciaController::class, 'store'])->name('transparencia.store');
 });
 
