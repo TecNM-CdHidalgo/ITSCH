@@ -93,7 +93,7 @@
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
                     <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
                     <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
-                    <a class="dropdown-item" href="{{ route('transparencia.index') }}">Transparencia</a>
+                    <a class="dropdown-item" href="{{ route('transparencia.periodos') }}">Transparencia</a>
                   </div>
                 </li>
                 @endif

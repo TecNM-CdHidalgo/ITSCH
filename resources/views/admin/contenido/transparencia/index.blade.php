@@ -22,9 +22,9 @@
             <form action="{{ route('transparencia.create') }}" method="get">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Periodo</span>
+                        <span class="input-group-text">Agregar periodo</span>
                     </div>
-                    <input type="text" class="form-control" name="periodo" required placeholder="FECHA DE CORTE, Ej: 02 SEPTIEMBRE 2021">
+                    <input type="text" class="form-control" name="periodo" required placeholder="FECHA DE CORTE, Ej: 02 DE SEPTIEMBRE 2021">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-success">Agregar</button>
                     </div>

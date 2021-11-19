@@ -245,8 +245,10 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('contenido/carreras/foto/{id_pro}', [CarrerasController::class, 'act_foto'])->name('carreras.actualizarFoto');
 
     //Rutas de transparencia
+    Route::get('contenido/transparencia/periodos', [TransparenciaController::class, 'periodos'])->name('transparencia.periodos');
     Route::get('contenido/transparencia/index', [TransparenciaController::class, 'index'])->name('transparencia.index');
-    Route::get('contenido/transparencia/create', [TransparenciaController::class, 'create'])->name('transparencia.create');
+    Route::get('contenido/transparencia/create/periodo', [TransparenciaController::class, 'create'])->name('transparencia.create.periodos');
     Route::post('contenido/transparencia/store', [TransparenciaController::class, 'store'])->name('transparencia.store');
+    Route::get('contenido/periodo/modificar', [TransparenciaController::class, 'perUpdate'])->name('periodo.update');
 });
 

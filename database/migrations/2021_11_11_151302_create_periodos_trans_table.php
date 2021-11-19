@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransparenciaTable extends Migration
+class CreatePeriodosTransTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateTransparenciaTable extends Migration
      */
     public function up()
     {
-        Schema::create('transparencia', function (Blueprint $table) {
+        Schema::create('periodos_trans', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_arch','100');
-            $table->bigInteger('id_periodo')->unsigned()->nullable();
-            $table->foreign('id_periodo')->references('id')->on('periodos_trans')->onDelete('cascade');
+            $table->string('nombre','100');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateTransparenciaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transparencia');
+        Schema::dropIfExists('periodos_trans');
     }
 }
