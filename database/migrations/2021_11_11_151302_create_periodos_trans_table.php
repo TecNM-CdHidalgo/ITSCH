@@ -15,7 +15,7 @@ class CreatePeriodosTransTable extends Migration
     {
         Schema::create('periodos_trans', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre','100');
+            $table->string('nombre','100')->unique()->nullable(false);
             $table->timestamps();
         });
     }

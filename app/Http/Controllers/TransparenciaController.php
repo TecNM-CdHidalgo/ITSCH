@@ -35,14 +35,33 @@ class TransparenciaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function perCreate(Request $request)
     {
-        $periodo=new Periodo();
-        $periodo->nombre=$request->periodo;
-        $periodo->save();
+        DB::beginTransaction();
 
-        return Redirect()->route('transparencia.periodos')
-        ->with('success','¡El periodo se creo correctamente!');
+        try
+        {
+            $periodo=new Periodo();
+            $periodo->nombre=strtoupper($request->nombre);
+            $periodo->save();
+
+            DB::commit();
+            return Redirect()->route('periodos.inicio')
+            ->with('success','¡El periodo se creo correctamente!');
+        }
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return Redirect()->back()->with('error','¡El periodo no se pudo registrar!');
+        }
+    }
+
+    //Funcion para agregar archivos a un periodo
+    public function archPerAgregar($id_per)
+    {
+        $periodo=Periodo::find($id_per)->first();
+        return view('admin.contenido.transparencia.crear')
+        ->with('$periodo',$periodo);
     }
 
     /**
@@ -53,6 +72,7 @@ class TransparenciaController extends Controller
      */
     public function store(Request $request)
     {
+
        //Iniciamos la transacción
        DB::beginTransaction();
        try
@@ -128,10 +148,32 @@ class TransparenciaController extends Controller
     //Función para modificar el periodo
     public function perUpdate(Request $request)
     {
-        $periodo=Periodo::find($request->id);
-        $periodo->nombre=$request->nombre;
-        $periodo->save();
+        DB::beginTransaction();
 
-        return Redirect()->back()->with('success','¡El periodo se modifico correctamente!');
+        try
+        {
+            $periodo=Periodo::find($request->id);
+            $periodo->nombre=strtoupper($request->nombre);
+            $periodo->save();
+
+            DB::commit();
+            return Redirect()->route('periodos.inicio')
+            ->with('success','¡El periodo se modifico correctamente!');
+        }
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return Redirect()->back()->with('error','¡El periodo no se pudo modificar!');
+        }
+    }
+
+    //Función para eliminar el periodo
+    public function perDestroy(Request $request)
+    {
+        $periodo = Periodo::find($request->id);
+        $periodo->delete();
+
+        return Redirect()->route('periodos.inicio')
+        ->with('success','¡El periodo se elimino correctamente!');
     }
 }
