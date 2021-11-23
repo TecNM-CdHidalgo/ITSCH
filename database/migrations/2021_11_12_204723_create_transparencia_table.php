@@ -17,6 +17,7 @@ class CreateTransparenciaTable extends Migration
             $table->id();
             $table->string('nom_arch','100');
             $table->bigInteger('id_periodo')->unsigned()->nullable();
+            $table->string('nombre','100')->nullable(false);
             $table->foreign('id_periodo')->references('id')->on('periodos_trans')->onDelete('cascade');
             $table->timestamps();
         });

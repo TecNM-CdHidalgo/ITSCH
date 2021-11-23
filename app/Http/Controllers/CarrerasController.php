@@ -580,7 +580,6 @@ class CarrerasController extends Controller
     }
 
     //Sección de objetivos educacionales
-
     /*Edicion de especialidades*/
     public function editObjetivos($id)
     {

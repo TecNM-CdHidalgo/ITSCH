@@ -56,12 +56,12 @@ class TransparenciaController extends Controller
         }
     }
 
-    //Funcion para agregar archivos a un periodo
+    //Funcion para llamar a la vista que permite agregar archivos a un periodo
     public function archPerAgregar($id_per)
     {
-        $periodo=Periodo::find($id_per)->first();
+        $periodo=Periodo::find($id_per);
         return view('admin.contenido.transparencia.crear')
-        ->with('$periodo',$periodo);
+        ->with('periodo',$periodo);
     }
 
     /**
@@ -72,33 +72,50 @@ class TransparenciaController extends Controller
      */
     public function store(Request $request)
     {
-
-       //Iniciamos la transacción
-       DB::beginTransaction();
-       try
-       {
-           $reticula = Reticula::where('id_especialidad',$id_esp)->first();
-
-           $especialidad = Especialidad::where('id',$id_esp)->where('id_programa',$request->id_programa);
-           $especialidad->delete();
-
-           if($reticula==NULL){
-               return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error ']));
-           }
-           //Borramos el archivo de la reticula
-           Storage::delete(['public/carreras_archivos/'.$reticula->nom_arch_ret]);
-           Reticula::where('id_especialidad',$id_esp)->delete();
-       }
-       // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
-       catch (\Exception $e)
-       {
-           DB::rollback();
-           return response()->json(array(['type' => 'error', 'message' => 'A ocurrido un error '.$e]));
-       }
-       // Hacemos los cambios permanentes ya que no han habido errores
-       DB::commit();
-       return redirect()->route('carreras.editEspecialidad',$request->id_programa);
+        $periodo=Periodo::find($request->id);
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try
+        {
+            //Codigo para cargar los archivos de las carreras
+            if(!Storage::has('public/transparencia/'.$periodo->nombre)){
+            Storage::makeDirectory('public/transparencia/'.$periodo->nombre);
+            }
+            if($request->has('arch'))
+            {
+                $file =$request->arch;
+                $archExtension = $file->getClientOriginalExtension();
+                $archExtension = strtolower($archExtension);
+                if($archExtension == 'pdf' || $archExtension == 'doc' || $archExtension == "docx" || $archExtension == 'csv' || $archExtension == "xls" || $archExtension == "xlsx" ){
+                    $path = storage_path().'/app/public/transparencia/'.$periodo->nombre;
+                    $name = 'arch'.time().'.'.strtolower($archExtension);
+                    $file->move($path,$name);
+                    //Guardamos el nombre del archivo en la tabla de transparencia
+                    $nom_orig=$file->getClientOriginalName();
+                    $transparencia = new Transparencia;
+                    $transparencia->nom_arch = $name;
+                    $transparencia->id_periodo = $request->id;
+                    $nombre=substr($nom_orig,0,(strlen($nom_orig))-(strlen($archExtension)+1));
+                    $transparencia->nombre = $nombre;
+                    $transparencia->save();
+                }else{
+                    return Redirect()->back()->with('error','¡La extencion del archivo no es valida!');
+                }
+            }
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {
+            dd($e);
+            DB::rollback();
+            return Redirect()->back()->with('error','¡A ocurrido un error!');
+        }
+        // Hacemos los cambios permanentes ya que no han habido errores
+        DB::commit();
+        return Redirect()->back()
+        ->with('success','¡El archivo se dio de alta correctamente!');
     }
+
 
     /**
      * Display the specified resource.

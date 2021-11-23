@@ -3,7 +3,7 @@
 @section('contenido')
     <h5> <a href="{{ route('periodos.inicio') }}">Periodos</a>/Agregar documentos/{{ $periodo->nombre }}</h5>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="{{ route('transparencia.archivos.guardar') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-sm-2"></div>
@@ -11,6 +11,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <input type="file" name="arch" id="arch" required class="form-control">
+                        <input type="hidden" name="id" readonly value="{{ $periodo->id }}">
                     </div>
                     <div class="col-sm-6">
                         <input type="submit" value="Guardar" class="btn btn-primary">

@@ -12,6 +12,6 @@ class Transparencia extends Model
     protected $table="transparencia";
     //Datos que se usaran en el modelo
     protected $fillable = [
-        'nom_periodo','nom_arch'
+        'nom_arch','id_periodo','nombre'
     ];
 }
