@@ -6,19 +6,16 @@
     <form action="{{ route('transparencia.archivos.guardar') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-10">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <input type="file" name="arch" id="arch" required class="form-control">
-                        <input type="hidden" name="id" readonly value="{{ $periodo->id }}">
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="submit" value="Guardar" class="btn btn-primary">
+            <div class="col-sm-7"></div>
+            <div class="col-sm-5">
+                <div class="input-group mb-3">
+                    <input type="file" name="arch" id="arch" required class="form-control">
+                    <input type="hidden" name="id" readonly value="{{ $periodo->id }}">
+                    <div class="input-group-append">
+                        <button type="submit" title="Cargar archivo" class="btn btn-success btn-sm"><i class='fas fa-cloud-upload-alt' style='font-size:14px'></i></button>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2"></div>
         </div>
     </form>
     <hr>
@@ -32,9 +29,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-
-                </tr>
+                @foreach ($arch as $ar)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $ar->nombre }}</td>
+                        <td>
+                            <a href="{{ asset('storage/transparencia/'.$periodo->nombre.'/'.$ar->nom_arch) }}" download type="button" title="Descargar" class="btn btn-primary btn-sm"><i class='fas fa-cloud-download-alt' style='font-size:14px'></i></a>
+                            <a href="{{ route('transparencia.archivos.eliminar',$ar->id) }}" type="button" title="Eliminar" class="btn btn-sm btn-danger"><i class='far fa-trash-alt' style='font-size:14px'></i></a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

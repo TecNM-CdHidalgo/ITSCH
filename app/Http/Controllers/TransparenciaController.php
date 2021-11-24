@@ -10,17 +10,6 @@ use Illuminate\Http\Request;
 
 class TransparenciaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $docs=Transparencia::all();
-        return view('admin.contenido.transparencia.index')
-        ->with('docs',$docs);
-    }
 
     //Funcion para consultar periodos
     public function periodos()
@@ -60,8 +49,10 @@ class TransparenciaController extends Controller
     public function archPerAgregar($id_per)
     {
         $periodo=Periodo::find($id_per);
+        $arch=Transparencia::all();
         return view('admin.contenido.transparencia.crear')
-        ->with('periodo',$periodo);
+        ->with('periodo',$periodo)
+        ->with('arch',$arch);
     }
 
     /**
@@ -117,39 +108,6 @@ class TransparenciaController extends Controller
     }
 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\transparencia  $transparencia
-     * @return \Illuminate\Http\Response
-     */
-    public function show(transparencia $transparencia)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\transparencia  $transparencia
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(transparencia $transparencia)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\transparencia  $transparencia
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, transparencia $transparencia)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -157,9 +115,31 @@ class TransparenciaController extends Controller
      * @param  \App\Models\transparencia  $transparencia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(transparencia $transparencia)
+    public function archDestroy($id_arch)
     {
-        //
+        //Iniciamos la transacción
+        DB::beginTransaction();
+        try
+        {
+            $arch = Transparencia::find($id_arch);
+            $periodo=Periodo::find($arch->id_periodo);
+            if($arch==NULL){
+                return Redirect()->back()
+                ->with('error','¡No se encontro el archivo!');
+            }
+            //Borramos el archivo de la reticula
+            Storage::delete(['public/transparencia/'.$periodo->nombre.'/'.$arch->nom_arch]);
+            Transparencia::where('id',$id_arch)->delete();
+        }
+        // Ha ocurrido un error, devolvemos la BD a su estado previo y hacemos lo que queramos con esa excepción
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return Redirect()->back()->with('error','¡A ocurrido un error!');
+        }
+        // Hacemos los cambios permanentes ya que no han habido errores
+        DB::commit();
+        return Redirect()->back()->with('success','¡El archivo se elimino correctamente!');
     }
 
     //Función para modificar el periodo
@@ -184,13 +164,26 @@ class TransparenciaController extends Controller
         }
     }
 
+
     //Función para eliminar el periodo
     public function perDestroy(Request $request)
     {
-        $periodo = Periodo::find($request->id);
-        $periodo->delete();
+        DB::beginTransaction();
 
-        return Redirect()->route('periodos.inicio')
-        ->with('success','¡El periodo se elimino correctamente!');
+        try
+        {
+            $periodo = Periodo::find($request->id);
+            //Eliminamos la carpeta con todos los archivos del periodo
+            Storage::deleteDirectory(['public/transparencia/'.$periodo->nombre]);
+            $periodo->delete();
+
+            DB::commit();
+            return Redirect()->route('periodos.inicio')->with('success','¡El periodo se elimino correctamente!');
+        }
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return Redirect()->back()->with('error','¡El periodo no se pudo eliminar, ocurrio un error!');
+        }
     }
 }
