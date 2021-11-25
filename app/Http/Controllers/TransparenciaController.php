@@ -10,6 +10,34 @@ use Illuminate\Http\Request;
 
 class TransparenciaController extends Controller
 {
+    //Función que consulta el primer periodo para mostrar en la vista publica
+    public function index()
+    {
+        $periodos=Periodo::all();
+        $arch=Transparencia::get();
+        $u_reg=Periodo::all()->last();
+        $per_sel=Periodo::select('nombre')->first()->get();
+        return view('content.transparencia.acceso_transparencia')
+        ->with('arch',$arch)
+        ->with('periodos',$periodos)
+        ->with('u_reg',$u_reg)
+        ->with('per_sel',$per_sel);
+    }
+
+    //Función para consultar periodos especificos
+    public function perConsultar(Request $request)
+    {
+        $periodos=Periodo::all();
+        $arch=Transparencia::where('id_periodo',$request->periodo)->get();
+        $u_reg=Periodo::all()->last();
+        $per_sel=Periodo::select('nombre')->where('id',$request->periodo)->get();
+        return view('content.transparencia.acceso_transparencia')
+        ->with('arch',$arch)
+        ->with('periodos',$periodos)
+        ->with('u_reg',$u_reg)
+        ->with('per_sel',$per_sel);
+    }
+
 
     //Funcion para consultar periodos
     public function periodos()
@@ -174,7 +202,7 @@ class TransparenciaController extends Controller
         {
             $periodo = Periodo::find($request->id);
             //Eliminamos la carpeta con todos los archivos del periodo
-            Storage::deleteDirectory(['public/transparencia/'.$periodo->nombre]);
+            Storage::deleteDirectory('public/transparencia/'.$periodo->nombre);
             $periodo->delete();
 
             DB::commit();

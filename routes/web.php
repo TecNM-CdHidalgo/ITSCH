@@ -17,7 +17,6 @@ use Intervention\Image\ImageManagerStatic as Image;
 Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 
 //Transparecia
-Route::get('transparencia/acceso_transparencia',function(){return view('content.transparencia.acceso_transparencia');})->name('transparencia.acceso_transparencia');
 Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');
 
 //Rutas de vinculación
@@ -252,6 +251,9 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/periodo/agregar', [TransparenciaController::class, 'perCreate'])->name('periodos.agregar');
     Route::get('contenido/periodo/modificar', [TransparenciaController::class, 'perUpdate'])->name('periodo.update');
     Route::get('contenido/periodo/eliminar', [TransparenciaController::class, 'perDestroy'])->name('periodo.eliminar');
+    Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');
+    Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perConsultar'])->name('periodo.consultar');
+
 
 });
 
