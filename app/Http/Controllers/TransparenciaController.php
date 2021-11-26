@@ -115,7 +115,7 @@ class TransparenciaController extends Controller
                     $transparencia->nom_arch = $name;
                     $transparencia->id_periodo = $request->id;
                     $nombre=substr($nom_orig,0,(strlen($nom_orig))-(strlen($archExtension)+1));
-                    $transparencia->nombre = $nombre;
+                    $transparencia->nombre = strtoupper($nombre);
                     $transparencia->save();
                 }else{
                     return Redirect()->back()->with('error','¡La extencion del archivo no es valida!');
