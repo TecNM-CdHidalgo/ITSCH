@@ -77,7 +77,7 @@ class TransparenciaController extends Controller
     public function archPerAgregar($id_per)
     {
         $periodo=Periodo::find($id_per);
-        $arch=Transparencia::all();
+        $arch=Transparencia::where('id_periodo',$id_per)->get();
         return view('admin.contenido.transparencia.crear')
         ->with('periodo',$periodo)
         ->with('arch',$arch);
