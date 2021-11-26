@@ -14,9 +14,9 @@ class TransparenciaController extends Controller
     public function index()
     {
         $periodos=Periodo::all();
-        $arch=Transparencia::get();
         $u_reg=Periodo::all()->last();
-        $per_sel=Periodo::select('nombre')->first()->get();
+        $per_sel=Periodo::select('nombre','id')->first()->get();
+        $arch=Transparencia::where('id_periodo',$per_sel[0]->id)->get();
         return view('content.transparencia.acceso_transparencia')
         ->with('arch',$arch)
         ->with('periodos',$periodos)
