@@ -18,6 +18,8 @@ Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 
 //Transparecia
 Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');
+Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');
+Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perConsultar'])->name('periodo.consultar');
 
 //Rutas de vinculación
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
@@ -251,9 +253,5 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/periodo/agregar', [TransparenciaController::class, 'perCreate'])->name('periodos.agregar');
     Route::get('contenido/periodo/modificar', [TransparenciaController::class, 'perUpdate'])->name('periodo.update');
     Route::get('contenido/periodo/eliminar', [TransparenciaController::class, 'perDestroy'])->name('periodo.eliminar');
-    Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');
-    Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perConsultar'])->name('periodo.consultar');
-
-
 });
 
