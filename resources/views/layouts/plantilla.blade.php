@@ -114,9 +114,9 @@
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
           <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
           <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
-          <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
+          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
           <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-          <a class="dropdown-item"  href="http://www.itsch.edu.mx:8080/sgcv3/Procaptura.aspx">Solicitud de prorroga</a>
+          <a class="dropdown-item"  href="https://www.itsch.edu.mx:8080/sgcv3/Procaptura.aspx">Solicitud de prorroga</a>
 
         </ul>
       </li>
