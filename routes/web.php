@@ -49,13 +49,6 @@ Route::get('cle/avisos',function(){return view('content.cle.avisos');})->name('c
 
 
 //Rutas de oferta educativa
-Route::get('oferta_educativa/sistemas',function(){return view('content.oferta_educativa.sistemas');})->name('oferta.sistemas');
-Route::get('oferta_educativa/tics',function(){return view('content.oferta_educativa.tics');})->name('oferta.tics');
-Route::get('oferta_educativa/industrial',function(){return view('content.oferta_educativa.industrial');})->name('oferta.industrial');
-Route::get('oferta_educativa/bioquimica',function(){return view('content.oferta_educativa.bioquimica');})->name('oferta.bioquimica');
-Route::get('oferta_educativa/nano',function(){return view('content.oferta_educativa.nano');})->name('oferta.nano');
-Route::get('oferta_educativa/gestion',function(){return view('content.oferta_educativa.gestion');})->name('oferta.gestion');
-Route::get('oferta_educativa/mecatronica',function(){return view('content.oferta_educativa.mecatronica');})->name('oferta.mecatronica');
 Route::get('oferta_educativa/index/{tipo}', [ProgramasController::class, 'index'])->name('oferta.index');
 Route::get('oferta_educativa/showCarrera/{id}', [ProgramasController::class, 'show'])->name('oferta.showCarrera');
 Route::get('contenido/carreras/storeContacto/{id_pro}', [CarrerasController::class, 'storeContacto'])->name('carreras.storeContacto');

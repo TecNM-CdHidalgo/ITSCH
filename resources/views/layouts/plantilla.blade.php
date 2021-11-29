@@ -109,16 +109,13 @@
           </li>
           <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
           <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
           <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
+          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Constancias ITSCH</a>
+          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
           <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
           <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
-
-          <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-          {{-- <aclass="dropdown-item"href="https://www.cdhidalgo.tecnm.mx:8082/Constans9_1/inicio.php">Sistemadeeventos</a> --}}
-          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Congreso 2019</a>
           <a class="dropdown-item"  href="http://www.cdhidalgo.tecnm.mx/apps/reciboe2/index.html">Recibos electrónicos</a>
-          {{-- <aclass="dropdown-item"href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">TestPsicométricodeNuevoingreso</a> --}}
+          <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
           <a class="dropdown-item"  href="http://www.itsch.edu.mx:8080/sgcv3/Procaptura.aspx">Solicitud de prorroga</a>
 
         </ul>
@@ -126,7 +123,7 @@
 
         <li class="nav-item dropdown  ml-auto">
             <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
-                Académicos
+                Institución
             </a>
 
             <div class="dropdown-menu">
@@ -237,13 +234,6 @@
           Oferta educativa
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item"  href="{{route('oferta.sistemas')}}">Ingeniería en Sistemas Computacionales</a>
-            <a class="dropdown-item"  href="{{route('oferta.tics')}}">Ingeniería en  Tecnologías de la Información</a>
-            <a class="dropdown-item"  href="{{route('oferta.industrial')}}">Ingeniería  Industrial</a>
-            <a class="dropdown-item"  href="{{route('oferta.mecatronica')}}">Ingeniería en  Mecatrónica</a>
-            <a class="dropdown-item"  href="{{route('oferta.gestion')}}">Ingeniería en  Gestión Empresarial</a>
-            <a class="dropdown-item"  href="{{route('oferta.bioquimica')}}">Ingeniería en  Bioquímica</a>
-            <a class="dropdown-item"  href="{{route('oferta.nano')}}">Ingeniería en Nanotecnologia</a>
             <a class="dropdown-item"  href="{{ route('oferta.index',1) }}">Ingenierías</a>
             <a class="dropdown-item"  href="{{ route('oferta.index',2) }}">Posgrados</a>
         </div>
