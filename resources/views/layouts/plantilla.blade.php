@@ -111,7 +111,7 @@
           <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
           <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8085/">Encuestas de servicios</a>
+          <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
           <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
 
           <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
