@@ -17,7 +17,9 @@
     "popper.js": "^1.12",
     "resolve-url-loader": "^2.3.1",
     "sass": "^1.20.1",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.6.10"
   },
   "name": "itsch",
   "description": "Pagina institucional del ITSCH",
@@ -683,6 +685,10 @@
     "vary": "^1.1.2",
     "vendors": "^1.0.4",
     "vm-browserify": "^1.1.2",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-es2015-compiler": "^1.9.1",
     "watchpack": "^1.7.4",
     "wbuf": "^1.7.3",
     "watchpack-chokidar2": "^2.0.0",
