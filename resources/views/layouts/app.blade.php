@@ -1,32 +1,28 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<!DOCTYPE html>
+<html lang="es">
     <head>
-        <meta charset="utf-8">
-        <!-- Metas plantilla administracion-->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="{{ asset('css/font_style.css') }}">
-        <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+        {{-- Configuracion de la plantilla --}}
+        <meta charset="UTF-8">
+        <meta name="description" content="Página del Tecnológico Nacional de México/Campus Ciudad Hidalgo Michoacán">
         <link rel="shortcut icon" href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
-
-
-        <!-- CSRF Token -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="author" content="TecNM">
-        <meta name="description" content="Página del Tecnológico Nacional de México/Campus Ciudad Hidalgo Michoacán">
-
         <title>TECNM/CDHIDALGO</title>
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
         <!-- Styles -->
         {{--CSS Propios--}}
         <link href="{{asset('cssPropios/estilos.css')}}" rel="stylesheet">
@@ -75,11 +71,10 @@
                 }
             }
         </script>
-
-        {{--Icono de la pagina--}}
-
     </head>
-    {{--<body style="height:2000px">--}}
+
+
+
     <body style="overflow-x: hidden;">
 
         {{--Menu de gobierno--}}
@@ -88,15 +83,9 @@
         {{--Plantilla--}}
         @include('layouts.plantilla')
 
-        {{-- Seccion para los js --}}
-        @yield('js')
-
-
-
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="aHshxGf4"></script>
 
         <!--Incluir jQuery  -->
-        <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>
+        <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
 
         {{-- OCC Mundial --}}
         <script id = "bolsa-widget"
@@ -133,9 +122,13 @@
 
             //Cierra los mensajes emergentes
             $(document).ready(function(event){
-            $('.mdshide').delay(2000).fadeOut(300);
+                $('.mdshide').delay(3000).fadeOut(300);
             })
         </script>
+
+
+        {{-- Seccion para los js --}}
+        @yield('js')
 
     </body>
 
