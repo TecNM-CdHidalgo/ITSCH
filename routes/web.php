@@ -23,7 +23,7 @@ Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perC
 
 //Rutas de vinculación
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
-Route::get('vinculacion/banco_de_datos','BancoController@show')->name('vinculacion.banco_de_datos');
+Route::get('vinculacion/banco_proyectos','BancoController@show')->name('vinculacion.banco_de_datos');
 Route::get('vinculacion/fichas2021',function(){return view('content.vinculacion.fichas2021');})->name('vinculacion.fichas2021');
 Route::get('vinculacion/convenio_colaboracion',function(){return view('content.vinculacion.convenio_colaboracion');})->name('vinculacion.convenio_colaboracion');
 Route::get('vinculacion/convenios',function(){return view('content.vinculacion.convenios');})->name('vinculacion.convenios');

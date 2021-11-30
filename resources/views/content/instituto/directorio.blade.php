@@ -47,11 +47,11 @@
 		<p style="margin-left:92.15pt;">
 			b.&nbsp;&nbsp;&nbsp;ISC. Oscar Delgado Camacho. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Sistemas Computacionales</p>
 		<p style="margin-left:92.15pt;">
-			c.&nbsp;&nbsp;&nbsp;Ing. Guillermo Capistrano Zúñiga Neria. Jefe de la Divisi&oacute;n de Ingenier&iacute;a Mecatr&oacute;nica</p>
+			c.&nbsp;&nbsp;&nbsp;MC. Guillermo Capistrano Zúñiga Neria. Jefe de la Divisi&oacute;n de Ingenier&iacute;a Mecatr&oacute;nica</p>
 		<p style="margin-left:92.15pt;">
 			d.&nbsp;&nbsp;&nbsp;MC. Lizeth Yazmin Soria Leal.  Jefa de la Divisi&oacute;n de Ingenier&iacute;a Bioqu&iacute;mica</p>
 		<p style="margin-left:92.15pt;">
-			e.&nbsp;&nbsp;&nbsp;ISC.Armando L&oacute;pez Hern&aacute;ndez. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n y Comunicaciones</p>
+			e.&nbsp;&nbsp;&nbsp;MTI.Armando L&oacute;pez Hern&aacute;ndez. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n y Comunicaciones</p>
 		<p style="margin-left:92.15pt;">
 			f.&nbsp;&nbsp;&nbsp;C.P. Nancy Pérez Reyes. Jefa de la Divisi&oacute;n de Ingenier&iacute;a en Gesti&oacute;n Empresarial</p>
 		<p style="margin-left:92.15pt;">
@@ -102,6 +102,7 @@
 		<p align="center">MADRIGAL P&Eacute;REZ LUIS ALBERTO</p>
 		<p align="center">OROZCO MONTES SALVADOR</p>
 		<p align="center">LEÓN MARQUEZ YHOANA LAURA</p>
+        <p align="center">INVING HERNÁNDEZ HERNÁNDEZ</p>
 		<p align="center"></p>
 		<p align="center">&nbsp;</p>
 
@@ -135,7 +136,7 @@
 		<p align="center">AGUILAR GONZ&Aacute;LEZ ALMA LETICIA</p>
 		<p align="center">ALCAL&Aacute; RU&Iacute;Z PATRICIA</p>
 		<p align="center">GARDUÑO ARAG&Oacute;N JOS&Eacute; LUIS</p>
-		<p align="center">MALDONADO GARC&Iacute;A JUAN JOS&Eacute;</p>
+		<p align="center">EDGAR CUEVAS ALVARES</p>
 		<p align="center">MEDINA ESPINO SONIA</p>
 		<p align="center">MENDIOLA GARC&Iacute;A VIRGINIA</p>
 		<p align="center">MORA GARC&Iacute;A EDGAR</p>
@@ -153,7 +154,8 @@
 
 		<h4 class="text-center"><strong><span>DIVISI&Oacute;N DE ING. MECATR&Oacute;NICA</span></strong></h4>
 
-		<p align="center">MTR.</p>
+		<p align="center">DR. CRUZ MAURICIO ARTEAGA ESCAMILLA</p>
+        <p align="center">ING. CRISTOPHER MARTA</p>
 		<p align="center">MEDINA PARRA H&Eacute;CTOR ROM&Aacute;N</p>
 		<p align="center">GUILLEN ARROYO JUAN JAVIER</p>
 		<p align="center">HERNÁNDEZ PARDO FERNANDO</p>
@@ -161,7 +163,6 @@
 		<p align="center">BARRERA GARCÍA ISAAC</p>
 		<p align="center">G&Oacute;MEZ CORREA JOSE SAMUEL</p>
 		<p align="center">CASARRUBIAS GUERRERO GABRIEL</p>
-		<p align="center">ZÚÑIGA NERIA  GUILLERMO C.</p>
 		<p align="center">DOMÍNGUEZ TÉLLEZ MAURICIO</p>
 		<p align="center">VALD&Eacute;S MADRIGAL MANUEL ALEJANDRO</p>
 		<BR>
@@ -183,7 +184,7 @@
 		<p align="center">ACOSTA NAVARRETE YANED MILAGROS</p>
 		<p align="center">CHÁVEZ ARELLANO JOAQUÍN</p>
 		<p align="center">LUQUE MURILLO JUAN MANUEL</p>
-		<p align="center">ALCANTARA TELLEZ ANA KAREN</p>
+		<p align="center">SAÚL GALVEZ BARBOSA</p>
 		<p align="center">GALLARDO ALANIS ROGELIO</p>
 
 	</article>

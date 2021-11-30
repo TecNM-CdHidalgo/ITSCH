@@ -10,15 +10,8 @@
         <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
-        <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="shortcut icon" href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
-        
+
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -31,7 +24,6 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
-        <link rel="dns-prefetch"href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -99,13 +91,13 @@
         {{-- Seccion para los js --}}
         @yield('js')
 
-        
+
 
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="aHshxGf4"></script>
 
         <!--Incluir jQuery  -->
         <script src="{{ asset('jQuery/jquery-3.4.1.js') }}"></script>
-    
+
         {{-- OCC Mundial --}}
         <script id = "bolsa-widget"
           type = "text/javascript"
@@ -113,32 +105,32 @@
           src = "https://jobdiscovery-widget-occ.occ.com.mx/button-bundle.js"
           key = "1b8v79xAa8DKqYCoM8k5ADxVrrs">
         </script>
-    
+
         <script>
             $(document).ready(function(){
               $('[data-toggle="tooltip"]').tooltip();
             });
-    
+
             // Prevent closing from click inside dropdown
             $(document).on('click', '.dropdown-menu', function (e) {
               e.stopPropagation();
             });
-    
+
             // make it as accordion for smaller screens
             $('.menu-padre').on('click', function(e){
               if ($(window).width() > 599) return;
               e.preventDefault();
               e.stopPropagation();
-    
+
               if($(this).next('.submenu').length){
                   $(this).next('.submenu').toggle();
               }
-    
+
               $('.dropdown').on('hide.bs.dropdown', function () {
                 $(this).find('.submenu').hide();
               });
             });
-    
+
             //Cierra los mensajes emergentes
             $(document).ready(function(event){
             $('.mdshide').delay(2000).fadeOut(300);
@@ -146,5 +138,5 @@
         </script>
 
     </body>
-  
+
 </html>
