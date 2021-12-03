@@ -180,7 +180,7 @@
       </div>
     </div>
   </footer>
-  <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
   <script src="{{ asset('js/jquery-ui.js') }}"></script>
   <script src="{{ asset('js/popper.min.js') }}"></script>
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
