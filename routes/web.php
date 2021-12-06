@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarrerasController;
 use App\Http\Controllers\ProgramasController;
 use App\Http\Controllers\TransparenciaController;
+use App\Http\Controllers\ConvenioController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -246,5 +247,8 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/periodo/agregar', [TransparenciaController::class, 'perCreate'])->name('periodos.agregar');
     Route::get('contenido/periodo/modificar', [TransparenciaController::class, 'perUpdate'])->name('periodo.update');
     Route::get('contenido/periodo/eliminar', [TransparenciaController::class, 'perDestroy'])->name('periodo.eliminar');
+
+    //Rutas convenios
+    Route::get('contenido/convenios/inicio',[ConvenioController::class,'index'])->name('convenios.inicio');
 });
 
