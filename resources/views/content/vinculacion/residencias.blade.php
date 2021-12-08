@@ -121,7 +121,7 @@
                             <br>
                             CONVENIO DE RESIDENCIAS PROFECIONALES.
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Convenio  de residencias " download href='{{asset('documents/content/vinculacion/residencias/cnvdw.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Convenio  de residencias " download href='{{asset('documents/content/vinculacion/residencias/Convenio de residencias.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             CARTA DE ACEPTACIÓN.
@@ -139,9 +139,14 @@
                             <a target="_blank" data-toogle="tooltip"  title="Seguimiento de residencias " download href='{{asset('documents/content/vinculacion/residencias/seguimientoad20.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
-                            FORMATO DE EVALUACIÓN XXIX Y XXX.
+                            FORMATO DE EVALUACIÓN XXIX.
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/rvxxix.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            </p>
+                            <br>
+                            FORMATO DE EVALUACIÓN XXX.
+                            <p align="center">
+                            <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/Evaluacion XXX.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             FORMATO PARA PORTADA DE DISCOS.

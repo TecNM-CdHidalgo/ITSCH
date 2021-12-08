@@ -20,6 +20,11 @@
     <link rel="shortcut icon"href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+
+    {{-- Uso de multiselect jquery --}}
+    <link href="{{ asset('css/msel/multi-select.css') }}" media="screen" rel="stylesheet" type="text/css">
+
+
     <style>
       .no-margins{
         margin:0;
@@ -182,6 +187,8 @@
     </div>
   </footer>
   <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
+  {{-- Uso de multiselect jquery --}}
+  <script src="{{ asset('js/jquery.multi-select.js') }}"></script>
   <script src="{{ asset('js/jquery-ui.js') }}"></script>
   <script src="{{ asset('js/popper.min.js') }}"></script>
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
