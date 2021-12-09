@@ -32,36 +32,18 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Requisitos y Procedimiento de Titulación</td>
+                        <td>Requisitos y procedimiento de titulación hibrida</td>
                         <td>
                             <a type="button" class="btn btn-primary"
-                                href="{{asset('documents/content/servicios escolares/procedimiento_tit_v12.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." download  target="_blank">
+                                href="{{asset('documents/content/servicios escolares/proceso titulacion hibrida.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." download  target="_blank">
                             <i class='fas fa-download' style='font-size:20px'></i>
                         </a></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Titulación por tesis</td>
+                        <td>Catálogo de opciones de titulación y estructuras</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/tit_tesv0.pdf ')}}" data-toogle="tooltip" title="Titulación por tesis." download  target="_blank">
-                                <i class='fas fa-download' style='font-size:20px'></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Proyecto de investigación</td>
-                        <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/tit_tesv0.pdf ')}}" data-toogle="tooltip" title="Proyecto de investigación." download  target="_blank">
-                                <i class='fas fa-download' style='font-size:20px'></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Titulación por informe Técnico de Residencias profesionales</td>
-                        <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/tit_inf_tec_resv0.pdf ')}}" data-toogle="tooltip" title="Titulación por informe Técnico de Residencias profesionales." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/catalogo de estructuras pl2015 act 2021.pdf ')}}" data-toogle="tooltip" title="Titulación por tesis." download  target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
