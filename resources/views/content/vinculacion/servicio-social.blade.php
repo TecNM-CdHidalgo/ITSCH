@@ -13,18 +13,18 @@
             <img src="{{ asset('images/content/vinculacion/servicio social/ss_itsch.jpg') }}" class="img-fluid img-thumbnail" alt="Servicio social">
         </picture>
     </div>
-    
+
 
     <br>
     <h4><strong>¿QUÉ ES EL SERVICIO SOCIAL?:</strong></h4>
     <hr>
     <p>El servicio social es un instrumento que estimula la participación activa de los jóvenes estudiantes de Educación Superior en la solución de problemas específicos de la sociedad por medio de la aplicación de los conocimientos que adquirieron durante su formación académica.</p>
-    <hr>  
+    <hr>
 
     <h4><strong>OBJETIVO</strong></h4>
     <hr>
     <p>Retribuir en parte, a la sociedad, de lo que ella invierte en la formación profesional de los estudiantes, a través de aportar un beneficio a la comunidad, ya sea económico, social, político o cultural.</p>
-    <hr>    
+    <hr>
 
     <h4><strong>REQUISITOS</strong></h4>
     <hr>
@@ -69,7 +69,7 @@
 		    			Constancia de Estudios Vigente
 		    		</li>
 		    		<li>
-		    			Carta de aceptación. (Hoja membretada y Emitida por la institución donde realicen el servicio social) 
+		    			Carta de aceptación. (Hoja membretada y Emitida por la institución donde realicen el servicio social)
 		    		</li>
 		    		<li>
 		    			El plan de trabajo de las actividades realizadas (proyecto)en word letra Arial 12, imágenes (opcional) y que deberá contener los siguientes apartados:
@@ -93,7 +93,7 @@
 		    					Cronograma de actividades
 		    				</li>
 		    				<li>
-		    					Descripción de actividades 
+		    					Descripción de actividades
 		    				</li>
 		    				<li>
 		    					Resultados
@@ -105,22 +105,22 @@
 		    					Conclusiones
 		    				</li>
 		    			</ol>
-		    		</li>		    		
+		    		</li>
 		    	</ol>
 		    </li>
 		    <li>
 		    	Ya iniciado su Servicio Social, el prestante deberá elaborar sus reportes bimestrales que entregarán al final de la actividad y en la fecha que marque el ENCARGADO DE SERVICIO SOCIAL.
 		    </li>
 		    <li>
-		    	Al término de su Servicio Social, el prestante elaborará un reporte final (conclusión) 
+		    	Al término de su Servicio Social, el prestante elaborará un reporte final (conclusión)
 		    </li>
 		</ol>
-    <hr>  
+    <hr>
 
     <h4><strong>INSTRUCCIONES</strong></h4>
     <hr>
     <p>El servicio social es un instrumento que estimula la participación activa de los jóvenes estudiantes de Educación Superior en la solución de problemas específicos de la sociedad por medio de la aplicación de los conocimientos que adquirieron durante su formación académica.</p>
-    <hr> 
+    <hr>
 
     <ol type="1">
     	<li>
@@ -131,7 +131,7 @@
     	</li>
     	<li>
     		Los documentos se entregarán en un folder tamaño carta color beige y en la pestaña deberá de llevar su nombre, periodo y carrera.
-    	</li>   	
+    	</li>
     	<li>
     		El prestante podrá solicitar su baja temporal o definitiva del programa en que está participando, quedando a criterio del ENCARGADO DEL AREA en el que se haya realizado la actividad, si se le computa, o no el tiempo acumulado.
     	</li>
@@ -145,10 +145,10 @@
     	</li>
     	<li>
     		Entregar en la fecha indicada todos los formatos para poder acreditarles la MATERIA DE SERVICIO SOCIAL.
-    	</li>    	
+    	</li>
     </ol>
      <hr>
-    <h4> 
+    <h4>
     	<strong>
     	INICIO DE PROCESO DE SERVICIO SOCIAL
     	</strong>
@@ -168,7 +168,7 @@
     	</body>
     </table>
     <hr>
-    <h4> 
+    <h4>
     	<strong>
     	FORMATOS PARA ALUMNOS QUE INICIAN SU SERVICIO SOCIAL
     	</strong>
@@ -198,25 +198,25 @@
     			<td>
     				<a download href="{{ asset('documents/content/vinculacion/servicio social/EJEMPLO DE CARTA DE ACEPTACION (4).doc') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
     			</td>
-    		</tr>    		
+    		</tr>
     	</body>
     </table>
 
     <hr>
-   
-	<h4> 
+
+	<h4>
     	<strong>
     	FORMATOS PARA ALUMNOS QUE TERMINAN SU SERVICIO SOCIAL
     	</strong>
-    </h4>   	
+    </h4>
 
-	
+
 	<table class="table">
 		<body>
 			<tr>
 				<td>3 Informes bimestrales (Estado)</td>
 				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/INFORME BIMESTRAL (5).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/informe bimestral(estado).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
 				</td>
 			</tr>
 			<tr>
@@ -234,7 +234,7 @@
 			<tr>
 				<td>3 Reportes bimestrales (ITSCH)</td>
 				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/REPORTE BIMESTRAL (8).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
+					<a download href="{{ asset('documents/content/vinculacion/servicio social/reporte bimestral(ITSCH).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
 				</td>
 			</tr>
 			<tr>
@@ -269,8 +269,8 @@
 			</tr>
 		</body>
 	</table>
-    <hr> 
-    <h4> 
+    <hr>
+    <h4>
     	<strong>
     	¡¡¡ ATENCIÓN ALUMNOS !!!
     	</strong>
@@ -278,6 +278,6 @@
     <p>
     	RECUERDA QUE SI NO TIENES TU REGISTRO DE SERVICIO SOCIAL, NO LO REALIZAS, NO TENDRAS TU CARTA DE LIBERACIÓN DEL SERVICIO Y  NO PODRÁS SOLICITAR TU RESIDENCIA PROFESIONAL NI EGRESAR DE LA INSTITUCIÓN.
     </p>
-   
+
     <hr>
 @endsection
