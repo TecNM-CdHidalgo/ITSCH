@@ -250,5 +250,11 @@ Route::group(['middleware' => 'auth'],function(){
 
     //Rutas convenios
     Route::get('contenido/convenios/inicio',[ConvenioController::class,'index'])->name('convenios.inicio');
+    Route::post('contenido/convenios/guardar',[ConvenioController::class,'save'])->name('convenios.save');
+    Route::get('contenido/convenios/eliminar',[ConvenioController::class,'destroy'])->name('convenios.eliminar');
+    Route::get('contenido/convenios/guardar_area',[ConvenioController::class,'saveArea'])->name('convenios.guardar.area');
+    Route::get('contenido/convenios/areas/inicio',[ConvenioController::class,'areasIndex'])->name('convenios.areas.inicio');
+    Route::get('contenido/convenios/areas/modificar',[ConvenioController::class,'areasUpdate'])->name('convenios.areas.update');
+    Route::get('contenido/convenios/areas/eliminar',[ConvenioController::class,'areasDestroy'])->name('convenios.areas.eliminar');
 });
 
