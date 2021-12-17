@@ -19,6 +19,25 @@ class ConvenioController extends Controller
         ->join('areas','areas.id','=','convenios_areas.id_area')
         ->get();
 
+      /*   $id_con_ant=0;
+        $cont=0;
+
+        foreach($convenios as $conv)
+        {   $area=$conv->nombre;
+            if($id_con_ant==$conv->id)
+            {
+                $areas[$cont]=$areas[$cont]."|".$area;
+                $id_con_ant=$conv->id;
+            }
+            else
+            {
+                $cont=$cont+1;
+                $areas[$cont]=$areas[$cont]."|".$area;
+                $id_con_ant=$conv->id;
+            }
+        } */
+        //dd($areas);
+
         return view('admin.contenido.convenios.index')
         ->with('areas',$areas)
         ->with('convenios',$convenios);

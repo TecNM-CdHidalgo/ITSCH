@@ -95,7 +95,7 @@
         </div>
     </form>
     <hr>
-    <table class="table">
+    <table class="table" id="tabConvenios">
         <thead>
             <tr>
                 <th>No.</th>
@@ -109,23 +109,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($convenios as $convenio)
-                <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $convenio->tipo }}</td>
-                    <td>{{ $convenio->nom_area }}</td>
-                    <td>{{ $convenio->institucion }}</td>
-                    <td>{{ $convenio->inicio }}</td>
-                    <td>{{ $convenio->fin }}</td>
-                    <td>
-                        <a href="{{ asset('storage/convenios/'.$convenio->id.'/'.$convenio->convenio) }}" class="btn btn-success btn-sm" download title="Descargar convenio"><i class='fas fa-file-download' style='font-size:14px'></i></a>
-                    </td>
-                    <td>
-                        <a class="btn btn-warning btn-sm"><i class='fas fa-edit' style='font-size:14px'></i></a>
-                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalEliminar" onclick="eliminar({{ $convenio }})"><i class='far fa-trash-alt' style='font-size:14px'></i></button>
-                    </td>
-                </tr>
-            @endforeach
+
         </tbody>
     </table>
 
@@ -182,6 +166,48 @@
                 }
 
             }
+
+            //Construmos la tabla de convenios con los registros de la consulta
+            $(document).ready(function(){
+                //Obtenemos los datos desde una vista blade y guardamos la información en una variable en jQuery
+                const conv = @json($convenios);
+                //Agrupamos las areas en un arreglo
+                var sig, ant = 0;
+                var areas=[''];
+                var arr=0;
+                for(x=0; x<conv.length-1;x++)
+                {
+                    ant = conv[x]['id'];
+                    sig = conv[x+1]['id'];
+
+                    if(ant == sig && sig!=null)
+                    {
+                        areas[arr]=conv[x]['nom_area']+","+areas[arr];
+                    }
+                    else
+                    {
+                        arr++;
+                        areas[arr]=conv[x]['nom_area']+","+areas[arr];
+                    }
+                }
+                console.log(areas);
+
+                //Escribimos las areas dentro de la tabla en la vista
+                ac=0;
+                var tem2 = conv[0]['id'];
+                $.each( conv, function( conv, c ) {
+                    if(tem2 == c['id'])
+                    {
+                        tem2=c['id'];
+                        $("#tabConvenios>tbody").append("<tr><td>"+ac+"</td><td>"+c['tipo']+"</td><td>"+areas[ac]+"</td><td>"+c['institucion']+"</td><td>"+c['inicio']+"</td><td>"+c['fin']+"</td></tr>");
+                        ac++;
+                    }
+                    else
+                    {
+                        tem2=c['id'];
+                    }
+                });
+            });
         </script>
     @endsection
 
