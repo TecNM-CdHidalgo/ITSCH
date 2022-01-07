@@ -288,7 +288,6 @@
               <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
               <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
               <a class="dropdown-item" href="{{route('vinculacion.banco_de_datos')}}">Banco de Proyectos</a>
-              <a class="dropdown-item" href="{{route('vinculacion.convenio_colaboracion')}}">Convenio de colaboración</a>
               <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">  Convenios</a>
               <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
           </div>

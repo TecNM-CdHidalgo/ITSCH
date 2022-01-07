@@ -147,10 +147,10 @@
                 selectionHeader: "<div class='custom-header'>Áreas seleccionadas</div>",
             });
 
-            function eliminar(convenio)
+            function eliminar(id)
             {
-                $('#msjEliminar').text('Estas seguro(a) de eliminar el convenio No. '+convenio['id']+' con la empresa: '+convenio['institucion']);
-                $('#id_convenio').val(convenio['id']);
+                $('#msjEliminar').text('Estas seguro(a) de eliminar el convenio No. '+id);
+                $('#id_convenio').val(id);
             }
 
             //Funcion que innavilita el calendario cuando se selecciona fecha indefinida
@@ -167,46 +167,56 @@
 
             }
 
-            //Construmos la tabla de convenios con los registros de la consulta
+            //Construimos la tabla de convenios con los registros de la consulta
             $(document).ready(function(){
                 //Obtenemos los datos desde una vista blade y guardamos la información en una variable en jQuery
                 const conv = @json($convenios);
-                //Agrupamos las areas en un arreglo
-                var sig, ant = 0;
-                var areas=[''];
-                var arr=0;
-                for(x=0; x<conv.length-1;x++)
-                {
-                    ant = conv[x]['id'];
-                    sig = conv[x+1]['id'];
 
-                    if(ant == sig && sig!=null)
+
+                //Contamos los elementos diferentes dentro del arreglo
+                var id_a=0, dif=-1;
+                //var id_s=conv[0]['id'];
+                var tip=[''];
+                var ins=[''];
+                var ini=[''];
+                var fin=[''];
+                var areas=[''];
+                var id=[''];
+                var nom_conv=[''];
+
+                for(x=0; x < conv.length; x++)
+                {
+                    id_s=conv[x]['id'];
+
+                    if(id_a!=id_s)
                     {
-                        areas[arr]=conv[x]['nom_area']+","+areas[arr];
+                        dif=dif+1;
+                        id[dif]=conv[x]['id'];
+                        nom_conv[dif]=conv[x]['convenio'];
+                        tip[dif]=conv[x]['tipo'];
+                        ins[dif]=conv[x]['institucion'];
+                        ini[dif]=conv[x]['inicio'];
+                        fin[dif]=conv[x]['fin'];
+                        areas[dif]=conv[x]['nom_area'];
+                        id_a=id_s;
                     }
                     else
                     {
-                        arr++;
-                        areas[arr]=conv[x]['nom_area']+","+areas[arr];
+                        areas[dif]=areas[dif]+","+conv[x]['nom_area'];
                     }
                 }
-                console.log(areas);
+
+
 
                 //Escribimos las areas dentro de la tabla en la vista
-                ac=0;
-                var tem2 = conv[0]['id'];
-                $.each( conv, function( conv, c ) {
-                    if(tem2 == c['id'])
-                    {
-                        tem2=c['id'];
-                        $("#tabConvenios>tbody").append("<tr><td>"+ac+"</td><td>"+c['tipo']+"</td><td>"+areas[ac]+"</td><td>"+c['institucion']+"</td><td>"+c['inicio']+"</td><td>"+c['fin']+"</td></tr>");
-                        ac++;
-                    }
-                    else
-                    {
-                        tem2=c['id'];
-                    }
-                });
+                con=0;
+                for(x=0; x<=dif;x++)
+                {
+                    con++;
+                    var r = "{{ asset('storage/convenios') }}";
+                    r += "/"+id[x]+"/"+nom_conv[x];
+                    $("#tabConvenios>tbody").append("<tr><td>"+con+"</td><td>"+tip[x]+"</td><td>"+areas[x]+"</td><td>"+ins[x]+"</td><td>"+ini[x]+"</td><td>"+fin[x]+"</td><td><a href="+r+" download class='btn btn-primary btn-sm'><i class='fas fa-file-alt' style='font-size:14px'></i></a></td><td><button class='btn btn-danger btn-sm' data-toggle='modal' data-target='#myModalEliminar' onclick='eliminar("+id[x]+")'><i class='far fa-trash-alt' style='font-size:14px'></i></a></td></tr>");
+                }
             });
         </script>
     @endsection

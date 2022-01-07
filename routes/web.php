@@ -26,8 +26,7 @@ Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perC
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
 Route::get('vinculacion/banco_proyectos','BancoController@show')->name('vinculacion.banco_de_datos');
 Route::get('vinculacion/fichas2021',function(){return view('content.vinculacion.fichas2021');})->name('vinculacion.fichas2021');
-Route::get('vinculacion/convenio_colaboracion',function(){return view('content.vinculacion.convenio_colaboracion');})->name('vinculacion.convenio_colaboracion');
-Route::get('vinculacion/convenios',function(){return view('content.vinculacion.convenios');})->name('vinculacion.convenios');
+Route::get('vinculacion/convenios', [ConvenioController::class, 'convenios'])->name('vinculacion.convenios');
 Route::get('vinculacion/cultura_deporte',function(){return view('content.vinculacion.cultura_deporte');})->name('vinculacion.cultura_deporte');
 Route::get('vinculacion/informacion',function(){return view('content.vinculacion.informacion');})->name('vinculacion.informacion');
 Route::get('vinculacion/residencias',function(){return view('content.vinculacion.residencias');})->name('vinculacion.residencias');

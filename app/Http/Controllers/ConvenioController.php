@@ -9,6 +9,7 @@ use App\Models\Area_Convenio;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
+
 class ConvenioController extends Controller
 {
     public function index()
@@ -19,26 +20,20 @@ class ConvenioController extends Controller
         ->join('areas','areas.id','=','convenios_areas.id_area')
         ->get();
 
-      /*   $id_con_ant=0;
-        $cont=0;
-
-        foreach($convenios as $conv)
-        {   $area=$conv->nombre;
-            if($id_con_ant==$conv->id)
-            {
-                $areas[$cont]=$areas[$cont]."|".$area;
-                $id_con_ant=$conv->id;
-            }
-            else
-            {
-                $cont=$cont+1;
-                $areas[$cont]=$areas[$cont]."|".$area;
-                $id_con_ant=$conv->id;
-            }
-        } */
-        //dd($areas);
-
         return view('admin.contenido.convenios.index')
+        ->with('areas',$areas)
+        ->with('convenios',$convenios);
+    }
+
+    public function convenios()
+    {
+        $areas=Area::all();
+        $convenios=Convenio::select('convenios.*','areas.nombre AS nom_area')
+        ->join('convenios_areas','convenios.id','=','convenios_areas.id_convenio')
+        ->join('areas','areas.id','=','convenios_areas.id_area')
+        ->get();
+
+        return view('content.vinculacion.convenios')
         ->with('areas',$areas)
         ->with('convenios',$convenios);
     }
@@ -63,7 +58,7 @@ class ConvenioController extends Controller
              $convenio->institucion=$request->institucion;
              $convenio->inicio=$request->inicio;
              //Se revisa si el check de fecha indefinida esta activo y en caso afirmativo se guarda esa palabra en la BD
-             if($request->indefinido=="on")
+             if($request->indefinido=="select")
              {
                 $convenio->fin="Indefinido";
              }
@@ -86,7 +81,8 @@ class ConvenioController extends Controller
                 $file =$request->convenio;
                 $archExtension = $file->getClientOriginalExtension();
                 $archExtension = strtolower($archExtension);
-                if($archExtension == 'pdf' || $archExtension == 'PDF' ){
+                if($archExtension == 'pdf' || $archExtension == 'PDF' )
+                {
                     $path = storage_path().'/app/public/convenios/'.$u_reg->id;
                     $name = 'convenio'.time().'.'.strtolower($archExtension);
                     $file->move($path,$name);
@@ -116,7 +112,7 @@ class ConvenioController extends Controller
         catch (\Exception $e)
         {
             DB::rollback();
-            return Redirect()->back()->with('error','¡A ocurrido un error!');
+            return Redirect()->back()->with('error','¡A ocurrido un error!'.$e);
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
@@ -127,22 +123,26 @@ class ConvenioController extends Controller
     public function destroy(Request $request)
     {
         DB::beginTransaction();
-
         try
         {
             $convenio = Convenio::find($request->id_convenio);
-            //Eliminamos la carpeta con todos los archivos del periodo
-            Storage::deleteDirectory('public/transparencia/'.$request->id_convenio);
+            //Eliminamos la carpeta con todos los archivos del convenio
+            $err=Storage::deleteDirectory('public/convenios/'.$request->id_convenio);
+            //Verificamos que si se elimine la carpeta con todos los acrchivos en su interior
+            if(!$err)
+            {
+                DB::rollback();
+                return Redirect()->back()->with('error','¡El convenio no se pudo eliminar, ocurrio un error!');
+            }
             $convenio->delete();
-
-            DB::commit();
-            return Redirect()->route('convenios.inicio')->with('warning','¡El convenio se elimino correctamente!');
         }
         catch (\Exception $e)
         {
             DB::rollback();
-            return Redirect()->back()->with('error','¡El periodo no se pudo eliminar, ocurrio un error!');
+            return Redirect()->back()->with('error','¡El convenio no se pudo eliminar, ocurrio un error!');
         }
+        DB::commit();
+        return Redirect()->route('convenios.inicio')->with('warning','¡El convenio se elimino correctamente!');
     }
 
 
