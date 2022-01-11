@@ -116,7 +116,7 @@
           <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
           <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
           <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-          <a class="dropdown-item"  href="https://www.itsch.edu.mx:8080/sgcv3/Procaptura.aspx">Solicitud de prorroga</a>
+          <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
 
         </ul>
       </li>
