@@ -85,11 +85,14 @@ Route::get('servicios_escolares/constancia',function(){return view('content.serv
 
 //Alumnos
 Route::get('alumnos/eventos',function(){return view('content.alumnos.eventos');})->name('alumnos.eventos');
-Route::get('alumnos/empleadores',function(){return view('content.alumnos.empleadores');})->name('alumnos.empleadores');
 Route::get('alumnos/encuestasservicio',function(){return view('content.alumnos.encuestasservicio');})->name('alumnos.encuestasservicio');
 Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluatutor');})->name('alumnos.evaluatutor');
 Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas');})->name('alumnos.prorrogas');
+
+//Seguimiento empleadores y egresados
+Route::get('seguimiento/egresados',function(){return view('content.seguimiento.egresados');})->name('seguimiento.egresados');
+Route::get('seguimiento/empleadores',function(){return view('content.seguimiento.empleadores');})->name('seguimiento.empleadores');
 
 //Normativos y lineamientos
 Route::get('normativos/etica',function(){return view('content.normativos.etica');})->name('normativos.etica');
