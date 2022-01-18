@@ -105,7 +105,12 @@
                             <br>
                             AUTORIZACION DE PROYECTO
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Autorizacion del proyecto " download href='{{asset('documents/content/vinculacion/residencias/carta_autad20.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Autorizacion del proyecto " download href='{{asset('documents/content/vinculacion/residencias/carta_autorizacion.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            </p>
+                            <br>
+                            CRONOGRAMA DE ACTIVIDADES
+                            <p align="center">
+                            <a target="_blank" data-toogle="tooltip"  title="Autorizacion del proyecto " download href='{{asset('documents/content/vinculacion/residencias/cronograma.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             PORTADA.
@@ -116,10 +121,10 @@
                             <br>
                             SOLICITUD DE RESIDENCIAS.
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Solicitud de residencias " download href='{{asset('documents/content/vinculacion/residencias/solicitud_residencias_2020.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Solicitud de residencias " download href='{{asset('documents/content/vinculacion/residencias/solicitud_residencias.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
-                            CONVENIO DE RESIDENCIAS PROFECIONALES.
+                            CONVENIO DE RESIDENCIAS PROFESIONALES.
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Convenio  de residencias " download href='{{asset('documents/content/vinculacion/residencias/Convenio de residencias.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
@@ -131,7 +136,7 @@
                             <br>
                             FORMATO DE ASESORIA.
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Formatos de asesorias  de residencias " download href='{{asset('documents/content/vinculacion/residencias/asesoriaad20.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Formatos de asesorias  de residencias " download href='{{asset('documents/content/vinculacion/residencias/asesoria.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             FORMATO DE SEGUIMIENTO DE RESIDENCIAS(Cronograma).
@@ -141,12 +146,12 @@
                             <br>
                             FORMATO DE EVALUACIÓN XXIX.
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/rvxxix.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/evaluacion_xxix.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             FORMATO DE EVALUACIÓN XXX.
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/Evaluacion XXX.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/evaluacion_xxx.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             FORMATO PARA PORTADA DE DISCOS.

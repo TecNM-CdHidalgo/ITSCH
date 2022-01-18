@@ -60,7 +60,7 @@
                         <td>1</td>
                         <td>Solicitud del estudiante</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/solicitud_titulacionv14.docx ')}}" data-toogle="tooltip" title="Formato de solicitud de titulación." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/solicitud.docx ')}}" data-toogle="tooltip" title="Formato de solicitud de titulación." download  target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
@@ -69,7 +69,7 @@
                         <td>2</td>
                         <td>Formato de registro de proyecto</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/registro_titulacionv14.docx ')}}" data-toogle="tooltip" title="Formato de registro de proyecto." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/registro.docx ')}}" data-toogle="tooltip" title="Formato de registro de proyecto." download  target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
@@ -78,7 +78,7 @@
                         <td>3</td>
                         <td>Formato de liberación del proyecto para la Titulación integral</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/liberacion_proyectov14.docx ')}}" data-toogle="tooltip" title="Formato de liberación." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/liberacion.docx ')}}" data-toogle="tooltip" title="Formato de liberación." download  target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
