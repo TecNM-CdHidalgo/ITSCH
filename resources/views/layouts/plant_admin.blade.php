@@ -79,12 +79,12 @@
                 <li>
                   <a href="{{ route('home') }}#home-section" class="nav-link">Inicio</a>
                 </li>
-                @if (Auth::User()->tipo == "Administrador")
+                @if (Auth::User()->tipo == "administrador")
                   <li>
                     <a href="{{route('admin.usuarios.inicio')}}" class="nav-link"><p id="section-usuarios" class="no-margins">Usuarios</p></a>
                   </li>
                 @endif
-                @if (Auth::User()->tipo == "Administrador" || Auth::User()->tipo == "Editor")
+                @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "editor"|| Auth::User()->tipo == "vinculacion")
                     <li>
                     <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
                     </li>
@@ -92,16 +92,28 @@
                     <a href="#" class="nav-link" ><p id="section-galeria" class="no-margins">Galeria</p></a>
                     </li>
                 @endif
-                @if (Auth::User()->tipo == "Administrador" || Auth::User()->tipo == "Jefe de carrera")
-                <li class="dropdown">
-                  <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                    <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
-                    <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
-                    <a class="dropdown-item" href="{{ route('convenios.inicio') }}">Convenios</a>
-                    <a class="dropdown-item" href="{{ route('periodos.inicio') }}">Transparencia</a>
-                  </div>
-                </li>
+                @if (Auth::User()->tipo != "editor")
+                    <li class="dropdown">
+                        <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica"|| Auth::User()->tipo == "vinculacion")
+                                <p style="color:orange;">&nbsp Vinculación</p>
+                                <hr>
+                                <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
+                                <a class="dropdown-item" href="{{ route('convenios.inicio') }}">Convenios</a>
+                            @endif
+                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica")
+                                <p style="color:orange;">&nbsp Académica</p>
+                                <hr>
+                                <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
+                            @endif
+                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "planeacion")
+                                <p style="color:orange;">&nbsp Administración</p>
+                                <hr>
+                                <a class="dropdown-item" href="{{ route('periodos.inicio') }}">Transparencia</a>
+                            @endif
+                        </div>
+                    </li>
                 @endif
                 | Usuario:
                 <li class="dropdown">

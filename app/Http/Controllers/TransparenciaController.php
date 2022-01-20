@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Transparencia;
 use App\Models\Periodo;
 use Illuminate\Http\Request;
@@ -54,6 +55,10 @@ class TransparenciaController extends Controller
      */
     public function perCreate(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home');
+        }
+
         DB::beginTransaction();
 
         try
@@ -76,6 +81,10 @@ class TransparenciaController extends Controller
     //Funcion para llamar a la vista que permite agregar archivos a un periodo
     public function archPerAgregar($id_per)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home');
+        }
+
         $periodo=Periodo::find($id_per);
         $arch=Transparencia::where('id_periodo',$id_per)->get();
         return view('admin.contenido.transparencia.crear')
@@ -91,6 +100,10 @@ class TransparenciaController extends Controller
      */
     public function store(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home');
+        }
+
         $periodo=Periodo::find($request->id);
         //Iniciamos la transacción
         DB::beginTransaction();
@@ -145,6 +158,10 @@ class TransparenciaController extends Controller
      */
     public function archDestroy($id_arch)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -173,6 +190,10 @@ class TransparenciaController extends Controller
     //Función para modificar el periodo
     public function perUpdate(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home');
+        }
+
         DB::beginTransaction();
 
         try
@@ -196,6 +217,10 @@ class TransparenciaController extends Controller
     //Función para eliminar el periodo
     public function perDestroy(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home');
+        }
+
         DB::beginTransaction();
 
         try

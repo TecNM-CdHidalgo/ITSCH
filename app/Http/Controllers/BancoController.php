@@ -14,7 +14,7 @@ class BancoController extends Controller
      */
     public function index()
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
             return redirect()->route('home');
         }
         $banco = Banco::orderBy('created_at','desc')->paginate(7);
@@ -33,7 +33,7 @@ class BancoController extends Controller
 
     public function store(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
             return redirect()->route('home');
         }
 
@@ -77,7 +77,7 @@ class BancoController extends Controller
      */
     public function edit($id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
             return redirect()->route('home');
         }
         $banco = Banco::where('id',$id)->get();
@@ -118,7 +118,7 @@ class BancoController extends Controller
      */
     public function destroy($id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
             return redirect()->route('home');
         }
 

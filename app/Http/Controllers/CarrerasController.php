@@ -336,7 +336,7 @@ class CarrerasController extends Controller
     //Metodo para agregar contenido a los programas educativos
     public function updatecarreracom(Request $request, $id_pro)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -421,7 +421,7 @@ class CarrerasController extends Controller
     /*Edicion de especialidades*/
     public function editEspecialidad($id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -439,7 +439,7 @@ class CarrerasController extends Controller
     /*Metodo para agregar los programas educativos de la institución */
     public function storeEspecialidad(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -495,7 +495,7 @@ class CarrerasController extends Controller
     /*Metodo para modificar especialidades */
     public function updateEspecialidad(Request $request,$id_esp)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -548,7 +548,7 @@ class CarrerasController extends Controller
     /*Metodo para eliminar especialidades */
     public function destroyEspecialidad(Request $request, $id_esp)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -583,7 +583,7 @@ class CarrerasController extends Controller
     /*Edicion de especialidades*/
     public function editObjetivos($id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -597,7 +597,7 @@ class CarrerasController extends Controller
     /*Metodo para agregar los programas educativos de la institución */
     public function storeObjetivos(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -613,7 +613,7 @@ class CarrerasController extends Controller
     /*Metodo para modificar objetivos */
     public function updateObjetivos(Request $request,$id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -629,7 +629,7 @@ class CarrerasController extends Controller
     /*Metodo para eliminar objetivos */
     public function destroyObjetivos(Request $request, $id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -644,7 +644,7 @@ class CarrerasController extends Controller
    /*Edicion de atributos*/
    public function editAtributos($id_pro)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -665,7 +665,7 @@ class CarrerasController extends Controller
    /*Metodo para agregar los programas educativos de la institución */
    public function storeAtributos(Request $request)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $atributo = new Atributo();
@@ -679,7 +679,7 @@ class CarrerasController extends Controller
    /*Metodo para modificar atributos */
    public function updateAtributos(Request $request,$id)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $atributo = Atributo::find($id);
@@ -693,7 +693,7 @@ class CarrerasController extends Controller
    /*Metodo para eliminar atributos */
    public function destroyAtributos(Request $request, $id)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $atributo = Atributo::where('id',$id)->where('id_programa',$request->id_programa);
@@ -707,7 +707,7 @@ class CarrerasController extends Controller
    /*Metodo para agregar los criterios */
    public function storeCriterios(Request $request)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $atributo = new Criterio();
@@ -721,7 +721,7 @@ class CarrerasController extends Controller
     /*Metodo para modificar criterios */
     public function updateCriterios(Request $request,$id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $criterio = Criterio::find($id);
@@ -734,7 +734,7 @@ class CarrerasController extends Controller
     /*Metodo para eliminar criterios */
     public function destroyCriterios(Request $request, $id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $criterio = Criterio::find($id);
@@ -747,7 +747,7 @@ class CarrerasController extends Controller
    /*Edicion estructura académica*/
    public function editEstructura($id_pro)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -767,7 +767,7 @@ class CarrerasController extends Controller
    /*Metodo para agregar estructura académica*/
    public function storeEstructura(Request $request)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         //Guarda todos los campos en una sola linea
@@ -779,7 +779,7 @@ class CarrerasController extends Controller
    /*Metodo para modificar profesores */
    public function updateEstructura(Request $request,$id)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $personal = Personal::where ('id', $id)->first();
@@ -791,7 +791,7 @@ class CarrerasController extends Controller
    /*Metodo para eliminar Profesores */
    public function destroyEstructura(Request $request, $id)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $personal = Personal::where('id',$id)->where('id_programa',$request->id_programa);
@@ -805,7 +805,7 @@ class CarrerasController extends Controller
    //Metodo para llamar la vista de ddetalle y editar formación y productos
    public function editDetalles($id_pro,$id_per)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $programa=Programa::find($id_pro);
@@ -824,6 +824,10 @@ class CarrerasController extends Controller
    //Funcion para guardar la foto del perfil
    public function act_foto(Request $request, $id_pro)
    {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -878,7 +882,7 @@ class CarrerasController extends Controller
    /*Metodo para agregar la formación academica de los profesores */
    public function storeDetallesFor(Request $request)
    {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -890,7 +894,7 @@ class CarrerasController extends Controller
     /*Metodo para agregar la producción academica de los profesores */
     public function storeDetallesPro(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -902,7 +906,7 @@ class CarrerasController extends Controller
     /*Metodo para modificar Formación académica */
     public function updateDetallesFormacion(Request $request,$id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -916,7 +920,7 @@ class CarrerasController extends Controller
     /*Metodo para eliminar formación */
     public function destroyDetallesFormacion(Request $request, $id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -928,7 +932,7 @@ class CarrerasController extends Controller
      /*Metodo para modificar Producción académica */
      public function updateDetallesProduccion(Request $request,$id)
      {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $produccion = Producto::where ('id', $id)->first();
@@ -941,7 +945,7 @@ class CarrerasController extends Controller
      /*Metodo para eliminar Producción */
      public function destroyDetallesProduccion(Request $request, $id)
      {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $produccion = Producto::find($id);
@@ -996,6 +1000,10 @@ class CarrerasController extends Controller
     //Función para borrar mensajes leidos
     public function destroyContacto(Request $request,$id_pro)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         $delMsg=Contactos::find($request->id);
         $delMsg->delete();
         return redirect()->route('carreras.showContacto',$id_pro);
@@ -1005,7 +1013,10 @@ class CarrerasController extends Controller
 
     //Metodo para mostrar y editar el plan de estudios del programa
     public function editPlanEstudios(Request $request,$id_pro)
-    {//Este ya esta correcto
+    {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
 
         $programa=Programa::where('id',$id_pro)->get();
 
@@ -1122,6 +1133,10 @@ class CarrerasController extends Controller
     //Metodo para gusrdar las materias de tronco común
     public function storePlanEstudios(Request $request, $id_pro)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -1171,6 +1186,10 @@ class CarrerasController extends Controller
     //Metodo para modificar las materias de tronco comun
     public function updatePlanEstudios(Request $request, $id_pro)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -1236,6 +1255,10 @@ class CarrerasController extends Controller
     /*Metodo para eliminar Materias de tronco común */
     public function destroyPlanEstudios(Request $request, $id_asig)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -1271,6 +1294,10 @@ class CarrerasController extends Controller
     //Metodo para gusrdar las materias de la especialidad
     public function storeMatEsp(Request $request, $id_pro)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -1319,6 +1346,10 @@ class CarrerasController extends Controller
     //Metodo para modificar las materias de especialidad
     public function updateMatEspecialidad(Request $request, $id_pro)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -1385,6 +1416,10 @@ class CarrerasController extends Controller
     /*Metodo para eliminar Materias de especialidad */
     public function destroyMatEspecialidad(Request $request, $id_asig)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            return redirect()->route('home');
+        }
+
         //Iniciamos la transacción
         DB::beginTransaction();
         try

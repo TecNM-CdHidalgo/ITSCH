@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
         $usuarios = User::select('id','name','email','tipo')->get();
@@ -31,7 +31,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
         return View('admin.usuarios.crear');
@@ -46,7 +46,7 @@ class UserController extends Controller
      */
     public function edit(Request $request,$id)
     {
-         if(Auth::User()->tipo != "Administrador"){
+         if(Auth::User()->tipo != "administrador"){
             return redirect()->route('inicio');
         }
         $usuario_existe = User::where('id','=',$id)->get()->count() == 1;
@@ -67,7 +67,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-         if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
         $usuario_existe = User::where('id','=',$id)->get()->count() == 1;
@@ -118,7 +118,7 @@ class UserController extends Controller
      */
     public function destroy(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
         if(!$request->has('id')) return redirect()->route('home');
@@ -134,7 +134,7 @@ class UserController extends Controller
 
     public function save(Request $request)
     {
-         if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('inicio');
         }
         if($request->get('password') == null){

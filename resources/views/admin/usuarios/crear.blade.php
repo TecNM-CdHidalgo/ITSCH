@@ -14,9 +14,11 @@
     <div class="from-group">
       <label for="tipo">Tipo de Usuario</label>
       <select name="tipo" id="tipo" class="form-control">
-        <option value="Editor" selected>Editor</option>
-        <option value="Administrador">Administrador</option>
-        <option value="Jefe de carrera">Jefe de carrera</option>
+        <option value="administrador">Administrador</option>
+        <option value="editor" selected>Editor</option>
+        <option value="academica">Académica</option>
+        <option value="planeacion">Planeación</option>
+        <option value="vinculacion">Vinculación</option>
       </select>
     </div>
     <div class="form-group">

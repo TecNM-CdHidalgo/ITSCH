@@ -8,12 +8,17 @@ use App\Models\Area;
 use App\Models\Area_Convenio;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 
 class ConvenioController extends Controller
 {
     public function index()
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
+            return redirect()->route('home');
+        }
+
         $areas=Area::all();
         $convenios=Convenio::select('convenios.*','areas.nombre AS nom_area')
         ->join('convenios_areas','convenios.id','=','convenios_areas.id_convenio')
@@ -48,6 +53,9 @@ class ConvenioController extends Controller
 
     public function save(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
+            return redirect()->route('home');
+        }
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -122,6 +130,10 @@ class ConvenioController extends Controller
 
     public function destroy(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
+            return redirect()->route('home');
+        }
+
         DB::beginTransaction();
         try
         {
@@ -148,6 +160,10 @@ class ConvenioController extends Controller
 
     public function saveArea(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
+            return redirect()->route('home');
+        }
+
         //Funcion para guardar las nuevas áreas
         $area=new Area;
         $area->nombre=$request->nombre;
@@ -159,6 +175,10 @@ class ConvenioController extends Controller
 
     public function areasUpdate(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
+            return redirect()->route('home');
+        }
+
         //Función que modifica las áreas
         $area=Area::find($request->id_area);
         $area->nombre=$request->nombre;
@@ -169,6 +189,10 @@ class ConvenioController extends Controller
 
     public function areasDestroy(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
+            return redirect()->route('home');
+        }
+
         //Función para eliminar las áreas
         $area=Area::find($request->id_areaE);
         $area->delete();
