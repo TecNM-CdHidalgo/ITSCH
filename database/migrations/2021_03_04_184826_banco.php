@@ -23,6 +23,8 @@ class Banco extends Migration
             $table->string('telefono',15);
             $table->string('correo',60);
             $table->string('docente',100);
+            $table->string('colaboradores',1000)->nullable();
+            $table->string('alumnos',1000)->nullable();
             $table->string('inicio',30)->nullable();
             $table->integer('status')->nullable();
             $table->timestamps();

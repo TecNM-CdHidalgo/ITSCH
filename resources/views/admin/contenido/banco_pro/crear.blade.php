@@ -50,9 +50,21 @@
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
-            <span class="input-group-text">Docente responsable o Representante de la emnpresa(institución)</span>
+            <span class="input-group-text">Responsable</span>
           </div>
           <input type="text" class="form-control" name="docente" placeholder="Nombre del responsable del proyecto">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Colaboradores</span>
+            </div>
+            <textarea class="form-control" name="colaboradores" id="colaboradores" rows="3" placeholder="Separa cada nombre con una ',' "></textarea>
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Alumnos</span>
+            </div>
+            <textarea class="form-control" name="alumnos" id="alumnos" rows="3" placeholder="Separa cada nombre con una ',' "></textarea>
         </div>
         <div class="input-group mb-3 input-group-sm">
             <div class="input-group-prepend">

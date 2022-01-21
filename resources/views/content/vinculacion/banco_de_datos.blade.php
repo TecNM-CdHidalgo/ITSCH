@@ -9,12 +9,14 @@
                 <tr>
                     <th>Carrera</th>
                     <th>Proyecto</th>
-                    <th>No. Integrantes</th>
+                    <th>Participantes</th>
                     <th>Empresa/Institución</th>
                     <th>Dirección</th>
-                    <th>Telefono de contacto</th>
-                    <th>Correo de contacto</th>
-                    <th>Docente responsable</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Responsable</th>
+                    <th>Colaboradores</th>
+                    <th>Alumnos</th>
                     <th>Fecha inicio</th>
                     <th>Status</th>
                 </tr>
@@ -30,6 +32,8 @@
                         <td>{{ $ba->telefono }}</td>
                         <td>{{ $ba->correo }}</td>
                         <td>{{ $ba->docente }}</td>
+                        <td>{{ $ba->colaboradores }}</td>
+                        <td>{{ $ba->alumnos }}</td>
                         <td>{{ $ba->inicio }}</td>
                         <td>
                             @if ($ba->status==1)

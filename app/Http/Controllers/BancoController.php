@@ -17,7 +17,7 @@ class BancoController extends Controller
         if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
             return redirect()->route('home');
         }
-        $banco = Banco::orderBy('created_at','desc')->paginate(7);
+        $banco = Banco::orderBy('created_at','desc')->get();
         return View('admin.contenido.banco_pro.index')->with('banco',$banco);
     }
 
@@ -47,6 +47,8 @@ class BancoController extends Controller
         $Banco->telefono = $request->telefono;
         $Banco->correo = $request->correo;
         $Banco->docente = $request->docente;
+        $Banco->colaboradores = $request->colaboradores;
+        $Banco->alumnos = $request->alumnos;
         $Banco->inicio = $request->inicio;
         $Banco->status = $request->status;
 
@@ -65,7 +67,7 @@ class BancoController extends Controller
     public function show()
     {
        //Funcion que visualiza el banco de proyectos en la pagina principal
-       $banco = Banco::orderBy('created_at','desc')->paginate(5);
+       $banco = Banco::orderBy('created_at','desc')->get();
        return View('content.vinculacion.banco_de_datos')->with('banco',$banco);
     }
 
@@ -102,9 +104,13 @@ class BancoController extends Controller
         $Banco->telefono = $request->telefono;
         $Banco->correo = $request->correo;
         $Banco->docente = $request->docente;
+        $Banco->colaboradores = $request->colaboradores;
+        $Banco->alumnos = $request->alumnos;
         $Banco->inicio = $request->inicio;
-        $Banco->status = $request->status;
-
+        if($request->status!="")
+        {
+            $Banco->status = $request->status;
+        }
         $Banco->save();
         return redirect()->route('admin.contenido.banco.index');
 

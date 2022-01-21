@@ -50,9 +50,21 @@
         </div>
         <div class="input-group mb-3 input-group-sm">
           <div class="input-group-prepend">
-            <span class="input-group-text">Docente responsable</span>
+            <span class="input-group-text">Responsable</span>
           </div>
           <input type="text" class="form-control" name="docente" value="{{ $banco[0]->docente }}">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Colaboradores</span>
+            </div>
+            <textarea class="form-control" name="colaboradores" id="colaboradores" rows="3" placeholder="Separa cada nombre con una ',' " >{{ $banco[0]->colaboradores }}</textarea>
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Alumnos</span>
+            </div>
+            <textarea class="form-control" name="alumnos" id="alumnos" rows="3" placeholder="Separa cada nombre con una ',' " >{{ $banco[0]->alumnos }}</textarea>
         </div>
         <div class="input-group mb-3 input-group-sm">
             <div class="input-group-prepend">
@@ -60,15 +72,17 @@
             </div>
             <input type="date" class="form-control" name="inicio" required value="{{ $banco[0]->inicio }}">
         </div>
-        <div class="form-group">
-            <label for="sel1">Selecciona el status del proyecto</label>
-            <select class="form-control" id="status" name="status" required>
-                <option value=" ">Selecciona una opción</option>
-                <option value="1">Inicio</option>
-                <option value="2">En proceso</option>
-                <option value="3">Terminado</option>
-            </select>
-        </div>
+        @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "vinculacion")
+            <div class="form-group">
+                <label for="sel1">Selecciona el status del proyecto</label>
+                <select class="form-control" id="status" name="status" required>
+                    <option value=" ">Selecciona una opción</option>
+                    <option value="1">Inicio</option>
+                    <option value="2">En proceso</option>
+                    <option value="3">Terminado</option>
+                </select>
+            </div>
+        @endif
         <button type="submit" class="btn btn-sm btn-success">Actualizar</button>
       </form>
       <br>

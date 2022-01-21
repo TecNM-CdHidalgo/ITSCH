@@ -12,6 +12,6 @@ class Banco extends Model
     protected $table="banco";
     //Datos que se usaran en el modelo
     protected $fillable = [
-        'carrera','proyecto','vacantes','empresa','direccion','telefono','correo','docente'
+        'carrera','proyecto','vacantes','empresa','direccion','telefono','correo','docente','colaboradores','alumnos'
     ];
 }
