@@ -4,6 +4,7 @@ use App\Http\Controllers\CarrerasController;
 use App\Http\Controllers\ProgramasController;
 use App\Http\Controllers\TransparenciaController;
 use App\Http\Controllers\ConvenioController;
+use App\Http\Controllers\BuzonController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -146,11 +147,10 @@ Route::get('/noticia/{image_name}', function($image_name)
 
 })->name('noticia');
 
-
-
-
+//Rutas del buzón
+Route::get('contenido/buzon/index',[BuzonController::class,'index'])->name('contenido.buzon.index');
+Route::get('contenido/buzon/store',[BuzonController::class,'store'])->name('contenido.buzon.store');
 //Fin Rutas publicas***********************************************************************
-
 
 
 

@@ -293,9 +293,6 @@
           </div>
       </li>
 
-
-
-
       <li class="nav-item dropdown">
         <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
             Investigación
@@ -316,10 +313,9 @@
             <a class="text-black dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
         </div>
       </li>
-
-  </li>
-
-
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ route('contenido.buzon.index') }}" >Buzón</a>
+      </li>     
     </ul>
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">
