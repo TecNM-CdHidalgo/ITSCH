@@ -18,7 +18,7 @@ class BuzonController extends Controller
         return view('content.buzon.index');
     }
 
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -32,21 +32,26 @@ class BuzonController extends Controller
         $mensaje->nombre=$request->nombre;
         $mensaje->correo=$request->correo;
         $mensaje->mensaje=$request->mensaje;
+        $mensaje->status=0;
         $mensaje->save();
 
         return redirect()->route('contenido.buzon.index')
         ->with('success','Tu mensaje se envió correctamente. En breve te daremos una respuesta, saludos y gracias por tu colaboración');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+
+    public function show()
     {
-        //
+        $msj=Buzon::where('status',0)->get();
+        return view('admin.buzon.show')
+        ->with('msj',$msj);
+    }
+
+    public function leidos()
+    {
+        $msj=Buzon::where('status',1)->get();
+        return view('admin.buzon.show')
+        ->with('msj',$msj);
     }
 
     /**
@@ -57,7 +62,12 @@ class BuzonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $msj=Buzon::find($id);
+        $msj->status=1;
+        $msj->save();
+
+        return view('admin.buzon.ver')
+        ->with('msj',$msj);
     }
 
     /**
@@ -72,14 +82,13 @@ class BuzonController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+
+    public function destroy(Request $request)
     {
-        //
+        $msj=Buzon::find($request->id);
+        $msj->delete();
+
+        return redirect()->route('buzon.show')
+        ->with('success','El mensaje se elimino correctamente');
     }
 }

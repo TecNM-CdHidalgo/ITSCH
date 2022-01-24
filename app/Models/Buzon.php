@@ -12,6 +12,6 @@ class Buzon extends Model
      protected $table="buzons";
      //Datos que se usaran en el modelo
      protected $fillable = [
-         'nombre','correo','tipo','mensaje'
+         'nombre','correo','tipo','mensaje','status'
      ];
 }

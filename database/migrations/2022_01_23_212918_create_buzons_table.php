@@ -19,6 +19,7 @@ class CreateBuzonsTable extends Migration
             $table->string('tipo',30);
             $table->string('nombre',60);
             $table->string('mensaje',2000);
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

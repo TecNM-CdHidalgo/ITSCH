@@ -116,6 +116,11 @@
                                     @endif
                                 </div>
                             </li>
+                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica")
+                                <li>
+                                    <a href="{{ route('buzon.show') }}" class="nav-link" title="Buzón"><i class='fas fa-envelope-open' style='font-size:16px'></i>&nbsp<b style="color: red"></b></a>
+                                </li>
+                            @endif
                         @endif
                         | Usuario:
                         <li class="dropdown">

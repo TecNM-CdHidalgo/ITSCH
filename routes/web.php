@@ -260,5 +260,11 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/convenios/areas/inicio',[ConvenioController::class,'areasIndex'])->name('convenios.areas.inicio');
     Route::get('contenido/convenios/areas/modificar',[ConvenioController::class,'areasUpdate'])->name('convenios.areas.update');
     Route::get('contenido/convenios/areas/eliminar',[ConvenioController::class,'areasDestroy'])->name('convenios.areas.eliminar');
+
+    //Rutas privadas del buzón
+    Route::get('contenido/buzon/show',[BuzonController::class,'show'])->name('buzon.show');
+    Route::get('contenido/buzon/edit/{id}',[BuzonController::class,'edit'])->name('buzon.edit');
+    Route::get('contenido/buzon/destroy',[BuzonController::class,'destroy'])->name('buzon.destroy');
+    Route::get('contenido/buzon/leidos',[BuzonController::class,'leidos'])->name('buzon.leidos');
 });
 
