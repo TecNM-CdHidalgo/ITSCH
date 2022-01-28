@@ -134,15 +134,6 @@
                 $('.mdshide').delay(3000).fadeOut(300);
             })
         </script>
-
-        {{-- Script para uso de CAPTCHA GOOGLE --}}
-        <script>
-            function onSubmit(token) {
-              document.getElementById("demo-form").submit();
-            }
-        </script>
-
-
         {{-- Seccion para los js --}}
         @yield('js')
 

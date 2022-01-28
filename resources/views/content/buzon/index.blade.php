@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-            <form action="{{ route('contenido.buzon.store') }}" method="get">
+            <form action="{{ route('contenido.buzon.store') }}" method="get" id="formBuzon">
                 <div class="form-group">
                     <label for="sel1">Elije un tipo de mensaje</label>
                     <select class="form-control" id="sel1" required name="tipo">
@@ -45,5 +45,16 @@
         </div>
         <div class="col-sm-2"></div>
     </div>
+
+@endsection
+
+@section('js')
+
+    {{-- Script para uso de CAPTCHA GOOGLE --}}
+    <script>
+        function onSubmit(token) {
+        document.getElementById("formBuzon").submit();
+        }
+    </script>
 
 @endsection
