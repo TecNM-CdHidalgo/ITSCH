@@ -25,6 +25,9 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+        {{-- Script para uso de CAPTCHA GOOGLE --}}
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
         <!-- Styles -->
         {{--CSS Propios--}}
         <link href="{{asset('cssPropios/estilos.css')}}" rel="stylesheet">
@@ -130,6 +133,13 @@
             $(document).ready(function(event){
                 $('.mdshide').delay(3000).fadeOut(300);
             })
+        </script>
+
+        {{-- Script para uso de CAPTCHA GOOGLE --}}
+        <script>
+            function onSubmit(token) {
+              document.getElementById("demo-form").submit();
+            }
         </script>
 
 
