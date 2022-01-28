@@ -30,7 +30,7 @@ class CarrerasController extends Controller
     public function index()
     {
         //Verificamos que el usuario tenga permisos
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -110,7 +110,7 @@ class CarrerasController extends Controller
     //Mostramos carrera especifica
     public function show($id)
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
 
@@ -183,7 +183,7 @@ class CarrerasController extends Controller
     //Metodo que inicializa la BD con la primera carrera y su especialidad
     public function inicializar(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
         //Iniciamos la transacción
@@ -286,7 +286,7 @@ class CarrerasController extends Controller
     /*Metodo para agregar y editar los programas educativos de la institución */
     public function editCarrera()
     {
-        if(Auth::User()->tipo != "Administrador" && Auth::User()->tipo != "Jefe de carrera"){
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
             return redirect()->route('home');
         }
         $programas=Programa::all();
@@ -310,7 +310,7 @@ class CarrerasController extends Controller
     /*Metodo para modificar solo el nombre del programa educativo de la institución */
     public function updateCarrera(Request $request, $id)
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
 
