@@ -12,7 +12,7 @@
                   <h4 class="card-title">AHORA ES MAS FACIL!!! </h4>
                   <p class="card-text">¿Necesitas una constancia o kárdex de calificaciones? entra al siguiente formulario y has tu solicitud más fácil y rápido.</p>
                   <p class="card-text">Recuerda que dichos documentos se entregarán en un plazo de 1 a 5 días hábiles.</p>
-                  <a href="https://forms.gle/NYCUiLYr9Cok6ary9" class="btn btn-primary">Solicitar</a>
+                  <a href="https://forms.gle/b16dVWderMjNiUZ68" class="btn btn-primary">Solicitar</a>
                 </div>
               </div>
               <br>
