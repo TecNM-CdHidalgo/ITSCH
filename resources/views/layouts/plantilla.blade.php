@@ -72,7 +72,7 @@
 {{--Menu blanco--}}
 <nav class="navbar navbar-expand-sm navbar-light bg-white" id="menuBlan">
  {{--Logo--}}
-  <a class="navbar-brand" href="{{route('inicio')}}">
+  <a class="navbar-brand" href="{{route('inicio')}}" id="logo">
     <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:30px; height: 35px;" />
   </a>
 
@@ -315,7 +315,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="{{ route('contenido.buzon.index') }}" >Buzón</a>
-      </li>     
+      </li>
     </ul>
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">

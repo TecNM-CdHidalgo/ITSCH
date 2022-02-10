@@ -13,15 +13,22 @@
 }
 
 #menuAzul a{
-    color: #fff;
+    color: hsla(0,0%,100%,.55);
+    font-weight: 300;
+    font-family: 'Montserrat';
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --mdb-font-roboto: "Roboto",sans-serif;
+    box-sizing: border-box;
+    padding-left: 5%;
 }
 
 
 /*Estilos del moodle*/
 .mood{
-    width:80px; 
-    height: 20px; 
-    vertical-align: middle; 
+    width:80px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 
@@ -39,19 +46,19 @@
     .dropdown-menu li{
         position: relative;
     }
-    .nav-item .submenu{ 
+    .nav-item .submenu{
         display: none;
         position: absolute;
         left:100%; top:-7px;
     }
-    .nav-item .submenu-left{ 
+    .nav-item .submenu-left{
         right:100%; left:auto;
     }
     .dropdown-menu > li:hover{ background-color: #f1f1f1 }
     .dropdown-menu > li:hover > .submenu{
         display: block;
     }
-    
+
 
 }
 
@@ -61,13 +68,14 @@
     height:50%;
     width:50%;
 }
+
 /*Color de texto del menu de gobierno*/
 .menuGob_a{
   color: #fff;
   text-decoration: none;
   background-color: transparent;
   font-size: 15px;
-  
+
 }
 /*Color de terto de las tarjetas colapsables*/
 .tarColaps{
@@ -80,14 +88,20 @@
 /*Posiciona el menu blanco por debajo del menu del gobierno */
 #menuBlan{
     position:sticky;
-    top: 7%; 
-    height:9vh; /*altura del puerto de visualización) en lugar de porcentaje. Obtendrá la altura del navegador y lo dimensionará en consecuencia*/
+    top: 7%;
+    height:7vh; /*altura del puerto de visualización) en lugar de porcentaje. Obtendrá la altura del navegador y lo dimensionará en consecuencia*/
 }
+
 /*Hace que los sub-menus se vean por encima del menu azul*/
-#menuBlan{            
-    z-index: 1000; 
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;           
+#menuBlan{
+    z-index: 1000;
+    color: hsla(0,0%,100%,.55);
+    font-weight: 300;
+    font-family: 'Montserrat';
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --mdb-font-roboto: "Roboto",sans-serif;
+    box-sizing: border-box;
 }
 
 /*Cambia color de menu cuando el raton esta encima*/
@@ -104,14 +118,11 @@
 
 /*Posiciona el menu azul por debajo del menu blanco y edita fuentes*/
 #menuAzul{
-    z-index: 500; 
+    z-index: 500;
     position: sticky;
-    top: 15%; 
-    font-family: Arial, Helvetica, sans-serif; 
-    font-weight: bold;
-    font-size: .9em; 
+    top: 13%;
     letter-spacing: .9px;
-    height:9vh;
+    height:7vh;
 }
 
 /*Cambia tamaño de las banderas*/
@@ -132,19 +143,29 @@
     width:70%;
 }
 
+#imgGob{
+    height: 3rem;
+    width: 8rem!important;
+}
+
+
 /*Desaparece el encabezado para pantallas pequeñas*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
  .encab {
     display: none !important;
  }
- 
+
+ #logo{
+    display: none !important;
+ }
+
 }
 
 /*footer de la pagina*/
-#foot { 
-    margin-top: 20px;      
+#foot {
+    margin-top: 20px;
     width: 100%;
-    height: 300px;      
+    height: 300px;
     position: relative;
     bottom: 0;
 }
@@ -158,13 +179,13 @@
 /*Css cuadros de noticias*/
 .noticias{
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /*Css de los cuadros informativos*/
 .info{
-    background-color:  #EEEEEE; 
+    background-color:  #EEEEEE;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -422,7 +443,7 @@ hr.red:before {
 /*Tipos de fuentes para la pagina*/
 body {
     /*font-family: 'Montserrat';*/
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.428571429;
     color: #404041;
@@ -582,7 +603,7 @@ h1, h2, h3 {
     box-shadow: 0 0 0 0 #9D2449;
 }
 
-.btn {   
+.btn {
     font-size: 14px;
     border-radius: 3px;
     padding: 7px 20px;
@@ -595,11 +616,11 @@ h1, h2, h3 {
     cursor: pointer;
     white-space: nowrap;
     line-height: 1.428571429;
-   
+
 }
 .btn-primary {
     color: #9D2449;
-    background-color: #FFF;    
+    background-color: #FFF;
 }
 button, select {
     text-transform: none;
@@ -1018,13 +1039,13 @@ input[type=submit].btn-block {
 /*Diseño de los modals de informacion*/
 .modal-header {
     background-color: #393C3E;
-    color: #fff;    
+    color: #fff;
 }
 
 .modal-header {
     padding: 15px;
     border-bottom: 1px solid transparent;
-    min-height: 16.43px;    
+    min-height: 16.43px;
 }
 
 
@@ -1046,9 +1067,9 @@ input[type=submit].btn-block {
 
 .btn-default {
     color: #000;
-    background-color: #fff; 
+    background-color: #fff;
     border: 2px solid #6F7271;
-    box-shadow: 0 0 0 0 #6F7271;   
+    box-shadow: 0 0 0 0 #6F7271;
 }
 
 .btn-default:hover{
