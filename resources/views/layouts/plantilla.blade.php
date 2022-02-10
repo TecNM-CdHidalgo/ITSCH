@@ -139,6 +139,7 @@
           Normativos y Lineamientos
           </a>
           <ul class="dropdown-menu">
+            <a class="dropdown-item"  href="{{asset('documents/content/normativos/Protocolo de regreso seguroF-J2022 RSIP-2.pdf')}}" target="_blank">Protocolo de salud</a>
             <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
             <a class="dropdown-item"  href="{{route('normativos.etica')}}">Subcomité de ética</a>
             <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>

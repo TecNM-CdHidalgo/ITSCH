@@ -15,7 +15,7 @@
         <span class="thumbnail"><img src="{{asset('images/content/normativos/ambiental/calidad-ambiental.png')}}"></span>
         <br><br>
 
-         <h5><strong>POLÍTICA DEL SISTEMA DE GESTIÓN AMBIENTAL</strong></h5>
+        <h5><strong>POLÍTICA DEL SISTEMA DE GESTIÓN AMBIENTAL</strong></h5>
         <p>El Grupo 2 multisitios del TNM establece el compromiso de brindar un servicio educativo de calidad mejorando continuamente sus procesos en armonía con el medio ambiente, orientándolos hacia el uso eficiente de los recursos naturales y el control de los aspectos ambientales tales como consumo y descarga de agua, generación de Residuos Peligrosos, Residuos Sólidos Urbanos, Residuos de Manejo Especial, así como el consumo de papel y energía eléctrica, cumpliendo los requisitos legales aplicables y otros requisitos, mediante la implementación y difusión de objetivos, metas y programas para prevenir y reducir la contaminación conforme a la Norma ISO 14001:2004.</p>
         <hr class="red">
         <p align="center"><img style="border-top:thin #000 solid;border-bottom:thin #000 solid;" width="80%" src="{{asset('images/content/normativos/ambiental/ambientalitsch.jpg')}}"></p>
