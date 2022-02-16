@@ -27,7 +27,7 @@ class CreateConveniosTable extends Migration
             $table->string('institucion',200);
             $table->date('inicio');
             $table->string('fin',35);
-            $table->string('convenio',100);
+            $table->string('convenio',200)->nullable();
             $table->timestamps();
         });
 

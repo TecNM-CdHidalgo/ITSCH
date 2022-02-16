@@ -79,7 +79,7 @@ class ConvenioController extends Controller
              //Obtenemos el id del ultimo registro insertado
              $u_reg = Convenio::latest('id')->first();
 
-            //Codigo para cargar los archivos de las carreras
+            //Codigo para cargar los archivos del convenio
             if(!Storage::has('public/convenios/'.$u_reg->id))
             {
                 Storage::makeDirectory('public/convenios/'.$u_reg->id);
@@ -120,8 +120,7 @@ class ConvenioController extends Controller
         catch (\Exception $e)
         {
             DB::rollback();
-            dd($e);
-            return Redirect()->back()->with('error','¡A ocurrido un error!'.$e);
+            return Redirect()->back()->with('error','¡A ocurrido un error al cargar el convenio!');
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
