@@ -203,16 +203,13 @@
                             5. Carta de aceptación.
                             (Hoja membretada y dirigida al jefe de carrera, debe incluir nombre del alumno, nombre de proyecto, asesor por parte de la empresa, fecha de inicio y fecha final de residencias).
                             <hr>
-                            6. Carta de terminación.
-                            (Hoja membretada y dirigida al jefe de carrera, debe incluir nombre del alumno, nombre de proyecto, asesor por parte de la empresa, fecha de inicio y fecha final de residencias).
-                            <hr>
-                            7. Carta de presentación.
+                            6. Carta de presentación.
                             (La emite vinculación y se debe de entregar una copia a la encargada de residencias firmada y sellada por la empresa).
                             <hr>
-                            8. Constancia de Acreditación de servicio social.
+                            7. Constancia de Acreditación de servicio social.
                             (Entregarlo a la encargada de residencias al inicio de su residencia).
                             <hr>
-                            9. Acreditación de actividades complementarias.
+                            8. Acreditación de actividades complementarias.
                             (La emite el jefe de carrera).
                             </p>
                         </div>
@@ -261,38 +258,35 @@
                     </div>
                     <div class="panel-collapse collapse in" id="panel-06">
                         <div class="panel-body">
-                            <p aligin"justify"  >LA ENTREGA, REVISION Y ATENCION A TU EXPEDIENTE SERA DE MANERA VIRTUAL A TRAVES DE CLASSROOM , HASTA QUE RECIBAS LA NOTIFICACION QUE TU DOCUMENTACION ESTA CORRECTA SERA NECESARIO QUE LO ENTREGUES EN FISICO EN LA CASETA DE VIGILANCIA DEL CAMPUS, PARA EVITAR MAS VISITAS.
-                            <br>
-                            <strong> LOS SELLOS Y FIRMAS DE LAS JEFATURAS SE COLOCARÁN UNA VEZ QUE HAYAS ENTREGADO TU EXPEDIENTE EN FISICO</strong>
-                            <br><br>
                             <strong>TODOS LOS OFICIOS DE LA EMPRESA SON FIRMADOS Y SELLADOS.</strong>
                             <br><br>
                             <strong><u>IMPORTANTE:</u></strong>
                             <br><br>
                             TU EXPEDIENTE COMPLETO DEBE DE CONTENER LA SIGUIENTE DOCUMENTACION:
-                            <br><br>1.- CONVENIO
-                            <br> 2.- SOLICITUD DE RESIDENCIAS
-                            <br>3.- KARDEX
-                            <br>4.- ANTEPROYECTO CON FIRMA DE ACEPTACION
-                            <br> 5.- CARTA DE PRESENTACION FIRMADA Y SELLADA DE RECIBIDO POR LA EMPRESA
-                            <br>6.- CARTA DE ACEPTACION (EN HOJA MEMBRETADA DE LA EMPRESA, CON PERIODO DE RESIDENCIA, FIRMA Y SELLO DE LA EMPRESA)
-                            <br>7.- CONSTANCIA DE ACREDITACION DEL SERVICIO SOCIAL
-                            <br>8.- ACTIVIDADES COMPLEMENTARIAS (SI YA ESTA EN EL KARDEX , YA NO ES NECESARIA).
-                            <br>9.- CRONOGRAMA (SI FALTAN FIRMAS DE LA DIVISION, SE COLOCARÁN UNA VEZ QUE ENTREGUES EL EXPEDIENTE EN FISICO)
-                            <br>10.- 4 FORMATOS DE ASESORIA (CON FIRMAS DEL ALUMNO Y ASESOR INTERNO)
-                            <br>11.- CARTA DE TERMINACION DE LA EMPRESA (EN HOJA MEMBRETADA DE LA EMPRESA, CON PERIODO DE RESIDENCIA, FIRMA Y SELLO DE LA EMPRESA).
-                            <br>12.- 3 FORMATOS DE EVALUACION ( DOS SE GENERABAN EN LA 2 Y 4 REVISION Y EN EL QUE SE EVALUA LA ESTRUCTURA DEL PROYECTO  EN LA 4 REVISION).
-                            <br>13.-CARTA DE LIBERACION DE RESIDENCIAS POR PARTE DEL ASESOR INTERNO.
-                            <br> 14.- ENCUESTA DEL ASESOR EXTERNO
-                            <br>15.- No. DE FOLIO DE ENCUESTA DE RESIDENCIAS PROFESIONALES DE LA PAGINA DEL CAMPUS <a href="https://encuestas.cdhidalgo.tecnm.mx/"> https://encuestas.cdhidalgo.tecnm.mx</a>
-                            <br> 16.- DISCO CON SU PROYECTO FINAL, LA PORTADA DEL DISCO SERIGRAFIADA , EN PDF Y  ES IMPORTANTE ENTREGARLA EN CAJA TRANSPARENTE, EN ANEXOS O DESPUES DE LA PORTADA ADJUNTAR LA CARTA DE TERMINACION DE LA EMPRESA Y CARTA DE LIBERACION DEL ASESOR INTERNO (SE ENTREGA UNICAMENTE CON LA DOCUMENTACION EN FISICO)
+                            <br><br>1.- Convenio
+                            <br> 2.- Solicitud de residencias
+                            <br>3.- Kardex
+                            <br>4.- Anteproyecto con firma de aceptación
+                            <br> 5.- Carta de presentación firmada y sellada de recibido por la empresa
+                            <br>6.- Carta de aceptación (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa)
+                            <br>7.- Constancia de acreditación del servicio social
+                            <br>8.- NOTA: ACTIVIDADES COMPLEMENTARIAS (SI YA ESTA EN EL KARDEX , YA NO ES NECESARIA).
+                            <br>9.- Cronograma (Si faltan firmas de la división, se colocarán una vez que entregues el expediente en físico)
+                            <br>10.- 4 Formatos de asesoría (con firmas del alumno y asesor interno)
+                            <br>11.- Carta de terminación de la empresa (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa).
+                            <br>12.- 3 Formatos de evaluación ( dos se generaban en la 2 y 4 revisión y en el que se evalua la estructura del proyecto  en la 4 revisión).
+                            <br>13.- Carta de liberación de residencias por parte del asesor interno.
+                            <br> 14.- Encuesta del asesor externo
+                            <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://encuestas.cdhidalgo.tecnm.mx/"> https://encuestas.cdhidalgo.tecnm.mx</a>
+                            <br> 16.- disco con su proyecto final, la portada de la disco serigrafiada, en PDF y es importante entregarla en caja transparente, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno (se entrega únicamente con la documentación en físico)
                             <br><br>
-                            SIGUIENTES DOCUMENTOS SOLO SI:
-                            <br><br>17.- * LA EMPRESA NO CUENTA CON SELLO U HOJA MEMBRETADA , SE DEBE ENTREGAR OFICIO DE LA EMPRESA DIRIGIDO AL JEFE DE DIVISION.
-                            <br>18.- * CAMBIO DE ASESOR. ENTREGAR OFICIO POR PARTE DE LA EMPRESA POR CAMBIO DE ASESOR.
-                            <br>19.-* CAMBIO DE NOMBRE DE PROYECTO. ENTREGAR OFICIO POR CAMBIO DEL NOMBRE DEL PROYECTO.
-                            <br>20.-* SOLICITUD ANTE COMITÉ ACADEMICO. SI SOLICITASTE EXTENSION, CAMBIOS DE FECHA , CAMBIO DE TITULO , CAMBIO DE OBJETIVOS ANTE COMITÉ ACADEMICO AÑADIRLO.
+                            <strong> SIGUIENTES DOCUMENTOS SOLO SI:</strong>
+                            <br><br>17.- * La empresa no cuenta con sello u hoja membretada , se debe entregar oficio de la empresa dirigido al jefe de división.
+                            <br>18.- * Cambio de asesor. Entregar oficio por parte de la empresa por cambio de asesor.
+                            <br>19.-* Cambio de nombre de proyecto. Entregar oficio por cambio del nombre del proyecto.
+                            <br>20.-* Solicitud ante comité académico. Si solicitaste extensión, cambios de fecha, cambio de título, cambio de objetivos ante comité académico añadirlo.
                             </p>
+
                         </div>
                     </div>
                 </div>

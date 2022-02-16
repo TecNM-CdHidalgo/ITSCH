@@ -120,6 +120,7 @@ class ConvenioController extends Controller
         catch (\Exception $e)
         {
             DB::rollback();
+            dd($e);
             return Redirect()->back()->with('error','¡A ocurrido un error!'.$e);
         }
         // Hacemos los cambios permanentes ya que no han habido errores
