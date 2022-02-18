@@ -111,7 +111,8 @@
 
 /*Color del menu de gobierno*/
 #menuGob{
-    background-color: #13322B;
+    /*background-color: #13322B;*/
+    background-color:#393C3E;
     color: #FFF important;
 
 }
@@ -127,7 +128,7 @@
 
 /*Cambia tamaño de las banderas*/
 .imgBand{
-    height:65%;
+    height:55%;
     width:8%;
 }
 
@@ -145,7 +146,7 @@
 
 #imgGob{
     height: 3rem;
-    width: 8rem!important;
+    width: 3rem!important;
 }
 
 
@@ -193,13 +194,15 @@
 
 /*Imagen del footer del gobierno federal*/
 .footer-pleca {
-    background-color: #12322B;
-    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
+    /*background-color: #12322B;*/
+    background-color: #393C3E;
+    /*background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);*/
     background-repeat: repeat-x;
 }
 
 .main-footer {
-    background-color: #13322B;
+    /*background-color: #13322B;*/
+    background-color: #393C3E;
     min-height: 56px;
     color: #FFF;
     padding: 0px 0 0px;
@@ -222,7 +225,8 @@
 .main-footer .list-info form label {
     font-weight: 300;
     margin-bottom: 15px;
-    line-height: 110% color: black;
+    line-height: 110%;
+    color: black;
 }
 
 .main-footer .list-info form .form-group-icon {

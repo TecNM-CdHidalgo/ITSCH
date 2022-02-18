@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand fixed-top" id="menuGob" >
   <div class="container">
     <!-- Brand/logo -->
-    <a class="navbar-brand " href="https://www.gob.mx/"><img loading="lazy" src="{{ asset('images/logoheader.svg') }}"  alt="Gobierno de México" id="imgGob"></a>
+    <a class="navbar-brand " href="https://www.gob.mx/"><img loading="lazy" src="{{ asset('images/campanas/esc_mexico_blan.jpg') }}"  alt="Gobierno de México" id="imgGob"></a>
 
     <!-- Links -->
     <ul class="navbar-nav ml-auto">

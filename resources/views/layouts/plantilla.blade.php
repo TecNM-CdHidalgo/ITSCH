@@ -3,65 +3,68 @@
 <div class="row encab">
   {{--Imagenes de gobierno--}}
   <div class="col-sm-7">
-    <div class="row encab">
-      <div class="col-sm-1">
+        <div class="row encab">
+            <div class="col-sm-1">
 
-      </div>
-      <div class="col-sm-4">
-        <a href="https://www.gob.mx" target="_blank" id="placa_1">
-          <img class="imgGobi" src="{{ asset('images/placa_gob1.png') }}" alt="Gobierno de México">
-        </a>
-      </div>
-      <div class="col-sm-4">
-        <a href="https://www.gob.mx/sep" target="_blank" id="placa_2">
-          <img class="imgGobi" src="{{ asset('images/placa_edu.png') }}" alt="Educación">
-        </a>
-      </div>
-      <div class="col-sm-3">
-        <a href="https://www.tecnm.mx"  id="placa_3">
-          <img class="imgGobi2" src="{{ asset('images/placa_tecnm.jpg') }}" alt="TecNM">
-        </a>
-      </div>
-    </div>
+            </div>
+            <div class="col-sm-4">
+                <br>
+                <a href="https://www.gob.mx" target="_blank" id="placa_1">
+                    <img style="width: 27%; heigth:27%;" src="{{ asset('images/campanas/esc_mexico.png') }}" alt="Gobierno de México">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://www.gob.mx/sep" target="_blank" id="placa_2">
+                    <img class="imgGobi" src="{{ asset('images/campanas/placa_edu.png') }}" alt="Educación">
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <a href="https://www.tecnm.mx"  id="placa_3">
+                    <img class="imgGobi2" src="{{ asset('images/placa_tecnm.jpg') }}" alt="TecNM">
+                </a>
+            </div>
+        </div>
   </div>
 
   {{--Banderas--}}
   <div class="col-sm-5">
-    <a href="https://globalpage-prod.webex.com/join?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2F%23%2Fmeetings%2Fjoinbynumber%3FTrackID%3D%26hbxref%3D%26goid%3Dattend-meeting" title="Microsoft Teams" target="_blank">
-      <img class="imgBand" src="{{ asset('images/banderas/microsoft_teams.png') }}" alt="MT">
-    </a>
-    <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
-      <img class="imgBand" src="{{ asset('images/banderas/correo_icono.png') }}" alt="Buzón">
-    </a>
-    <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
-      <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
-    </a>
-    <a href="{{ asset('documents/content/documentos_apoyo/horarios.pdf') }}" title="Horarios de Grupos" target="_blank">
-      <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
-    </a>
-    <a href='?vista=&a#googtrans(es|zh-CN)'>
-      <img class="imgBand" src="{{ asset('images/banderas/china_icono.png') }}" title='Mandarín'
-        alt='Idioma Mandarín'>
-    </a>
-    <a href='?vista=&b#googtrans(es|en)'>
-      <img class="imgBand" src="{{ asset('images/banderas/usa_icono.png') }}" title='Inglés'
-        alt='Idioma Inglés'>
-    </a>
-    <a href='?vista=&c#googtrans(es|fr)'>
-      <img class="imgBand" src="{{ asset('images/banderas/francia_icono.png') }}" title='Francés'
-        alt='Idioma Francés'>
-    </a>
-    <a href='?vista=&d#googtrans(es|es)' class='mr-3'>
-      <img class="imgBand" src="{{ asset('images/banderas/mexico_icono.png') }}" title='Español'
-        alt='Idioma Español'>
-    </a>
+        <br>
+        <a href="https://globalpage-prod.webex.com/join?surl=https%3A%2F%2Fsignin.webex.com%2Fcollabs%2F%23%2Fmeetings%2Fjoinbynumber%3FTrackID%3D%26hbxref%3D%26goid%3Dattend-meeting" title="Microsoft Teams" target="_blank">
+        <img class="imgBand" src="{{ asset('images/banderas/microsoft_teams.png') }}" alt="MT">
+        </a>
+        <a href="https://login.microsoftonline.com/?whr=tecnm.mx" title="Correo Institucional" target="_blank">
+        <img class="imgBand" src="{{ asset('images/banderas/correo_icono.png') }}" alt="Buzón">
+        </a>
+        <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
+        <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
+        </a>
+        <a href="{{ asset('documents/content/documentos_apoyo/horarios.pdf') }}" title="Horarios de Grupos" target="_blank">
+        <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
+        </a>
+        <a href='?vista=&a#googtrans(es|zh-CN)'>
+        <img class="imgBand" src="{{ asset('images/banderas/china_icono.png') }}" title='Mandarín'
+            alt='Idioma Mandarín'>
+        </a>
+        <a href='?vista=&b#googtrans(es|en)'>
+        <img class="imgBand" src="{{ asset('images/banderas/usa_icono.png') }}" title='Inglés'
+            alt='Idioma Inglés'>
+        </a>
+        <a href='?vista=&c#googtrans(es|fr)'>
+        <img class="imgBand" src="{{ asset('images/banderas/francia_icono.png') }}" title='Francés'
+            alt='Idioma Francés'>
+        </a>
+        <a href='?vista=&d#googtrans(es|es)' class='mr-3'>
+        <img class="imgBand" src="{{ asset('images/banderas/mexico_icono.png') }}" title='Español'
+            alt='Idioma Español'>
+        </a>
 
-    <img class="imgBand" title="Accesibilidad" src="{{ asset('images/banderas/ojo_icono.png') }}" alt="Débil Visual" />
-    {{--Elementos de accesibilidad--}}
-    <a title="Contraste" onclick="contraste()" style="color:#1B396A"><i class='fas fa-adjust' style='font-size:20px'></i></a>
-    <a title="Aumentar letra" style="color:#1B396A" onclick="zoomIn()">A+</a>
-    <a title="Disminuir letra"  style="color:#1B396A" onclick="zoomOut()">A-</a>
-    <a title="Restablecer tamaño"  style="color:#1B396A" onclick="zoomReset()">A </a>
+        <img class="imgBand" title="Accesibilidad" src="{{ asset('images/banderas/ojo_icono.png') }}" alt="Débil Visual" />
+        {{--Elementos de accesibilidad--}}
+        <a title="Contraste" onclick="contraste()" style="color:#1B396A"><i class='fas fa-adjust' style='font-size:20px'></i></a>
+        <a title="Aumentar letra" style="color:#1B396A" onclick="zoomIn()">A+</a>
+        <a title="Disminuir letra"  style="color:#1B396A" onclick="zoomOut()">A-</a>
+        <a title="Restablecer tamaño"  style="color:#1B396A" onclick="zoomReset()">A </a>
   </div>
 
 </div>
@@ -71,138 +74,138 @@
 
 {{--Menu blanco--}}
 <nav class="navbar navbar-expand-sm navbar-light bg-white" id="menuBlan">
- {{--Logo--}}
-  <a class="navbar-brand" href="{{route('inicio')}}" id="logo">
-    <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:30px; height: 35px;" />
-  </a>
+    {{--Logo--}}
+    <a class="navbar-brand" href="{{route('inicio')}}" id="logo">
+        <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:30px; height: 35px;" />
+    </a>
 
-  <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco" >
+    <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco" >
 
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
-    <ul class="navbar-nav  ml-auto bg-white">
-      <li class="nav-item dropdown  ml-auto">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
+        <ul class="navbar-nav  ml-auto bg-white">
+        <li class="nav-item dropdown  ml-auto">
 
-        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Alumnos
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
-            <ul class="submenu dropdown-menu">
-              <li>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
-              </li>
+            <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Alumnos
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
+                <ul class="submenu dropdown-menu">
+                <li>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
+                </li>
 
-              <li>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
-              </li>
-              <li>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
-              </li>
-              <li>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
-              </li>
+                <li>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
+                </li>
+                <li>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
+                </li>
+                <li>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
+                </li>
 
-           </ul>
-          </li>
-          <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
-          <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
-          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
-          <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Constancias ITSCH</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
-          <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
-          <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
-          <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
-          <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-          <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
+            </ul>
+            </li>
+            <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
+            <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
+            <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
+            <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Constancias ITSCH</a>
+            <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
+            <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
+            <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
+            <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
+            <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
+            <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
 
-        </ul>
-      </li>
+            </ul>
+        </li>
+
+            <li class="nav-item dropdown  ml-auto">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
+                    Institución
+                </a>
+
+                <div class="dropdown-menu">
+                        <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
+                        <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
+                        <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
+                </div>
+            </li>
+
 
         <li class="nav-item dropdown  ml-auto">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
-                Institución
+            <a class="nav-link active dropdown-toggle"href="#" id="navbarfgdgdrop" data-toggle="dropdown">
+            Normativos y Lineamientos
             </a>
+            <ul class="dropdown-menu">
+                <a class="dropdown-item"  href="{{asset('documents/content/normativos/Protocolo de regreso seguroF-J2022 RSIP-2.pdf')}}" target="_blank">Protocolo de salud</a>
+                <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
+                <a class="dropdown-item"  href="{{route('normativos.etica')}}">Subcomité de ética</a>
+                <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
 
+
+                <li>
+                <a class="dropdown-item dropdown-toggle menu-padre" href="#">Lineamientos</a>
+                <ul class="submenu dropdown-menu">
+                    <li>
+                    <a class="dropdown-item"href="{{route('normativos.ambiental')}}">Lineamientos Ambientales</a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item"href="{{route('normativos.plan2004')}}">Lineamientos plan 2004 </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
+                    </li>
+
+                </ul>
+                </li>
+
+
+                <a class="dropdown-item" href="{{route('normativos.rippa')}}">RIPPA</a>
+                <a class="dropdown-item" href="{{route('investigacion.investigacion')}}">Investigación </a>
+                <a class="dropdown-item" href="{{route('calidad.reglamento')}}">Reglamento Alumnos</a>
+                <a class="dropdown-item" href="{{route('calidad.reglamento_int')}}">Reglamento Interno</a>
+                <a class="dropdown-item" href="{{route('calidad.resultados_evaluacion')}}">Evaluacion Docente</a>
+                <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
+                <a class="dropdown-item" href="{{route('calidad.organizacional')}}">Manual de organización</a>
+                <a class="dropdown-item" href="{{route('calidad.procedimientos')}}">Manual de procedimientos</a>
+                <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
+            </ul>
+        </li>
+
+
+        <li class="nav-item dropdown  ml-auto">
+            <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
+            Egresados/Empleadores
+            </a>
             <div class="dropdown-menu">
-                    <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
-                    <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
+                <a class="dropdown-item" href="{{ route('seguimiento.egresados') }}">Seguimiento a egresados</a>
+                <a class="dropdown-item" href="{{route('seguimiento.empleadores')}}">Encuesta de Empleadores</a>
             </div>
         </li>
 
 
-      <li class="nav-item dropdown  ml-auto">
-          <a class="nav-link active dropdown-toggle"href="#" id="navbarfgdgdrop" data-toggle="dropdown">
-          Normativos y Lineamientos
-          </a>
-          <ul class="dropdown-menu">
-            <a class="dropdown-item"  href="{{asset('documents/content/normativos/Protocolo de regreso seguroF-J2022 RSIP-2.pdf')}}" target="_blank">Protocolo de salud</a>
-            <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
-            <a class="dropdown-item"  href="{{route('normativos.etica')}}">Subcomité de ética</a>
-            <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
-
-
-            <li>
-              <a class="dropdown-item dropdown-toggle menu-padre" href="#">Lineamientos</a>
-              <ul class="submenu dropdown-menu">
-                <li>
-                  <a class="dropdown-item"href="{{route('normativos.ambiental')}}">Lineamientos Ambientales</a>
-                </li>
-                <li>
-                  <a class="dropdown-item"href="{{route('normativos.plan2004')}}">Lineamientos plan 2004 </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
-                </li>
-                <li>
-                   <a class="dropdown-item" href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
-                </li>
-
-              </ul>
-            </li>
-
-
-            <a class="dropdown-item" href="{{route('normativos.rippa')}}">RIPPA</a>
-            <a class="dropdown-item" href="{{route('investigacion.investigacion')}}">Investigación </a>
-            <a class="dropdown-item" href="{{route('calidad.reglamento')}}">Reglamento Alumnos</a>
-            <a class="dropdown-item" href="{{route('calidad.reglamento_int')}}">Reglamento Interno</a>
-            <a class="dropdown-item" href="{{route('calidad.resultados_evaluacion')}}">Evaluacion Docente</a>
-            <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
-            <a class="dropdown-item" href="{{route('calidad.organizacional')}}">Manual de organización</a>
-            <a class="dropdown-item" href="{{route('calidad.procedimientos')}}">Manual de procedimientos</a>
-            <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
-          </ul>
-      </li>
-
-
-       <li class="nav-item dropdown  ml-auto">
-        <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
-          Egresados/Empleadores
-        </a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{ route('seguimiento.egresados') }}">Seguimiento a egresados</a>
-            <a class="dropdown-item" href="{{route('seguimiento.empleadores')}}">Encuesta de Empleadores</a>
-        </div>
-      </li>
-
-
-      <li class="nav-item dropdown  ml-auto">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbasdasdasardrop" data-toggle="dropdown">
-          Transparecia
-        </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
-            <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
-            <a class="dropdown-item" href="{{route('transparencia.aviso_privacidad')}}">Aviso de privacidad </a>
-            <a class="dropdown-item"href="{{ route('periodo.index') }}">Estados Financieros </a>
-          </div>
-      </li>
-      <a href="https://cdhidalgo.tecnm.mx:8083/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
-    </ul>
-  </div>
+        <li class="nav-item dropdown  ml-auto">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbasdasdasardrop" data-toggle="dropdown">
+            Transparecia
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
+                <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
+                <a class="dropdown-item" href="{{route('transparencia.aviso_privacidad')}}">Aviso de privacidad </a>
+                <a class="dropdown-item"href="{{ route('periodo.index') }}">Estados Financieros </a>
+            </div>
+        </li>
+        <a href="https://cdhidalgo.tecnm.mx:8083/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
+        </ul>
+    </div>
 </nav>
 
 
@@ -380,7 +383,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-3">
-            <img src="{{ asset('images/logoheader.svg') }}" style="max-width: 90%;" alt="">
+            <img src="{{ asset('images/campana/esc_mexico_blan.jpg') }}" style="max-width: 90%;" alt="">
           </div>
           <div class="col-sm-3">
             <h5>Enlaces</h5>
