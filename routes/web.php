@@ -90,6 +90,7 @@ Route::get('alumnos/encuestasservicio',function(){return view('content.alumnos.e
 Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluatutor');})->name('alumnos.evaluatutor');
 Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas');})->name('alumnos.prorrogas');
+Route::get('alumnos/asesorias',function(){return view('content.alumnos.asesorias');})->name('alumnos.asesorias');
 
 //Seguimiento empleadores y egresados
 Route::get('seguimiento/egresados',function(){return view('content.seguimiento.egresados');})->name('seguimiento.egresados');

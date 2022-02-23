@@ -86,40 +86,39 @@
     <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
         <ul class="navbar-nav  ml-auto bg-white">
         <li class="nav-item dropdown  ml-auto">
-
             <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Alumnos
             </a>
             <ul class="dropdown-menu">
-            <li>
-                <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
-                <ul class="submenu dropdown-menu">
                 <li>
-                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
-                </li>
+                    <a class="dropdown-item dropdown-toggle menu-padre" href="#"> Servicios Escolares</a>
+                    <ul class="submenu dropdown-menu">
+                        <li>
+                            <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
+                        </li>
 
-                <li>
-                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
+                        <li>
+                            <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
+                        </li>
+                        <li>
+                            <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
+                        </li>
+                        <li>
+                            <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
-                </li>
-                <li>
-                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
-                </li>
-
-            </ul>
-            </li>
-            <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
-            <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
-            <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
-            <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Constancias ITSCH</a>
-            <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
-            <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
-            <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
-            <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
-            <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-            <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
+                <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
+                <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
+                <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
+                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
+                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Constancias ITSCH</a>
+                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
+                <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
+                <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
+                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
+                <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
+                <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
 
             </ul>
         </li>
