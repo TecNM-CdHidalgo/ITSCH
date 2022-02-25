@@ -58,17 +58,30 @@ class BancoController extends Controller
     }
 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
+
+    public function show($op)
     {
        //Funcion que visualiza el banco de proyectos en la pagina principal
-       $banco = Banco::orderBy('created_at','desc')->get();
-       return View('content.vinculacion.banco_de_datos')->with('banco',$banco);
+
+       //Si la opción es 1 consultamos solo los abiertos
+        if($op==1)
+        {
+            $banco = Banco::orderBy('created_at','desc')->where('status',1)->get();
+        }
+        elseif($op==2)
+        {
+            $banco = Banco::orderBy('created_at','desc')->where('status',2)->get();
+        }
+        elseif($op==3)
+        {
+            $banco = Banco::orderBy('created_at','desc')->where('status',3)->get();
+        }
+        elseif($op==4)
+        {
+            $banco = Banco::orderBy('created_at','desc')->get();
+        }
+
+        return View('content.vinculacion.banco_de_datos')->with('banco',$banco);
     }
 
     /**

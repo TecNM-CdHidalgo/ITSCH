@@ -37,7 +37,7 @@
 			c.&nbsp;&nbsp;&nbsp;ING. Alejandro Romero Estrada. Departamento de Recursos Humanos</p>
 		    <BR>
 		<h4 style="margin-left: 49.65pt;">
-			5. &nbsp;&nbsp;&nbsp;MAE. Héctor Gomez Álvarez . Director Acad&eacute;mica</h4>
+			5. &nbsp;&nbsp;&nbsp;MAE. Héctor Gomez Álvarez . Director Acad&eacute;mico</h4>
 		<p style="margin-left:49.65pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">

@@ -77,7 +77,7 @@
                 <label for="sel1">Selecciona el status del proyecto</label>
                 <select class="form-control" id="status" name="status" required>
                     <option value=" ">Selecciona una opción</option>
-                    <option value="1">Inicio</option>
+                    <option value="1">Abierto</option>
                     <option value="2">En proceso</option>
                     <option value="3">Terminado</option>
                 </select>

@@ -3,13 +3,18 @@
 @section('content')
 	<h3>Banco de proyectos ITSCH</h3>
 	<hr>
+    <div style="text-align: right">
+        Filtrar:&nbsp;<a href="{{route('vinculacion.banco_proyectos',1)}}">Abiertos</a>|<a href="{{route('vinculacion.banco_proyectos',2)}}">En proceso</a>| <a href="{{route('vinculacion.banco_proyectos',3)}}">Terminados</a>| <a href="{{route('vinculacion.banco_proyectos',4)}}">Todos</a>
+    </div>
+
 	<div class="table-responsive-sm">
         <table class="table table-hover" id="tabBanco">
             <thead class="table-sm">
                 <tr>
                     <th>Carrera</th>
                     <th>Proyecto</th>
-                    <th>Participantes</th>
+                    <th>Status</th>
+                    <th>Vacantes</th>
                     <th>Empresa/Institución</th>
                     <th>Dirección</th>
                     <th>Telefono</th>
@@ -18,7 +23,6 @@
                     <th>Colaboradores</th>
                     <th>Alumnos</th>
                     <th>Fecha inicio</th>
-                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +30,15 @@
                     <tr>
                         <td>{{ $ba->carrera }}</td>
                         <td>{{ $ba->proyecto }}</td>
+                        <td>
+                            @if ($ba->status==1)
+                                <p class="bg-success text-white">Abierto</p>
+                            @elseif ($ba->status==2)
+                                <p class="bg-warning text-white">En proceso</p>
+                            @elseif ($ba->status==3)
+                                <p class="bg-danger text-white">Terminado</p>
+                            @endif
+                        </td>
                         <td>{{ $ba->vacantes }}</td>
                         <td>{{ $ba->empresa }}</td>
                         <td>{{ $ba->direccion }}</td>
@@ -35,15 +48,6 @@
                         <td>{{ $ba->colaboradores }}</td>
                         <td>{{ $ba->alumnos }}</td>
                         <td>{{ $ba->inicio }}</td>
-                        <td>
-                            @if ($ba->status==1)
-                                <p class="bg-success text-white">Inicio</p>
-                            @elseif ($ba->status==2)
-                                <p class="bg-warning text-white">En proceso</p>
-                            @elseif ($ba->status==3)
-                                <p class="bg-danger text-white">Terminado</p>
-                            @endif
-                        </td>
                     </tr>
                 @endforeach
             </tbody>
