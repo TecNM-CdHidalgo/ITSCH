@@ -4,7 +4,7 @@
 	<h3>Banco de proyectos ITSCH</h3>
 	<hr>
     <div style="text-align: right">
-        Filtrar:&nbsp;<a href="{{route('vinculacion.banco_proyectos',1)}}">Abiertos</a>|<a href="{{route('vinculacion.banco_proyectos',2)}}">En proceso</a>| <a href="{{route('vinculacion.banco_proyectos',3)}}">Terminados</a>| <a href="{{route('vinculacion.banco_proyectos',4)}}">Todos</a>
+        Filtrar:&nbsp;<a href="{{route('vinculacion.banco_proyectos',1)}}">Abiertos</a>| <a href="{{route('vinculacion.banco_proyectos',2)}}">En proceso</a>| <a href="{{route('vinculacion.banco_proyectos',3)}}">Terminados</a>| <a href="{{route('vinculacion.banco_proyectos',4)}}">Todos</a>
     </div>
 
 	<div class="table-responsive-sm">
