@@ -116,7 +116,7 @@
                                     @endif
                                 </div>
                             </li>
-                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica")
+                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica" || Auth::User()->tipo == "planeacion")
                                 <li>
                                     <a href="{{ route('buzon.show') }}" class="nav-link" title="Buzón"><i class='fas fa-envelope-open' style='font-size:16px'></i>&nbsp<b style="color: red"></b></a>
                                 </li>

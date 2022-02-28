@@ -42,6 +42,10 @@ class BuzonController extends Controller
 
     public function show()
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home')
+            ->with('error','No tiene permisos para ver esta sección');
+        }
         $msj=Buzon::where('status',0)->get();
         return view('admin.buzon.show')
         ->with('msj',$msj);
@@ -62,6 +66,10 @@ class BuzonController extends Controller
      */
     public function edit($id)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home')
+            ->with('error','No tiene permisos para ver esta sección');
+        }
         $msj=Buzon::find($id);
         $msj->status=1;
         $msj->save();
@@ -70,21 +78,15 @@ class BuzonController extends Controller
         ->with('msj',$msj);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
 
     public function destroy(Request $request)
     {
+        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "planeacion"){
+            return redirect()->route('home')
+            ->with('error','No tiene permisos para ver esta sección');
+        }
+
         $msj=Buzon::find($request->id);
         $msj->delete();
 

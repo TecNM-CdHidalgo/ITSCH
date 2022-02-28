@@ -2,26 +2,18 @@
 
 @section('content')
 <div class="container">
-    <br>   
+    <br>
     <div class="row justify-content-center">
         <div class="col-md-4 ">
-            <div class="card">
-                <div class="card-header" style="background-color: #031635; color:#fff;">{{ __('Login') }}</div>
-
-                <div class="card-body" style="opacity: .9; background-color:#031635;">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
-                            <img src="{{asset('images/login-w-icon.png')}}" style="width: 100px; height:100px;">
-                        </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                    <hr style="border-color: #fff; opacity: .5;">                    
+            <div class="card" style="width:370px">
+                <img class="card-img-top" src="{{asset('images/login-w-icon.png')}}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Login</h4>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="input-group mb-3 input-group-sm">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="height: 29px; background-color:#031635; color:#fff;">Correo</span>
+                                <span class="input-group-text">Correo</span>
                             </div>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
@@ -32,7 +24,7 @@
                         </div>
                         <div class="input-group mb-3 input-group-sm">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="height: 29px; background-color:#031635; color:#fff;">Contraseña</span>
+                                <span class="input-group-text">Contraseña</span>
                             </div>
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             @error('password')
@@ -40,17 +32,14 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>                     
-                        <br>
-                        <br>
-                        <br>
-                        <hr style="border-color: #fff; opacity: .5;">
+                        </div>
+                        <hr>
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember" style="color: #fff;">
+                                    <label class="form-check-label" for="remember">
                                         {{ __('Recordar datos de usuario') }}
                                     </label>
                                 </div>
@@ -59,16 +48,16 @@
 
                         <div class="row">
                             <div class="col-sm-12">
-                                <button type="submit" class="btn btn-info btn-sm" style="width: 100%;">
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
                                     Entrar
-                                </button>                              
+                                </button>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12">
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link"href="{{ route('password.request') }}" style="color: #fff;">
+                                    <a class="btn btn-link"href="{{ route('password.request') }}">
                                         {{ __('No recuerda su contraseña?') }}
                                     </a>
                                 @endif
@@ -76,7 +65,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+              </div>
         </div>
     </div>
 </div>
