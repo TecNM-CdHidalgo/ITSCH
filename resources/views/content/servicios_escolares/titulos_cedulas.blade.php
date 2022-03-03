@@ -43,7 +43,7 @@
                         <td>2</td>
                         <td>Catálogo de opciones de titulación y estructuras</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/catalogo de estructuras pl2015 act 2021.pdf ')}}" data-toogle="tooltip" title="Titulación por tesis." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/catalogo de estructuras pl2015 act 2021.pdf ')}}" data-toogle="tooltip" title="Titulación por tesis." target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>

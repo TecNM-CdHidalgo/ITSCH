@@ -145,8 +145,7 @@
                 <a class="dropdown-item"  href="{{route('normativos.calidad')}}">Calidad</a>
                 <a class="dropdown-item"  href="{{route('normativos.etica')}}">Subcomité de ética</a>
                 <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
-
-
+                <a class="dropdown-item"  href="{{asset('documents/content/normativos/reg_creditos.pdf')}}" target="_blank">Créditos complementarios</a>
                 <li>
                 <a class="dropdown-item dropdown-toggle menu-padre" href="#">Lineamientos</a>
                 <ul class="submenu dropdown-menu">
