@@ -18,7 +18,7 @@ class NoticiasController extends Controller
      */
     public function index()
     {
-        $articles = Noticias::orderBy('created_at','desc')->paginate(5);        
+        $articles = Noticias::orderBy('created_at','desc')->paginate(5);
         return View('admin.noticias.inicio')->with('articles',$articles);
     }
 
@@ -32,7 +32,7 @@ class NoticiasController extends Controller
          return View('admin.noticias.crear');
     }
 
-   
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -57,8 +57,8 @@ class NoticiasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        
+
+
        if(!Storage::has('public/noticias/imagenes')){
             Storage::makeDirectory('public/noticias/imagenes');
         }
@@ -67,13 +67,13 @@ class NoticiasController extends Controller
             return response()->json(array(['type' => 'error', 'message' => 'La noticia no existe']));
         }
 
-         //Codigo para guardar archivos 
+         //Codigo para guardar archivos
         if(!Storage::has('noticias/archivos')){
             Storage::makeDirectory('noticias/archivos');
         }
 
         if($request->has('archivos')){
-            
+
             // Creamos un arrelglo con las extemsiones validas
             $allowedfileExtension=['pdf','xls','xlsx','docx','doc'];
             for ($i = 0; $i < count($request->archivos); $i++) {
@@ -96,14 +96,14 @@ class NoticiasController extends Controller
                 $path = storage_path().'/app/public/noticias/imagenes/';
                 //Cambiar el nombre original por uno diferente en el servidor
                 $name = 'noticia_'.time().'.'.strtolower($imageExtension);
-                //$name = 
+                //$name =
                 $file->move($path,$name);
                 Storage::delete(['public/noticias/imagenes/'.$article->imagen]);
                 $article->imagen = $name;
             }else{
                 return response()->json(array(['type' => 'error', 'message' => 'La extension '.$imageExtension.' no es valida']));
             }
-        }          
+        }
 
 
         if($request->has('archivos'))//Validamos si existe un archivo
@@ -115,7 +115,7 @@ class NoticiasController extends Controller
             $path_to_verify = 'public/noticias/archivos/'.$article->id;
             if(!Storage::has($path_to_verify)){
                 Storage::makeDirectory($path_to_verify);
-            }            
+            }
             for ($i = 0; $i < count($request->archivos) ; $i++) {
                 //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
                 $file=$request->archivos[$i];
@@ -129,12 +129,12 @@ class NoticiasController extends Controller
                 $fileNot->id_not=$article->id;
                 $fileNot->nom_archivo=$name;//Obtiene el nombre de la imagen para guardarlo en la bd
                 $fileNot->save();//Guarda la evidencia en su tabla
-                
+
             }
         }
         $article->titulo = $request->titulo;
         $article->contenido = $request->contenido;
-        $article->sintesis = $request->sintesis;        
+        $article->sintesis = $request->sintesis;
         $article->fecha_pub = $request->fecha_pub;
         $article->fecha_fin = $request->fecha_fin;
         $article->resaltar = $request->resaltar;
@@ -167,9 +167,9 @@ class NoticiasController extends Controller
 
 
     /*Funcion para dar de alta las noticias*/
-    public function save(Request $request){ 
+    public function save(Request $request){
 
-        
+
         if(!Storage::has('noticias/imagenes')){
             Storage::makeDirectory('noticias/imagenes');
         }
@@ -183,22 +183,22 @@ class NoticiasController extends Controller
             if($imageExtension == 'jpg' || $imageExtension == 'png' || $imageExtension == "jpeg"){
                 $path = storage_path().'/app/public/noticias/imagenes/';
                 //Cambiar nombre por uno diferente en el servidor
-                $name = 'noticia_'.time().'.'.strtolower($imageExtension);                
+                $name = 'noticia_'.time().'.'.strtolower($imageExtension);
                 $file->move($path,$name);
                 $article->imagen = $name;
             }else{
                 return response()->json(array(['type' => 'error', 'message' => 'La extension '.$imageExtension.' no es valida']));
             }
-        }     
+        }
 
-        $article->autor = Auth::User()->name;             
+        $article->autor = Auth::User()->name;
         $article->fecha_pub = $request->fecha_pub;
         $article->fecha_fin = $request->fecha_fin;
-        $article->resaltar = $request->resaltar;          
+        $article->resaltar = $request->resaltar;
         //$article->save();
-       
 
-        //Codigo para guardar archivos 
+
+        //Codigo para guardar archivos
         if(!Storage::has('noticias/archivos')){
             Storage::makeDirectory('noticias/archivos');
         }
@@ -222,8 +222,8 @@ class NoticiasController extends Controller
         if($request->has('archivos'))//Validamos si existe un archivo
         {
 
-           //Modificamos la noticia para saber que tiene archivos agregados             
-           $article->arch_adj = 1;  
+           //Modificamos la noticia para saber que tiene archivos agregados
+           $article->arch_adj = 1;
            $article->save();
            //return response()->json($request->has('archivos')); Comentario para consola AJAX
             //Generamos la ruta donde se guardaran los archivos de las noticias
@@ -245,9 +245,9 @@ class NoticiasController extends Controller
                 $fileNot->id_not=$article->id;
                 $fileNot->nom_archivo=$name;//Obtiene el nombre de la imagen para guardarlo en la bd
                 $fileNot->save();//Guarda la evidencia en su tabla
-                
+
             }
-          
+
         }
         else
         {
@@ -271,5 +271,5 @@ class NoticiasController extends Controller
         ->with('archivos',$archivos)
         ->with('articulo',$article);
     }
-   
+
 }

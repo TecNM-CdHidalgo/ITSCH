@@ -20,14 +20,14 @@
 				@endif
 			@endforeach
 		</ul>
-		<div class="carousel-inner" style="background-color: black;">
+		<div class="carousel-inner" style="background-color: white;">
 			@php
 				$ban=true;
 			@endphp
 			@foreach($noticias as $not)
 				@if($not->resaltar==1)
 					@if($ban)
-						<div class="carousel-item active text-center" style="background-color: black;">
+						<div class="carousel-item active text-center" style="background-color:white;">
 							<a href="{{route('ver',$not->id)}}">
 							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
 						    </a>
@@ -36,7 +36,7 @@
 				    		$ban=false;
 				    	@endphp
 					@else
-						<div class="carousel-item text-center" style="background-color: black;">
+						<div class="carousel-item text-center" style="background-color: white;">
 						     <a href="{{route('ver',$not->id)}}">
 							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
 						    </a>
@@ -67,7 +67,7 @@
 		</div>
 	</div>
 	{{-- Seccion de fichas --}}
-	{{--  
+	{{--
     <hr class="red">
 		<div class="row">
 			<div class="col-sm-12" style="text-align: center">

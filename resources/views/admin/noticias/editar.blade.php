@@ -41,8 +41,8 @@
                     </div>
                     <select class="form-control" id="tipo" required name="resaltar">
                         <option value="">Selecciona un tipo</option>
-                        <option value="0">Sin resaltar</option>
-                        <option value="1">Con resalte</option>
+                        <option value="0">Sin Carrusel</option>
+                        <option value="1">En carrusel</option>
                     </select>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-sm-4">
                 <div class="input-group mb-3 input-group-sm">
@@ -91,7 +91,7 @@
 
 
         <textarea id="input" name="contenido" rows="10" required>{{ $article->contenido }}</textarea>
-                  
+
         <div class="d-flex">
             <button type="submit" id="submit-all" class="btn btn-primary mt-2 ml-auto"> Guardar </button>
         </div>
@@ -108,6 +108,9 @@
             $("#input").cleditor({
                 height: 260
             });
+            //Para seleccionar una opcion de un select de maner automatica
+            const art = {!! json_encode($article) !!};//Lee una variable que llega a la vista y la apsa a jqwery
+            $('#tipo > option[value='+art['resaltar']+']').attr('selected', 'selected');//Selecciona la opcion del select que le corresponde
         });
         $('#submitForm').on('submit', function(event){
             event.preventDefault();

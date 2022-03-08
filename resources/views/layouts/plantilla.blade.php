@@ -42,9 +42,9 @@
         <a href="{{ asset('documents/content/documentos_apoyo/horarios.pdf') }}" title="Horarios de Grupos" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
         </a>
-        <a href='?vista=&a#googtrans(es|zh-CN)'>
-        <img class="imgBand" src="{{ asset('images/banderas/china_icono.png') }}" title='Mandarín'
-            alt='Idioma Mandarín'>
+        <a href="https://www.univim.edu.mx">
+        <img class="imgBand" src="{{ asset('images/banderas/univim.jpg') }}" title='UNIVIM'
+            alt='UNIVIM'>
         </a>
         <a href='?vista=&b#googtrans(es|en)'>
         <img class="imgBand" src="{{ asset('images/banderas/usa_icono.png') }}" title='Inglés'

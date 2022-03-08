@@ -5,20 +5,22 @@
 @endsection
 
 @section('contenido')
-  
+
   <a href="{{ route('admin.noticias.crear')}}" class="btn btn-primary float-right mb-1" data-toggle="tooltip" data-replacement="top" title="Crear nueva noticia">
     <img src="{{ asset('images/icons/add-file-32.png') }}" alt="">
   </a>
   <div style="clear:both;"></div>
 
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" id="noticias">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Título</th>
           <th scope="col">Author</th>
-          <th scope="col">Creado</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">F. Publicación</th>
+          <th scope="col">F. Termino</th>
           <th scope="col">Acciones</th>
         </tr>
       </thead>
@@ -35,7 +37,13 @@
             <th scope="row">{{ ++$index }}</th>
             <td>{{ $article->titulo }}</td>
             <td>{{ $article->autor }}</td>
-            <td>{{ $date }}</td>
+            @if($article->resaltar==0)
+                <th>Sin carrusel</th>
+            @else
+                <th>En carrusel</th>
+            @endif
+            <td>{{ $article->fecha_pub }}</td>
+            <td>{{ $article->fecha_fin }}</td>
             <td>
               <a href="{{ route('admin.noticias.ver',$article->id) }}" class="btn btn-mds-primary" data-toggle="tooltip" data-replacement="top" title="Vista previa">
                 <img src="{{ asset('images/icons/eye-3-24.png') }}" alt="">
@@ -66,6 +74,49 @@
               window.location.href = "{{ route('admin.noticias.eliminar') }}"+"?id="+id;
           });
       });
+
+       //Codigo para adornar las tablas con datatables
+	    $(document).ready(function() {
+	        $('#noticias').DataTable({
+
+	          	dom: 'Bfrtip',
+
+	            responsive: {
+				    breakpoints: [
+				      {name: 'bigdesktop', width: Infinity},
+				      {name: 'meddesktop', width: 1366},
+				      {name: 'smalldesktop', width: 1280},
+				      {name: 'medium', width: 1188},
+				      {name: 'tabletl', width: 1024},
+				      {name: 'btwtabllandp', width: 848},
+				      {name: 'tabletp', width: 768},
+				      {name: 'mobilel', width: 600},
+				      {name: 'mobilep', width: 320}
+				    ]
+				},
+
+	            lengthMenu: [
+			        [ 5, 10, 25, 50, -1 ],
+			        [ '5 reg', '10 reg', '25 reg', '50 reg', 'Ver todo' ]
+			    ],
+
+	            buttons: [
+	            	{extend: 'collection', text: 'Exportar',
+	            		buttons: [
+	            			{ extend: 'copyHtml5', text: 'Copiar' },
+	            			'csvHtml5',
+	            			'excelHtml5',
+	            			'pdfHtml5',
+	            			{ extend: 'print', text: 'Imprimir' },
+	            		]},
+	                { extend: 'colvis', text: 'Columnas visibles' },
+	                { extend:'pageLength',text:'Ver registros'},
+	            ],
+	            "language": {
+                   "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+               }
+	        });
+	    });
     </script>
   @endsection
 @endsection

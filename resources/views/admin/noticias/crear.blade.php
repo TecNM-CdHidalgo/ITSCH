@@ -41,8 +41,8 @@
                     </div>
                     <select class="form-control" id="tipo" required name="resaltar">
                         <option value="">Selecciona un tipo</option>
-                        <option value="0">Sin resaltar</option>
-                        <option value="1">Con resalte</option>
+                        <option value="0">Sin carrusel</option>
+                        <option value="1">En carrusel</option>
                     </select>
                 </div>
             </div>
@@ -87,7 +87,7 @@
         </div>
 
         <textarea id="input" name="contenido" rows="10" required></textarea>
-        
+
         <div class="d-flex">
             <button type="submit" id="submit-all" class="btn btn-primary mt-2 ml-auto"> Guardar </button>
         </div>
