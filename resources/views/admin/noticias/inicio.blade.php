@@ -60,7 +60,6 @@
       </tbody>
     </table>
   </div>
-  {{ $articles->links() }}
 
   <div style="padding: 100px;"></div>
   @section('js')

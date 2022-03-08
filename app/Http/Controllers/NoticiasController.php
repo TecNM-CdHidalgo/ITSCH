@@ -18,7 +18,7 @@ class NoticiasController extends Controller
      */
     public function index()
     {
-        $articles = Noticias::orderBy('created_at','desc')->paginate(5);
+        $articles = Noticias::orderBy('created_at','desc')->get();
         return View('admin.noticias.inicio')->with('articles',$articles);
     }
 
