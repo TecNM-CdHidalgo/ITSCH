@@ -47,10 +47,11 @@ class ProgramasController extends Controller
         ->join('reticulas', 'especialidades.id', '=', 'reticulas.id_especialidad')
         ->select('especialidades.id','especialidades.nombre','especialidades.clave','especialidades.objetivo', 'reticulas.nom_arch_ret')
         ->get();
-        $objetivos=Objetivo::where('id_programa',$id)->get();
+        $objetivos=Objetivo::where('id_programa',$id)->orderby('id','asc')->get();
         $atributos=Atributo::select('atributos.id as idAtr','atributos.numero as numAtr','atributos.descripcion as desAtr','criterios.id as idCri', 'criterios.numero as numCri','criterios.descripcion as desCri')
         ->leftjoin('criterios', 'atributos.id', '=', 'criterios.id_atributos')
         ->where('atributos.id_programa',$id)
+        ->orderby('numAtr','asc')
         ->get();
         $personal=Personal::where('id_programa',$id)->get();
         $formacion=Formacion::all();
@@ -62,11 +63,10 @@ class ProgramasController extends Controller
         $archivos=Archivo::where('id_programa',$id)->get();
 
         //Seleccionamos los datos del programa seleccionado
-        $programa=Programa::where('id',$id)->get(); 
+        $programa=Programa::where('id',$id)->get();
 
         //Materias de tronco comun para el plan de estudios
-        $mat_com=Asignatura_programa::where('id_programa',$id)->get(); 
-
+        $mat_com=Asignatura_programa::where('id_programa',$id)->orderby('id','asc')->get();
         //Seleccionamos la especialidad que este en la primera posicion
         $idEsp=Especialidad::select('id')->where('id_programa',$id)->get();
 
@@ -77,6 +77,7 @@ class ProgramasController extends Controller
             ->join('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
             ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
             ->where('especialidades.id',$idEsp[0]->id)
+            ->orderby('materias_especialidad.id','asc')
             ->get();
         }
         else
@@ -85,6 +86,7 @@ class ProgramasController extends Controller
             ->leftjoin('materias_especialidad','materias_especialidad.id_especialidad','especialidades.id')
             ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
             ->where('programas.id',$id)
+            ->orderby('materias_especialidad.id','asc')
             ->get();
         }
 
