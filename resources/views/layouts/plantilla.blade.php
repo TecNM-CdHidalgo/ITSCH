@@ -116,6 +116,7 @@
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
                 <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
+                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">Examen psicometrico</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
@@ -174,7 +175,7 @@
                 <a class="dropdown-item" href="{{route('calidad.proceso_seleccion')}}">Proceso de selección de Alumnos</a>
                 <a class="dropdown-item" href="{{route('calidad.organizacional')}}">Manual de organización</a>
                 <a class="dropdown-item" href="{{route('calidad.procedimientos')}}">Manual de procedimientos</a>
-                <a class="dropdown-item" href="{{route('normativos.piid')}}">PIID 2013-2018</a>
+                <a class="dropdown-item" href="{{route('normativos.piid')}}">PDI 2019-2024</a>
             </ul>
         </li>
 
