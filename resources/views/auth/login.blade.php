@@ -5,7 +5,7 @@
     <br>
     <div class="row justify-content-center">
         <div class="col-md-4 ">
-            <div class="card" style="width:370px">
+            <div class="card" style="width:290px">
                 <img class="card-img-top" src="{{asset('images/login-w-icon.png')}}" alt="Card image" style="width:100%">
                 <div class="card-body">
                   <h4 class="card-title">Login</h4>
