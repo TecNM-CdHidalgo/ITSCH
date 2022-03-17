@@ -123,7 +123,7 @@
                             @endif
                             @if (Auth::User()->tipo == "administrador")
                                 <li>
-                                    <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/reports/dashboard?params=_r..dimension-value%3D%7B%22dimension%22:%22eventName%22,%22value%22:%22page_view%22%7D&r=events-overview-page-view" class="nav-link" title="Buzón"><i class='far fa-chart-bar' style='font-size:14px'></i> Estadisticos</a>
+                                    <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="nav-link" title="Buzón"><i class='far fa-chart-bar' style='font-size:14px'></i> Estadisticos</a>
                                 </li>
                             @endif
                         @endif

@@ -4,25 +4,7 @@
 @section('content')
 
     <div class="container">
-<h2> Inscripciones </h2>
-<hr class="red">
 
-
-                
-<div class="mx-auto" style="width: 200px;">
-  
-<img src="{{asset('images/content/departamentos/cle/cle20221.jpeg')}}" class="shadow-lg p-3 mb-5 bg-body rounded" >
-
-
-</div>
-
-<h2> Examen de ubicación </h2>
-<hr class="red">
-<div class="container">
-
-<img src="{{asset('images/content/departamentos/cle/cle20222.jpeg')}}" class="img-fluid" alt="...">
-
-</div>
                 <h2 align=center>DIPLOMADO DE INGLÉS</h2>
 
                 <p>Descripción:</p>
