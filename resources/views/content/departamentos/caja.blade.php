@@ -18,7 +18,7 @@
         <p>Las tarifas actualizadas al año en curso las puedes descargar desde el link:</p>
 
         <p align="center">
-        	<a href="{{asset('documents/content/departamentos/caja/Tarifas_Caja_2021.pdf')}}"target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>Tarifas de Servicios de Caja</strong>
+        	<a href="{{asset('documents/content/departamentos/caja/TABULADOR DE SERVICIOS 2022.pdf')}}"target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>Tarifas de Servicios de Caja</strong>
         	</a>
         </p>
 
