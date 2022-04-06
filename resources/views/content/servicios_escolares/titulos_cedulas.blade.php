@@ -35,7 +35,7 @@
                         <td>Requisitos y procedimiento de titulación hibrida</td>
                         <td>
                             <a type="button" class="btn btn-primary"
-                                href="{{asset('documents/content/servicios escolares/proceso titulacion hibrida.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." download  target="_blank">
+                                href="{{asset('documents/content/servicios escolares/formato de titulacion hibrida abril 22.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." download  target="_blank">
                             <i class='fas fa-download' style='font-size:20px'></i>
                         </a></td>
                     </tr>
@@ -105,7 +105,7 @@
                         <td>6</td>
                         <td>Constancia de no Adeudo para alumnos próximos a Titularse</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/for_no_adeudo_tit_v3.docx ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/for_no_adeudo_tit_v4.docx ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." download  target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
