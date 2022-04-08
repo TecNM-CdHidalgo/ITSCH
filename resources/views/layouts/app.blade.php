@@ -4,7 +4,7 @@
     <head>
         {{-- Configuracion de la plantilla --}}
         <meta charset="UTF-8">
-        <meta name="description" content="Página del Tecnológico Nacional de México/Campus Ciudad Hidalgo Michoacán">
+        <meta name="description" content="Tecnológico Nacional de México/Campus Ciudad Hidalgo Michoacán, Una institución de vanguardia en la tecnológia">
         <link rel="shortcut icon" href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="{{ asset('js/app.js') }}" defer></script>
