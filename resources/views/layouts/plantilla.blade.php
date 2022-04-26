@@ -197,7 +197,7 @@
             </a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="https://bit.ly/3dgQbYx">INAI </a>
-                <a class="dropdown-item" href="https://bit.ly/2W2zhap">Transparencia y acceso a la información pública</a>
+                <a class="dropdown-item" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=3378&idEntidadParametro=16&idSectorParametro=21">Transparencia y acceso a la información pública</a>
                 <a class="dropdown-item" href="{{route('transparencia.aviso_privacidad')}}">Aviso de privacidad </a>
                 <a class="dropdown-item"href="{{ route('periodo.index') }}">Estados Financieros </a>
             </div>
