@@ -46,7 +46,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $ar->nombre }}</td>
                             <td>
-                                <a href="{{ asset('storage/transparencia/'.$periodos[0]->nombre.'/'.$ar->nom_arch) }}" download type="button" title="Descargar" class="btn btn-primary btn-sm"><i class='fas fa-cloud-download-alt' style='font-size:14px'></i></a>
+                                <a href="{{ asset('storage/transparencia/'.$per_sel[0]->nombre.'/'.$ar->nom_arch) }}" download type="button" title="Descargar" class="btn btn-primary btn-sm"><i class='fas fa-cloud-download-alt' style='font-size:14px'></i></a>
                             </td>
                         </tr>
                     @endforeach
