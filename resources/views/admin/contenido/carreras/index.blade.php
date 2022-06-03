@@ -25,7 +25,7 @@
                 </div>
             </form>
             {{-- Permisos para que solo el administrador de de alta las carreras --}}
-            @if (Auth::User()->tipo == "Administrador")
+            @if (Auth::User()->tipo == "administrador")
                 <div class="collapse demo" style="text-align: right;">
                     <a href="{{ route('carreras.editCarrera') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-edit' style='font-size:14px'></i> Editar Carreras</a>
                 </div>

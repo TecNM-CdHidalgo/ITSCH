@@ -49,7 +49,21 @@
         </tbody>
     </table>
 
-    <h3>¿Que es un ingeniero en {{ $pro_act->nombre }}?</h3>
+
+    <h3>¿Qué es un
+        @if($pro_act->tipo==1)
+            ingeniero
+        @else
+            maestro
+        @endif
+        @php $var=substr($pro_act->nombre,strpos($pro_act->nombre," ")+1,2) @endphp
+        @if($var=="en")
+            {{ substr($pro_act->nombre,strpos($pro_act->nombre," ")) }}?
+        @else
+            en {{ substr($pro_act->nombre,strpos($pro_act->nombre," ")) }}?
+        @endif
+    </h3>
+
     <hr>
     <p id="p_definicion">{{ $pro_act->definicion }}</p>
     <br>

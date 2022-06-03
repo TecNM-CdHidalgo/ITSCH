@@ -296,7 +296,7 @@ class CarrerasController extends Controller
     /*Metodo para agregar los programas educativos de la institución */
     public function storeCarrera(Request $request)
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
 
@@ -324,7 +324,7 @@ class CarrerasController extends Controller
     /*Metodo para eliminar los programas educativos de la institución */
     public function destroyCarrera($id)
     {
-        if(Auth::User()->tipo != "Administrador"){
+        if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
 
