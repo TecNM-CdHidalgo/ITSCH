@@ -68,22 +68,22 @@
     <p id="p_definicion">{{ $pro_act->definicion }}</p>
     <br>
 
-    <h3>Misión de {{ $pro_act->nombre }}</h3>
+    <h3>Misión</h3>
     <hr>
     <p id="p_mision">{{ $pro_act->mision }}</p>
     <br>
 
-    <h3>Visión de {{ $pro_act->nombre }}</h3>
+    <h3>Visión</h3>
     <hr>
     <p id="p_vision">{{ $pro_act->vision }} </p>
     <br>
 
-    <h3>Politica de {{ $pro_act->nombre }}</h3>
+    <h3>Politica</h3>
     <hr>
     <p id="p_politica">{{ $pro_act->politica }}</p>
     <br>
 
-    <h3>Objetivo de {{ $pro_act->nombre }}</h3>
+    <h3>Objetivo</h3>
     <hr>
     <p id="p_objetivo">{{ $pro_act->objetivo }}</p>
     <br>
@@ -112,7 +112,7 @@
 
     <hr class="red">
 
-    <h3>PIID del programa educativo</h3>
+    <h3>PDI del programa educativo</h3>
         @if(!$archivos->isEmpty())
             @if($archivos[0]->nom_arch_piid<>"")
                 <a href="{{ asset('storage/carreras_archivos/'.$archivos[0]->nom_arch_piid) }}" target="_blank" download type="button" class="btn btn-primary btn-sm">PIID {{ $pro_act->nombre }}</a>
@@ -300,7 +300,7 @@
     </div>
     <br>
 
-    <h3>Estructura académica</h3>
+    <h3>Personal académico</h3>
     <hr>
 
     <div class="table-responsive">
