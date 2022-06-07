@@ -58,7 +58,7 @@
 	{{--Contenido de noticias--}}
 	<div class="row">
 		<div class="col-sm-3">
-			<h1>Noticias</h1>
+			<h3>Noticias</h3>
 		</div>
 		<div class="col-sm-3"></div>
 		<div class="col-sm-5"></div>
@@ -66,105 +66,49 @@
 			<div id="occ-widget"></div>
 		</div>
 	</div>
-	{{-- Seccion de fichas --}}
-	{{--
-    <hr class="red">
-		<div class="row">
-			<div class="col-sm-12" style="text-align: center">
-				<img src="{{ asset('images/fichas2021.jpg') }}" alt="Fichas" style="width: 800px;">
-			</div>
-		</div>
-		<br>
-		<div style="text-align: center">
-			<a href="{{ asset('/vinculacion/fichas2021') }}" class="btn btn-success btn-sm" type="button">Obtén tu ficha aquí</a>
-		</div>
-		<br>
-		<br>
-	--}}
+
 	<hr class="red">
-    @foreach($noticias2 as $not2)
-	    <div class="noticias">
-	    	<h3><b>{{$not2->titulo}}</b></h3>
-	    	<h5>{{$not2->sintesis}}</h5>
-		    <div class="row">
-		    	<div class="col-xl-5" style="height: 200px">
-		    		<a href="{{route('ver',$not2->id)}}">
-						<img  src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='rounded imgNotices'/>
-					</a>
-		    	</div>
-		    	{{--Descripcion de la noticia--}}
-		    	<div class="col-xl-7 regContent">
-		    		@php
 
-		    			$tam=strlen($not2->contenido);
-		    			if($tam<2800)
-		    			{
-		    				echo $not2->contenido;
-		    			}
-		    			else
-		    			{
-		    				$ncar=$tam*.5;
+    <div class="row row-cols-1 row-cols-md-3">
+        @foreach($noticias2 as $not2)
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <a href="{{route('ver',$not2->id)}}">
+                            <img  src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
+                        </a>
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
 
-		    				for($x=0; $x<=$ncar; $x++)
-		    				{
-		    					echo $not2->contenido[$x];
-		    				}
-		    				echo "...";
+                    <!--Card content-->
+                    <div class="card-body">
 
-		    				//Buscar parrafor abiertos para cerrarlos
-		    				$p=substr_count($not2->contenido,"<p",0,$ncar);
-		    				$pfin=substr_count($not2->contenido,"</p>",0,$ncar);
-		    				$totP=$p-$pfin;
-		    				for($y=0;$y<$totP;$y++) //Ponemos los p que faltan por cerrar
-		    				{
-		    					echo "</p>";
-		    				}
+                    <!--Title-->
+                    <h4 class="card-title">{{$not2->titulo}}</h4>
+                    <!--Text-->
+                    <p class="card-text">{{$not2->sintesis}}</p>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <button type="button" class="btn btn-light-blue btn-md">Leer más</button>
 
-		    				//Buscar comillas abiertos para cerrarlos
-		    				$com=substr_count($not2->contenido,'"',0,$ncar);
-		    				$totCom=$com%2;
-		    				for($y=0;$y<$totCom;$y++) //Ponemos los "" que faltan por cerrar
-		    				{
-		    					echo '"';
-		    				}
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer text-muted text-center mt-4">
+                        <div class="row">
+                            <div class="col-sm-4"><p style="font-size: x-small">Inicio: {{$not2->fecha_pub}}</p> </div>
+                            <div class="col-sm-4"><p style="font-size: x-small">Fin: {{$not2->fecha_fin}}</p></div>
+                            <div class="col-sm-4"><p style="font-size: x-small">Autor: {{$not2->autor}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+        @endforeach
 
-		    				echo "<br>";
+    </div>
 
-		    				echo "<h5><b><a href='Noticias/Ver/$not2->id'>(Leer mas...)</a></b></h5>";
-
-		    				//Buscar div para cerrarlos al final
-		    				$divs=substr_count($not2->contenido,"<div",0,$ncar);
-		    				$divsFin=substr_count($not2->contenido,"</div>",0,$ncar);
-		    				$totDiv=$divs-$divsFin;
-		    				for($y=0;$y<$totDiv;$y++) //Ponemos los divs que faltan por cerrar
-		    				{
-		    					echo "</div>";
-		    				}
-		    			}
-		            @endphp
-
-		    	</div>
-		    </div>
-		    <div class="row">
-		    	<div class="col-sm-3">
-		    		@if($not2->arch_adj)
-			    		<a href="{{route('ver',$not2->id)}}">
-			    			Archivos adjuntos.....
-			    		</a>
-		    		@endif
-		    	</div>
-		    	<div class="col-sm-3 blockquote-footer">
-		    		<p>Inicio: {{$not2->fecha_pub}}</p>
-		    	</div>
-		    	<div class="col-sm-3 blockquote-footer">
-		    		<p>Fin: {{$not2->fecha_fin}}</p>
-		    	</div>
-		    	<div class="col-sm-3 blockquote-footer">
-		    		<p>Autor: {{$not2->autor}}</p>
-		    	</div>
-		    </div>
-	    </div>
-	@endforeach
 
 	{{--Redes sociales--}}
 	<div class="info">
