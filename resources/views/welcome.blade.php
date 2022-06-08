@@ -78,9 +78,7 @@
                         <a href="{{route('ver',$not2->id)}}">
                             <img  src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
                         </a>
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
+
                     </div>
 
                     <!--Card content-->
@@ -91,7 +89,7 @@
                     <!--Text-->
                     <p class="card-text">{{$not2->sintesis}}</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button type="button" class="btn btn-light-blue btn-md">Leer más</button>
+                    <a href="{{route('ver',$not2->id)}}" class="btn btn-light-blue btn-md">Leer más</a>
 
                     </div>
                     <!-- Card footer -->
