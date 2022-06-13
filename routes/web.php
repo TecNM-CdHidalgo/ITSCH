@@ -151,6 +151,11 @@ Route::get('/noticia/{image_name}', function($image_name)
 //Rutas del buzón
 Route::get('contenido/buzon/index',[BuzonController::class,'index'])->name('contenido.buzon.index');
 Route::get('contenido/buzon/store',[BuzonController::class,'store'])->name('contenido.buzon.store');
+
+//Rutas de denuncia de acoso o discriminación
+Route::get('contenido/denuncia/index',function(){return view('content.buzon.denuncia');})->name('contenido.denuncia.index');
+
+
 //Fin Rutas publicas***********************************************************************
 
 

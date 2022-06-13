@@ -15,7 +15,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-parent="#accordion0" data-toggle="collapse" href="#panel-01" aria-expanded="true" aria-controls="panel-01">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'><h3>¿QUE ES LA RESIDENCIA PROFESIONAL?</h3></p>
+                            <p style='font-size: 2.5em; '><h3 style="color: #9D2449;">¿QUE ES LA RESIDENCIA PROFESIONAL?</h3></p>
                             </a>
                         </h4>
                         <button type="button" class="collpase-button collapsed" data-parent="#accordion0" data-toggle="collapse" href="#panel-01"></button>
@@ -47,7 +47,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-parent="#accordion1" data-toggle="collapse" href="#panel-02" aria-expanded="true" aria-controls="panel-02">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'><h3>DURACION</h3></p>
+                            <p style='font-size: 2.5em;'><h3 style="color: #9D2449;">DURACION</h3></p>
                             </a>
                         </h4>
                         <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse" href="#panel-02"></button>
@@ -66,7 +66,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-parent="#accordion2" data-toggle="collapse" href="#panel-03" aria-expanded="true" aria-controls="panel-03">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'><h3>REQUISITOS:</h3></p>
+                            <p style='font-size: 2.5em;'><h3 style="color: #9D2449;">REQUISITOS:</h3></p>
                             </a>
                         </h4>
                         <button type="button" class="collpase-button collapsed" data-parent="#accordion2" data-toggle="collapse" href="#panel-03"></button>
@@ -82,6 +82,125 @@
                     </div>
                 </div>
             </div>
+            <hr class="red">
+            <div class="panel-group ficha-collapse" id="accordion4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-parent="#accordion4" data-toggle="collapse" href="#panel-04" aria-expanded="true" aria-controls="panel-04">
+                            <p style='font-size: 2.5em;'><h3 style="color: #9D2449;">DOCUMENTOS A ENTREGAR AL INICIO DE RESIDENCIAS PROFESIONALES:</h3></p>
+                            </a>
+                        </h4>
+                        <button type="button" class="collpase-button collapsed" data-parent="#accordion4" data-toggle="collapse" href="#panel-04"></button>
+                    </div>
+                    <div class="panel-collapse collapse in" id="panel-04">
+                        <div class="panel-body">
+                            <p align="justify">
+                            1. Anteproyecto.
+                            (Firmado de aceptación por el revisor. Entregarlo a la encargada de residencias al inicio de su residencia.)
+                            <hr>
+                            2. Solicitud de residencias.
+                            (Periodo bien establecido fecha inicio y fecha final de residencias) entregarlo a la encargada de residencias al inicio de su residencia.<br>
+                            <hr>
+                            3. Convenio de residencias profesinales.
+                            (Llenar el convenio y entregarlo a la encargada de residencias y una copia a vinculación).
+                            <hr>
+                            4. Cardex con calificaciones.
+                            (Tener aprobado al menos 80% de créditos de su plan de estudio).
+                            <hr>
+                            5. Carta de aceptación.
+                            (Hoja membretada y dirigida al jefe de carrera, debe incluir nombre del alumno, nombre de proyecto, asesor por parte de la empresa, fecha de inicio y fecha final de residencias).
+                            <hr>
+                            6. Carta de presentación.
+                            (La emite vinculación y se debe de entregar una copia a la encargada de residencias firmada y sellada por la empresa).
+                            <hr>
+                            7. Constancia de Acreditación de servicio social.
+                            (Entregarlo a la encargada de residencias al inicio de su residencia).
+                            <hr>
+                            8. Acreditación de actividades complementarias.
+                            (La emite el jefe de carrera).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="red">
+            <div class="panel-group ficha-collapse" id="accordion5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-parent="#accordion5" data-toggle="collapse" href="#panel-05" aria-expanded="true" aria-controls="panel-05">
+                            <p style='font-size: 2.5em;'>   <h3 style="color: #9D2449;"> DOCUMENTOS A ENTREGAR DURANTE LAS RESIDENCIAS PROFESIONALES </h3>
+                            </p>
+                            </a>
+                        </h4>
+                        <button type="button" class="collpase-button collapsed" data-parent="#accordion5" data-toggle="collapse" href="#panel-05"></button>
+                    </div>
+                    <div class="panel-collapse collapse in" id="panel-05">
+                        <div class="panel-body">
+                            {{--Contenido de la tarjeta--}}
+                            1. Formatos de asesoría.
+                            (Anexo V formato de registro de asesoría (esta la llenan junto con su asesor interno en cada revisión de residencias, entregar a la encargada de residencias profesionales un formato por cada revisión de residencias, 4 en total).
+                            <hr>
+                            2. Formato de evaluación
+                            (Debe tener sello y firma de la empresa),  NOTA: El Anexo  XXIX se entrega en la segunda y cuarta revision y el formato XXX se entrega en la cuarta revision. En caso de que la empresa no cuenta con sello debe hacer un oficio en hoja membretada donde hace constar que no tiene sello y el alumno lo  entrega a la encargada de residencias profesionales.
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="red">
+            <div class="panel-group ficha-collapse" id="accordion6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-parent="#accordion6" data-toggle="collapse" href="#panel-06" aria-expanded="true" aria-controls="panel-06">
+                            <p style='font-size: 2.5em;'>   <h3 style="color: #9D2449;">DOCUMENTOS A ENTREGAR AL FINAL DE LAS RESIDENCIAS PROFESIONALES
+                                </h3>
+                            </p>
+                            </a>
+                        </h4>
+                        <button type="button" class="collpase-button collapsed" data-parent="#accordion6" data-toggle="collapse" href="#panel-06"></button>
+                    </div>
+                    <div class="panel-collapse collapse in" id="panel-06">
+                        <div class="panel-body">
+                            <strong>TODOS LOS OFICIOS DE LA EMPRESA SON FIRMADOS Y SELLADOS.</strong>
+                            <br><br>
+                            <strong><u>IMPORTANTE:</u></strong>
+                            <br><br>
+                            TU EXPEDIENTE COMPLETO DEBE DE CONTENER LA SIGUIENTE DOCUMENTACIÓN:
+                            <br>
+                            <br>1.- Convenio
+                            <br> 2.- Solicitud de residencias
+                            <br>3.- Kardex
+                            <br>4.- Anteproyecto con firma de aceptación
+                            <br> 5.- Carta de presentación firmada y sellada de recibido por la empresa
+                            <br>6.- Carta de aceptación (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa)
+                            <br>7.- Constancia de acreditación del servicio social
+                            <br>8.- NOTA: ACTIVIDADES COMPLEMENTARIAS (SI YA ESTA EN EL KARDEX , YA NO ES NECESARIA).
+                            <br>9.- Cronograma (Si faltan firmas de la división, se colocarán una vez que entregues el expediente en físico)
+                            <br>10.- 4 Formatos de asesoría (con firmas del alumno y asesor interno)
+                            <br>11.- Carta de terminación de la empresa (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa).
+                            <br>12.- 3 Formatos de evaluación ( dos se generaban en la 2 y 4 revisión y en el que se evalua la estructura del proyecto  en la 4 revisión).
+                            <br>13.- Carta de liberación de residencias por parte del asesor interno.
+                            <br> 14.- Encuesta del asesor externo
+                            <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://encuestas.cdhidalgo.tecnm.mx/"> https://encuestas.cdhidalgo.tecnm.mx</a>
+                            <br> 16.- disco con su proyecto final, la portada de la disco serigrafiada, en PDF y es importante entregarla en caja transparente, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno (se entrega únicamente con la documentación en físico)
+                            <br><br>
+                            <strong> SIGUIENTES DOCUMENTOS SOLO SI:</strong>
+                            <br>
+                            <br>17.- * La empresa no cuenta con sello u hoja membretada , se debe entregar oficio de la empresa dirigido al jefe de división.
+                            <br>18.- * Cambio de asesor. Entregar oficio por parte de la empresa por cambio de asesor.
+                            <br>19.-* Cambio de nombre de proyecto. Entregar oficio por cambio del nombre del proyecto.
+                            <br>20.-* Solicitud ante comité académico. Si solicitaste extensión, cambios de fecha, cambio de título, cambio de objetivos ante comité académico añadirlo.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <hr class="red">
             <div class="panel-group ficha-collapse" id="accordion3">
@@ -89,7 +208,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-parent="#accordion3" data-toggle="collapse" href="#panel-00" aria-expanded="true" aria-controls="panel-00">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'>   <h3> FORMATOS </h3></p>
+                            <p style='font-size: 2.5em;'>   <h3 style="color: #9D2449;"> FORMATOS </h3></p>
                             </a>
                         </h4>
                         <button type="button" class="collpase-button collapsed" data-parent="#accordion3" data-toggle="collapse" href="#panel-00"></button>
@@ -103,7 +222,7 @@
                             <a target="_blank" data-toogle="tooltip"  title="Escructura del reporte preliminar de residencia" download href='{{asset('documents/content/vinculacion/residencias/estruc.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
-                            AUTORIZACION DE PROYECTO
+                            LIBERACIÓN DE PROYECTO
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Autorizacion del proyecto " download href='{{asset('documents/content/vinculacion/residencias/carta_autorizacion.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
@@ -169,124 +288,6 @@
                             <a target="_blank" data-toogle="tooltip"  title="Carta de terminacion  de residencias " download href='{{asset('documents/content/vinculacion/residencias/carta_terminacion_ver2.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="red">
-            <div class="panel-group ficha-collapse" id="accordion4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-parent="#accordion4" data-toggle="collapse" href="#panel-04" aria-expanded="true" aria-controls="panel-04">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'><h3> <u>DOCUMENTOS A ENTREGAR AL INICIO DE RESIDENCIAS PROFESIONALES: </u></h3></p>
-                            </a>
-                        </h4>
-                        <button type="button" class="collpase-button collapsed" data-parent="#accordion4" data-toggle="collapse" href="#panel-04"></button>
-                    </div>
-                    <div class="panel-collapse collapse in" id="panel-04">
-                        <div class="panel-body">
-                            <p align="justify">
-                            1. Anteproyecto.
-                            (Firmado de aceptación por el revisor. Entregarlo a la encargada de residencias al inicio de su residencia.)
-                            <hr>
-                            2. Solicitud de residencias.
-                            (Periodo bien establecido fecha inicio y fecha final de residencias) entregarlo a la encargada de residencias al inicio de su residencia.<br>
-                            <hr>
-                            3. Convenio de residencias profesinales.
-                            (Llenar el convenio y entregarlo a la encargada de residencias y una copia a vinculación).
-                            <hr>
-                            4. Cardex con calificaciones.
-                            (Tener aprobado al menos 80% de créditos de su plan de estudio).
-                            <hr>
-                            5. Carta de aceptación.
-                            (Hoja membretada y dirigida al jefe de carrera, debe incluir nombre del alumno, nombre de proyecto, asesor por parte de la empresa, fecha de inicio y fecha final de residencias).
-                            <hr>
-                            6. Carta de presentación.
-                            (La emite vinculación y se debe de entregar una copia a la encargada de residencias firmada y sellada por la empresa).
-                            <hr>
-                            7. Constancia de Acreditación de servicio social.
-                            (Entregarlo a la encargada de residencias al inicio de su residencia).
-                            <hr>
-                            8. Acreditación de actividades complementarias.
-                            (La emite el jefe de carrera).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="red">
-            <div class="panel-group ficha-collapse" id="accordion5">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-parent="#accordion5" data-toggle="collapse" href="#panel-05" aria-expanded="true" aria-controls="panel-05">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'>   <h3> DOCUMENTOS A ENTREGAR DURANTE LAS RESIDENCIAS PROFESIONALES </h3>
-                            </p>
-                            </a>
-                        </h4>
-                        <button type="button" class="collpase-button collapsed" data-parent="#accordion5" data-toggle="collapse" href="#panel-05"></button>
-                    </div>
-                    <div class="panel-collapse collapse in" id="panel-05">
-                        <div class="panel-body">
-                            {{--Contenido de la tarjeta--}}
-                            1. Formatos de asesoría.
-                            (Anexo V formato de registro de asesoría (esta la llenan junto con su asesor interno en cada revisión de residencias, entregar a la encargada de residencias profesionales un formato por cada revisión de residencias, 4 en total).
-                            <hr>
-                            2. Formato de evaluación
-                            (Debe tener sello y firma de la empresa),  NOTA: El Anexo  XXIX se entrega en la segunda y cuarta revision y el formato XXX se entrega en la cuarta revision. En caso de que la empresa no cuenta con sello debe hacer un oficio en hoja membretada donde hace constar que no tiene sello y el alumno lo  entrega a la encargada de residencias profesionales.
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="red">
-            <div class="panel-group ficha-collapse" id="accordion6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-parent="#accordion6" data-toggle="collapse" href="#panel-06" aria-expanded="true" aria-controls="panel-06">
-                            <p style='font-weight: bold; font-size: 2.5em; color: #1B396A;'>   <h3>DOCUMENTOS A ENTREGAR AL FINAL DE LAS RESIDENCIAS PROFESIONALES
-                                </h3>
-                            </p>
-                            </a>
-                        </h4>
-                        <button type="button" class="collpase-button collapsed" data-parent="#accordion6" data-toggle="collapse" href="#panel-06"></button>
-                    </div>
-                    <div class="panel-collapse collapse in" id="panel-06">
-                        <div class="panel-body">
-                            <strong>TODOS LOS OFICIOS DE LA EMPRESA SON FIRMADOS Y SELLADOS.</strong>
-                            <br><br>
-                            <strong><u>IMPORTANTE:</u></strong>
-                            <br><br>
-                            TU EXPEDIENTE COMPLETO DEBE DE CONTENER LA SIGUIENTE DOCUMENTACION:
-                            <br><br>1.- Convenio
-                            <br> 2.- Solicitud de residencias
-                            <br>3.- Kardex
-                            <br>4.- Anteproyecto con firma de aceptación
-                            <br> 5.- Carta de presentación firmada y sellada de recibido por la empresa
-                            <br>6.- Carta de aceptación (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa)
-                            <br>7.- Constancia de acreditación del servicio social
-                            <br>8.- NOTA: ACTIVIDADES COMPLEMENTARIAS (SI YA ESTA EN EL KARDEX , YA NO ES NECESARIA).
-                            <br>9.- Cronograma (Si faltan firmas de la división, se colocarán una vez que entregues el expediente en físico)
-                            <br>10.- 4 Formatos de asesoría (con firmas del alumno y asesor interno)
-                            <br>11.- Carta de terminación de la empresa (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa).
-                            <br>12.- 3 Formatos de evaluación ( dos se generaban en la 2 y 4 revisión y en el que se evalua la estructura del proyecto  en la 4 revisión).
-                            <br>13.- Carta de liberación de residencias por parte del asesor interno.
-                            <br> 14.- Encuesta del asesor externo
-                            <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://encuestas.cdhidalgo.tecnm.mx/"> https://encuestas.cdhidalgo.tecnm.mx</a>
-                            <br> 16.- disco con su proyecto final, la portada de la disco serigrafiada, en PDF y es importante entregarla en caja transparente, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno (se entrega únicamente con la documentación en físico)
-                            <br><br>
-                            <strong> SIGUIENTES DOCUMENTOS SOLO SI:</strong>
-                            <br><br>17.- * La empresa no cuenta con sello u hoja membretada , se debe entregar oficio de la empresa dirigido al jefe de división.
-                            <br>18.- * Cambio de asesor. Entregar oficio por parte de la empresa por cambio de asesor.
-                            <br>19.-* Cambio de nombre de proyecto. Entregar oficio por cambio del nombre del proyecto.
-                            <br>20.-* Solicitud ante comité académico. Si solicitaste extensión, cambios de fecha, cambio de título, cambio de objetivos ante comité académico añadirlo.
-                            </p>
-
                         </div>
                     </div>
                 </div>
