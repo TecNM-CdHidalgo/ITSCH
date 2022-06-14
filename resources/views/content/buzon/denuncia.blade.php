@@ -16,8 +16,8 @@
             <div class="col-md-9 mb-md-0 mb-5">
                 <p>Datos opcionales</p>
                 <hr>
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
+                <form id="formDenuncia" action="{{ route('contenido.denuncia.store') }}" method="POST">
+                    @csrf
                     <!--Grid row-->
                     <div class="row">
 
@@ -209,47 +209,45 @@
                     <div class="row">
                         <div class="col-md-12 md-form">
                             ¿Trabaja en la administración pública? &nbsp &nbsp
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <button type="button" class="collpase-button collapsed" data-parent="#accordion" data-toggle="collapse" href="#panel-05"></button>
-                                <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                                <label class="custom-control-label" for="defaultInline1">Si</label>
-                            </div>
-
-                                <!-- Default inline 2-->
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                                <label class="custom-control-label" for="defaultInline2">No</label>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input collpase-button collapsed" id="chek" data-parent="#accordion" data-toggle="collapse" href="#panel-05">
+                                <label class="custom-control-label" for="chek" id="opcion" >Si</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="panel-group ficha-collapse" id="accordion">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-parent="#accordion5" data-toggle="collapse" href="#panel-05" aria-expanded="true" aria-controls="panel-05">
-                                    <p style='font-size: 2.5em;'>   <h3 style="color: #9D2449;"> DOCUMENTOS A ENTREGAR DURANTE LAS RESIDENCIAS PROFESIONALES </h3>
-                                    </p>
-                                    </a>
-                                </h4>
-
-                            </div>
                             <div class="panel-collapse collapse in" id="panel-05">
                                 <div class="panel-body">
-                                  Hola
+                                    <!--Grid row-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="entTes" name="entTes" class="form-control">
+                                                <label for="entTes" class="form-label">Entidad o dependencia</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+                                    <!--Grid row-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="puestoTes" name="puestoTes" class="form-control">
+                                                <label for="puestoTes" class="form-label">Cargo o puesto donde labora</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
+                    <p><b>Todos los datos proporcionados en este documento serán estrictamente CONFIDENCIALES</b></p>
+                    <hr>
+                    <button type="submit" class="btn btn-primary g-recaptcha" data-sitekey="6Len1G4gAAAAAJdLW-uP0osW36Um53xDP3MV5h9a" data-callback='onSubmit' data-action='submit'>Enviar</button>
                 </form>
-
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                </div>
-                <div class="status"></div>
             </div>
             <!--Grid column-->
 
@@ -275,4 +273,17 @@
 
     </section>
     <!--Section: Contact v.2-->
+
 @endsection
+
+@section('js')
+
+    {{-- Script para uso de CAPTCHA GOOGLE --}}
+    <script>
+        function onSubmit(token) {
+        document.getElementById("formDenuncia").submit();
+        }
+    </script>
+
+@endsection
+

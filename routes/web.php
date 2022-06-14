@@ -5,6 +5,7 @@ use App\Http\Controllers\ProgramasController;
 use App\Http\Controllers\TransparenciaController;
 use App\Http\Controllers\ConvenioController;
 use App\Http\Controllers\BuzonController;
+use App\Http\Controllers\DenunciasController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -153,7 +154,8 @@ Route::get('contenido/buzon/index',[BuzonController::class,'index'])->name('cont
 Route::get('contenido/buzon/store',[BuzonController::class,'store'])->name('contenido.buzon.store');
 
 //Rutas de denuncia de acoso o discriminación
-Route::get('contenido/denuncia/index',function(){return view('content.buzon.denuncia');})->name('contenido.denuncia.index');
+Route::get('contenido/denuncia/index',[DenunciasController::class,'index'])->name('contenido.denuncia.index');
+Route::post('contenido/denuncia/store',[DenunciasController::class,'store'])->name('contenido.denuncia.store');
 
 
 //Fin Rutas publicas***********************************************************************

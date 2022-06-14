@@ -114,6 +114,9 @@
         {{--Plantilla--}}
         @include('layouts.plantilla')
 
+        {{-- Incluir sweetalert --}}
+        @include('sweetalert::alert')
+
         <!--Incluir jQuery  -->
         <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
 
