@@ -76,7 +76,7 @@
                     <!--Card image-->
                     <div class="view overlay">
                         <a href="{{route('ver',$not2->id)}}">
-                            <img  src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
+                            <img  src="{{ asset('storage/noticias/imagenes/'.$not2->imagen) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
                         </a>
 
                     </div>
