@@ -29,7 +29,7 @@
 					@if($ban)
 						<div class="carousel-item active text-center" style="background-color:white;">
 							<a href="{{route('ver',$not->id)}}">
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
+							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
 						    </a>
 						</div>
 						@php
@@ -38,7 +38,7 @@
 					@else
 						<div class="carousel-item text-center" style="background-color: white;">
 						     <a href="{{route('ver',$not->id)}}">
-							    <img src="{{ route('carousel',[$not->imagen]) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
+							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
 						    </a>
 						</div>
 					@endif
@@ -76,7 +76,7 @@
                     <!--Card image-->
                     <div class="view overlay">
                         <a href="{{route('ver',$not2->id)}}">
-                            <img  src="{{ route('noticia',[$not2->imagen]) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
+                            <img  src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
                         </a>
 
                     </div>
