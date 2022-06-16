@@ -74,7 +74,7 @@ class DenunciasController extends Controller
         $denuncia->save();
 
         Alert::success('Correcto','La denuncia fue registrada correctamente');
-        return view('content.buzon.denuncia');
+        return redirect()->route('contenido.denuncia.index');
 
     }
 
