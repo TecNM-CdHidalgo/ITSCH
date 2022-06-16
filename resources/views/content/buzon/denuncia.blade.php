@@ -257,7 +257,7 @@
                     </div>
                     <p><b>Todos los datos proporcionados en este documento serán estrictamente CONFIDENCIALES</b></p>
                     <hr>
-                    <button type="submit" class="btn btn-primary g-recaptcha" data-sitekey="6Len1G4gAAAAAJdLW-uP0osW36Um53xDP3MV5h9a" data-callback='onSubmit' data-action='submit'>Enviar</button>
+                    <button class="btn btn-primary g-recaptcha" data-sitekey="6Len1G4gAAAAAJdLW-uP0osW36Um53xDP3MV5h9a" data-callback='onSubmit' data-action='submit'>Enviar</button>
                 </form>
             </div>
             <!--Grid column-->
