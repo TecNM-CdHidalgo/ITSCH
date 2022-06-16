@@ -36,17 +36,24 @@ class DenunciasController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nomAgre' => 'required',
-            'sexoAgre' => 'required',
-            'puestoAgre' => 'required',
-            'entAgre' => 'required',
-            'fechaHec' => 'required',
-            'horaHec' => 'required',
-            'lugHec' => 'required',
-            'freHec' => 'required',
-            'descHec' => 'required',
-        ]);
+        $request->validate(
+            [
+                'nomAgre' => 'required',
+                'sexoAgre' => 'required',
+                'puestoAgre' => 'required',
+                'entAgre' => 'required',
+                'fechaHec' => 'required',
+                'horaHec' => 'required',
+                'lugHec' => 'required',
+                'freHec' => 'required',
+                'descHec' => 'required',
+            ],
+            [
+                'nomAgre.required' => 'El nombre del agresor es requerido',
+                'sexoAgre.required' => 'El sexo del agresor es requerido',
+            ]
+
+        );
 
 
         $denuncia = new Denuncia;
