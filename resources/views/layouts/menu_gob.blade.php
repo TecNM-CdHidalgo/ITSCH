@@ -17,9 +17,9 @@
             <a class="nav-link active menuGob_a"href="https://www.gob.mx/gobierno" target="_blank">Gobierno</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menuGob_a"  href="https://www.gob.mx/busqueda" target="_blank">
-              <i class="material-icons" style="font-size:16px">search</i>
-          </a>
+            <a class="nav-link menuGob_a"  href="https://www.gob.mx/busqueda" target="_blank">
+                <i class="material-icons" style="font-size:16px">search</i>
+            </a>
         </li>
     </ul>
   </div>

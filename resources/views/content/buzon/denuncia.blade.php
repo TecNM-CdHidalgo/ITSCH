@@ -21,9 +21,10 @@
                     <!--Grid row-->
                     <div class="row">
 
+                        {{-- Datos demandante --}}
                         <!--Grid column-->
                         <div class="col-md-6">
-                            <div class="md-form mb-0">
+                            <div class="form-outline mb-0">
                                 <input type="text" id="nomDem" name="nomDem" class="form-control ">
                                 <label for="nomDem" class="form-label">Tú nombre</label>
                             </div>
@@ -47,21 +48,25 @@
                     </div>
                     <!--Grid row-->
 
-                    <div class="row">
-                        <div class="col-md-6 md-form">
-                            <input type="tel" id="telDem" name="telDem" class="form-control ">
-                            <label for="telDem" class="form-label">Teléfono</label>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="form-outline mb-0">
+                                <input type="tel" id="telDem" name="telDem" class="form-control ">
+                                <label for="telDem" class="form-label">Teléfono</label>
+                            </div>
                         </div>
-                        <div class="col-md-6 md-form">
-                            <input type="email" id="corrDem" name="corrDem" class="form-control ">
-                            <label for="corrDem" class="form-label">Correo electrónico</label>
+                        <div class="col-md-6">
+                            <div class="form-outline mb-0">
+                                <input type="email" id="corrDem" name="corrDem" class="form-control ">
+                                <label for="corrDem" class="form-label">Correo electrónico</label>
+                            </div>
                         </div>
                     </div>
 
                     <!--Grid row-->
-                    <div class="row">
+                    <div class="row mb-4">
                         <div class="col-md-12">
-                            <div class="md-form mb-0">
+                            <div class="form-outline mb-0">
                                 <input type="text" id="puestoDem" name="puestoDem" class="form-control">
                                 <label for="puestoDem" class="form-label">Puesto o área donde labora</label>
                             </div>
@@ -71,6 +76,8 @@
 
                     <p><b> Advertencia: </b>A la persona que desee conservar el anonimato, sólo podrá enterarse del curso de la denuncia presentada a través del seguimiento que ella misma dé a las sesiones del Comité o Subcomité.</p>
 
+                    {{-- Fin datos demandante --}}
+
                     <p><b>DATOS DEL SERVIDOR PÚBLICO (A) CONTRA QUIEN SE PRESENTA LA DENUNCIA</b></p>
                     <p>Datos obligatorios</p>
                     <hr>
@@ -78,9 +85,11 @@
                     <!--Grid row-->
                     <div class="row">
 
+                        {{-- Datos demandado --}}
+
                         <!--Grid column-->
                         <div class="col-md-6">
-                            <div class="md-form mb-0">
+                            <div class="form-outline mb-0">
                                 <input type="text" id="nomAgre" name="nomAgre" class="form-control " required>
                                 <label for="nomAgre" class="form-label">Nombre</label>
                             </div>
@@ -105,9 +114,9 @@
                     <!--Grid row-->
 
                      <!--Grid row-->
-                     <div class="row">
+                     <div class="row mb-4">
                         <div class="col-md-12">
-                            <div class="md-form mb-0">
+                            <div class="form-outline mb-0">
                                 <input type="text" id="puestoAgre" name="puestoAgre" class="form-control" required>
                                 <label for="puestoAgre" class="form-label">Cargo o puesto donde labora</label>
                             </div>
@@ -116,9 +125,9 @@
                     <!--Grid row-->
 
                       <!--Grid row-->
-                      <div class="row">
+                      <div class="row mb-4">
                         <div class="col-md-12">
-                            <div class="md-form mb-0">
+                            <div class="form-outline mb-0">
                                 <input type="text" id="entAgre" name="entAgre" class="form-control" required>
                                 <label for="entAgre" class="form-label">Entidad o dependencia</label>
                             </div>
@@ -126,18 +135,20 @@
                     </div>
                     <!--Grid row-->
 
+                    {{-- Fin de datos del demandado --}}
+
                     <p><b>DECLARACIÓN DE LOS HECHOS</b></p>
                     <hr>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="md-form md-outline input-with-post-icon datepicker">
+                            <div class="md-form input-with-post-icon datepicker">
                                 <input placeholder="Select date" type="date" id="fechaHec" name="fechaHec" class="form-control" required>
                                 <label for="fechaHec">Fecha en la que ocurrieron los hechos</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="md-form md-outline input-with-post-icon">
+                            <div class="md-form input-with-post-icon">
                                 <input placeholder="Select date" type="time" id="horaHec" name="horaHec" class="form-control" required>
                                 <label for="horaHec">Hora en la que ocurrieron los hechos</label>
                             </div>
@@ -145,10 +156,10 @@
                     </div>
 
                     <!--Grid row-->
-                    <div class="row">
+                    <div class="row mb-4">
                         <!--Grid column-->
                         <div class="col-md-12">
-                            <div class="md-form">
+                            <div class="form-outline">
                                 <textarea type="text" id="lugHec" name="lugHec" rows="2" class="form-control md-textarea" required></textarea>
                                 <label for="lugHec" class="form-label">Lugar en el que ocurrieron los hechos</label>
                             </div>
@@ -157,10 +168,10 @@
                     <!--Grid row-->
 
                      <!--Grid row-->
-                     <div class="row">
+                     <div class="row mb-4">
                         <!--Grid column-->
                         <div class="col-md-12">
-                            <div class="md-form">
+                            <div class="form-outline">
                                 <textarea type="text" id="freHec" name="freHec" rows="2" class="form-control md-textarea" required></textarea>
                                 <label for="freHec" class="form-label">Frecuencia de los hechos(si fue una vez o varias veces)</label>
                             </div>
@@ -169,10 +180,10 @@
                     <!--Grid row-->
 
                      <!--Grid row-->
-                     <div class="row">
+                     <div class="row mb-4">
                         <!--Grid column-->
                         <div class="col-md-12">
-                            <div class="md-form">
+                            <div class="form-outline">
                                 <textarea type="text" id="descHec" name="descHec" rows="5" class="form-control md-textarea" required></textarea>
                                 <label for="descHec" class="form-label">Describa los hechos</label>
                             </div>
@@ -184,21 +195,21 @@
                     <hr>
 
                      <!--Grid row-->
-                     <div class="row">
+                     <div class="row mb-4">
 
                         <!--Grid column-->
-                        <div class="col-md-4 md-form">
-                            <div class="md-form mb-0">
+                        <div class="col-md-4">
+                            <div class="form-outline mb-0">
                                 <input type="text" id="nomTes" name="nomTes" class="form-control ">
                                 <label for="nomTes" class="form-label">Nombre</label>
                             </div>
                         </div>
                         <!--Grid column-->
-                        <div class="col-md-4 md-form">
+                        <div class="col-md-4 form-outline">
                             <input type="tel" id="telTes" name="telTes" class="form-control ">
                             <label for="telTes" class="form-label">Teléfono</label>
                         </div>
-                        <div class="col-md-4 md-form">
+                        <div class="col-md-4 form-outline">
                             <input type="email" id="corrTes" name="corrTes" class="form-control ">
                             <label for="corrTes" class="form-label">Correo electrónico</label>
                         </div>
@@ -206,8 +217,8 @@
                     </div>
                     <!--Grid row-->
 
-                    <div class="row">
-                        <div class="col-md-12 md-form">
+                    <div class="row mb-4">
+                        <div class="col-md-12 form-outline">
                             ¿Trabaja en la administración pública? &nbsp &nbsp
                             <div class="custom-control custom-checkbox custom-control-inline">
                                 <input type="checkbox" class="custom-control-input collpase-button collapsed" id="chek" data-parent="#accordion" data-toggle="collapse" href="#panel-05">
@@ -221,9 +232,9 @@
                             <div class="panel-collapse collapse in" id="panel-05">
                                 <div class="panel-body">
                                     <!--Grid row-->
-                                    <div class="row">
+                                    <div class="row mb-4">
                                         <div class="col-md-12">
-                                            <div class="md-form mb-0">
+                                            <div class="form-outline mb-0">
                                                 <input type="text" id="entTes" name="entTes" class="form-control">
                                                 <label for="entTes" class="form-label">Entidad o dependencia</label>
                                             </div>
@@ -233,7 +244,7 @@
                                     <!--Grid row-->
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="md-form mb-0">
+                                            <div class="form-outline mb-0">
                                                 <input type="text" id="puestoTes" name="puestoTes" class="form-control">
                                                 <label for="puestoTes" class="form-label">Cargo o puesto donde labora</label>
                                             </div>
