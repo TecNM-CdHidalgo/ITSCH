@@ -80,8 +80,7 @@
     </a>
 
     <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco" >
-
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
         <ul class="navbar-nav  ml-auto bg-white">
@@ -212,7 +211,7 @@
 {{--Menu azul--}}
 <nav class="navbar navbar-expand-sm navbar-dark" style='background-color: #1B396A;' id="menuAzul">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
+    <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mx-auto">

@@ -186,7 +186,7 @@
                             <br>12.- 3 Formatos de evaluación ( dos se generaban en la 2 y 4 revisión y en el que se evalua la estructura del proyecto  en la 4 revisión).
                             <br>13.- Carta de liberación de residencias por parte del asesor interno.
                             <br> 14.- Encuesta del asesor externo
-                            <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://encuestas.cdhidalgo.tecnm.mx/"> https://encuestas.cdhidalgo.tecnm.mx</a>
+                            <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio"> https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio</a>
                             <br> 16.- disco con su proyecto final, la portada de la disco serigrafiada, en PDF y es importante entregarla en caja transparente, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno (se entrega únicamente con la documentación en físico)
                             <br><br>
                             <strong> SIGUIENTES DOCUMENTOS SOLO SI:</strong>
