@@ -19,6 +19,9 @@ use Intervention\Image\ImageManagerStatic as Image;
 //Rutas para descarga de archivos de noticias
 Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 
+//Ruta del examen de nuevo ingreso
+Route::get('alumnos/exani',function(){return view('content.alumnos.exani');})->name('alumnos.exani');
+
 //Transparecia
 Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');
 Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');

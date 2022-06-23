@@ -119,7 +119,7 @@
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
-
+                <a class="dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
             </ul>
         </li>
 
@@ -316,7 +316,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="{{ route('contenido.buzon.index') }}" >Buzón</a>
+            <a class="nav-link active" href="{{ route('contenido.buzon.index') }}" >Buzón</a>
       </li>
     </ul>
     <!-- Right Side Of Navbar -->
