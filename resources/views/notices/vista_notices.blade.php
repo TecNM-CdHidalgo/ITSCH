@@ -30,7 +30,7 @@
         </div>
         <br>
         <div class="regContent">
-            <p>{{ convertDate($articulo->created_at) }}</p>
+            <p>{{ convertDate($articulo->updated_at) }}</p>
             @php
                 echo $articulo->contenido;
             @endphp
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col">
                 @foreach($archivos as $ar)
-                    <a href="/download/{{$ar->id_not}}/{{$ar->nom_archivo}}" target="_blank" data-toggle="tooltip" title="{{$ar->nom_archivo}}" download ><img width="150px"height="170px" src="{{ asset( '/images/file.png') }}" alt="Archivos"> </a>                   
+                    <a href="/download/{{$ar->id_not}}/{{$ar->nom_archivo}}" target="_blank" data-toggle="tooltip" title="{{$ar->nom_archivo}}" download ><img width="150px"height="170px" src="{{ asset( '/images/file.png') }}" alt="Archivos"> </a>
                 @endforeach
             </div>
         </div>

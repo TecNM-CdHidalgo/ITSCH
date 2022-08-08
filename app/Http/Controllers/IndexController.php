@@ -19,17 +19,17 @@ class IndexController extends Controller
     public function index()
     {
         $fec_act = Carbon::now()->toDateString();
-       
+
         $noticias = Noticias::whereDate('fecha_pub','<=',$fec_act)
         ->whereDate('fecha_fin','>=',$fec_act)
         ->orderBy('id','asc')->get();
 
-       
+
         $noticias2 = Noticias::whereDate('fecha_pub','<=',$fec_act)
         ->whereDate('fecha_fin','>=',$fec_act)
         ->orderBy('id','desc')->get();
-        
-        
+
+
         return View('welcome')
         ->with('noticias',$noticias)
         ->with('noticias2',$noticias2);
@@ -44,17 +44,17 @@ class IndexController extends Controller
         $article = Noticias::find($id);
         $archivos=ArchivoNoticia::where('id_not','=',$id)->get();
 
-       
+
         return View('notices.vista_notices')
         ->with('articulo',$article)
         ->with('archivos',$archivos);
     }
 
     public function getDownload($id_not,$nomImg)
-    {       
+    {
         $pathToFile=storage_path()."/app/public/noticias/archivos/".$id_not."/".$nomImg;
-        return response()->download($pathToFile,$nomImg);       
+        return response()->download($pathToFile,$nomImg);
     }
 
-   
+
 }
