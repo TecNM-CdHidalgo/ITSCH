@@ -1,4 +1,43 @@
 @extends('layouts.app')
+@section('css')
+    <style type="text/css">
+        .imgFormCarousel {
+            width: 90%;
+			max-height: 450px;
+            overflow: hidden;
+            margin: 10px;
+            position: relative;
+        }
+        .imgFormCarousel > .crop {
+            position:absolute;
+            left: -100%;
+            right: -100%;
+            top: -100%;
+            bottom: -100%;
+            margin: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+
+        .imgFormCard {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 4px 3px 5px #999;
+        }
+        .imgFormCard > .crop {
+            position:absolute;
+            left: -100%;
+            right: -100%;
+            top: -100%;
+            bottom: -100%;
+            margin: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+    </style>
+@endsection
 @section('carousel')
 	{{--Carrusel--}}
 	<div id="carr" class="carousel slide" data-ride="carousel">
@@ -29,7 +68,7 @@
 					@if($ban)
 						<div class="carousel-item active text-center" style="background-color:white;">
 							<a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
+							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;" class="img-fluid rounded imgFormCarousel">
 						    </a>
 						</div>
 						@php
@@ -38,7 +77,7 @@
 					@else
 						<div class="carousel-item text-center" style="background-color: white;">
 						     <a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;">
+							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;" class="img-fluid rounded imgFormCarousel">
 						    </a>
 						</div>
 					@endif
@@ -76,7 +115,7 @@
                     <!--Card image-->
                     <div class="view overlay">
                         <a href="{{route('ver',$not2->id)}}">
-                            <img  src="{{ asset('storage/noticias/imagenes/'.$not2->imagen) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class='card-img-top'/>
+                            <img  src="{{ asset('storage/noticias/imagenes/'.$not2->imagen) }}" alt="{{$not2->titulo}} title="{{$not2->titulo}}" class="img-fluid rounded imgFormCard"/>
                         </a>
 
                     </div>

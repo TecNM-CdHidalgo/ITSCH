@@ -102,6 +102,8 @@
 
             gtag('config', 'G-K3N5TM4CFJ');
         </script>
+
+        @yield('css')
     </head>
 
 
