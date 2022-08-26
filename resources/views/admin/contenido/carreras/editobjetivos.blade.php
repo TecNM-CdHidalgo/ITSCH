@@ -30,10 +30,10 @@
                         </button>
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminar({{ $obj }})">
                             <i class='fas fa-trash-alt' style='font-size:14px'></i>
-                        </button> 
+                        </button>
                     </td>
-                </tr>                
-            @endforeach           
+                </tr>
+            @endforeach
         </tbody>
     </table>
     <br>
@@ -47,28 +47,28 @@
             <form action="{{ route('carreras.storeObjetivos') }}">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Alta de objetivo</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Alta de objetivo</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    
-                    <label class="input-group-text">Descripción</label> 
-                    <textarea class="form-control" required name="descripcion" rows="3"></textarea>                       
+
+                    <label class="input-group-text">Descripción</label>
+                    <textarea class="form-control" required name="descripcion" rows="3"></textarea>
                     <br>
-                    <label class="input-group-text">Criterio</label> 
-                    <textarea class="form-control" required name="criterio" rows="3"></textarea>                      
+                    <label class="input-group-text">Criterio</label>
+                    <textarea class="form-control" required name="criterio" rows="3"></textarea>
                     <br>
-                    <label class="input-group-text">Indicador</label> 
-                    <textarea class="form-control" required name="indicador" rows="3"></textarea>                     
+                    <label class="input-group-text">Indicador</label>
+                    <textarea class="form-control" required name="indicador" rows="3"></textarea>
                     <br>
                     <div class="input-group mb-3 input-group-sm">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Programa</span>
                         </div>
                         <input type="text" class="form-control" id="car_update" readonly value="{{ $programa->nombre }}">
-                    </div>                      
+                    </div>
                     <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                     <br>
                 </div>
@@ -91,27 +91,27 @@
         <form id="formEditar">
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Editar Objetivo</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Editar Objetivo</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                <label class="input-group-text">Descripción</label> 
-                <textarea class="form-control" required name="descripcion" id="des_update"  rows="3"></textarea>                       
+                <label class="input-group-text">Descripción</label>
+                <textarea class="form-control" required name="descripcion" id="des_update"  rows="3"></textarea>
                 <br>
-                <label class="input-group-text">Criterio</label> 
-                <textarea class="form-control" required name="criterio" id="cri_update"  rows="3"></textarea>                      
+                <label class="input-group-text">Criterio</label>
+                <textarea class="form-control" required name="criterio" id="cri_update"  rows="3"></textarea>
                 <br>
-                <label class="input-group-text">Indicador</label> 
-                <textarea class="form-control" required name="indicador" id="ind_update"  rows="3"></textarea>                     
+                <label class="input-group-text">Indicador</label>
+                <textarea class="form-control" required name="indicador" id="ind_update"  rows="3"></textarea>
                 <br>
                 <div class="input-group mb-3 input-group-sm">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Programa</span>
                     </div>
                     <input type="text" class="form-control" id="car_update" readonly value="{{ $programa->nombre }}">
-                </div>                      
+                </div>
                 <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
                 <br>
             </div>
@@ -134,8 +134,8 @@
             <form id="formEliminar">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar este objetivo?</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">¿Estas seguro de eliminar este objetivo?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -162,7 +162,7 @@
             {
                 $("#des_update").val(obj['descripcion']);
                 $("#cri_update").val(obj['criterio']);
-                $("#ind_update").val(obj['indicador']);                  
+                $("#ind_update").val(obj['indicador']);
                 r="{{url('contenido/carreras')}}/updateObjetivos/"+obj['id'];
                 $('#formEditar').attr('action', r);
             }

@@ -119,8 +119,10 @@
         {{-- Incluir sweetalert --}}
         @include('sweetalert::alert')
 
-        <!--Incluir jQuery  -->
+        <!-- Seccion de scripts  -->
+        <script src="{{ asset('js/popper.min.js') }}"></script>
         <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
+
 
         {{-- Scripts para dataTable --}}
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>

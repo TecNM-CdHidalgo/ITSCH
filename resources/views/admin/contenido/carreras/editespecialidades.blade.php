@@ -54,6 +54,7 @@
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title">Alta de especialidad</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
@@ -92,6 +93,7 @@
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title">Editar Especialidad</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
@@ -145,6 +147,7 @@
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title" id="nom_eliminar"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->

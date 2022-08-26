@@ -51,7 +51,8 @@
             <form action="{{ route('carreras.storeEstructura') }}">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Alta de Personal</h4>
+                    <h4 class="modal-title">Alta de Personal</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -127,67 +128,68 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h4 class="modal-title">Editar de Personal</h4>
-                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Nombre</span>
-                        </div>
-                        <input type="text" class="form-control" name="nombre" id="nombre">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Nombre</span>
                     </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Apellido Paterno</span>
-                        </div>
-                        <input type="text" class="form-control" name="ap_paterno" id="ap_paterno">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Apellido Materno</span>
-                        </div>
-                        <input type="text" class="form-control" name="ap_materno" id="ap_materno">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">email</span>
-                        </div>
-                        <input type="text" class="form-control" name="email" id="email">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Puesto</span>
-                        </div>
-                        <input type="text" class="form-control" name="puesto" id="puesto">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Teléfono</span>
-                        </div>
-                        <input type="text" class="form-control" name="telefono" id="telefono">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Extensión</span>
-                        </div>
-                        <input type="text" class="form-control" name="extension" id="extension">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Programa</span>
-                        </div>
-                        <input type="text" class="form-control" readonly value="{{ $programa->nombre }}">
-                    </div>
-                    <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
-                    <br>
+                    <input type="text" class="form-control" name="nombre" id="nombre">
                 </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Apellido Paterno</span>
+                    </div>
+                    <input type="text" class="form-control" name="ap_paterno" id="ap_paterno">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Apellido Materno</span>
+                    </div>
+                    <input type="text" class="form-control" name="ap_materno" id="ap_materno">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">email</span>
+                    </div>
+                    <input type="text" class="form-control" name="email" id="email">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Puesto</span>
+                    </div>
+                    <input type="text" class="form-control" name="puesto" id="puesto">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Teléfono</span>
+                    </div>
+                    <input type="text" class="form-control" name="telefono" id="telefono">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Extensión</span>
+                    </div>
+                    <input type="text" class="form-control" name="extension" id="extension">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Programa</span>
+                    </div>
+                    <input type="text" class="form-control" readonly value="{{ $programa->nombre }}">
+                </div>
+                <input type="hidden" id="id_programa" name="id_programa" value="{{ $programa->id }}">
+                <br>
+            </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success btn-sm">Guardar</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
-                </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success btn-sm">Guardar</button>
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+            </div>
         </form>
 
         </div>
@@ -201,7 +203,8 @@
             <form id="formEliminarAtr">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar este profesor?</h4>
+                    <h4 class="modal-title">¿Estas seguro de eliminar este profesor?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -229,6 +232,7 @@
             <!-- Modal Header -->
             <div class="modal-header" style="background-color:#000;">
                 <h4 class="modal-title" id="nom_per"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <form id="formEditDetalle">
                 <!-- Modal body -->

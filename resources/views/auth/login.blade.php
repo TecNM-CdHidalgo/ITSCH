@@ -45,7 +45,6 @@
                                 <br>
                                 <a href="https://www.kioselsar.com" target="about_blank" class="small text-muted" >Created by kioselsa</a>
                             </form>
-
                         </div>
                     </div>
                     </div>
@@ -54,4 +53,7 @@
             </div>
         </div>
     </section>
+    <br>
+    <br>
+    <br>
 @endsection

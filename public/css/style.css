@@ -268,7 +268,8 @@ h1, h2, h3, h4, h5,
 .offcanvas-menu .site-wrap {
   height: 100%;
   width: 100%;
-  z-index: 2; }
+  z-index: 2;
+}
   .offcanvas-menu .site-wrap:before {
     opacity: 1;
     visibility: visible; }
@@ -452,7 +453,7 @@ h1, h2, h3, h4, h5,
 /* Navbar */
 .site-navbar {
   margin-bottom: 0px;
-  z-index: 1999;
+  z-index: 1000;
   position: relative;
   width: 100%;
   padding: 1rem; }

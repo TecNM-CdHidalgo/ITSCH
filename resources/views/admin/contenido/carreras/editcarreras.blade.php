@@ -34,16 +34,16 @@
                         </button>
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajas" onclick="obtDatEliminar({{ $pro }})">
                             <i class='fas fa-trash-alt' style='font-size:14px'></i>
-                        </button>                        
+                        </button>
                     </td>
-                </tr>              
+                </tr>
             @endforeach
         </tbody>
     </table>
     <br>
 
     {{-- Sección de Modals --}}
-       
+
         <!-- Modal Altas -->
         <div class="modal fade" id="myModalAltas">
             <div class="modal-dialog">
@@ -51,10 +51,10 @@
                 <form action="{{ route('carreras.storeCarrera') }}">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Alta de Carreras</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alta de Carreras</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         <label for="nombre">Nombre del programa</label>
@@ -66,14 +66,14 @@
                             <option value="2">Maestría</option>
                         </select>
                     </div>
-                    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success btn-sm">Guardar</button>
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
                     </div>
                 </form>
-                
+
             </div>
             </div>
         </div>
@@ -85,10 +85,10 @@
                 <form id="formEditar">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Editar Carrera</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Editar Carrera</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         <label for="nombre">Nombre del programa</label>
@@ -100,14 +100,14 @@
                             <option value="2">Maestría</option>
                         </select>
                     </div>
-                    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Modificar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
                 </form>
-                
+
             </div>
             </div>
         </div>
@@ -119,15 +119,15 @@
                 <form id="formEliminar">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title" id="nom_eliminar"></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="nom_eliminar"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    
+
                     <!-- Modal body -->
                     <div class="modal-body">
                         ¿Estas seguro de eliminar esta carrera?
                     </div>
-                    
+
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Eliminar</button>
@@ -144,14 +144,14 @@
             <script>
                 function obtDatEditar(pro)
                 {
-                    
+
                    $("#nom_update").val(pro['nombre']);
                    r="updateCarrera/"+pro['id'];
                    $('#formEditar').attr('action', r);
                 }
 
                 function obtDatEliminar(pro)
-                {                    
+                {
                    $("#nom_eliminar").text(pro['nombre']);
                    r="destroyCarrera/"+pro['id'];
                    $('#formEliminar').attr('action', r);

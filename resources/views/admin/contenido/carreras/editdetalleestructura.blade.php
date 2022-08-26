@@ -110,7 +110,8 @@
             <form action="{{ route('carreras.storeDetallesFor') }}">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Alta de Formación académica</h4>
+                    <h4 class="modal-title">Alta de Formación académica</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -164,44 +165,45 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h4 class="modal-title">Editar formación académica</h4>
-                </div>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Grado</span>
-                        </div>
-                        <input type="text" class="form-control" name="grado" id="grado">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Grado</span>
                     </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Nombre</span>
-                        </div>
-                        <input type="text" class="form-control" name="nombre" id="nombre">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Institución formadora</span>
-                        </div>
-                        <input type="text" class="form-control" name="institucion_pro" id="institucion_pro">
-                    </div>
-                    <div class="input-group mb-3 input-group-sm">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Cedula</span>
-                        </div>
-                        <input type="text" class="form-control" name="cedula" id="cedula">
-                    </div>
-                    <input type="hidden" id="id_programa" readonly name="id_programa" value="{{ $programa->id }}">
-                    <input type="hidden" id="id_personal_form" readonly name="id_pesonal">
-                    <br>
+                    <input type="text" class="form-control" name="grado" id="grado">
                 </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" name="nombre" id="nombre">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Institución formadora</span>
+                    </div>
+                    <input type="text" class="form-control" name="institucion_pro" id="institucion_pro">
+                </div>
+                <div class="input-group mb-3 input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Cedula</span>
+                    </div>
+                    <input type="text" class="form-control" name="cedula" id="cedula">
+                </div>
+                <input type="hidden" id="id_programa" readonly name="id_programa" value="{{ $programa->id }}">
+                <input type="hidden" id="id_personal_form" readonly name="id_pesonal">
+                <br>
+            </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success btn-sm">Guardar</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
-                </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success btn-sm">Guardar</button>
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+            </div>
         </form>
 
         </div>
@@ -215,7 +217,8 @@
             <form id="formEliminarForm">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar la siguiente formación académica?</h4>
+                    <h4 class="modal-title">¿Estas seguro de eliminar la siguiente formación académica?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -242,7 +245,8 @@
                 <form action="{{ route('carreras.storeDetallesPro') }}">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                    <h4 class="modal-title">Alta de Producción académica</h4>
+                        <h4 class="modal-title">Alta de Producción académica</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
@@ -293,42 +297,43 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title">Editar producción académica</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Categoría</span>
+                        </div>
+                        <input type="text" class="form-control" name="categoria" id="categoria">
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Nombre</span>
+                        </div>
+                        <input type="text" class="form-control" name="nombre" id="nombre_pro">
+                    </div>
+                    <div class="input-group mb-3 input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Función desempeñada</span>
+                        </div>
+                        <select class="form-control" id="funcion" name="funcion">
+                            <option value="Responsable" selected>Responsable</option>
+                            <option value="Colaborador">Colaborador</option>
+                        </select>
                     </div>
 
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <div class="input-group mb-3 input-group-sm">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Categoría</span>
-                            </div>
-                            <input type="text" class="form-control" name="categoria" id="categoria">
-                        </div>
-                        <div class="input-group mb-3 input-group-sm">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Nombre</span>
-                            </div>
-                            <input type="text" class="form-control" name="nombre" id="nombre_pro">
-                        </div>
-                        <div class="input-group mb-3 input-group-sm">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Función desempeñada</span>
-                            </div>
-                            <select class="form-control" id="funcion" name="funcion">
-                                <option value="Responsable" selected>Responsable</option>
-                                <option value="Colaborador">Colaborador</option>
-                            </select>
-                        </div>
+                    <input type="hidden" id="id_programa" readonly name="id_programa" value="{{ $programa->id }}">
+                    <input type="hidden" id="id_personal_pro" readonly name="id_pesonal">
+                    <br>
+                </div>
 
-                        <input type="hidden" id="id_programa" readonly name="id_programa" value="{{ $programa->id }}">
-                        <input type="hidden" id="id_personal_pro" readonly name="id_pesonal">
-                        <br>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-success btn-sm">Guardar</button>
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
-                    </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success btn-sm">Guardar</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancelar</button>
+                </div>
             </form>
 
             </div>
@@ -342,7 +347,8 @@
             <form id="formEliminarPro">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar la siguiente producción académica?</h4>
+                    <h4 class="modal-title">¿Estas seguro de eliminar la siguiente producción académica?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->

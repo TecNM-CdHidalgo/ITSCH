@@ -116,8 +116,8 @@
             <form action="{{ route('carreras.storeAtributos') }}">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Alta de atributos</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Alta de atributos</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -159,8 +159,8 @@
         <form id="formEditarAtr">
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Editar Atributos</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Editar Atributos</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
@@ -202,8 +202,8 @@
             <form id="formEliminarAtr">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar este atributo?</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">¿Estas seguro de eliminar este atributo?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -232,8 +232,8 @@
             <form action="{{ route('carreras.storeCriterios') }}">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Alta de criterios</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Alta de criterios</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -274,8 +274,8 @@
         <form id="formEditarCri">
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">Editar Criterios</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Editar Criterios</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
@@ -317,8 +317,8 @@
             <form id="formEliminarCri">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">¿Estas seguro de eliminar este Criterio?</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">¿Estas seguro de eliminar este Criterio?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->

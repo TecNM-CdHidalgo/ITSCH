@@ -478,6 +478,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header" style="background-color:#000;">
                     <h4 class="modal-title" id="nom_per"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <form id="formEditDetalle">
                     <!-- Modal body -->

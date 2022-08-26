@@ -26,23 +26,24 @@
                             @endif
                         </td>
                     </tr>
-                @endforeach                
+                @endforeach
             </tbody>
-        </table> 
+        </table>
     </div>
     <br>
-    <br>  
+    <br>
 
     {{-- Sección de modals --}}
     <!-- The Modal Para visualizar mensajes -->
     <div class="modal fade" id="myModalMsg">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content"> 
-                <form action="{{ route('carreras.updateContacto',$programa[0]->id) }}">       
+            <div class="modal-content">
+                <form action="{{ route('carreras.updateContacto',$programa[0]->id) }}">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Mensaje</h4>            
-                    </div>                
+                        <h4 class="modal-title">Mensaje</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
                     <!-- Modal body -->
                     <div class="modal-body">
                         <label for="nombre">Nombre:</label>
@@ -55,7 +56,7 @@
                         <label for="comentario">Mensaje:</label>
                         <h6><b id="comentario"></b></h6>
                         <input type="hidden" readonly name="id" id="id_contacto">
-                    </div>           
+                    </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-danger">Close</button>
@@ -68,19 +69,20 @@
     <!-- The Modal Para eliminar mensajes -->
     <div class="modal fade" id="myModalDelMsg">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content"> 
-                <form id="formEliminarMsg">       
+            <div class="modal-content">
+                <form id="formEliminarMsg">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Eliminar Mensaje</h4>            
-                    </div>                
+                        <h4 class="modal-title">Eliminar Mensaje</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <h5>¿Estas seguro de eliminar el mensaje de:?</h5>                        
+                        <h5>¿Estas seguro de eliminar el mensaje de:?</h5>
                         <h6 id="idMsgNom"></h6>
-                        <p id="fecMsg"></p>                       
-                        <input type="hidden" readonly name="id" id="id_contacto_del">                        
-                    </div>           
+                        <p id="fecMsg"></p>
+                        <input type="hidden" readonly name="id" id="id_contacto_del">
+                    </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success btn-sm">Eliminar</button>
