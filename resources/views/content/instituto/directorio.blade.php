@@ -20,7 +20,7 @@
 		<h4 style="margin-left: 70.9pt;">
 			3.&nbsp;&nbsp;&nbsp; LIC. Lorena Alanis Herrejón. (Encargada) Subdirectora de planeación</h4>
 		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp; Tec. Alejandra Gutiérrez Bolaños. Departamento de Planeaci&oacute;n, Programaci&oacute;n y Presupuesto</p>
+			a.&nbsp;&nbsp;&nbsp; CP. Ma Angélica Olayo Álvarez . Departamento de Planeaci&oacute;n, Programaci&oacute;n y Presupuesto</p>
 		<p style="margin-left:92.15pt;">
 			b.&nbsp;&nbsp;&nbsp; Ing. Ricardo Antonio Moreno Ruiz. Jefe del departamento de Estad&iacute;stica, Evaluaci&oacute;n y Calidad</p>
 		<p style="margin-left:92.15pt;">
