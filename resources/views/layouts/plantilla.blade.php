@@ -200,6 +200,7 @@
                 <a class="dropdown-item" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=3378&idEntidadParametro=16&idSectorParametro=21">Transparencia y acceso a la información pública</a>
                 <a class="dropdown-item" href="{{route('transparencia.aviso_privacidad')}}">Aviso de privacidad </a>
                 <a class="dropdown-item"href="{{ route('periodo.index') }}">Estados Financieros </a>
+                <a class="dropdown-item"href="https://tecitsch-my.sharepoint.com/:f:/g/personal/webwin_cdhidalgo_tecnm_mx/EsgLgmm3nfxCkH6sDNf5BNABVpsvAeeRM882LE4JT_w6ng?e=8T5lM9">Evaluaciones docentes </a>
             </div>
         </li>
         <a href="https://cdhidalgo.tecnm.mx:8083/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
