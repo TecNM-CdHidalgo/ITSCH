@@ -32,7 +32,7 @@
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;CP. María Mercedes Pérez Reyes. Departamento de Contabilidad y Recursos Financieros</p>
 		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp;C.P.  Tonatihu Vigil Acosta. Departamento de Recursos Materiales y Servicios</p>
+			b.&nbsp;&nbsp;&nbsp;L.A.E.  Juan Andrés Ayala Santana. Departamento de Recursos Materiales y Servicios</p>
 		<p style="margin-left:92.15pt;">
 			c.&nbsp;&nbsp;&nbsp;ING. Alejandro Romero Estrada. Departamento de Recursos Humanos</p>
 		    <BR>
