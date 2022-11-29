@@ -1114,6 +1114,7 @@ class CarrerasController extends Controller
          ->select('programas.id','especialidades.id as id_especialidad','especialidades.nombre as esp_nombre','materias_especialidad.*')
          ->where('especialidades.id',$id_esp)
          ->get();
+        printf( $materias_esp);
 
         //Seleccionamos los datos del programa seleccionado
         $pro_esp=Especialidad::select('id_programa')->where('id',$id_esp)->get();

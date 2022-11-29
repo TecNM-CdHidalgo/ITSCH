@@ -463,7 +463,7 @@
                 $.getJSON('/contenido/carreras/actualizarTabla/'+$('#id_especialidad').val()).done(
                     //Funcion en caso de que el servidor devuelva datos
                     function(datos)
-                    {
+                    {   console.log(datos);
                         //Vaciamos la tabla
                         $('#tabMatEsp').html('');
                         let cont = 1;
