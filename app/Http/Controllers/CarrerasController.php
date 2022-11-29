@@ -1119,11 +1119,7 @@ class CarrerasController extends Controller
         $pro_esp=Especialidad::select('id_programa')->where('id',$id_esp)->get();
         $programa=Programa::where('id',$pro_esp[0]->id_programa)->get();
 
-
-         //Obtenemos la ruta del archivo de cada materia de especialidad
-         $ruta = storage_path().'/app/public/carreras_planes_estudio/';
         foreach($materias_esp as $me){
-            //$me->nom_archivo = $ruta . $me->nom_archivo;
             $me->link = asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo);
         }
          return response()->json($materias_esp);

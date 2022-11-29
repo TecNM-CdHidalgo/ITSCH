@@ -459,7 +459,7 @@
             function act_tabla()
             {
                 //Funcion json para pedir datos con get
-                //console.log('especialidad:'+$('#id_especialidad').val());
+
                 $.getJSON('/contenido/carreras/actualizarTabla/'+$('#id_especialidad').val()).done(
                     //Funcion en caso de que el servidor devuelva datos
                     function(datos)
@@ -483,6 +483,7 @@
                 ).fail(
                     function(error)
                     {
+                        console.log(error);
                         alert("No se pudo conectar al servidor");
                     }
                 );
