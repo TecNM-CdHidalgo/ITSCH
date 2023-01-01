@@ -18,13 +18,17 @@
         <p>Las tarifas actualizadas al año en curso las puedes descargar desde el link:</p>
 
         <p align="center">
-        	<a href="{{asset('documents/content/departamentos/caja/TABULADOR DE SERVICIOS 2022.pdf')}}"target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>Tarifas de Servicios de Caja</strong>
+        	<a href="{{asset('documents/content/departamentos/caja/tarifas de caja 2023.pdf')}}"target="_blank"><i style="font-size:2em; padding:2px;" class="fa fa-cloud-download"></i>&nbsp;<strong>Tarifas de Servicios de Caja</strong>
         	</a>
         </p>
 
-        <p>Esta información tambien esta disponible desde
-        	<a class="contenido" target="_blank" download href="{{asset('documents/content/departamentos/caja/tarifas-cajav7.pdf')}}"> Documentos para Descargar</a> en el apartado de Servicios de caja y lo puedes buscar como <strong>tarifas de servicio de caja</strong>.
-        </p><hr class="red">
+        <p>
+          Para cambiar tu váucher bancario te invitamos a visitar el siguiente enlace, en el cual podras hacer el cambio de manera cómoda, rápida y totalmente en línea, el link es: <a href="https://www.cdhidalgo.tecnm.mx:8084/#!/login">Recibos electrónicos</a> en este mismo enlace podras encontrar un video con información útil de cómo realizar este proceso.
+        </p>
+
+        <hr>
+
+        <h6>También podras realizar tu cambio de recibo en CAJA para ello te invitamos a seguir los siguientes pasos</h6>
 
         <p>Para poder brindarte un mejor servicio de CAJA en el cambio de tu recibo (ficha o vaucher) sigue los siguientes TIPS, de esta manera se agilizara el trámite:</p>
 
