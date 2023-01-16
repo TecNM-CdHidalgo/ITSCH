@@ -4,24 +4,28 @@
   {{--Imagenes de gobierno--}}
   <div class="col-sm-7">
         <div class="row encab">
-            <div class="col-sm-1">
-
-            </div>
-            <div class="col-sm-4">
-                <br>
-                <a href="https://www.gob.mx" target="_blank" id="placa_1">
-                    <img style="width: 27%; heigth:27%;" src="{{ asset('images/campanas/esc_mexico.png') }}" alt="Gobierno de México">
-                </a>
-            </div>
-            <div class="col-sm-4">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
                 <a href="https://www.gob.mx/sep" target="_blank" id="placa_2">
                     <img class="imgGobi" src="{{ asset('images/campanas/placa_edu.png') }}" alt="Educación">
                 </a>
             </div>
+            <div class="col-sm-2">
+                <img src="{{ asset('images/campanas/separador.png') }}" alt="separador">
+                <a href="https://www.michoacan.gob.mx/" target="_blank" >
+                    <img style="width: 40%" src="{{ asset('images/campanas/esc_michoacan.png') }}" alt="Michoacán">
+                </a>
+                <img src="{{ asset('images/campanas/separador.png') }}" alt="separador">
+            </div>
             <div class="col-sm-3">
-                <br>
                 <a href="https://www.tecnm.mx"  id="placa_3">
                     <img class="imgGobi2" src="{{ asset('images/placa_tecnm.jpg') }}" alt="TecNM">
+                </a>
+                <img src="{{ asset('images/campanas/separador.png') }}" alt="separador">
+            </div>
+            <div class="col-sm-3">
+                <a href="https://www.cdhidalgo.tecnm.mx"  >
+                    <img style="width: 30%" src="{{ asset('images/itsch.jpg') }}" alt="ITSCH">
                 </a>
             </div>
         </div>

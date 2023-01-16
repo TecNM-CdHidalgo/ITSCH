@@ -20,7 +20,7 @@ class Banco extends Migration
             $table->integer('vacantes');
             $table->string('empresa',200);
             $table->string('direccion',300);
-            $table->string('telefono',15);
+            $table->string('telefono',25);
             $table->string('correo',60);
             $table->string('docente',100);
             $table->string('colaboradores',1000)->nullable();
