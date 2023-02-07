@@ -10,7 +10,6 @@
     <link rel="stylesheet"href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/magnific-popup.css') }}">
-    {{--<link rel="stylesheet"href="{{ asset('css/jquery-ui.css') }}">--}} {{-- Ocaciona errores con el datatable --}}
     <link rel="stylesheet"href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap-datepicker.css') }}">
@@ -62,7 +61,6 @@
 
 
     <header class="site-navbar js-sticky-header site-navbar-target mds-header" role="banner">
-
         <div class="container">
             <div class="row align-items-center position-relative">
                 <a href="{{ route('inicio') }}">
