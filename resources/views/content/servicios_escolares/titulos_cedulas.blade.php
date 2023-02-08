@@ -12,10 +12,7 @@
             <hr class="red">
             <p>
                 Cualquier duda o aclaración de forma individual les atenderemos en
-                servicios escolares o vía telefónica al 786 154 9000 ext. 125 o 167,
-                también pueden enviarnos sus dudas y seguimiento de trámites a través del siguiente link:
-                <a href=”https://web.facebook.com/Becas-de-Manutenci%C3%B3n-ITSCH-883383695106559/”>
-                    https://web.facebook.com/Becas-de-Manutenci%C3%B3n-ITSCH-883383695106559/</a>
+                servicios escolares o vía telefónica al 786 154 9000 ext. 125 o 167.
             </p>
             <hr class="red">
             <h2>Documentos para descarga</h2>
@@ -32,10 +29,10 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Requisitos y procedimiento de titulación hibrida</td>
+                        <td>Procedimiento de titulación</td>
                         <td>
                             <a type="button" class="btn btn-primary"
-                                href="{{asset('documents/content/servicios escolares/formato de titulacion hibrida abril 22.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." download  target="_blank">
+                                href="{{asset('documents/content/servicios escolares/procedimiento titulacion v4.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." target="_blank">
                             <i class='fas fa-download' style='font-size:20px'></i>
                         </a></td>
                     </tr>
@@ -96,16 +93,34 @@
                         <td>5</td>
                         <td>Portada para discos de Titulación</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/portada_discos_titulacion.docx')}}" data-toogle="tooltip" title="Portadas de discos." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/portada_discos_titulacion.docx')}}" data-toogle="tooltip" title="Portadas de discos." download>
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Constancia de no Adeudo para alumnos próximos a Titularse</td>
+                        <td>Formato de no adeudos</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/for_no_adeudo_tit_v4.docx ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." download  target="_blank">
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/for_no_adeudo_tit_v4.docx ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." download>
+                                <i class='fas fa-download' style='font-size:20px'></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Formato de firma</td>
+                        <td>
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/formato de firma.pdf ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." target="_blank">
+                                <i class='fas fa-download' style='font-size:20px'></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Solicitud de cedula</td>
+                        <td>
+                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/solicitud cedula.pdf ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
