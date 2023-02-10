@@ -101,8 +101,8 @@
             <p>Tamizaje tutorias Instituto Tecnólogico Superior de Ciudad Hidalgo 2023</p>
         </div>
         <div class="col-sm-4">
-            <a href="https://goo.su/9c1g4" class="btn btn-outline-success">Encuesta 1</a>
-            <a href="https://goo.su/UjuVc" class="btn btn-outline-success">Encuesta 2</a>
+            <a href="https://goo.su/UjuVc" class="btn btn-outline-success">Encuesta 1</a>
+            <a href="https://goo.su/9c1g4" class="btn btn-outline-success">Encuesta 2</a>
         </div>
     </div>
 	{{--Contenido de noticias--}}
