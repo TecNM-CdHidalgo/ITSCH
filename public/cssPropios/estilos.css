@@ -175,11 +175,13 @@
  .encab {
     display: none !important;
  }
+ .ancho {
+    max-width: 70%;
+ }
 
  #logo{
     display: none !important;
  }
-
 }
 
 /*footer de la pagina*/

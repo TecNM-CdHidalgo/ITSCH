@@ -82,13 +82,12 @@
     <a class="navbar-brand" href="{{route('inicio')}}" id="logo">
         <img src="{{ asset('images/itsch.jpg') }}" alt='Logo' title='ITSCH' class='img-fluid rounded' style="width:30px; height: 35px;" />
     </a>
-
     <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavBlanco" >
         <i class="fas fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse " id="collapsibleNavBlanco">
-        <ul class="navbar-nav  ml-auto bg-white">
-        <li class="nav-item dropdown  ml-auto">
+    <div class="collapse navbar-collapse " id="collapsibleNavBlanco" >
+        <ul class="navbar-nav ml-auto bg-white ancho" >
+        <li class="nav-item dropdown  ml-4">
             <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Alumnos
             </a>
@@ -121,20 +120,20 @@
             </ul>
         </li>
 
-            <li class="nav-item dropdown  ml-auto">
-                <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
-                    Institución
-                </a>
+        <li class="nav-item dropdown  ml-4">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbardffrtyuirop" data-toggle="dropdown">
+                Institución
+            </a>
 
-                <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
-                        <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
-                        <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
-                </div>
-            </li>
+            <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
+                    <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
+                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
+            </div>
+        </li>
 
 
-        <li class="nav-item dropdown  ml-auto">
+        <li class="nav-item dropdown  ml-4">
             <a class="nav-link active dropdown-toggle"href="#" id="navbarfgdgdrop" data-toggle="dropdown">
             Normativos y Lineamientos
             </a>
@@ -165,7 +164,7 @@
         </li>
 
 
-        <li class="nav-item dropdown  ml-auto">
+        <li class="nav-item dropdown  ml-4">
             <a class="nav-link active dropdown-toggle"href="#" id="navbardro567p" data-toggle="dropdown">
             Egresados/Empleadores
             </a>
@@ -176,7 +175,7 @@
         </li>
 
 
-        <li class="nav-item dropdown  ml-auto">
+        <li class="nav-item dropdown  ml-4">
             <a class="nav-link active dropdown-toggle" href="#" id="navbasdasdasardrop" data-toggle="dropdown">
             Transparecia
             </a>
@@ -201,7 +200,7 @@
     <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav mx-auto ">
       <li>
         <a href="{{route('inicio')}}" class="nav-link active">
           <i class='fas fa-home' style='font-size:20px'></i>
