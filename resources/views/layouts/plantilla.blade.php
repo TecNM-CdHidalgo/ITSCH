@@ -92,16 +92,12 @@
             Alumnos
             </a>
             <ul class="dropdown-menu">
-                <hr>
-                <ul><b> Servicios Escolares</b></ul>
-
-                <hr>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios</a>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
-                <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
-                <hr>
-
+                <a  class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios Escolares</a>
+                <ul>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
+                    <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
+                </ul>
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
                 <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
@@ -143,13 +139,12 @@
                 <a class="dropdown-item"  href="{{route('normativos.etica')}}">Subcomité de ética</a>
                 <a class="dropdown-item"  href="{{route('normativos.igualdad')}}">Igualdad</a>
                 <a class="dropdown-item"  href="{{asset('documents/content/normativos/reg_creditos.pdf')}}" target="_blank">Créditos complementarios</a>
-                <hr>
-                <ul>Lineamientos académicos</ul>
-                <hr>
-                <a class="dropdown-item"href="{{route('normativos.plan2004')}}">Lineamientos plan 2004 </a>
-                <a class="dropdown-item" href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
-                <a class="dropdown-item" href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
-                <hr>
+                <a class="dropdown-item"  href="#">Lineamientos académicos</a>
+                <ul>
+                    <a class="dropdown-item"href="{{route('normativos.plan2004')}}">Lineamientos plan 2004 </a>
+                    <a class="dropdown-item" href="{{route('normativos.plan2010')}}">Lineamientos plan 2010 </a>
+                    <a class="dropdown-item" href="{{route('normativos.plan2015')}}">Lineamiento Plan 2015 </a>
+                </ul>
                 <a class="dropdown-item"href="{{route('normativos.ambiental')}}">Lineamientos Ambientales</a>
                 <a class="dropdown-item" href="{{route('normativos.rippa')}}">RIPPA</a>
                 <a class="dropdown-item" href="{{route('investigacion.investigacion')}}">Investigación </a>
