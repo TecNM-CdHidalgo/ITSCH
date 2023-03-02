@@ -243,7 +243,7 @@
                 <hr>
                 <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
                 <br>
-                <p><small><b>Última actualización: 08/06/2022</b></small></p>
+                <p><small><b>Última actualización: 02/03/2023</b></small></p>
                 <br>
 	        </div>
 	    </div>
