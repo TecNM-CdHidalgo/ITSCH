@@ -110,7 +110,7 @@
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
                 <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
-                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8081/Caracterizacion/alumno/index.php">Examen psicometrico</a>
+                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8090/alumno/">Examen psicometrico</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8082/#!/constancia">Sistema de eventos</a>
