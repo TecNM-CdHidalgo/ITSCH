@@ -9,7 +9,7 @@
         <div class="col-sm">
 
 	            <h2 class="page-title"> Reglamento Alumnos</h2>
-		
+
 
                  <hr class="red">
                     &nbsp; <br>
@@ -3019,20 +3019,20 @@ O0VOXrpTAPZ2g+b2d+ARw7/NTz9+MzTzZ5/lGX4HEGhp+jyqa5CtR3+ryknhxxygEIO3sOKcABxP
 <text transform="matrix(1 0 0 1 396.9785 235.7305)" font-family="'Arial-ItalicMT'" font-size="52.3296">Reglamento Alumnos</text>
 </svg>
 
-     
-    
-   
+
+
+
 
 
     </div>
-    
-  
+
+
     <hr class="red">
-  
-      
+
+
 
 </div>
- 
+
 <br><br>
 <br><br>
 <table class="table">
@@ -3046,13 +3046,13 @@ O0VOXrpTAPZ2g+b2d+ARw7/NTz9+MzTzZ5/lGX4HEGhp+jyqa5CtR3+ryknhxxygEIO3sOKcABxP
 </thead>
     <tr>
     <td>    <h2></h2> Reglamento Alumnos</td>
-    
-    <td>  <a type="button" class="btn btn-primary" href="{{asset('documents/content/calidad/Reg_alu.pdf')}}" data-toogle="tooltip" title="lineamiento de academias." target="_blank">
+
+    <td>  <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/Reglamento estudiantes act 2023.pdf')}}" data-toogle="tooltip" title="Reglamento de estudiantes" target="_blank">
         <i class='fas fa-download' style='font-size:20px'></i>
         </a></td>
     </tr>
     </table>
-    
+
     <hr class="red">
 
 

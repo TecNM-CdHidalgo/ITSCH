@@ -20,7 +20,7 @@
 		<h4 style="margin-left: 70.9pt;">
 			3.&nbsp;&nbsp;&nbsp; LIC. Lorena Alanis Herrejón. (Encargada) Subdirectora de planeación</h4>
 		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp; CP. Ma Angélica Olayo Álvarez . Departamento de Planeaci&oacute;n, Programaci&oacute;n y Presupuesto</p>
+			a.&nbsp;&nbsp;&nbsp; CP. Ma Angélica Olayo Álvarez. Departamento de Planeaci&oacute;n, Programaci&oacute;n y Presupuesto</p>
 		<p style="margin-left:92.15pt;">
 			b.&nbsp;&nbsp;&nbsp; Ing. Ricardo Antonio Moreno Ruiz. Jefe del departamento de Estad&iacute;stica, Evaluaci&oacute;n y Calidad</p>
 		<p style="margin-left:92.15pt;">
@@ -28,9 +28,9 @@
 		<p style="margin-left:92.15pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			4.&nbsp;&nbsp;&nbsp;LCF. Maria Elena Patiño Martinez. (Encargada) Subdirectora de Administración y Finanzas</h4>
+			4.&nbsp;&nbsp;&nbsp;CP. María Mercedes Pérez Reyes. Departamento de Contabilidad y Recursos Financieros</h4>
 		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp;CP. María Mercedes Pérez Reyes. Departamento de Contabilidad y Recursos Financieros</p>
+			a.&nbsp;&nbsp;&nbsp; LCF. Maria Elena Patiño Martinez. (Encargada) Subdirectora de Administración y Finanzas</p>
 		<p style="margin-left:92.15pt;">
 			b.&nbsp;&nbsp;&nbsp;L.A.E.  Juan Andrés Ayala Santana. Departamento de Recursos Materiales y Servicios</p>
 		<p style="margin-left:92.15pt;">
@@ -41,7 +41,8 @@
 		<p style="margin-left:49.65pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			6. &nbsp;&nbsp;&nbsp;MCTC. Edward Hinojosa Flores. Subdirector Acad&eacute;mico</h4>
+			6. &nbsp;&nbsp;&nbsp; MTRA. María Griselda Correa García. Encargada de la subdirección académica
+           </h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;Ing. Brenda Mercedes Camacho Medina. Jefa de la Divisi&oacute;n de Ingenier&iacute;a Industrial</p>
 		<p style="margin-left:92.15pt;">
@@ -64,15 +65,15 @@
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;IQ. Walter Ivan Cortéz Cruz.  Departamento de Investigaci&oacute;n y Ciencias B&aacute;sicas</p>
 		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp;Ing. Brenda Vianey Garc&iacute;a Esquivel. Departamento de Desarrollo Acad&eacute;mico y Educaci&oacute;n Continua</p>
+			b.&nbsp;&nbsp;&nbsp; Lic. En D. María Eugenia Carapia Jaramillo. Departamento de Desarrollo Acad&eacute;mico y Educaci&oacute;n Continua</p>
 		<p style="margin-left:92.15pt;">
 			c.&nbsp;&nbsp;&nbsp;LPE. Maria de Lourdes Sánchez Mora. Departamento de Tutor&iacute;as y Servicios Psicopedag&oacute;gicos</p>
 		<p style="margin-left:92.15pt;">&nbsp;</p>
 
 		<h4 style="margin-left: 70.9pt;">8.&nbsp;&nbsp;&nbsp;Mtro. Juan José Maldonado García.  Subdirector de Gesti&oacute;n Tecnol&oacute;gica y Vinculaci&oacute;n</h4>
-		<p style="margin-left:92.15pt;">a.&nbsp;&nbsp;&nbsp;LC. Araceli Sánchez Montoya Departamento de Comunicaci&oacute;n y Vinculaci&oacute;n</p>
-		<p style="margin-left:92.15pt;">b.&nbsp;&nbsp;&nbsp;Tec. David Aguilar Espino Departamento de Extensi&oacute;n Educativa</p>
-		<p style="margin-left:92.15pt;">c.&nbsp;&nbsp;&nbsp;C. Héctor Edmundo Isidro García  Departamento de Centro de Negocios</p>
+		<p style="margin-left:92.15pt;">a.&nbsp;&nbsp;&nbsp;LMV. Leopoldo Maldonado Sandoval. Departamento de Comunicaci&oacute;n y Vinculaci&oacute;n</p>
+		<p style="margin-left:92.15pt;">b.&nbsp;&nbsp;&nbsp;Tec. David Aguilar Espino. Departamento de Extensi&oacute;n Educativa</p>
+		<p style="margin-left:92.15pt;">c.&nbsp;&nbsp;&nbsp;C. Héctor Edmundo Isidro García.  Departamento de Centro de Negocios</p>
 		<p style="margin-left:92.15pt;">&nbsp;</p>
 
 		<h4 style="margin-left: 49.65pt;">
@@ -99,24 +100,28 @@
 		<p align="center">P&Eacute;REZ P&Eacute;REZ RUB&Eacute;N</p>
 		<p align="center">BARTOLO GUZM&Aacute;N CINTHIA YANELI</p>
 		<p align="center">CH&Aacute;VEZ &Aacute;VILES MAURICIO NAHUAM</p>
-		<p align="center">? </p>
+		<p align="center">PAULA ITZEL BAUTISTA ORTEGA</p>
 		<p align="center">MADRIGAL P&Eacute;REZ LUIS ALBERTO</p>
 		<p align="center">OROZCO MONTES SALVADOR</p>
 		<p align="center">LEÓN MARQUEZ YHOANA LAURA</p>
         <p align="center">INVING HERNÁNDEZ HERNÁNDEZ</p>
-		<p align="center"></p>
 		<p align="center">&nbsp;</p>
 
 
 		<h4 class="text-center"><span><strong>DIV. DE ING. EN GEST. EMP.</strong></span></h4>
 		<p align="center">ANAÍ GRACIELA ARITZMENDI HERNÁNDEZ </p>
 		<p align="center">VANESSA ALEJANDRA DELGADO MAY</p>
-		<p align="center">MARÍA GRISELDA CORREA GARCÍA</p>
+		<p align="center">EMMANUEL MEDINA SUÁREZ</p>
 		<p align="center">ALEJANDRA MENDOZA REYNOSO</p>
 		<p align="center">ALEJANDRO HERNÁNDEZ GONZÁLEZ</p>
 		<p align="center">ESTEBAN GARCÍA RAMÍREZ</p>
 		<p align="center">SUSANA REYES VÁZQUEZ</p>
 		<p align="center">BLANCA ESTELA URBINA ROSAS</p>
+        <p align="center">JANETH PÉREZ MARTÍNEZ</p>
+        <p align="center">SUSANA REYES VÁZQUEZ</p>
+        <p align="center">JULIO CESAR SOLÍS PARRA</p>
+        <p align="center">ARACELI SANCHEZ MONTOYA</p>
+        <p align="center">MARTÍN MARÍN GONZÁLEZ</p>
 		<br><br>
 
 
@@ -127,7 +132,7 @@
 		<p align="center">GUTI&Eacute;RREZ RUIZ MAR&Iacute;A ELENA</p>
 		<p align="center">MORENO RUIZ ZINTHIA</p>
 		<p align="center">RIVERA RUÍZ EMMA YESENIA</p>
-		<p align="center">PÉREZ ESPINO FRANCISCO</p>
+		<p align="center">ALEJANDRO GUZMÁN LUNA</p>
 
 		<p align="center">&nbsp;
 			</p>
@@ -135,7 +140,6 @@
 
 		<h4 class="text-center"><strong><span>DIV. DE ING. INDUSTRIAL</span></strong></h4>
 		<p align="center">AGUILAR GONZ&Aacute;LEZ ALMA LETICIA</p>
-		<p align="center">ALCAL&Aacute; RU&Iacute;Z PATRICIA</p>
 		<p align="center">GARDUÑO ARAG&Oacute;N JOS&Eacute; LUIS</p>
 		<p align="center">EDGAR CUEVAS ALVARES</p>
 		<p align="center">MEDINA ESPINO SONIA</p>
@@ -150,13 +154,14 @@
 		<p align="center">REYES V&Aacute;ZQUEZ JULIO ENRIQUE</p>
 		<p align="center">VARGAS PIMENTEL NATANAEL</p>
 		<p align="center">VILLEGAS MALAG&Oacute;N BRISA BERENICE </p>
+        <p align="center">GARCÍA ESQUIVEL BRENDA VIANEY </p>
 		<BR>
 
 
 		<h4 class="text-center"><strong><span>DIVISI&Oacute;N DE ING. MECATR&Oacute;NICA</span></strong></h4>
 
-		<p align="center">DR. CRUZ MAURICIO ARTEAGA ESCAMILLA</p>
-        <p align="center">ING. CRISTOPHER MARTA</p>
+		<p align="center">ERIC GONZÁLEZ VALLEJO</p>
+        <p align="center">CRISTOPHER MARTA GUTIÉRREZ</p>
 		<p align="center">MEDINA PARRA H&Eacute;CTOR ROM&Aacute;N</p>
 		<p align="center">GUILLEN ARROYO JUAN JAVIER</p>
 		<p align="center">HERNÁNDEZ PARDO FERNANDO</p>
@@ -166,6 +171,9 @@
 		<p align="center">CASARRUBIAS GUERRERO GABRIEL</p>
 		<p align="center">DOMÍNGUEZ TÉLLEZ MAURICIO</p>
 		<p align="center">VALD&Eacute;S MADRIGAL MANUEL ALEJANDRO</p>
+        <p align="center">ERIC OMAR SOTO LAFLOR</p>
+
+
 		<BR>
 
 		<h4 class="text-center"><strong><span>CIENCIAS BÁSICAS</span></strong></h4>
@@ -186,7 +194,7 @@
 		<p align="center">CHÁVEZ ARELLANO JOAQUÍN</p>
 		<p align="center">LUQUE MURILLO JUAN MANUEL</p>
 		<p align="center">SAÚL GALVEZ BARBOSA</p>
-		<p align="center">GALLARDO ALANIS ROGELIO</p>
+		<p align="center">MARIO ALEJANDRO VILLALPANDO NIEVES</p>
 
 	</article>
 	<!-- /Article -->
