@@ -4,14 +4,16 @@
     <head>
         {{-- Configuracion de la plantilla --}}
         <meta charset="UTF-8">
-        <meta name="description" content="Tecnológico Nacional de México/Campus Ciudad Hidalgo Michoacán, Una institución de vanguardia en la tecnológia">
+        @yield('descripcion')
         <link rel="shortcut icon" href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="author" content="TecNM">
-        <title>TECNM/CDHIDALGO</title>
+        <meta name="author" content="ITSCH, Oscar Delgado Camacho">
+        <meta name="copyright" content="kioselsar.com" />
+        <meta name="robots" content="index"/>
+        <title>TECNM/CDHIDALGO ITSCH</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
@@ -130,14 +132,14 @@
         <script  src="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/fc-4.0.1/fh-3.2.0/r-2.2.9/rg-1.1.4/rr-1.2.8/sc-2.0.5/sb-1.3.0/datatables.min.js" defer></script>
 
         {{-- OCC Mundial --}}
-        <script id = "bolsa-widget"
+        <script defer id = "bolsa-widget"
           type = "text/javascript"
           charset = "UTF-8"
           src = "https://jobdiscovery-widget-occ.occ.com.mx/button-bundle.js"
           key = "1b8v79xAa8DKqYCoM8k5ADxVrrs">
         </script>
 
-        <script>
+        <script defer>
             $(document).ready(function(){
               $('[data-toggle="tooltip"]').tooltip();
             });
@@ -169,10 +171,7 @@
         </script>
 
         <!-- MDB -->
-        <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
-        ></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
 
         {{-- Seccion para los js --}}
         @yield('js')

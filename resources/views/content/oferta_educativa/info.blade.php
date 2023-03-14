@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
+@section('descripcion')
+    <meta name="description" content="Estudia {{ $pro_act->nombre }} en el ITSCH ya que somos lideres en formar ingenieros, con habilidades para innovar y desarrollar tecnología, estando comprometidos con el progreso del país.">
+@endsection
 
+@section('content')
     <input type="hidden" id="idCarrSel" name="idCarrSel" readonly  value="{{ $pro_act->id  }}">
     {{-- Campo para guardar el nombre de la carrera en toda la pagina --}}
     <input type="hidden" id="nom_pro" readonly value="{{ $pro_act->nombre }}">
@@ -175,7 +178,7 @@
                                         <td>{{ $me->clave }}</td>
                                         <td>{{ $me->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/especialidad/'.$me->nom_archivo) }}" type="button" class="btn btn-success btn-sm" title="Ver temario" target="_blank"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -203,7 +206,7 @@
                                         <td>{{ $mat->clave }}</td>
                                         <td>{{ $mat->nombre }}</td>
                                         <td>
-                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/tron_comun/'.$mat->nom_archivo) }}" download type="button" class="btn btn-success btn-sm" title="Descargar temario"><i class='fas fa-book-open' style='font-size:14px'></i></a>
+                                            <a href="{{ asset('storage/carreras_planes_estudio/'.$programa[0]->nombre.'/tron_comun/'.$mat->nom_archivo) }}" type="button" class="btn btn-success btn-sm" title="Ver temario" target="_blank"><i class='fas fa-book-open' style='font-size:14px'></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

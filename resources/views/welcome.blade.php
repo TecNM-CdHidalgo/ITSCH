@@ -1,4 +1,9 @@
 @extends('layouts.app')
+
+@section('descripcion')
+    <meta name="description" content="Instituto Tecnológico Superior de Ciudad Hidalgo, somos tu mejor opción para que estudies una ingeniería en toda la región oriente del estado de Michoacán. “Somos Jaguares”.">
+@endsection
+
 @section('css')
     <style type="text/css">
         .imgFormCarousel {
@@ -172,17 +177,17 @@
 				data-dnt="true"
 				data-link-color="#504099"
 				href="https://twitter.com/TecNM_cdhidalgo?ref_src=twsrc%5Etfw">Tweets by ITSCH</a>
-				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<script defer async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			{{--Youtube--}}
 			<div class="col-sm-4">
 				<h4>Youtube</h4>
-				<iframe src="https://www.youtube.com/embed/videoseries?list=PLZX0SINrPE8xoidtLXhoMREo_1nGWgf_d" width="350" height="530" src="" frameborder="0" allow="autoplay"></iframe>
+				<iframe defer src="https://www.youtube.com/embed/videoseries?list=PLZX0SINrPE8xoidtLXhoMREo_1nGWgf_d" width="350" height="530" src="" frameborder="0" allow="autoplay"></iframe>
 			</div>
 			{{--Facebook--}}
 			<div class="col-sm-4">
 				<h4>Facebook</h4>
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTecNM.campus.Ciudad.Hidalgo%2F&tabs=timeline%2Cevents%2Cmessages&width=350&height=530&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="530" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+				<iframe defer src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTecNM.campus.Ciudad.Hidalgo%2F&tabs=timeline%2Cevents%2Cmessages&width=350&height=530&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="530" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 			</div>
 		</div>
     </div>
