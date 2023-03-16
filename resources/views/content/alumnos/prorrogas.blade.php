@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('titulo','ITSCH/ALUMNOS/PRORROGAS')
+
 
 @section('content')
 <div class="row">

@@ -13,7 +13,9 @@
         <meta name="author" content="ITSCH, Oscar Delgado Camacho">
         <meta name="copyright" content="kioselsar.com" />
         <meta name="robots" content="index"/>
-        <title>TECNM/CDHIDALGO ITSCH</title>
+        <title> @yield('titulo')</title>
+
+
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">

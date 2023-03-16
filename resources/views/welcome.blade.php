@@ -4,6 +4,8 @@
     <meta name="description" content="Instituto Tecnológico Superior de Ciudad Hidalgo, somos tu mejor opción para que estudies una ingeniería en toda la región oriente del estado de Michoacán. “Somos Jaguares”.">
 @endsection
 
+@section('titulo','WELCOME ITSCH')
+
 @section('css')
     <style type="text/css">
         .imgFormCarousel {
