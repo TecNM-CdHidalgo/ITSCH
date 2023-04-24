@@ -99,11 +99,6 @@
 @endsection
 
 @section('content')
-    <br>
-    {{-- Enlaces de interes --}}
-    <div class="row">
-
-    </div>
 	{{--Contenido de noticias--}}
 	<div class="row">
 		<div class="col-sm-3">
@@ -114,6 +109,19 @@
 			<div id="occ-widget"></div>
 		</div>
 	</div>
+
+    <br>
+    {{-- Enlaces de interes --}}
+    <h5>Enlaces de interés</h5>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <a href="https://intra.secoem.michoacan.gob.mx/denuncias" target="_blanck">
+                <img src="{{ asset('images/buzon_naranja.jpg') }}" alt="buzón naranja" style="width: 250px">
+            </a>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
 
 	<hr class="red">
 
