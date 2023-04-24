@@ -24,6 +24,7 @@ Route::get('alumnos/exani',function(){return view('content.alumnos.exani');})->n
 
 //Transparecia
 Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');
+Route::get('transparencia/informes', function(){return view('content.transparencia.informes');})->name('transparencia.informes');
 Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');
 Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perConsultar'])->name('periodo.consultar');
 
