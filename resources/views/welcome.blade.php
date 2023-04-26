@@ -41,6 +41,16 @@
             min-height: 100%;
             min-width: 100%;
         }
+
+        .imgZoom{
+            transform: scale(var(--escala, 1));
+            transition: transform 0.25s;
+            }
+
+        .imgZoom:hover{
+            --escala: 2.9;
+            cursor:pointer;
+            }
     </style>
 @endsection
 @section('carousel')
@@ -99,6 +109,17 @@
 @endsection
 
 @section('content')
+    {{-- Enlaces de interes --}}
+    <h3>Enlaces de interés</h3>
+    <hr class="red">
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="https://intra.secoem.michoacan.gob.mx/denuncias" target="_blanck">
+                <img src="{{ asset('images/buzon_naranja.jpg') }}" alt="buzón naranja" style="width: 150px" class="imgZoom">
+            </a>
+        </div>
+    </div>
+
 	{{--Contenido de noticias--}}
 	<div class="row">
 		<div class="col-sm-3">
@@ -111,17 +132,6 @@
 	</div>
 
     <br>
-    {{-- Enlaces de interes --}}
-    <h5>Enlaces de interés</h5>
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-            <a href="https://intra.secoem.michoacan.gob.mx/denuncias" target="_blanck">
-                <img src="{{ asset('images/buzon_naranja.jpg') }}" alt="buzón naranja" style="width: 250px">
-            </a>
-        </div>
-        <div class="col-sm-4"></div>
-    </div>
 
 	<hr class="red">
 
@@ -250,7 +260,7 @@
                 <hr>
                 <p>© Copyright 2019 TecNM - Campus Ciudad Hidalgo - Todos los Derechos Reservados</p>
                 <br>
-                <p><small><b>Última actualización: 02/03/2023</b></small></p>
+                <p><small><b>Última actualización: 26/04/2023</b></small></p>
                 <br>
 	        </div>
 	    </div>

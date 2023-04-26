@@ -98,14 +98,13 @@
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
                 </ul>
+                <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
                 <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
-                <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">Calificaciones SICENET</a>
                 <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
-                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8082/#!/constancia">Constancias ITSCH</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
-                <a class="dropdown-item"  href="http://cdhidalgo.tecnm.mx:8089/sed/">Evaluacion Docente</a>
+                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8094/login">Evaluacion Docente</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8090/alumno/">Examen psicometrico</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
@@ -122,7 +121,7 @@
             </a>
 
             <div class="dropdown-menu">
-                    <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sgcv3">Sistema Digital de información (SIDI)</a>
+                    <a class="dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
                     <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
                     <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
             </div>

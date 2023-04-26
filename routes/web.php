@@ -82,14 +82,14 @@ Route::get('calidad/reglamento',function(){return view('content.calidad.reglamen
 Route::get('calidad/reglamento_int',function(){return view('content.calidad.reglamento_int');})->name('calidad.reglamento_int');
 Route::get('calidad/rippa',function(){return view('content.calidad.rippa');})->name('calidad.rippa');
 
+//Rutas institución
+Route::get('institución/sidi',function(){return view('content.institucion.sidi');})->name('institucion.sidi');
+
 //Servicos escolares
 Route::get('servicios_escolares/titulos_cedulas',function(){return view('content.servicios_escolares.titulos_cedulas');})->name('servicios_escolares.titulos_cedulas');
 Route::get('servicios_escolares/alumnos-traslados',function(){return view('content.servicios_escolares.alumnos-traslados');})->name('servicios_escolares.alumnos-traslados');
 Route::get('servicios_escolares/servicios',function(){return view('content.servicios_escolares.servicios');})->name('servicios_escolares.servicios');
 Route::get('servicios_escolares/constancia',function(){return view('content.servicios_escolares.constancias');})->name('servicios_escolares.constancias');
-
-
-
 //Alumnos
 Route::get('alumnos/eventos',function(){return view('content.alumnos.eventos');})->name('alumnos.eventos');
 Route::get('alumnos/encuestasservicio',function(){return view('content.alumnos.encuestasservicio');})->name('alumnos.encuestasservicio');
