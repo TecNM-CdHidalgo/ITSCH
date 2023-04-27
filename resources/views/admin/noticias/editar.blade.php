@@ -4,7 +4,6 @@
     Articulos | Editar
 @endsection
 @section('head')
-    <link rel="stylesheet"href="{{ asset('editor/jquery.cleditor.css') }}">
     <link rel="stylesheet"href="{{ asset('CustomFileInputs/css/normalize.css') }}">
     <link rel="stylesheet"href="{{ asset('CustomFileInputs/css/component.css') }}">
     <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
@@ -21,7 +20,7 @@
         <div class="progress-bar progress-bar-striped progress-bar-animated" id="mds-progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
     </div>
     <div class="alert alert-info">
-        <strong>Nota!</strong> Las imágenes que se desean poner dentro del carrusel deben de tener al menos 1200 PX de ancho y el alto debe ser de 400 PX.
+        <strong>Nota!</strong> Las imágenes que se desean poner dentro del carrusel deben de tener al menos 1200 PX de ancho y el alto debe ser de 400 PX. Los archivos permitidos para subir adjunto a la noticia son: PDF, DOCX, XLSX.
     </div>
     <form action="#" method="POST" id="submitForm" enctype="multipart/form-data">
         @csrf
@@ -79,18 +78,15 @@
             </div>
         </div>
 
-
-
-
         <div class="input-group mb-2">
             <div class="input-group-prepend">
                 <span class="input-group-text">Sintesis</span>
             </div>
-            <textarea class="form-control" aria-label="With textarea" name="sintesis" required placeholder="Una breve resumen del contenido del articulo">{{ $article->sintesis }}</textarea>
+            <textarea class="form-control" aria-label="With textarea" name="sintesis" required placeholder="Un breve resumen del contenido del articulo">{{ $article->sintesis }}</textarea>
         </div>
 
-
-        <textarea id="input" name="contenido" rows="10" required>{{ $article->contenido }}</textarea>
+        <textarea id="contenido_editor" rows="10" class="d-none">{{ $article->contenido }}</textarea>
+        <textarea id="contenido" name="contenido" rows="10" class="d-none" required>{{ $article->contenido }}</textarea>
 
         <div class="d-flex">
             <button type="submit" id="submit-all" class="btn btn-primary mt-2 ml-auto"> Guardar </button>
@@ -100,18 +96,25 @@
     <div style="padding: 100px;"></div>
 @endsection
 @section('js')
-    <script src="{{ asset('editor/jquery.cleditor.min.js') }}"></script>
+
     <script src="{{ asset('CustomFileInputs/js/custom-file-input.js') }}"></script>
+
+    <script>
+        var editor = CKEDITOR.replace( 'contenido_editor' );
+        editor.on('change', function(event) {
+            $('#contenido').val(editor.getData());
+        });
+    </script>
+
     <script>
         document.getElementById('section-articulos').className += " default-text-color";
         $(document).ready(function () {
-            $("#input").cleditor({
-                height: 260
-            });
-            //Para seleccionar una opcion de un select de maner automatica
+
+            //Para seleccionar una opcion de un select de manera automatica
             const art = {!! json_encode($article) !!};//Lee una variable que llega a la vista y la apsa a jqwery
             $('#tipo > option[value='+art['resaltar']+']').attr('selected', 'selected');//Selecciona la opcion del select que le corresponde
         });
+
         $('#submitForm').on('submit', function(event){
             event.preventDefault();
             $('#mds-progress-bar-container').css('display','default');

@@ -9,7 +9,7 @@
     <link rel="stylesheet"href="{{ asset('fonts/icomoon/style.css') }}">
     <link rel="stylesheet"href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet"href="{{ asset('css/magnific-popup.css') }}">
+
     <link rel="stylesheet"href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap-datepicker.css') }}">
@@ -18,13 +18,14 @@
     <link rel="stylesheet"href="{{ asset('css/style.css') }}">
     <link rel="shortcut icon"href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     {{-- Linea para agregar el editor CKeditor a la pagina para editar texto --}}
+     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
     {{-- Links datatables --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/kt-2.6.4/r-2.2.9/rg-1.1.4/rr-1.2.8/sl-1.3.3/datatables.min.css"/>
 
     {{-- Uso de multiselect jquery --}}
     <link href="{{ asset('css/msel/multi-select.css') }}" media="screen" rel="stylesheet" type="text/css">
-
 
     <style>
       .no-margins{
@@ -94,7 +95,7 @@
                         @endif
                         @if (Auth::User()->tipo != "editor")
                             <li class="dropdown">
-                                <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
+                                <a  href="#" class="nav-link" id="dropdownMenu3" data-toggle="dropdown"  aria-expanded="false">Administración</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
                                     @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica"|| Auth::User()->tipo == "vinculacion")
                                         <p style="color:orange;">&nbsp Vinculación</p>
@@ -127,7 +128,7 @@
                         @endif
                         | Usuario:
                         <li class="dropdown">
-                        <a href="#" class="nav-link" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="nav-link" id="dropdownMenu2" data-toggle="dropdown"  aria-expanded="false">
                             <p id="section-username" class="no-margins">{{ explode(" ",Auth::User()->name)[0] }}</p>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
