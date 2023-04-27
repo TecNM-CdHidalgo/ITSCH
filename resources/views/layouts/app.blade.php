@@ -15,8 +15,6 @@
         <meta name="robots" content="index"/>
         <title> @yield('titulo')</title>
 
-
-
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -106,11 +104,9 @@
 
             gtag('config', 'G-K3N5TM4CFJ');
         </script>
-
+        {{-- Sección para agregar css por pagina --}}
         @yield('css')
     </head>
-
-
 
     <body style="overflow-x: hidden;">
 
@@ -126,7 +122,6 @@
         <!-- Seccion de scripts  -->
         <script src="{{ asset('js/popper.min.js') }}"></script>
         <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
-
 
         {{-- Scripts para dataTable --}}
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
@@ -175,7 +170,7 @@
         <!-- MDB -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
 
-        {{-- Seccion para los js --}}
+        {{-- Seccion para los js por pagina--}}
         @yield('js')
 
     </body>

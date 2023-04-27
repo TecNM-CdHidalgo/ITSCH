@@ -191,158 +191,155 @@
 
 {{--Menu azul--}}
 <nav class="navbar navbar-expand-sm navbar-dark" style='background-color: #1B396A;' id="menuAzul">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav mx-auto ">
-      <li>
-        <a href="{{route('inicio')}}" class="nav-link active">
-          <i class='fas fa-home' style='font-size:20px'></i>
-        </a>
-      </li>
-      <li class="nav-item dropdown" >
-        <a class="nav-link active dropdown-toggle" href="#" id="navbddsardrop" data-toggle="dropdown">
-          Instituto
-        </a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
-            <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
-            <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
-            <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle"  href="#" id="navbdadasdardrop" data-toggle="dropdown">
-          Oferta educativa
-        </a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item"  href="{{ route('oferta.index',1) }}">Ingenierías</a>
-            <a class="dropdown-item"  href="{{ route('oferta.index',2) }}">Posgrados</a>
-        </div>
-      </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mx-auto ">
+        <li>
+            <a href="{{route('inicio')}}" class="nav-link active">
+            <i class='fas fa-home' style='font-size:20px'></i>
+            </a>
+        </li>
+        <li class="nav-item dropdown" >
+            <a class="nav-link active dropdown-toggle" href="#" id="navbddsardrop" data-toggle="dropdown">
+            Instituto
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
+                <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
+                <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
+                <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle"  href="#" id="navbdadasdardrop" data-toggle="dropdown">
+            Oferta educativa
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item"  href="{{ route('oferta.index',1) }}">Ingenierías</a>
+                <a class="dropdown-item"  href="{{ route('oferta.index',2) }}">Posgrados</a>
+            </div>
+        </li>
 
-      <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
-              Otros Departamentos
-          </a>
-          <ul class="dropdown-menu" style='background-color: #1B396A;'>
-              <a class="dropdown-item" href="{{route('departamentos.caja')}}">Servicio de Caja</a>
-              <a class="dropdown-item" href="{{route('servicio_medico.medico')}}">Servicio Médico</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
+                Otros Departamentos
+            </a>
+            <ul class="dropdown-menu" style='background-color: #1B396A;'>
+                <a class="dropdown-item" href="{{route('departamentos.caja')}}">Servicio de Caja</a>
+                <a class="dropdown-item" href="{{route('servicio_medico.medico')}}">Servicio Médico</a>
 
-              <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
-                <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.informacion')}}">Información General</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.ingles-para-secundaria')}}">Ingles para Secundaria</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.ingles-para-adultos')}}">Ingles para Adultos</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.cursoConversacion')}}">Curso de conversación</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.cursoToefl')}}">Curso de preparación para la certificación (TOEFL)</a>
-                  </li>
-                  <li>
+                <li><a class="dropdown-item dropdown-toggle menu-padre" href="#"> Lenguas Extranjeras</a>
+                    <ul class="submenu dropdown-menu" style='background-color: #1B396A;'>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.informacion')}}">Información General</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.ingles-para-secundaria')}}">Ingles para Secundaria</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.ingles-para-adultos')}}">Ingles para Adultos</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.cursoConversacion')}}">Curso de conversación</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.cursoToefl')}}">Curso de preparación para la certificación (TOEFL)</a>
+                    </li>
+                    <li>
 
-                    <a class="dropdown-item" href="{{route('cle.traduccionDocumentos')}}">Traducción de documentos</a>
-                  </li>
-                  <li>
-                     <a class="dropdown-item" href="{{route('cle.acreditacion2013')}}">Alumnos inscritos plan 2013 y anteriores</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="{{route('cle.acreditacion2014')}}">Alumnos inscritos plan 2014 en adelante</a>
-                  </li>
-               </ul>
-          </li>
-          </ul>
-      </li>
-
-      <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" id="navbarddsadrop" data-toggle="dropdown">
-              Vinculación
-          </a>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="{{route('vinculacion.informacion')}}">Información</a>
-              <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-              <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
-              <a class="dropdown-item" href="{{route('vinculacion.banco_proyectos',1)}}">Banco de Proyectos</a>
-              <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">  Convenios</a>
-              <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
-              <a class="dropdown-item" href="{{asset('documents/content/vinculacion/catálogo de servicios/CATALAGO DE SERVICIOS OFICIAL 2022.pdf')}}" target="_blank">Catálogo de servicios</a>
-          </div>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
-            Investigación
-        </a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
-            <a class="dropdown-item"  href="{{route('investigacion.pitsc')}}"> Contraloría Social</a>
-            <a class="dropdown-item"  href="{{route('tutorias.tutorias')}}"> Tutorias</a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/mec.pdf') }}"> Mecatrónica</a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/nan.pdf') }}"> Nanotecnología</a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/siscom.pdf') }}"> Sistemas Computacionales</a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/lineas_de_inv_19.php') }}">  Lineas de investigación ISC </a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/tics.pdf') }}">  Tecnologías de la Información y Comunicaciones </a>
-            <a class="dropdown-item" href="{{ asset('documents/content/investigacion/lies_18.pdf') }}">  Investigación Educativa </a>
-            <a class="dropdown-item" href="https://bit.ly/2SLwiRx"> Convocatorias CONACYT</a>
-            <a class="dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
-        </div>
-      </li>
-      <li class="nav-item">
-            <a class="nav-link active" href="{{ route('contenido.buzon.index') }}" >Buzón</a>
-      </li>
-    </ul>
-    <!-- Right Side Of Navbar -->
-    <ul class="navbar-nav ml-auto">
-        <!-- Authentication Links -->
-        @guest
-            <li class="nav-item">
-                <a class="nav-link active" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="dropdown-item" href="{{route('cle.traduccionDocumentos')}}">Traducción de documentos</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.acreditacion2013')}}">Alumnos inscritos plan 2013 y anteriores</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route('cle.acreditacion2014')}}">Alumnos inscritos plan 2014 en adelante</a>
+                    </li>
+                </ul>
             </li>
-        @else
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
+            </ul>
+        </li>
 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a href="{{ route('login') }}" class="dropdown-item">
-                      Panel de administración
-                    </a>
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarddsadrop" data-toggle="dropdown">
+                Vinculación
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{route('vinculacion.informacion')}}">Información</a>
+                <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
+                <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
+                <a class="dropdown-item" href="{{route('vinculacion.banco_proyectos',1)}}">Banco de Proyectos</a>
+                <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">  Convenios</a>
+                <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
+                <a class="dropdown-item" href="{{asset('documents/content/vinculacion/catálogo de servicios/CATALAGO DE SERVICIOS OFICIAL 2022.pdf')}}" target="_blank">Catálogo de servicios</a>
+            </div>
+        </li>
 
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        <i class="material-icons" style="font-size:15px"></i>
-                        {{ __('Salir') }}
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbadasdadrdrop" data-toggle="dropdown">
+                Investigación
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/bio.pdf') }}"> Bioquímica</a>
+                <a class="dropdown-item"  href="{{route('investigacion.pitsc')}}"> Contraloría Social</a>
+                <a class="dropdown-item"  href="{{route('tutorias.tutorias')}}"> Tutorias</a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/geste.pdf') }}"> Gestión Empresarial</a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/ind.pdf') }}"> Industrial</a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/mec.pdf') }}"> Mecatrónica</a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/nan.pdf') }}"> Nanotecnología</a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/siscom.pdf') }}"> Sistemas Computacionales</a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/lineas_de_inv_19.php') }}">  Lineas de investigación ISC </a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/tics.pdf') }}">  Tecnologías de la Información y Comunicaciones </a>
+                <a class="dropdown-item" href="{{ asset('documents/content/investigacion/lies_18.pdf') }}">  Investigación Educativa </a>
+                <a class="dropdown-item" href="https://bit.ly/2SLwiRx"> Convocatorias CONACYT</a>
+                <a class="dropdown-item" href="https://bit.ly/2xLy8e2"> Convocatorias externas</a>
+            </div>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link active" href="{{ route('contenido.buzon.index') }}" >Buzón</a>
+        </li>
+        </ul>
+        <!-- Right Side Of Navbar -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </div>
-            </li>
-        @endguest
-    </ul>
-  </div>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a href="{{ route('login') }}" class="dropdown-item">
+                        Panel de administración
+                        </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            <i class="material-icons" style="font-size:15px"></i>
+                            {{ __('Salir') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+        </ul>
+    </div>
 </nav>
-
 
 {{--Contenido de la pagina--}}
 <div class="row">
-  <div class="col-sm-12">
-    @yield('carousel')
-  </div>
+    <div class="col-sm-12">
+        @yield('carousel')
+    </div>
 </div>
-<div id="app"></div>
+
 <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
@@ -355,7 +352,6 @@
     </div>
     <div class="col-sm-1"></div>
 </div>
-
 
 {{--Footer--}}
 <footer class="main-footer">
@@ -429,8 +425,8 @@
     <div class="container-fluid footer-pleca">
     <div class="row">
         <div class="col">
-        <br>
-        <br>
+            <br>
+            <br>
         </div>
     </div>
     </div>

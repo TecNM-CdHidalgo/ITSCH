@@ -7,21 +7,10 @@
 @section('css')
     <style type="text/css">
         .imgFormCarousel {
-            width: 90%;
-			max-height: 450px;
+            width: 100%;
+			max-height: 600px;
             overflow: hidden;
-            margin: 10px;
             position: relative;
-        }
-        .imgFormCarousel > .crop {
-            position:absolute;
-            left: -100%;
-            right: -100%;
-            top: -100%;
-            bottom: -100%;
-            margin: auto;
-            min-height: 100%;
-            min-width: 100%;
         }
 
         .imgFormCard {
@@ -30,16 +19,6 @@
             overflow: hidden;
             position: relative;
             box-shadow: 4px 3px 5px #999;
-        }
-        .imgFormCard > .crop {
-            position:absolute;
-            left: -100%;
-            right: -100%;
-            top: -100%;
-            bottom: -100%;
-            margin: auto;
-            min-height: 100%;
-            min-width: 100%;
         }
 
         .imgZoom{
@@ -55,7 +34,7 @@
 @endsection
 @section('carousel')
 	{{--Carrusel--}}
-	<div id="carr" class="carousel slide" data-ride="carousel">
+	<div id="carr" class="carousel slide carousel-fade" data-ride="carousel">
 		<ul class="carousel-indicators">
 			@php
 				$ban=true;
@@ -69,7 +48,6 @@
 				    	@endphp
 				    @else
 						<li data-target="#carr" data-slide-to="{{$not->id}}"></li>
-
 				    @endif
 				@endif
 			@endforeach
