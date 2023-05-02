@@ -106,7 +106,7 @@
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
                 <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8094/login">Evaluacion Docente</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8090/alumno/">Examen psicometrico</a>
-                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8084">Recibos electrónicos</a>
+                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8092/login">Recibos electrónicos</a>
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8082/#!/constancia">Sistema de eventos</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>

@@ -17,10 +17,13 @@
                         </a>
                         <a href="http://www.itsch.edu.mx:8080/sgcv3/LoginDocen.aspx" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-chalkboard-teacher fa-fw me-3"></i><span>Docentes</span></a>
-                        <a href="https://www.cdhidalgo.tecnm.mx:8084/admin/index.html#!/" class="list-group-item list-group-item-action py-2 ripple">
+                        <a href="https://cdhidalgo.tecnm.mx:8092/loginadmin" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-hand-holding-usd fa-fw me-3"></i><span>Caja</span></a>
                         <a href="http://www.itsch.edu.mx:8080/SAFTEC%20V2.1/Default" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-clipboard-list fa-fw me-3"></i><span>SAFTEC</span>
+                        </a>
+                        <a href="https://cdhidalgo.tecnm.mx:8094/loginadmin" class="list-group-item list-group-item-action py-2 ripple">
+                            <i class="fas fa-check-double fa-fw me-3"></i><span>Evaluación docente</span>
                         </a>
                     </div>
                 </div>
