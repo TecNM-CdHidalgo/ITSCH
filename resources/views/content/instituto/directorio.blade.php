@@ -94,6 +94,18 @@
 
 		<p align="center">&nbsp;
 			</p>
+
+            <h4 class="text-center"><strong><span> DIV. DE ING. EN NANOTECNOLOGÍA </span></strong></h4>
+
+            <p align="center">TAPIA REYNOSO SAUL</p>
+            <p align="center">ACOSTA NAVARRETE YANED MILAGROS</p>
+            <p align="center">CHÁVEZ ARELLANO JOAQUÍN</p>
+            <p align="center">LUQUE MURILLO JUAN MANUEL</p>
+            <p align="center">ESPINO SANPEDRO RAFAEL</p>
+            <p align="center">VILLALPANDO NIEVES MARIO ALEJANDRO </p>
+
+            <br>
+
 		<p align="center">
 
 		<h4 class="text-center"><span><strong>DIV. DE ING. BIOQU&Iacute;MICA</strong></span></h4>
@@ -185,17 +197,6 @@
 		<p align="center">BARAJAS MENDIOLA ARTURO</p>
 		<p align="center">DURÁN SOTO ELEAZAR</p>
 		<p align="center">TREJO ESPINOSA OSCAR</p>
-
-		<BR>
-		<h4 class="text-center"><strong><span> NANOTECNOLOGÍA </span></strong></h4>
-
-		<p align="center">TAPIA REYNOSO SAUL</p>
-		<p align="center">ACOSTA NAVARRETE YANED MILAGROS</p>
-		<p align="center">CHÁVEZ ARELLANO JOAQUÍN</p>
-		<p align="center">LUQUE MURILLO JUAN MANUEL</p>
-		<p align="center">SAÚL GALVEZ BARBOSA</p>
-		<p align="center">MARIO ALEJANDRO VILLALPANDO NIEVES</p>
-
 	</article>
 	<!-- /Article -->
 </div>

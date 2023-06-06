@@ -81,7 +81,7 @@
     <p id="p_vision">{{ $pro_act->vision }} </p>
     <br>
 
-    <h3>Politica</h3>
+    <h3>Política</h3>
     <hr>
     <p id="p_politica">{{ $pro_act->politica }}</p>
     <br>
