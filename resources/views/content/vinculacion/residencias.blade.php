@@ -260,7 +260,7 @@
                             <br>
                             FORMATO DE SEGUIMIENTO DE RESIDENCIAS(Cronograma).
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Seguimiento de residencias " download href='{{asset('documents/content/vinculacion/residencias/seguimientoad20.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            <a target="_blank" data-toogle="tooltip"  title="Seguimiento de residencias " download href='{{asset('documents/content/vinculacion/residencias/cronograma2023.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             FORMATO DE EVALUACIÓN XXIX.
