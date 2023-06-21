@@ -229,7 +229,7 @@
                             <br>
                             CRONOGRAMA DE ACTIVIDADES
                             <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Autorizacion del proyecto " download href='{{asset('documents/content/vinculacion/residencias/cronograma.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                                <a target="_blank" data-toogle="tooltip"  title="Seguimiento de residencias " download href='{{asset('documents/content/vinculacion/residencias/cronograma2023.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             PORTADA.
@@ -256,11 +256,6 @@
                             FORMATO DE ASESORIA.
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Formatos de asesorias  de residencias " download href='{{asset('documents/content/vinculacion/residencias/asesoria.doc')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
-                            </p>
-                            <br>
-                            FORMATO DE SEGUIMIENTO DE RESIDENCIAS(Cronograma).
-                            <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Seguimiento de residencias " download href='{{asset('documents/content/vinculacion/residencias/cronograma2023.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             FORMATO DE EVALUACIÓN XXIX.
