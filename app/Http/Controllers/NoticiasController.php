@@ -121,9 +121,15 @@ class NoticiasController extends Controller
                 $file=$request->archivos[$i];
                 //Para evitar nombres repetidos en las imagenes, creamos un nombre antes de guardar
                 //$name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
-                 $name=$file->getClientOriginalName();//Obtenemos el nombre original de los archivos
-                //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
-                $file->move($path,$name);
+                $name=$file->getClientOriginalName();//Obtenemos el nombre original de los archivos
+                //Verificamos que el tamaño del nombre sea menor a 50 caracteres
+                if(strlen($name)<50){
+                    //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
+                    $file->move($path,$name);
+                }
+                else{
+                    return response()->json(array(['type' => 'error', 'message' => 'El nombre del archivo '.$name.' es demasiado largo']));
+                }
 
                 $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
                 $fileNot->id_not=$article->id;

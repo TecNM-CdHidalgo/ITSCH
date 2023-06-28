@@ -161,7 +161,7 @@
                     }
                 },
                 error(error) {
-                    console.log(error);
+                    console.log('Upload error');
                     error = error[0];
                     document.getElementById('mds-alert-danger').innerHTM = error['message'];
                     $('#mds-progress-bar-container').fadeOut(3000);
