@@ -9,17 +9,17 @@
     <link rel="stylesheet"href="{{ asset('fonts/icomoon/style.css') }}">
     <link rel="stylesheet"href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap.min.css') }}">
-
     <link rel="stylesheet"href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap-datepicker.css') }}">
     <link rel="stylesheet"href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
     <link rel="stylesheet"href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet"href="{{ asset('css/aos.css.map') }}">
     <link rel="stylesheet"href="{{ asset('css/style.css') }}">
     <link rel="shortcut icon"href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-     {{-- Linea para agregar el editor CKeditor a la pagina para editar texto --}}
-     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- Linea para agregar el editor CKeditor a la pagina para editar texto --}}
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
     {{-- Links datatables --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/kt-2.6.4/r-2.2.9/rg-1.1.4/rr-1.2.8/sl-1.3.3/datatables.min.css"/>
@@ -80,11 +80,6 @@
                         <li>
                         <a href="{{ route('home') }}#home-section" class="nav-link">Inicio</a>
                         </li>
-                        @if (Auth::User()->tipo == "administrador")
-                            <li>
-                                <a href="{{route('admin.usuarios.inicio')}}" class="nav-link"><p id="section-usuarios" class="no-margins">Usuarios</p></a>
-                            </li>
-                        @endif
                         @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "editor"|| Auth::User()->tipo == "vinculacion")
                             <li>
                             <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
@@ -113,18 +108,18 @@
                                         <hr>
                                         <a class="dropdown-item" href="{{ route('periodos.inicio') }}">Transparencia</a>
                                     @endif
+                                    @if (Auth::User()->tipo == "administrador")
+                                        <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
+                                        <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Estadisticos</a>
+                                    @endif
                                 </div>
                             </li>
                             @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica" || Auth::User()->tipo == "planeacion")
                                 <li>
-                                    <a href="{{ route('buzon.show') }}" class="nav-link" title="Buzón"><i class='far fa-envelope-open' style='font-size:14px'></i>&nbsp Buzón</a>
+                                    <a href="{{ route('buzon.show') }}" class="nav-link" title="Buzón"><i class='far fa-envelope-open'></i>&nbsp Buzón</a>
                                 </li>
                             @endif
-                            @if (Auth::User()->tipo == "administrador")
-                                <li>
-                                    <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="nav-link" title="Buzón"><i class='far fa-chart-bar' style='font-size:14px'></i> Estadisticos</a>
-                                </li>
-                            @endif
+
                         @endif
                         | Usuario:
                         <li class="dropdown">
@@ -166,32 +161,6 @@
             @yield('contenido','Default')
         </div>
     @endif
-
-   <!--Incluir jQuery  -->
-   <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
-
-   {{-- Scripts para dataTable --}}
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-   {{-- Causa conflicto entre datatables y adorno de input de noticias --}}
-   {{-- <script  src="https://cdn.datatables.net/v/ju/jq-3.6.0/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/fc-4.0.1/fh-3.2.0/r-2.2.9/rg-1.1.4/rr-1.2.8/sc-2.0.5/sb-1.3.0/datatables.min.js" defer></script>--}}
-
-   <script  src="https://cdn.datatables.net/v/ju/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/fc-4.0.1/fh-3.2.0/r-2.2.9/rg-1.1.4/rr-1.2.8/sc-2.0.5/sb-1.3.0/datatables.min.js" defer></script>
-
-   {{-- Uso de multiselect jquery --}}
-   <script src="{{ asset('js/jquery.multi-select.js') }}"></script>
-   <script src="{{ asset('js/jquery-ui.js') }}"></script>
-   <script src="{{ asset('js/popper.min.js') }}"></script>
-   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-   <script src="{{ asset('js/aos.js') }}"></script>
-   <script src="{{ asset('js/main.js') }}"></script>
-
-    <script>
-        $(document).ready(function(event){
-        $('.mdshide').delay(2000).fadeOut(300);
-        })
-    </script>
-    @yield('js')
 
     <footer class="site-footer">
         <div class="container">
@@ -235,5 +204,31 @@
         </div>
         </div>
     </footer>
+
+     <!--Incluir jQuery  -->
+     <script src="{{ asset('jQuery/jquery-3.6.0.min.js') }}"></script>
+
+     {{-- Scripts para dataTable --}}
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+     <script  src="https://cdn.datatables.net/v/ju/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/fc-4.0.1/fh-3.2.0/r-2.2.9/rg-1.1.4/rr-1.2.8/sc-2.0.5/sb-1.3.0/datatables.min.js" defer></script>
+
+     {{-- Uso de multiselect jquery --}}
+     <script src="{{ asset('js/jquery.multi-select.js') }}"></script>
+     <script src="{{ asset('js/jquery-ui.js') }}"></script>
+     <script src="{{ asset('js/popper.min.js') }}"></script>
+     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+     <script src="{{ asset('js/aos.js') }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="{{ asset('js/owl.carousel.js') }}"></script>
+     <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+     <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+     <script src="{{ asset('js/main.js') }}"></script>
+     <script>
+         $(document).ready(function(event){
+         $('.mdshide').delay(2000).fadeOut(300);
+         })
+     </script>
+     @yield('js')
 </body>
 </html>
