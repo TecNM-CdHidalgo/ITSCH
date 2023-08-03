@@ -110,7 +110,7 @@
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8082/#!/constancia">Sistema de eventos</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
-                <a class="dropdown-item"  href="{{ route('alumnos.examen') }}" >Exani</a>
+                <a class="dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
                 {{-- <a class="dropdown-item"  href="#" >Exani</a> --}}
             </ul>
         </li>

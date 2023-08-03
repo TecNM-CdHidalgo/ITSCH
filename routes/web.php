@@ -20,7 +20,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 
 //Ruta del examen de nuevo ingreso
-Route::get('alumnos/examen',function(){return view('content.alumnos.examenNI');})->name('alumnos.examen');
+Route::get('alumnos/exani',function(){return view('content.alumnos.exani');})->name('alumnos.exani');
 
 //Transparecia
 Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');
