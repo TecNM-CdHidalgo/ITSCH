@@ -38,7 +38,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a href="https://forms.gle/NCxBE4RvKpQrvWhGA" class="btn btn-success">Ir al examen</a>
 
@@ -82,7 +82,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a href="https://forms.gle/HgeUfHsym5zPzv448" class="btn btn-success">Ir al examen</a>
 
@@ -126,7 +126,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a href="https://forms.gle/zzuXdiFxCyT5Vhw68" class="btn btn-success">Ir al examen</a>
 
@@ -170,7 +170,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a href="https://forms.gle/PH3KBHR3ZAyAiAVp8" class="btn btn-success">Ir al examen</a>
 
@@ -214,7 +214,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a href="https://forms.gle/xQkawb1iDSS8RZPV8" class="btn btn-success">Ir al examen</a>
 
@@ -258,7 +258,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a href="https://forms.gle/V5UPDzqZ5mLZr2f49" class="btn btn-success">Ir al examen</a>
 
@@ -302,7 +302,7 @@
                     los conocimientos que cada uno de los candidatos posee y asi poder hacer un diagnóstico oportuno que permita hacer una caracterización de
                     cada uno y poder tomar las medidas de apoyo necesarias para los aspirantes.
                 </p>
-                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a>, 2022</p>
+                <p class="font-weight-normal">Para <a><strong>Nuevo ingreso</strong></a></p>
 
                 <a target="_blank" href="https://forms.gle/wpKs4rW4PLpzzfHq7" class="btn btn-success">Ir al examen</a>
 
