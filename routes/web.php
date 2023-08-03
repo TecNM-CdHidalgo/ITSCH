@@ -6,7 +6,6 @@ use App\Http\Controllers\TransparenciaController;
 use App\Http\Controllers\ConvenioController;
 use App\Http\Controllers\BuzonController;
 use App\Http\Controllers\DenunciasController;
-use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -21,7 +20,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
 
 //Ruta del examen de nuevo ingreso
-Route::get('alumnos/exani',[IndexController::class, 'exani'])->name('alumnos.exani');
+Route::get('alumnos/examen',function(){return view('content.alumnos.examenNI');})->name('alumnos.examen');
 
 //Transparecia
 Route::get('transparencia/aviso_privacidad',function(){return view('content.transparencia.aviso_privacidad');})->name('transparencia.aviso_privacidad');

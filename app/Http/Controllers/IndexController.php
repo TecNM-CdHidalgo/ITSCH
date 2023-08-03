@@ -56,10 +56,7 @@ class IndexController extends Controller
         return response()->download($pathToFile,$nomImg);
     }
 
-    public function exani()
-    {
-        return View('content.alumnos.exani');
-    }
+
 
 
 }
