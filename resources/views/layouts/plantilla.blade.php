@@ -43,7 +43,7 @@
         <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
         </a>
-        <a href="https://drive.google.com/drive/u/1/folders/1PgmwgxcBZBr9IIfkXJYuzdXpVRU-uRHF" title="Horarios del semestre" target="_blank">
+        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EuqGmMg3RfRDktVc7u8g6iEBYFju5oQSM-UiaTx8inJ61w?e=QxbvCz" title="Horarios del semestre" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
         </a>
         <a href="https://www.univim.edu.mx">
