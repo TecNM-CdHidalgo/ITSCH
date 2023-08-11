@@ -59,18 +59,18 @@
             @foreach($noticias as $not)
                 @if($not->resaltar==1)
                     @if($ban)
-                        <div class="carousel-item active text-center" id="contCarousel">
+                        <div class="carousel-item active text-center">
                             <a href="{{route('ver',$not->id)}}">
-                                <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" id="imgCarr" >
+                                <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}"  class="d-block w-100 img-fluid rounded imgFormCarousel" >
                             </a>
                         </div>
                         @php
                             $ban=false;
                         @endphp
                     @else
-                        <div class="carousel-item text-center" id="contCarousel">
+                        <div class="carousel-item text-center">
                             <a href="{{route('ver',$not->id)}}">
-                                <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" id="imgCarr" >
+                                <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" class="d-block w-100 img-fluid rounded imgFormCarousel" >
                             </a>
                         </div>
                     @endif
