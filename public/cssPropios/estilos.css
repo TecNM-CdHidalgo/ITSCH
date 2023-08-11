@@ -43,6 +43,15 @@
 }
 
 
+
+/*Cambiar tamaño de la imagen segun el tamaño del dispositivo*/
+
+
+#imgCarr{
+    width: 100%;
+    height: 550px;
+}
+
 /*Estilos del moodle*/
 .mood{
     width:80px;
