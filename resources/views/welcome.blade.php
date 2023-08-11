@@ -35,68 +35,60 @@
 @section('carousel')
 	{{--Carrusel--}}
 	<div id="carr" class="carousel slide carousel-fade" data-ride="carousel">
-		<ul class="carousel-indicators">
-			@php
-				$ban=true;
-			@endphp
-			@foreach($noticias as $not)
-				@if($not->resaltar==1)
-					@if($ban)
-				    	<li data-target="#carr" data-slide-to="{{$not->id}}" class="active"></li>
-				    	@php
-				    		$ban=false;
-				    	@endphp
-				    @else
-						<li data-target="#carr" data-slide-to="{{$not->id}}"></li>
-				    @endif
-				@endif
-			@endforeach
-		</ul>
-		<div class="carousel-inner" style="background-color: white;">
-			@php
-				$ban=true;
-			@endphp
-			@foreach($noticias as $not)
-				@if($not->resaltar==1)
-					@if($ban)
-						<div class="carousel-item active text-center" style="background-color:white;">
-							<a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;" class="img-fluid rounded imgFormCarousel">
-						    </a>
-						</div>
-						@php
-				    		$ban=false;
-				    	@endphp
-					@else
-						<div class="carousel-item text-center" style="background-color: white;">
-						     <a href="{{route('ver',$not->id)}}">
-							    <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" style="max-width: 100%;" class="img-fluid rounded imgFormCarousel">
-						    </a>
-						</div>
-					@endif
-				@endif
-			@endforeach
-		</div>
-		<a class="carousel-control-prev"href="#carr" data-slide="prev">
-		    <span class="carousel-control-prev-icon"></span>
-		</a>
-		<a class="carousel-control-next"href="#carr" data-slide="next">
-		    <span class="carousel-control-next-icon"></span>
-		</a>
-	</div>
+        <ul class="carousel-indicators">
+            @php
+                $ban=true;
+            @endphp
+            @foreach($noticias as $not)
+                @if($not->resaltar==1)
+                    @if($ban)
+                        <li data-target="#carr" data-slide-to="{{$not->id}}" class="active"></li>
+                        @php
+                            $ban=false;
+                        @endphp
+                    @else
+                        <li data-target="#carr" data-slide-to="{{$not->id}}"></li>
+                    @endif
+                @endif
+            @endforeach
+        </ul>
+        <div class="carousel-inner">
+            @php
+                $ban=true;
+            @endphp
+            @foreach($noticias as $not)
+                @if($not->resaltar==1)
+                    @if($ban)
+                        <div class="carousel-item active text-center">
+                            <a href="{{route('ver',$not->id)}}">
+                                <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" class="d-block w-100 img-fluid rounded imgFormCarousel">
+                            </a>
+                        </div>
+                        @php
+                            $ban=false;
+                        @endphp
+                    @else
+                        <div class="carousel-item text-center">
+                            <a href="{{route('ver',$not->id)}}">
+                                <img src="{{ asset('storage/noticias/imagenes/'.$not->imagen) }}" alt="{{$not->titulo}}" class="d-block w-100 img-fluid rounded imgFormCarousel">
+                            </a>
+                        </div>
+                    @endif
+                @endif
+            @endforeach
+        </div>
+        <a class="carousel-control-prev" href="#carr" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carr" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
 @endsection
 
 @section('content')
-    {{-- Enlaces de interes --}}
-    <h3>Enlaces de interés</h3>
-    <hr class="red">
-    <div class="row">
-        <div class="col-sm-12">
-            <a href="https://intra.secoem.michoacan.gob.mx/denuncias" target="_blanck">
-                <img src="{{ asset('images/buzon_naranja.jpg') }}" alt="buzón naranja" style="width: 150px" class="imgZoom">
-            </a>
-        </div>
-    </div>
+    {{--Contenido de la pagina--}}
 
 	{{--Contenido de noticias--}}
 	<div class="row">
@@ -211,9 +203,15 @@
 
 			<div class="col-xl-2 mx-auto">
 				<a href='?vista=Dir_Posgrado'>
-					<img loading='lazy' src="{{ asset('images/interes/contraloria.png') }}" alt='Dir_Posgrado' title='Dir_Posgrado' class='img-fluid' />
+					<img loading='lazy' src="{{ asset('images/interes/contraloria.png') }}" alt='Contraloria' title='Contraloria' class='img-fluid' />
 				</a>
 			</div>
+
+            <div class="col-xl-2 mx-auto">
+                <a href="https://intra.secoem.michoacan.gob.mx/denuncias" target="_blanck">
+                    <img loading="lazy" src="{{ asset('images/buzon_naranja.jpg') }}" alt="buzón naranja" title="buzón naranja" style="width: 120px" class="imgZoom" >
+                </a>
+            </div>
 		</div>
 
 
