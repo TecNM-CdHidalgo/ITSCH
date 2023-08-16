@@ -165,7 +165,7 @@
             Egresados/Empleadores
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{route('seguimiento.egreso')}}">Encuesta de egreso</a>
+                <a class="dropdown-item" href="">Encuesta de egreso</a>
                 <a class="dropdown-item" href="{{route('seguimiento.egresados')}}">Seguimiento a egresados</a>
                 <a class="dropdown-item" href="{{route('seguimiento.empleadores')}}">Encuesta de Empleadores</a>
             </div>
