@@ -9,7 +9,7 @@
                 <nav id="sidebarMenu" class="d-lg-block sidebar bg-white">
                 <div class="position-sticky">
                     <div class="list-group list-group-flush mx-3 mt-4">
-                        <a href="https://www.cdhidalgo.tecnm.mx:8088/" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                        <a href="https://cdhidalgo.tecnm.mx:8081/" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                             <i class="fas fa-graduation-cap fa-fw me-3"></i><span>STA</span>
                         </a>
                         <a href="http://www.itsch.edu.mx:8080/sgcv3/LoginAdmin.aspx" class="list-group-item list-group-item-action py-2 ripple">
