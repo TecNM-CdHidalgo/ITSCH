@@ -99,7 +99,7 @@ Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas
 Route::get('alumnos/asesorias',function(){return view('content.alumnos.asesorias');})->name('alumnos.asesorias');
 
 //Seguimiento empleadores y egresados
-Route::get('seguimiento/egreso',function(){ return view('content.seguimiento.egreso');})->name('seguimiento.egreso');
+Route::get('seguimiento/egreso',function(){return view('content.seguimiento.egreso');})->name('egreso');
 Route::get('seguimiento/egresados',function(){return view('content.seguimiento.egresados');})->name('seguimiento.egresados');
 Route::get('seguimiento/empleadores',function(){return view('content.seguimiento.empleadores');})->name('seguimiento.empleadores');
 
