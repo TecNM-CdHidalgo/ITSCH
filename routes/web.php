@@ -6,6 +6,7 @@ use App\Http\Controllers\TransparenciaController;
 use App\Http\Controllers\ConvenioController;
 use App\Http\Controllers\BuzonController;
 use App\Http\Controllers\DenunciasController;
+use App\Http\Controllers\BancoController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -31,6 +32,7 @@ Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perC
 //Rutas de vinculación
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
 Route::get('vinculacion/banco_proyectos/{op}','BancoController@show')->name('vinculacion.banco_proyectos');
+Route::get('vinculacion/banco_proyectos/verPublico/{id}','BancoController@verPublico')->name('vinculacion.banco_proyectos.verPublico');
 Route::get('vinculacion/fichas2021',function(){return view('content.vinculacion.fichas2021');})->name('vinculacion.fichas2021');
 Route::get('vinculacion/convenios', [ConvenioController::class, 'convenios'])->name('vinculacion.convenios');
 Route::get('vinculacion/cultura_deporte',function(){return view('content.vinculacion.cultura_deporte');})->name('vinculacion.cultura_deporte');
@@ -196,7 +198,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('usuarios/perfil/editar_password','PerfilController@miPerfilEditarPassword')->name('admin.usuarios.mi_perfil_editar_password');
     Route::post('usuarios/perfil/modificar_password','PerfilController@miPerfilModificarPassword')->name('admin.usuarios.mi_perfil_modificar_password');
 
-	//Rutas de contenido de pagina
+	//Rutas de banco de proyectos
 	Route::get('contenido/banco_pro','BancoController@index')->name('admin.contenido.banco.index');
 	Route::get('contenido/banco_pro/crear','BancoController@create')->name('admin.contenido.banco.crear');
 	Route::get('contenido/banco_pro/guardar','BancoController@store')->name('admin.contenido.banco.guardar');
@@ -204,6 +206,9 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/banco_pro/eliminar/{id}','BancoController@destroy')->name('admin.contenido.banco.eliminar');
 	Route::get('contenido/banco_pro/editar/{id}','BancoController@edit')->name('admin.contenido.banco.editar');
 	Route::get('contenido/banco_pro/modificar/{id}','BancoController@update')->name('admin.contenido.banco.modificar');
+    Route::get('contenido/banco_pro/ver/{id}','BancoController@ver')->name('admin.contenido.banco.ver');
+    Route::get('contenido/banco_pro/colaboradores/{id}',[BancoController::class,'createColaboradores'])->name('admin.contenido.banco.createColaboradores');
+    Route::get('contenido/banco_pro/colaboradores/guardar/{id}',[BancoController::class,'storeColaboradores'])->name('admin.contenido.banco.storeColaboradores');
 
 	//Carreras
 	Route::get('contenido/carreras', [CarrerasController::class, 'index'])->name('carreras.index');

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Alert;
 use App\Models\Banco;
+use App\Models\Convenio;
+use App\Models\Colaborador;
 use Illuminate\Support\Facades\Auth;
 
 class BancoController extends Controller
@@ -28,7 +31,8 @@ class BancoController extends Controller
      */
     public function create()
     {
-        return view('admin.contenido.banco_pro.crear');
+        $convenios=Convenio::all(); //Obtenemos todos los convenios
+        return view('admin.contenido.banco_pro.crear')->with('convenios',$convenios);
     }
 
     public function store(Request $request)
@@ -38,22 +42,23 @@ class BancoController extends Controller
         }
 
         $Banco = new Banco;
-
         $Banco->carrera = $request->carrera;
         $Banco->proyecto = $request->proyecto;
         $Banco->vacantes = $request->vacantes;
         $Banco->empresa = $request->empresa;
+        $Banco->tipo = $request->tipo;
+        $Banco->area = $request->area;
         $Banco->direccion = $request->direccion;
         $Banco->telefono = $request->telefono;
         $Banco->correo = $request->correo;
         $Banco->docente = $request->docente;
-        $Banco->colaboradores = $request->colaboradores;
-        $Banco->alumnos = $request->alumnos;
+        $Banco->id_convenio = $request->id_convenio;
         $Banco->inicio = $request->inicio;
         $Banco->status = $request->status;
 
         $Banco->save();
 
+        Alert::success('Correcto','El proyecto fue agregado correctamente.');
         return redirect()->route('admin.contenido.banco.index');
     }
 
@@ -81,6 +86,12 @@ class BancoController extends Controller
             $banco = Banco::orderBy('created_at','desc')->get();
         }
 
+        //Consultamos el numero de vacantes disponibles por proyecto
+        foreach ($banco as $ban) {
+            $colaboradores = Colaborador::where('id_banco', $ban->id)->count();
+            $ban->vacantes_disponibles = $ban->vacantes - $colaboradores;
+        }
+
         return View('content.vinculacion.banco_de_datos')->with('banco',$banco);
     }
 
@@ -95,8 +106,9 @@ class BancoController extends Controller
         if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
             return redirect()->route('home');
         }
-        $banco = Banco::where('id',$id)->get();
-        return View('admin.contenido.banco_pro.editar')->with('banco',$banco);
+        $convenios=Convenio::all();
+        $banco = Banco::where('id',$id)->first();
+        return View('admin.contenido.banco_pro.editar')->with('banco',$banco)->with('convenios',$convenios);
     }
 
     /**
@@ -117,15 +129,18 @@ class BancoController extends Controller
         $Banco->telefono = $request->telefono;
         $Banco->correo = $request->correo;
         $Banco->docente = $request->docente;
-        $Banco->colaboradores = $request->colaboradores;
-        $Banco->alumnos = $request->alumnos;
+        $Banco->area = $request->area;
+        $Banco->id_convenio = $request->id_convenio;
+        $Banco->tipo = $request->tipo;
+        $Banco->observaciones = $request->observaciones;
         $Banco->inicio = $request->inicio;
         if($request->status!="")
         {
             $Banco->status = $request->status;
         }
         $Banco->save();
-        return redirect()->route('admin.contenido.banco.index');
+        Alert::success('Correcto','El proyecto fue modificado correctamente.');
+        return redirect()->route('admin.contenido.banco.ver',$id);
 
     }
 
@@ -142,6 +157,59 @@ class BancoController extends Controller
         }
 
         Banco::where('id', $id)->delete();
+        Alert::warning('Correcto','El proyecto fue eliminado correctamente.');
         return redirect()->route('admin.contenido.banco.index');
     }
+
+    //Función para ver mas detalles de cada proyecto
+    public function ver($id)
+    {
+        $proyecto = Banco::where('id',$id)->first();
+        $colaboradores=Colaborador::where('id_banco',$id)->get();
+        $convenio=Convenio::where('id',$proyecto->id_convenio)->first();
+        return View('admin.contenido.banco_pro.detalle')->with('proyecto',$proyecto)->with('colaboradores',$colaboradores)->with('convenio',$convenio);
+    }
+
+    //Función para visualizar todos los proyectos en la sección publica
+    public function verPublico($id)
+    {
+        $proyecto = Banco::where('id',$id)->first();
+        $colaboradores=Colaborador::where('id_banco',$id)->get();
+        $convenio=Convenio::where('id',$proyecto->id_convenio)->first();
+        return View('content.vinculacion.detalleBanco')->with('proyecto',$proyecto)->with('colaboradores',$colaboradores)->with('convenio',$convenio);
+    }
+
+    //Función para agregar colaboradores al proyecto
+    public function createColaboradores($id)
+    {
+        $proyecto = Banco::select('id','proyecto')->where('id',$id)->first();
+        return View('admin.contenido.banco_pro.colaboradores')->with('proyecto',$proyecto);
+    }
+
+    //Función para guardar los colaboradores
+    public function storeColaboradores($id)
+    {
+        //Consultamos el numero de bacantes del bacho de proyectos para saber cuantos colaboradores se pueden agregar
+        $banco = Banco::select('vacantes')->where('id',$id)->first();
+        //Consultamos el numero de colaboradores que ya tiene el proyecto
+        $colaboradores = Colaborador::where('id_banco',$id)->count();
+        //Si el numero de colaboradores es menor al numero de vacantes se pueden agregar mas colaboradores
+        if($colaboradores<$banco->vacantes)
+        {
+            $colaborador = new Colaborador;
+            $colaborador->nombre = request('nombre');
+            $colaborador->sexo = request('sexo');
+            $colaborador->tipo = request('tipo');
+            $colaborador->id_banco = $id;
+            $colaborador->save();
+            return redirect()->route('admin.contenido.banco.ver',$id);
+        }
+        else
+        {
+            Alert::warning('Error','El proyecto ya cuenta con el numero maximo de colaboradores.');
+            return redirect()->route('admin.contenido.banco.ver',$id);
+        }
+    }
+
+
 }

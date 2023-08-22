@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet"href="{{ asset('css/font_style.css') }}">
-    <link rel="stylesheet"href="{{ asset('fonts/icomoon/style.css') }}">
     <link rel="stylesheet"href="{{ asset('bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet"href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet"href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet"href="{{ asset('css/bootstrap-datepicker.css') }}">
-    <link rel="stylesheet"href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
-    <link rel="stylesheet"href="{{ asset('css/aos.css') }}">
-    <link rel="stylesheet"href="{{ asset('css/aos.css.map') }}">
     <link rel="stylesheet"href="{{ asset('css/style.css') }}">
     <link rel="shortcut icon"href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+
+
     {{-- Linea para agregar el editor CKeditor a la pagina para editar texto --}}
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
@@ -74,7 +71,7 @@
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                         <li>
                         <a href="{{ route('home') }}" class="nav-link">
-                            <i class='fas fa-home' style='font-size:16px'></i>
+                            <i class='fas fa-home'></i>
                         </a>
                         </li>
                         <li>
@@ -145,7 +142,7 @@
     @if ((new \Jenssegers\Agent\Agent())->isMobile())
         <div style="width: 100%;" >
             <div id="app">
-            @include('layouts.flash-message')
+                @include('sweetalert::alert')
             </div>
             <h4><b>Panel de administración</b></h4>
             <hr>
@@ -154,7 +151,7 @@
         @else
         <div style="width: 80%; margin:0 auto 0 auto;" >
             <div id="app">
-            @include('layouts.flash-message')
+                @include('sweetalert::alert')
             </div>
             <h4><b>Panel de administración</b></h4>
             <hr>
@@ -195,7 +192,7 @@
             <div class="border-top pt-5">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Avenida Ingeníero Carlos Rojas Gutierrez #2120| Ciudad Hidalgo Michoacán</i>
+            Copyright &copy; <b id="anio"></b> Avenida Ingeníero Carlos Rojas Gutierrez #2120| Ciudad Hidalgo Michoacán</i>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>
@@ -224,10 +221,16 @@
      <script src="{{ asset('js/jquery.sticky.js') }}"></script>
      <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
      <script src="{{ asset('js/main.js') }}"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
      <script>
          $(document).ready(function(event){
          $('.mdshide').delay(2000).fadeOut(300);
          })
+
+        $(document).ready(function(){
+            var anio = new Date().getFullYear();
+            $("#anio").text(anio);
+        });
      </script>
      @yield('js')
 </body>

@@ -11,43 +11,39 @@
         <table class="table table-hover" id="tabBanco">
             <thead class="table-sm">
                 <tr>
+                    <th>Numero</th>
                     <th>Carrera</th>
                     <th>Proyecto</th>
-                    <th>Status</th>
-                    <th>Vacantes</th>
                     <th>Empresa/Institución</th>
-                    <th>Dirección</th>
-                    <th>Telefono</th>
                     <th>Email</th>
                     <th>Responsable</th>
-                    <th>Colaboradores</th>
-                    <th>Alumnos</th>
-                    <th>Fecha inicio</th>
+                    <th>Vacantes</th>
+                    <th>Status</th>
+                    <th>Operaciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($banco as $ba)
                     <tr>
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $ba->carrera }}</td>
                         <td>{{ $ba->proyecto }}</td>
+                        <td>{{ $ba->empresa }}</td>
+                        <td>{{ $ba->correo }}</td>
+                        <td>{{ $ba->docente }}</td>
+                        <td>{{ $ba->vacantes_disponibles }}</td>
                         <td>
                             @if ($ba->status==1)
-                                <p class="bg-success text-white">Abierto</p>
+                                <p class="bg-success text-white">Inicio</p>
                             @elseif ($ba->status==2)
                                 <p class="bg-warning text-white">En proceso</p>
                             @elseif ($ba->status==3)
                                 <p class="bg-danger text-white">Terminado</p>
                             @endif
                         </td>
-                        <td>{{ $ba->vacantes }}</td>
-                        <td>{{ $ba->empresa }}</td>
-                        <td>{{ $ba->direccion }}</td>
-                        <td>{{ $ba->telefono }}</td>
-                        <td>{{ $ba->correo }}</td>
-                        <td>{{ $ba->docente }}</td>
-                        <td>{{ $ba->colaboradores }}</td>
-                        <td>{{ $ba->alumnos }}</td>
-                        <td>{{ $ba->inicio }}</td>
+                        <td>
+                            <a href="{{ route('vinculacion.banco_proyectos.verPublico',$ba->id) }}" class="btn btn-success btn-sm" title="Ver más"><i class="fas fa-eye"></i></a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

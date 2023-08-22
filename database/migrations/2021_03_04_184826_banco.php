@@ -20,13 +20,15 @@ class Banco extends Migration
             $table->integer('vacantes');
             $table->string('empresa',200);
             $table->string('direccion',300);
+            $table->string('tipo',12);
             $table->string('telefono',25);
             $table->string('correo',60);
             $table->string('docente',100);
-            $table->string('colaboradores',1000)->nullable();
-            $table->string('alumnos',1000)->nullable();
+            $table->string('area',15);
+            $table->integer('id_convenio')->nullable();
             $table->string('inicio',30)->nullable();
             $table->integer('status')->nullable();
+            $table->string('observaciones',200)->nullable();
             $table->timestamps();
         });
     }

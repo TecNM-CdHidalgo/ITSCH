@@ -18,15 +18,9 @@
                 <tr>
                     <th>Carrera</th>
                     <th>Proyecto</th>
-                    <th>Participantes</th>
                     <th>Empresa/Institución</th>
-                    <th>Dirección</th>
-                    <th>Telefono</th>
                     <th>Email</th>
                     <th>Responsable</th>
-                    <th>Colaboradores</th>
-                    <th>Alumnos</th>
-                    <th>Fecha inicio</th>
                     <th>Status</th>
                     <th>Operaciones</th>
                 </tr>
@@ -36,15 +30,9 @@
                     <tr>
                         <td>{{ $ba->carrera }}</td>
                         <td>{{ $ba->proyecto }}</td>
-                        <td>{{ $ba->vacantes }}</td>
                         <td>{{ $ba->empresa }}</td>
-                        <td>{{ $ba->direccion }}</td>
-                        <td>{{ $ba->telefono }}</td>
                         <td>{{ $ba->correo }}</td>
                         <td>{{ $ba->docente }}</td>
-                        <td>{{ $ba->colaboradores }}</td>
-                        <td>{{ $ba->alumnos }}</td>
-                        <td>{{ $ba->inicio }}</td>
                         <td>
                             @if ($ba->status==1)
                                 <p class="bg-success text-white">Inicio</p>
@@ -55,8 +43,7 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('admin.contenido.banco.eliminar',$ba->id) }}" type="button" class="btn btn-sm btn-danger"><i class='fas fa-trash-alt' style='font-size:14px'></i></a>
-                            <a href="{{ route('admin.contenido.banco.editar',$ba->id) }}" type="button" class="btn btn-sm btn-warning"><i class='fas fa-pen' style='font-size:14px'></i></a>
+                            <a href="{{ route('admin.contenido.banco.ver',$ba->id) }}" class="btn btn-success btn-sm" title="Ver más"><i class="fas fa-eye"></i></a>
                         </td>
                     </tr>
                 @endforeach
