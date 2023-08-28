@@ -211,5 +211,71 @@ class BancoController extends Controller
         }
     }
 
+    //Función para llamar al index de los reportes
+    public function reportesIndex()
+    {
+        //Consultamos la lista de convenios
+        $convenios=Convenio::all();
+        return view('admin.contenido.banco_pro.reportes',compact('convenios'));
+    }
+
+    //Función para generar el reporte de los convenios
+    public function reportesConvenios(Request $request)
+    {
+        //Retornamos un json con los datos de los convenios
+        $convenios=Convenio::where('id',$request->id)->get();
+        //Consultamos los proyectos que pertenecen al convenio
+        foreach ($convenios as $convenio) {
+            $convenio->proyectos = Banco::where('id_convenio',$convenio->id)->get();
+        }
+
+        //Obtenemos los colaboradores de cada proyecto y que sean profesores
+        foreach ($convenios as $convenio) {
+            foreach ($convenio->proyectos as $proyecto) {
+                $proyecto->colaboradoresProfes = Colaborador::where('id_banco',$proyecto->id)->where('tipo','Profesor')->get();
+            }
+        }
+
+        //Obtenemos los colaboradores de cada proyecto y que sean alumnos
+        foreach ($convenios as $convenio) {
+            foreach ($convenio->proyectos as $proyecto) {
+                $proyecto->colaboradoresAlumnos = Colaborador::where('id_banco',$proyecto->id)->where('tipo','Alumno')->get();
+            }
+        }
+
+        //Obtenemos el numero de alumnos hombres y mujeres de cada proyecto
+        foreach ($convenios as $convenio) {
+            foreach ($convenio->proyectos as $proyecto) {
+                $proyecto->TotColAluHom = Colaborador::where('id_banco',$proyecto->id)->where('tipo','Alumno')->where('sexo','Masculino')->count();
+                $proyecto->TotColAluMuj = Colaborador::where('id_banco',$proyecto->id)->where('tipo','Alumno')->where('sexo','Femenino')->count();
+            }
+        }
+
+
+        return response()->json($convenios);
+    }
+
+    //Función para generar el reporte de los proyectos de cada convenio
+    public function repConvProy(Request $request)
+    {
+        //Consultamos todos los convenios
+        $convenios=Convenio::select('id','institucion','tipo')->get();
+        //Contamos los proyectos de cada convenio
+        foreach ($convenios as $convenio) {
+            $convenio->proyectos = Banco::where('id_convenio',$convenio->id)->count();
+            //Agregamos el nombre de cada proyecto registrado
+            $convenio->nombreProyectos = Banco::select('proyecto')->where('id_convenio',$convenio->id)->get();
+        }
+        return response()->json($convenios);
+    }
+
+    //Función para consultar los proyectos registrados por área
+    public function repConvArea(Request $request)
+    {
+        //Consultamos el banco de proyectos y filtramos por area
+        $proyectos = Banco::where('area',$request->area)->get();
+        return response()->json($proyectos);
+    }
+
 
 }

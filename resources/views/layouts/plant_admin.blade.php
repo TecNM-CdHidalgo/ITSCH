@@ -137,7 +137,8 @@
                 <div id="app">
                     @include('sweetalert::alert')
                 </div>
-                <h4><b>Panel de administración</b></h4>
+                <br><br>
+                <h4><b>Panel de administración | @yield('ruta','Default')</b></h4>
                 <hr>
                 @yield('contenido','Default')
             </div>
@@ -146,7 +147,8 @@
                 <div id="app">
                     @include('sweetalert::alert')
                 </div>
-                <h4><b>Panel de administración</b></h4>
+                <br><br>
+                <h4><b>Panel de administración | @yield('ruta','Default')</b></h4>
                 <hr>
                 @yield('contenido','Default')
             </div>

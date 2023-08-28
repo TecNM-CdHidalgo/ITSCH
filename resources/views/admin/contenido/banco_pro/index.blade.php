@@ -1,6 +1,7 @@
 @extends('layouts.plant_admin')
 
 @section('contenido')
+    @section('ruta','Proyectos')
     <div class="row">
         <div class="col-sm-3">
             <h6>Banco de proyectos ITSCH</h6>
@@ -8,6 +9,7 @@
         <div class="col-sm-7"></div>
         <div class="col-sm-2" style="text-align: right">
             <a href="{{ route('admin.contenido.banco.crear') }}" type="button" class="btn btn-sm btn-success"><i class='fas fa-network-wired'></i> Agregar</a>
+            <a href="{{ route('admin.contenido.banco.reportesIndex') }}" class="btn btn-primary btn-sm"><i class='fas fa-chart-bar'></i> Reportes</a>
         </div>
     </div>
 

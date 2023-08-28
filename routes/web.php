@@ -201,7 +201,7 @@ Route::group(['middleware' => 'auth'],function(){
 	//Rutas de banco de proyectos
 	Route::get('contenido/banco_pro','BancoController@index')->name('admin.contenido.banco.index');
 	Route::get('contenido/banco_pro/crear','BancoController@create')->name('admin.contenido.banco.crear');
-	Route::get('contenido/banco_pro/guardar','BancoController@store')->name('admin.contenido.banco.guardar');
+	Route::get('contenido/banco_pro/guardar',[BancoController::class,'store'])->name('proyectos.store');
 	Route::get('contenido/banco_pro/mostrar','BancoController@show')->name('admin.contenido.banco.mostrar');
 	Route::get('contenido/banco_pro/eliminar/{id}','BancoController@destroy')->name('admin.contenido.banco.eliminar');
 	Route::get('contenido/banco_pro/editar/{id}','BancoController@edit')->name('admin.contenido.banco.editar');
@@ -209,6 +209,12 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/banco_pro/ver/{id}','BancoController@ver')->name('admin.contenido.banco.ver');
     Route::get('contenido/banco_pro/colaboradores/{id}',[BancoController::class,'createColaboradores'])->name('admin.contenido.banco.createColaboradores');
     Route::get('contenido/banco_pro/colaboradores/guardar/{id}',[BancoController::class,'storeColaboradores'])->name('admin.contenido.banco.storeColaboradores');
+
+    //Rutas de los reportes de los proyectos
+    Route::get('contenido/banco_pro/reportes/Index',[BancoController::class,'reportesIndex'])->name('admin.contenido.banco.reportesIndex');
+    Route::get('contenido/banco_pro/reportes/convenios',[BancoController::class,'reportesConvenios'])->name('admin.contenido.banco.reportesConvenios');
+    Route::get('contenido/banco_pro/reportes/Convenios/Proyectos',[BancoController::class,'repConvProy'])->name('admin.contenido.banco.repConvProy');
+    Route::get('contenido/banco_pro/reportes/Convenios/Area',[BancoController::class,'repConvArea'])->name('admin.contenido.repConvArea');
 
 	//Carreras
 	Route::get('contenido/carreras', [CarrerasController::class, 'index'])->name('carreras.index');
