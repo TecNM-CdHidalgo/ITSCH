@@ -202,7 +202,7 @@
 			</div>
 
 			<div class="col-xl-2 mx-auto">
-				<a href='?vista=Dir_Posgrado'>
+				<a href='{{route('investigacion.pitsc')}}'>
 					<img loading='lazy' src="{{ asset('images/interes/contraloria.png') }}" alt='Contraloria' title='Contraloria' class='img-fluid' />
 				</a>
 			</div>

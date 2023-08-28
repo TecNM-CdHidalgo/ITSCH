@@ -58,9 +58,11 @@ class BancoController extends Controller
 
         $Banco->save();
 
+
         Alert::success('Correcto','El proyecto fue agregado correctamente.');
         return redirect()->route('admin.contenido.banco.index');
     }
+
 
 
 
