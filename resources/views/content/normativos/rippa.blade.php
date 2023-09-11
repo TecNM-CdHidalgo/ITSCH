@@ -10,7 +10,7 @@
         <div class="col-sm">
 
 	            <h2 class="page-title">Reglamento interno de ingreso promoción y permanencia del personal Academico del ITSCH</h2>
-		
+
 
                  <hr class="red">
                     &nbsp; <br>
@@ -3019,21 +3019,21 @@
                     </image>
                     <text transform="matrix(1 0 0 1 264.0205 192.4893)"><tspan x="0" y="0" font-family="'MyriadPro-It'" font-size="36.8956">Reglamento interno de ingreso promoción y </tspan><tspan x="98.066" y="44.275" font-family="'MyriadPro-It'" font-size="36.8956">permanencia del ITSCH (RIPPA)</tspan></text>
                     </svg>
-                    
-     
-    
-   
+
+
+
+
 
 
     </div>
-    
-  
+
+
     <hr class="red">
-  
-      
+
+
 
 </div>
- 
+
 <br><br>
 <br><br>
 <table class="table">
@@ -3047,12 +3047,12 @@
 </thead>
     <tr>
     <td>    <h2>Reglamento</h2> </td>
-    
-    <td>  <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/rippa/rippa2017.pdf')}}" data-toogle="tooltip" title="lineamiento de academias." target="_blank">
+
+    <td>  <a type="button" class="btn btn-primary" href="{{asset('documents/content/normativos/rippa/RIPPPA.pdf')}}" data-toogle="tooltip" title="lineamiento de academias." target="_blank">
         <i class='fas fa-download' style='font-size:20px'></i>
         </a></td>
     </tr>
     </table>
-    
+
     <hr class="red">
 @endsection
