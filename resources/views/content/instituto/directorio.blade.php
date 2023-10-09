@@ -10,7 +10,7 @@
 		</header>
         <p align="center" style="margin:30px auto 35px auto"><img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}"></p>
         <hr class="red">
-		<h3>1.&nbsp;&nbsp;&nbsp; Dr. en D. Jaime Pérez Torres. Director general</h3>
+		<h3>1.&nbsp;&nbsp;&nbsp; Mtro. Javier Irepan Hacha. Director general</h3>
 		<p>&nbsp;
 			</p>
 		<h4 style="margin-left: 49.65pt;">
