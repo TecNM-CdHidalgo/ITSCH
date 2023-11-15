@@ -102,7 +102,8 @@
                 </ul>
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
-                <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Virtual</a>
+                <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Elibro</a>
+                <a class="dropdown-item" href="https://www.tecnm.mx/?vista=TecNM_Virtual&tecnm_virtual=Bibliotecas">Biblioteca TecNM</a>
                 <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
