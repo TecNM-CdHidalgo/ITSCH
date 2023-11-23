@@ -161,14 +161,13 @@
                     }
                 },
                 error(error) {
-                    console.log('Upload error');
+                    console.log('Error #2');
+                    console.log(error);
                     error = error[0];
                     document.getElementById('mds-alert-danger').innerHTM = error['message'];
                     $('#mds-progress-bar-container').fadeOut(3000);
                     $('#mds-alert-danger').fadeIn();
                     $('#mds-alert-danger').fadeOut(3000);
-                    console.log('Error #2');
-                    console.log(error);
                 },
             });
         });
