@@ -147,7 +147,7 @@
                         document.getElementById('mds-alert-danger').innerHTML = response['message'];
                         $('#mds-alert-danger').fadeIn();
                         $('#mds-alert-danger').fadeOut(3000);
-                        console.log('Upload error');
+                        console.log('Error #1');
                         setTimeout(function(){
                             $('#mds-progress-bar').css('width',"0%");
                             $('#mds-progress-bar-container').fadeOut(2000);
@@ -167,7 +167,8 @@
                     $('#mds-progress-bar-container').fadeOut(3000);
                     $('#mds-alert-danger').fadeIn();
                     $('#mds-alert-danger').fadeOut(3000);
-                    console.log('Upload error');
+                    console.log('Error #2');
+                    console.log(error);
                 },
             });
         });

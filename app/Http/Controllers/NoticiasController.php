@@ -57,8 +57,6 @@ class NoticiasController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
        if(!Storage::has('public/noticias/imagenes')){
             Storage::makeDirectory('public/noticias/imagenes');
         }
