@@ -142,6 +142,7 @@
                 cache: false,
                 processData:false,
                 success(response) {
+                    console.log(response);
                     response = response[0];
                     if(response['type'] == 'error'){
                         document.getElementById('mds-alert-danger').innerHTML = response['message'];
@@ -151,13 +152,13 @@
                         setTimeout(function(){
                             $('#mds-progress-bar').css('width',"0%");
                             $('#mds-progress-bar-container').fadeOut(2000);
-                        },2000);
+                        },3000);
                     }else{
                         document.getElementById('mds-alert-success').innerHTML = response['message'];
                         $('#mds-alert-success').fadeIn();
                         setTimeout(function(){
                             window.location.replace("{{ route('admin.noticias.inicio') }}");
-                        },2000);
+                        },3000);
                     }
                 },
                 error(error) {

@@ -121,12 +121,12 @@ class NoticiasController extends Controller
                 //$name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
                 $name=$file->getClientOriginalName();//Obtenemos el nombre original de los archivos
                 //Verificamos que el tamaño del nombre sea menor a 50 caracteres
-                if(strlen($name)<50){
-                    //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
-                    $file->move($path,$name);
-                }
-                else{
+                if(strlen($name) > 50){
                     return response()->json(array(['type' => 'error', 'message' => 'El nombre del archivo '.$name.' es demasiado largo']));
+                }
+                // Verificamos el tamaño del archivo que no supere los 3 megas
+                if ($file->getSize() > 3000000) {
+                    return response()->json(array(['type' => 'error', 'message' => 'El archivo ' . $name . ' es demasiado grande, no debe superar los 3 megas']));
                 }
 
                 $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
@@ -243,7 +243,14 @@ class NoticiasController extends Controller
                 //$name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
                 $name=$file->getClientOriginalName();//Obtenemos el nombre original de los archivos
                 //Guardamos la imagen en la carpeta creada en la ruta que marcamos anteriormente
-                $file->move($path,$name);
+                //Verificamos que el tamaño del nombre sea menor a 50 caracteres
+                if(strlen($name) > 50){
+                    return response()->json(array(['type' => 'error', 'message' => 'El nombre del archivo '.$name.' es demasiado largo']));
+                }
+                // Verificamos el tamaño del archivo que no supere los 3 megas
+                if ($file->getSize() > 3000000) {
+                    return response()->json(['type' => 'error', 'message' => 'El archivo ' . $name . ' es demasiado grande, no debe superar los 3 megas']);
+                }
 
                 $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
                 $fileNot->id_not=$article->id;
