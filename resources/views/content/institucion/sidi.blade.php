@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
+@section('titulo', 'SIDI')
+
+@section('descripcion', 'Sistema de Información digital del ITSCH')
+
 @section('content')
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-4">
              <!--Main Navigation-->
             <header>
                 <!-- Sidebar -->
@@ -25,6 +29,10 @@
                         <a href="https://cdhidalgo.tecnm.mx:8094/loginadmin" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-check-double fa-fw me-3"></i><span>Evaluación docente</span>
                         </a>
+                        <a href="{{ route('biblioteca.index') }}" class="list-group-item list-group-item-action py-2 ripple">
+                            <i class="fas fa-book fa-fw me-3"></i><span>Biblioteca</span>
+                        </a>
+                        <br>
                     </div>
                 </div>
                 </nav>
@@ -38,7 +46,7 @@
             </main>
             <!--Main layout-->
         </div>
-        <div class="col-sm-10" style="text-align: center;">
+        <div class="col-sm-8" style="text-align: center;">
             <img src="{{ asset('images/content/instituto/sidi.png') }}" alt="Sistema SIDI" style="width: 200px">
             <br>
             <b>Sistema de Información digital del ITSCH </b>

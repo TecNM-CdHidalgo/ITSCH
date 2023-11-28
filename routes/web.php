@@ -7,6 +7,7 @@ use App\Http\Controllers\ConvenioController;
 use App\Http\Controllers\BuzonController;
 use App\Http\Controllers\DenunciasController;
 use App\Http\Controllers\BancoController;
+use App\Http\Controllers\BibliotecaController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -164,6 +165,10 @@ Route::get('contenido/buzon/store',[BuzonController::class,'store'])->name('cont
 //Rutas de denuncia de acoso o discriminación
 Route::get('contenido/denuncia/index',[DenunciasController::class,'index'])->name('contenido.denuncia.index');
 Route::post('contenido/denuncia/store',[DenunciasController::class,'store'])->name('contenido.denuncia.store');
+
+//Rutas del sistema de la biblioteca
+Route::get('biblioteca/index',function(){return view('content.institucion.biblioteca');})->name('biblioteca.index');
+Route::get('biblioteca/findAlumno',[BibliotecaController::class,'findAlumno'])->name('biblioteca.findAlumno');
 
 
 //Fin Rutas publicas***********************************************************************
