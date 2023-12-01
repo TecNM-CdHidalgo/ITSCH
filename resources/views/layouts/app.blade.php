@@ -35,6 +35,9 @@
         rel="stylesheet"
         />
 
+        {{-- Links de sweetalert2 --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+
         {{-- Links datatables --}}
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/af-2.3.7/b-2.0.1/b-colvis-2.0.1/b-html5-2.0.1/b-print-2.0.1/cr-1.5.5/kt-2.6.4/r-2.2.9/rg-1.1.4/rr-1.2.8/sl-1.3.3/datatables.min.css"/>
 
@@ -169,6 +172,18 @@
 
         <!-- MDB -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+
+        {{-- Scripts para sweetalert --}}
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        {{-- Scripts para el uso de CAPTCHA GOOGLE --}}
+        <script>
+            function onSubmit(token) {
+                document.getElementById("demo-form").submit();
+            }
+        </script>
+
+
 
         {{-- Seccion para los js por pagina--}}
         @yield('js')

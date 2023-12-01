@@ -169,6 +169,7 @@ Route::post('contenido/denuncia/store',[DenunciasController::class,'store'])->na
 //Rutas del sistema de la biblioteca
 Route::get('biblioteca/index',function(){return view('content.institucion.biblioteca');})->name('biblioteca.index');
 Route::get('biblioteca/findAlumno',[BibliotecaController::class,'findAlumno'])->name('biblioteca.findAlumno');
+Route::get('biblioteca/store',[BibliotecaController::class,'store'])->name('biblioteca.store');
 
 
 //Fin Rutas publicas***********************************************************************
