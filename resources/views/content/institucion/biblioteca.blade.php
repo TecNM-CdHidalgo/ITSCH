@@ -88,9 +88,8 @@
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger cerrar" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="saveAcompañantes" onclick="saveAcompañantes()">Guardar</button>
+                    <button type="button" class="btn btn-primary" id="saveAcompañantes" onclick="saveAcompañantes()">Pre registro</button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -151,6 +150,7 @@
                             $('#control').val('');
                             $('#datos').attr('hidden', true);
                             $('#servicio').val('');
+                            $('#txtAcom').text('');
                         }else{
                             Swal.fire('Error', 'No se pudo registrar el servicio', 'error');
                         }
@@ -187,10 +187,14 @@
                 }).then((result) => {
                     if(result.value){
                         $('#extras').val("Sala 1");
+                        $('#txtAcom').text("Sala 1");
                     }else{
                         $('#extras').val("Sala 2");
+                        $('#txtAcom').text("Sala 2");
                     }
                 });
+                //Hacemos visible la etiqueta txtAcom para mostrar la sala a la que entrara
+                $('#txtAcom').removeAttr('hidden');
             }
             else{
                 $('#txtAcom').attr('hidden', true);
@@ -235,6 +239,13 @@
             $('#extras').val("");
             for(var i = 0; i < $('#n_acom').val(); i++){
                 if($('#acompañante' + (i + 1)).val() != ''){
+                    //Verificamos que los numeros de control no se repitan
+                    for(var j = 0; j < $('#n_acom').val(); j++){
+                        if($('#acompañante' + (i + 1)).val() == $('#acompañante' + (j + 1)).val() && i != j){
+                            Swal.fire('Error', 'No puedes repetir numeros de control', 'error');
+                            return;
+                        }
+                    }
                     acompañantes += $('#acompañante' + (i + 1)).val() + ',';
                     error=false;
                 }
