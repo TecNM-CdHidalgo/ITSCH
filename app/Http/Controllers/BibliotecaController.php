@@ -35,4 +35,12 @@ class BibliotecaController extends Controller
         return response()->json(['success'=>'Se registro el alumno'],200);
     }
 
+    //Funcion para obtener los registros de la base de datos de la biblioteca
+    public function estadisticos()
+    {
+        //Llamamos la vista de estadisticos
+        return view('admin.biblioteca.estadisticos');
+    }
+
+
 }

@@ -243,6 +243,11 @@
                             <a target="_blank" data-toogle="tooltip"  title="Solicitud de residencias " download href='{{asset('documents/content/vinculacion/residencias/solicitud_residencias.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
+                            CARTA DE PRESENTACIÓN.
+                            <p align="center">
+                            <a target="_blank" data-toogle="tooltip"  title="Solicitud de residencias " download href='{{asset('documents/content/vinculacion/residencias/carta presentacion.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
+                            </p>
+                            <br>
                             CONVENIO DE RESIDENCIAS PROFESIONALES.
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Convenio  de residencias " download href='{{asset('documents/content/vinculacion/residencias/Convenio de residencias.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>

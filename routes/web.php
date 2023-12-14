@@ -296,5 +296,8 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/buzon/edit/{id}',[BuzonController::class,'edit'])->name('buzon.edit');
     Route::get('contenido/buzon/destroy',[BuzonController::class,'destroy'])->name('buzon.destroy');
     Route::get('contenido/buzon/leidos',[BuzonController::class,'leidos'])->name('buzon.leidos');
+
+    //Rutas privadas de biblioteca
+    Route::get('contenido/biblioteca/estadisticos',[BibliotecaController::class,'estadisticos'])->name('biblioteca.estadisticos');
 });
 
