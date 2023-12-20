@@ -28,7 +28,7 @@
 		<p style="margin-left:92.15pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			4.&nbsp;&nbsp;&nbsp;CP. María Mercedes Pérez Reyes. Departamento de Contabilidad y Recursos Financieros</h4>
+			4.&nbsp;&nbsp;&nbsp;????. Departamento de Contabilidad y Recursos Financieros</h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp; LCF. Maria Elena Patiño Martinez. (Encargada) Subdirectora de Administración y Finanzas</p>
 		<p style="margin-left:92.15pt;">
@@ -41,7 +41,7 @@
 		<p style="margin-left:49.65pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			6. &nbsp;&nbsp;&nbsp; MTRA. María Griselda Correa García. Encargada de la subdirección académica
+			6. &nbsp;&nbsp;&nbsp; ING. Gerardo Espinoza Cervantes. Subdirector Acad&eacute;mico.
            </h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;Ing. Brenda Mercedes Camacho Medina. Jefa de la Divisi&oacute;n de Ingenier&iacute;a Industrial</p>
