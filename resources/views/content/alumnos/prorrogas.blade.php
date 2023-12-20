@@ -10,7 +10,7 @@
         <h3>Solicitud de prorrogas</h3>
         <hr>
         <label for="prorroga">Descarga el formato de prorroga</label>
-        <a href="{{ asset('/documents/content/alumnos/solicitud de prorrogas.pdf') }}" title="Formato" download class="btn btn-success"><i class='fas fa-download' style='font-size:14px'></i></a>
+        <a href="{{ asset('/documents/content/alumnos/solicitud de prorrogas.pdf') }}" target="blanck" title="Formato" class="btn btn-success"><i class='fas fa-download' style='font-size:14px'></i></a>
         <br>
         <br>
         <br>
