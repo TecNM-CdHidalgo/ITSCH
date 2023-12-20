@@ -156,9 +156,10 @@
                     }else{
                         document.getElementById('mds-alert-success').innerHTML = response['message'];
                         $('#mds-alert-success').fadeIn();
-                        setTimeout(function(){
+                        $('#mds-alert-danger').fadeOut(3000);
+                       setTimeout(function(){
                             window.location.replace("{{ route('admin.noticias.inicio') }}");
-                        },3000);
+                        },3002);
                     }
                 },
                 error(error) {

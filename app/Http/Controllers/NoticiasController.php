@@ -48,13 +48,7 @@ class NoticiasController extends Controller
         return View('admin.noticias.editar')->with('article',$article);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
        if(!Storage::has('public/noticias/imagenes')){
@@ -107,15 +101,16 @@ class NoticiasController extends Controller
         if($request->has('archivos'))//Validamos si existe un archivo
         {
             DB::table('archivos_noticias')->where('id_not', '=', $id)->delete();
-            //Generamos la ruta donde se guardaran las imagenes de los articulos
+            //Generamos la ruta donde se guardaran los archivos de las noticias
             Storage::deleteDirectory('public/noticias/archivos/'.$article->id);
             $path=storage_path().'/app/public/noticias/archivos/'.$article->id.'/';
             $path_to_verify = 'public/noticias/archivos/'.$article->id;
             if(!Storage::has($path_to_verify)){
                 Storage::makeDirectory($path_to_verify);
             }
+            $error=false;
             for ($i = 0; $i < count($request->archivos) ; $i++) {
-                //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
+                //En el metodo file ponemos
                 $file=$request->archivos[$i];
                 //Para evitar nombres repetidos en las imagenes, creamos un nombre antes de guardar
                 //$name='noticiasFile_'.time().'_'.$i.'.'.strtolower($file->getClientOriginalExtension());
@@ -123,36 +118,43 @@ class NoticiasController extends Controller
                 //Verificamos que el tamaño del nombre sea menor a 50 caracteres
                 if(strlen($name) > 50){
                     return response()->json(array(['type' => 'error', 'message' => 'El nombre del archivo '.$name.' es demasiado largo']));
+                    $error=true;
+                    //terminamos el ciclo
+                    break;
                 }
                 // Verificamos el tamaño del archivo que no supere los 3 megas
                 if ($file->getSize() > 3000000) {
                     return response()->json(array(['type' => 'error', 'message' => 'El archivo ' . $name . ' es demasiado grande, no debe superar los 3 megas']));
+                    $error=true;
+                    //terminamos el ciclo
+                    break;
                 }
 
                 $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
                 $fileNot->id_not=$article->id;
-                $fileNot->nom_archivo=$name;//Obtiene el nombre de la imagen para guardarlo en la bd
+                $fileNot->nom_archivo=$name;//Obtiene el nombre del archivo para guardarlo en la bd
                 $fileNot->save();//Guarda la evidencia en su tabla
-
+                //Guardamos el archivo en la carpeta creada en la ruta que marcamos anteriormente
+                $file->move($path,$name);
             }
         }
-        $article->titulo = $request->titulo;
-        $article->contenido = $request->contenido;
-        $article->sintesis = $request->sintesis;
-        $article->fecha_pub = $request->fecha_pub;
-        $article->fecha_fin = $request->fecha_fin;
-        $article->resaltar = $request->resaltar;
-        $article->save();
-
-        return response()->json(array(['type' => 'success', 'message' => 'Articulo modificado correctamente']));
+        //Verificamos si hubo un error en el ciclo
+        if($error){
+            return response()->json(array(['type' => 'error', 'message' => 'Ocurrio un error al guardar los archivos']));
+        }
+        else{
+            $article->titulo = $request->titulo;
+            $article->contenido = $request->contenido;
+            $article->sintesis = $request->sintesis;
+            $article->fecha_pub = $request->fecha_pub;
+            $article->fecha_fin = $request->fecha_fin;
+            $article->resaltar = $request->resaltar;
+            $article->save();
+            return response()->json(array(['type' => 'success', 'message' => 'Articulo modificado correctamente']));
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Request $request)
     {
         if(!$request->has('id')){
@@ -236,6 +238,7 @@ class NoticiasController extends Controller
             if(!Storage::has($path_to_verify)){
                 Storage::makeDirectory($path_to_verify);
             }
+            $error=false;
             for ($i = 0; $i < count($request->archivos) ; $i++) {
                 //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
                 $file=$request->archivos[$i];
@@ -246,25 +249,37 @@ class NoticiasController extends Controller
                 //Verificamos que el tamaño del nombre sea menor a 50 caracteres
                 if(strlen($name) > 50){
                     return response()->json(array(['type' => 'error', 'message' => 'El nombre del archivo '.$name.' es demasiado largo']));
+                    $error=true;
+                    //terminamos el ciclo
+                    break;
                 }
                 // Verificamos el tamaño del archivo que no supere los 3 megas
                 if ($file->getSize() > 3000000) {
                     return response()->json(['type' => 'error', 'message' => 'El archivo ' . $name . ' es demasiado grande, no debe superar los 3 megas']);
+                    $error=true;
+                    //terminamos el ciclo
+                    break;
                 }
 
                 $fileNot=new ArchivoNoticia(); //Obtiene todos los datos de la evidencia de la vista create
                 $fileNot->id_not=$article->id;
-                $fileNot->nom_archivo=$name;//Obtiene el nombre de la imagen para guardarlo en la bd
+                $fileNot->nom_archivo=$name;//Obtiene el nombre del archivo para guardarlo en la bd
                 $fileNot->save();//Guarda la evidencia en su tabla
-
+                //Guardamos el archivo en la carpeta creada en la ruta que marcamos anteriormente
+                $file->move($path,$name);
             }
-
         }
         else
         {
              $article->save();
         }
-        return response()->json(array(['type' => 'success', 'message' => 'Noticia creada correctamente']));
+        //Verificamos si hubo un error en el ciclo
+        if($error){
+            return response()->json(array(['type' => 'error', 'message' => 'Ocurrio un error al guardar los archivos']));
+        }
+        else{
+            return response()->json(array(['type' => 'success', 'message' => 'Noticia creada correctamente']));
+        }
     }
 
 
