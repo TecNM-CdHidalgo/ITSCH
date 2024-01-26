@@ -105,7 +105,7 @@
                 <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Elibro</a>
                 <a class="dropdown-item" href="https://www.tecnm.mx/?vista=TecNM_Virtual&tecnm_virtual=Bibliotecas">Biblioteca TecNM</a>
                 <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
-                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
+                <a class="dropdown-item"  href="https://evaltutor.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
                 <a class="dropdown-item"  href="https://sed.cdhidalgo.tecnm.mx/">Evaluacion Docente</a>
                 <a class="dropdown-item"  href="https://caracterizacion.cdhidalgo.tecnm.mx/alumno/">Examen psicometrico</a>
