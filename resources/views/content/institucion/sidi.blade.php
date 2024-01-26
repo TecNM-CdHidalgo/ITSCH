@@ -13,7 +13,7 @@
                 <nav id="sidebarMenu" class="d-lg-block sidebar bg-white">
                 <div class="position-sticky">
                     <div class="list-group list-group-flush mx-3 mt-4">
-                        <a href="https://cdhidalgo.tecnm.mx:8081/" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                        <a href="https://creditos.cdhidalgo.tecnm.mx/" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                             <i class="fas fa-graduation-cap fa-fw me-3"></i><span>STA</span>
                         </a>
                         <a href="http://www.itsch.edu.mx:8080/sgcv3/LoginAdmin.aspx" class="list-group-item list-group-item-action py-2 ripple">
@@ -21,12 +21,12 @@
                         </a>
                         <a href="http://www.itsch.edu.mx:8080/sgcv3/LoginDocen.aspx" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-chalkboard-teacher fa-fw me-3"></i><span>Docentes</span></a>
-                        <a href="https://cdhidalgo.tecnm.mx:8092/loginadmin" class="list-group-item list-group-item-action py-2 ripple">
+                        <a href="https://recibos.cdhidalgo.tecnm.mx/loginadmin" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-hand-holding-usd fa-fw me-3"></i><span>Caja</span></a>
                         <a href="http://www.itsch.edu.mx:8080/SAFTEC%20V2.1/Default" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-clipboard-list fa-fw me-3"></i><span>SAFTEC</span>
                         </a>
-                        <a href="https://cdhidalgo.tecnm.mx:8094/loginadmin" class="list-group-item list-group-item-action py-2 ripple">
+                        <a href="https://sed.cdhidalgo.tecnm.mx/" class="list-group-item list-group-item-action py-2 ripple">
                             <i class="fas fa-check-double fa-fw me-3"></i><span>Evaluación docente</span>
                         </a>
                         <a href="{{ route('biblioteca.index') }}" class="list-group-item list-group-item-action py-2 ripple">

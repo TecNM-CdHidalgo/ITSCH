@@ -104,14 +104,14 @@
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
                 <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Elibro</a>
                 <a class="dropdown-item" href="https://www.tecnm.mx/?vista=TecNM_Virtual&tecnm_virtual=Bibliotecas">Biblioteca TecNM</a>
-                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8081/">Créditos</a>
+                <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
                 <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8087/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
-                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8094/login">Evaluacion Docente</a>
-                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8090/alumno/">Examen psicometrico</a>
-                <a class="dropdown-item"  href="https://cdhidalgo.tecnm.mx:8092/login">Recibos electrónicos</a>
+                <a class="dropdown-item"  href="https://sed.cdhidalgo.tecnm.mx/">Evaluacion Docente</a>
+                <a class="dropdown-item"  href="https://caracterizacion.cdhidalgo.tecnm.mx/alumno/">Examen psicometrico</a>
+                <a class="dropdown-item"  href="https://recibos.cdhidalgo.tecnm.mx/">Recibos electrónicos</a>
                 <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-                <a class="dropdown-item"  href="https://www.cdhidalgo.tecnm.mx:8082/#!/constancia">Sistema de eventos</a>
+                <a class="dropdown-item"  href="https://sistemaeventos.cdhidalgo.tecnm.mx/#!/constancia">Sistema de eventos</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
                 {{-- <a class="dropdown-item"  href="#" >Exani</a> --}}
@@ -126,7 +126,7 @@
             <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
                     <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
-                    <a class="dropdown-item" href="https://www.cdhidalgo.tecnm.mx:8086/Usuario.php">Encuesta de clima laboral</a>
+                    <a class="dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
             </div>
         </li>
 
