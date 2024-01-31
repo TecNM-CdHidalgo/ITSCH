@@ -43,7 +43,7 @@
         <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
         </a>
-        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EuqGmMg3RfRDktVc7u8g6iEBYFju5oQSM-UiaTx8inJ61w?e=QxbvCz" title="Horarios del semestre" target="_blank">
+        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgtwicquNeBLmS6mWPhiqKcBGbtfNY1jY14MQ_LK3snbXw?e=dLEkDY" title="Horarios del semestre" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
         </a>
         <a href="https://www.univim.edu.mx">
@@ -97,7 +97,7 @@
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
-                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EuqGmMg3RfRDktVc7u8g6iEBYFju5oQSM-UiaTx8inJ61w?e=QxbvCz" target="_blank">Horarios</a>
+                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgtwicquNeBLmS6mWPhiqKcBGbtfNY1jY14MQ_LK3snbXw?e=dLEkDY" target="_blank">Horarios</a>
 
                 </ul>
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
