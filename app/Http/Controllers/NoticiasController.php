@@ -224,7 +224,7 @@ class NoticiasController extends Controller
             }
         }
 
-
+        $error=false;
         if($request->has('archivos'))//Validamos si existe un archivo
         {
 
@@ -238,7 +238,6 @@ class NoticiasController extends Controller
             if(!Storage::has($path_to_verify)){
                 Storage::makeDirectory($path_to_verify);
             }
-            $error=false;
             for ($i = 0; $i < count($request->archivos) ; $i++) {
                 //En el metodo file ponemos el nombre del campo file que pusimos en la vista, que sera el que tenga los datos de la imagen
                 $file=$request->archivos[$i];

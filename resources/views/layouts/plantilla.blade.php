@@ -186,7 +186,7 @@
                 <a class="dropdown-item" href="{{ route('transparencia.informes') }}">Informes dirección</a>
             </div>
         </li>
-        <a href="https://cdhidalgo.tecnm.mx:8083/" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
+        <a href="http://itsch.edu.mx" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
         </ul>
     </div>
 </nav>

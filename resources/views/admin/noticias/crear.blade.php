@@ -117,7 +117,6 @@
                         var percentComplete = evt.loaded / evt.total;
                         percentComplete = parseInt(percentComplete * 100);
                         $('#mds-progress-bar').css('width',percentComplete+"%");
-                        console.log(percentComplete);
 
                         if (percentComplete === 100) {
 
@@ -133,6 +132,7 @@
                 cache: false,
                 processData:false,
                 success(response) {
+                    console.log('Si llega hasta aqui');
                     response = response[0];
                     if(response['type'] == 'error'){
                         document.getElementById('mds-alert-danger').innerHTML = response['message'];
@@ -151,13 +151,13 @@
                         },3000);
                     }
                 },
-                error(error) {
-                    document.getElementById('mds-alert-danger').innerHTM = error['message'];
+                error(e) {
+                    console.log('Error #2');
+                    console.log(e);
+                    document.getElementById('mds-alert-danger').innerHTML = e['message'];
                     $('#mds-progress-bar-container').fadeOut(3000);
                     $('#mds-alert-danger').fadeIn();
                     $('#mds-alert-danger').fadeOut(3000);
-                    console.log('Error #2');
-                    console.log(error);
                 },
             });
         });
