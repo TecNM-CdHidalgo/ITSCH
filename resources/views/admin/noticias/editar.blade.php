@@ -127,7 +127,6 @@
                         var percentComplete = evt.loaded / evt.total;
                         percentComplete = parseInt(percentComplete * 100);
                         $('#mds-progress-bar').css('width',percentComplete+"%");
-                        console.log(percentComplete);
                         if (percentComplete === 100) {
 
                         }
