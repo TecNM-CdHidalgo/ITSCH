@@ -114,6 +114,7 @@
                 <a class="dropdown-item"  href="https://sistemaeventos.cdhidalgo.tecnm.mx/#!/constancia">Sistema de eventos</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
+                <a class="dropdown-item"  href="{{ route('posgrado.maestrias') }}" >Posgrado</a>
                 {{-- <a class="dropdown-item"  href="#" >Exani</a> --}}
             </ul>
         </li>

@@ -171,6 +171,9 @@ Route::get('biblioteca/index',function(){return view('content.institucion.biblio
 Route::get('biblioteca/findAlumno',[BibliotecaController::class,'findAlumno'])->name('biblioteca.findAlumno');
 Route::get('biblioteca/store',[BibliotecaController::class,'store'])->name('biblioteca.store');
 
+//Rutas de posgrado
+Route::get('posgrado/maestrias',function(){return view('content.posgrado.maestrias');})->name('posgrado.maestrias');
+
 
 //Fin Rutas publicas***********************************************************************
 
