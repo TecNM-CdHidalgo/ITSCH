@@ -23,7 +23,7 @@
         </p>
 
         <p>
-          Para cambiar tu váucher bancario te invitamos a visitar el siguiente enlace, en el cual podras hacer el cambio de manera cómoda, rápida y totalmente en línea, el link es: <a href="https://www.cdhidalgo.tecnm.mx:8092/login">Recibos electrónicos</a> en este mismo enlace podras encontrar un video con información útil de cómo realizar este proceso.
+          Para cambiar tu váucher bancario te invitamos a visitar el siguiente enlace, en el cual podras hacer el cambio de manera cómoda, rápida y totalmente en línea, el link es: <a href="https://recibos.cdhidalgo.tecnm.mx/login">Recibos electrónicos</a> en este mismo enlace podras encontrar un video con información útil de cómo realizar este proceso.
         </p>
 
         <hr>

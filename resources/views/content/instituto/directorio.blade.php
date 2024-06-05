@@ -28,9 +28,9 @@
 		<p style="margin-left:92.15pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			4.&nbsp;&nbsp;&nbsp;????. Departamento de Contabilidad y Recursos Financieros</h4>
+			4.&nbsp;&nbsp;&nbsp;????.  Subdirectora de Administración y Finanzas</h4>
 		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp; LCF. Maria Elena Patiño Martinez. (Encargada) Subdirectora de Administración y Finanzas</p>
+			a.&nbsp;&nbsp;&nbsp; LCF. Maria Elena Patiño Martinez. Departamento de Contabilidad y Recursos Financieros</p>
 		<p style="margin-left:92.15pt;">
 			b.&nbsp;&nbsp;&nbsp;L.A.E.  Juan Andrés Ayala Santana. Departamento de Recursos Materiales y Servicios</p>
 		<p style="margin-left:92.15pt;">
@@ -41,12 +41,12 @@
 		<p style="margin-left:49.65pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			6. &nbsp;&nbsp;&nbsp; ING. Gerardo Espinoza Cervantes. Subdirector Acad&eacute;mico.
+			6. &nbsp;&nbsp;&nbsp; ISC. Oscar Delgado Camacho. (Encargado) Subdirección Acad&eacute;mica.
            </h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;Ing. Brenda Mercedes Camacho Medina. Jefa de la Divisi&oacute;n de Ingenier&iacute;a Industrial</p>
 		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp;ISC. Oscar Delgado Camacho. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Sistemas Computacionales</p>
+			b.&nbsp;&nbsp;&nbsp;ISC. José Iraic Alcántar Alcántar. (Encargado) Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Sistemas Computacionales</p>
 		<p style="margin-left:92.15pt;">
 			c.&nbsp;&nbsp;&nbsp;MC. Guillermo Capistrano Zúñiga Neria. Jefe de la Divisi&oacute;n de Ingenier&iacute;a Mecatr&oacute;nica</p>
 		<p style="margin-left:92.15pt;">
@@ -65,7 +65,7 @@
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;IQ. Walter Ivan Cortéz Cruz.  Departamento de Investigaci&oacute;n y Ciencias B&aacute;sicas</p>
 		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp; Lic. En D. María Eugenia Carapia Jaramillo. Departamento de Desarrollo Acad&eacute;mico y Educaci&oacute;n Continua</p>
+			b.&nbsp;&nbsp;&nbsp; MTRA. Gabriela Medina Peña. Departamento de Desarrollo Acad&eacute;mico y Educaci&oacute;n Continua</p>
 		<p style="margin-left:92.15pt;">
 			c.&nbsp;&nbsp;&nbsp;LPE. Maria de Lourdes Sánchez Mora. Departamento de Tutor&iacute;as y Servicios Psicopedag&oacute;gicos</p>
 		<p style="margin-left:92.15pt;">&nbsp;</p>
@@ -82,8 +82,6 @@
 
 		<h4 class="text-center"><strong><span>DIV. DE ING. EN SIST. COMP.</span></strong></h4>
 		<p align="center">SOLORZANO SOLORZANO ARMANDO</p>
-		<p align="center">CESAR EDUARDO MORA HERN&Aacute;NDEZ</p>
-		<p align="center">JOSE IRAIC ALCÁNTAR ALCÁNTAR</p>
 		<p align="center">P&Eacute;REZ MAR&Iacute;N HORACIO</p>
 		<p align="center">JUAN CARLOS MADRIGAL P&Eacute;REZ</p>
 		<p align="center">RAMIREZ VARGAS ERIK AUGUSTO</p>
@@ -97,11 +95,9 @@
 
             <h4 class="text-center"><strong><span> DIV. DE ING. EN NANOTECNOLOGÍA </span></strong></h4>
 
-            <p align="center">TAPIA REYNOSO SAUL</p>
             <p align="center">ACOSTA NAVARRETE YANED MILAGROS</p>
             <p align="center">CHÁVEZ ARELLANO JOAQUÍN</p>
             <p align="center">LUQUE MURILLO JUAN MANUEL</p>
-            <p align="center">ESPINO SANPEDRO RAFAEL</p>
             <p align="center">VILLALPANDO NIEVES MARIO ALEJANDRO </p>
 
             <br>
@@ -139,7 +135,6 @@
 
 		<h4 class="text-center"><strong><span>DIV. DE ING. EN TIC&acute;S</span></strong></h4>
 
-		<p align="center">GUTIÉRREZ ARRIAGA JÓSE MARTÍN</p>
 		<p align="center">RUIZ MART&Iacute;NEZ MIGUEL &Aacute;NGEL</p>
 		<p align="center">GUTI&Eacute;RREZ RUIZ MAR&Iacute;A ELENA</p>
 		<p align="center">MORENO RUIZ ZINTHIA</p>
@@ -197,6 +192,8 @@
 		<p align="center">BARAJAS MENDIOLA ARTURO</p>
 		<p align="center">DURÁN SOTO ELEAZAR</p>
 		<p align="center">TREJO ESPINOSA OSCAR</p>
+        <p align="center">TAPIA REYNOSO SAÚL</p>
+        <p align="center">ESPINO SANPEDRO RAFAEL</p>
 	</article>
 	<!-- /Article -->
 </div>

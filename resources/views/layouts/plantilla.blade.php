@@ -98,7 +98,7 @@
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
                     <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgtwicquNeBLmS6mWPhiqKcBGbtfNY1jY14MQ_LK3snbXw?e=dLEkDY" target="_blank">Horarios</a>
-
+                    <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
                 </ul>
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
@@ -214,7 +214,6 @@
                     <a class="dropdown-item" href="{{route('instituto.nuestro_tec')}}">Nuestro Tec </a>
                     <a class="dropdown-item" href="{{route('instituto.directorio')}}">Directorio</a>
                     <a class="dropdown-item" href="{{route('instituto.ubicacion')}}">Ubicación</a>
-                    <a class="dropdown-item" href="{{asset('documents/content/programa_capacitacion/programacapacitacion2020.pdf')}}">Programa de capacitación</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
