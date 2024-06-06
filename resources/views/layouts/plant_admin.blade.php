@@ -13,6 +13,10 @@
         <link rel="shortcut icon"href="{{ asset('images/itsch.jpg') }}" style="filter:invert(1)">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+        <!-- Incluye Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Incluye chartjs-plugin-datalabels -->
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
         {{-- Linea para agregar el editor CKeditor a la pagina para editar texto --}}
@@ -25,19 +29,20 @@
         <link href="{{ asset('css/msel/multi-select.css') }}" media="screen" rel="stylesheet" type="text/css">
 
         <style>
-        .no-margins{
-            margin:0;
-        }
-        .default-text-color{
-            color: #fd5f00 !important;
-        }
-        .float-break{
-            clear: both;
-        }
-        .btn-mds-primary{
-            background-color: #0275d8;
-        }
+            .no-margins{
+                margin:0;
+            }
+            .default-text-color{
+                color: #fd5f00 !important;
+            }
+            .float-break{
+                clear: both;
+            }
+            .btn-mds-primary{
+                background-color: #0275d8;
+            }
         </style>
+        @yield('css')
         @yield('head')
         <title>
         @yield('titulo')
@@ -100,7 +105,7 @@
                                                 <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
                                                 <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Estadisticos</a>
                                             @endif
-                                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "biblioteca")
+                                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "biblioteca"|| Auth::User()->tipo == "planeacion")
                                                 <p style="color:orange;">&nbsp Biblioteca</p>
                                                 <hr>
                                                 <a class="dropdown-item" href="{{ route('biblioteca.estadisticos') }}">Estadisticos</a>

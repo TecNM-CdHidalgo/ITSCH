@@ -40,48 +40,110 @@ class BibliotecaController extends Controller
     {
         //Consultamos todos los servicios
         $servicios = Registro::all();
-        //Obtenemos el nombre de la carrera de cada alumno
-        foreach($servicios as $servicio){
-            $carrera = DB::connection('contEsc')->table('carreras')
-            ->where('car_Clave',$servicio->car_Clave)
-            ->first();
-            $servicio->carrera = $carrera->car_Nombre;
-        }
-        //Obtenemos el nombre de cada alumno
-        foreach($servicios as $servicio){
-            $alumno = DB::connection('contEsc')->table('alumnos')
-            ->where('alu_NumControl',$servicio->control)
-            ->first();
-            $servicio->nombre = $alumno->alu_Nombre." ".$alumno->alu_ApePaterno." ".$alumno->alu_ApeMaterno;
-        }
-        //Complementamos el sexo del alumno F= Femenino, M= Masculino
-        foreach($servicios as $servicio){
-           if($servicio->sexo == 'F'){
-               $servicio->sexo = 'Femenino';
-              }else{
-               $servicio->sexo = 'Masculino';
-              }
-        }
-        //Agregamos el nombre del servicio
-        foreach($servicios as $servicio){
-            switch($servicio->servicio){
-                case 1:
-                    $servicio->servicio = 'Consulta en sala';
-                    break;
-                case 2:
-                    $servicio->servicio = 'Prestamo de cúbiculo';
-                    break;
-                case 3:
-                    $servicio->servicio = 'Hemeroteca';
-                    break;
-                case 4:
-                    $servicio->servicio = 'Sala de computo';
-                    break;
-            }
-         }
+        //Llamamos a la funcion completar
+        $this->completar($servicios);
         //Llamamos la vista de estadisticos
         return view('admin.biblioteca.estadisticos',compact('servicios'));
     }
 
+    //Funcion para mostrar la vista de periodos
+    public function periodoShow()
+    {
+        return view('admin.biblioteca.periodo');
+    }
+
+
+    //Función para obtener los servicios de un periodo de tiempo
+    public function periodoFind(Request $request)
+    {
+        //Obtenemos la fecha de inicio y fin
+        $inicio = $request->inicio;
+        $fin = $request->fin;
+        //Consultamos los registros de la base de datos de la biblioteca
+        $servicios = Registro::whereBetween('created_at',[$inicio,$fin])->get();
+        //Llamamos a la funcion completar
+        $this->completar($servicios);
+        //Retornamos los datos en formato json
+        return response()->json($servicios,200);
+    }
+
+      //Funcion para completar consulta de servicios
+      public function completar($servicios)
+      {
+           //Obtenemos el nombre de la carrera de cada alumno
+           foreach($servicios as $servicio){
+              $carrera = DB::connection('contEsc')->table('carreras')
+              ->where('car_Clave',$servicio->car_Clave)
+              ->first();
+              $servicio->carrera = $carrera->car_Nombre;
+          }
+          //Obtenemos el nombre de cada alumno
+          foreach($servicios as $servicio){
+              $alumno = DB::connection('contEsc')->table('alumnos')
+              ->where('alu_NumControl',$servicio->control)
+              ->first();
+              $servicio->nombre = $alumno->alu_Nombre." ".$alumno->alu_ApePaterno." ".$alumno->alu_ApeMaterno;
+          }
+          //Complementamos el sexo del alumno F= Femenino, M= Masculino
+          foreach($servicios as $servicio){
+             if($servicio->sexo == 'F'){
+                 $servicio->sexo = 'Femenino';
+                }else{
+                 $servicio->sexo = 'Masculino';
+                }
+          }
+          //Agregamos el nombre del servicio
+          foreach($servicios as $servicio){
+              switch($servicio->servicio){
+                  case 1:
+                      $servicio->servicio = 'Consulta en sala';
+                      break;
+                  case 2:
+                      $servicio->servicio = 'Prestamo de cúbiculo';
+                      break;
+                  case 3:
+                      $servicio->servicio = 'Hemeroteca';
+                      break;
+                  case 4:
+                      $servicio->servicio = 'Sala de compúto';
+                      break;
+              }
+           }
+      }
+
+      //Función para obtener los servicios y la cantidad de veces que se ha solicitado en un periodo de tiempo
+        public function serviciosFind(Request $request)
+        {
+            //Obtenemos la fecha de inicio y fin
+            $inicio = $request->inicio;
+            $fin = $request->fin;
+            //Consultamos los registros de la base de datos de la biblioteca
+            $servicios = Registro::whereBetween('created_at',[$inicio,$fin])->get();
+            //Agrupamos los servicios
+            $servicios = $servicios->groupBy('servicio');
+            //Obtenemos la cantidad de veces que se ha solicitado cada servicio
+            $servicios = $servicios->map(function($servicio){
+                return $servicio->count();
+            });
+            //Agregamos el nombre de cada servicio
+            $servicios = $servicios->map(function($servicio,$key){
+                switch($key){
+                    case 1:
+                        return ['servicio'=>'Consulta en sala','cantidad'=>$servicio];
+                        break;
+                    case 2:
+                        return ['servicio'=>'Prestamo de cúbiculo','cantidad'=>$servicio];
+                        break;
+                    case 3:
+                        return ['servicio'=>'Hemeroteca','cantidad'=>$servicio];
+                        break;
+                    case 4:
+                        return ['servicio'=>'Sala de compúto','cantidad'=>$servicio];
+                        break;
+                }
+            });
+            //Retornamos los datos en formato json
+            return response()->json($servicios,200);
+        }
 
 }

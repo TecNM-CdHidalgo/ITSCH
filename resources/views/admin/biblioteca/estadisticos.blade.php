@@ -2,6 +2,11 @@
 @section('titulo','Estadisticos')
 @section('contenido')
     @section('ruta','Estadisticos')
+    {{-- Boton para llamar la vista de periodo para su consulta --}}
+    <a href="{{ route('biblioteca.periodo') }}" class="btn btn-primary">Periodo</a>
+    {{-- Boton para llamar la vista de consulta por servicios --}}
+    <a href="{{ route('biblioteca.servicios') }}" class="btn btn-primary">Servicios</a>
+    <hr>
     <table class="table" id="tabEstadisticos">
         <thead>
             <tr>

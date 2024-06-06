@@ -19,6 +19,7 @@
         <option value="academica">Académica</option>
         <option value="planeacion">Planeación</option>
         <option value="vinculacion">Vinculación</option>
+        <option value="biblioteca">Biblioteca</option>
       </select>
     </div>
     <div class="form-group">
