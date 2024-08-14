@@ -155,7 +155,7 @@ class BibliotecaController extends Controller
 
             //Si el alumno no existe regresamos un error
            if($registro === null){
-                return response()->json(['error'=>'No se encontro el alumno'],404);
+                return response()->json(['error'=>'El alumno no tiene un ingreso activo en la biblioteca'],404);
             }
             //Si el alumno ya salio
             if($registro->salida){
