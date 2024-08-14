@@ -25,6 +25,8 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12" id="datos" hidden>
+                        {{-- Boton de salida --}}
+                        <button class="btn btn-danger" onclick="exitAlumno()"><i class="fas fa-sign-out-alt"></i> Salida</button>
                         <!-- Datos del alumno -->
                         <h3>Bienvenid@</h3>
                         <div class="row">
@@ -109,6 +111,31 @@
             mayusculas(this);
         });
 
+        // Funcion para registrar la salida del alumno
+        function exitAlumno(){
+            var no_control = $('#cont').text();
+            $.ajax({
+                url: "{{ route('biblioteca.salida') }}",
+                method: "GET",
+                data: {no_control: no_control},
+                success: function(data){
+                    console.log(data);
+                    if(data){
+                        Swal.fire('Exito', 'Se registro la salida del alumno', 'success');
+                        $('#control').val('');
+                        $('#datos').attr('hidden', true);
+                        $('#servicio').val('');
+                        $('#txtAcom').text('');
+                    }else{
+                        Swal.fire('Error', 'No se pudo registrar la salida', 'error');
+                    }
+                },
+                error: function(xhr, status, error){
+                    console.log(xhr);
+                }
+            });
+        }
+
         // Funcion para buscar al alumno por su numero de control
         function findAlumno(){
             var control = $('#control').val();
@@ -118,6 +145,13 @@
                     method: "GET",
                     data: {control: control},
                     success: function(data){
+                        //Limpiamos los datos del alumno anterior
+                        $('#cont').text('');
+                        $('#nom').text('');
+                        $('#carr').text('');
+                        $('#datos').attr('hidden', true);
+                        $('#sexo').val('');
+                        $('#carrera').val('');
                         console.log(data);
                         // Mostrar datos del alumno
                         $('#cont').text(data.alu_NumControl);
@@ -127,9 +161,18 @@
                         $('#datos').removeAttr('hidden');
                         $('#sexo').val(data.alu_Sexo);
                         $('#carrera').val(data.car_Clave);
+                        //Agregamos la ruta al boton de salida, para que se registre la salida del alumno
+                        $('#salida').attr('href', $('#salida').attr('href').replace(':numControl', data.alu_NumControl));
                     },
                     error: function(xhr, status, error){
-                        console.log(xhr);
+                        //Limpiamos los datos del alumno anterior
+                        $('#cont').text('');
+                        $('#nom').text('');
+                        $('#carr').text('');
+                        $('#datos').attr('hidden', true);
+                        $('#sexo').val('');
+                        $('#carrera').val('');
+                        console.log(error);
                     }
                 });
             }

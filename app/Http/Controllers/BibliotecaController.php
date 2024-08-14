@@ -12,10 +12,11 @@ class BibliotecaController extends Controller
     public function findAlumno(Request $request)
     {
         $alumno = DB::connection('contEsc')->table('alumnos')
+        ->select('alu_NumControl','alu_Nombre','alu_ApePaterno','alu_ApeMaterno','car_Clave','alu_Sexo')
         ->where('alu_NumControl',$request->control)
         ->first();
 
-        //Agregamos el nombre de la carrera
+       //Agregamos el nombre de la carrera
         $carrera = DB::connection('contEsc')->table('carreras')
         ->where('car_Clave',$alumno->car_Clave)
         ->first();
@@ -144,6 +145,30 @@ class BibliotecaController extends Controller
             });
             //Retornamos los datos en formato json
             return response()->json($servicios,200);
+        }
+
+        //Funcion para registrar la salida de un alumno
+        public function bibliotecaSalida(Request $request)
+        {
+            //Obtenemos el registro del alumno
+            $registro = Registro::where('control',$request->no_control)->first();
+            //Si el alumno no existe
+            if(!$registro){
+                return response()->json(['error'=>'No se encontro el alumno'],404);
+            }
+            //Si el alumno ya salio
+            if($registro->salida){
+                return response()->json(['error'=>'El alumno ya salio'],404);
+            }
+            //Si el alumno no ha salido, registramos la hora y fecha en la que salio
+            if ($registro->update(['salida' => now()])) {
+                // Actualización exitosa
+                return response()->json(['success'=>'Se registro la salida del alumno'],200);
+            } else {
+                // Falló la actualización
+                return response()->json(['error' => 'No se pudo actualizar el registro']);
+            }
+
         }
 
 }

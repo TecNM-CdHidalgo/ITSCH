@@ -10,6 +10,6 @@ class Registro extends Model
     use HasFactory;
     protected $table="registro_biblio";
     protected $fillable = [
-        'control','car_Clave','servicio','sexo','extras'
+        'control','car_Clave','servicio','sexo','extras','salida'
     ];
 }

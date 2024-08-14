@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('servicio',40);
             $table->string('sexo',1);
             $table->string('extras',100)->nullable();
+            $table->timestamp('salida')->useCurrent();
             $table->timestamps();
         });
     }

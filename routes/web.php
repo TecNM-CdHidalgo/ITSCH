@@ -170,6 +170,7 @@ Route::post('contenido/denuncia/store',[DenunciasController::class,'store'])->na
 Route::get('biblioteca/index',function(){return view('content.institucion.biblioteca');})->name('biblioteca.index');
 Route::get('biblioteca/findAlumno',[BibliotecaController::class,'findAlumno'])->name('biblioteca.findAlumno');
 Route::get('biblioteca/store',[BibliotecaController::class,'store'])->name('biblioteca.store');
+Route::get('biblioteca/salida',[BibliotecaController::class,'bibliotecaSalida'])->name('biblioteca.salida');
 
 //Rutas de posgrado
 Route::get('posgrado/maestrias',function(){return view('content.posgrado.maestrias');})->name('posgrado.maestrias');
