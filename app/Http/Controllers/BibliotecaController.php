@@ -152,8 +152,9 @@ class BibliotecaController extends Controller
         {
             //Obtenemos el registro del alumno
             $registro = Registro::where('control',$request->no_control)->first();
-            //Si el alumno no existe
-            if(!$registro){
+
+            //Si el alumno no existe regresamos un error
+           if($registro === null){
                 return response()->json(['error'=>'No se encontro el alumno'],404);
             }
             //Si el alumno ya salio

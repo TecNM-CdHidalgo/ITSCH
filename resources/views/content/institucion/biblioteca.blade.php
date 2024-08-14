@@ -131,7 +131,9 @@
                     }
                 },
                 error: function(xhr, status, error){
+                    //Imprimimos la respuesta del servidor en caso de error que viene en formato json
                     console.log(xhr);
+                    Swal.fire('Error', xhr.responseJSON.error, 'error');
                 }
             });
         }
