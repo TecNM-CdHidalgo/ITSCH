@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-md-12" id="datos" hidden>
                         {{-- Boton de salida --}}
-                        <button class="btn btn-danger" onclick="exitAlumno()"><i class="fas fa-sign-out-alt"></i> Salida</button>
+                        <button class="btn btn-danger" onclick="exitAlumno()" hidden><i class="fas fa-sign-out-alt"></i> Salida</button>
                         <!-- Datos del alumno -->
                         <h3>Bienvenid@</h3>
                         <div class="row">
