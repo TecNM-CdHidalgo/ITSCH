@@ -40,7 +40,7 @@ class BibliotecaController extends Controller
     public function estadisticos()
     {
         //Consultamos todos los servicios
-        $servicios = Registro::all();
+        $servicios = Registro::all(); dd($servicios);
         //Llamamos a la funcion completar
         $this->completar($servicios);
         //Llamamos la vista de estadisticos
