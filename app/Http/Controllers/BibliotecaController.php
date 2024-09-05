@@ -5,9 +5,124 @@ namespace App\Http\Controllers;
 use App\Models\Registro;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Utilities\DataTableAttr;
+use App\Http\Controllers\Utilities\DataTableHelper;
+use App\Http\Controllers\Utilities\HttpCode;
 
 class BibliotecaController extends Controller
 {
+    //Función para cargar los registros por medio de un ajax al dataTable
+    public function cargarServiciosAjax(Request $request) {
+        try {
+            $selectColumns = ['servicio','car_Clave','control','sexo'];
+            $dtAttr = new DataTableAttr($request, $selectColumns);
+
+            $servicios = DB::table('registro_biblio')
+                ->select($selectColumns);
+
+            DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
+
+            //obtenemos el nombre del alumno y lo concatenamos con el apellido paterno y materno
+            $alumno = DB::connection('contEsc')->table('alumnos')->select('alu_NumControl','alu_Nombre','alu_ApePaterno','alu_ApeMaterno')->get();
+            foreach($servicios as $servicio){
+                foreach($alumno as $alu){
+                    if($servicio->control == $alu->alu_NumControl){
+                        $servicio->nombre = $alu->alu_Nombre." ".$alu->alu_ApePaterno." ".$alu->alu_ApeMaterno;
+                    }
+                }
+            }
+
+            //obtenemos el nombre de la carrera
+            $carrera = DB::connection('contEsc')->table('carreras')->select('car_Clave','car_Nombre')->get();
+            foreach($servicios as $servicio){
+                foreach($carrera as $car){
+                    if($servicio->car_Clave == $car->car_Clave){
+                        $servicio->carrera = $car->car_Nombre;
+
+                    }
+                }
+            }
+
+            //obtenemos el nombre del servicio y lo agregamos al objeto
+            foreach($servicios as $servicio){
+                switch($servicio->servicio){
+                    case 1:
+                        $servicio->servicio = 'Consulta en sala';
+                        break;
+                    case 2:
+                        $servicio->servicio = 'Prestamo de cúbiculo';
+                        break;
+                    case 3:
+                        $servicio->servicio = 'Hemeroteca';
+                        break;
+                    case 4:
+                        $servicio->servicio = 'Sala de compúto';
+                        break;
+                }
+            }
+
+            //CAmbiamos la letra del sexo por su significado
+            foreach($servicios as $servicio){
+                if($servicio->sexo == 'F'){
+                    $servicio->sexo = 'Femenino';
+                }else{
+                    $servicio->sexo = 'Masculino';
+                }
+            }
+
+
+
+            $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
+            return response()->json($paginatorResponse, HttpCode::SUCCESS);
+        } catch (\Exception $e) {
+            return response()->json($e->getMessage(), HttpCode::NOT_ACCEPTABLE);
+        }
+    }
+
+    //Funcion para completar consulta de servicios
+    public function completar($servicios)
+    {
+         //Obtenemos el nombre de la carrera de cada alumno
+         foreach($servicios as $servicio){
+            $carrera = DB::connection('contEsc')->table('carreras')
+            ->where('car_Clave',$servicio->car_Clave)
+            ->first();
+            $servicio->carrera = $carrera->car_Nombre;
+        }
+        //Obtenemos el nombre de cada alumno
+        foreach($servicios as $servicio){
+            $alumno = DB::connection('contEsc')->table('alumnos')
+            ->where('alu_NumControl',$servicio->control)
+            ->first();
+            $servicio->nombre = $alumno->alu_Nombre." ".$alumno->alu_ApePaterno." ".$alumno->alu_ApeMaterno;
+        }
+        //Complementamos el sexo del alumno F= Femenino, M= Masculino
+        foreach($servicios as $servicio){
+           if($servicio->sexo == 'F'){
+               $servicio->sexo = 'Femenino';
+              }else{
+               $servicio->sexo = 'Masculino';
+              }
+        }
+        //Agregamos el nombre del servicio
+        foreach($servicios as $servicio){
+            switch($servicio->servicio){
+                case 1:
+                    $servicio->servicio = 'Consulta en sala';
+                    break;
+                case 2:
+                    $servicio->servicio = 'Prestamo de cúbiculo';
+                    break;
+                case 3:
+                    $servicio->servicio = 'Hemeroteca';
+                    break;
+                case 4:
+                    $servicio->servicio = 'Sala de compúto';
+                    break;
+            }
+         }
+    }
+
     //Funcion para buscar un alumno en la base de datos de control escolar
     public function findAlumno(Request $request)
     {
@@ -43,8 +158,6 @@ class BibliotecaController extends Controller
         $servicios = Registro::all();
         //Llamamos a la funcion completar
         $this->completar($servicios);
-
-        dd($servicios[0]->carrera);
         //Llamamos la vista de estadisticos
         return view('admin.biblioteca.estadisticos',compact('servicios'));
     }
@@ -70,49 +183,6 @@ class BibliotecaController extends Controller
         return response()->json($servicios,200);
     }
 
-      //Funcion para completar consulta de servicios
-      public function completar($servicios)
-      {
-           //Obtenemos el nombre de la carrera de cada alumno
-           foreach($servicios as $servicio){
-              $carrera = DB::connection('contEsc')->table('carreras')
-              ->where('car_Clave',$servicio->car_Clave)
-              ->first();
-              $servicio->carrera = $carrera->car_Nombre;
-          }
-          //Obtenemos el nombre de cada alumno
-          foreach($servicios as $servicio){
-              $alumno = DB::connection('contEsc')->table('alumnos')
-              ->where('alu_NumControl',$servicio->control)
-              ->first();
-              $servicio->nombre = $alumno->alu_Nombre." ".$alumno->alu_ApePaterno." ".$alumno->alu_ApeMaterno;
-          }
-          //Complementamos el sexo del alumno F= Femenino, M= Masculino
-          foreach($servicios as $servicio){
-             if($servicio->sexo == 'F'){
-                 $servicio->sexo = 'Femenino';
-                }else{
-                 $servicio->sexo = 'Masculino';
-                }
-          }
-          //Agregamos el nombre del servicio
-          foreach($servicios as $servicio){
-              switch($servicio->servicio){
-                  case 1:
-                      $servicio->servicio = 'Consulta en sala';
-                      break;
-                  case 2:
-                      $servicio->servicio = 'Prestamo de cúbiculo';
-                      break;
-                  case 3:
-                      $servicio->servicio = 'Hemeroteca';
-                      break;
-                  case 4:
-                      $servicio->servicio = 'Sala de compúto';
-                      break;
-              }
-           }
-      }
 
       //Función para obtener los servicios y la cantidad de veces que se ha solicitado en un periodo de tiempo
         public function serviciosFind(Request $request)
