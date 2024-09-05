@@ -22,55 +22,42 @@ class BibliotecaController extends Controller
 
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
-            //obtenemos el nombre del alumno y lo concatenamos con el apellido paterno y materno
-            $alumno = DB::connection('contEsc')->table('alumnos')->select('alu_NumControl','alu_Nombre','alu_ApePaterno','alu_ApeMaterno')->get();
-            foreach($servicios as $servicio){
-                foreach($alumno as $alu){
-                    if($servicio->control == $alu->alu_NumControl){
-                        $servicio->nombre = $alu->alu_Nombre." ".$alu->alu_ApePaterno." ".$alu->alu_ApeMaterno;
-                    }
+            $resultado = DB::connection('contEsc')
+            ->table('alumnos')
+            ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
+            ->select(
+                'alumnos.alu_NumControl',
+                DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
+                'carreras.car_Nombre as carrera'
+            )
+            ->get();
+
+            foreach ($servicios as $servicio) {
+                $alumno = $resultado->firstWhere('alu_NumControl', $servicio->control);
+                if ($alumno) {
+                    $servicio->nombre = $alumno->nombre;
+                    $servicio->carrera = $alumno->carrera;
                 }
             }
 
-            //obtenemos el nombre de la carrera
-            $carrera = DB::connection('contEsc')->table('carreras')->select('car_Clave','car_Nombre')->get();
-            foreach($servicios as $servicio){
-                foreach($carrera as $car){
-                    if($servicio->car_Clave == $car->car_Clave){
-                        $servicio->carrera = $car->car_Nombre;
+           // Mapeo de los códigos de servicio a sus nombres correspondientes
+            $serviciosNombres = [
+                1 => 'Consulta en sala',
+                2 => 'Préstamo de cúbiculo',
+                3 => 'Hemeroteca',
+                4 => 'Sala de computo'
+            ];
 
-                    }
-                }
-            }
-
-            //obtenemos el nombre del servicio y lo agregamos al objeto
-            foreach($servicios as $servicio){
-                switch($servicio->servicio){
-                    case 1:
-                        $servicio->servicio = 'Consulta en sala';
-                        break;
-                    case 2:
-                        $servicio->servicio = 'Prestamo de cúbiculo';
-                        break;
-                    case 3:
-                        $servicio->servicio = 'Hemeroteca';
-                        break;
-                    case 4:
-                        $servicio->servicio = 'Sala de compúto';
-                        break;
-                }
-            }
-
-            //CAmbiamos la letra del sexo por su significado
-            foreach($servicios as $servicio){
-                if($servicio->sexo == 'F'){
-                    $servicio->sexo = 'Femenino';
-                }else{
-                    $servicio->sexo = 'Masculino';
-                }
+            // Recorremos los servicios y asignamos el nombre correspondiente
+            foreach ($servicios as $servicio) {
+                $servicio->servicio = $serviciosNombres[$servicio->servicio] ?? 'Servicio desconocido';
             }
 
 
+            //Cambiamos la letra del sexo por su significado
+            foreach($servicios as $servicio){
+                $servicio->sexo = ($servicio->sexo == 'F') ? 'Femenino' : 'Masculino';
+            }
 
             $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
             return response()->json($paginatorResponse, HttpCode::SUCCESS);
