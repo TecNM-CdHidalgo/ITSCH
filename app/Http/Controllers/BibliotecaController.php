@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Utilities\DataTableAttr;
 use App\Http\Controllers\Utilities\DataTableHelper;
 use App\Http\Controllers\Utilities\HttpCode;
+use Carbon\Carbon;
 
 class BibliotecaController extends Controller
 {
@@ -108,86 +109,85 @@ class BibliotecaController extends Controller
         return response()->json(['success'=>'Se registro el alumno'],200);
     }
 
-    //Funcion para mostrar la vista de periodos
-    public function periodoShow()
-    {
-        return view('admin.biblioteca.periodo');
-    }
-
-
     //Función para obtener los servicios de un periodo de tiempo
     public function periodoFind(Request $request)
     {
         //Obtenemos la fecha de inicio y fin
-        $inicio = $request->inicio;
-        $fin = $request->fin;
+        $inicio = Carbon::parse($request->inicio)->startOfDay();
+        $fin = Carbon::parse($request->fin)->endOfDay();
+
         //Consultamos los registros de la base de datos de la biblioteca
-        $servicios = Registro::whereBetween('created_at',[$inicio,$fin])->get();
+        $servicios = Registro::whereBetween('created_at', [$inicio, $fin])->get();
+
         //Llamamos a la funcion completar
         $this->completar($servicios);
+
+        //Retornamos los datos en formato json
+        return response()->json($servicios, 200);
+    }
+
+
+
+    //Función para obtener los servicios y la cantidad de veces que se ha solicitado en un periodo de tiempo
+    public function serviciosFind(Request $request)
+    {
+        //Obtenemos la fecha de inicio y fin
+        $inicio = Carbon::parse($request->inicio)->startOfDay();
+        $fin = Carbon::parse($request->fin)->endOfDay();
+
+        //Consultamos los registros de la base de datos de la biblioteca
+        $servicios = Registro::whereBetween('created_at', [$inicio, $fin])->get();
+
+        //Agrupamos los servicios
+        $servicios = $servicios->groupBy('servicio');
+        //Obtenemos la cantidad de veces que se ha solicitado cada servicio
+        $servicios = $servicios->map(function($servicio){
+            return $servicio->count();
+        });
+        //Agregamos el nombre de cada servicio
+        $servicios = $servicios->map(function($servicio,$key){
+            switch($key){
+                case 1:
+                    return ['servicio'=>'Consulta en sala','cantidad'=>$servicio];
+                    break;
+                case 2:
+                    return ['servicio'=>'Prestamo de cúbiculo','cantidad'=>$servicio];
+                    break;
+                case 3:
+                    return ['servicio'=>'Hemeroteca','cantidad'=>$servicio];
+                    break;
+                case 4:
+                    return ['servicio'=>'Sala de compúto','cantidad'=>$servicio];
+                    break;
+            }
+        });
         //Retornamos los datos en formato json
         return response()->json($servicios,200);
     }
 
+    //Funcion para registrar la salida de un alumno
+    public function bibliotecaSalida(Request $request)
+    {
+        //Obtenemos el registro del alumno
+        $registro = Registro::where('control',$request->no_control)->first();
 
-      //Función para obtener los servicios y la cantidad de veces que se ha solicitado en un periodo de tiempo
-        public function serviciosFind(Request $request)
-        {
-            //Obtenemos la fecha de inicio y fin
-            $inicio = $request->inicio;
-            $fin = $request->fin;
-            //Consultamos los registros de la base de datos de la biblioteca
-            $servicios = Registro::whereBetween('created_at',[$inicio,$fin])->get();
-            //Agrupamos los servicios
-            $servicios = $servicios->groupBy('servicio');
-            //Obtenemos la cantidad de veces que se ha solicitado cada servicio
-            $servicios = $servicios->map(function($servicio){
-                return $servicio->count();
-            });
-            //Agregamos el nombre de cada servicio
-            $servicios = $servicios->map(function($servicio,$key){
-                switch($key){
-                    case 1:
-                        return ['servicio'=>'Consulta en sala','cantidad'=>$servicio];
-                        break;
-                    case 2:
-                        return ['servicio'=>'Prestamo de cúbiculo','cantidad'=>$servicio];
-                        break;
-                    case 3:
-                        return ['servicio'=>'Hemeroteca','cantidad'=>$servicio];
-                        break;
-                    case 4:
-                        return ['servicio'=>'Sala de compúto','cantidad'=>$servicio];
-                        break;
-                }
-            });
-            //Retornamos los datos en formato json
-            return response()->json($servicios,200);
+        //Si el alumno no existe regresamos un error
+        if($registro === null){
+            return response()->json(['error'=>'El alumno no tiene un ingreso activo en la biblioteca'],404);
+        }
+        //Si el alumno ya salio
+        if($registro->salida){
+            return response()->json(['error'=>'El alumno ya salio'],404);
+        }
+        //Si el alumno no ha salido, registramos la hora y fecha en la que salio
+        if ($registro->update(['salida' => now()])) {
+            // Actualización exitosa
+            return response()->json(['success'=>'Se registro la salida del alumno'],200);
+        } else {
+            // Falló la actualización
+            return response()->json(['error' => 'No se pudo actualizar el registro']);
         }
 
-        //Funcion para registrar la salida de un alumno
-        public function bibliotecaSalida(Request $request)
-        {
-            //Obtenemos el registro del alumno
-            $registro = Registro::where('control',$request->no_control)->first();
-
-            //Si el alumno no existe regresamos un error
-           if($registro === null){
-                return response()->json(['error'=>'El alumno no tiene un ingreso activo en la biblioteca'],404);
-            }
-            //Si el alumno ya salio
-            if($registro->salida){
-                return response()->json(['error'=>'El alumno ya salio'],404);
-            }
-            //Si el alumno no ha salido, registramos la hora y fecha en la que salio
-            if ($registro->update(['salida' => now()])) {
-                // Actualización exitosa
-                return response()->json(['success'=>'Se registro la salida del alumno'],200);
-            } else {
-                // Falló la actualización
-                return response()->json(['error' => 'No se pudo actualizar el registro']);
-            }
-
-        }
+    }
 
 }
