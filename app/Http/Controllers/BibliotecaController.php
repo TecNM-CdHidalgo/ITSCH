@@ -22,50 +22,8 @@ class BibliotecaController extends Controller
 
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
-            $controles = $servicios->pluck('control');
-
-            $resultado = DB::connection('contEsc')
-                ->table('alumnos')
-                ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
-                ->select(
-                    'alumnos.alu_NumControl',
-                    DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
-                    'carreras.car_Nombre as carrera'
-                )
-                ->whereIn('alumnos.alu_NumControl', $controles)
-                ->get();
-
-            // Crea un mapa de alumnos por número de control
-            $alumnosMap = $resultado->keyBy('alu_NumControl');
-
-            foreach ($servicios as $servicio) {
-                $alumno = $alumnosMap->get($servicio->control);
-                if ($alumno) {
-                    $servicio->nombre = $alumno->nombre;
-                    $servicio->carrera = $alumno->carrera;
-                }
-            }
-
-
-
-           // Mapeo de los códigos de servicio a sus nombres correspondientes
-            $serviciosNombres = [
-                1 => 'Consulta en sala',
-                2 => 'Préstamo de cúbiculo',
-                3 => 'Hemeroteca',
-                4 => 'Sala de computo'
-            ];
-
-            // Recorremos los servicios y asignamos el nombre correspondiente
-            foreach ($servicios as $servicio) {
-                $servicio->servicio = $serviciosNombres[$servicio->servicio] ?? 'Servicio desconocido';
-            }
-
-
-            //Cambiamos la letra del sexo por su significado
-            foreach($servicios as $servicio){
-                $servicio->sexo = ($servicio->sexo == 'F') ? 'Femenino' : 'Masculino';
-            }
+            //Llamamos a la función completar para agregar los datos de los alumnos
+            $this->completar($servicios);
 
             $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
             return response()->json($paginatorResponse, HttpCode::SUCCESS);
@@ -74,10 +32,53 @@ class BibliotecaController extends Controller
         }
     }
 
-    public function completar()
+    //Funcion para completar los datos de los alumnos
+    public function completar($servicios)
     {
+        $controles = $servicios->pluck('control');
 
+        $resultado = DB::connection('contEsc')
+            ->table('alumnos')
+            ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
+            ->select(
+                'alumnos.alu_NumControl',
+                DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
+                'carreras.car_Nombre as carrera'
+            )
+            ->whereIn('alumnos.alu_NumControl', $controles)
+            ->get();
+
+        // Crea un mapa de alumnos por número de control
+        $alumnosMap = $resultado->keyBy('alu_NumControl');
+
+        foreach ($servicios as $servicio) {
+            $alumno = $alumnosMap->get($servicio->control);
+            if ($alumno) {
+                $servicio->nombre = $alumno->nombre;
+                $servicio->carrera = $alumno->carrera;
+            }
+        }
+
+        // Mapeo de los códigos de servicio a sus nombres correspondientes
+        $serviciosNombres = [
+            1 => 'Consulta en sala',
+            2 => 'Préstamo de cúbiculo',
+            3 => 'Hemeroteca',
+            4 => 'Sala de computo'
+        ];
+
+        // Recorremos los servicios y asignamos el nombre correspondiente
+        foreach ($servicios as $servicio) {
+            $servicio->servicio = $serviciosNombres[$servicio->servicio] ?? 'Servicio desconocido';
+        }
+
+
+        //Cambiamos la letra del sexo por su significado
+        foreach($servicios as $servicio){
+            $servicio->sexo = ($servicio->sexo == 'F') ? 'Femenino' : 'Masculino';
+        }
     }
+
 
     //Funcion para buscar un alumno en la base de datos de control escolar
     public function findAlumno(Request $request)
