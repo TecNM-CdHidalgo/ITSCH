@@ -302,7 +302,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/buzon/leidos',[BuzonController::class,'leidos'])->name('buzon.leidos');
 
     //Rutas privadas de biblioteca
-    Route::get('contenido/biblioteca/estadisticos',[BibliotecaController::class,'estadisticos'])->name('biblioteca.estadisticos');
+    Route::get('contenido/biblioteca/estadisticos',function(){return view('admin.biblioteca.estadisticos');})->name('biblioteca.estadisticos');
     Route::get('contenido/biblioteca/periodo',[BibliotecaController::class,'periodoShow'])->name('biblioteca.periodo');
     Route::get('contenido/biblioteca/periodo/find',[BibliotecaController::class,'periodoFind'])->name('biblioteca.periodo.find');
     Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax');

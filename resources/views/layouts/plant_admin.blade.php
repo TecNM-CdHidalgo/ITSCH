@@ -103,7 +103,7 @@
                                             @endif
                                             @if (Auth::User()->tipo == "administrador")
                                                 <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
-                                                <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Estadisticos</a>
+                                                <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Analitics</a>
                                             @endif
                                             @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "biblioteca"|| Auth::User()->tipo == "planeacion")
                                                 <p style="color:orange;">&nbsp Biblioteca</p>
