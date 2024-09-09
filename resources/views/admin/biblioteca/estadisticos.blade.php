@@ -5,7 +5,7 @@
     {{-- Boton para llamar la vista de periodo para su consulta --}}
     <a href="{{ route('biblioteca.periodo') }}" class="btn btn-primary">Periodo</a>
     {{-- Boton para llamar la vista de consulta por servicios --}}
-    <a href="{{ route('biblioteca.serviciosAjax') }}" class="btn btn-primary">Servicios</a>
+    <a href="{{ route('biblioteca.servicios.ver') }}" class="btn btn-primary">Servicios</a>
     <hr>
     <table class="table" id="tabEstadisticos">
         <thead>

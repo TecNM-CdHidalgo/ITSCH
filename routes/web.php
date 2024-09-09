@@ -307,5 +307,6 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/biblioteca/periodo/find',[BibliotecaController::class,'periodoFind'])->name('biblioteca.periodo.find');
     Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax');
     Route::get('contenido/biblioteca/servicios/consulta',[BibliotecaController::class,'serviciosFind'])->name('biblioteca.servicios.find');
+    Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios.ver');
 });
 
