@@ -22,23 +22,31 @@ class BibliotecaController extends Controller
 
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
+            $controles = $servicios->pluck('control');
+
             $resultado = DB::connection('contEsc')
-            ->table('alumnos')
-            ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
-            ->select(
-                'alumnos.alu_NumControl',
-                DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
-                'carreras.car_Nombre as carrera'
-            )
-            ->get();
+                ->table('alumnos')
+                ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
+                ->select(
+                    'alumnos.alu_NumControl',
+                    DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
+                    'carreras.car_Nombre as carrera'
+                )
+                ->whereIn('alumnos.alu_NumControl', $controles)
+                ->get();
+
+            // Crea un mapa de alumnos por número de control
+            $alumnosMap = $resultado->keyBy('alu_NumControl');
 
             foreach ($servicios as $servicio) {
-                $alumno = $resultado->firstWhere('alu_NumControl', $servicio->control);
+                $alumno = $alumnosMap->get($servicio->control);
                 if ($alumno) {
                     $servicio->nombre = $alumno->nombre;
                     $servicio->carrera = $alumno->carrera;
                 }
             }
+
+
 
            // Mapeo de los códigos de servicio a sus nombres correspondientes
             $serviciosNombres = [
@@ -64,6 +72,11 @@ class BibliotecaController extends Controller
         } catch (\Exception $e) {
             return response()->json($e->getMessage(), HttpCode::NOT_ACCEPTABLE);
         }
+    }
+
+    public function completar()
+    {
+
     }
 
     //Funcion para buscar un alumno en la base de datos de control escolar
