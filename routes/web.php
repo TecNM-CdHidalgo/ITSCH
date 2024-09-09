@@ -303,10 +303,10 @@ Route::group(['middleware' => 'auth'],function(){
 
     //Rutas privadas de biblioteca
     Route::get('contenido/biblioteca/estadisticos',function(){return view('admin.biblioteca.estadisticos');})->name('biblioteca.estadisticos');
-    Route::get('contenido/biblioteca/periodo',[BibliotecaController::class,'periodoShow'])->name('biblioteca.periodo');
+    Route::get('contenido/biblioteca/periodo',function(){return view('admin.biblioteca.periodo');})->name('biblioteca.periodo');
     Route::get('contenido/biblioteca/periodo/find',[BibliotecaController::class,'periodoFind'])->name('biblioteca.periodo.find');
     Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax');
     Route::get('contenido/biblioteca/servicios/consulta',[BibliotecaController::class,'serviciosFind'])->name('biblioteca.servicios.find');
-    Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios.ver');
+    Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios');
 });
 

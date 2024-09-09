@@ -5,7 +5,7 @@
     {{-- Boton para llamar la vista de periodo para su consulta --}}
     <a href="{{ route('biblioteca.periodo') }}" class="btn btn-primary"><i class='fas fa-calendar-alt'></i> Periodo</a>
     {{-- Boton para llamar la vista de consulta por servicios y mostrar su grafica --}}
-    <a href="{{ route('biblioteca.servicios.ver') }}" class="btn btn-primary"><i class="fas fa-chart-pie"></i> Servicios</a>
+    <a href="{{ route('biblioteca.servicios') }}" class="btn btn-primary"><i class="fas fa-chart-pie"></i> Servicios</a>
     <hr>
     <table class="table" id="tabEstadisticos">
         <thead>
