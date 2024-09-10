@@ -62,12 +62,14 @@
                                         <td>{{  $atr->numCri }}</td>
                                         <td>{{  $atr->desCri }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditarCri" onclick="obtDatEditarCri({{ $atr }})">
-                                                <i class='fas fa-edit' style='font-size:14px'></i>
-                                            </button>
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajasCri" onclick="obtDatEliminarCri({{ $atr }})">
-                                                <i class='fas fa-trash-alt' style='font-size:14px'></i>
-                                            </button>
+                                            @if($atr->numCri!==null)
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditarCri" onclick="obtDatEditarCri({{ $atr }})">
+                                                    <i class='fas fa-edit' style='font-size:14px'></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajasCri" onclick="obtDatEliminarCri({{ $atr }})">
+                                                    <i class='fas fa-trash-alt' style='font-size:14px'></i>
+                                                </button>
+                                            @endif
                                         </td>
                                     </tr>
                                 </tbody>
@@ -89,12 +91,14 @@
                                     <td>{{  $atr->numCri }}</td>
                                     <td>{{  $atr->desCri }}</td>
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditarCri" onclick="obtDatEditarCri({{ $atr }})">
-                                            <i class='fas fa-edit' style='font-size:14px'></i>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajasCri" onclick="obtDatEliminarCri({{ $atr }})">
-                                            <i class='fas fa-trash-alt' style='font-size:14px'></i>
-                                        </button>
+                                        @if($atr->numCri!==null)
+                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModalEditarCri" onclick="obtDatEditarCri({{ $atr }})">
+                                                <i class='fas fa-edit' style='font-size:14px'></i>
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalBajasCri" onclick="obtDatEliminarCri({{ $atr }})">
+                                                <i class='fas fa-trash-alt' style='font-size:14px'></i>
+                                            </button>
+                                        @endif
                                     </td>
                                 </tr>
                             </tbody>
@@ -284,7 +288,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Numero</span>
                     </div>
-                    <input type="text" class="form-control" name="numCri" id="num_updateCri" required>
+                    <input type="text" class="form-control" name="numCri" id="num_updateCri" required readonly>
                 </div>
                 <label class="input-group-text">Descripción</label>
                 <textarea class="form-control" required name="desCri" rows="3" id="des_updateCri"></textarea>
@@ -365,6 +369,7 @@
 
             function obtDatEditarCri(atr)
             {
+                console.log(atr);
                 $("#num_updateCri").val(atr['numCri']);
                 $("#des_updateCri").val(atr['desCri']);
                 r="{{url('contenido/carreras')}}/updateCriterios/"+atr['idCri'];
