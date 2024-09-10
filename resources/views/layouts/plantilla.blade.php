@@ -168,7 +168,7 @@
             </a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ route('proceso.egreso') }}">Encuesta de egreso</a>
-                <a class="dropdown-item" href="{{ route('seguimiento.egresados') }}">Seguimiento a egresados</a>
+                <a class="dropdown-item" href="https://forms.gle/U1maMvKqxVcEBCBu8" target="_blank">Seguimiento a egresados</a>
                 <a class="dropdown-item" href="{{ route('seguimiento.empleadores') }}">Encuesta de Empleadores</a>
             </div>
         </li>
