@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->enum('tipo',['administrador','editor','academica','planeacion','vinculacion','biblioteca'])->default('editor');
+            $table->string('departamento')->foreign('departamento')->references('id')->on('departamentos');                       
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
