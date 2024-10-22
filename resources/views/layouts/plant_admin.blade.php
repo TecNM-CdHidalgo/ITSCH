@@ -76,10 +76,10 @@
                                 @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "editor"|| Auth::User()->tipo == "vinculacion")
                                     <li class="nav-item">
                                         <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
-                                    </li>                                   
+                                    </li>
                                 @endif
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link" ><p id="section-galeria" class="no-margins">Permisos</p></a>
+                                    <a href="{{ route('institucion.indexPases') }}" class="nav-link" ><p id="section-galeria" class="no-margins">Institución</p></a>
                                 </li>
                                 @if (Auth::User()->tipo != "editor")
                                     <li class="nav-item dropdown">

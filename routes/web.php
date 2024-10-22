@@ -8,6 +8,7 @@ use App\Http\Controllers\BuzonController;
 use App\Http\Controllers\DenunciasController;
 use App\Http\Controllers\BancoController;
 use App\Http\Controllers\BibliotecaController;
+use App\Http\Controllers\PasesController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -308,5 +309,8 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax');
     Route::get('contenido/biblioteca/servicios/consulta',[BibliotecaController::class,'serviciosFind'])->name('biblioteca.servicios.find');
     Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios');
+
+    //Rutas de institución
+    Route::get('contenido/institucion/indexPases',[PasesController::class,'indexPases'])->name('institucion.indexPases');
 });
 
