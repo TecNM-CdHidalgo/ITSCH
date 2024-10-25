@@ -4,6 +4,23 @@
 
 <div class="container-fluid">
     <div class="row">
+        <div class="col"></div>
+        <div class="col">
+        <div class="card">
+                <div class="card-header">
+                    <h2> Procedimeinto de evaluacion docente </h2>
+                </div>
+                <div class="card-body">
+                    <a type="button" class="btn btn-primary"
+                        href="{{asset('documents/content/calidad/Procedimiento_evaluacion_docente.pdf')}}" data-toogle="tooltip" title="documento para descargar" download target="_blank">
+                        <i class='fas fa-download' style='font-size:20px'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
        <div class="col-sm">
 
                <h2 class="page-title">Resultados SED AGO/DIC 2020</h2>
