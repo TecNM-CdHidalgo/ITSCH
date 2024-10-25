@@ -77,10 +77,10 @@
                                     <li class="nav-item">
                                         <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link" ><p id="section-galeria" class="no-margins">Galeria</p></a>
-                                    </li>
                                 @endif
+                                <li class="nav-item">
+                                    <a href="{{ route('institucion.indexPases') }}" class="nav-link" ><p id="section-galeria" class="no-margins">Institución</p></a>
+                                </li>
                                 @if (Auth::User()->tipo != "editor")
                                     <li class="nav-item dropdown">
                                         <a  href="#" class="nav-link dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown"  aria-expanded="false">Administración</a>

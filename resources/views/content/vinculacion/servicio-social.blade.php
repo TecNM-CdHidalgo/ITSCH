@@ -42,17 +42,8 @@
 		    	Los programas pueden ser de naturaleza urbana, suburbana o rural.
 		    </li>
 		    <li>
-		    	ANTES DE INICIAR SU SERVICIO SOCIAL, los aspirantes deberán registrarse con el encargado de Servicio Social ubicado en el edificio “M” OFICINA DE SERVICIO SOCIAL (y solicitar su Carta de Presentación.
-		    </li>
-		    <li>
 		    	Los primeros documentos que el prestante deberá entregar son:
 		    	<ol type="a">
-		    		<li>
-		    			Solicitud de Servicio Social
-		    		</li>
-		    		<li>
-		    			Carta compromiso
-		    		</li>
 		    		<li>
 		    			Solicitud de Registro
 		    		</li>
@@ -71,48 +62,10 @@
 		    		<li>
 		    			Carta de aceptación. (Hoja membretada y Emitida por la institución donde realicen el servicio social)
 		    		</li>
-		    		<li>
-		    			El plan de trabajo de las actividades realizadas (proyecto)en word letra Arial 12, imágenes (opcional) y que deberá contener los siguientes apartados:
-		    			<ol type="1">
-		    				<li>
-		    					Portada
-		    				</li>
-		    				<li>
-		    					Introducción
-		    				</li>
-		    				<li>
-		    					Justificación
-		    				</li>
-		    				<li>
-		    					Objetivos
-		    				</li>
-		    				<li>
-		    					Problemas a resolver
-		    				</li>
-		    				<li>
-		    					Cronograma de actividades
-		    				</li>
-		    				<li>
-		    					Descripción de actividades
-		    				</li>
-		    				<li>
-		    					Resultados
-		    				</li>
-		    				<li>
-		    					Recomendaciones
-		    				</li>
-		    				<li>
-		    					Conclusiones
-		    				</li>
-		    			</ol>
-		    		</li>
 		    	</ol>
 		    </li>
 		    <li>
-		    	Ya iniciado su Servicio Social, el prestante deberá elaborar sus reportes bimestrales que entregarán al final de la actividad y en la fecha que marque el ENCARGADO DE SERVICIO SOCIAL.
-		    </li>
-		    <li>
-		    	Al término de su Servicio Social, el prestante elaborará un reporte final (conclusión)
+		    	Ya iniciado su Servicio Social, el prestante deberá elaborar sus informes bimestrales que entregarán al final de la actividad y en la fecha que marque el ENCARGADO DE SERVICIO SOCIAL.
 		    </li>
 		</ol>
     <hr>
@@ -153,10 +106,6 @@
     	INICIO DE PROCESO DE SERVICIO SOCIAL
     	</strong>
     </h4>
-    <p>Llenar el siguiente cuestionario</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvVXD85_cpAk0LCJyCqLgycX5cRhsmPS8tE9xFIj3q8nAhCA/viewform?usp=sf_link">Proceso de solicitud de servicio social</a>
-    <hr>
-
     <table class="table">
     	<body>
     		<tr>
@@ -167,9 +116,6 @@
     		</tr>
     	</body>
     </table>
-    <hr>
-        <h4>Quieres bajar tus documentos pre llenados <a href="https://forms.gle/1HGvQmKKcsEQ9scMA" target="black">click aquí</a></h4>
-    <hr>
     <h4>
     	<strong>
     	FORMATOS PARA ALUMNOS QUE INICIAN SU SERVICIO SOCIAL
@@ -177,18 +123,6 @@
     </h4>
     <table class="table">
     	<body>
-    		<tr>
-    			<td>Solicitud de servicio</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/SOLICITUD DE SERVICIO SOCIAL (1).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
-    		<tr>
-    			<td>Carta compromiso</td>
-    			<td>
-    				<a download href="{{ asset('documents/content/vinculacion/servicio social/CARTA COMPROMISO (2).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-    			</td>
-    		</tr>
     		<tr>
     			<td>Solicitud de registro</td>
     			<td>
@@ -231,36 +165,6 @@
 				<td>Evaluación de la unidad receptora</td>
 				<td>
 					<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LA UNIDAD RECEPTORA (7).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-				</td>
-			</tr>
-			<tr>
-				<td>3 Reportes bimestrales (ITSCH)</td>
-				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/reporte bimestral(ITSCH).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-				</td>
-			</tr>
-			<tr>
-				<td>3 Evaluaciones cualitativa del prestador de servicio</td>
-				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO SOCIAL (9).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-				</td>
-			</tr>
-			<tr>
-				<td>3 Evaluaciones de las actividades por el prestador de servicio</td>
-				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/EVALUACION DE LAS ACTIVIDADES POR EL PRESTADOR DE SERVICIO SOCIAL (10).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-				</td>
-			</tr>
-			<tr>
-				<td>3 Autoevaluaciones cualitativa del prestador de servicio</td>
-				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/AUTOEVALUACION CUALITATIVA DEL PRESTADOR DE SERVICIO (11).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
-				</td>
-			</tr>
-			<tr>
-				<td>Carta de terminación</td>
-				<td>
-					<a download href="{{ asset('documents/content/vinculacion/servicio social/CARTA DE TERMINACION (12).pdf') }}" class="btn btn-primary"  type="button"><i class='fas fa-download' style='font-size:20px'></i></a>
 				</td>
 			</tr>
 			<tr>
