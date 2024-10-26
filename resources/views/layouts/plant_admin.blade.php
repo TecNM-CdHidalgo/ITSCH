@@ -78,8 +78,12 @@
                                         <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
                                     </li>
                                 @endif
-                                <li class="nav-item">
-                                    <a href="{{ route('institucion.indexPases') }}" class="nav-link" ><p id="section-galeria" class="no-margins">Institución</p></a>
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="false">Institución</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <a class="dropdown-item" href="{{ route('institucion.pases.index') }}">Pases de salida</a>
+                                        <a class="dropdown-item" href="#">Permisos</a>
+                                    </div>
                                 </li>
                                 @if (Auth::User()->tipo != "editor")
                                     <li class="nav-item dropdown">

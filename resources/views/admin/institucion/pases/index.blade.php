@@ -6,6 +6,7 @@
 
 @section('contenido')
     @section('ruta', 'Institución | Pases')
+    <a href="{{ route('institucion.pases.store') }}" class="btn btn-success" title="Agregar pase"><i class="fas fa-id-badge"></i></a>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -24,7 +25,9 @@
                     @endforeach
                 </select>
             </div>
-            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-primary">Buscar</a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">

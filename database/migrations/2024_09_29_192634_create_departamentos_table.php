@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('departamentos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('area');
+            $table->integer('area')->foreign('area')->references('id')->on('areas');
             $table->integer('jefe')->foreign('jefe')->references('id')->on('users');
             $table->timestamps();
         });

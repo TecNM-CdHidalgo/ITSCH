@@ -311,6 +311,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios');
 
     //Rutas de institución
-    Route::get('contenido/institucion/indexPases',[PasesController::class,'indexPases'])->name('institucion.indexPases');
+    Route::get('contenido/institucion/pases/index',[PasesController::class,'index'])->name('institucion.pases.index');
+    Route::get('contenido/institucion/pases/store',[PasesController::class,'store'])->name('institucion.pases.store');
 });
 

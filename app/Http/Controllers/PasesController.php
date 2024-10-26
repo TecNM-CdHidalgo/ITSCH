@@ -11,11 +11,19 @@ class PasesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function indexPases()
+    public function index()
     {
         $areas = Area::all();
         $departamentos = Departamento::all();
-        return view('admin.institucion.pases');
+        return view('admin.institucion.pases.index', compact('areas', 'departamentos'));
+    }
+
+    /**
+     * llamma a la vista para crear un nuevo pase
+     */
+    public function store()
+    {
+        return view('admin.institucion.pases.create');
     }
 
 
