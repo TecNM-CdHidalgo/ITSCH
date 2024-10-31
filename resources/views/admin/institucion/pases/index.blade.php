@@ -6,7 +6,7 @@
 
 @section('contenido')
     @section('ruta', 'Institución | Pases')
-    <a href="{{ route('institucion.pases.store') }}" class="btn btn-success" title="Agregar pase"><i class="fas fa-id-badge"></i></a>
+    <a href="{{ route('pases.create') }}" class="btn btn-success" title="Agregar pase"><i class="fas fa-id-badge"></i></a>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">

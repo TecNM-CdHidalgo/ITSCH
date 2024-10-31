@@ -18,8 +18,9 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users'); // Usuario que solicita el pase de salida
             $table->date('fecha_solicitud'); // Fecha de la solicitud
             $table->time('hora_salida'); // Hora de salida
-            $table->time('hora_retorno'); // Hora de retorno (máximo 3 horas después)
-            $table->enum('estado', ['pendiente', 'aprobado', 'denegado'])->default('pendiente'); // Estado del pase
+            $table->time('hora_retorno')->nullable(); // Hora de retorno (máximo 3 horas después)
+            $table->string('motivo')->nullable(); // Motivo de la salida
+            $table->enum('estado', ['pendiente', 'aprobado', 'denegado'])->default('pendiente')->nullable(); // Estado del pase
             $table->timestamps();
         });
     }

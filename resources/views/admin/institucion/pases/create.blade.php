@@ -15,11 +15,10 @@
                         <h4 class="card-title">Agregar pase</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('pases.store') }}" method="POST">
+                        <form action="{{ route('pases.store') }}" method="post">
                             @csrf
-                            <div class="form-group
-                            ">
-                                <label for="area">Área</label>
+                            <div class="form-group">
+                                <label for="area">Área de adscripción</label>
                                 <select name="area" id="area" class="form-control">
                                     <option value="0">Seleccione un área</option>
                                     @foreach ($areas as $area)
@@ -27,9 +26,8 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group
-                            ">
-                                <label for="departamento">Departamento</label>
+                            <div class="form-group">
+                                <label for="departamento">Departamento de trabajo</label>
                                 <select name="departamento" id="departamento" class="form-control">
                                     <option value="0">Seleccione un departamento</option>
                                     @foreach ($departamentos as $departamento)
@@ -37,23 +35,19 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="form-group
-                            ">
-                                <label for="fecha">Fecha</label>
+                            <div class="form-group">
+                                <label for="fecha">Fecha de la salida</label>
                                 <input type="date" name="fecha" id="fecha" class="form-control">
                             </div>
-                            <div class="form-group
-                            ">
-                                <label for="hora">Hora</label>
+                            <div class="form-group">
+                                <label for="hora">Hora de salida</label>
                                 <input type="time" name="hora" id="hora" class="form-control">
                             </div>
-                            <div class="form-group
-                            ">
-                                <label for="descripcion">Descripción</label>
+                            <div class="form-group">
+                                <label for="descripcion">Motivo del pase</label>
                                 <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
                             </div>
-                            <div class="form-group
-                            ">
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </form>

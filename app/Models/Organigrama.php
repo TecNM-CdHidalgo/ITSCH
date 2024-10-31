@@ -5,13 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Departamento extends Model
+class Organigrama extends Model
 {
     use HasFactory;
-    protected $table="departamentos";
+
+    protected $table = 'organigrama';
+
     protected $fillable = [
         'nombre',
-        'jefe_id',
-        'area_id'
+        'tipo',
+        'id_padre',
+        'titular_id'
     ];
 }

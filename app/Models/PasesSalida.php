@@ -14,6 +14,7 @@ class PasesSalida extends Model
         'fecha_solicitud',
         'hora_salida',
         'hora_retorno',
+        'motivo',
         'estado'
     ];
 }

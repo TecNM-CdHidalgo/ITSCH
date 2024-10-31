@@ -81,7 +81,8 @@
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="false">Institución</a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <a class="dropdown-item" href="{{ route('institucion.pases.index') }}">Pases de salida</a>
+                                        <a class="dropdown-item" href="{{ route('organigrama.index') }}">Organigrama</a>
+                                        <a class="dropdown-item" href="{{ route('pases.index') }}">Pases de salida</a>
                                         <a class="dropdown-item" href="#">Permisos</a>
                                     </div>
                                 </li>

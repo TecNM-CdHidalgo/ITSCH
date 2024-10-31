@@ -9,6 +9,7 @@ use App\Http\Controllers\DenunciasController;
 use App\Http\Controllers\BancoController;
 use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\PasesController;
+use App\Http\Controllers\OrganigramaController;
 use Illuminate\Support\Facades\Route;
 
 //use Intervention\Image\Image;
@@ -311,7 +312,12 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios');
 
     //Rutas de institución
-    Route::get('contenido/institucion/pases/index',[PasesController::class,'index'])->name('institucion.pases.index');
-    Route::get('contenido/institucion/pases/store',[PasesController::class,'store'])->name('institucion.pases.store');
+    Route::get('institucion/pases/index',[PasesController::class,'index'])->name('pases.index');
+    Route::get('institucion/pases/create',[PasesController::class,'create'])->name('pases.create');
+    Route::post('institucion/pases/store',[PasesController::class,'store'])->name('pases.store');
+
+    //Rutas del organigrama
+    Route::get('contenido/organigrama/index',[OrganigramaController::class,'index'])->name('organigrama.index');
+    Route::get('contenido/organigrama/crear',[OrganigramaController::class,'create'])->name('organigrama.create');
 });
 

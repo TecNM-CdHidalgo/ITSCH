@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Area;
 use App\Models\Departamento;
+use App\Models\PasesSalida;
 
 class PasesController extends Controller
 {
@@ -21,9 +22,23 @@ class PasesController extends Controller
     /**
      * llamma a la vista para crear un nuevo pase
      */
-    public function store()
+    public function create()
     {
-        return view('admin.institucion.pases.create');
+        $areas = Area::all();
+        $departamentos = Departamento::all();
+        return view('admin.institucion.pases.create', compact('areas', 'departamentos'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+
+        PasesSalida::create($request->all());
+
+        return redirect()->route('pases.index')
+            ->with('success', 'Pase de salida creado correctamente.');
     }
 
 

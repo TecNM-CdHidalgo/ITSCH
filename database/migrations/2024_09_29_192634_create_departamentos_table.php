@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('departamentos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->integer('area')->foreign('area')->references('id')->on('areas');
-            $table->integer('jefe')->foreign('jefe')->references('id')->on('users');
+            $table->bigInteger('jefe_id')->unsigned()->nullable();
+            $table->foreign('jefe_id')->references('id')->on('users')->onDelete('cascade');
+            $table->bigInteger('area_id')->unsigned()->nullable();
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
             $table->timestamps();
         });
     }
