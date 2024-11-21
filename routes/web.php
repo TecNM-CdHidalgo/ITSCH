@@ -319,5 +319,6 @@ Route::group(['middleware' => 'auth'],function(){
     //Rutas del organigrama
     Route::get('contenido/organigrama/index',[OrganigramaController::class,'index'])->name('organigrama.index');
     Route::get('contenido/organigrama/crear',[OrganigramaController::class,'create'])->name('organigrama.create');
+    Route::post('contenido/organigrama/guardar',[OrganigramaController::class,'store'])->name('organigrama.store');
 });
 

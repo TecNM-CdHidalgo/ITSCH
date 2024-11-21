@@ -15,12 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');        // Nombre del nivel (ej., "Dirección General")
             $table->string('tipo');          // Tipo de nivel ('Direccion General', 'Direccion de Area', 'Subdireccion', 'Departamento')
-            $table->bigInteger('id_padre')->unsigned()->nullable();
-            $table->foreignId('id_padre')  // ID del nivel superior
+            $table->bigInteger('id_padre')->unsigned()->nullable()->foreignId('id_padre')  // ID del nivel superior
                   ->constrained('organigrama')   // Establece la relación con la misma tabla
                   ->nullOnDelete();              // Si el nivel superior se elimina, establecer NULL
-            $table->bigInteger('titular_id')->unsigned()->nullable();
-            $table->foreign('titular_id')->references('id')->on('users')->onDelete('cascade');
+            $table->bigInteger('titular_id')->unsigned()->nullable()
+            ->foreign('titular_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

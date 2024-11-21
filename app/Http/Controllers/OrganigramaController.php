@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Organigrama;
 use Illuminate\Http\Request;
 
 class OrganigramaController extends Controller
@@ -19,7 +20,8 @@ class OrganigramaController extends Controller
      */
     public function create()
     {
-        return view('admin.institucion.organigrama.create');
+        $puestos= Organigrama::all();
+        return view('admin.institucion.organigrama.create', compact('puestos'));
     }
 
     /**
