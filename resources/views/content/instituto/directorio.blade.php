@@ -18,11 +18,11 @@
 		<p>&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			3.&nbsp;&nbsp;&nbsp; LIC. Lorena Alanis Herrejón. (Encargada) Subdirectora de planeación</h4>
+			3.&nbsp;&nbsp;&nbsp; ING. Ricardo Antonio Moreno Ruiz. Subdirector de planeación</h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp; CP. Ma Angélica Olayo Álvarez. Departamento de Planeaci&oacute;n, Programaci&oacute;n y Presupuesto</p>
 		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp; Ing. Ricardo Antonio Moreno Ruiz. Jefe del departamento de Estad&iacute;stica, Evaluaci&oacute;n y Calidad</p>
+			b.&nbsp;&nbsp;&nbsp; Arq. Luis Emmanuel Garfias Tello. Jefe del departamento de Estad&iacute;stica, Evaluaci&oacute;n y Calidad</p>
 		<p style="margin-left:92.15pt;">
 			c.&nbsp;&nbsp;&nbsp; Ing. Daniel Aguilar Espino. Departamento de Servicios Escolares</p>
 		<p style="margin-left:92.15pt;">&nbsp;
@@ -37,11 +37,11 @@
 			c.&nbsp;&nbsp;&nbsp;ING. Alejandro Romero Estrada. Departamento de Recursos Humanos</p>
 		    <BR>
 		<h4 style="margin-left: 49.65pt;">
-			5. &nbsp;&nbsp;&nbsp;MAE. Héctor Gomez Álvarez . Director Acad&eacute;mico</h4>
+			5. &nbsp;&nbsp;&nbsp;MTRO. Juan José Maldonado García . Director Acad&eacute;mico</h4>
 		<p style="margin-left:49.65pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			6. &nbsp;&nbsp;&nbsp; ISC. Oscar Delgado Camacho. (Encargado) Subdirección Acad&eacute;mica.
+			6. &nbsp;&nbsp;&nbsp; ISC. Oscar Delgado Camacho. Subdirector academico.
            </h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;Ing. Brenda Mercedes Camacho Medina. Jefa de la Divisi&oacute;n de Ingenier&iacute;a Industrial</p>
@@ -61,7 +61,7 @@
 		<p style="margin-left:92.15pt;">&nbsp;
 			</p>
 		<h4 style="margin-left: 70.9pt;">
-			7.&nbsp;&nbsp;&nbsp;Dr. José Juan Tapia Barrera. (Encargado) Subdirector de Investigaci&oacute;n y Posgrado</h4>
+			7.&nbsp;&nbsp;&nbsp;Dr. Mauricio Nahuam Chavez Aviles. (Encargado) Subdirector de Investigaci&oacute;n y Posgrado</h4>
 		<p style="margin-left:92.15pt;">
 			a.&nbsp;&nbsp;&nbsp;IQ. Walter Ivan Cortéz Cruz.  Departamento de Investigaci&oacute;n y Ciencias B&aacute;sicas</p>
 		<p style="margin-left:92.15pt;">
@@ -70,7 +70,7 @@
 			c.&nbsp;&nbsp;&nbsp;LPE. Maria de Lourdes Sánchez Mora. Departamento de Tutor&iacute;as y Servicios Psicopedag&oacute;gicos</p>
 		<p style="margin-left:92.15pt;">&nbsp;</p>
 
-		<h4 style="margin-left: 70.9pt;">8.&nbsp;&nbsp;&nbsp;Mtro. Juan José Maldonado García.  Subdirector de Gesti&oacute;n Tecnol&oacute;gica y Vinculaci&oacute;n</h4>
+		<h4 style="margin-left: 70.9pt;">8.&nbsp;&nbsp;&nbsp;??????.  Subdirector de Gesti&oacute;n Tecnol&oacute;gica y Vinculaci&oacute;n</h4>
 		<p style="margin-left:92.15pt;">a.&nbsp;&nbsp;&nbsp;LMV. Leopoldo Maldonado Sandoval. Departamento de Comunicaci&oacute;n y Vinculaci&oacute;n</p>
 		<p style="margin-left:92.15pt;">b.&nbsp;&nbsp;&nbsp;Tec. David Aguilar Espino. Departamento de Extensi&oacute;n Educativa</p>
 		<p style="margin-left:92.15pt;">c.&nbsp;&nbsp;&nbsp;C. Héctor Edmundo Isidro García.  Departamento de Centro de Negocios</p>
@@ -107,7 +107,6 @@
 		<h4 class="text-center"><span><strong>DIV. DE ING. BIOQU&Iacute;MICA</strong></span></h4>
 		<p align="center">P&Eacute;REZ P&Eacute;REZ RUB&Eacute;N</p>
 		<p align="center">BARTOLO GUZM&Aacute;N CINTHIA YANELI</p>
-		<p align="center">CH&Aacute;VEZ &Aacute;VILES MAURICIO NAHUAM</p>
 		<p align="center">PAULA ITZEL BAUTISTA ORTEGA</p>
 		<p align="center">MADRIGAL P&Eacute;REZ LUIS ALBERTO</p>
 		<p align="center">OROZCO MONTES SALVADOR</p>
@@ -139,7 +138,6 @@
 		<p align="center">GUTI&Eacute;RREZ RUIZ MAR&Iacute;A ELENA</p>
 		<p align="center">MORENO RUIZ ZINTHIA</p>
 		<p align="center">RIVERA RUÍZ EMMA YESENIA</p>
-		<p align="center">ALEJANDRO GUZMÁN LUNA</p>
 
 		<p align="center">&nbsp;
 			</p>
@@ -153,14 +151,11 @@
 		<p align="center">MENDIOLA GARC&Iacute;A VIRGINIA</p>
 		<p align="center">MORA GARC&Iacute;A EDGAR</p>
 		<p align="center">MORALES MART&Iacute;NEZ JOS&Eacute; &Aacute;NGEL</p>
-		<p align="center">MORENO RU&Iacute;Z JUAN JOS&Eacute;</p>
-		<p align="center">MUÑOZ MONTOYA MANUEL</p>
 		<p align="center">PATIÑO ANTONIO BLANCA ESTELA</p>
 		<p align="center">P&Eacute;REZ MORA JOS&Eacute; CARLOS</p>
 		<p align="center">REYES MART&Iacute;NEZ YAZM&Iacute;N ELIZABETH</p>
 		<p align="center">REYES V&Aacute;ZQUEZ JULIO ENRIQUE</p>
 		<p align="center">VARGAS PIMENTEL NATANAEL</p>
-		<p align="center">VILLEGAS MALAG&Oacute;N BRISA BERENICE </p>
         <p align="center">GARCÍA ESQUIVEL BRENDA VIANEY </p>
 		<BR>
 
@@ -176,7 +171,6 @@
 		<p align="center">BARRERA GARCÍA ISAAC</p>
 		<p align="center">G&Oacute;MEZ CORREA JOSE SAMUEL</p>
 		<p align="center">CASARRUBIAS GUERRERO GABRIEL</p>
-		<p align="center">DOMÍNGUEZ TÉLLEZ MAURICIO</p>
 		<p align="center">VALD&Eacute;S MADRIGAL MANUEL ALEJANDRO</p>
         <p align="center">ERIC OMAR SOTO LAFLOR</p>
 
@@ -187,11 +181,9 @@
 
 		<p align="center">ESPINO MORALES EMILIANO</p>
 		<p align="center">ESPINO SANPEDRO RAFAEL</p>
-		<p align="center">ÁLVAREZ SÁNCHEZ MARICELA</p>
 		<p align="center">NOÉ ORTEGA SÁNCHEZ</p>
 		<p align="center">BARAJAS MENDIOLA ARTURO</p>
 		<p align="center">DURÁN SOTO ELEAZAR</p>
-		<p align="center">TREJO ESPINOSA OSCAR</p>
         <p align="center">TAPIA REYNOSO SAÚL</p>
         <p align="center">ESPINO SANPEDRO RAFAEL</p>
 	</article>

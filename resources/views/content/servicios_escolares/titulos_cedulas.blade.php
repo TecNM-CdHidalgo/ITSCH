@@ -82,18 +82,9 @@
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Portada para empastado y documento de Titulación</td>
+                        <td>Portada para documento de Titulación</td>
                         <td>
                             <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/portada_empastado.doc')}}" data-toogle="tooltip" title="Portadas de discos." download  target="_blank">
-                                <i class='fas fa-download' style='font-size:20px'></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Portada para discos de Titulación</td>
-                        <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/portada_discos_titulacion.docx')}}" data-toogle="tooltip" title="Portadas de discos." download>
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>

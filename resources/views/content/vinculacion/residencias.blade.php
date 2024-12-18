@@ -187,7 +187,7 @@
                             <br>13.- Carta de liberación de residencias por parte del asesor interno.
                             <br> 14.- Encuesta del asesor externo
                             <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio"> https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio</a>
-                            <br> 16.- disco con su proyecto final, la portada de la disco serigrafiada, en PDF y es importante entregarla en caja transparente, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno (se entrega únicamente con la documentación en físico)
+                            <br> 16.- Memoria con su proyecto final, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno
                             <br><br>
                             <strong> SIGUIENTES DOCUMENTOS SOLO SI:</strong>
                             <br>
@@ -271,11 +271,6 @@
                             FORMATO DE EVALUACIÓN XXX.
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Formato de evaluación residencias " download href='{{asset('documents/content/vinculacion/residencias/evaluacion_xxx.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
-                            </p>
-                            <br>
-                            FORMATO PARA PORTADA DE DISCOS.
-                            <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Portada del disco " download href='{{asset('documents/content/vinculacion/residencias/portdiscad19V1.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
                             <br>
                             ENCUESTA DEL ASESOR EXTERNO.
