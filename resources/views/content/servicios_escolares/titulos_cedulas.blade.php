@@ -29,12 +29,18 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Procedimiento de titulación</td>
-                        <td>
+                        <td>Preguntar por Procedimiento de titulación</td>
+                        <!-- <td>
                             <a type="button" class="btn btn-primary"
                                 href="{{asset('documents/content/servicios escolares/procedimiento titulacion v4.pdf ')}}" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." target="_blank">
                             <i class='fas fa-download' style='font-size:20px'></i>
-                        </a></td>
+                        </a></td> -->
+                        <td>
+                            <a type="button" class="btn btn-primary"
+                                href="mailto:servicios_titulacion@cdhidalgo.tecnm.mx" data-toogle="tooltip" title="Requisitos y Procedimiento de Titulación." target="_blank">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
