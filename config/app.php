@@ -160,8 +160,7 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,        
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
         /*

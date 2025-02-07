@@ -134,30 +134,29 @@ Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
 
 //Ruta para imagenes del carousel
-Route::get('/carousel/{image_name}', function($image_name)
-{
-	//Obtenemos imagen
-	$img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
-	// resize the image to a height of 200 and constrain aspect ratio (auto width)
-	$img->resize(null,400 , function ($constraint) {
-    $constraint->aspectRatio();
-	});
-	return $img->response('jpg');
+Route::get('/carousel/{image_name}', function($image_name) {
+    $path = storage_path('app/public/noticias/imagenes/'.$image_name);
 
+    // Verifica si el archivo existe
+    if (!file_exists($path)) {
+        abort(404);
+    }
+
+    // Devuelve la imagen directamente
+    return response()->file($path);
 })->name('carousel');
 
 //Ruta para imagenes de las noticias
-Route::get('/noticia/{image_name}', function($image_name)
-{
-	//Obtenemos la anchura de la pantalla
+Route::get('/noticia/{image_name}', function($image_name) {
+    $path = public_path('storage/noticias/imagenes/'.$image_name);
 
-    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
+    // Verifica si el archivo existe
+    if (!file_exists($path)) {
+        abort(404);
+    }
 
-    // resize the image to a height of 200 and constrain aspect ratio (auto width)
-	$img->resize(500,200);
-
-    return $img->response('jpg');
-
+    // Devuelve la imagen directamente
+    return response()->file($path);
 })->name('noticia');
 
 //Rutas del buzón
@@ -274,8 +273,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/destroyPlanEstudios/{id_asig}', [CarrerasController::class, 'destroyPlanEstudios'])->name('carreras.destroyPlanEstudios');
 	Route::post('contenido/carreras/storeMatEsp/{id_pro}', [CarrerasController::class, 'storeMatEsp'])->name('carreras.storeMatEsp');
     Route::post('contenido/carreras/updateMatEspecialidad/{id_pro}', [CarrerasController::class, 'updateMatEspecialidad'])->name('carreras.updateMatEspecialidad');
-    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');
-	//Route::get('contenido/carreras/showMateriasEspecialidad', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
+    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');	
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
     Route::post('contenido/carreras/foto/{id_pro}', [CarrerasController::class, 'act_foto'])->name('carreras.actualizarFoto');
 
