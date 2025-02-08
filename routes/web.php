@@ -10,13 +10,8 @@ use App\Http\Controllers\BancoController;
 use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\PasesController;
 use App\Http\Controllers\OrganigramaController;
+use App\Http\Controllers\AdeudosController;
 use Illuminate\Support\Facades\Route;
-
-//use Intervention\Image\Image;
-//use Image;
-use Intervention\Image\ImageManagerStatic as Image;
-
-//use Intervention\Image\Filters\FilterInterface;
 
 
 //Rutas publicas**************************************************************************
@@ -318,5 +313,15 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/organigrama/index',[OrganigramaController::class,'index'])->name('organigrama.index');
     Route::get('contenido/organigrama/crear',[OrganigramaController::class,'create'])->name('organigrama.create');
     Route::post('contenido/organigrama/guardar',[OrganigramaController::class,'store'])->name('organigrama.store');
+
+	//Rutas de los adeudos
+	Route::get('Institucion/adeudos/index',[AdeudosController::class,'index'])->name('adeudos.index');
+	Route::get('Institucion/adeudos/crear',[AdeudosController::class,'create'])->name('adeudos.create');
+	Route::post('Institucion/adeudos/guardar',[AdeudosController::class,'store'])->name('adeudos.store');
+	Route::get('Institucion/adeudos/editar/{id}',[AdeudosController::class,'edit'])->name('adeudos.edit');
+	Route::post('Institucion/adeudos/modificar/{id}',[AdeudosController::class,'update'])->name('adeudos.update');
+	Route::get('Institucion/adeudos/eliminar/{id}',[AdeudosController::class,'destroy'])->name('adeudos.destroy');
+	Route::get('Institucion/adeudos/indexEliminar',[AdeudosController::class,'indexEliminar'])->name('adeudos.indexEliminar');
+	Route::get('Institucion/adeudos/eliminarTodo',[AdeudosController::class,'destroyAll'])->name('adeudos.destroyAll');
 });
 

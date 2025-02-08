@@ -84,6 +84,7 @@
                                         <a class="dropdown-item" href="{{ route('organigrama.index') }}">Organigrama</a>
                                         <a class="dropdown-item" href="{{ route('pases.index') }}">Pases de salida</a>
                                         <a class="dropdown-item" href="#">Permisos</a>
+                                        <a class="dropdown-item" href="{{ route('adeudos.index') }}">Adeudos</a>
                                     </div>
                                 </li>
                                 @if (Auth::User()->tipo != "editor")
