@@ -18,7 +18,8 @@
                     </div>
                     <div class="form-group">
                         <label for="alumno">Alumno</label>
-                        <input type="text" class="form-control" id="alumno" name="alumno" value="{{ $adeudo->alumno?->alu_Nombre ?? 'No encontrado' }} {{ $adeudo->alumno?->alu_ApePaterno ?? '' }} {{ $adeudo->alumno?->alu_ApeMaterno ?? '' }}" readonly>
+                        <input type="text" class="form-control" id="alumno" name="alumno"
+                        value="{{ $alumno?->alu_Nombre ?? 'No encontrado' }} {{ $alumno?->alu_ApePaterno ?? '' }} {{ $alumno?->alu_ApeMaterno ?? '' }}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="status">Status</label>

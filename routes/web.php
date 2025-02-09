@@ -97,6 +97,10 @@ Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluat
 Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas');})->name('alumnos.prorrogas');
 Route::get('alumnos/asesorias',function(){return view('content.alumnos.asesorias');})->name('alumnos.asesorias');
+Route::get('alumnos/adeudos',function(){return view('content.servicios_escolares.adeudos');})->name('alumnos.adeudos');
+Route::get('alumnos/adeudos/buscar',[AdeudosController::class,'buscarAdeudo'])->name('alumnos.adeudos.buscar');
+Route::post('alumnos/adeudos/imprimir',[AdeudosController::class,'imprimirConstancia'])->name('alumnos.adeudos.imprimir');
+
 
 //Seguimiento empleadores y egresados
 Route::get('proceso/egreso',function(){return view('content.seguimiento.egreso');})->name('proceso.egreso');
@@ -322,6 +326,6 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('Institucion/adeudos/modificar/{id}',[AdeudosController::class,'update'])->name('adeudos.update');
 	Route::get('Institucion/adeudos/eliminar/{id}',[AdeudosController::class,'destroy'])->name('adeudos.destroy');
 	Route::get('Institucion/adeudos/indexEliminar',[AdeudosController::class,'indexEliminar'])->name('adeudos.indexEliminar');
-	Route::get('Institucion/adeudos/eliminarTodo',[AdeudosController::class,'destroyAll'])->name('adeudos.destroyAll');
+	Route::post('Institucion/adeudos/eliminarTodo',[AdeudosController::class,'destroyAll'])->name('adeudos.destroyAll');	
 });
 

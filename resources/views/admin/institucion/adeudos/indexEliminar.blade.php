@@ -5,36 +5,26 @@
 @endsection
 
 @section('contenido')
-    @section('ruta', 'Institución | Eliminar todos los adeudos')
+    @section('ruta', 'Institución | Adeudos | Eliminar todos los adeudos')
     <div class="container">
         <div class="row">
             <div class="col-md-12">  
-                {{-- seleccionamos las fechas de los adeudos que se quieran eliminar --}}
-                <form action="{{ route('adeudos.destroyAll') }}" method="POST">
+                {{-- Preguntamos si esta seguro de eliminar y ejecutamos la acción --}}
+                <form action="{{ route('adeudos.destroyAll') }}" method="POST" style="display: inline;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar todos los adeudos pagados?');">
                     @csrf
-                    <div class="form-group">
-                        <label for="fecha_inicio">Fecha de inicio</label>
-                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fecha_fin">Fecha de fin</label>
-                        <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" required>   
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Eliminar" class="btn btn-danger">
-                        <a href="{{ route('adeudos.index') }}" class="btn btn-secondary">Cancelar</a>
-                    </div>
+                    <button type="submit" class="btn btn-danger">Eliminar adeudos pagados</button>
                 </form>
+                <br><br>
                 {{-- Mostramos todos los registros de adeudos --}}
-                <table class="table table-sm" id="T-adeudos">
+                <table class="table table-sm" id="T-adeudos" >
                     <thead>
                         <tr>
                             <th>Control</th>                           
                             <th>Alumno</th>
-                            <th>Carrera</th>
-                            <th>Status</th>
+                            <th>Carrera</th>                            
                             <th>Concepto</th>
-                            <th>Fecha de adeudo</th>                  
+                            <th>Fecha de adeudo</th>  
+                            <th>Status</th>                
                         </tr>
                     </thead>
                     <tbody>
@@ -46,30 +36,61 @@
                                     {{ $adeudo->alumno?->alu_ApePaterno ?? '' }}
                                     {{ $adeudo->alumno?->alu_ApeMaterno ?? '' }}
                                 </td>
-                                <td>{{ $adeudo->carrera }}</td>
-                                <td>
-                                    @switch($adeudo->alumno?->alu_StatusAct)
-                                        @case('BD')
-                                            Baja definitiva
-                                            @break
-
-                                        @case('VI')
-                                            Vigente
-                                            @break
-
-                                        @case('BT')
-                                            Baja temporal
-                                            @break
-
-                                        @default
-                                            Estado desconocido
-                                    @endswitch
-                                </td>
+                                <td>{{ $adeudo->carrera }}</td>                                
                                 <td>{{ $adeudo->concepto }}</td>
-                                <td>{{ $adeudo->fecha_adeudo }}</td>                     
+                                <td>{{ $adeudo->fecha_adeudo }}</td> 
+                                <td>{{ $adeudo->status }}</td>                               
                             </tr>
-                        @endforeach
+                        @endforeach                     
                     </tbody>
                 </table>
-            </div>
+            </div>    
+            <div style="padding: 100px;"></div>        
+@endsection
+
+@section('js')
+    <script>
+        //Codigo para adornar las tablas con datatables
+        $(document).ready(function() {
+            $('#T-adeudos').DataTable({
+
+                dom: 'Bfrtip',
+
+                responsive: {
+                    breakpoints: [
+                    {name: 'bigdesktop', width: Infinity},
+                    {name: 'meddesktop', width: 1366},
+                    {name: 'smalldesktop', width: 1280},
+                    {name: 'medium', width: 1188},
+                    {name: 'tabletl', width: 1024},
+                    {name: 'btwtabllandp', width: 848},
+                    {name: 'tabletp', width: 768},
+                    {name: 'mobilel', width: 600},
+                    {name: 'mobilep', width: 320}
+                    ]
+                },
+
+                lengthMenu: [
+                    [ 5, 10, 25, 50, -1 ],
+                    [ '5 reg', '10 reg', '25 reg', '50 reg', 'Ver todo' ]
+                ],
+
+                buttons: [
+                    {extend: 'collection', text: 'Exportar',
+                        buttons: [
+                            { extend: 'copyHtml5', text: 'Copiar' },
+                            'csvHtml5',
+                            'excelHtml5',
+                            'pdfHtml5',
+                            { extend: 'print', text: 'Imprimir' },
+                        ]},
+                    { extend: 'colvis', text: 'Columnas visibles' },
+                    { extend:'pageLength',text:'Ver registros'},
+                ],
+                "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+            }
+            });
+        });
+    </script>       
 @endsection

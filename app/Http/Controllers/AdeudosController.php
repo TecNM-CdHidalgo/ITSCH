@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Area;
 use Carbon\Carbon;
+use PDF;
 
 class AdeudosController extends Controller
 {
@@ -69,9 +70,13 @@ class AdeudosController extends Controller
 
     public function edit(Request $request)
     {
+       //Consultamos el adeudo y los datos del alumno
         $adeudo = Adeudos::find($request->id);
-        $areas = Area::all();
-        return view('admin.institucion.adeudos.edit', compact('adeudo', 'areas'));
+        $alumno = DB::connection('contEsc')->table('alumnos')
+            ->where('alu_NumControl', $adeudo->control)
+            ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
+            ->first();     
+        return view('admin.institucion.adeudos.edit', compact('adeudo', 'alumno'));
     }
 
     public function update(Request $request)
@@ -93,8 +98,68 @@ class AdeudosController extends Controller
 
     public function indexEliminar()
     {
-        // Consultamos todos los adeudos
-        $adeudos = Adeudos::all();
-        return view('admin.institucion.adeudos.indexEliminar', compact('adeudos'));
+        // Consultamos todos los adeudos pagados, datos del alumno y carrera
+        $adeudos = Adeudos::where('status', 'pagado')->get(); 
+        $controles = $adeudos->pluck('control')->toArray();
+        $alumnos = DB::connection('contEsc')->table('alumnos')
+            ->whereIn('alu_NumControl', $controles)
+            ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
+            ->get()
+            ->keyBy('alu_NumControl');
+            $clavesCarrera = $alumnos->pluck('car_Clave')->unique()->filter()->toArray();
+            $carreras = DB::connection('contEsc')->table('carreras')
+            ->whereIn('car_Clave', $clavesCarrera)
+            ->pluck('car_Nombre', 'car_Clave');
+            foreach ($adeudos as $adeudo) {
+                $adeudo->alumno = $alumnos[$adeudo->control] ?? null;
+                if (!$adeudo->alumno) {
+                    $adeudo->carrera = 'Sin carrera';
+                    continue;
+                }
+                $adeudo->carrera = $carreras[$adeudo->alumno->car_Clave] ?? 'Sin carrera';
+            }    
+            return view('admin.institucion.adeudos.indexEliminar', compact('adeudos'));
+    }
+
+   
+
+    public function destroyAll(Request $request)
+    {
+        //Eliminamos los registros que fueron pagados
+        Adeudos::where('status', 'pagado')->delete();
+        return redirect()->route('adeudos.index') ->with('success','¡Los adeudos pagados se eliminaron correctamente!');
+    }
+
+    public function buscarAdeudo(Request $request)
+    {
+        //Consultamos el adeudo y datos del alumnos y del área del adeudo
+        $adeudo = Adeudos::where('control', $request->control)->where('status', 'Pendiente')->first();
+        if (!$adeudo) {
+            return response()->json(['error' => 'No se encontró adeudo pendiente para el alumno']);
+        }
+        $alumno = DB::connection('contEsc')->table('alumnos')
+            ->where('alu_NumControl', $request->control)
+            ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
+            ->first();
+        $area = Area::find($adeudo->area_id);
+        //retornamos un json con los datos anteriores
+        // Retornamos un JSON con los datos anteriores
+        return response()->json([
+            'adeudo' => $adeudo,
+            'alumno' => $alumno,
+            'area' => $area
+        ]);        
+    }
+
+    //Funcion para imprimir la constancia de no adeudos en PDF
+    public function imprimirConstancia(Request $request)
+    {dd( $request->control);
+        
+        $alumno = DB::connection('contEsc')->table('alumnos')
+            ->where('alu_NumControl', $request->control)
+            ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
+            ->first();        
+        
+        $pdf = PDF::loadView('content.servicios_escolares.adeudosPDF', compact('alumno'));
     }
 }
