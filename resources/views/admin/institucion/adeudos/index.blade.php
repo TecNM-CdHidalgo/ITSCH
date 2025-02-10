@@ -10,7 +10,9 @@
         <div class="row">
             <div class="col-md-12">  
                 <a href="{{ route('adeudos.create') }}" class="btn btn-primary">Agregar adeudo</a> 
-                <a href="{{ route('adeudos.indexEliminar') }}" class="btn btn-danger">Eliminar adeudos pagados</a> 
+                @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "editor")
+                    <a href="{{ route('adeudos.indexEliminar') }}" class="btn btn-danger">Eliminar adeudos pagados</a> 
+                @endif
                 <br><br>            
                 <table class="table table-sm" id="T-adeudos">
                     <thead>

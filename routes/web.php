@@ -99,7 +99,7 @@ Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas
 Route::get('alumnos/asesorias',function(){return view('content.alumnos.asesorias');})->name('alumnos.asesorias');
 Route::get('alumnos/adeudos',function(){return view('content.servicios_escolares.adeudos');})->name('alumnos.adeudos');
 Route::get('alumnos/adeudos/buscar',[AdeudosController::class,'buscarAdeudo'])->name('alumnos.adeudos.buscar');
-Route::post('alumnos/adeudos/imprimir',[AdeudosController::class,'imprimirConstancia'])->name('alumnos.adeudos.imprimir');
+Route::get('alumnos/adeudos/imprimir',[AdeudosController::class,'imprimirConstancia'])->name('alumnos.adeudos.imprimir');
 
 
 //Seguimiento empleadores y egresados

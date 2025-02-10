@@ -23,10 +23,10 @@
     </div> 
     <div id="noAdeudos" style="display: none;">
         <h2>Constancia de no adeudos</h2>
+        <h4 id="alumnoSA"></h4>
         <p>Imprime tu constancia de no adeudos para realizar los tramites de (Egreso, Titulación, Baja definitiva).</p>
-        <form action="{{ route('alumnos.adeudos.imprimir') }}" method="POST" >
-            @csrf
-            <input type="text" name="control" id="control">
+        <form action="{{ route('alumnos.adeudos.imprimir') }}" method="GET" >           
+            <input type="hidden" name="controlR" id="controlR">
             <button type="submit" class="btn btn-primary">Imprimir</button>
         </form>       
         <br><br>
@@ -55,7 +55,7 @@
        $(document).ready(function() {
             $("#btnBuscar").on("click", function() {
                 let control = $("#control").val().trim(); // Obtener el valor del input
-                
+                $("#controlR").prop("value", control);
                 if (control === "") {
                     alert("Por favor ingresa un número de control.");
                     return;
@@ -72,12 +72,15 @@
                         $("#btnBuscar").prop("disabled", false).text("Buscar");
 
                         // Si no hay adeudos, mostrar mensaje y ocultar la tabla
-                        if (!response.adeudo || response.adeudo.length === 0) {                            
-                            $("#control").prop("value", control);
+                        if (!response.adeudo || response.adeudo.length === 0) {                 
                             $('#noAdeudos').show();
                             $('#adeudos').hide();
+                            $("#alumnoSA").text(`${response.alumno.alu_Nombre} ${response.alumno.alu_ApePaterno} ${response.alumno.alu_ApeMaterno}`);
                             return;
                         }
+
+                        $('#noAdeudos').hide(); // Ocultar el mensaje de no adeudos
+                        
 
                         // Mostrar el nombre del alumno
                         $("#alumno").text(`${response.alumno.alu_Nombre} ${response.alumno.alu_ApePaterno} ${response.alumno.alu_ApeMaterno}`);

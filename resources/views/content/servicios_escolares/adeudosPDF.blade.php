@@ -34,19 +34,65 @@
          <table>
             <tbody>
                 <tr>
-                    <td style="width: 150px"></td>
-                    <td><img src="{{ asset('images/itsch.jpg') }}" alt="ISTCH" style="max-width: 40px;"></td>
-                    <td><h6>INSTITUTO TECNOLÓGICO SUPERIOR DE CIUDAD HIDALGO</h6></td>
+                    <td style="width: 150px"><img src="{{ public_path('images/itsch.jpg') }}" alt="ITSCH" style="max-width: 40px;"></td>
+                    <td>
+                    </td>
+                    <td><h5>INSTITUTO TECNOLÓGICO SUPERIOR DE CIUDAD HIDALGO</h5></td>
                     <td></td>
                 </tr>
             </tbody>
          </table>
+         <style>
+            body {
+                position: relative;
+            }
+        
+            .marca-agua {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 70%;
+                transform: translate(-50%, -50%);
+                opacity: 0.1; /* Ajusta la opacidad según necesites */
+                z-index: -1; /* Envía la imagen al fondo */
+            }
+        </style>
+        <img src="{{ public_path('images/itsch.jpg') }}" class="marca-agua" alt="ITSCH" >        
     </head>
    
-    <h1>Constancia de no adeudos</h1>
-    <p><small>C.C.P Para el archivo</small></p>
+    <h1 style="text-align: center; font-size: 65px; font-weight: lighter; font-family: 'Garamond', serif; margin-bottom: 5px;">
+        Constancia
+    </h1>
+    <h2 style="text-align: center; font-size: 25px; font-weight: normal; font-family: 'Garamond', serif; margin-top: 0;">
+        (No adeudos)
+    </h2>   
+  
+    <p style="text-align: center; font-size: 16px; font-family: 'Palatino Linotype', serif;">
+       Por medio de la presente se hace contsar que el (la) alumno (a) <b>{{ $alumno->alu_Nombre }} {{ $alumno->alu_ApePaterno }} {{ $alumno->alu_ApeMaterno }}</b>  de la carrera de <b>{{ $carrera->car_Nombre }}</b>  con número de control <b>{{ $alumno->alu_NumControl }}</b> en la consulta realizada el dia {{ $fecha }} <b>no presenta adeudos</b> con la institución.
+    </p>    
+    
+    
+    <p style="text-align: center; font-size: 16px; font-family: 'Palatino Linotype', serif;">
+        Se extiende la presente constancia a petición del interesado para los fines que al mismo convengan.
+    </p>
 
-    <footer class="footer"><p style="text-align: right">Julio 2023</p></footer>
+    <div style="padding: 120px;"></div>
+    
+    <img src="" alt="Firma" width="150px">
+    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong>ING. Daniel Aguilar Espino <br> Jefe de departamento de servicios escolares</strong></p>
+    
+    <div style="padding: 50px;"></div>
+
+    <p style="text-align: right; font-size: 16px; font-family: 'Palatino Linotype', serif;">
+        Ciudad Hidalgo, Michoacán a {{ $fecha }}
+    </p>
+    <p style="text-align: right; font-size: 12px; font-family: 'Palatino Linotype', serif;">
+        C.c.p. Archivo
+    </p>
+
+    <footer class="footer"><p style="text-align: right">Febrero 2025</p></footer>
+
+   
     
 </body>
 </html>

@@ -32,15 +32,37 @@
               <a href="{{ route('admin.usuarios.editar',$usuario->id) }}" class="btn btn-warning" data-toggle="tooltip" data-replacement="top" title="Editar usuario">
                 <img src="{{ asset('images/icons/edit-2-24.png') }}" alt="">
               </a>
-              <a href="#" class="btn btn-danger confirmModal" id="{{ $usuario->id }}" data-toggle="tooltip" data-replacement="top" title="Eliminar usuario">
+              <a href="javascript:void(0);" class="btn btn-danger confirmModal" data-id="{{ $usuario->id }}" data-toggle="tooltip" title="Eliminar usuario">
                 <img src="{{ asset('images/icons/x-mark-3-24.png') }}" alt="">
-              </a>
+              </a>          
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
   </div>
+  <!-- Modal de confirmación -->
+  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar eliminación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas eliminar este usuario?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteButton">Eliminar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Fin Modal de confirmación -->
   <div style="padding: 100px;"></div>
   @section('js')
     <script src="{{ asset('modals/js/jquery.confirmModal.min.js') }}"></script>
@@ -96,6 +118,27 @@
                }
 	        });
 	    });
+
+      // Código para mostrar el modal de confirmación
+      $(document).ready(function() {
+        // Mostrar el modal cuando se hace click en el enlace de eliminar
+        $(".confirmModal").on("click", function() {
+            var userId = $(this).data("id");  // Obtener el ID desde el atributo data-id
+            // Establecer el ID de usuario en el botón de confirmación
+            $("#confirmDeleteButton").data("userId", userId);
+            // Mostrar el modal de confirmación
+            $("#confirmDeleteModal").modal("show");
+        });
+
+        // Eliminar el usuario cuando se confirme
+        $("#confirmDeleteButton").on("click", function() {
+            var userId = $(this).data("userId");
+            // Redirigir a la ruta de eliminación con el ID del usuario
+            window.location.href = "{{ url('admin/usuarios/eliminar') }}/" + userId;
+        });
+     });
+
+
     </script>
   @endsection
 @endsection

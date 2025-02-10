@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Area;
 use Carbon\Carbon;
-use PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class AdeudosController extends Controller
 {
@@ -132,34 +132,66 @@ class AdeudosController extends Controller
 
     public function buscarAdeudo(Request $request)
     {
-        //Consultamos el adeudo y datos del alumnos y del área del adeudo
+        // Consultamos el adeudo y datos del alumno
         $adeudo = Adeudos::where('control', $request->control)->where('status', 'Pendiente')->first();
+
+        // Si no hay adeudo pendiente, solo devolvemos el nombre del alumno
         if (!$adeudo) {
-            return response()->json(['error' => 'No se encontró adeudo pendiente para el alumno']);
+            $alumno = DB::connection('contEsc')->table('alumnos')
+                ->where('alu_NumControl', $request->control)
+                ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
+                ->first();
+
+            return response()->json([
+                'alumno' => $alumno
+            ]);
         }
+
+        // Si hay adeudo, consultamos los datos del adeudo y el área
         $alumno = DB::connection('contEsc')->table('alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         $area = Area::find($adeudo->area_id);
-        //retornamos un json con los datos anteriores
-        // Retornamos un JSON con los datos anteriores
+
+        // Retornamos un JSON con los datos del adeudo, el alumno y el área
         return response()->json([
             'adeudo' => $adeudo,
             'alumno' => $alumno,
             'area' => $area
-        ]);        
+        ]);
+  
     }
 
-    //Funcion para imprimir la constancia de no adeudos en PDF
+   
+
     public function imprimirConstancia(Request $request)
-    {dd( $request->control);
-        
+    {
+        // Consulta del alumno
         $alumno = DB::connection('contEsc')->table('alumnos')
-            ->where('alu_NumControl', $request->control)
+            ->where('alu_NumControl', $request->controlR)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
-            ->first();        
-        
-        $pdf = PDF::loadView('content.servicios_escolares.adeudosPDF', compact('alumno'));
+            ->first();
+        //Agregamos el nombre de la carrera a la consulta
+        $carrera = DB::connection('contEsc')->table('carreras')
+            ->where('car_Clave', $alumno->car_Clave)
+            ->select('car_Nombre')
+            ->first();
+
+        //Agregamos la fecha actual sin la hora
+        $fecha = Carbon::now() ->format('d-m-Y');       
+    
+        // Verificar si el alumno existe
+        if (!$alumno) {
+            abort(404, 'Alumno no encontrado');
+        }
+    
+        // Generar PDF
+        $pdf = PDF::loadView('content.servicios_escolares.adeudosPDF', compact('alumno','carrera','fecha'));
+    
+        // Retornar el PDF como una vista previa en el navegador
+        return $pdf->stream('constancia_no_adeudos.pdf');     
+       
     }
+    
 }
