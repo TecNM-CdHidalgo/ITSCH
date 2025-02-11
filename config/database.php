@@ -63,16 +63,16 @@ return [
             ]) : [],
         ],
 
-       
+
         //Conexión a base de datos de prueba con mysql
         'contEsc' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_SECOND_HOST', 'forge'),
+            'host' => env('DB_HOST_SECOND', 'forge'),
             'port' => env('DB_PORT_SECOND', 'forge'),
-            'database' => env('DB_SECOND_DATABASE', 'forge'),
-            'username' => env('DB_SECOND_USERNAME','forge'),
-            'password' => env('DB_SECOND_PASSWORD', ''),
+            'database' => env('DB_DATABASE_SECOND', 'forge'),
+            'username' => env('DB_USERNAME_SECOND','forge'),
+            'password' => env('DB_PASSWORD_SECOND', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -84,15 +84,15 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-        /* 
+
         //Conexión a base de datos de prueba con sqlserver
-        'contEsc' => [
+        /*'contEsc' => [
             'driver' => 'sqlsrv',
-            'host' => env('DB_SECOND_HOST', '172.16.0.10'),
-            'port' => env('DB_SECOND_PORT', '1433'),
-            'database' => env('DB_SECOND_DATABASE', 'forge'),
-            'username' => env('DB_SECOND_USERNAME', 'forge'),
-            'password' => env('DB_SECOND_PASSWORD', ''),
+            'host' => env('DB_HOST_SECOND', 'forge'),
+            'port' => env('DB_PORT_SECOND', 'forge'),
+            'database' => env('DB_DATABASE_SECOND', 'forge'),
+            'username' => env('DB_USERNAME_SECOND', 'forge'),
+            'password' => env('DB_PASSWORD_SECOND', ''),
             'charset' => 'utf8',
             'prefix' => '',
         ],*/
