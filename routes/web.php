@@ -189,7 +189,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('users/crear','UserController@create')->name('admin.usuarios.crear');
 	Route::get('users/editar/{id}','UserController@edit')->name('admin.usuarios.editar');
 	Route::post('users/mod/{id}','UserController@update')->name('admin.usuarios.modificar');
-	Route::get('users/eliminar','UserController@destroy')->name('admin.usuarios.eliminar');
+	Route::post('users/eliminar','UserController@destroy')->name('admin.usuarios.eliminar');
 	Route::post('usuarios/guardar','UserController@save')->name('admin.usuarios.guardar');
 
 	//Rutas de noticias
