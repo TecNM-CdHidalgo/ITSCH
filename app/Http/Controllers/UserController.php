@@ -121,14 +121,14 @@ class UserController extends Controller
         if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
-        if(!$request->has('id')) return redirect()->route('home');
-        $usuario_existe = User::find($request->id);
-        if($usuario_existe != null){
-            User::destroy($request->id);
+        $usuario_existe = User::where('id','=',$request->id)->get()->count() == 1;
+        if($usuario_existe == null){
+            return response()->json(['error'=>'El usuario no existe']);
         }else{
-            return back()->with('error','El usuario no existe');
+            $usuario = User::find($request->id);
+            $usuario->delete();           
         }
-        return back()->with('success','El usuario fue eliminado con exito!!!');
+        return response()->json(['exito']);
     }
 
 

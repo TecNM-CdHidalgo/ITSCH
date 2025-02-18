@@ -10,13 +10,8 @@ use App\Http\Controllers\BancoController;
 use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\PasesController;
 use App\Http\Controllers\OrganigramaController;
+use App\Http\Controllers\AdeudosController;
 use Illuminate\Support\Facades\Route;
-
-//use Intervention\Image\Image;
-//use Image;
-use Intervention\Image\ImageManagerStatic as Image;
-
-//use Intervention\Image\Filters\FilterInterface;
 
 
 //Rutas publicas**************************************************************************
@@ -102,6 +97,10 @@ Route::get('alumnos/evaluatutor',function(){return view('content.alumnos.evaluat
 Route::get('alumnos/evaluacion_docente',function(){return view('content.alumnos.evaluacion_docente');})->name('alumnos.evaluacion_docente');
 Route::get('alumnos/prorrogas',function(){return view('content.alumnos.prorrogas');})->name('alumnos.prorrogas');
 Route::get('alumnos/asesorias',function(){return view('content.alumnos.asesorias');})->name('alumnos.asesorias');
+Route::get('alumnos/adeudos',function(){return view('content.servicios_escolares.adeudos');})->name('alumnos.adeudos');
+Route::get('alumnos/adeudos/buscar',[AdeudosController::class,'buscarAdeudo'])->name('alumnos.adeudos.buscar');
+Route::get('alumnos/adeudos/imprimir',[AdeudosController::class,'imprimirConstancia'])->name('alumnos.adeudos.imprimir');
+
 
 //Seguimiento empleadores y egresados
 Route::get('proceso/egreso',function(){return view('content.seguimiento.egreso');})->name('proceso.egreso');
@@ -134,30 +133,29 @@ Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 Auth::routes();
 
 //Ruta para imagenes del carousel
-Route::get('/carousel/{image_name}', function($image_name)
-{
-	//Obtenemos imagen
-	$img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
-	// resize the image to a height of 200 and constrain aspect ratio (auto width)
-	$img->resize(null,400 , function ($constraint) {
-    $constraint->aspectRatio();
-	});
-	return $img->response('jpg');
+Route::get('/carousel/{image_name}', function($image_name) {
+    $path = storage_path('app/public/noticias/imagenes/'.$image_name);
 
+    // Verifica si el archivo existe
+    if (!file_exists($path)) {
+        abort(404);
+    }
+
+    // Devuelve la imagen directamente
+    return response()->file($path);
 })->name('carousel');
 
 //Ruta para imagenes de las noticias
-Route::get('/noticia/{image_name}', function($image_name)
-{
-	//Obtenemos la anchura de la pantalla
+Route::get('/noticia/{image_name}', function($image_name) {
+    $path = public_path('storage/noticias/imagenes/'.$image_name);
 
-    $img = Image::make(storage_path('app/public/noticias/imagenes/'.$image_name));
+    // Verifica si el archivo existe
+    if (!file_exists($path)) {
+        abort(404);
+    }
 
-    // resize the image to a height of 200 and constrain aspect ratio (auto width)
-	$img->resize(500,200);
-
-    return $img->response('jpg');
-
+    // Devuelve la imagen directamente
+    return response()->file($path);
 })->name('noticia');
 
 //Rutas del buzón
@@ -191,7 +189,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('users/crear','UserController@create')->name('admin.usuarios.crear');
 	Route::get('users/editar/{id}','UserController@edit')->name('admin.usuarios.editar');
 	Route::post('users/mod/{id}','UserController@update')->name('admin.usuarios.modificar');
-	Route::get('users/eliminar','UserController@destroy')->name('admin.usuarios.eliminar');
+	Route::post('users/eliminar','UserController@destroy')->name('admin.usuarios.eliminar');
 	Route::post('usuarios/guardar','UserController@save')->name('admin.usuarios.guardar');
 
 	//Rutas de noticias
@@ -274,8 +272,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/destroyPlanEstudios/{id_asig}', [CarrerasController::class, 'destroyPlanEstudios'])->name('carreras.destroyPlanEstudios');
 	Route::post('contenido/carreras/storeMatEsp/{id_pro}', [CarrerasController::class, 'storeMatEsp'])->name('carreras.storeMatEsp');
     Route::post('contenido/carreras/updateMatEspecialidad/{id_pro}', [CarrerasController::class, 'updateMatEspecialidad'])->name('carreras.updateMatEspecialidad');
-    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');
-	//Route::get('contenido/carreras/showMateriasEspecialidad', [CarrerasController::class, 'showMateriasEspecialidad'])->name('carreras.showMateriasEspecialidad');
+    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');	
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
     Route::post('contenido/carreras/foto/{id_pro}', [CarrerasController::class, 'act_foto'])->name('carreras.actualizarFoto');
 
@@ -320,5 +317,15 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/organigrama/index',[OrganigramaController::class,'index'])->name('organigrama.index');
     Route::get('contenido/organigrama/crear',[OrganigramaController::class,'create'])->name('organigrama.create');
     Route::post('contenido/organigrama/guardar',[OrganigramaController::class,'store'])->name('organigrama.store');
+
+	//Rutas de los adeudos
+	Route::get('Institucion/adeudos/index',[AdeudosController::class,'index'])->name('adeudos.index');
+	Route::get('Institucion/adeudos/crear',[AdeudosController::class,'create'])->name('adeudos.create');
+	Route::post('Institucion/adeudos/guardar',[AdeudosController::class,'store'])->name('adeudos.store');
+	Route::get('Institucion/adeudos/editar/{id}',[AdeudosController::class,'edit'])->name('adeudos.edit');
+	Route::post('Institucion/adeudos/modificar/{id}',[AdeudosController::class,'update'])->name('adeudos.update');
+	Route::get('Institucion/adeudos/eliminar/{id}',[AdeudosController::class,'destroy'])->name('adeudos.destroy');
+	Route::get('Institucion/adeudos/indexEliminar',[AdeudosController::class,'indexEliminar'])->name('adeudos.indexEliminar');
+	Route::post('Institucion/adeudos/eliminarTodo',[AdeudosController::class,'destroyAll'])->name('adeudos.destroyAll');	
 });
 

@@ -43,7 +43,7 @@
         <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
         </a>
-        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/Epql-K1DMUxGuaeD-EHdjS4BtxNH-c0eB8OeRVSiuwgebQ?e=GiOx2E" title="Horarios del semestre" target="_blank">
+        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgKS2ACkQ1hFt1UZzxqJKYABib2YChOlp51RaPZ8a0b8lg?e=fWgww0" title="Horarios del semestre" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
         </a>
         <a href="https://www.univim.edu.mx">
@@ -97,25 +97,18 @@
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
-                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/Epql-K1DMUxGuaeD-EHdjS4BtxNH-c0eB8OeRVSiuwgebQ?e=GiOx2E" target="_blank">Horarios</a>
-                    <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
+                    <a class="text-black dropdown-item" href="{{ route('alumnos.adeudos') }}">Adeudos</a>                     
                 </ul>
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
-                <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>
-                <a class="dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Elibro</a>
-                <a class="dropdown-item" href="https://www.tecnm.mx/?vista=TecNM_Virtual&tecnm_virtual=Bibliotecas" target="_blank">Biblioteca TecNM</a>
+                <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>               
                 <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
                 <a class="dropdown-item"  href="https://evaltutor.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
-                <a class="dropdown-item"  href="https://sed.cdhidalgo.tecnm.mx/">Evaluacion Docente</a>
-                <a class="dropdown-item"  href="https://caracterizacion.cdhidalgo.tecnm.mx/alumno/">Examen psicometrico</a>
+                <a class="dropdown-item"  href="https://sed.cdhidalgo.tecnm.mx/">Evaluacion Docente</a>                
                 <a class="dropdown-item"  href="https://recibos.cdhidalgo.tecnm.mx/">Recibos electrónicos</a>
-                <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
-                <a class="dropdown-item"  href="https://sistemaeventos.cdhidalgo.tecnm.mx/#!/constancia">Sistema de eventos</a>
-                <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>
-                <a class="dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
-                <a class="dropdown-item"  href="{{ route('posgrado.maestrias') }}" >Posgrado</a>
-                {{-- <a class="dropdown-item"  href="#" >Exani</a> --}}
+                <a class="dropdown-item"  href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>             
+                <a class="dropdown-item"  href="{{ route('alumnos.prorrogas') }}">Solicitud de prorroga</a>              
+                <a class="dropdown-item"  href="{{ route('posgrado.maestrias') }}" >Posgrado</a>               
             </ul>
         </li>
 
@@ -125,9 +118,16 @@
             </a>
 
             <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
-                    <a class="dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
-                    <a class="dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
+                    <a class="text-black dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
+                    <a class="text-black dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
+                    <a class="text-black dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
+                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgKS2ACkQ1hFt1UZzxqJKYABib2YChOlp51RaPZ8a0b8lg?e=fWgww0" target="_blank">Horarios</a>
+                    <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
+                    <a class="text-black dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
+                    <a class="text-black dropdown-item"  href="https://caracterizacion.cdhidalgo.tecnm.mx/alumno/">Examen psicometrico</a>
+                    <a class="text-black dropdown-item"  href="https://sistemaeventos.cdhidalgo.tecnm.mx/#!/constancia">Sistema de eventos</a>
+                    <a class="text-black dropdown-item" href="https://elibro.net/es/lc/biblioitsch/inicio">Biblioteca Elibro</a>
+                <a class="text-black dropdown-item" href="https://www.tecnm.mx/?vista=TecNM_Virtual&tecnm_virtual=Bibliotecas" target="_blank">Biblioteca TecNM</a>
             </div>
         </li>
 
