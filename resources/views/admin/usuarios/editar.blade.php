@@ -24,11 +24,10 @@
             <option value="academica">Académica</option>
             <option value="planeacion">Planeación</option>
             <option value="vinculacion">Vinculación</option>
+            <option value="capturista">Capturista</option>
         @else
-            <option value="editor" selected>Editor</option>
-            <option value="academica">Académica</option>
-            <option value="planeacion">Planeación</option>
             <option value="vinculacion">Vinculación</option>
+            <option value="capturista">Capturista</option>
         @endif
 
       </select>
