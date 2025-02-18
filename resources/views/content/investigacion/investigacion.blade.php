@@ -2404,7 +2404,7 @@ zyPaLiftB2Rh4cDTOdiTwj3ucea4gZYChqld64bvmleG7HamCQpCpzWv2hkLK0//2Q==">
 
             <td>
 
-                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/01Inv_Registro formato Enero 2020.docx')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
+                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/01Inv_Registro formato Febrero 2025')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
                     <i class='fas fa-download' style='font-size:20px'></i>
                 </a>
 
@@ -2416,7 +2416,7 @@ zyPaLiftB2Rh4cDTOdiTwj3ucea4gZYChqld64bvmleG7HamCQpCpzWv2hkLK0//2Q==">
             <td> Formato de Presentación del Protocolo de investigaci&oacute;n </td>
 
             <td>
-                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/02Inv_Protocolo formato Enero 2020.docx')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
+                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/02Inv_Protocolo formato Febrero 2025')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
                     <i class='fas fa-download' style='font-size:20px'></i>
                 </a>
 
