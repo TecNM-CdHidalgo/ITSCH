@@ -86,7 +86,7 @@ return [
         ],
 
         //Conexión a base de datos con sqlserver
-        'contEscSQL' => [
+        'contEsc' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST_SECOND', 'forge'),
             'port' => env('DB_PORT_SECOND', 'forge'),
