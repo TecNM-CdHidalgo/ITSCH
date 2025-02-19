@@ -16,37 +16,57 @@
                     <input type="text" class="form-control col-sm-6" placeholder="Numero de control" id="control" aria-label="Numero de control" aria-describedby="basic-addon1">
                     <br>
                     <a href="#!" id="btnBuscar" class="btn btn-primary" data-mdb-ripple-init>Buscar</a>
+
+                    <div id="noAdeudos" style="display: none;">
+                        <h2>Constancia de no adeudos</h2>
+
+                        <h4 id="alumnoSA"></h4>
+                        <p>Selecciona e imprime tu constancia de no adeudos para realizar los tramites de (Egreso, Titulación, Baja definitiva).</p>
+                        <form action="{{ route('alumnos.adeudos.imprimir') }}" method="GET">
+                            <input type="hidden" name="controlR" id="controlR">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo" id="idBaja" value="baja" checked>
+                                <label class="form-check-label" for="idBaja"> Constancia baja definitiva </label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo" id="idEgreso" value="egreso">
+                                <label class="form-check-label" for="idEgreso"> Constancia egreso </label>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipo" id="idTitulacion" value="titulacion">
+                                <label class="form-check-label" for="idTitulacion"> Constancia titulación </label>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Imprimir</button>
+                        </form>
+
+                        <br><br>
+                    </div>
+                    <div id="adeudos" style="display: none;">
+                        <h2>Adeudos</h2>
+                        <h4 id="alumno"></h4>
+                        <table class="table table-striped table-hover" id="tabAdeudos">
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Area</th>
+                                    <th>Fecha de adeudo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <p>Para poder imprimir tu constancia de no adeudos primero debes asistir al(los) departamento(s) donde tienes los adeudos antes mencionados y solicitar un acuerdo para la liberación del mismo</p>
+                    </div>
                 </div>
             </div>
+            <br>
+            <br>
         </div>
         <div class="col-sm-3"></div>
-    </div>
-    <div id="noAdeudos" style="display: none;">
-        <h2>Constancia de no adeudos</h2>
-        <h4 id="alumnoSA"></h4>
-        <p>Imprime tu constancia de no adeudos para realizar los tramites de (Egreso, Titulación, Baja definitiva).</p>
-        <form action="{{ route('alumnos.adeudos.imprimir') }}" method="GET" >
-            <input type="hidden" name="controlR" id="controlR">
-            <button type="submit" class="btn btn-primary">Imprimir</button>
-        </form>
-        <br><br>
-    </div>
-    <div id="adeudos" style="display: none;">
-        <h2>Adeudos</h2>
-        <h4 id="alumno"></h4>
-        <table class="table table-striped table-hover" id="tabAdeudos">
-            <thead>
-                <tr>
-                    <th>Concepto</th>
-                    <th>Area</th>
-                    <th>Fecha de adeudo</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-        <p>Para poder imprimir tu constancia de no adeudos primero debes asistir al(los) departamento(s) donde tienes los adeudos antes mencionados y solicitar un acuerdo para la liberación del mismo</p>
     </div>
 @endsection
 
@@ -58,7 +78,7 @@
                 let control = $("#control").val().trim(); // Obtener el valor del input
                 $("#controlR").prop("value", control);
                 if (control === "") {
-                    alert("Por favor ingresa un número de control.");
+                    Swal.fire('Error', 'Por favor ingresa un número de control.', 'error');
                     return;
                 }
 
@@ -72,7 +92,12 @@
                     success: function(response) {
                         $("#btnBuscar").prop("disabled", false).text("Buscar");
 
-                        // Si no hay adeudos, mostrar mensaje y ocultar la tabla
+                        // Si no hay adeudos y el alumno existe, mostrar mensaje y ocultar la tabla
+                        if (!response.alumno) {
+                            Swal.fire('Error', 'No se encontro el alumno con este numero de control', 'error');
+                            $("#control").val("");
+                            return;
+                        }
                         if (!response.adeudo || response.adeudo.length === 0) {
                             $('#noAdeudos').show();
                             $('#adeudos').hide();
