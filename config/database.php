@@ -65,7 +65,7 @@ return [
 
 
         //Conexión a base de datos de prueba con mysql
-        'contEsc' => [
+        'contEscMy' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST_SECOND', 'forge'),
@@ -86,7 +86,7 @@ return [
         ],
 
         //Conexión a base de datos con sqlserver
-        'contEscSQL' => [
+        'contEsc' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST_SECOND', 'forge'),
             'port' => env('DB_PORT_SECOND', 'forge'),
