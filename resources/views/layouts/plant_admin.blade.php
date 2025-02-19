@@ -28,6 +28,8 @@
         {{-- Uso de multiselect jquery --}}
         <link href="{{ asset('css/msel/multi-select.css') }}" media="screen" rel="stylesheet" type="text/css">
 
+
+
         <style>
             .no-margins{
                 margin:0;
@@ -83,7 +85,7 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                         <a class="dropdown-item" href="{{ route('organigrama.index') }}">Organigrama</a>
                                         <a class="dropdown-item" href="{{ route('pases.index') }}">Pases de salida</a>
-                                        <a class="dropdown-item" href="#">Permisos</a>                                       
+                                        <a class="dropdown-item" href="#">Permisos</a>
                                         <a class="dropdown-item" href="{{ route('adeudos.index') }}">Adeudos</a>
                                     </div>
                                 </li>
@@ -233,6 +235,7 @@
         <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
             $(document).ready(function(event){
             $('.mdshide').delay(2000).fadeOut(300);

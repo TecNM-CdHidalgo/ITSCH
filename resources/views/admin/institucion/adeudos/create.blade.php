@@ -41,3 +41,19 @@
         </div>
     </div>
 @endsection
+
+@section('js')
+    <script>
+        // Verificamos si hay un mensaje de error en la sesión y mostramos un Swal
+        @if(session('error'))
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '{{ session('error') }}',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'Aceptar'
+            });
+        @endif
+    </script>
+@endsection
+
