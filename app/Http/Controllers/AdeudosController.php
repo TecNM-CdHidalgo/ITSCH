@@ -59,6 +59,14 @@ class AdeudosController extends Controller
 
     public function store(Request $request)
     {
+        //Verificamos que el numero de control exista en servicios escolares
+        $alumno = DB::connection('contEsc')->table('alumnos')
+            ->where('alu_NumControl', $request->control)
+            ->select('alu_NumControl')
+            ->first();
+        if (!$alumno) {
+            return redirect()->route('adeudos.create') ->with('error','¡El número de control no existe en la base de datos de servicios escolares!');
+        }
         $adeudo = new Adeudos();
         $adeudo->control = $request->control;
         $adeudo->area_id = $request->area_id;
