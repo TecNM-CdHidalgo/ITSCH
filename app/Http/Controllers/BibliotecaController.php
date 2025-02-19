@@ -38,7 +38,7 @@ class BibliotecaController extends Controller
     {
         $controles = $servicios->pluck('control');
 
-        $resultado = DB::connection('contEsc')
+        $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
             ->table('alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
             ->select(
@@ -84,13 +84,13 @@ class BibliotecaController extends Controller
     //Funcion para buscar un alumno en la base de datos de control escolar
     public function findAlumno(Request $request)
     {
-        $alumno = DB::connection('contEsc')->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
         ->select('alu_NumControl','alu_Nombre','alu_ApePaterno','alu_ApeMaterno','car_Clave','alu_Sexo')
         ->where('alu_NumControl',$request->control)
         ->first();
 
        //Agregamos el nombre de la carrera
-        $carrera = DB::connection('contEsc')->table('carreras')
+        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
         ->where('car_Clave',$alumno->car_Clave)
         ->first();
         $alumno->carrera = $carrera->car_Nombre;
