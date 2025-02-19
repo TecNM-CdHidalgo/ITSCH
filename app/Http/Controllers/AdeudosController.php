@@ -19,7 +19,7 @@ class AdeudosController extends Controller
         $controles = $adeudos->pluck('control')->toArray();
 
         // Cargar todos los alumnos en una sola consulta
-        $alumnos = DB::connection('contEsc')->table('alumnos')
+        $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->whereIn('alu_NumControl', $controles)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->get()
@@ -29,7 +29,7 @@ class AdeudosController extends Controller
         $clavesCarrera = $alumnos->pluck('car_Clave')->unique()->filter()->toArray();
 
         // Cargar todas las carreras en una sola consulta
-        $carreras = DB::connection('contEsc')->table('carreras')
+        $carreras = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
             ->whereIn('car_Clave', $clavesCarrera)
             ->pluck('car_Nombre', 'car_Clave'); // Obtiene un array clave => nombre
 
@@ -60,7 +60,7 @@ class AdeudosController extends Controller
     public function store(Request $request)
     {
         //Verificamos que el numero de control exista en servicios escolares
-        $alumno = DB::connection('contEsc')->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl')
             ->first();
@@ -80,7 +80,7 @@ class AdeudosController extends Controller
     {
        //Consultamos el adeudo y los datos del alumno
         $adeudo = Adeudos::find($request->id);
-        $alumno = DB::connection('contEsc')->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->where('alu_NumControl', $adeudo->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
@@ -109,13 +109,13 @@ class AdeudosController extends Controller
         // Consultamos todos los adeudos pagados, datos del alumno y carrera
         $adeudos = Adeudos::where('status', 'pagado')->get();
         $controles = $adeudos->pluck('control')->toArray();
-        $alumnos = DB::connection('contEsc')->table('alumnos')
+        $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->whereIn('alu_NumControl', $controles)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->get()
             ->keyBy('alu_NumControl');
             $clavesCarrera = $alumnos->pluck('car_Clave')->unique()->filter()->toArray();
-            $carreras = DB::connection('contEsc')->table('carreras')
+            $carreras = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
             ->whereIn('car_Clave', $clavesCarrera)
             ->pluck('car_Nombre', 'car_Clave');
             foreach ($adeudos as $adeudo) {
@@ -145,7 +145,7 @@ class AdeudosController extends Controller
 
         // Si no hay adeudo pendiente, solo devolvemos el nombre del alumno
         if (!$adeudo) {
-            $alumno = DB::connection('contEsc')->table('alumnos')
+            $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
                 ->where('alu_NumControl', $request->control)
                 ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
                 ->first();
@@ -156,7 +156,7 @@ class AdeudosController extends Controller
         }
 
         // Si hay adeudo, consultamos los datos del adeudo y el área
-        $alumno = DB::connection('contEsc')->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
@@ -176,12 +176,12 @@ class AdeudosController extends Controller
     public function imprimirConstancia(Request $request)
     {
         // Consulta del alumno
-        $alumno = DB::connection('contEsc')->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->where('alu_NumControl', $request->controlR)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         //Agregamos el nombre de la carrera a la consulta
-        $carrera = DB::connection('contEsc')->table('carreras')
+        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
             ->where('car_Clave', $alumno->car_Clave)
             ->select('car_Nombre')
             ->first();

@@ -87,12 +87,12 @@
     <div style="padding: 50px;"></div>
 
     <img src="" alt="Firma" width="150px">
-    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong>_______________________________ <br> ING. Daniel Aguilar Espino <br> Jefe de departamento de servicios escolares</strong></p>
+    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong>_______________________________ Departamento de servicios escolares</strong></p>
 
     <div style="padding: 20px;"></div>
 
     <img src="" alt="Firma" width="150px">
-    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong> _______________________________ <br> Encargado(a) Biblioteca</strong></p>
+    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong> _______________________________ <br>Biblioteca</strong></p>
 
 
     <div style="padding: 20px;"></div>
