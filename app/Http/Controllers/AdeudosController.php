@@ -12,43 +12,45 @@ class AdeudosController extends Controller
 {
     public function index()
     {
-        // Consultamos los adeudos cuyo estatus sea solo igual a pendiente
+        // Consultar adeudos pendientes
         $adeudos = Adeudos::where('status', 'Pendiente')->get();
 
-        // Obtener los números de control de los alumnos en una sola consulta
+        // Obtener los números de control de los alumnos
         $controles = $adeudos->pluck('control')->toArray();
 
+        if (empty($controles)) {
+            return view('admin.institucion.adeudos.index')->with('msg', 'error')->with('msj','¡No se encontraron adeudos pendientes!');
+        }
+
         // Cargar todos los alumnos en una sola consulta
-        $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
-            ->whereIn('alu_NumControl', $controles)
-            ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
-            ->get()
-            ->keyBy('alu_NumControl'); // Indexar por número de control para acceso rápido
+        $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))
+        ->table('alumnos')
+        ->whereIn('alu_NumControl', $controles)
+        ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
+        ->get()
+        ->mapWithKeys(fn($alumno) => [trim($alumno->alu_NumControl) => $alumno]); // Eliminar espacios extra
+
 
         // Obtener las claves de carrera únicas de los alumnos encontrados
-        $clavesCarrera = $alumnos->pluck('car_Clave')->unique()->filter()->toArray();
+        $clavesCarrera = $alumnos->pluck('car_Clave')->filter()->unique()->toArray();
 
         // Cargar todas las carreras en una sola consulta
-        $carreras = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
+        $carreras = DB::connection(env('DB_CONNECTION_SECOND'))
+            ->table('carreras')
             ->whereIn('car_Clave', $clavesCarrera)
             ->pluck('car_Nombre', 'car_Clave'); // Obtiene un array clave => nombre
 
-        // Asignamos los datos a cada adeudo
+        // Asignar los datos a cada adeudo
         foreach ($adeudos as $adeudo) {
+            $control = trim($adeudo->control, " \t\n\r\0\x0B\xC2\xA0"); // Eliminar espacios y caracteres invisibles
+            $adeudo->alumno = $alumnos[$control] ?? null;
             $adeudo->alumno = $alumnos[$adeudo->control] ?? null;
-
-            // Si no se encuentra el alumno, asignar "Sin carrera" y continuar
-            if (!$adeudo->alumno) {
-                $adeudo->carrera = 'Sin carrera';
-                continue;
-            }
-
-            // Asignar la carrera basada en la clave, o "Sin carrera" si no existe
-            $adeudo->carrera = $carreras[$adeudo->alumno->car_Clave] ?? 'Sin carrera';
+            $adeudo->carrera = $adeudo->alumno ? ($carreras[$adeudo->alumno->car_Clave] ?? 'Sin carrera') : 'Sin carrera';
         }
 
         return view('admin.institucion.adeudos.index', compact('adeudos'));
     }
+
 
     public function create()
     {
