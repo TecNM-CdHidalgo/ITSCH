@@ -20,6 +20,7 @@
         <option value="planeacion">Planeación</option>
         <option value="vinculacion">Vinculación</option>
         <option value="biblioteca">Biblioteca</option>
+        <option value="capturista">Capturista</option>
       </select>
     </div>
     <div class="form-group">

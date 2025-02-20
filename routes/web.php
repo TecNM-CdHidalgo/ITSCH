@@ -272,7 +272,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('contenido/carreras/destroyPlanEstudios/{id_asig}', [CarrerasController::class, 'destroyPlanEstudios'])->name('carreras.destroyPlanEstudios');
 	Route::post('contenido/carreras/storeMatEsp/{id_pro}', [CarrerasController::class, 'storeMatEsp'])->name('carreras.storeMatEsp');
     Route::post('contenido/carreras/updateMatEspecialidad/{id_pro}', [CarrerasController::class, 'updateMatEspecialidad'])->name('carreras.updateMatEspecialidad');
-    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');	
+    Route::get('contenido/carreras/destroyMatEspecialidad/{id_asig}', [CarrerasController::class, 'destroyMatEspecialidad'])->name('carreras.destroyMatEspecialidad');
 	Route::get('contenido/carreras/showMateriasEspecialidad2/{id_pro}', [CarrerasController::class, 'showMateriasEspecialidad2'])->name('carreras.showMateriasEspecialidad2');
     Route::post('contenido/carreras/foto/{id_pro}', [CarrerasController::class, 'act_foto'])->name('carreras.actualizarFoto');
 
@@ -326,6 +326,6 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::post('Institucion/adeudos/modificar/{id}',[AdeudosController::class,'update'])->name('adeudos.update');
 	Route::get('Institucion/adeudos/eliminar/{id}',[AdeudosController::class,'destroy'])->name('adeudos.destroy');
 	Route::get('Institucion/adeudos/indexEliminar',[AdeudosController::class,'indexEliminar'])->name('adeudos.indexEliminar');
-	Route::post('Institucion/adeudos/eliminarTodo',[AdeudosController::class,'destroyAll'])->name('adeudos.destroyAll');	
+	Route::post('Institucion/adeudos/eliminarTodo',[AdeudosController::class,'destroyAll'])->name('adeudos.destroyAll');
 });
 
