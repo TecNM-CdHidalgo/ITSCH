@@ -6,7 +6,7 @@
             <h5> <a href="{{ route('convenios.inicio') }}">Convenios</a>/Inicio</h5>
         </div>
         <div class="col-sm-4">
-            <h6>Agregar división o departamento de impacto dentro del ITSCH</h6>
+            <h6>Agregar división o departamento de impacto, dentro del ITSCH</h6>
             <form action="{{ route('convenios.guardar.area') }}" method="get">
                 <div class="input-group ">
                     <div class="input-group-prepend">
