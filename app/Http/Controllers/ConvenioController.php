@@ -101,12 +101,12 @@ class ConvenioController extends Controller
                 }
                 else
                 {
-                    return Redirect()->back()->with('error','¡La extencion del archivo no es valida! solo se aceptan PDF');
+                    return Redirect()->back()->with('msg', 'error')->with('msj','¡La extencion del archivo no es valida! solo se aceptan PDF');
                 }
             }
             else
             {
-                return Redirect()->back()->with('error','¡No se encontro ningún archivo adjunto');
+                return Redirect()->back()->with('msg', 'error')->with('msj','¡No se encontro ningún archivo adjunto');
             }
             foreach($request->areas as $area)
             {
@@ -120,12 +120,11 @@ class ConvenioController extends Controller
         catch (\Exception $e)
         {
             DB::rollback();
-            return Redirect()->back()->with('error','¡A ocurrido un error al cargar el convenio!');
+            return Redirect()->back()->with('msg', 'error')->with('msj','¡A ocurrido un error al cargar el convenio!');
         }
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
-        return Redirect()->route('convenios.inicio')
-        ->with('success','¡El convenio se dio de alta correctamente!');
+        return Redirect()->route('convenios.inicio')->with('msg', 'success')->with('msj','¡El convenio se dio de alta correctamente!');
     }
 
     public function destroy(Request $request)
@@ -138,23 +137,28 @@ class ConvenioController extends Controller
         try
         {
             $convenio = Convenio::find($request->id_convenio);
-            //Eliminamos la carpeta con todos los archivos del convenio
-            $err=Storage::deleteDirectory('public/convenios/'.$request->id_convenio);
-            //Verificamos que si se elimine la carpeta con todos los acrchivos en su interior
-            if(!$err)
-            {
-                DB::rollback();
-                return Redirect()->back()->with('error','¡El convenio no se pudo eliminar, ocurrio un error!');
-            }
             $convenio->delete();
+
+            $path = 'public/convenios/'.$request->id_convenio;
+            if (Storage::exists($path)) {
+                $deleted = Storage::deleteDirectory($path);
+                if (!$deleted) {
+                    return Redirect()->back()->with('msg', 'error')->with('msj', '¡El convenio no se pudo eliminar, ocurrió un error al borrar la carpeta!');
+                }
+            } else {
+                return Redirect()->back()->with('msg', 'error')->with('msj', '¡El convenio no se pudo eliminar, ocurrió un error, la carpeta del convenio no existe!');
+            }
+
         }
         catch (\Exception $e)
         {
             DB::rollback();
-            return Redirect()->back()->with('error','¡El convenio no se pudo eliminar, ocurrio un error!');
+            return Redirect()->back()->with('msg', 'error')->with('msj', '¡El convenio no se pudo eliminar, ocurrió una excepción!');
         }
+
         DB::commit();
-        return Redirect()->route('convenios.inicio')->with('warning','¡El convenio se elimino correctamente!');
+        return Redirect()->back()->with('msg', 'warning')->with('msj', '¡El convenio se elimino correctamente!');
+
     }
 
 
@@ -184,7 +188,7 @@ class ConvenioController extends Controller
         $area->nombre=$request->nombre;
         $area->save();
 
-        return Redirect()->back()->with('warning','¡El area se modifico correctamente!');
+        return Redirect()->back()->with('msg', 'warning')->with('msj','¡El area se modifico correctamente!');
     }
 
     public function areasDestroy(Request $request)
@@ -197,6 +201,6 @@ class ConvenioController extends Controller
         $area=Area::find($request->id_areaE);
         $area->delete();
 
-        return Redirect()->back()->with('warning','¡El area se elimino correctamente!');
+        return Redirect()->back()->with('msg', 'warning')->with('msj','¡El area se elimino correctamente!');
     }
 }

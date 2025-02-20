@@ -6,15 +6,13 @@
             <h5> <a href="{{ route('convenios.inicio') }}">Convenios</a>/Inicio</h5>
         </div>
         <div class="col-sm-4">
-            <h6>Área(s) a las que impacta el convenio</h6>
-        </div>
-        <div class="col-sm-4">
+            <h6>Agregar división o departamento de impacto dentro del ITSCH</h6>
             <form action="{{ route('convenios.guardar.area') }}" method="get">
                 <div class="input-group ">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Área</span>
+                        <span class="input-group-text">Nombre</span>
                     </div>
-                    <input type="text" name="nombre" id="nombre" required class="form-control" placeholder="Nombre del área">
+                    <input type="text" name="nombre" id="nombre" required class="form-control" placeholder="Departamento o división">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-primary btn-sm" title="Guardar"><i class="fa fa-save" style="font-size:14px;"></i></button>
                         <a href="{{ route('convenios.areas.inicio') }}" class="btn btn-success btn-sm" title="Ver mas"><i class='fas fa-search-plus' style='font-size:14px'></i></a>
@@ -22,8 +20,12 @@
                 </div>
             </form>
         </div>
+        <div class="col-sm-4">
+
+        </div>
     </div>
 
+    <hr>
     <hr>
 
     <form action="{{ route('convenios.save') }}" method="post" enctype="multipart/form-data">
@@ -143,7 +145,7 @@
     @section('js')
         <script>
             $('#areas').multiSelect({
-                selectableHeader: "<div class='custom-header'>Seleccionar áreas</div>",
+                selectableHeader: "<div class='custom-header'>Seleccionar Divs o Dep</div>",
                 selectionHeader: "<div class='custom-header'>Áreas seleccionadas</div>",
             });
 
@@ -218,6 +220,39 @@
                     $("#tabConvenios>tbody").append("<tr><td>"+con+"</td><td>"+tip[x]+"</td><td>"+areas[x]+"</td><td>"+ins[x]+"</td><td>"+ini[x]+"</td><td>"+fin[x]+"</td><td><a href="+r+" download class='btn btn-primary btn-sm'><i class='fas fa-file-alt' style='font-size:14px'></i></a></td><td><button class='btn btn-danger btn-sm' data-toggle='modal' data-target='#myModalEliminar' onclick='eliminar("+id[x]+")'><i class='far fa-trash-alt' style='font-size:14px'></i></a></td></tr>");
                 }
             });
+
+            //Funcion que verifica si hay errores en el formulario
+                // Verificamos si hay un mensaje error, success o warning
+                @switch(session('msg'))
+                    @case('error')
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: '{{ session('msj') }}',
+                            confirmButtonColor: '#d33',
+                            confirmButtonText: 'Aceptar'
+                        });
+                        @break
+                    @case('success')
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Éxito',
+                            text: '{{ session('msj') }}',
+                            confirmButtonColor: '#28a745',
+                            confirmButtonText: 'Aceptar'
+                        });
+                        @break
+                    @case('warning')
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Advertencia',
+                            text: '{{ session('msj') }}',
+                            confirmButtonColor: '#ffc107',
+                            confirmButtonText: 'Aceptar'
+                        });
+                        @break
+                @endswitch
+
         </script>
     @endsection
 
