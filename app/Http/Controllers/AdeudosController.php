@@ -28,7 +28,7 @@ class AdeudosController extends Controller
         ->whereIn('alu_NumControl', $controles)
         ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
         ->get()
-        ->mapWithKeys(fn($alumno) => [trim($alumno->alu_NumControl) => $alumno]); // Eliminar espacios extra
+        ->mapWithKeys(fn($alumno) => [strtoupper(trim($alumno->alu_NumControl)) => $alumno]); // Eliminar espacios extra
 
 
         // Obtener las claves de carrera únicas de los alumnos encontrados
@@ -42,7 +42,7 @@ class AdeudosController extends Controller
 
         // Asignar los datos a cada adeudo
         foreach ($adeudos as $adeudo) {
-            $control = trim($adeudo->control, " \t\n\r\0\x0B\xC2\xA0"); // Eliminar espacios y caracteres invisibles
+            $control = strtoupper(trim($adeudo->control, " \t\n\r\0\x0B\xC2\xA0")); // Eliminar espacios y caracteres invisibles
             $adeudo->alumno = $alumnos[$control] ?? null;
             $adeudo->alumno = $alumnos[$adeudo->control] ?? null;
             $adeudo->carrera = $adeudo->alumno ? ($carreras[$adeudo->alumno->car_Clave] ?? 'Sin carrera') : 'Sin carrera';
@@ -70,7 +70,7 @@ class AdeudosController extends Controller
             return redirect()->route('adeudos.create') ->with('error','¡El número de control no existe en la base de datos de servicios escolares!');
         }
         $adeudo = new Adeudos();
-        $adeudo->control = $request->control;
+        $adeudo->control = strtoupper($request->control);
         $adeudo->area_id = $request->area_id;
         $adeudo->concepto = $request->concepto;
         $adeudo->fecha_adeudo = $request->fecha_adeudo;
