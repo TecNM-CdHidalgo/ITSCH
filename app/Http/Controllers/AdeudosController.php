@@ -15,6 +15,12 @@ class AdeudosController extends Controller
         // Consultar adeudos pendientes
         $adeudos = Adeudos::where('status', 'Pendiente')->get();
 
+        //cambiamos los numeros de control a mayusculas
+        $adeudos = $adeudos->map(function ($adeudo) {
+            $adeudo->control = strtoupper($adeudo->control);
+            return $adeudo;
+        });
+
         // Obtener los números de control de los alumnos
         $controles = $adeudos->pluck('control')->toArray();
 
