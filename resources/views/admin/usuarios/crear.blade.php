@@ -11,17 +11,14 @@
       <label for="nombre">Nombre</label>
       <input name="name" type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre del usuario" required>
     </div>
-    <div class="from-group">
-      <label for="tipo">Tipo de Usuario</label>
-      <select name="tipo" id="tipo" class="form-control">
-        <option value="administrador">Administrador</option>
-        <option value="editor" selected>Editor</option>
-        <option value="academica">Académica</option>
-        <option value="planeacion">Planeación</option>
-        <option value="vinculacion">Vinculación</option>
-        <option value="biblioteca">Biblioteca</option>
-        <option value="capturista">Capturista</option>
-      </select>
+    <!-- Selección de roles (permitir múltiples roles) -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="roles">Roles</label>
+        <select name="roles[]" id="roles" class="form-control selectpicker" multiple data-live-search="true" required>
+            @foreach($roles as $role)
+                <option value="{{ $role->name }}">{{ $role->name }}</option>
+            @endforeach
+        </select>
     </div>
     <div class="form-group">
       <label for="correo">Correo</label>
@@ -44,3 +41,5 @@
       </script>
   @endsection
 @endsection
+
+

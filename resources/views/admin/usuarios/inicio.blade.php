@@ -29,19 +29,22 @@
             <td>{{ $usuario->email }}</td>
             <td>{{ $usuario->tipo }}</td>
             <td>
-              <a href="{{ route('admin.usuarios.editar',$usuario->id) }}" class="btn btn-warning" data-toggle="tooltip" data-replacement="top" title="Editar usuario">
-                <i class='fas fa-user-edit' style='font-size:24px; color:white'></i>
-              </a>
-              <a class="btn btn-danger btnEliminar" title="Eliminar usuario" data-toggle="modal" data-target="#modalEliminar"  data-id="{{ $usuario->id }}" data-nombre="{{ $usuario->name }}">
-                <i class='fas fa-trash-alt' style='font-size:24px; color:white'></i>
-              </a>                           
+                <a href="{{ route('admin.usuarios.editar',$usuario->id) }}" class="btn btn-warning" data-toggle="tooltip" data-replacement="top" title="Editar usuario">
+                    <i class='fas fa-user-edit' style='font-size:24px; color:white'></i>
+                </a>
+                <a class="btn btn-danger btnEliminar" title="Eliminar usuario" data-toggle="modal" data-target="#modalEliminar"  data-id="{{ $usuario->id }}" data-nombre="{{ $usuario->name }}">
+                    <i class='fas fa-trash-alt' style='font-size:24px; color:white'></i>
+                </a>
+                <a href="{{ route('admin.usuarios.asignar_roles',$usuario->id) }}" class="btn btn-info"  title="Asignar permisos">
+                    <i class="fas fa-users-cog"></i>
+                </a>
             </td>
           </tr>
         @endforeach
       </tbody>
-    </table>   
+    </table>
   </div>
-  
+
 
   <!-- Modal -->
 <div id="modalEliminar" class="modal fade" role="dialog">
@@ -65,26 +68,26 @@
   </div>
 </div>
   <div style="padding: 100px;"></div>
-  
+
 
 @endsection
 
 @section('js')
   <script>
     //Codigo de confirmacion de eliminación de usuario
-    $(document).ready(function(){         
+    $(document).ready(function(){
       //Evento para abrir el modal de confirmación
-      $('.btnEliminar').click(function(){ 
-        var idUsuario = $(this).data('id'); 
+      $('.btnEliminar').click(function(){
+        var idUsuario = $(this).data('id');
         var nombreUsuario = $(this).data('nombre');
         $('#nombre').text(nombreUsuario); // Coloca el nombre en el modal
-        $('#btnConfEliminar').data('id', idUsuario); // Guarda el id en el botón del modal    
+        $('#btnConfEliminar').data('id', idUsuario); // Guarda el id en el botón del modal
       });
-      
+
 
       //Verificamos si se presiono el boton del modal para eliminar
       $('#modalEliminar').on('click','#btnConfEliminar',function(){
-        var id = $(this).data('id');       
+        var id = $(this).data('id');
        $.ajax({
           url: "{{ route('admin.usuarios.eliminar') }}",
           method: 'POST',
@@ -92,7 +95,7 @@
             _token: "{{ csrf_token() }}",
             id: id
           },
-          success: function(response){                      
+          success: function(response){
             if(response == 'exito'){
               alert('Usuario eliminado correctamente');
               location.reload();
@@ -145,6 +148,6 @@
       }
       });
     });
- 
+
   </script>
 @endsection

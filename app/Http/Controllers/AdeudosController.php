@@ -73,7 +73,7 @@ class AdeudosController extends Controller
             ->select('alu_NumControl')
             ->first();
         if (!$alumno) {
-            return redirect()->route('adeudos.create') ->with('error','¡El número de control no existe en la base de datos de servicios escolares!');
+            return redirect()->route('adeudos.create') ->with('msg','error')->with('msj','¡El número de control no existe en la base de datos de servicios escolares!');
         }
         $adeudo = new Adeudos();
         $adeudo->control = strtoupper($request->control);

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -15,9 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
-        }
+
+        //Obtenemos todos los usuarios y sus roles asignados
+
         $usuarios = User::select('id','name','email','tipo')->get();
         return view('admin.usuarios.inicio')
         ->with('usuarios',$usuarios);
@@ -34,7 +36,8 @@ class UserController extends Controller
         if(Auth::User()->tipo != "administrador"){
             return redirect()->route('home');
         }
-        return View('admin.usuarios.crear');
+        $roles = Role::all();  // Obtener todos los roles
+        return view('admin.usuarios.crear', compact('roles'));  // Pasar los roles a la vista
 
     }
 
@@ -126,7 +129,7 @@ class UserController extends Controller
             return response()->json(['error'=>'El usuario no existe']);
         }else{
             $usuario = User::find($request->id);
-            $usuario->delete();           
+            $usuario->delete();
         }
         return response()->json(['exito']);
     }
@@ -138,28 +141,114 @@ class UserController extends Controller
             return redirect()->route('inicio');
         }
         if($request->get('password') == null){
-            return back()->with('error','Debe ingresar una contraseña');
+            return back()->with('msg','error')->with('msj','Debe ingresar una contraseña');
         }
         if($request->get('confirm') == null){
-            return back()->with('error','Debe confirmar la contraseña');
+            return back()->with('msg','error')->with('msj','Debe confirmar la contraseña');
         }
         if($request->get('name') == null){
-            return back()->with('error','Debe ingresar el nombre del usuario');
+            return back()->with('msg','error')->with('msj','Debe ingresar el nombre del usuario');
         }
         if($request->get('email') == null){
-            return back()->with('error','Es necesario ingresar el correo');
+            return back()->with('msg','error')->with('msj','Es necesario ingresar el correo');
         }
         if($request->get('password') != $request->get('confirm')){
-            return back()->with('error','Las contraseñas no coinciden');
+            return back()->with('msg','error')->with('msj','Las contraseñas no coinciden');
+        }
+        if($request->get('roles') == null){
+            return back()->with('msg','error')->with('msj','Debe seleccionar el(los) role(s) de usuario');
         }
         $correo_duplicado = User::where('email','=',$request->get('email'))->get()->count() > 0;
         if($correo_duplicado){
-            return back()->with('error','El correo '.$request->get('email').' ya ha sido ocupado');
+            return back()->with('msg','error')->with('msj','El correo '.$request->get('email').' ya ha sido ocupado');
         }
 
         $usuario = new User($request->all());
         $usuario->password = bcrypt($request->get('password'));
+        // Asignar los roles al usuario
+        if ($request->has('roles')) {
+            $usuario->syncRoles($request->roles);  // Asignar múltiples roles
+        }
         $usuario->save();
-        return redirect()->route('admin.usuarios.inicio')->with('success','El usuario fue creado con exito!!!');
+        return redirect()->route('admin.usuarios.inicio')->with('msg','success')->with('msj', 'Usuario creado exitosamente!');
+    }
+
+    public function asignarRoles($id){
+        $user = User::find($id);
+        if(true){
+            $roles_data = DB::table('roles')->leftjoin('model_has_roles as model',function($join) use($id){
+                $join->on('model.role_id','=','roles.id');
+                $join->where('model.model_type','=','App\user');
+                $join->where('model.model_id','=',$id);
+            })->leftjoin('users',function($join) use($id){
+                $join->on('users.id','=','model.model_id');
+                $join->where('users.id','=',$id);
+            })->select('users.name as user_name','roles.name','roles.id as id')->get();
+            return view('admin.usuarios.asignar_roles')
+            ->with('roles',$roles_data)
+            ->with('user',$user);
+        }else{
+            $permisos = Auth::User()->getPermissionsViaRoles();
+            $arreglo_roles = array();
+            foreach (Role::all() as $role) {
+                $temp_permisos_role = $role->permissions;
+                $valido = true;
+                for ($x=0; $x < count($temp_permisos_role); $x++) {
+                    $tiene_permiso = false;
+                    for ($y=0; $y < count($permisos); $y++) {
+                        if($temp_permisos_role[$x]->name == $permisos[$y]->name){
+                            $tiene_permiso = true;
+                            break;
+                        }
+                    }
+                    if(!$tiene_permiso){
+                        $valido = false;
+                        break;
+                    }
+                }
+                if($valido){
+                    array_push($arreglo_roles,$role->name);
+                }
+            }
+            $roles_data = DB::table('roles')->leftjoin('model_has_roles as model',function($join) use($id){
+                $join->on('model.role_id','=','roles.id');
+                $join->where('model.model_type','=','App\user');
+                $join->where('model.model_id','=',$id);
+            })->leftjoin('users',function($join) use($id){
+                $join->on('users.id','=','model.model_id');
+                $join->where('users.id','=',$id);
+            })->whereIn("roles.name",$arreglo_roles)->select('users.name as user_name','roles.name','roles.id as id')->get();
+            return view('admin.usuarios.asignar_roles')
+            ->with('roles',$roles_data)
+            ->with('user',$user)
+            ->with('area',$area);
+        }
+
+    }
+
+    public function guardarRoles(Request $request)
+    {
+        if (!$request->has('user_id')) {
+            return redirect()->route('admin.usuarios.inicio')->with('msg','error')->with("msj", "Usuario no encontrado");
+        }
+
+        $user = User::find($request->user_id);
+
+        if (!$user) {
+            return redirect()->route('admin.usuarios.inicio')->with('msg','error')->with("msj", "Usuario no encontrado");
+        }
+
+        if ($request->has('roles_id') && !empty($request->roles_id)) {
+            // Obtener los nombres de los roles basados en los IDs recibidos
+            $roles = Role::whereIn('id', $request->roles_id)->pluck('name')->toArray();
+
+            // Sincronizar los roles con el usuario
+            $user->syncRoles($roles);
+        } else {
+            // Si no se enviaron roles, eliminar los existentes
+            $user->syncRoles([]);
+        }
+
+        return redirect()->route('admin.usuarios.inicio')->with('msg','success')->with("msj", "Roles asignados correctamente");
     }
 }
