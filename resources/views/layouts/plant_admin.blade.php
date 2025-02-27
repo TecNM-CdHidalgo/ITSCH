@@ -113,6 +113,7 @@
                                                 <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
                                                 <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Analitics</a>
                                             @endif
+                                            <a href="{{ route('admin.roles.index') }}" class="dropdown-item">Roles</a>
                                             @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "biblioteca"|| Auth::User()->tipo == "planeacion")
                                                 <p style="color:orange;">&nbsp Biblioteca</p>
                                                 <hr>
@@ -245,6 +246,33 @@
                 var anio = new Date().getFullYear();
                 $("#anio").text(anio);
             });
+
+           // Codigo para mostrar los mensajes de alertas del sistema
+           {{-- Incluir el script de SweetAlert --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        @if(session('msg') && session('msj'))
+            <script>
+                Swal.fire({
+                    icon: '{{ session('msg') }}',  // 'error', 'warning', 'success'
+                    title: (function() {
+                        // Definir título según el tipo de mensaje
+                        switch ('{{ session('msg') }}') {
+                            case 'error':
+                                return '¡Error!';
+                            case 'warning':
+                                return '¡Advertencia!';
+                            case 'success':
+                                return '¡Éxito!';
+                            default:
+                                return 'Mensaje';
+                        }
+                    })(),
+                    text: '{{ session('msj') }}',  // El mensaje a mostrar
+                });
+            </script>
+        @endif
+
         </script>
         @yield('js')
     </body>

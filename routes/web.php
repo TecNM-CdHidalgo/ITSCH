@@ -184,7 +184,22 @@ Route::get('posgrado/maestrias',function(){return view('content.posgrado.maestri
 Route::group(['middleware' => 'auth'],function(){
 	Route::get('/home', 'HomeController@index')->name('home');
 
+    //Rutas de roles y permisos
+    Route::get('roles_permisos/index','RolesPermisosController@index')->name('admin.roles.index');
+    Route::get('roles_permisos/roles_crear','RolesPermisosController@crearRole')->name('admin.roles.roles_crear');
+    Route::post('roles_permisos/roles_guardar','RolesPermisosController@guardarRole')->name('admin.roles.roles_guardar');
+    Route::get('roles_permisos/{id}/asignar_permiso_vista','RolesPermisosController@rolesAsignarPermisosVista')->name('admin.roles.roles_asignar_permisos_vista');
+    Route::get('roles/{id}/ver_permisos','RolesPermisosController@roleVerPermisos')->name('admin.roles.role_ver_permisos');
+    Route::post('roles_permisos/role_asignar_permiso','RolesPermisosController@rolesAsignarPermiso')->name('admin.roles.roles_asignar_permisos');
+    Route::get('roles_permisos/{id}/editar','RolesPermisosController@editarRole')->name('admin.roles.role_editar');
+    Route::post('roles_permisos/{id}/actualizar','RolesPermisosController@actualizarRole')->name('admin.roles.role_actualizar');
+    Route::get('roles_permisos/{id}/eliminar','RolesPermisosController@eliminarRole')->name('admin.roles.role_eliminar');
+    Route::get('roles_permisos/{id}/usuarios','RolesPermisosController@usuarios')->name('admin.roles.usuarios');
+    Route::get('roles_permisos/{id}/usuarios/revocar_role','RolesPermisosController@usuariosRevocarRol')->name('admin.roles.usuarios_revocar');
+
 	//Rutas de usuarios
+    Route::get('usuarios/{id}/asignar_roles','UserController@asignarRoles')->name('admin.usuarios.asignar_roles');
+    Route::post('usuarios/guardar_roles','UserController@guardarRoles')->name('admin.usuarios.guardar_roles');
 	Route::get('users/index','UserController@index')->name('admin.usuarios.inicio');
 	Route::get('users/crear','UserController@create')->name('admin.usuarios.crear');
 	Route::get('users/editar/{id}','UserController@edit')->name('admin.usuarios.editar');
