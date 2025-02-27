@@ -48,7 +48,15 @@ class RolesPermisosSeeder extends Seeder
             'crear_proyectos',
             'editar_proyectos',
             'eliminar_proyectos',
-            
+            'ver_transparencia',
+            'crear_transparencia',
+            'editar_transparencia',
+            'eliminar_transparencia',
+            'ver_carreras',
+            'crear_carreras',
+            'editar_carreras',
+            'eliminar_carreras',
+
         ];
 
         foreach ($permisos as $permiso) {

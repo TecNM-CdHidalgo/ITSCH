@@ -29,9 +29,11 @@ class CarrerasController extends Controller
     //Mostramos una carrera inicial
     public function index()
     {
-        //Verificamos que el usuario tenga permisos
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Seleccionamos la carrera que este en la primera posición
@@ -110,9 +112,12 @@ class CarrerasController extends Controller
     //Mostramos carrera especifica
     public function show($id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
-        }
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }       
 
         $programas=DB::table('programas')->select('id','nombre')->get();
         $pro_act=Programa::find($id);
@@ -182,9 +187,12 @@ class CarrerasController extends Controller
 
     //Metodo que inicializa la BD con la primera carrera y su especialidad
     public function inicializar(Request $request)
-    {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+    {      
+       // Verificamos que el usuario tenga al menos uno de los permisos
+       if (!auth()->user()->hasAnyPermission(['VIP'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         //Iniciamos la transacción
         DB::beginTransaction();
@@ -286,9 +294,13 @@ class CarrerasController extends Controller
     /*Metodo para agregar y editar los programas educativos de la institución */
     public function editCarrera()
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
+
         $programas=Programa::all();
         return view('admin.contenido.carreras.editcarreras')->with('programas',$programas);
     }
@@ -296,8 +308,11 @@ class CarrerasController extends Controller
     /*Metodo para agregar los programas educativos de la institución */
     public function storeCarrera(Request $request)
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $programa = new Programa;
@@ -310,8 +325,11 @@ class CarrerasController extends Controller
     /*Metodo para modificar solo el nombre del programa educativo de la institución */
     public function updateCarrera(Request $request, $id)
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $programa = Programa::find($id);
@@ -324,8 +342,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar los programas educativos de la institución */
     public function destroyCarrera($id)
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $programa = Programa::find($id);
@@ -336,8 +357,11 @@ class CarrerasController extends Controller
     //Metodo para agregar contenido a los programas educativos
     public function updatecarreracom(Request $request, $id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $carrera = Programa::find($id_pro);
@@ -439,8 +463,11 @@ class CarrerasController extends Controller
     /*Metodo para agregar los programas educativos de la institución */
     public function storeEspecialidad(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos        
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -495,8 +522,11 @@ class CarrerasController extends Controller
     /*Metodo para modificar especialidades */
     public function updateEspecialidad(Request $request,$id_esp)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -548,8 +578,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar especialidades */
     public function destroyEspecialidad(Request $request, $id_esp)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -583,8 +616,11 @@ class CarrerasController extends Controller
     /*Edicion de especialidades*/
     public function editObjetivos($id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $programa=Programa::find($id);
@@ -597,8 +633,11 @@ class CarrerasController extends Controller
     /*Metodo para agregar los programas educativos de la institución */
     public function storeObjetivos(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $objetivo = new Objetivo();
@@ -613,8 +652,11 @@ class CarrerasController extends Controller
     /*Metodo para modificar objetivos */
     public function updateObjetivos(Request $request,$id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $objetivo = Objetivo::find($id);
@@ -629,8 +671,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar objetivos */
     public function destroyObjetivos(Request $request, $id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $objetivo = Objetivo::where('id',$id)->where('id_programa',$request->id_programa);
@@ -644,8 +689,11 @@ class CarrerasController extends Controller
    /*Edicion de atributos*/
    public function editAtributos($id_pro)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
        $programa=Programa::find($id_pro);
@@ -665,8 +713,11 @@ class CarrerasController extends Controller
    /*Metodo para agregar los programas educativos de la institución */
    public function storeAtributos(Request $request)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $atributo = new Atributo();
         $atributo->numero = $request->numero;
@@ -679,8 +730,11 @@ class CarrerasController extends Controller
    /*Metodo para modificar atributos */
    public function updateAtributos(Request $request,$id)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $atributo = Atributo::find($id);
         $atributo->numero = $request->numAtr;
@@ -693,8 +747,11 @@ class CarrerasController extends Controller
    /*Metodo para eliminar atributos */
    public function destroyAtributos(Request $request, $id)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $atributo = Atributo::where('id',$id)->where('id_programa',$request->id_programa);
         $atributo->delete();
@@ -707,8 +764,11 @@ class CarrerasController extends Controller
    /*Metodo para agregar los criterios */
    public function storeCriterios(Request $request)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $atributo = new Criterio();
         $atributo->numero = $request->numero;
@@ -721,8 +781,11 @@ class CarrerasController extends Controller
     /*Metodo para modificar criterios */
     public function updateCriterios(Request $request,$id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $criterio = Criterio::find($id);
         $criterio->numero = $request->numCri;
@@ -734,8 +797,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar criterios */
     public function destroyCriterios(Request $request, $id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $criterio = Criterio::find($id);
         $criterio->delete();
@@ -747,8 +813,11 @@ class CarrerasController extends Controller
    /*Edicion estructura académica*/
    public function editEstructura($id_pro)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $programa=Programa::find($id_pro);
@@ -767,8 +836,11 @@ class CarrerasController extends Controller
    /*Metodo para agregar estructura académica*/
    public function storeEstructura(Request $request)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         //Guarda todos los campos en una sola linea
         $personal = new Personal($request->input());
@@ -779,8 +851,11 @@ class CarrerasController extends Controller
    /*Metodo para modificar profesores */
    public function updateEstructura(Request $request,$id)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $personal = Personal::where ('id', $id)->first();
         $personal->fill($request->all());
@@ -791,8 +866,11 @@ class CarrerasController extends Controller
    /*Metodo para eliminar Profesores */
    public function destroyEstructura(Request $request, $id)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $personal = Personal::where('id',$id)->where('id_programa',$request->id_programa);
         $personal->delete();
@@ -805,8 +883,11 @@ class CarrerasController extends Controller
    //Metodo para llamar la vista de ddetalle y editar formación y productos
    public function editDetalles($id_pro,$id_per)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $programa=Programa::find($id_pro);
         $formacion=Formacion::where('id_personal',$id_per)->get();
@@ -824,8 +905,11 @@ class CarrerasController extends Controller
    //Funcion para guardar la foto del perfil
    public function act_foto(Request $request, $id_pro)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -882,8 +966,11 @@ class CarrerasController extends Controller
    /*Metodo para agregar la formación academica de los profesores */
    public function storeDetallesFor(Request $request)
    {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $formacion = new Formacion($request->input());
@@ -894,8 +981,11 @@ class CarrerasController extends Controller
     /*Metodo para agregar la producción academica de los profesores */
     public function storeDetallesPro(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $produccion = new Producto($request->input());
@@ -906,8 +996,11 @@ class CarrerasController extends Controller
     /*Metodo para modificar Formación académica */
     public function updateDetallesFormacion(Request $request,$id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $formacion = Formacion::where ('id', $id)->first();
@@ -920,8 +1013,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar formación */
     public function destroyDetallesFormacion(Request $request, $id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $formacion = Formacion::find($id);
@@ -932,8 +1028,11 @@ class CarrerasController extends Controller
      /*Metodo para modificar Producción académica */
      public function updateDetallesProduccion(Request $request,$id)
      {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $produccion = Producto::where ('id', $id)->first();
         $produccion->fill($request->all());
@@ -945,8 +1044,11 @@ class CarrerasController extends Controller
      /*Metodo para eliminar Producción */
      public function destroyDetallesProduccion(Request $request, $id)
      {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $produccion = Producto::find($id);
         $produccion->delete();
@@ -967,6 +1069,13 @@ class CarrerasController extends Controller
     //Metodo para mostrar los mensajes que se han escrito al programa
     public function showContacto($id)
     {
+        
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $msgs=Contactos::where('id_programa',$id)
         ->where('status',0)
         ->get();
@@ -979,6 +1088,12 @@ class CarrerasController extends Controller
      //Metodo para mostrar los mensajes que se han escrito al programa
      public function showContactoLeido($id)
      {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
          $msgs=Contactos::where('id_programa',$id)
          ->where('status',1)
          ->get();
@@ -991,6 +1106,12 @@ class CarrerasController extends Controller
     //Función para marcar mensajes leidos
     public function updateContacto(Request $request,$id_pro)
     {
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $newMsg=Contactos::find($request->id);
         $newMsg->status=1;
         $newMsg->save();
@@ -1000,9 +1121,12 @@ class CarrerasController extends Controller
     //Función para borrar mensajes leidos
     public function destroyContacto(Request $request,$id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
-        }
+       //Verificamos que el usuario tenga al menos uno de los permisos
+       if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+           return redirect()->route('home')
+           ->with('msg', 'error')
+           ->with('msj', 'No tienes permiso para ver esta sección');
+       }
 
         $delMsg=Contactos::find($request->id);
         $delMsg->delete();
@@ -1014,8 +1138,11 @@ class CarrerasController extends Controller
     //Metodo para mostrar y editar el plan de estudios del programa
     public function editPlanEstudios(Request $request,$id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $programa=Programa::where('id',$id_pro)->get();
@@ -1130,8 +1257,11 @@ class CarrerasController extends Controller
     //Metodo para gusrdar las materias de tronco común
     public function storePlanEstudios(Request $request, $id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -1183,8 +1313,11 @@ class CarrerasController extends Controller
     //Metodo para modificar las materias de tronco comun
     public function updatePlanEstudios(Request $request, $id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -1252,8 +1385,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar Materias de tronco común */
     public function destroyPlanEstudios(Request $request, $id_asig)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -1291,9 +1427,12 @@ class CarrerasController extends Controller
     //Metodo para gusrdar las materias de la especialidad
     public function storeMatEsp(Request $request, $id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
-        }
+       //Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'crear_carreras'])) {
+              return redirect()->route('home')
+              ->with('msg', 'error')
+              ->with('msj', 'No tienes permiso para ver esta sección');
+            }
 
         //Iniciamos la transacción
         DB::beginTransaction();
@@ -1343,8 +1482,11 @@ class CarrerasController extends Controller
     //Metodo para modificar las materias de especialidad
     public function updateMatEspecialidad(Request $request, $id_pro)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -1413,8 +1555,11 @@ class CarrerasController extends Controller
     /*Metodo para eliminar Materias de especialidad */
     public function destroyMatEspecialidad(Request $request, $id_asig)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_carreras'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción

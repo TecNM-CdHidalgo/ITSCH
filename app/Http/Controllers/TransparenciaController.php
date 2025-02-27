@@ -14,6 +14,12 @@ class TransparenciaController extends Controller
     //Función que consulta el primer periodo para mostrar en la vista publica
     public function index()
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $periodos=Periodo::all();
         $u_reg=Periodo::all()->last();
         $per_sel=Periodo::select('nombre','id')->first()->get();
@@ -28,6 +34,12 @@ class TransparenciaController extends Controller
     //Función para consultar periodos especificos
     public function perConsultar(Request $request)
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $periodos=Periodo::all();
         $arch=Transparencia::where('id_periodo',$request->periodo)->get();
         $u_reg=Periodo::all()->last();
@@ -43,6 +55,12 @@ class TransparenciaController extends Controller
     //Funcion para consultar periodos
     public function periodos()
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $per=Periodo::all();
         return view('admin.contenido.transparencia.periodos')
         ->with('per',$per);
@@ -55,8 +73,11 @@ class TransparenciaController extends Controller
      */
     public function perCreate(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         DB::beginTransaction();
@@ -81,8 +102,11 @@ class TransparenciaController extends Controller
     //Funcion para llamar a la vista que permite agregar archivos a un periodo
     public function archPerAgregar($id_per)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $periodo=Periodo::find($id_per);
@@ -100,8 +124,11 @@ class TransparenciaController extends Controller
      */
     public function store(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $periodo=Periodo::find($request->id);
@@ -158,8 +185,11 @@ class TransparenciaController extends Controller
      */
     public function archDestroy($id_arch)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Iniciamos la transacción
@@ -190,8 +220,11 @@ class TransparenciaController extends Controller
     //Función para modificar el periodo
     public function perUpdate(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         DB::beginTransaction();
@@ -217,8 +250,11 @@ class TransparenciaController extends Controller
     //Función para eliminar el periodo
     public function perDestroy(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "planeacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         DB::beginTransaction();
