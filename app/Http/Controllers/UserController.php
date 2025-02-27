@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +18,14 @@ class UserController extends Controller
      */
     public function index()
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_usuarios'])) {
+        return redirect()->route('home')
+        ->with('msg', 'error')
+        ->with('msj', 'No tienes permiso para ver esta sección');
+        }
 
+           
         //Obtenemos todos los usuarios y sus roles asignados
 
         $usuarios = User::select('id','name','email','tipo')->get();
@@ -33,8 +41,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_usuarios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $roles = Role::all();  // Obtener todos los roles
         return view('admin.usuarios.crear', compact('roles'));  // Pasar los roles a la vista
@@ -49,9 +60,13 @@ class UserController extends Controller
      */
     public function edit(Request $request,$id)
     {
-         if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('inicio');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_usuarios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
+
         $usuario_existe = User::where('id','=',$id)->get()->count() == 1;
         if(!$usuario_existe){
             return back()->with('error','El usuario no existe');
@@ -70,9 +85,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_usuarios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
+    
         $usuario_existe = User::where('id','=',$id)->get()->count() == 1;
         if(!$usuario_existe){
             return redirect()->route('admin.usuario.inicio')->with('error','El usuario no existe');
@@ -121,9 +140,13 @@ class UserController extends Controller
      */
     public function destroy(Request $request)
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_usuarios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
+
         $usuario_existe = User::where('id','=',$request->id)->get()->count() == 1;
         if($usuario_existe == null){
             return response()->json(['error'=>'El usuario no existe']);
@@ -137,9 +160,13 @@ class UserController extends Controller
 
     public function save(Request $request)
     {
-        if(Auth::User()->tipo != "administrador"){
-            return redirect()->route('inicio');
+       // Verificamos que el usuario tenga al menos uno de los permisos
+       if (!auth()->user()->hasAnyPermission(['VIP', 'crear_usuarios'])) {
+        return redirect()->route('home')
+        ->with('msg', 'error')
+        ->with('msj', 'No tienes permiso para ver esta sección');
         }
+
         if($request->get('password') == null){
             return back()->with('msg','error')->with('msj','Debe ingresar una contraseña');
         }
@@ -174,8 +201,15 @@ class UserController extends Controller
     }
 
     public function asignarRoles($id){
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'asignar_roles'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
         $user = User::find($id);
-        if(true){
+        if(true){//Falta verificar esta función**********************************
             $roles_data = DB::table('roles')->leftjoin('model_has_roles as model',function($join) use($id){
                 $join->on('model.role_id','=','roles.id');
                 $join->where('model.model_type','=','App\user');
@@ -228,6 +262,13 @@ class UserController extends Controller
 
     public function guardarRoles(Request $request)
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'asignar_roles'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+        
         if (!$request->has('user_id')) {
             return redirect()->route('admin.usuarios.inicio')->with('msg','error')->with("msj", "Usuario no encontrado");
         }
