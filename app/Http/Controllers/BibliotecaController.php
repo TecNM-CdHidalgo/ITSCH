@@ -23,7 +23,7 @@ class BibliotecaController extends Controller
             $servicios = DB::table('registro_biblio')
                 ->select($selectColumns);
 
-                return $servicios;
+                return response()->json($servicios, HttpCode::SUCCESS);
 
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
