@@ -19,14 +19,17 @@ class BibliotecaController extends Controller
             $dtAttr = new DataTableAttr($request, $selectColumns);
 
             //Obtenemos los registros de la base de datos de la biblioteca
-            $servicios=Registro::select($selectColumns)->toBase();
 
-            return $servicios;
+            $servicios = DB::table('registro_biblio')
+                ->select($selectColumns);
+
+                return $servicios;
 
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
             //Llamamos a la función completar para agregar los datos de los alumnos
             $obj=$this->completar($servicios);
+
             $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
             return response()->json($paginatorResponse, HttpCode::SUCCESS);
         } catch (\Exception $e) {
