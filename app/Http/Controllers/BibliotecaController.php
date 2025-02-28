@@ -21,13 +21,10 @@ class BibliotecaController extends Controller
             //Obtenemos los registros de la base de datos de la biblioteca
             $servicios=Registro::select($selectColumns)->get();
 
-
-                return response()->json($servicios, HttpCode::SUCCESS);
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
             //Llamamos a la función completar para agregar los datos de los alumnos
             $obj=$this->completar($servicios);
-            return response()->json($obj, HttpCode::SUCCESS);
             $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
             return response()->json($paginatorResponse, HttpCode::SUCCESS);
         } catch (\Exception $e) {
@@ -43,7 +40,7 @@ class BibliotecaController extends Controller
             return trim($control);
         });
 
-        return $controles;
+
         $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
             ->table('alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
