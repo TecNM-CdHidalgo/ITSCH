@@ -18,8 +18,11 @@ class BibliotecaController extends Controller
             $selectColumns = ['servicio','car_Clave','control','sexo'];
             $dtAttr = new DataTableAttr($request, $selectColumns);
 
-            $servicios = DB::table('registro_biblio')
-                ->select($selectColumns);
+            //Obtenemos los registros de la base de datos de la biblioteca
+            $servicios=Registro::select($selectColumns);
+
+           // $servicios = DB::table('registro_biblio')
+          //      ->select($selectColumns);
                 return response()->json($servicios, HttpCode::SUCCESS);
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
