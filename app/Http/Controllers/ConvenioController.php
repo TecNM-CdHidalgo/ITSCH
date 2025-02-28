@@ -15,8 +15,11 @@ class ConvenioController extends Controller
 {
     public function index()
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_convenios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $areas=Area::all();
@@ -53,9 +56,13 @@ class ConvenioController extends Controller
 
     public function save(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
+        
         //Iniciamos la transacción
         DB::beginTransaction();
         try
@@ -129,8 +136,11 @@ class ConvenioController extends Controller
 
     public function destroy(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_convenios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         DB::beginTransaction();
@@ -164,8 +174,11 @@ class ConvenioController extends Controller
 
     public function saveArea(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Funcion para guardar las nuevas áreas
@@ -179,8 +192,11 @@ class ConvenioController extends Controller
 
     public function areasUpdate(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Función que modifica las áreas
@@ -193,8 +209,11 @@ class ConvenioController extends Controller
 
     public function areasDestroy(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         //Función para eliminar las áreas

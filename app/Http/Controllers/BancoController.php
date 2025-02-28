@@ -17,8 +17,11 @@ class BancoController extends Controller
      */
     public function index()
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
         $banco = Banco::orderBy('created_at','desc')->get();
         return View('admin.contenido.banco_pro.index')->with('banco',$banco);
@@ -31,14 +34,23 @@ class BancoController extends Controller
      */
     public function create()
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $convenios=Convenio::all(); //Obtenemos todos los convenios
         return view('admin.contenido.banco_pro.crear')->with('convenios',$convenios);
     }
 
     public function store(Request $request)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         $Banco = new Banco;
@@ -68,6 +80,7 @@ class BancoController extends Controller
 
     public function show($op)
     {
+
        //Funcion que visualiza el banco de proyectos en la pagina principal
 
        //Si la opción es 1 consultamos solo los abiertos
@@ -105,9 +118,13 @@ class BancoController extends Controller
      */
     public function edit($id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
+
         $convenios=Convenio::all();
         $banco = Banco::where('id',$id)->first();
         return View('admin.contenido.banco_pro.editar')->with('banco',$banco)->with('convenios',$convenios);
@@ -122,6 +139,13 @@ class BancoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'editar_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
         $Banco = Banco::find($id);
         $Banco->carrera = $request->carrera;
         $Banco->proyecto = $request->proyecto;
@@ -154,8 +178,11 @@ class BancoController extends Controller
      */
     public function destroy($id)
     {
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica" && Auth::User()->tipo != "vinculacion"){
-            return redirect()->route('home');
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
         }
 
         Banco::where('id', $id)->delete();
@@ -166,6 +193,13 @@ class BancoController extends Controller
     //Función para ver mas detalles de cada proyecto
     public function ver($id)
     {
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
         $proyecto = Banco::where('id',$id)->first();
         $colaboradores=Colaborador::where('id_banco',$id)->get();
         $convenio=Convenio::where('id',$proyecto->id_convenio)->first();
@@ -184,6 +218,13 @@ class BancoController extends Controller
     //Función para agregar colaboradores al proyecto
     public function createColaboradores($id)
     {
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
         $proyecto = Banco::select('id','proyecto')->where('id',$id)->first();
         return View('admin.contenido.banco_pro.colaboradores')->with('proyecto',$proyecto);
     }
@@ -191,6 +232,13 @@ class BancoController extends Controller
     //Función para guardar los colaboradores
     public function storeColaboradores($id)
     {
+        //Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_proyectos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
         //Consultamos el numero de bacantes del bacho de proyectos para saber cuantos colaboradores se pueden agregar
         $banco = Banco::select('vacantes')->where('id',$id)->first();
         //Consultamos el numero de colaboradores que ya tiene el proyecto

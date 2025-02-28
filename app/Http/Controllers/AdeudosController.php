@@ -9,9 +9,17 @@ use Carbon\Carbon;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class AdeudosController extends Controller
-{
+{  
+
     public function index()
     {
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
         // Consultar adeudos pendientes
         $adeudos = Adeudos::where('status', 'Pendiente')->get();
 
@@ -60,6 +68,12 @@ class AdeudosController extends Controller
 
     public function create()
     {
+         // Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'crear_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         //Consultamos las áreas
         $areas = Area::all();
         return view('admin.institucion.adeudos.create', compact('areas'));
@@ -67,6 +81,12 @@ class AdeudosController extends Controller
 
     public function store(Request $request)
     {
+         // Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'crear_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         //Verificamos que el numero de control exista en servicios escolares
         $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
             ->where('alu_NumControl', $request->control)
@@ -86,6 +106,12 @@ class AdeudosController extends Controller
 
     public function edit(Request $request)
     {
+         // Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'editar_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
        //Consultamos el adeudo y los datos del alumno
         $adeudo = Adeudos::find($request->id);
         $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
@@ -97,6 +123,12 @@ class AdeudosController extends Controller
 
     public function update(Request $request)
     {
+         // Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'editar_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $adeudo = Adeudos::find($request->id);
         $adeudo->control = $request->control;
         $adeudo->status = $request->status;
@@ -107,6 +139,12 @@ class AdeudosController extends Controller
 
     public function destroy(Request $request)
     {
+         // Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         $adeudo = Adeudos::find($request->id);
         $adeudo->delete();
         return redirect()->route('adeudos.index') ->with('success','¡El adeudo se eliminó correctamente!');
@@ -114,6 +152,12 @@ class AdeudosController extends Controller
 
     public function indexEliminar()
     {
+         // Verificamos que el usuario tenga al menos uno de los permisos
+         if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_adeudos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         // Consultamos todos los adeudos pagados, datos del alumno y carrera
         $adeudos = Adeudos::where('status', 'pagado')->get();
         $controles = $adeudos->pluck('control')->toArray();
@@ -141,6 +185,13 @@ class AdeudosController extends Controller
 
     public function destroyAll(Request $request)
     {
+       
+        // Verificamos que el usuario tenga al menos uno de los permisos
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_adeudos_todos'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
         //Eliminamos los registros que fueron pagados
         Adeudos::where('status', 'pagado')->delete();
         return redirect()->route('adeudos.index') ->with('success','¡Los adeudos pagados se eliminaron correctamente!');

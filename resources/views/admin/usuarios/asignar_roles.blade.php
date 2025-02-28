@@ -7,7 +7,7 @@
 @section('contenido')
 	@if (Auth::User()->hasAnyPermission(['VIP','CREAR_ROLES','VER_ROLES']))
 	<div style="text-align:right">
-		<a title="Administrar roles" href="{{ route('roles.index') }}" class="btn btn-info" style="margin: 10px;" ><i class="fas fa-user-cog"></i></a>
+		<a title="Administrar roles" href="{{ route('admin.roles.index') }}" class="btn btn-info" style="margin: 10px;" ><i class="fas fa-user-cog"></i></a>
 	</div>
 
 	@endif
