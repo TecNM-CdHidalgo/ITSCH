@@ -21,7 +21,7 @@ class BibliotecaController extends Controller
             //Obtenemos los registros de la base de datos de la biblioteca
 
             $servicios = DB::table('registro_biblio')
-                ->select($selectColumns);
+                ->select($selectColumns)->get();
 
                 return response()->json($servicios, HttpCode::SUCCESS);
 
