@@ -36,7 +36,10 @@ class BibliotecaController extends Controller
     //Funcion para completar los datos de los alumnos
     public function completar($servicios)
     {
-        $controles = $servicios->pluck('control');
+        //Obtener numeros de control y hacer un trim para quitar espacios en blanco
+        $controles = $servicios->pluck('control')->map(function ($control) {
+            return trim($control);
+        });
 
 
         $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
@@ -48,7 +51,7 @@ class BibliotecaController extends Controller
                 'carreras.car_Nombre as carrera'
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
-            ->tosql();
+            ->get();
             return $resultado;
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
