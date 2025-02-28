@@ -48,7 +48,7 @@ class BibliotecaController extends Controller
                 'carreras.car_Nombre as carrera'
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
-            ->get();
+            ->tosql();
             return $resultado;
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
