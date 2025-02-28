@@ -325,7 +325,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/biblioteca/estadisticos',function(){return view('admin.biblioteca.estadisticos');})->name('biblioteca.estadisticos')->middleware('permission:VIP|ver_biblioteca');
     Route::get('contenido/biblioteca/periodo',function(){return view('admin.biblioteca.periodo');})->name('biblioteca.periodo')->middleware('permission:VIP|ver_biblioteca');
     Route::get('contenido/biblioteca/periodo/find',[BibliotecaController::class,'periodoFind'])->name('biblioteca.periodo.find')->middleware('permission:VIP|ver_biblioteca');
-    Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax')->middleware('permission:VIP|ver_biblioteca');
+    Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax');
     Route::get('contenido/biblioteca/servicios/consulta',[BibliotecaController::class,'serviciosFind'])->name('biblioteca.servicios.find')->middleware('permission:VIP|ver_biblioteca');
     Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios')->middleware('permission:VIP|crear_biblioteca');
 

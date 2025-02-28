@@ -24,8 +24,8 @@ class BibliotecaController extends Controller
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
             //Llamamos a la función completar para agregar los datos de los alumnos
-            $this->completar($servicios);
-
+            $obj=$this->completar($servicios);
+            return response()->json($obj, HttpCode::SUCCESS);
             $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
             return response()->json($paginatorResponse, HttpCode::SUCCESS);
         } catch (\Exception $e) {
@@ -38,6 +38,7 @@ class BibliotecaController extends Controller
     {
         $controles = $servicios->pluck('control');
 
+
         $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
             ->table('alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
@@ -48,7 +49,7 @@ class BibliotecaController extends Controller
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
             ->get();
-
+            return $resultado;
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
 

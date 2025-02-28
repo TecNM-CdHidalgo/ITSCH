@@ -68,6 +68,10 @@
             ajax: {
                 url: "{{ route('biblioteca.serviciosAjax') }}",
                 type: "get",
+                dataSrc: function (json) {
+                    console.log("Respuesta AJAX:", json);
+                    return json.data; // Asegúrate de devolver los datos para que se muestren en la tabla
+                }
             },
             columns: [
                 {data: 'servicio', orderable: true, searchable: true},
