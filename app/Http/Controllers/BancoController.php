@@ -9,7 +9,7 @@ use App\Models\Colaborador;
 use Illuminate\Support\Facades\Auth;
 
 class BancoController extends Controller
-{   
+{
     /**
      * Display a listing of the resource.
      *
@@ -80,12 +80,7 @@ class BancoController extends Controller
 
     public function show($op)
     {
-        //Verificamos que el usuario tenga al menos uno de los permisos
-        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_proyectos'])) {
-            return redirect()->route('home')
-            ->with('msg', 'error')
-            ->with('msj', 'No tienes permiso para ver esta sección');
-        }
+
        //Funcion que visualiza el banco de proyectos en la pagina principal
 
        //Si la opción es 1 consultamos solo los abiertos
@@ -243,7 +238,7 @@ class BancoController extends Controller
             ->with('msg', 'error')
             ->with('msj', 'No tienes permiso para ver esta sección');
         }
-        
+
         //Consultamos el numero de bacantes del bacho de proyectos para saber cuantos colaboradores se pueden agregar
         $banco = Banco::select('vacantes')->where('id',$id)->first();
         //Consultamos el numero de colaboradores que ya tiene el proyecto

@@ -19,20 +19,20 @@ class RolesPermisosSeeder extends Seeder
         if($user==null){
             $user = new User();
             $user->name = "Administrador";
-            $user->email = "sistemas@cdhidalgo.tecnm.mx";       
+            $user->email = "sistemas@cdhidalgo.tecnm.mx";
             $user->password = bcrypt("12345678");
             $user->save();
-        }       
+        }
 
         // Crear permisos para los usuarios
-        $permisos = ['VIP', 
-            'crear_usuario', 
-            'editar_usuarios', 
-            'eliminar_usuarios', 
-            'ver_usuarios', 
-            'crear_rol', 
-            'editar_rol', 
-            'eliminar_rol', 
+        $permisos = ['VIP',
+            'crear_usuario',
+            'editar_usuarios',
+            'eliminar_usuarios',
+            'ver_usuarios',
+            'crear_rol',
+            'editar_rol',
+            'eliminar_rol',
             'ver_roles',
             'asignar_roles',
             'ver_adeudos',
@@ -56,7 +56,20 @@ class RolesPermisosSeeder extends Seeder
             'crear_carreras',
             'editar_carreras',
             'eliminar_carreras',
-
+            'ver_biblioteca',
+            'crear_biblioteca',
+            'ver_pases',
+            'crear_pases',
+            'editar_pases',
+            'eliminar_pases',
+            'ver_noticias',
+            'crear_noticias',
+            'editar_noticias',
+            'eliminar_noticias',
+            'ver_buzon',
+            'editar_buzon',
+            'eliminar_buzon',
+            'ver_permisos'
         ];
 
         foreach ($permisos as $permiso) {
@@ -69,6 +82,13 @@ class RolesPermisosSeeder extends Seeder
 
         // Asignar el rol de admin al usuario administrador
         $user = User::find(1);
-        $user->assignRole('admin');       
+        $user->assignRole('admin');
+
+        // Creamos el rol jefe de carrera y le agregamos los permisos
+        $role = Role::firstOrCreate(['name' => 'jefe_carrera']);
+        $role->givePermissionTo('ver_carreras');
+        $role->givePermissionTo('crear_carreras');
+        $role->givePermissionTo('editar_carreras');
+        $role->givePermissionTo('eliminar_carreras');
     }
 }

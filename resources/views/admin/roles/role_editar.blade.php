@@ -1,5 +1,8 @@
 @extends('layouts.plant_admin')
 
+@section('titulo','Editar rol')
+@section('ruta', 'Roles|Editar rol')
+
 @section('contenido')
 	<form action="{{ route('admin.roles.role_actualizar',$role->id) }}" method="post">
 		@csrf

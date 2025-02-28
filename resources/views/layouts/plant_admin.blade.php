@@ -75,59 +75,58 @@
                                 <li class="nav-item">
                                     <a href="{{ route('home') }}#home-section" class="nav-link">Inicio</a>
                                 </li>
-                                @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "editor"|| Auth::User()->tipo == "vinculacion")
+
+                                @canany(['VIP', 'ver_noticias'])
                                     <li class="nav-item">
                                         <a href="{{route('admin.noticias.inicio')}}" class="nav-link"><p id="section-articulos" class="no-margins">Noticias</p></a>
                                     </li>
-                                @endif
+                                @endcanany
+
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="false">Institución</a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <a class="dropdown-item" href="{{ route('organigrama.index') }}">Organigrama</a>
-                                        <a class="dropdown-item" href="{{ route('pases.index') }}">Pases de salida</a>
-                                        <a class="dropdown-item" href="#">Permisos</a>
-                                        <a class="dropdown-item" href="{{ route('adeudos.index') }}">Adeudos</a>
+                                        @canany(['VIP'])
+                                            <a class="dropdown-item" href="{{ route('pases.index') }}">Pases de salida</a>
+                                            <a class="dropdown-item" href="#">Permisos</a>
+                                        @endcanany
+                                        @canany(['VIP', 'ver_adeudos'])
+                                            <a class="dropdown-item" href="{{ route('adeudos.index') }}">Adeudos</a>
+                                        @endcanany
+                                        @canany(['VIP', 'ver_proyectos'])
+                                            <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
+                                        @endcanany
+                                        @canany(['VIP', 'ver_convenios'])
+                                            <a class="dropdown-item" href="{{ route('convenios.inicio') }}">Convenios</a>
+                                        @endcanany
+                                        @canany(['VIP', 'ver_carreras'])
+                                            <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
+                                        @endcanany
+                                        @canany(['VIP', 'ver_biblioteca'])
+                                            <a class="dropdown-item" href="{{ route('biblioteca.estadisticos') }}">Estadisticos biblioteca</a>
+                                        @endcanany
                                     </div>
                                 </li>
-                                @if (Auth::User()->tipo != "editor")
+
+                                @canany(['VIP', 'ver_transparencia', 'ver_usuarios'])
                                     <li class="nav-item dropdown">
                                         <a  href="#" class="nav-link dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown"  aria-expanded="false">Administración</a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica"|| Auth::User()->tipo == "vinculacion")
-                                                <p style="color:orange;">&nbsp Vinculación</p>
-                                                <hr>
-                                                <a class="dropdown-item" href="{{route('admin.contenido.banco.index')}}">Banco de proyectos</a>
-                                                <a class="dropdown-item" href="{{ route('convenios.inicio') }}">Convenios</a>
-                                            @endif
-                                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica")
-                                                <p style="color:orange;">&nbsp Académica</p>
-                                                <hr>
-                                                <a class="dropdown-item" href="{{ route('carreras.index') }}">Contenido carreras</a>
-                                            @endif
-                                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "planeacion")
-                                                <p style="color:orange;">&nbsp Administración</p>
-                                                <hr>
+                                            @canany(['VIP', 'ver_transparencia'])
                                                 <a class="dropdown-item" href="{{ route('periodos.inicio') }}">Transparencia</a>
-                                            @endif
-                                            @if (Auth::User()->tipo == "administrador")
-                                                <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
+                                            @endcanany
+                                            @canany(['VIP', 'ver_usuarios'])
                                                 <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Analitics</a>
-                                            @endif
-                                            <a href="{{ route('admin.roles.index') }}" class="dropdown-item">Roles</a>
-                                            @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "biblioteca"|| Auth::User()->tipo == "planeacion")
-                                                <p style="color:orange;">&nbsp Biblioteca</p>
-                                                <hr>
-                                                <a class="dropdown-item" href="{{ route('biblioteca.estadisticos') }}">Estadisticos</a>
-                                            @endif
+                                                <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
+                                                <a href="{{ route('admin.roles.index') }}" class="dropdown-item">Roles</a>
+                                            @endcanany
                                         </div>
                                     </li>
-                                    @if (Auth::User()->tipo == "administrador" || Auth::User()->tipo == "academica" || Auth::User()->tipo == "planeacion")
+                                    @canany(['VIP', 'ver_buzon'])
                                         <li>
                                             <a href="{{ route('buzon.show') }}" class="nav-link" title="Buzón"><i class='far fa-envelope-open'></i>&nbsp Buzón</a>
                                         </li>
-                                    @endif
-
-                                @endif
+                                    @endcanany
+                                @endcanany
                                 <li>
                                     <a class="nav-link">| Usuario:</a>
                                 </li>

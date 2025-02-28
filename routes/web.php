@@ -9,14 +9,19 @@ use App\Http\Controllers\DenunciasController;
 use App\Http\Controllers\BancoController;
 use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\PasesController;
-use App\Http\Controllers\OrganigramaController;
 use App\Http\Controllers\AdeudosController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
 
 //Rutas publicas**************************************************************************
 //Rutas para descarga de archivos de noticias
 Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
+
+ // Muestra el formulario de login
+ Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+ // Procesa el formulario de login
+ Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
 
 //Ruta del examen de nuevo ingreso
 Route::get('alumnos/exani',function(){return view('content.alumnos.exani');})->name('alumnos.exani');
@@ -129,8 +134,7 @@ Route::get('calidad/resultados_evaluacion',function(){return view('content.calid
 Route::get('/','IndexController@index')->name('inicio');
 Route::get('Noticias/Ver/{id}','IndexController@ver')->name('ver');
 
-//Rutas de loguin
-Auth::routes();
+
 
 //Ruta para imagenes del carousel
 Route::get('/carousel/{image_name}', function($image_name) {
@@ -185,36 +189,38 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('/home', 'HomeController@index')->name('home');
 
     //Rutas de roles y permisos
-    Route::get('roles_permisos/index','RolesPermisosController@index')->name('admin.roles.index');
-    Route::get('roles_permisos/roles_crear','RolesPermisosController@crearRole')->name('admin.roles.roles_crear');
-    Route::post('roles_permisos/roles_guardar','RolesPermisosController@guardarRole')->name('admin.roles.roles_guardar');
-    Route::get('roles_permisos/{id}/asignar_permiso_vista','RolesPermisosController@rolesAsignarPermisosVista')->name('admin.roles.roles_asignar_permisos_vista');
-    Route::get('roles/{id}/ver_permisos','RolesPermisosController@roleVerPermisos')->name('admin.roles.role_ver_permisos');
-    Route::post('roles_permisos/role_asignar_permiso','RolesPermisosController@rolesAsignarPermiso')->name('admin.roles.roles_asignar_permisos');
-    Route::get('roles_permisos/{id}/editar','RolesPermisosController@editarRole')->name('admin.roles.role_editar');
-    Route::post('roles_permisos/{id}/actualizar','RolesPermisosController@actualizarRole')->name('admin.roles.role_actualizar');
-    Route::get('roles_permisos/{id}/eliminar','RolesPermisosController@eliminarRole')->name('admin.roles.role_eliminar');
-    Route::get('roles_permisos/{id}/usuarios','RolesPermisosController@usuarios')->name('admin.roles.usuarios');
-    Route::get('roles_permisos/{id}/usuarios/revocar_role','RolesPermisosController@usuariosRevocarRol')->name('admin.roles.usuarios_revocar');
+    Route::get('roles_permisos/index','RolesPermisosController@index')->name('admin.roles.index')->middleware('permission:VIP|ver_roles');
+    Route::get('roles_permisos/roles_crear','RolesPermisosController@crearRole')->name('admin.roles.roles_crear')->middleware('permission:VIP|crear_rol');
+    Route::post('roles_permisos/roles_guardar','RolesPermisosController@guardarRole')->name('admin.roles.roles_guardar')->middleware('permission:VIP|crear_rol');
+    Route::get('roles_permisos/{id}/asignar_permiso_vista','RolesPermisosController@rolesAsignarPermisosVista')->name('admin.roles.roles_asignar_permisos_vista')->middleware('permission:VIP|asignar_roles');
+    Route::get('roles/{id}/ver_permisos','RolesPermisosController@roleVerPermisos')->name('admin.roles.role_ver_permisos')->middleware('permission:VIP|ver_roles|ver_permisos');
+    Route::post('roles_permisos/role_asignar_permiso','RolesPermisosController@rolesAsignarPermiso')->name('admin.roles.roles_asignar_permisos')->middleware('permission:VIP|asignar_roles');
+    Route::get('roles_permisos/{id}/editar','RolesPermisosController@editarRole')->name('admin.roles.role_editar')->middleware('permission:VIP|editar_rol');
+    Route::post('roles_permisos/{id}/actualizar','RolesPermisosController@actualizarRole')->name('admin.roles.role_actualizar')->middleware('permission:VIP|editar_rol');
+    Route::get('roles_permisos/{id}/eliminar','RolesPermisosController@eliminarRole')->name('admin.roles.role_eliminar')->middleware('permission:VIP|eliminar_rol');
+    Route::get('roles_permisos/{id}/usuarios','RolesPermisosController@usuarios')->name('admin.roles.usuarios')->middleware('permission:VIP|ver_roles');
+    Route::get('roles_permisos/{id}/usuarios/revocar_role','RolesPermisosController@usuariosRevocarRol')->name('admin.roles.usuarios_revocar')->middleware('permission:VIP|eliminar_rol');
 
 	//Rutas de usuarios
-    Route::get('usuarios/{id}/asignar_roles','UserController@asignarRoles')->name('admin.usuarios.asignar_roles');
-    Route::post('usuarios/guardar_roles','UserController@guardarRoles')->name('admin.usuarios.guardar_roles');
-	Route::get('users/index','UserController@index')->name('admin.usuarios.inicio');
-	Route::get('users/crear','UserController@create')->name('admin.usuarios.crear');
-	Route::get('users/editar/{id}','UserController@edit')->name('admin.usuarios.editar');
-	Route::post('users/mod/{id}','UserController@update')->name('admin.usuarios.modificar');
-	Route::post('users/eliminar','UserController@destroy')->name('admin.usuarios.eliminar');
-	Route::post('usuarios/guardar','UserController@save')->name('admin.usuarios.guardar');
+    Route::get('usuarios/{id}/asignar_roles','UserController@asignarRoles')->name('admin.usuarios.asignar_roles')->middleware('permission:VIP|asignar_roles');
+    Route::post('usuarios/guardar_roles','UserController@guardarRoles')->name('admin.usuarios.guardar_roles')->middleware('permission:VIP|asignar_roles');
+	Route::get('users/index','UserController@index')->name('admin.usuarios.inicio')->middleware('permission:VIP|ver_usuarios');
+	Route::get('users/crear','UserController@create')->name('admin.usuarios.crear')->middleware('permission:VIP|crear_usuario');
+	Route::get('users/editar/{id}','UserController@edit')->name('admin.usuarios.editar')->middleware('permission:VIP|editar_usuarios');
+	Route::post('users/mod/{id}','UserController@update')->name('admin.usuarios.modificar')->middleware('permission:VIP|editar_usuarios');
+	Route::post('users/eliminar','UserController@destroy')->name('admin.usuarios.eliminar')->middleware('permission:VIP|eliminar_usuarios');
+	Route::post('usuarios/guardar','UserController@save')->name('admin.usuarios.guardar')->middleware('permission:VIP|crear_usuario');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 
 	//Rutas de noticias
-	Route::get('noticias/index','NoticiasController@index')->name('admin.noticias.inicio');
-	Route::get('noticias/crear','NoticiasController@create')->name('admin.noticias.crear');
-	Route::post('noticias/guardar','NoticiasController@save')->name('admin.noticias.guardar');
-	Route::get('noticias/editar/{id}','NoticiasController@edit')->name('admin.noticias.editar');
-	Route::post('noticias/modificar/{id}','NoticiasController@update')->name('admin.noticias.modificar');
-	Route::get('noticias/eliminar','NoticiasController@destroy')->name('admin.noticias.eliminar');
-	Route::get('noticias/vista_previa/{id}','NoticiasController@view')->name('admin.noticias.ver');
+	Route::get('noticias/index','NoticiasController@index')->name('admin.noticias.inicio')->middleware('permission:VIP|ver_noticias');
+	Route::get('noticias/crear','NoticiasController@create')->name('admin.noticias.crear')->middleware('permission:VIP|crear_noticias');
+	Route::post('noticias/guardar','NoticiasController@save')->name('admin.noticias.guardar')->middleware('permission:VIP|crear_noticias');
+	Route::get('noticias/editar/{id}','NoticiasController@edit')->name('admin.noticias.editar')->middleware('permission:VIP|editar_noticias');
+	Route::post('noticias/modificar/{id}','NoticiasController@update')->name('admin.noticias.modificar')->middleware('permission:VIP|editar_noticias');
+	Route::get('noticias/eliminar','NoticiasController@destroy')->name('admin.noticias.eliminar')->middleware('permission:VIP|eliminar_noticias');
+	Route::get('noticias/vista_previa/{id}','NoticiasController@view')->name('admin.noticias.ver')->middleware('permission:VIP|ver_noticias');
 
 	//Rutas de perfil
 	Route::get('usuarios/perfil','PerfilController@index')->name('admin.usuarios.mi_perfil');
@@ -309,29 +315,25 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/convenios/areas/modificar',[ConvenioController::class,'areasUpdate'])->name('convenios.areas.update');
     Route::get('contenido/convenios/areas/eliminar',[ConvenioController::class,'areasDestroy'])->name('convenios.areas.eliminar');
 
-    //Rutas privadas del buzón
-    Route::get('contenido/buzon/show',[BuzonController::class,'show'])->name('buzon.show');
-    Route::get('contenido/buzon/edit/{id}',[BuzonController::class,'edit'])->name('buzon.edit');
-    Route::get('contenido/buzon/destroy',[BuzonController::class,'destroy'])->name('buzon.destroy');
-    Route::get('contenido/buzon/leidos',[BuzonController::class,'leidos'])->name('buzon.leidos');
+    //Rutas privadas del buzón cn
+    Route::get('contenido/buzon/show',[BuzonController::class,'show'])->name('buzon.show')->middleware('permission:VIP|ver_buzon');
+    Route::get('contenido/buzon/edit/{id}',[BuzonController::class,'edit'])->name('buzon.edit')->middleware('permission:VIP|editar_buzon');
+    Route::get('contenido/buzon/destroy',[BuzonController::class,'destroy'])->name('buzon.destroy')->middleware('permission:VIP|eliminar_buzon');
+    Route::get('contenido/buzon/leidos',[BuzonController::class,'leidos'])->name('buzon.leidos')->middleware('permission:VIP|editar_buzon');
 
     //Rutas privadas de biblioteca
-    Route::get('contenido/biblioteca/estadisticos',function(){return view('admin.biblioteca.estadisticos');})->name('biblioteca.estadisticos');
-    Route::get('contenido/biblioteca/periodo',function(){return view('admin.biblioteca.periodo');})->name('biblioteca.periodo');
-    Route::get('contenido/biblioteca/periodo/find',[BibliotecaController::class,'periodoFind'])->name('biblioteca.periodo.find');
-    Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax');
-    Route::get('contenido/biblioteca/servicios/consulta',[BibliotecaController::class,'serviciosFind'])->name('biblioteca.servicios.find');
-    Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios');
+    Route::get('contenido/biblioteca/estadisticos',function(){return view('admin.biblioteca.estadisticos');})->name('biblioteca.estadisticos')->middleware('permission:VIP|ver_biblioteca');
+    Route::get('contenido/biblioteca/periodo',function(){return view('admin.biblioteca.periodo');})->name('biblioteca.periodo')->middleware('permission:VIP|ver_biblioteca');
+    Route::get('contenido/biblioteca/periodo/find',[BibliotecaController::class,'periodoFind'])->name('biblioteca.periodo.find')->middleware('permission:VIP|ver_biblioteca');
+    Route::get('contenido/biblioteca/serviciosAjax',[BibliotecaController::class,'cargarServiciosAjax'])->name('biblioteca.serviciosAjax')->middleware('permission:VIP|ver_biblioteca');
+    Route::get('contenido/biblioteca/servicios/consulta',[BibliotecaController::class,'serviciosFind'])->name('biblioteca.servicios.find')->middleware('permission:VIP|ver_biblioteca');
+    Route::get('contenido/biblioteca/servicios/ver',function(){return view('admin.biblioteca.servicios');})->name('biblioteca.servicios')->middleware('permission:VIP|crear_biblioteca');
 
     //Rutas de institución
-    Route::get('institucion/pases/index',[PasesController::class,'index'])->name('pases.index');
-    Route::get('institucion/pases/create',[PasesController::class,'create'])->name('pases.create');
-    Route::post('institucion/pases/store',[PasesController::class,'store'])->name('pases.store');
+    Route::get('institucion/pases/index',[PasesController::class,'index'])->name('pases.index')->middleware('permission:VIP|ver_pases');
+    Route::get('institucion/pases/create',[PasesController::class,'create'])->name('pases.create')->middleware('permission:VIP|crear_pases');
+    Route::post('institucion/pases/store',[PasesController::class,'store'])->name('pases.store')->middleware('permission:VIP|crear_pases');
 
-    //Rutas del organigrama
-    Route::get('contenido/organigrama/index',[OrganigramaController::class,'index'])->name('organigrama.index');
-    Route::get('contenido/organigrama/crear',[OrganigramaController::class,'create'])->name('organigrama.create');
-    Route::post('contenido/organigrama/guardar',[OrganigramaController::class,'store'])->name('organigrama.store');
 
 	//Rutas de los adeudos
 	Route::get('Institucion/adeudos/index',[AdeudosController::class,'index'])->name('adeudos.index');

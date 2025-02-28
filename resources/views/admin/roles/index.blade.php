@@ -1,12 +1,16 @@
 @extends('layouts.plant_admin')
 
+@section('titulo','Roles')
+@section('ruta', 'Roles')
+
 @section('contenido')
+
 
 	<div class="row">
 		<div class="col"></div>
 		<div class="col"></div>
 		<div class="col text-right">
-			<a href="{{ route('admin.roles.roles_crear')}}" class="btn btn-success btn-sm" title="Crear rol"><i class="far fa-address-card"></i></a>
+			<a href="{{ route('admin.roles.roles_crear')}}" class="btn btn-success" title="Crear rol"><i class="far fa-address-card"></i></a>
 		</div>
 	</div>
 
