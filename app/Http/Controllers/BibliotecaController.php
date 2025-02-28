@@ -41,7 +41,7 @@ class BibliotecaController extends Controller
             return trim($control);
         });
 
-
+        return $controles;
         $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
             ->table('alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
@@ -52,7 +52,7 @@ class BibliotecaController extends Controller
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
             ->get();
-            return $resultado;
+
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
 
