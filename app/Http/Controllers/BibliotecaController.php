@@ -21,6 +21,8 @@ class BibliotecaController extends Controller
             //Obtenemos los registros de la base de datos de la biblioteca
             $servicios=Registro::select($selectColumns)->toBase();
 
+            return $servicios;
+
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
             //Llamamos a la función completar para agregar los datos de los alumnos
