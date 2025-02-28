@@ -20,7 +20,7 @@ class BibliotecaController extends Controller
 
             $servicios = DB::table('registro_biblio')
                 ->select($selectColumns);
-
+                return response()->json($servicios, HttpCode::SUCCESS);
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
             //Llamamos a la función completar para agregar los datos de los alumnos
