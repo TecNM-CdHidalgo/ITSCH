@@ -19,10 +19,9 @@ class BibliotecaController extends Controller
             $dtAttr = new DataTableAttr($request, $selectColumns);
 
             //Obtenemos los registros de la base de datos de la biblioteca
-            $servicios=Registro::select($selectColumns);
+            $servicios=Registro::select($selectColumns)->get();
 
-           // $servicios = DB::table('registro_biblio')
-          //      ->select($selectColumns);
+
                 return response()->json($servicios, HttpCode::SUCCESS);
             DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
 
