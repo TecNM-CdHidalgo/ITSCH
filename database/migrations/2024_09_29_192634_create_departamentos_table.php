@@ -17,9 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->bigInteger('jefe_id')->unsigned()->nullable();
-            $table->foreign('jefe_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('area_id')->unsigned()->nullable();
-            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
             $table->timestamps();
         });
     }
