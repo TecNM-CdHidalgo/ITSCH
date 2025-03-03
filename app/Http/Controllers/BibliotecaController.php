@@ -20,7 +20,7 @@ class BibliotecaController extends Controller
             $dtAttr = new DataTableAttr($request, $selectColumns);
 
             // Creamos una instruccion sql normal para pasarla al paginador
-            $query = DB::table('registro_biblio')->select($selectColumns);
+            $query = DB::table('registro_biblio')->select($selectColumns)->get();
 
             // Aplicamos los filtros usando DataTableHelper antes de ejecutar la consulta
            // DataTableHelper::applyAllExcept($query, $dtAttr, []);
