@@ -9,6 +9,7 @@ use App\Http\Controllers\Utilities\DataTableAttr;
 use App\Http\Controllers\Utilities\DataTableHelper;
 use App\Http\Controllers\Utilities\HttpCode;
 use Carbon\Carbon;
+use PhpParser\Node\Stmt\Return_;
 
 class BibliotecaController extends Controller
 {
@@ -22,11 +23,11 @@ class BibliotecaController extends Controller
             $query = DB::table('registro_biblio')->select($selectColumns);
 
             // Aplicamos los filtros usando DataTableHelper antes de ejecutar la consulta
-            DataTableHelper::applyAllExcept($query, $dtAttr, []);
+           // DataTableHelper::applyAllExcept($query, $dtAttr, []);
 
             // Llamamos a la función completar para agregar datos adicionales
            $obj= $this->completar($query);
-return response()->json($obj,200);
+Return response()->json($obj,200);
             // Obtenemos la respuesta paginada
             $paginatorResponse = DataTableHelper::paginatorResponse($query, $dtAttr);
 
@@ -44,7 +45,7 @@ return response()->json($obj,200);
         $controles = $servicios->pluck('control')->map(function ($control) {
             return trim($control);
         });
-        return $controles;
+
         $resultado = DB::connection('contEscSQL')
             ->table('Alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
