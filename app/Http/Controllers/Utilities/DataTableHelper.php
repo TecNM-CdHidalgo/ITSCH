@@ -75,17 +75,12 @@ class DataTableHelper {
         }
 
         if (!empty($whereLikeClausesList)) {
-            $query->where(function($query) use ($whereLikeClausesList) {
-                $sql = [];
-                $params = [];
+            $query->where(function($query) use (&$whereLikeClausesList) {
                 foreach ($whereLikeClausesList as $whereLikeClause) {
-                    $sql[] = "{$whereLikeClause[0]} LIKE ?";
-                    $params[] = $whereLikeClause[2];
+                    $query->orWhere(array($whereLikeClause));
                 }
-                $query->whereRaw(implode(' OR ', $sql), $params);
             });
         }
-
     }
 
     static function paginatorResponse(&$queryResults, DataTableAttr &$dtAttr) {
