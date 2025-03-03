@@ -9,7 +9,7 @@ use Carbon\Carbon;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class AdeudosController extends Controller
-{  
+{
 
     public function index()
     {
@@ -38,7 +38,7 @@ class AdeudosController extends Controller
 
         // Cargar todos los alumnos en una sola consulta
         $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))
-        ->table('alumnos')
+        ->table('Alumnos')
         ->whereIn('alu_NumControl', $controles)
         ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
         ->get()
@@ -50,7 +50,7 @@ class AdeudosController extends Controller
 
         // Cargar todas las carreras en una sola consulta
         $carreras = DB::connection(env('DB_CONNECTION_SECOND'))
-            ->table('carreras')
+            ->table('Carreras')
             ->whereIn('car_Clave', $clavesCarrera)
             ->pluck('car_Nombre', 'car_Clave'); // Obtiene un array clave => nombre
 
@@ -88,7 +88,7 @@ class AdeudosController extends Controller
             ->with('msj', 'No tienes permiso para ver esta sección');
         }
         //Verificamos que el numero de control exista en servicios escolares
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl')
             ->first();
@@ -114,7 +114,7 @@ class AdeudosController extends Controller
         }
        //Consultamos el adeudo y los datos del alumno
         $adeudo = Adeudos::find($request->id);
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->where('alu_NumControl', $adeudo->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
@@ -161,13 +161,13 @@ class AdeudosController extends Controller
         // Consultamos todos los adeudos pagados, datos del alumno y carrera
         $adeudos = Adeudos::where('status', 'pagado')->get();
         $controles = $adeudos->pluck('control')->toArray();
-        $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
+        $alumnos = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->whereIn('alu_NumControl', $controles)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->get()
             ->keyBy('alu_NumControl');
             $clavesCarrera = $alumnos->pluck('car_Clave')->unique()->filter()->toArray();
-            $carreras = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
+            $carreras = DB::connection(env('DB_CONNECTION_SECOND'))->table('Carreras')
             ->whereIn('car_Clave', $clavesCarrera)
             ->pluck('car_Nombre', 'car_Clave');
             foreach ($adeudos as $adeudo) {
@@ -185,7 +185,7 @@ class AdeudosController extends Controller
 
     public function destroyAll(Request $request)
     {
-       
+
         // Verificamos que el usuario tenga al menos uno de los permisos
         if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_adeudos_todos'])) {
             return redirect()->route('home')
@@ -204,7 +204,7 @@ class AdeudosController extends Controller
 
         // Si no hay adeudo pendiente, solo devolvemos el nombre del alumno
         if (!$adeudo) {
-            $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
+            $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
                 ->where('alu_NumControl', $request->control)
                 ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
                 ->first();
@@ -215,7 +215,7 @@ class AdeudosController extends Controller
         }
 
         // Si hay adeudo, consultamos los datos del adeudo y el área
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
@@ -235,12 +235,12 @@ class AdeudosController extends Controller
     public function imprimirConstancia(Request $request)
     {
         // Consulta del alumno
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->where('alu_NumControl', $request->controlR)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         //Agregamos el nombre de la carrera a la consulta
-        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('carreras')
+        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('Carreras')
             ->where('car_Clave', $alumno->car_Clave)
             ->select('car_Nombre')
             ->first();
