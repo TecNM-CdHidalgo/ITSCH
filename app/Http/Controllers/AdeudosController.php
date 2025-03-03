@@ -235,12 +235,12 @@ class AdeudosController extends Controller
     public function imprimirConstancia(Request $request)
     {
         // Consulta del alumno
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
+        $alumno = DB::connection('contEscSQL')->table('Alumnos')
             ->where('alu_NumControl', $request->controlR)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         //Agregamos el nombre de la carrera a la consulta
-        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('Carreras')
+        $carrera = DB::connection('contEscSQL')->table('Carreras')
             ->where('car_Clave', $alumno->car_Clave)
             ->select('car_Nombre')
             ->first();
