@@ -204,7 +204,7 @@ class AdeudosController extends Controller
 
         // Si no hay adeudo pendiente, solo devolvemos el nombre del alumno
         if (!$adeudo) {
-            $alumno = DB::connection('contEscSQL')->table('Alumnos')
+            $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
                 ->where('alu_NumControl', $request->control)
                 ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
                 ->first();
@@ -215,7 +215,7 @@ class AdeudosController extends Controller
         }
 
         // Si hay adeudo, consultamos los datos del adeudo y el área
-        $alumno = DB::connection('contEscSQL')->table('Alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
@@ -235,14 +235,12 @@ class AdeudosController extends Controller
     public function imprimirConstancia(Request $request)
     {
         // Consulta del alumno
-        $alumno = DB::connection('contEscSQL')->table('Alumnos')
+        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
             ->where('alu_NumControl', $request->controlR)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
-
-
         //Agregamos el nombre de la carrera a la consulta
-        $carrera = DB::connection('contEscSQL')->table('Carreras')
+        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('Carreras')
             ->where('car_Clave', $alumno->car_Clave)
             ->select('car_Nombre')
             ->first();
