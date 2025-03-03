@@ -204,7 +204,7 @@ class AdeudosController extends Controller
 
         // Si no hay adeudo pendiente, solo devolvemos el nombre del alumno
         if (!$adeudo) {
-            $alumno = DB::connection('contEscSQL')->table('Alumnos')
+            $alumno = DB::connection('contEscSQL')->table('dbo.Alumnos')
                 ->where('alu_NumControl', $request->control)
                 ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
                 ->first();
@@ -215,7 +215,7 @@ class AdeudosController extends Controller
         }
 
         // Si hay adeudo, consultamos los datos del adeudo y el área
-        $alumno = DB::connection('contEscSQL')->table('Alumnos')
+        $alumno = DB::connection('contEscSQL')->table('dbo.Alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
