@@ -240,7 +240,7 @@ class AdeudosController extends Controller
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         //Agregamos el nombre de la carrera a la consulta
-        $carrera = DB::connection(env('contEscSQL'))->table('Carreras')
+        $carrera = DB::connection('contEscSQL')->table('Carreras')
             ->where('car_Clave', $alumno->car_Clave)
             ->select('car_Nombre')
             ->first();
