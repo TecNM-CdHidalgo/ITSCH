@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Utilities\DataTableAttr;
 use App\Http\Controllers\Utilities\DataTableHelper;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Utilities\HttpCode;
 use Carbon\Carbon;
 
@@ -45,6 +46,10 @@ class BibliotecaController extends Controller
             return trim($control);
         });
 
+        Log::info('Controles obtenidos:', $controles->toArray());
+        $result = DB::connection(env('DB_CONNECTION_SECOND'))->table('alumnos')->first();
+        Log::info($result);
+
 
         $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
             ->table('alumnos')
@@ -56,6 +61,9 @@ class BibliotecaController extends Controller
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
             ->get();
+
+            Log::info('Consulta SQL:', [$resultado->toSql()]);
+            Log::info('Bindings:', $resultado->getBindings());
 
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
