@@ -41,31 +41,29 @@ Return response()->json($obj,200);
     //Funcion para completar los datos de los alumnos
     public function completar($servicios)
     {
-        //Obtener numeros de control y hacer un trim para quitar espacios en blanco
+        // Obtener números de control y hacer un trim para quitar espacios en blanco
         $controles = $servicios->pluck('control')->map(function ($control) {
             return trim($control);
-        });
+        })->unique()->values(); // Asegúrate de eliminar duplicados y resetear los índices
 
-        $resultado = DB::connection('contEscSQL')
-            ->table('Alumnos')
-            ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
-            ->select(
-                'alumnos.alu_NumControl',
-                DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
-                'carreras.car_Nombre as carrera'
-            )
-            ->whereIn('alumnos.alu_NumControl', $controles)
-            ->get();
+        $alumnosMap = collect();
 
-        // Crea un mapa de alumnos por número de control
-        $alumnosMap = $resultado->keyBy('alu_NumControl');
+        // Dividir los controles en lotes de 2000 para evitar el límite de parámetros
+        $chunks = $controles->chunk(2000);
 
-        foreach ($servicios as $servicio) {
-            $alumno = $alumnosMap->get($servicio->control);
-            if ($alumno) {
-                $servicio->nombre = $alumno->nombre;
-                $servicio->carrera = $alumno->carrera;
-            }
+        foreach ($chunks as $chunk) {
+            $resultado = DB::connection('contEscSQL')
+                ->table('Alumnos')
+                ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
+                ->select(
+                    'alumnos.alu_NumControl',
+                    DB::raw("CONCAT(alumnos.alu_Nombre, ' ', alumnos.alu_ApePaterno, ' ', alumnos.alu_ApeMaterno) as nombre"),
+                    'carreras.car_Nombre as carrera'
+                )
+                ->whereIn('alumnos.alu_NumControl', $chunk)
+                ->get();
+
+            $alumnosMap = $alumnosMap->merge($resultado->keyBy('alu_NumControl'));
         }
 
         // Mapeo de los códigos de servicio a sus nombres correspondientes
@@ -76,19 +74,23 @@ Return response()->json($obj,200);
             4 => 'Sala de computo'
         ];
 
-        // Recorremos los servicios y asignamos el nombre correspondiente
         foreach ($servicios as $servicio) {
+            $alumno = $alumnosMap->get($servicio->control);
+            if ($alumno) {
+                $servicio->nombre = $alumno->nombre;
+                $servicio->carrera = $alumno->carrera;
+            }
+
+            // Asignar nombre del servicio
             $servicio->servicio = $serviciosNombres[$servicio->servicio] ?? 'Servicio desconocido';
-        }
 
-
-        //Cambiamos la letra del sexo por su significado
-        foreach($servicios as $servicio){
+            // Cambiar la letra del sexo por su significado
             $servicio->sexo = ($servicio->sexo == 'F') ? 'Femenino' : 'Masculino';
         }
 
-        return $servicios; // Devolver los servicios completados
+        return $servicios; // Devuelve los servicios completados
     }
+
 
 
     //Funcion para buscar un alumno en la base de datos de control escolar
