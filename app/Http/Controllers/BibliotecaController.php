@@ -45,7 +45,7 @@ class BibliotecaController extends Controller
             return trim($control);
         });
 
-        $resultado = DB::connection(env('DB_CONNECTION_SECOND'))
+        $resultado = DB::connection('contEscSQL')
             ->table('Alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
             ->select(
