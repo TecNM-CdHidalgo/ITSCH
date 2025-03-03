@@ -26,7 +26,7 @@ class BibliotecaController extends Controller
 
             // Llamamos a la función completar para agregar datos adicionales
            $obj= $this->completar($query);
-
+return response()->json($obj,200);
             // Obtenemos la respuesta paginada
             $paginatorResponse = DataTableHelper::paginatorResponse($query, $dtAttr);
 
@@ -55,7 +55,7 @@ class BibliotecaController extends Controller
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
             ->get();
-
+return $resultado;
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
 
