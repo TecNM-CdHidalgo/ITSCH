@@ -12,7 +12,7 @@ class AdeudosController extends Controller
 {
 
     public function index()
-    {dd(env('DB_CONNECTION_SECOND'));
+    {
         // Verificamos que el usuario tenga al menos uno de los permisos
         if (!auth()->user()->hasAnyPermission(['VIP', 'ver_adeudos'])) {
             return redirect()->route('home')
