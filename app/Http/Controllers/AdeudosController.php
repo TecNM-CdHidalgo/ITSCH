@@ -239,6 +239,8 @@ class AdeudosController extends Controller
             ->where('alu_NumControl', $request->controlR)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
+
+            dd($alumno);
         //Agregamos el nombre de la carrera a la consulta
         $carrera = DB::connection('contEscSQL')->table('Carreras')
             ->where('car_Clave', $alumno->car_Clave)
