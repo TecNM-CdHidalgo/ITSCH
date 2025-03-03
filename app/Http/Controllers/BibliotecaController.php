@@ -15,28 +15,26 @@ class BibliotecaController extends Controller
     //Función para cargar los registros por medio de un ajax al dataTable
     public function cargarServiciosAjax(Request $request) {
         try {
-            $selectColumns = ['servicio','car_Clave','control','sexo'];
+            $selectColumns = ['servicio', 'car_Clave', 'control', 'sexo'];
             $dtAttr = new DataTableAttr($request, $selectColumns);
 
-            //Obtenemos los registros de la base de datos de la biblioteca
+            // Creamos una instruccion sql normal para pasarla al paginador
+            $query = DB::table('registro_biblio')->select($selectColumns);
 
-            $servicios = DB::table('registro_biblio')
-                ->select($selectColumns);
+            // Aplicamos los filtros usando DataTableHelper antes de ejecutar la consulta
+            DataTableHelper::applyAllExcept($query, $dtAttr, []);
 
+            // Llamamos a la función completar para agregar datos adicionales
+            $this->completar($query);
 
-            DataTableHelper::applyAllExcept($servicios, $dtAttr, [DataTableHelper::PAGINATOR]);
+            // Obtenemos la respuesta paginada
+            $paginatorResponse = DataTableHelper::paginatorResponse($query, $dtAttr);
 
-            //Ejecutamos la conssulta
-            $servicios = $servicios->get();
-
-            //Llamamos a la función completar para agregar los datos de los alumnos
-            $obj=$this->completar($servicios);
-
-            $paginatorResponse = DataTableHelper::paginatorResponse($servicios, $dtAttr);
             return response()->json($paginatorResponse, HttpCode::SUCCESS);
         } catch (\Exception $e) {
             return response()->json($e->getMessage(), HttpCode::NOT_ACCEPTABLE);
         }
+
     }
 
     //Funcion para completar los datos de los alumnos
