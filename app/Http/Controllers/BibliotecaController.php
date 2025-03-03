@@ -18,9 +18,9 @@ class BibliotecaController extends Controller
         try {
             $selectColumns = ['servicio', 'car_Clave', 'control', 'sexo'];
             $dtAttr = new DataTableAttr($request, $selectColumns);
-
+return response()->json($dtAttr,200);
             // Creamos una instruccion sql normal para pasarla al paginador
-            $query = DB::table('registro_biblio')->select($selectColumns)->where('created_at', '>=', '2025-02-02');
+            $query = DB::table('registro_biblio')->select($selectColumns);
 
             // Aplicamos los filtros usando DataTableHelper antes de ejecutar la consulta
             DataTableHelper::applyAllExcept($query, $dtAttr, []);
