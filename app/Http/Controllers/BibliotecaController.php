@@ -26,7 +26,7 @@ class BibliotecaController extends Controller
 
             // Llamamos a la función completar para agregar datos adicionales
            $obj= $this->completar($query);
-return response()->json($obj,200);
+
             // Obtenemos la respuesta paginada
             $paginatorResponse = DataTableHelper::paginatorResponse($query, $dtAttr);
 
@@ -85,6 +85,8 @@ return response()->json($obj,200);
         foreach($servicios as $servicio){
             $servicio->sexo = ($servicio->sexo == 'F') ? 'Femenino' : 'Masculino';
         }
+
+        return $servicios; // Devolver los servicios completados
     }
 
 
