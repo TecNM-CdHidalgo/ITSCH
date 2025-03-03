@@ -27,7 +27,7 @@ class BibliotecaController extends Controller
 
             // Llamamos a la función completar para agregar datos adicionales
            $obj= $this->completar($query);
-Return response()->json($obj,200);
+return response()->json($obj,200);
             // Obtenemos la respuesta paginada
             $paginatorResponse = DataTableHelper::paginatorResponse($query, $dtAttr);
 
