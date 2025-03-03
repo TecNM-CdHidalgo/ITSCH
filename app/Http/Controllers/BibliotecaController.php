@@ -15,10 +15,11 @@ class BibliotecaController extends Controller
 {
     //Función para cargar los registros por medio de un ajax al dataTable
     public function cargarServiciosAjax(Request $request) {
+        return response()->json($request->all(), HttpCode::SUCCESS);
         try {
             $selectColumns = ['servicio', 'car_Clave', 'control', 'sexo'];
             $dtAttr = new DataTableAttr($request, $selectColumns);
-return response()->json($dtAttr,200);
+
             // Creamos una instruccion sql normal para pasarla al paginador
             $query = DB::table('registro_biblio')->select($selectColumns);
 
