@@ -96,13 +96,13 @@ class BibliotecaController extends Controller
     //Funcion para buscar un alumno en la base de datos de control escolar
     public function findAlumno(Request $request)
     {
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
+        $alumno = DB::connection('contEscSQL')->table('Alumnos')
         ->select('alu_NumControl','alu_Nombre','alu_ApePaterno','alu_ApeMaterno','car_Clave','alu_Sexo')
         ->where('alu_NumControl',$request->control)
         ->first();
 
        //Agregamos el nombre de la carrera
-        $carrera = DB::connection(env('DB_CONNECTION_SECOND'))->table('Carreras')
+        $carrera = DB::connection('contEscSQL')->table('Carreras')
         ->where('car_Clave',$alumno->car_Clave)
         ->first();
         $alumno->carrera = $carrera->car_Nombre;
