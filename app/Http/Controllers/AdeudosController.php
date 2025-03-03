@@ -204,23 +204,23 @@ class AdeudosController extends Controller
 
         // Si no hay adeudo pendiente, solo devolvemos el nombre del alumno
         if (!$adeudo) {
-            $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
+            $alumno = DB::connection('contEscSQL')->table('Alumnos')
                 ->where('alu_NumControl', $request->control)
                 ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
                 ->first();
-
+dd($alumno);
             return response()->json([
                 'alumno' => $alumno
             ]);
         }
 
         // Si hay adeudo, consultamos los datos del adeudo y el área
-        $alumno = DB::connection(env('DB_CONNECTION_SECOND'))->table('Alumnos')
+        $alumno = DB::connection('contEscSQL')->table('Alumnos')
             ->where('alu_NumControl', $request->control)
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         $area = Area::find($adeudo->area_id);
-
+dd($alumno);
         // Retornamos un JSON con los datos del adeudo, el alumno y el área
         return response()->json([
             'adeudo' => $adeudo,
@@ -240,7 +240,7 @@ class AdeudosController extends Controller
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
 
-            dd($alumno);
+
         //Agregamos el nombre de la carrera a la consulta
         $carrera = DB::connection('contEscSQL')->table('Carreras')
             ->where('car_Clave', $alumno->car_Clave)
