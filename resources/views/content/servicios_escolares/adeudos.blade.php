@@ -89,7 +89,7 @@
                     beforeSend: function() {
                         $("#btnBuscar").prop("disabled", true).text("Buscando...");
                     },
-                    success: function(response) {
+                    success: function(response) { console.log("Respuesta AJAX:", response);
                         $("#btnBuscar").prop("disabled", false).text("Buscar");
 
                         // Si no hay adeudos y el alumno existe, mostrar mensaje y ocultar la tabla

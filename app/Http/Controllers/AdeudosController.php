@@ -208,7 +208,7 @@ class AdeudosController extends Controller
                 ->where('alu_NumControl', $request->control)
                 ->select('alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno')
                 ->first();
-dd($alumno);
+
             return response()->json([
                 'alumno' => $alumno
             ]);
@@ -220,7 +220,7 @@ dd($alumno);
             ->select('alu_NumControl', 'alu_Nombre', 'alu_ApePaterno', 'alu_ApeMaterno', 'car_Clave', 'alu_StatusAct')
             ->first();
         $area = Area::find($adeudo->area_id);
-dd($alumno);
+
         // Retornamos un JSON con los datos del adeudo, el alumno y el área
         return response()->json([
             'adeudo' => $adeudo,
