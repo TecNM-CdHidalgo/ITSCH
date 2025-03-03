@@ -44,7 +44,7 @@ return response()->json($obj,200);
         $controles = $servicios->pluck('control')->map(function ($control) {
             return trim($control);
         });
-
+        return $controles;
         $resultado = DB::connection('contEscSQL')
             ->table('Alumnos')
             ->leftJoin('carreras', 'alumnos.car_Clave', '=', 'carreras.car_Clave')
@@ -55,7 +55,7 @@ return response()->json($obj,200);
             )
             ->whereIn('alumnos.alu_NumControl', $controles)
             ->get();
-return $resultado;
+
         // Crea un mapa de alumnos por número de control
         $alumnosMap = $resultado->keyBy('alu_NumControl');
 
