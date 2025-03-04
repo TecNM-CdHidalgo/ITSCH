@@ -117,7 +117,21 @@ class BibliotecaController extends Controller
     //Funcion para registrar un alumno en la base de datos de la biblioteca
     public function store(Request $request)
     {
-        Registro::create($request->all());
+        //Validamos los datos
+        $request->validate([
+            'control' => 'required',
+            'servicio' => 'required',
+            'car_Clave' => 'required',
+            'sexo' => 'required'
+        ]);
+        //guardamos el registro
+        $registro = new Registro();
+        $registro->control = $request->control;
+        $registro->car_Clave = $request->car_Clave;
+        $registro->servicio = $request->servicio;
+        $registro->sexo = $request->sexo;
+        $registro->extras= $request->extras;
+        $registro->save();
         return response()->json(['success'=>'Se registro el alumno'],200);
     }
 
