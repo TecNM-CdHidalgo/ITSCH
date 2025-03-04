@@ -141,7 +141,7 @@
         // Funcion para buscar al alumno por su numero de control
         function findAlumno(){
             var control = $('#control').val();
-            if(control.length == 9){
+            if(control.length == 9 || control.length == 8){
                 $.ajax({
                     url: "{{ route('biblioteca.findAlumno') }}",
                     method: "GET",
@@ -154,7 +154,7 @@
                         $('#datos').attr('hidden', true);
                         $('#sexo').val('');
                         $('#carrera').val('');
-                        console.log(data);
+                        console.log('Respuesta ajax', data);
                         // Mostrar datos del alumno
                         $('#cont').text(data.alu_NumControl);
                         nombre = data.alu_Nombre + ' ' + data.alu_ApePaterno + ' ' + data.alu_ApeMaterno;
