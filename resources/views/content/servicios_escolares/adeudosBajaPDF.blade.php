@@ -27,6 +27,12 @@
             height: 40px;
         }
 
+        .rectangulo {
+            width: 13px;
+            height: 13px;
+            border: 2px solid black;
+        }
+
     </style>
 </head>
 <body style="margin-left: 25px; margin-right: 25px">
@@ -84,13 +90,24 @@
         Se extiende la presente constancia a petición del interesado para los fines que al mismo convengan.
     </p>
 
-    <div style="padding: 50px;"></div>
+    <h3 style="text-align: center;">Datos de la baja</h3>
+    <p>Periodo  AD ____ FJ ____ Motivo de la baja________________________________ Último semestre cursado ____________________</p>
+    <p>Recibiendo de conformidad los siguientes documentos:</p>
+    <p>ACTA DE NACIMIENTO  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [&nbsp;&nbsp;] </p>
+    <p>CERTIFICADO DE BACHILLERATO &nbsp;&nbsp;      [&nbsp;&nbsp;] </p>
+    <p>CERTIFICADO MÉDICO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&nbsp;&nbsp;] </p>
+    <P>FOTOGRAFIAS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&nbsp;&nbsp;] </P>
+    <p>OTROS__________________________________________________________</p>
 
-    <img src="" alt="Firma" width="150px">
-    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong>_______________________________ <br> Departamento de servicios escolares</strong></p>
+    <P>FECHA _____________________________</P>
 
 
-    <div style="padding: 80px;"></div>
+    <br>
+    <P style="text-align: center;">_________________________ <br><strong>FIRMA DEL INTERESADO</strong> </P>
+    <br><br>
+    <p style="text-align: center;">_______________________________ <br><strong>JEFE DEL DEPTO. DE SERVICIOS ESCOLARES</strong> </p>
+
+
 
     <p style="text-align: right; font-size: 16px; font-family: 'Palatino Linotype', serif;">
         Ciudad Hidalgo, Michoacán a {{ $fecha }}
