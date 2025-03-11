@@ -91,7 +91,8 @@
     </p>
 
     <h3 style="text-align: center;">Datos de la baja</h3>
-    <p>Periodo  AD ____ FJ ____ Motivo de la baja________________________________ Último semestre cursado ____________________</p>
+    <p>Periodo  AD ______ FJ ______ Último semestre cursado ____________________</p>
+    <P>Motivo de la baja______________________________________________________________________________________________</P>
     <p>Recibiendo de conformidad los siguientes documentos:</p>
     <p>ACTA DE NACIMIENTO  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [&nbsp;&nbsp;] </p>
     <p>CERTIFICADO DE BACHILLERATO &nbsp;&nbsp;      [&nbsp;&nbsp;] </p>
@@ -101,13 +102,9 @@
 
     <P>FECHA _____________________________</P>
 
-
-    <br>
     <P style="text-align: center;">_________________________ <br><strong>FIRMA DEL INTERESADO</strong> </P>
     <br><br>
     <p style="text-align: center;">_______________________________ <br><strong>JEFE DEL DEPTO. DE SERVICIOS ESCOLARES</strong> </p>
-
-
 
     <p style="text-align: right; font-size: 16px; font-family: 'Palatino Linotype', serif;">
         Ciudad Hidalgo, Michoacán a {{ $fecha }}
