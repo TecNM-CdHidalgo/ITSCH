@@ -2429,7 +2429,7 @@ zyPaLiftB2Rh4cDTOdiTwj3ucea4gZYChqld64bvmleG7HamCQpCpzWv2hkLK0//2Q==">
 
             <td>
 
-                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/03Inv_Avance formato Enero 2020.docx')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
+                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/03Inv_Avance formato-Marzo 2025.docx')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
                     <i class='fas fa-download' style='font-size:20px'></i>
                 </a>
 
@@ -2440,7 +2440,7 @@ zyPaLiftB2Rh4cDTOdiTwj3ucea4gZYChqld64bvmleG7HamCQpCpzWv2hkLK0//2Q==">
         <tr>
             <td> Informe final de Proyecto de investigaci&oacute;n </td>
             <td>
-                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/04Inv_Final formato Enero 2020.docx')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
+                <a type="button" class="btn btn-primary" href="{{asset('documents/content/investigacion/04Inv_Final formato-Marzo 2025.docx')}}" data-toogle="tooltip" title="documento para descargar" download  target="_blank">
                     <i class='fas fa-download' style='font-size:20px'></i>
                 </a> </td>
         </tr>
