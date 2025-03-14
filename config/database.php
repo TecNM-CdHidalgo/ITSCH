@@ -95,6 +95,7 @@ return [
             'password' => env('DB_PASSWORD_SECOND', ''),
             'charset' => 'utf8',
             'prefix' => '',
+            'trust_server_certificate' => true,
         ],
 
         'pgsql' => [
