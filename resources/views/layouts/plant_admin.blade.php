@@ -16,7 +16,8 @@
         <!-- Incluye Chart.js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- Incluye chartjs-plugin-datalabels -->
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>        
+        <script src="https://cdn.jsdelivr.net/npm/@sgratzl/chartjs-chart-3d"></script>
 
 
         {{-- Linea para agregar el editor CKeditor a la pagina para editar texto --}}

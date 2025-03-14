@@ -3,8 +3,8 @@
 @section('css')
     <style>
         #chartContainer {
-            width: 80%;
-            max-width: 800px;
+            width: 40%;
+            max-width: 400px;
             height: auto;
             margin: auto;
         }
@@ -33,23 +33,29 @@
         </div>
     </div>
     <hr>
-    {{-- Mostramos una tabla con los servicios y el numero total de alumnos que solicitaron el servicio en un periodo --}}
-    <table class="table" id="tabServicios">
-        <thead>
-            <tr>
-                <th>Servicio</th>
-                <th>Total de solicitudes en el periodo</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{-- Aqui se llenan los datos con ajax --}}
-        </tbody>
-    </table>
-    <hr>
-    {{-- Generamos un grafico de pastel con ls resultados del ajax --}}
-    <div id="chartContainer">
-        <canvas id="myPieChart"></canvas>
+    <div class="row">
+        <div class="col-sm-4">
+            {{-- Mostramos una tabla con los servicios y el numero total de alumnos que solicitaron el servicio en un periodo --}}
+            <table class="table" id="tabServicios">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Total de solicitudes en el periodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{-- Aqui se llenan los datos con ajax --}}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-8">
+            {{-- Generamos un grafico de pastel con ls resultados del ajax --}}
+            <div id="chartContainer">
+                <canvas id="myPieChart"></canvas>
+            </div>
+        </div>
     </div>
+       
     <br>
     <br>
 
@@ -101,7 +107,7 @@
         });
 
         //Funcion para hacer la consulta de los servicios del periodo
-        function consultaPeriodo(){
+        function consultaPeriodo() {
             var inicio = $('#inicio').val();
             var fin = $('#fin').val();
             $.ajax({
@@ -111,51 +117,52 @@
                     inicio: inicio,
                     fin: fin
                 },
-                success: function(data){
+                success: function(data) {
                     console.log(data);
-                    //Mostrar los datos en la tabla tabServicios
                     var dataTable = $('#tabServicios').DataTable();
                     dataTable.clear().draw();
-                    // Variables para el gráfico de pastel
+
                     var servicios = [];
                     var cantidades = [];
                     Object.values(data).forEach(element => {
-                        dataTable.row.add([
-                            element.servicio,
-                            element.cantidad
-                        ]).draw();
+                        dataTable.row.add([element.servicio, element.cantidad]).draw();
                         servicios.push(element.servicio);
                         cantidades.push(element.cantidad);
                     });
-                    // Generar el gráfico de pastel
+
+                    // Destruir el gráfico anterior si existe
+                    if (window.myPieChart instanceof Chart) {
+                        window.myPieChart.destroy();
+                    }
+
                     var ctx = document.getElementById('myPieChart').getContext('2d');
-                    var myPieChart = new Chart(ctx, {
-                        type: 'pie',
+
+                    // Crear el gráfico con efecto 3D
+                    window.myPieChart = new Chart(ctx, {
+                        type: 'doughnut', // 'doughnut' en vez de 'pie' para simular 3D
                         data: {
                             labels: servicios,
                             datasets: [{
                                 data: cantidades,
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
+                                    'rgba(255, 99, 132, 0.9)',
+                                    'rgba(54, 162, 235, 0.9)',
+                                    'rgba(255, 206, 86, 0.9)',
+                                    'rgba(75, 192, 192, 0.9)',
+                                    'rgba(153, 102, 255, 0.9)',
+                                    'rgba(255, 159, 64, 0.9)'
                                 ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
+                                hoverOffset: 6, // Hace que los segmentos "salten" al pasar el mouse
                             }]
                         },
                         options: {
                             responsive: true,
+                            maintainAspectRatio: false,
+                            cutout: '30%', // Más delgado = más 3D
+                            animation: {
+                                animateRotate: true,
+                                animateScale: true
+                            },
                             plugins: {
                                 legend: {
                                     position: 'top',
@@ -163,22 +170,22 @@
                                 title: {
                                     display: true,
                                     text: 'Servicios Biblioteca'
-                                },
-                                datalabels: {
-                                    formatter: (value, context) => {
-                                        let label = context.chart.data.labels[context.dataIndex];
-                                        return `${label}: ${value}`;
-                                    },
-                                    color: '#000',
-                                    font: {
-                                        weight: 'bold'
-                                    }
                                 }
                             }
                         },
-                        plugins: [ChartDataLabels]
+                        plugins: [{
+                            id: 'shadowEffect',
+                            beforeDraw: (chart) => {
+                                const ctx = chart.ctx;
+                                ctx.save();
+                                ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+                                ctx.shadowBlur = 10;
+                                ctx.shadowOffsetX = 4;
+                                ctx.shadowOffsetY = 6;
+                                ctx.restore();
+                            }
+                        }]
                     });
-
                 }
             });
         }

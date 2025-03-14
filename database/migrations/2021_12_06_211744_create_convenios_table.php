@@ -12,14 +12,7 @@ class CreateConveniosTable extends Migration
      * @return void
      */
     public function up()
-    {
-        //Crea la tabla de areas
-        Schema::create('areas', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre',100);
-            $table->timestamps();
-        });
-
+    {     
         //Crea la tabla de convenios
         Schema::create('convenios', function (Blueprint $table) {
             $table->id();
