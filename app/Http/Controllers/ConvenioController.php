@@ -46,14 +46,7 @@ class ConvenioController extends Controller
         ->with('convenios',$convenios);
     }
 
-    public function areasIndex(Request $request)
-    {
-        //Funcion para llamar a la vista general de areas
-        $areas=Area::all();
-        return view('admin.contenido.convenios.areas')
-        ->with('areas',$areas);
-    }
-
+   
     public function save(Request $request)
     {
         //Verificamos que el usuario tenga al menos uno de los permisos
@@ -170,56 +163,5 @@ class ConvenioController extends Controller
         return Redirect()->back()->with('msg', 'warning')->with('msj', '¡El convenio se elimino correctamente!');
 
     }
-
-
-    public function saveArea(Request $request)
-    {
-        //Verificamos que el usuario tenga al menos uno de los permisos
-        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
-            return redirect()->route('home')
-            ->with('msg', 'error')
-            ->with('msj', 'No tienes permiso para ver esta sección');
-        }
-
-        //Funcion para guardar las nuevas áreas
-        $area=new Area;
-        $area->nombre=$request->nombre;
-        $area->save();
-
-        return redirect()->route('convenios.inicio')
-        ->with('success','El Área se guardo correctamente');
-    }
-
-    public function areasUpdate(Request $request)
-    {
-        //Verificamos que el usuario tenga al menos uno de los permisos
-        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
-            return redirect()->route('home')
-            ->with('msg', 'error')
-            ->with('msj', 'No tienes permiso para ver esta sección');
-        }
-
-        //Función que modifica las áreas
-        $area=Area::find($request->id_area);
-        $area->nombre=$request->nombre;
-        $area->save();
-
-        return Redirect()->back()->with('msg', 'warning')->with('msj','¡El area se modifico correctamente!');
-    }
-
-    public function areasDestroy(Request $request)
-    {
-        //Verificamos que el usuario tenga al menos uno de los permisos
-        if (!auth()->user()->hasAnyPermission(['VIP', 'crear_convenios'])) {
-            return redirect()->route('home')
-            ->with('msg', 'error')
-            ->with('msj', 'No tienes permiso para ver esta sección');
-        }
-
-        //Función para eliminar las áreas
-        $area=Area::find($request->id_areaE);
-        $area->delete();
-
-        return Redirect()->back()->with('msg', 'warning')->with('msj','¡El area se elimino correctamente!');
-    }
+   
 }
