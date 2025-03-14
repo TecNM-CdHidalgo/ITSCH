@@ -12,6 +12,7 @@ use App\Http\Controllers\PasesController;
 use App\Http\Controllers\AdeudosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\AreasController;
 
 
 //Rutas publicas**************************************************************************
@@ -310,10 +311,12 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/convenios/inicio',[ConvenioController::class,'index'])->name('convenios.inicio');
     Route::post('contenido/convenios/guardar',[ConvenioController::class,'save'])->name('convenios.save');
     Route::get('contenido/convenios/eliminar',[ConvenioController::class,'destroy'])->name('convenios.eliminar');
-    Route::get('contenido/convenios/guardar_area',[ConvenioController::class,'saveArea'])->name('convenios.guardar.area');
-    Route::get('contenido/convenios/areas/inicio',[ConvenioController::class,'areasIndex'])->name('convenios.areas.inicio');
-    Route::get('contenido/convenios/areas/modificar',[ConvenioController::class,'areasUpdate'])->name('convenios.areas.update');
-    Route::get('contenido/convenios/areas/eliminar',[ConvenioController::class,'areasDestroy'])->name('convenios.areas.eliminar');
+   
+	//Rutas de áreas
+	Route::post('contenido/areas/guardar',[AreasController::class,'save'])->name('guardar.area');
+    Route::get('contenido/areas/inicio',[AreasController::class,'index'])->name('areas.inicio');
+    Route::get('contenido/areas/modificar',[AreasController::class,'update'])->name('areas.update');
+    Route::get('contenido/areas/eliminar',[AreasController::class,'destroy'])->name('areas.eliminar');
 
     //Rutas privadas del buzón cn
     Route::get('contenido/buzon/show',[BuzonController::class,'show'])->name('buzon.show')->middleware('permission:VIP|ver_buzon');

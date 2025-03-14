@@ -115,8 +115,10 @@
                                             @canany(['VIP', 'ver_transparencia'])
                                                 <a class="dropdown-item" href="{{ route('periodos.inicio') }}">Transparencia</a>
                                             @endcanany
-                                            @canany(['VIP', 'ver_usuarios'])
+                                            @canany(['VIP', 'ver_usuarios'])                                                
                                                 <a href="https://analytics.google.com/analytics/web/?authuser=2#/p307020062/realtime/overview?params=_u..nav%3Dmaui" class="dropdown-item" title="Estadisticos"><i class='far fa-chart-bar' style='font-size:14px'></i> Analitics</a>
+                                                <a href="{{route('areas.inicio')}}" class="dropdown-item">Áreas</a>
+                                                <hr>
                                                 <a href="{{route('admin.usuarios.inicio')}}" class="dropdown-item">Usuarios</a>
                                                 <a href="{{ route('admin.roles.index') }}" class="dropdown-item">Roles</a>
                                             @endcanany
@@ -246,6 +248,7 @@
                 var anio = new Date().getFullYear();
                 $("#anio").text(anio);
             });
+        </script>
 
            // Codigo para mostrar los mensajes de alertas del sistema
            {{-- Incluir el script de SweetAlert --}}

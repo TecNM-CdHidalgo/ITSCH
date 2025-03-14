@@ -6,19 +6,7 @@
             <h5> <a href="{{ route('convenios.inicio') }}">Convenios</a>/Inicio</h5>
         </div>
         <div class="col-sm-4">
-            <h6>Agregar división o departamento de impacto, dentro del ITSCH</h6>
-            <form action="{{ route('convenios.guardar.area') }}" method="get">
-                <div class="input-group ">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Nombre</span>
-                    </div>
-                    <input type="text" name="nombre" id="nombre" required class="form-control" placeholder="Departamento o división">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary btn-sm" title="Guardar"><i class="fa fa-save" style="font-size:14px;"></i></button>
-                        <a href="{{ route('convenios.areas.inicio') }}" class="btn btn-success btn-sm" title="Ver mas"><i class='fas fa-search-plus' style='font-size:14px'></i></a>
-                    </div>
-                </div>
-            </form>
+           
         </div>
         <div class="col-sm-4">
 
