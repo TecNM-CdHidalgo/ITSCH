@@ -77,7 +77,7 @@
     </h1>
 
     <p style="text-align: justify; font-size: 20px; font-family: 'Palatino Linotype', serif;">
-       Por medio de la presente se hace contsar que el (la) alumno (a) <b>{{ $alumno->alu_Nombre }} {{ $alumno->alu_ApePaterno }} {{ $alumno->alu_ApeMaterno }}</b>  de la carrera de <b>{{ $carrera->car_Nombre }}</b>  con número de control <b>{{ $alumno->alu_NumControl }}</b> en la consulta realizada el dia {{ $fecha }} <b>no presenta adeudos</b> con la institución.
+       Por medio de la presente se hace constar que el (la) alumno (a) <b>{{ $alumno->alu_Nombre }} {{ $alumno->alu_ApePaterno }} {{ $alumno->alu_ApeMaterno }}</b>  de la carrera de <b>{{ $carrera->car_Nombre }}</b>  con número de control <b>{{ $alumno->alu_NumControl }}</b> en la consulta realizada el dia {{ $fecha }} <b>no presenta adeudos</b> con la institución.
     </p>
 
     <p style="text-align: justify; font-size: 20px; font-family: 'Palatino Linotype', serif;">
