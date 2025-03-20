@@ -57,6 +57,18 @@
 				margin-right: 0;
 				margin-bottom: 10px;
 			}
+			.nombre-puesto {				
+				font-size: 17px;				
+			}
+
+			.contacto {
+				font-size: 13px;				
+			}
+			
+			#organigrama {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 	</style>
 @endsection
@@ -267,7 +279,7 @@
 	<div class="row text-center">
 		<div class="col-md-12">
 			<h1>Organigrama</h1>
-			<img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}">
+			<img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}" id="organigrama" alt="Organigrama del Instituto Tecnológico Superior de Ciudad Hidalgo">
 		</div>
 	</div>	
 	<br>
