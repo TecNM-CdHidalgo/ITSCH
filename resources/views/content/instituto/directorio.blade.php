@@ -1,194 +1,258 @@
 @extends('layouts.app')
 
+@section('title', 'Directorio')
+
+@section('css')
+	<style>
+		.directorio {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 1000px;
+			margin: auto;
+			gap: 10px;
+		}
+		.persona {
+			display: flex;
+			align-items: center;
+			border: 1px solid #ccc;
+			padding: 10px;
+			border-radius: 8px;
+			background-color: #f9f9f9;
+		}
+		.persona img {
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-right: 15px;
+		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+		}
+		.nombre-puesto {
+			font-weight: bold;
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+		.contacto {
+			font-size: 16px;
+			color: #555;
+		}
+	</style>
+@endsection
+
 @section('content')
 
-<div class="row">
-	<!-- Article main content -->
-	<article class="col-md-8 maincontent">
-		<header class="page-header">
-			<h1 class="page-title">El ITSCH:</h1>
-		</header>
-        <p align="center" style="margin:30px auto 35px auto"><img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}"></p>
-        <hr class="red">
-		<h3>1.&nbsp;&nbsp;&nbsp; Mtro. Javier Irepan Hacha. Director general</h3>
-		<p>&nbsp;
-			</p>
-		<h4 style="margin-left: 49.65pt;">
-			2.&nbsp;&nbsp;&nbsp; C.P. Verónica Durán Martínez. Directora de Planeaci&oacute;n y Vinculaci&oacute;n</h4>
-		<p>&nbsp;
-			</p>
-		<h4 style="margin-left: 70.9pt;">
-			3.&nbsp;&nbsp;&nbsp; ING. Ricardo Antonio Moreno Ruiz. Subdirector de planeación</h4>
-		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp; CP. Ma Angélica Olayo Álvarez. Departamento de Planeaci&oacute;n, Programaci&oacute;n y Presupuesto</p>
-		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp; Arq. Luis Emmanuel Garfias Tello. Jefe del departamento de Estad&iacute;stica, Evaluaci&oacute;n y Calidad</p>
-		<p style="margin-left:92.15pt;">
-			c.&nbsp;&nbsp;&nbsp; Ing. Daniel Aguilar Espino. Departamento de Servicios Escolares</p>
-		<p style="margin-left:92.15pt;">&nbsp;
-			</p>
-		<h4 style="margin-left: 70.9pt;">
-			4.&nbsp;&nbsp;&nbsp;????.  Subdirectora de Administración y Finanzas</h4>
-		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp; LCF. Maria Elena Patiño Martinez. Departamento de Contabilidad y Recursos Financieros</p>
-		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp;L.A.E.  Juan Andrés Ayala Santana. Departamento de Recursos Materiales y Servicios</p>
-		<p style="margin-left:92.15pt;">
-			c.&nbsp;&nbsp;&nbsp;ING. Alejandro Romero Estrada. Departamento de Recursos Humanos</p>
-		    <BR>
-		<h4 style="margin-left: 49.65pt;">
-			5. &nbsp;&nbsp;&nbsp;MTRO. Juan José Maldonado García . Director Acad&eacute;mico</h4>
-		<p style="margin-left:49.65pt;">&nbsp;
-			</p>
-		<h4 style="margin-left: 70.9pt;">
-			6. &nbsp;&nbsp;&nbsp; ISC. Oscar Delgado Camacho. Subdirector academico.
-           </h4>
-		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp;Ing. Brenda Mercedes Camacho Medina. Jefa de la Divisi&oacute;n de Ingenier&iacute;a Industrial</p>
-		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp;ISC. José Iraic Alcántar Alcántar. (Encargado) Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Sistemas Computacionales</p>
-		<p style="margin-left:92.15pt;">
-			c.&nbsp;&nbsp;&nbsp;MC. Guillermo Capistrano Zúñiga Neria. Jefe de la Divisi&oacute;n de Ingenier&iacute;a Mecatr&oacute;nica</p>
-		<p style="margin-left:92.15pt;">
-			d.&nbsp;&nbsp;&nbsp;MC. Lizeth Yazmin Soria Leal.  Jefa de la Divisi&oacute;n de Ingenier&iacute;a Bioqu&iacute;mica</p>
-		<p style="margin-left:92.15pt;">
-			e.&nbsp;&nbsp;&nbsp;MTI.Armando L&oacute;pez Hern&aacute;ndez. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n y Comunicaciones</p>
-		<p style="margin-left:92.15pt;">
-			f.&nbsp;&nbsp;&nbsp;C.P. Nancy Pérez Reyes. Jefa de la Divisi&oacute;n de Ingenier&iacute;a en Gesti&oacute;n Empresarial</p>
-		<p style="margin-left:92.15pt;">
-		    g.&nbsp;&nbsp;&nbsp;Dr. Ernesto Rodríguez Andrade. Jefe de la Divisi&oacute;n de Ingenier&iacute;a en Nanotecnolog&iacute;a</p>
-
-		<p style="margin-left:92.15pt;">&nbsp;
-			</p>
-		<h4 style="margin-left: 70.9pt;">
-			7.&nbsp;&nbsp;&nbsp;Dr. Mauricio Nahuam Chavez Aviles. (Encargado) Subdirector de Investigaci&oacute;n y Posgrado</h4>
-		<p style="margin-left:92.15pt;">
-			a.&nbsp;&nbsp;&nbsp;IQ. Walter Ivan Cortéz Cruz.  Departamento de Investigaci&oacute;n y Ciencias B&aacute;sicas</p>
-		<p style="margin-left:92.15pt;">
-			b.&nbsp;&nbsp;&nbsp; MTRA. Gabriela Medina Peña. Departamento de Desarrollo Acad&eacute;mico y Educaci&oacute;n Continua</p>
-		<p style="margin-left:92.15pt;">
-			c.&nbsp;&nbsp;&nbsp;LPE. Maria de Lourdes Sánchez Mora. Departamento de Tutor&iacute;as y Servicios Psicopedag&oacute;gicos</p>
-		<p style="margin-left:92.15pt;">&nbsp;</p>
-
-		<h4 style="margin-left: 70.9pt;">8.&nbsp;&nbsp;&nbsp;??????.  Subdirector de Gesti&oacute;n Tecnol&oacute;gica y Vinculaci&oacute;n</h4>
-		<p style="margin-left:92.15pt;">a.&nbsp;&nbsp;&nbsp;LMV. Leopoldo Maldonado Sandoval. Departamento de Comunicaci&oacute;n y Vinculaci&oacute;n</p>
-		<p style="margin-left:92.15pt;">b.&nbsp;&nbsp;&nbsp;Tec. David Aguilar Espino. Departamento de Extensi&oacute;n Educativa</p>
-		<p style="margin-left:92.15pt;">c.&nbsp;&nbsp;&nbsp;C. Héctor Edmundo Isidro García.  Departamento de Centro de Negocios</p>
-		<p style="margin-left:92.15pt;">&nbsp;</p>
-
-		<h4 style="margin-left: 49.65pt;">
-		<h3 class="text-center" style="margin-top:60px;">DOCENTES</h3>
-		<hr />
-
-		<h4 class="text-center"><strong><span>DIV. DE ING. EN SIST. COMP.</span></strong></h4>
-		<p align="center">SOLORZANO SOLORZANO ARMANDO</p>
-		<p align="center">P&Eacute;REZ MAR&Iacute;N HORACIO</p>
-		<p align="center">JUAN CARLOS MADRIGAL P&Eacute;REZ</p>
-		<p align="center">RAMIREZ VARGAS ERIK AUGUSTO</p>
-		<p align="center">ESCOBAR MENDOZA ERIC</p>
-		<p align="center">CHAVEZ MARCIAL MARIELA</p>
-		<p align="center">ARREOLA MAR&Iacute;N MAR&Iacute;A ESMERALDA</p>
-        <p align="center">ESMERALDA DELGADO PÉREZ</p>
-
-		<p align="center">&nbsp;
-			</p>
-
-            <h4 class="text-center"><strong><span> DIV. DE ING. EN NANOTECNOLOGÍA </span></strong></h4>
-
-            <p align="center">ACOSTA NAVARRETE YANED MILAGROS</p>
-            <p align="center">CHÁVEZ ARELLANO JOAQUÍN</p>
-            <p align="center">LUQUE MURILLO JUAN MANUEL</p>
-            <p align="center">VILLALPANDO NIEVES MARIO ALEJANDRO </p>
-
-            <br>
-
-		<p align="center">
-
-		<h4 class="text-center"><span><strong>DIV. DE ING. BIOQU&Iacute;MICA</strong></span></h4>
-		<p align="center">P&Eacute;REZ P&Eacute;REZ RUB&Eacute;N</p>
-		<p align="center">BARTOLO GUZM&Aacute;N CINTHIA YANELI</p>
-		<p align="center">PAULA ITZEL BAUTISTA ORTEGA</p>
-		<p align="center">MADRIGAL P&Eacute;REZ LUIS ALBERTO</p>
-		<p align="center">OROZCO MONTES SALVADOR</p>
-		<p align="center">LEÓN MARQUEZ YHOANA LAURA</p>
-        <p align="center">INVING HERNÁNDEZ HERNÁNDEZ</p>
-		<p align="center">&nbsp;</p>
-
-
-		<h4 class="text-center"><span><strong>DIV. DE ING. EN GEST. EMP.</strong></span></h4>
-		<p align="center">ANAÍ GRACIELA ARITZMENDI HERNÁNDEZ </p>
-		<p align="center">VANESSA ALEJANDRA DELGADO MAY</p>
-		<p align="center">EMMANUEL MEDINA SUÁREZ</p>
-		<p align="center">ALEJANDRA MENDOZA REYNOSO</p>
-		<p align="center">ALEJANDRO HERNÁNDEZ GONZÁLEZ</p>
-		<p align="center">ESTEBAN GARCÍA RAMÍREZ</p>
-		<p align="center">SUSANA REYES VÁZQUEZ</p>
-		<p align="center">BLANCA ESTELA URBINA ROSAS</p>
-        <p align="center">JANETH PÉREZ MARTÍNEZ</p>
-        <p align="center">SUSANA REYES VÁZQUEZ</p>
-        <p align="center">JULIO CESAR SOLÍS PARRA</p>
-        <p align="center">ARACELI SANCHEZ MONTOYA</p>
-        <p align="center">MARTÍN MARÍN GONZÁLEZ</p>
-		<br><br>
-
-
-		<h4 class="text-center"><strong><span>DIV. DE ING. EN TIC&acute;S</span></strong></h4>
-
-		<p align="center">RUIZ MART&Iacute;NEZ MIGUEL &Aacute;NGEL</p>
-		<p align="center">GUTI&Eacute;RREZ RUIZ MAR&Iacute;A ELENA</p>
-		<p align="center">MORENO RUIZ ZINTHIA</p>
-		<p align="center">RIVERA RUÍZ EMMA YESENIA</p>
-
-		<p align="center">&nbsp;
-			</p>
-
-
-		<h4 class="text-center"><strong><span>DIV. DE ING. INDUSTRIAL</span></strong></h4>
-		<p align="center">AGUILAR GONZ&Aacute;LEZ ALMA LETICIA</p>
-		<p align="center">GARDUÑO ARAG&Oacute;N JOS&Eacute; LUIS</p>
-		<p align="center">EDGAR CUEVAS ALVARES</p>
-		<p align="center">MEDINA ESPINO SONIA</p>
-		<p align="center">MENDIOLA GARC&Iacute;A VIRGINIA</p>
-		<p align="center">MORA GARC&Iacute;A EDGAR</p>
-		<p align="center">MORALES MART&Iacute;NEZ JOS&Eacute; &Aacute;NGEL</p>
-		<p align="center">PATIÑO ANTONIO BLANCA ESTELA</p>
-		<p align="center">P&Eacute;REZ MORA JOS&Eacute; CARLOS</p>
-		<p align="center">REYES MART&Iacute;NEZ YAZM&Iacute;N ELIZABETH</p>
-		<p align="center">REYES V&Aacute;ZQUEZ JULIO ENRIQUE</p>
-		<p align="center">VARGAS PIMENTEL NATANAEL</p>
-        <p align="center">GARCÍA ESQUIVEL BRENDA VIANEY </p>
-		<BR>
-
-
-		<h4 class="text-center"><strong><span>DIVISI&Oacute;N DE ING. MECATR&Oacute;NICA</span></strong></h4>
-
-		<p align="center">ERIC GONZÁLEZ VALLEJO</p>
-        <p align="center">CRISTOPHER MARTA GUTIÉRREZ</p>
-		<p align="center">MEDINA PARRA H&Eacute;CTOR ROM&Aacute;N</p>
-		<p align="center">GUILLEN ARROYO JUAN JAVIER</p>
-		<p align="center">HERNÁNDEZ PARDO FERNANDO</p>
-		<p align="center">ALONSO GAETA REYNALDO</p>
-		<p align="center">BARRERA GARCÍA ISAAC</p>
-		<p align="center">G&Oacute;MEZ CORREA JOSE SAMUEL</p>
-		<p align="center">CASARRUBIAS GUERRERO GABRIEL</p>
-		<p align="center">VALD&Eacute;S MADRIGAL MANUEL ALEJANDRO</p>
-        <p align="center">ERIC OMAR SOTO LAFLOR</p>
-
-
-		<BR>
-
-		<h4 class="text-center"><strong><span>CIENCIAS BÁSICAS</span></strong></h4>
-
-		<p align="center">ESPINO MORALES EMILIANO</p>
-		<p align="center">ESPINO SANPEDRO RAFAEL</p>
-		<p align="center">NOÉ ORTEGA SÁNCHEZ</p>
-		<p align="center">BARAJAS MENDIOLA ARTURO</p>
-		<p align="center">DURÁN SOTO ELEAZAR</p>
-        <p align="center">TAPIA REYNOSO SAÚL</p>
-        <p align="center">ESPINO SANPEDRO RAFAEL</p>
-	</article>
-	<!-- /Article -->
-</div>
-
-
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">								
+				<h1>Directorio</h1>
+				<p>En esta sección se muestra el directorio del Instituto Tecnológico Superior de Ciudad Hidalgo.</p>
+				<p>Para mayor información, favor de comunicarse al teléfono (786) 1549000</p>
+				<div class="directorio">
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Mtro. José Trinidad Lara López - Director General</div>
+							<div class="contacto">Correo: <a href="direccion_general@cdhidalgo.tecnm.mx">direccion_general@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 102</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Mtra. Veronica Durán Martinez - Directora de planeación y Vinvulación</div>
+							<div class="contacto">Correo: <a href="direccion_planeacion@cdhidalgo.tecnm.mx">direccion_planeacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 121</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto"> Mtro. Juan José Maldonado García - Director Académico</div>
+							<div class="contacto">Correo: <a href="direccion_academica@cdhidalgo.tecnm.mx">direccion_academica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 106</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Isc. Oscar Delgado Camacho - Subdirector academico.</div>
+							<div class="contacto">Correo: <a href="subdireccion_academica@cdhidalgo.tecnm.mx">subdireccion_academica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 128</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">ING. Ricardo Antonio Moreno Ruiz - Subdirector de planeación</div>
+							<div class="contacto">Correo: <a href="subdireccion_planeacion@cdhidalgo.tecnm.mx">subdireccion_planeacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 119</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">CP. Vianeth Camacho García - Subdirectora de Administración y Finanzas</div>
+							<div class="contacto">Correo: <a href="subdireccion_administracion@cdhidalgo.tecnm.mx">subdireccion_administracion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 112</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">MTRA. Emma Yesenia Rivera Ruiz - (Encargada) Subdirección de Gestión Tecnológica y Vinculación</div>
+							<div class="contacto">Correo: <a href="subdireccion_vinculacion@cdhidalgo.tecnm.mx">subdireccion_vinculacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 174</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Dr. Mauricio Nahuam Chavez Aviles - (Encargado) Subdirector de Investigación y Posgrado</div>
+							<div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 105</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Ing. Natanael Vargas Pimentel - Jefe de la División de Ingeniería Industrial</div>
+							<div class="contacto">Correo: <a href="industrial@cdhidalgo.tecnm.mx">industrial@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 133</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Isc. José Iraic Alcántar Alcántar - (Encargado) Jefe de la División de Ingeniería en Sistemas Computacionales</div>
+							<div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 129</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">MC. Guillermo Capistrano Zúñiga Neria - Jefe de la División de Ingeniería Mecatrónica</div>
+							<div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 134</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">MC. Lizeth Yazmin Soria Leal - Jefa de la División de Ingeniería Bioquímica</div>
+							<div class="contacto">Correo: <a href="bioquimica@cdhidalgo.tecnm.mx">bioquimica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 108</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">MTI.Armando López Hernández - Jefe de la División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
+							<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 109</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">C.P. Nancy Pérez Reyes - Jefa de la División de Ingeniería en Gestión Empresarial</div>
+							<div class="contacto">Correo: <a href="gestion_empresarial@cdhidalgo.tecnm.mx">gestion_empresarial@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 130</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Dr. Ernesto Rodríguez Andrade - Jefe de la División de Ingeniería en Nanotecnología</div>
+							<div class="contacto">Correo: <a href="nanotecnologia@cdhidalgo.tecnm.mx">nanotecnologia@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 150</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">C. Alejandra Gutiérrez Bolaños - Departamento de Planeación, Programación y Presupuesto</div>
+							<div class="contacto">Correo: <a href="programacion_presupuesto@cdhidalgo.tecnm.mx">programacion_presupuesto@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 120</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Arq. Luis Emmanuel Garfias Tello - Jefe del departamento de Estadística, Evaluación y Calidad</div>
+							<div class="contacto">Correo: <a href="estadistica_evaluacion@cdhidalgo.tecnm.mx">estadistica_evaluacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 118</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Ing. Daniel Aguilar Espino - Departamento de Servicios Escolares</div>
+							<div class="contacto">Correo: <a href="servicios_escolares@cdhidalgo.tecnm.mx">estservicios_escolares@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 153</div>
+						</div>
+					</div>					
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">LCF. Maria Elena Patiño Martinez - Departamento de Contabilidad y Recursos Financieros</div>
+							<div class="contacto">Correo: <a href="contabilidad_recursos@cdhidalgo.tecnm.mx">contabilidad_recursos@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 114</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">C. Claudia Leyva Altamirano - Departamento de Recursos Humanos</div>
+							<div class="contacto">Correo: <a href="recursos_humanos@cdhidalgo.tecnm.mx">recursos_humanos@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 115</div>
+						</div>
+					</div>	
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto"> Ing. Alejandro Romero Estrada - Departamento de Recursos Materiales y Servicios</div>
+							<div class="contacto">Correo: <a href="recursos_materiales@cdhidalgo.tecnm.mx">recursos_materiales@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 116</div>
+						</div>
+					</div>					
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto"> IQ. Walter Ivan Cortéz Cruz - Departamento de Investigación y Ciencias Básicas</div>
+							<div class="contacto">Correo: <a href="invest_ciencias_basicas@cdhidalgo.tecnm.mx">invest_ciencias_basicas@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 159</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">MTRA. Gabriela Medina Peña - Departamento de Desarrollo Académico y Educación Continua</div>
+							<div class="contacto">Correo: <a href="desarrollo_academico@cdhidalgo.tecnm.mx">desarrollo_academico@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 110</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">LPE. Maria de Lourdes Sánchez Mora - Departamento de Tutorías y Servicios Psicopedagógicos</div>
+							<div class="contacto">Correo: <a href="tutorias@cdhidalgo.tecnm.mx">tutorias@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 156</div>
+						</div>
+					</div>					
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">LMV. Leopoldo Maldonado Sandoval - Departamento de Comunicación y Vinculación</div>
+							<div class="contacto">Correo: <a href="com_vinculacion@cdhidalgo.tecnm.mx">com_vinculacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 175</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Tec. David Aguilar Espino - Departamento de Extensión Educativa</div>
+							<div class="contacto">Correo: <a href="ext_educativa@cdhidalgo.tecnm.mx">ext_educativa@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 179</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">C. Héctor Edmundo Isidro García - Departamento de Centro de Negocios</div>
+							<div class="contacto">Correo: <a href="centro_negocios@cdhidalgo.tecnm.mx">centro_negocios@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 180</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row text-center">
+		<div class="col-md-12">
+			<h1>Organigrama</h1>
+			<img src="{{asset('images/content/instituto/directorio/organigrama.jpeg')}}">
+		</div>
+	</div>	
+	<br>
+	<br>
 @endsection
