@@ -12,6 +12,7 @@
 			margin: auto;
 			gap: 10px;
 		}
+
 		.persona {
 			display: flex;
 			align-items: center;
@@ -20,6 +21,7 @@
 			border-radius: 8px;
 			background-color: #f9f9f9;
 		}
+
 		.persona img {
 			width: 90px;
 			height: 90px;
@@ -27,19 +29,34 @@
 			object-fit: cover;
 			margin-right: 15px;
 		}
+
 		.info {
 			display: flex;
 			flex-direction: column;
 			text-align: left;
 		}
+
 		.nombre-puesto {
 			font-weight: bold;
 			font-size: 20px;
 			margin-bottom: 5px;
 		}
+
 		.contacto {
 			font-size: 16px;
 			color: #555;
+		}
+		
+		/* Estilos para hacerlo responsive */
+		@media (max-width: 768px) {
+			.persona {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.persona img {
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
 		}
 	</style>
 @endsection
