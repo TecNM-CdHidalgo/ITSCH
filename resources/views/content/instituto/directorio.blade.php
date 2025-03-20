@@ -83,7 +83,7 @@
 				<p>Para mayor información, favor de comunicarse al teléfono (786) 1549000</p>
 				<div class="directorio">
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Mtro. José Trinidad Lara López - Director General</div>
 							<div class="contacto">Correo: <a href="direccion_general@cdhidalgo.tecnm.mx">direccion_general@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 102</div>
@@ -97,21 +97,21 @@
 						</div>
 					</div>	
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto"> Mtro. Juan José Maldonado García - Director Académico</div>
 							<div class="contacto">Correo: <a href="direccion_academica@cdhidalgo.tecnm.mx">direccion_academica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 106</div>
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Isc. Oscar Delgado Camacho - Subdirector academico.</div>
 							<div class="contacto">Correo: <a href="subdireccion_academica@cdhidalgo.tecnm.mx">subdireccion_academica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 128</div>
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">ING. Ricardo Antonio Moreno Ruiz - Subdirector de planeación</div>
 							<div class="contacto">Correo: <a href="subdireccion_planeacion@cdhidalgo.tecnm.mx">subdireccion_planeacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 119</div>
@@ -132,28 +132,28 @@
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Dr. Mauricio Nahuam Chavez Aviles - Subdirector de Investigación y Posgrado</div>
 							<div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 105</div>
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Ing. Natanael Vargas Pimentel - Jefe de la División de Ingeniería Industrial</div>
 							<div class="contacto">Correo: <a href="industrial@cdhidalgo.tecnm.mx">industrial@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 133</div>
 						</div>
 					</div>	
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Isc. José Iraic Alcántar Alcántar - Jefe de la División de Ingeniería en Sistemas Computacionales</div>
 							<div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 129</div>
 						</div>
 					</div>	
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">MC. Guillermo Capistrano Zúñiga Neria - Jefe de la División de Ingeniería Mecatrónica</div>
 							<div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 134</div>
@@ -167,7 +167,7 @@
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">MTI.Armando López Hernández - Jefe de la División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
 							<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 109</div>
@@ -181,7 +181,7 @@
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Dr. Ernesto Rodríguez Andrade - Jefe de la División de Ingeniería en Nanotecnología</div>
 							<div class="contacto">Correo: <a href="nanotecnologia@cdhidalgo.tecnm.mx">nanotecnologia@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 150</div>
@@ -195,14 +195,14 @@
 						</div>
 					</div>	
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Arq. Luis Emmanuel Garfias Tello - Jefe del departamento de Estadística, Evaluación y Calidad</div>
 							<div class="contacto">Correo: <a href="estadistica_evaluacion@cdhidalgo.tecnm.mx">estadistica_evaluacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 118</div>
 						</div>
 					</div>	
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Ing. Daniel Aguilar Espino - Departamento de Servicios Escolares</div>
 							<div class="contacto">Correo: <a href="servicios_escolares@cdhidalgo.tecnm.mx">estservicios_escolares@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 153</div>
@@ -223,14 +223,14 @@
 						</div>
 					</div>	
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto"> Ing. Alejandro Romero Estrada - Departamento de Recursos Materiales y Servicios</div>
 							<div class="contacto">Correo: <a href="recursos_materiales@cdhidalgo.tecnm.mx">recursos_materiales@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 116</div>
 						</div>
 					</div>					
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto"> IQ. Walter Ivan Cortéz Cruz - Departamento de Investigación y Ciencias Básicas</div>
 							<div class="contacto">Correo: <a href="invest_ciencias_basicas@cdhidalgo.tecnm.mx">invest_ciencias_basicas@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 159</div>
@@ -251,21 +251,21 @@
 						</div>
 					</div>					
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">LMV. Leopoldo Maldonado Sandoval - Departamento de Comunicación y Vinculación</div>
 							<div class="contacto">Correo: <a href="com_vinculacion@cdhidalgo.tecnm.mx">com_vinculacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 175</div>
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">Tec. David Aguilar Espino - Departamento de Extensión Educativa</div>
 							<div class="contacto">Correo: <a href="ext_educativa@cdhidalgo.tecnm.mx">ext_educativa@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 179</div>
 						</div>
 					</div>
 					<div class="persona">
-						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">C. Héctor Edmundo Isidro García - Departamento de Centro de Negocios</div>
 							<div class="contacto">Correo: <a href="centro_negocios@cdhidalgo.tecnm.mx">centro_negocios@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 180</div>
