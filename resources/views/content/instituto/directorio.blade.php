@@ -91,7 +91,7 @@
 					<div class="persona">
 						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">CP. Vianeth Camacho García - Subdirectora de Administración y Finanzas</div>
+							<div class="nombre-puesto">CP. Vianeth Camacho García - (Encargada) Subdirección de Administración y Finanzas</div>
 							<div class="contacto">Correo: <a href="subdireccion_administracion@cdhidalgo.tecnm.mx">subdireccion_administracion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 112</div>
 						</div>
 					</div>	
@@ -105,7 +105,7 @@
 					<div class="persona">
 						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">Dr. Mauricio Nahuam Chavez Aviles - (Encargado) Subdirector de Investigación y Posgrado</div>
+							<div class="nombre-puesto">Dr. Mauricio Nahuam Chavez Aviles - Subdirector de Investigación y Posgrado</div>
 							<div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 105</div>
 						</div>
 					</div>
@@ -119,7 +119,7 @@
 					<div class="persona">
 						<img src="{{asset('images/user.png')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">Isc. José Iraic Alcántar Alcántar - (Encargado) Jefe de la División de Ingeniería en Sistemas Computacionales</div>
+							<div class="nombre-puesto">Isc. José Iraic Alcántar Alcántar - Jefe de la División de Ingeniería en Sistemas Computacionales</div>
 							<div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 129</div>
 						</div>
 					</div>	
@@ -161,7 +161,7 @@
 					<div class="persona">
 						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">C. Alejandra Gutiérrez Bolaños - Departamento de Planeación, Programación y Presupuesto</div>
+							<div class="nombre-puesto">C. Alejandra Gutiérrez Bolaños - (Encargada) Departamento de Planeación, Programación y Presupuesto</div>
 							<div class="contacto">Correo: <a href="programacion_presupuesto@cdhidalgo.tecnm.mx">programacion_presupuesto@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 120</div>
 						</div>
 					</div>	
