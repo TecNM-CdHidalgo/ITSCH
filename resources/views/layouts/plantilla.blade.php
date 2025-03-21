@@ -1,9 +1,11 @@
 {{--Encabezado principal--}}
 <br><br><br>
-<div class="row encab">
+
+<div class="row enc">
   {{--Imagenes de gobierno--}}
-  <div class="col-sm-7">
-        <div class="row encab">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-5">
+        <!-- <div class="row encab">
             <div class="col-sm-1"></div>
             <div class="col-sm-3">
                 <a href="https://www.gob.mx/sep" target="_blank" id="placa_2">
@@ -28,9 +30,32 @@
                     <img style="width: 30%" src="{{ asset('images/itsch.jpg') }}" alt="ITSCH">
                 </a>
             </div>
+        </div> -->
+        <div class="d-inline-flex align-items-center" style="height: 80px;">
+
+                <a href="https://www.gob.mx/sep" target="_blank">
+                    <img class="img-fluid" src="{{ asset('images/campanas/sep.png') }}" alt="Educación">
+                </a>
+                <div class="m-4">
+                    <img class="img-fluid" src="{{ asset('images/campanas/bar.png') }}" alt="separador">
+                </div>
+                <a href="https://www.michoacan.gob.mx" target="_blank">
+                    <img class="img-fluid" src="{{ asset('images/campanas/mich.png') }}" alt="Michoacan">
+                </a>
+                <span class="m-4">
+                    <img class="img-fluid" src="{{ asset('images/campanas/bar.png') }}" alt="separador">
+                </span>
+                <a href="https://www.tecnm.mx" target="_blank">
+                    <img class="img-fluid" src="{{ asset('images/campanas/tecnm.png') }}" alt="TecNM">
+                </a>
+                <div class="ml-4">&nbsp;</div>
+                <a href="https://www.cdhidalgo.tecnm.mx">
+                    <img class="img-fluid" src="{{ asset('images/campanas/itsch.png') }}" alt="ITSCH">
+                </a>
+
         </div>
   </div>
-
+  <div class="col-sm-1"></div>
   {{--Banderas--}}
   <div class="col-sm-5">
         <br>
