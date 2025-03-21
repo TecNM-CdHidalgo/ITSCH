@@ -53,6 +53,8 @@
         {{--CSS Propios--}}
         <link href="{{asset('cssPropios/estilos.css')}}" rel="stylesheet">
 
+
+
         {{--Script para modificar el tamaño de la letra de la pagina--}}
         <script>
             var fontSize = 1;
@@ -109,6 +111,10 @@
         </script>
         {{-- Sección para agregar css por pagina --}}
         @yield('css')
+
+        {{-- Accesibilidad Gobierno --}}
+        <link href="https://framework-gb.cdn.gob.mx/gm/accesibilidad/css/gobmx-accesibilidad.min.css" rel="stylesheet">
+
     </head>
 
     <body style="overflow-x: hidden;">
@@ -187,6 +193,9 @@
 
         {{-- Seccion para los js por pagina--}}
         @yield('js')
+
+        {{-- Accesibilidad Gobierno --}}
+        <script src="https://framework-gb.cdn.gob.mx/gm/accesibilidad/js/gobmx-accesibilidad.min.js"></script>
 
     </body>
 
