@@ -130,7 +130,8 @@
 
 /*Color del menu de gobierno*/
 #menuGob{
-    background-color: #13322B;
+    background-color: #611232 ;
+    /* background-color: #13322B; */
     /*background-color:#393C3E;*/
     color: #FFF important;
 
@@ -222,12 +223,13 @@
 .footer-pleca {
     background-color: #12322B;
     /*background-color: #393C3E;*/
-    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
+    background-image: url(https://framework-gb.cdn.gob.mx/gobmx/img/pleca.svg);
     background-repeat: repeat-x;
 }
 
 .main-footer {
-    background-color: #13322B;
+    background-color: #611232;
+    /* background-color: #13322B; */
     /*background-color: #393C3E;*/
     min-height: 56px;
     color: #FFF;
