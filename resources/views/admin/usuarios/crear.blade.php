@@ -32,6 +32,16 @@
       <label for="contra2">Confirmar contrase&ntilde;a</label>
       <input name="confirm" type="password" class="form-control" id="contra2" placeholder="Escriba la contrase&ntilde;a nuevamente" required>
     </div>
+    <div class="from-group">
+      <label for="tipo">Tipo de Usuario</label>
+      <select name="tipo" id="tipo" class="form-control" required>       
+            <option value="invitado">Invitado</option>
+            <option value="jefe" selected>Jefe</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="docente">Docente</option>           
+      </select>
+    </div>
+    <br>
     <button name="" type="submit" class="btn btn-primary">Guardar</button>
   </form>
   <div style="padding: 100px;"></div>

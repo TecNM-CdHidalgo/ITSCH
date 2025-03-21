@@ -62,6 +62,8 @@ class RolesPermisosSeeder extends Seeder
             'crear_pases',
             'editar_pases',
             'eliminar_pases',
+            'verificar_pases',
+            'solicitar_pases',
             'ver_noticias',
             'crear_noticias',
             'editar_noticias',

@@ -17,19 +17,11 @@
     </div>
     <div class="from-group">
       <label for="tipo">Tipo de Usuario</label>
-      <select name="tipo" id="tipo" class="form-control">
-        @if ($usuario->tipo == "administrador")
-            <option value="administrador">Administrador</option>
-            <option value="editor" selected>Editor</option>
-            <option value="academica">Académica</option>
-            <option value="planeacion">Planeación</option>
-            <option value="vinculacion">Vinculación</option>
-            <option value="capturista">Capturista</option>
-        @else
-            <option value="vinculacion">Vinculación</option>
-            <option value="capturista">Capturista</option>
-        @endif
-
+      <select name="tipo" id="tipo" class="form-control">       
+            <option value="invitado">Invitado</option>
+            <option value="jefe" selected>Jefe</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="docente">Docente</option>           
       </select>
     </div>
     <div class="form-group">

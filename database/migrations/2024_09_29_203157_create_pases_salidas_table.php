@@ -20,6 +20,8 @@ return new class extends Migration
             $table->time('hora_salida'); // Hora de salida
             $table->time('hora_retorno')->nullable(); // Hora de retorno (máximo 3 horas después)
             $table->string('motivo')->nullable(); // Motivo de la salida
+            $table->foreignId('jefe_id')->constrained('users'); // Jefe inmediato
+            $table->foreignId('area_id')->constrained('areas'); // Área a la que pertenece el usuario
             $table->enum('estado', ['pendiente', 'aprobado', 'denegado'])->default('pendiente')->nullable(); // Estado del pase
             $table->timestamps();
         });

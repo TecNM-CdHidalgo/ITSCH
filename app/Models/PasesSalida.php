@@ -15,6 +15,8 @@ class PasesSalida extends Model
         'hora_salida',
         'hora_retorno',
         'motivo',
-        'estado'
+        'estado',
+        'jefe_id',
+        'area_id'
     ];
 }

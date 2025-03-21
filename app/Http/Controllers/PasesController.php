@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Area;
 use App\Models\Departamento;
 use App\Models\PasesSalida;
+use App\User;
 
 class PasesController extends Controller
 {
@@ -14,9 +15,35 @@ class PasesController extends Controller
      */
     public function index()
     {
-        $areas = Area::all();
-        $departamentos = Departamento::all();
-        return view('admin.institucion.pases.index', compact('areas', 'departamentos'));
+        // Seleccionamos los pases de salida que tiene derecho a ver el usuario de acuerdo a los permisos
+        // Si tiene el permiso VIP vera todos los pases de salida
+        if(auth()->user()->hasPermissionTo('VIP')){
+            $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+                ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+                ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+                ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+                ->get();         
+        }
+        // Si no tiene el permiso VIP, solo vera los pases de salida donde el es el jefe
+        else if(auth()->user()->hasAnyPermission(['ver_pases', 'eliminar_pases', 'editar_pases'])){
+            $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+                ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+                ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+                ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+                ->where('pases_salidas.jefe_id', auth()->user()->id)
+                ->get(); 
+           
+        }
+        //Si tiene el permiso de solicitar pases de salida solo vera los propios
+        if(auth()->user()->hasPermissionTo('solicitar_pases')){
+            $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+                ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+                ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+                ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+                ->where('pases_salidas.user_id', auth()->user()->id)
+                ->get();          
+        }       
+        return view('admin.institucion.pases.index', compact('pases'));
     }
 
     /**
@@ -24,9 +51,9 @@ class PasesController extends Controller
      */
     public function create()
     {
-        $areas = Area::all();
-        $departamentos = Departamento::all();
-        return view('admin.institucion.pases.create', compact('areas', 'departamentos'));
+        $areas = Area::all();   
+        $jefes = User::where('tipo', 'jefe')->get();   
+        return view('admin.institucion.pases.create', compact('areas', 'jefes'));
     }
 
     /**
@@ -34,11 +61,66 @@ class PasesController extends Controller
      */
     public function store(Request $request)
     {
-
+        // Guardamos el id del usuario que solicita el pase
+        $request->merge(['user_id' => auth()->user()->id]);       
+        // Creamos el pase de salida        
         PasesSalida::create($request->all());
 
         return redirect()->route('pases.index')
-            ->with('success', 'Pase de salida creado correctamente.');
+            ->with('msg','success')
+            ->with('msj', 'Pase de salida creado correctamente.');
+    }
+
+    public function edit($id)
+    {
+        $pase = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+        ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+        ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+        ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+        ->where('pases_salidas.id', $id)
+        ->first(); 
+        $areas = Area::all();   
+        $jefes = User::where('tipo', 'jefe')->get();   
+        return view('admin.institucion.pases.edit', compact('pase', 'areas', 'jefes'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $pase = PasesSalida::find($id); 
+        $pase->update($request->all());
+        return redirect()->route('pases.index')
+            ->with('msg','success')
+            ->with('msj', 'Pase de salida actualizado correctamente.');
+    }
+
+    public function destroy($id)
+    {
+        $pase = PasesSalida::find($id);
+        $pase->delete();
+        return redirect()->route('pases.index')
+            ->with('msg','success')
+            ->with('msj', 'Pase de salida eliminado correctamente.');
+    }
+
+    public function verificar($id)
+    {
+        $pase = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+        ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+        ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+        ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+        ->where('pases_salidas.id', $id)
+        ->first(); 
+        return view('admin.institucion.pases.verificar', compact('pase'));
+    }
+
+    public function estadisticos()
+    {
+        $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+            ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+            ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+            ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+            ->get();
+        return view('admin.institucion.pases.estadisticos', compact('pases'));
     }
 
 
