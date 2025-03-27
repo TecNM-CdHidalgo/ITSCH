@@ -341,6 +341,7 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('institucion/pases/destroy/{id}',[PasesController::class,'destroy'])->name('pases.destroy')->middleware('permission:VIP|eliminar_pases');
 	Route::get('institucion/pases/verificar/{id}',[PasesController::class,'verificar'])->name('pases.verificar')->middleware('permission:VIP|verificar_pases');
 	Route::get('institucion/pases/estadisticos',[PasesController::class,'estadisticos'])->name('pases.estadisticos')->middleware('permission:VIP|verificar_pases');
+	Route::get('institucion/pases/estadisticos/generar',[PasesController::class,'estadisticosGenerar'])->name('pases.estadisticos.generar')->middleware('permission:VIP|verificar_pases');
 
 
 	//Rutas de los adeudos

@@ -47,7 +47,7 @@
                                 <input type="time" class="form-control" id="hora_salida" name="hora_salida" value="{{ $pase->hora_salida }}" >
                             </div>
                             {{-- La hora de regreso solo el jefe la puede modificar --}}
-                            @if (auth()->user()->tipo == 'jefe' && auth()->user()->id == $pase->jefe_id)                              
+                            @if (auth()->user()->hasAnyPermission(['verificar_pases', 'VIP']) || auth()->user()->id == $pase->jefe_id)                              
                                 <div class="form-group ">
                                     <label for="fecha_respuesta">Hora de regreso</label>
                                     <input type="time" class="form-control" id="hora_retorno" name="hora_retorno" value="{{ $pase->hora_retorno }}" >
@@ -57,7 +57,7 @@
                                 <label for="fecha_respuesta">Razones detalladas (Minimo 3 palabras)</label>
                                 <input type="text" class="form-control" id="motivo" name="motivo" value="{{ $pase->motivo }}" >
                             </div>
-                            @if (auth()->user()->tipo == 'jefe' && auth()->user()->id == $pase->jefe_id)  
+                            @if (auth()->user()->hasAnyPermission(['verificar_pases', 'VIP']) || auth()->user()->id == $pase->jefe_id)  
                                 <div class="form-group ">
                                     <label for="estado">Estado</label>
                                     <select class="form-control" id="estado" name="estado">

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Area;
 use App\Models\Departamento;
 use App\Models\PasesSalida;
+use Illuminate\Support\Facades\DB;
 use App\User;
 
 class PasesController extends Controller
@@ -120,8 +121,37 @@ class PasesController extends Controller
             ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
             ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
             ->get();
-        return view('admin.institucion.pases.estadisticos', compact('pases'));
+        $areas = Area::all();
+        return view('admin.institucion.pases.estadisticos', compact('pases', 'areas'));
     }
+
+    public function estadisticosGenerar(Request $request)
+    {
+        if ($request->area_id == 0) {
+            // Si es 0, agrupa por área
+            $pases = PasesSalida::join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+                ->select('areas.nombre as nombre', DB::raw('COUNT(pases_salidas.id) as cantidad_pases'))
+                ->whereBetween('pases_salidas.fecha_solicitud', [$request->fecha_inicio, $request->fecha_fin])
+                ->groupBy('areas.id', 'areas.nombre')
+                ->orderBy('cantidad_pases', 'desc')
+                ->limit(5)
+                ->get();
+        } else {
+            // Si es un área específica, agrupa por usuarios
+            $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+                ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+                ->select('users.name as nombre', DB::raw('COUNT(pases_salidas.id) as cantidad_pases'))
+                ->where('pases_salidas.area_id', $request->area_id)
+                ->whereBetween('pases_salidas.fecha_solicitud', [$request->fecha_inicio, $request->fecha_fin])
+                ->groupBy('users.id', 'users.name')
+                ->orderBy('cantidad_pases', 'desc')
+                ->limit(5)
+                ->get();
+        }
+
+        return response()->json($pases);
+    }
+
 
 
 }

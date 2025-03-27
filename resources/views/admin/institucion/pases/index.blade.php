@@ -6,8 +6,11 @@
 
 @section('contenido')
     @section('ruta', 'Institución | Pases')
-    <a href="{{ route('pases.create') }}" class="btn btn-success" title="Agregar pase"><i class="fas fa-id-badge"></i></a>   
-    <a href="{{ route('pases.estadisticos') }}" class="btn btn-primary" title="Agregar pase"><i class="fas fa-chart-pie"></i></a>   
+    <a href="{{ route('pases.create') }}" class="btn btn-success" title="Agregar pase"><i class="fas fa-id-badge"></i></a>  
+    {{--Verificamos que el usuario tenga el permiso verificar_pases o el permiso VIP para mostrar el botón de estadísticas--}}    
+    @if(auth()->user()->hasAnyPermission(['verificar_pases', 'VIP']))
+        <a href="{{ route('pases.estadisticos') }}" class="btn btn-primary" title="Agregar pase"><i class="fas fa-chart-pie"></i></a>
+    @endif 
     <br>
     <br>
     <table class="table" id="table_pases">
@@ -34,7 +37,7 @@
                     <td>                        
                         <a href="{{ route('pases.edit', $pase->id) }}" class="btn btn-warning" title="Editar pase"><i class="fas fa-edit"></i></a>                      
                         {{--Este link colo lo mostramos al jefe del área para que pueda verificar el pase de su trabajador--}}
-                        @if (auth()->user()->tipo == 'jefe' && auth()->user()->id == $pase->jefe_id)
+                        @if (auth()->user()->hasAnyPermission(['verificar_pases', 'VIP']) || auth()->user()->id == $pase->jefe_id)
                             <form action="{{ route('pases.destroy', $pase->id) }}" method="GET" id="formEliminar" style="display: inline-block;">                                                                       
                                 <button type="button" class="btn btn-danger" title="Eliminar pase"  onclick="confirmarEliminar()"><i class="fas fa-trash-alt"></i></button>
                             </form> 
