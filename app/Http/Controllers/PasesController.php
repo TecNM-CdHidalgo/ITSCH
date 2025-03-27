@@ -7,6 +7,8 @@ use App\Models\Area;
 use App\Models\Departamento;
 use App\Models\PasesSalida;
 use Illuminate\Support\Facades\DB;
+use App\Mail\PaseAutorizacion;
+use Illuminate\Support\Facades\Mail;
 use App\User;
 
 class PasesController extends Controller
@@ -63,13 +65,26 @@ class PasesController extends Controller
     public function store(Request $request)
     {
         // Guardamos el id del usuario que solicita el pase
-        $request->merge(['user_id' => auth()->user()->id]);       
-        // Creamos el pase de salida        
-        PasesSalida::create($request->all());
+        $request->merge(['user_id' => auth()->user()->id]);
+    
+        // Creamos el pase de salida
+        $pase = PasesSalida::create($request->all());
 
+        // Obtenemos el trabajador que está realizando la solicitud
+        $trabajador = User::find(auth()->user()->id); // Obtener al trabajador que está haciendo la solicitud
+
+        // Obtenemos el jefe
+        $jefe = User::find($request->jefe_id);
+
+        // Verificamos si el jefe existe
+        if ($jefe) {
+            // Enviar correo al jefe con el nombre del trabajador que está solicitando el pase
+            Mail::to($jefe->email)->send(new PaseAutorizacion($pase, $trabajador, $jefe));
+        }       
+    
         return redirect()->route('pases.index')
             ->with('msg','success')
-            ->with('msj', 'Pase de salida creado correctamente.');
+            ->with('msj', 'Pase de salida creado correctamente y correo enviado al jefe para autorización.');
     }
 
     public function edit($id)
@@ -151,6 +166,26 @@ class PasesController extends Controller
 
         return response()->json($pases);
     }
+
+    public function autorizar($pase_id, $autorizar)
+    {
+        // Busca el pase de salida por ID
+        $pase = PasesSalida::find($pase_id); 
+
+        // Autorizar o denegar el pase según el valor de $autorizar
+        if ($autorizar === 'true') {
+            $pase->estado = 'autorizado'; // Puedes usar el estado que necesites
+        } else {
+            $pase->estado = 'denegado';
+        }
+
+        // Guarda los cambios
+        $pase->save();
+
+        // Retorna una respuesta o redirige a una página
+        return redirect()->route('inicio')->with('msg', 'El pase ha sido ' . ($autorizar === 'true' ? 'autorizado' : 'denegado') . ' correctamente.');
+    }
+
 
 
 
