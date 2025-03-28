@@ -14,7 +14,9 @@
     <p>Motivo: {{ $pase->motivo }}</p>
     
     <p>Por favor, autoriza o niega el pase a través del siguiente enlace:</p>
-    <a href="{{ route('pases.autorizar', ['pase_id' => $pase->id, 'autorizar' => 'true']) }}">Autorizar pase</a>
+    <a href="{{ route('pases.autorizar', ['pase_id' => $pase->id, 'autorizar' => 'true']) }}">Autorizar pase</a> 
+    <br>
+    <br>
     <a href="{{ route('pases.autorizar', ['pase_id' => $pase->id, 'autorizar' => 'false']) }}">Negar pase</a>
 
 </body>

@@ -25,25 +25,28 @@ class PasesController extends Controller
                 ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
                 ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
                 ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+                ->orderBy('pases_salidas.fecha_solicitud', 'desc')
                 ->get();         
         }
-        // Si no tiene el permiso VIP, solo vera los pases de salida donde el es el jefe
+        // Si es el jefe solo ve los pases de salida de su área
         else if(auth()->user()->hasAnyPermission(['ver_pases', 'eliminar_pases', 'editar_pases'])){
             $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
                 ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
                 ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
                 ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
                 ->where('pases_salidas.jefe_id', auth()->user()->id)
+                ->orderBy('pases_salidas.fecha_solicitud', 'desc')
                 ->get(); 
            
         }
-        //Si tiene el permiso de solicitar pases de salida solo vera los propios
+        //Si es un trabajador normal, solo ve sus priopios pases de salida
         if(auth()->user()->hasPermissionTo('solicitar_pases')){
             $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
                 ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
                 ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
                 ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
                 ->where('pases_salidas.user_id', auth()->user()->id)
+                ->orderBy('pases_salidas.fecha_solicitud', 'desc')
                 ->get();          
         }       
         return view('admin.institucion.pases.index', compact('pases'));
@@ -118,6 +121,61 @@ class PasesController extends Controller
             ->with('msj', 'Pase de salida eliminado correctamente.');
     }
 
+    public function show()
+    {
+       //Consultamos todos los pases de salida de ultimo mes
+        $pases = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+            ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+            ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+            ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area')
+            ->where('pases_salidas.fecha_solicitud', '>=', now()->subMonth())
+            ->orderBy('pases_salidas.fecha_solicitud', 'desc')
+            ->get(); 
+        // Obtenemos la lista de trabajadores del modelo usuario
+        $trabajadores = User::all(); 
+        // Obtenemos la lista de áreas del modelo area
+        $areas = Area::all();
+      
+        return view('admin.institucion.pases.show', compact('pases', 'trabajadores', 'areas'));
+    }
+
+    public function consultarPases(Request $request)
+    {
+        // Inicializar la variable para evitar el error de "variable no definida"
+        $pases = collect(); 
+    
+        // Construimos la consulta base
+        $query = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
+            ->join('users as jefes', 'pases_salidas.jefe_id', '=', 'jefes.id')
+            ->join('areas', 'pases_salidas.area_id', '=', 'areas.id')
+            ->select('pases_salidas.*', 'users.name as usuario', 'jefes.name as jefe', 'areas.nombre as area');
+    
+        // Si se filtra por trabajador
+        if ($request->trabajador_id != null && $request->area_id == null) {
+            $query->where('pases_salidas.user_id', $request->trabajador_id);
+        }
+        // Si se filtra por área
+        else if ($request->trabajador_id == null && $request->area_id != null) {
+            $query->where('pases_salidas.area_id', $request->area_id);
+        }
+        // Si se filtra por trabajador y área 
+        else if ($request->trabajador_id != null && $request->area_id != null) {
+            $query->where('pases_salidas.user_id', $request->trabajador_id)
+                  ->where('pases_salidas.area_id', $request->area_id);
+        }
+    
+        // Filtrar por rango de fechas si están definidos
+        if ($request->fecha_inicio && $request->fecha_fin) {
+            $query->whereBetween('pases_salidas.fecha_solicitud', [$request->fecha_inicio, $request->fecha_fin]);
+        }
+    
+        // Ejecutar la consulta
+        $pases = $query->orderBy('pases_salidas.fecha_solicitud', 'desc')->get();
+    
+        // Retornar el resultado en formato JSON
+        return response()->json($pases);
+    }
+    
     public function verificar($id)
     {
         $pase = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
@@ -174,7 +232,7 @@ class PasesController extends Controller
 
         // Autorizar o denegar el pase según el valor de $autorizar
         if ($autorizar === 'true') {
-            $pase->estado = 'autorizado'; // Puedes usar el estado que necesites
+            $pase->estado = 'aprobado'; // Puedes usar el estado que necesites
         } else {
             $pase->estado = 'denegado';
         }

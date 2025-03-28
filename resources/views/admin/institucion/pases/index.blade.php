@@ -9,7 +9,8 @@
     <a href="{{ route('pases.create') }}" class="btn btn-success" title="Agregar pase"><i class="fas fa-id-badge"></i></a>  
     {{--Verificamos que el usuario tenga el permiso verificar_pases o el permiso VIP para mostrar el botón de estadísticas--}}    
     @if(auth()->user()->hasAnyPermission(['verificar_pases', 'VIP']))
-        <a href="{{ route('pases.estadisticos') }}" class="btn btn-primary" title="Agregar pase"><i class="fas fa-chart-pie"></i></a>
+        <a href="{{ route('pases.estadisticos') }}" class="btn btn-primary" title="Estadisticos"><i class="fas fa-chart-pie"></i></a>
+        <a href="{{ route('pases.show') }}" class="btn btn-secondary" title="Consultar trabajador" id="findTrabajador"><i class="fas fa-user"></i></a>
     @endif 
     <br>
     <br>
@@ -33,7 +34,15 @@
                     <td>{{ $pase->usuario }}</td>
                     <td>{{ $pase->motivo }}</td>
                     <td>{{ $pase->fecha_solicitud }}</td>
-                    <td>{{ $pase->estado }}</td>
+                    <td>
+                        @if ($pase->estado == 'pendiente')
+                            <span class="badge badge-warning">Pendiente</span>
+                        @elseif ($pase->estado == 'aprobado')
+                            <span class="badge badge-success">Aprobado</span>
+                        @elseif ($pase->estado == 'denegado')
+                            <span class="badge badge-danger">Rechazado</span>
+                        @endif
+                    </td>
                     <td>                        
                         <a href="{{ route('pases.edit', $pase->id) }}" class="btn btn-warning" title="Editar pase"><i class="fas fa-edit"></i></a>                      
                         {{--Este link colo lo mostramos al jefe del área para que pueda verificar el pase de su trabajador--}}

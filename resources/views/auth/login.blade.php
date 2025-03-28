@@ -36,14 +36,11 @@
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                                 </div>
-
-                                @if (Route::has('password.request'))
-                                    <a href="{{ route('password.request') }}">
-                                    Olvido su contraseña?
-                                    </a>
-                                @endif
+                                <br>                               
+                                <a href="">Olvido su contraseña?</a>                              
                                 <br>
-                                <a href="https://www.kioselsar.com" target="about_blank" class="small text-muted" >Created by kioselsa</a>
+                                <br>
+                                <a href="https://github.com/kioselsa" target="about_blank" class="small text-muted" >Created by kioselsa</a>
                             </form>
                         </div>
                     </div>

@@ -23,6 +23,8 @@ Route::get('/download/{id_not}/{nomImg}', 'IndexController@getDownload');
  Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
  // Procesa el formulario de login
  Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+ // Muestra el formulario de recuperación de contraseña
+ Route::get('/password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 
 //Ruta del examen de nuevo ingreso
 Route::get('alumnos/exani',function(){return view('content.alumnos.exani');})->name('alumnos.exani');
@@ -342,6 +344,8 @@ Route::group(['middleware' => 'auth'],function(){
 	Route::get('institucion/pases/verificar/{id}',[PasesController::class,'verificar'])->name('pases.verificar')->middleware('permission:VIP|verificar_pases');
 	Route::get('institucion/pases/estadisticos',[PasesController::class,'estadisticos'])->name('pases.estadisticos')->middleware('permission:VIP|verificar_pases');
 	Route::get('institucion/pases/estadisticos/generar',[PasesController::class,'estadisticosGenerar'])->name('pases.estadisticos.generar')->middleware('permission:VIP|verificar_pases');
+	Route::get('institucion/pases/show',[PasesController::class,'show'])->name('pases.show')->middleware('permission:VIP|verificar_pases');
+	Route::get('institucion/pases/consultar',[PasesController::class,'consultarPases'])->name('pases.consultar')->middleware('permission:VIP|verificar_pases');
 	//Ruta para el correo de autorización de pases
 	Route::get('pases/autorizar/{pase_id}/{autorizar}', [PasesController::class, 'autorizar'])->name('pases.autorizar')->middleware('permission:VIP|verificar_pases');
 
