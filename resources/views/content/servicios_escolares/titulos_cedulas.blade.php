@@ -99,7 +99,7 @@
                         <td>6</td>
                         <td>Formato de no adeudos</td>
                         <td>
-                            <a type="button" class="btn btn-primary" href="{{asset('documents/content/servicios escolares/for_no_adeudo_tit_v4.docx ')}}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." download>
+                            <a type="button" class="btn btn-primary" href="{{ route('alumnos.adeudos') }}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." target="_blank">
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
