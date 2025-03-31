@@ -143,11 +143,15 @@
                             );
                         });
                         // Actualizar el texto de consulta
-                        var consultaTexto = "Consulta por ";
-                        if (trabajadorSeleccionado) {
+                        var consultaTexto = "";
+                        consultaTexto = "Consulta por| ";
+                        if (trabajadorSeleccionado && areaSeleccionada == null) {
                             consultaTexto += "trabajador: " + $('#trabajador option:selected').text();
-                        } else if (areaSeleccionada) {
+                        } else if (areaSeleccionada && trabajadorSeleccionado == null) {
                             consultaTexto += "área: " +  $('#area option:selected').text();
+                        }
+                        if (trabajadorSeleccionado && areaSeleccionada) {
+                            consultaTexto += " trabajador: " + $('#trabajador option:selected').text() + " y área: " +  $('#area option:selected').text();
                         }
                         if (fecha_inicio && fecha_fin) {
                             consultaTexto += " entre las fechas " + fecha_inicio + " y " + fecha_fin;
