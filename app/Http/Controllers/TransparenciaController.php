@@ -35,11 +35,11 @@ class TransparenciaController extends Controller
     public function perConsultar(Request $request)
     {
         // Verificamos que el usuario tenga al menos uno de los permisos
-        if (!auth()->user()->hasAnyPermission(['VIP', 'ver_transparencia'])) {
-            return redirect()->route('home')
-            ->with('msg', 'error')
-            ->with('msj', 'No tienes permiso para ver esta sección');
-        }
+        // if (!auth()->user()->hasAnyPermission(['VIP', 'ver_transparencia'])) {
+        //     return redirect()->route('home')
+        //     ->with('msg', 'error')
+        //     ->with('msj', 'No tienes permiso para ver esta sección');
+        // }
         $periodos=Periodo::all();
         $arch=Transparencia::where('id_periodo',$request->periodo)->get();
         $u_reg=Periodo::all()->last();
