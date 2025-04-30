@@ -189,7 +189,8 @@
             }
         </script>
 
-
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v22.0&appId=1849408622572415"></script>
 
         {{-- Seccion para los js por pagina--}}
         @yield('js')

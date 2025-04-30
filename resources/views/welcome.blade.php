@@ -169,7 +169,7 @@
 			{{--Facebook--}}
 			<div class="col-sm-4">
 				<h4>Facebook</h4>
-				<iframe defer src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTecNM.campus.Ciudad.Hidalgo%2F&tabs=timeline%2Cevents%2Cmessages&width=350&height=530&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="530" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+				<div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61575248454822" data-tabs="timeline" data-width="350" data-height="530" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=61575248454822" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61575248454822">Tecnológico de Ciudad Hidalgo</a></blockquote></div>
 			</div>
 		</div>
     </div>
