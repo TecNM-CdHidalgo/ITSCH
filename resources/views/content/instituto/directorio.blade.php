@@ -288,7 +288,7 @@
 					<div class="persona">
 						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">LMV. Jaime Alberto Gómes Barrón - Departamento de Comunicación y Vinculación</div>
+							<div class="nombre-puesto">ME. Jaime Alberto Gómez Barrón - Departamento de Comunicación y Vinculación</div>
 							<div class="contacto">Correo: <a href="com_vinculacion@cdhidalgo.tecnm.mx">com_vinculacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 175</div>
 						</div>
 					</div>
