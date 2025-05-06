@@ -79,114 +79,93 @@
 		<div class="row">
 			<div class="col-md-12 text-center">								
 				<h1>Directorio</h1>
-				<p>En esta sección se muestra el directorio del Instituto Tecnológico Superior de Ciudad Hidalgo.</p>
-				<p>Para mayor información, favor de comunicarse al teléfono (786) 1549000</p>
-				<div class="directorio">
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Mtro. José Trinidad Lara López - Director General</div>
-							<div class="contacto">Correo: <a href="direccion_general@cdhidalgo.tecnm.mx">direccion_general@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 102</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Mtra. Verónica Durán Martínez - Directora de Planeación y Vinculación</div>
-							<div class="contacto">Correo: <a href="direccion_planeacion@cdhidalgo.tecnm.mx">direccion_planeacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 121</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Mtro. Juan José Maldonado García - Director Académico</div>
-							<div class="contacto">Correo: <a href="direccion_academica@cdhidalgo.tecnm.mx">direccion_academica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 106</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">ISC. Óscar Delgado Camacho - Subdirector Académico</div>
-							<div class="contacto">Correo: <a href="subdireccion_academica@cdhidalgo.tecnm.mx">subdireccion_academica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 128</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Ing. Ricardo Antonio Moreno Ruiz - Subdirector de Planeación</div>
-							<div class="contacto">Correo: <a href="subdireccion_planeacion@cdhidalgo.tecnm.mx">subdireccion_planeacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 119</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">C.P. Vianeth Camacho García - (Encargada) Subdirección de Administración y Finanzas</div>
-							<div class="contacto">Correo: <a href="subdireccion_administracion@cdhidalgo.tecnm.mx">subdireccion_administracion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 112</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Mtra. Emma Yesenia Rivera Ruiz - (Encargada) Subdirección de Gestión Tecnológica y Vinculación</div>
-							<div class="contacto">Correo: <a href="subdireccion_vinculacion@cdhidalgo.tecnm.mx">subdireccion_vinculacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 174</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Dr. Mauricio Nahuam Chávez Avilés - Subdirector de Investigación y Posgrado</div>
-							<div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 105</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Ing. Natanael Vargas Pimentel - Jefe de la División de Ingeniería Industrial</div>
-							<div class="contacto">Correo: <a href="industrial@cdhidalgo.tecnm.mx">industrial@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 133</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">ISC. José Iraic Alcántar Alcántar - Jefe de la División de Ingeniería en Sistemas Computacionales</div>
-							<div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 129</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">MC. Guillermo Capistrano Zúñiga Neria - Jefe de la División de Ingeniería Mecatrónica</div>
-							<div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 134</div>
-						</div>
-					</div>	
-					<div class="persona">
-						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">MC. Lizeth Yazmín Soria Leal - Jefa de la División de Ingeniería Bioquímica</div>
-							<div class="contacto">Correo: <a href="bioquimica@cdhidalgo.tecnm.mx">bioquimica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 108</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">MTI. Armando López Hernández - Jefe de la División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
-							<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 109</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">C.P. Nancy Pérez Reyes - Jefa de la División de Ingeniería en Gestión Empresarial</div>
-							<div class="contacto">Correo: <a href="gestion_empresarial@cdhidalgo.tecnm.mx">gestion_empresarial@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 130</div>
-						</div>
-					</div>
-					<div class="persona">
-						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
-						<div class="info">
-							<div class="nombre-puesto">Dr. Ernesto Rodríguez Andrade - Jefe de la División de Ingeniería en Nanotecnología</div>
-							<div class="contacto">Correo: <a href="nanotecnologia@cdhidalgo.tecnm.mx">nanotecnologia@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 150</div>
-						</div>
-					</div>
+                <p>En esta sección se muestra el directorio del Instituto Tecnológico Superior de Ciudad Hidalgo.</p>
+                <p>Para mayor información, favor de comunicarse al teléfono (786) 1549000</p>
+                <div class="directorio">
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Mtro. José Trinidad Lara López - Director General</div>
+                            <div class="contacto">Correo: <a href="direccion_general@cdhidalgo.tecnm.mx">direccion_general@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 102</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Mtra. Verónica Durán Martínez - Directora de Planeación y Vinculación</div>
+                            <div class="contacto">Correo: <a href="direccion_planeacion@cdhidalgo.tecnm.mx">direccion_planeacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 121</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Mtro. Juan José Maldonado García - Director Académico</div>
+                            <div class="contacto">Correo: <a href="direccion_academica@cdhidalgo.tecnm.mx">direccion_academica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 106</div>
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Isc. Oscar Delgado Camacho - Subdirector Académico</div>
+                            <div class="contacto">Correo: <a href="subdireccion_academica@cdhidalgo.tecnm.mx">subdireccion_academica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 128</div>
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Ing. Ricardo Antonio Moreno Ruiz - Subdirector de Planeación</div>
+                            <div class="contacto">Correo: <a href="subdireccion_planeacion@cdhidalgo.tecnm.mx">subdireccion_planeacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 119</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">C.P. Vianeth Camacho García - (Encargada) Subdirección de Administración y Finanzas</div>
+                            <div class="contacto">Correo: <a href="subdireccion_administracion@cdhidalgo.tecnm.mx">subdireccion_administracion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 112</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Mtra. Emma Yesenia Rivera Ruiz - (Encargada) Subdirección de Gestión Tecnológica y Vinculación</div>
+                            <div class="contacto">Correo: <a href="subdireccion_vinculacion@cdhidalgo.tecnm.mx">subdireccion_vinculacion@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 174</div>
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Dr. Mauricio Nahuam Chávez Avilés - Subdirector de Investigación y Posgrado</div>
+                            <div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 105</div>
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Ing. Natanael Vargas Pimentel - Jefe de la División de Ingeniería Industrial</div>
+                            <div class="contacto">Correo: <a href="industrial@cdhidalgo.tecnm.mx">industrial@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 133</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">Isc. José Iraic Alcántar Alcántar - Jefe de la División de Ingeniería en Sistemas Computacionales</div>
+                            <div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 129</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">M.C. Guillermo Capistrano Zúñiga Neria - Jefe de la División de Ingeniería Mecatrónica</div>
+                            <div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 134</div>
+                        </div>
+                    </div>	
+                    <div class="persona">
+                        <img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+                        <div class="info">
+                            <div class="nombre-puesto">M.C. Lizeth Yazmín Soria Leal - Jefa de la División de Ingeniería Bioquímica</div>
+                            <div class="contacto">Correo: <a href="bioquimica@cdhidalgo.tecnm.mx">bioquimica@cdhidalgo.tecnm.mx</a>  | (786) 1549000 ext. 108</div>
+                        </div>
+                    </div>					
 					<div class="persona">
 						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 						<div class="info">
