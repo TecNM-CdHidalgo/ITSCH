@@ -167,6 +167,27 @@
                         </div>
                     </div>					
 					<div class="persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">MTI. Armando López Hernández - Jefe de la División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
+							<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 109</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">C.P. Nancy Pérez Reyes - Jefa de la División de Ingeniería en Gestión Empresarial</div>
+							<div class="contacto">Correo: <a href="gestion_empresarial@cdhidalgo.tecnm.mx">gestion_empresarial@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 130</div>
+						</div>
+					</div>
+					<div class="persona">
+						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
+						<div class="info">
+							<div class="nombre-puesto">Dr. Ernesto Rodríguez Andrade - Jefe de la División de Ingeniería en Nanotecnología</div>
+							<div class="contacto">Correo: <a href="nanotecnologia@cdhidalgo.tecnm.mx">nanotecnologia@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 150</div>
+						</div>
+					</div>
+					<div class="persona">
 						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 						<div class="info">
 							<div class="nombre-puesto">C. Alejandra Gutiérrez Bolaños - Departamento de Planeación, Programación y Presupuesto</div>
