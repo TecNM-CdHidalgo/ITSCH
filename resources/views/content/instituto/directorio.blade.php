@@ -239,7 +239,7 @@
 					<div class="persona">
 						<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">Mtra. Gabriela Medina Peña - Departamento de Desarrollo Académico y Educación Continua</div>
+							<div class="nombre-puesto">C. Brenda Nohemí Sánchez Alanís - Departamento de Desarrollo Académico y Educación Continua</div>
 							<div class="contacto">Correo: <a href="desarrollo_academico@cdhidalgo.tecnm.mx">desarrollo_academico@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 110</div>
 						</div>
 					</div>
@@ -267,7 +267,7 @@
 					<div class="persona">
 						<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 						<div class="info">
-							<div class="nombre-puesto">Lic. Héctor Edmundo Isidro García - Departamento de Centro de Negocios</div>
+							<div class="nombre-puesto">? - Departamento de Centro de Negocios</div>
 							<div class="contacto">Correo: <a href="centro_negocios@cdhidalgo.tecnm.mx"> centro_negocios@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 180</div>
 						</div>
 					</div>
