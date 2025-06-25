@@ -88,56 +88,56 @@
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Mtro. José Trinidad Lara López - Dirección General</div>
-						<div class="contacto">Correo: <a href="direccion_general@cdhidalgo.tecnm.mx">direccion_general@cdhidalgo.tecnm.mx</a> | (786) 1549001 ext. 201</div>
+						<div class="contacto">Correo: <a href="direccion_general@cdhidalgo.tecnm.mx">direccion_general@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 101</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Mtro. Juan José Maldonado García - Dirección Académica</div>
-						<div class="contacto">Correo: <a href="direccion_academica@cdhidalgo.tecnm.mx">direccion_academica@cdhidalgo.tecnm.mx</a> | (786) 1549002 ext. 202</div>
+						<div class="contacto">Correo: <a href="direccion_academica@cdhidalgo.tecnm.mx">direccion_academica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 202</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Mtra. Verónica Durán Martínez - Dirección de Planeación y Vinculación</div>
-						<div class="contacto">Correo: <a href="direccion_planeacion@cdhidalgo.tecnm.mx">direccion_planeacion@cdhidalgo.tecnm.mx</a> | (786) 1549003 ext. 203</div>
+						<div class="contacto">Correo: <a href="direccion_planeacion@cdhidalgo.tecnm.mx">direccion_planeacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 203</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Isc. Oscar Delgado Camacho - Subdirección Académica</div>
-						<div class="contacto">Correo: <a href="subdireccion_academica@cdhidalgo.tecnm.mx">subdireccion_academica@cdhidalgo.tecnm.mx</a> | (786) 1549004 ext. 204</div>
+						<div class="contacto">Correo: <a href="subdireccion_academica@cdhidalgo.tecnm.mx">subdireccion_academica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 204</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Dr. Mauricio Nahuam Chávez Avilés - Subdirección de Investigación y Posgrado</div>
-						<div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a> | (786) 1549005 ext. 205</div>
+						<div class="contacto">Correo: <a href="investigacion_posgrado@cdhidalgo.tecnm.mx">investigacion_posgrado@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 205</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Ing. Ricardo Antonio Moreno Ruiz - Subdirección de Planeación</div>
-						<div class="contacto">Correo: <a href="subdireccion_planeacion@cdhidalgo.tecnm.mx">subdireccion_planeacion@cdhidalgo.tecnm.mx</a> | (786) 1549006 ext. 206</div>
+						<div class="contacto">Correo: <a href="subdireccion_planeacion@cdhidalgo.tecnm.mx">subdireccion_planeacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 206</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Mtra. Emma Yesenia Rivera Ruiz - Subdirección de Gestión Tecnológica y Vinculación</div>
-						<div class="contacto">Correo: <a href="subdireccion_vinculacion@cdhidalgo.tecnm.mx">subdireccion_vinculacion@cdhidalgo.tecnm.mx</a> | (786) 1549007 ext. 207</div>
+						<div class="contacto">Correo: <a href="subdireccion_vinculacion@cdhidalgo.tecnm.mx">subdireccion_vinculacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 207</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">C.P. Vianeth Camacho García - Subdirección de Administración y Finanzas</div>
-						<div class="contacto">Correo: <a href="subdireccion_administracion@cdhidalgo.tecnm.mx">subdireccion_administracion@cdhidalgo.tecnm.mx</a> | (786) 1549008 ext. 208</div>
+						<div class="contacto">Correo: <a href="subdireccion_administracion@cdhidalgo.tecnm.mx">subdireccion_administracion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 208</div>
 					</div>
 				</div>
 				<div class="persona">
@@ -276,7 +276,7 @@
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">Lic. Albino Herrera García - Centro de Lenguas Extranjeras</div>
+						<div class="nombre-puesto">C. Albino Herrera García - Centro de Lenguas Extranjeras</div>
 						<div class="contacto">Correo: <a href="idiomas@cdhidalgo.tecnm.mx">idiomas@cdhidalgo.tecnm.mx</a> | (786) 1549028 ext. 228</div>
 					</div>
 				</div>
