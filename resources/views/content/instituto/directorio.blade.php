@@ -144,140 +144,140 @@
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Ing. Natanael Vargas Pimentel - División de Ingeniería Industrial</div>
-						<div class="contacto">Correo: <a href="industrial@cdhidalgo.tecnm.mx">industrial@cdhidalgo.tecnm.mx</a> | (786) 1549009 ext. 209</div>
+						<div class="contacto">Correo: <a href="industrial@cdhidalgo.tecnm.mx">industrial@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 209</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Isc. José Iraic Alcántar Alcántar - División de Ingeniería en Sistemas Computacionales</div>
-						<div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a> | (786) 1549010 ext. 210</div>
+						<div class="contacto">Correo: <a href="sistemas@cdhidalgo.tecnm.mx">sistemas@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 210</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">M.C. Guillermo Capistrano Zúñiga Neria - División de Ingeniería Mecatrónica</div>
-						<div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a> | (786) 1549011 ext. 211</div>
+						<div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 211</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">M.C. Lizeth Yazmín Soria Leal - División de Ingeniería Bioquímica</div>
-						<div class="contacto">Correo: <a href="bioquimica@cdhidalgo.tecnm.mx">bioquimica@cdhidalgo.tecnm.mx</a> | (786) 1549012 ext. 212</div>
+						<div class="contacto">Correo: <a href="bioquimica@cdhidalgo.tecnm.mx">bioquimica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 212</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">MTI. Armando López Hernández - División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
-						<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a> | (786) 1549013 ext. 213</div>
+						<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 213</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">C.P. Nancy Pérez Reyes - División de Ingeniería en Gestión Empresarial</div>
-						<div class="contacto">Correo: <a href="gestion_empresarial@cdhidalgo.tecnm.mx">gestion_empresarial@cdhidalgo.tecnm.mx</a> | (786) 1549014 ext. 214</div>
+						<div class="contacto">Correo: <a href="gestion_empresarial@cdhidalgo.tecnm.mx">gestion_empresarial@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 214</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Dr. Ernesto Rodríguez Andrade - División de Ingeniería en Nanotecnología</div>
-						<div class="contacto">Correo: <a href="nanotecnologia@cdhidalgo.tecnm.mx">nanotecnologia@cdhidalgo.tecnm.mx</a> | (786) 1549015 ext. 215</div>
+						<div class="contacto">Correo: <a href="nanotecnologia@cdhidalgo.tecnm.mx">nanotecnologia@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 215</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">IQ. Walter Iván Cortés Cruz - Departamento de Investigación y Ciencias Básicas</div>
-						<div class="contacto">Correo: <a href="invest_ciencias_basicas@cdhidalgo.tecnm.mx">invest_ciencias_basicas@cdhidalgo.tecnm.mx</a> | (786) 1549016 ext. 216</div>
+						<div class="contacto">Correo: <a href="invest_ciencias_basicas@cdhidalgo.tecnm.mx">invest_ciencias_basicas@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 216</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">C. Brenda Nohemí Sánchez Alanis - Departamento de Desarrollo Académico y Educación Continua</div>
-						<div class="contacto">Correo: <a href="desarrollo_academico@cdhidalgo.tecnm.mx">desarrollo_academico@cdhidalgo.tecnm.mx</a> | (786) 1549017 ext. 217</div>
+						<div class="contacto">Correo: <a href="desarrollo_academico@cdhidalgo.tecnm.mx">desarrollo_academico@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 217</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">LPE. María de Lourdes Sánchez Mora - Departamento de Tutorías y Servicios Psicopedagógicos</div>
-						<div class="contacto">Correo: <a href="tutorias@cdhidalgo.tecnm.mx">tutorias@cdhidalgo.tecnm.mx</a> | (786) 1549018 ext. 218</div>
+						<div class="contacto">Correo: <a href="tutorias@cdhidalgo.tecnm.mx">tutorias@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 218</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">C. Alejandra Gutiérrez Bolaños - Departamento de Planeación, Programación y Presupuesto</div>
-						<div class="contacto">Correo: <a href="programacion_presupuesto@cdhidalgo.tecnm.mx">programacion_presupuesto@cdhidalgo.tecnm.mx</a> | (786) 1549019 ext. 219</div>
+						<div class="contacto">Correo: <a href="programacion_presupuesto@cdhidalgo.tecnm.mx">programacion_presupuesto@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 219</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Arq. Luis Emmanuel Garfias Tello - Departamento de Estadística, Evaluación y Calidad</div>
-						<div class="contacto">Correo: <a href="estadistica_evaluacion@cdhidalgo.tecnm.mx">estadistica_evaluacion@cdhidalgo.tecnm.mx</a> | (786) 1549020 ext. 220</div>
+						<div class="contacto">Correo: <a href="estadistica_evaluacion@cdhidalgo.tecnm.mx">estadistica_evaluacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 220</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Ing. Miguel Alejandro Correa Becerril - Departamento de Servicios Escolares</div>
-						<div class="contacto">Correo: <a href="servicios_escolares@cdhidalgo.tecnm.mx">servicios_escolares@cdhidalgo.tecnm.mx</a> | (786) 1549021 ext. 221</div>
+						<div class="contacto">Correo: <a href="servicios_escolares@cdhidalgo.tecnm.mx">servicios_escolares@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 221</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">ME. Jaime Alberto Gómez Barrón - Departamento de Comunicación y Vinculación</div>
-						<div class="contacto">Correo: <a href="com_vinculacion@cdhidalgo.tecnm.mx">com_vinculacion@cdhidalgo.tecnm.mx</a> | (786) 1549022 ext. 222</div>
+						<div class="contacto">Correo: <a href="com_vinculacion@cdhidalgo.tecnm.mx">com_vinculacion@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 222</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">ISC. David Aguilar Espino - Departamento de Extensión Educativa</div>
-						<div class="contacto">Correo: <a href="ext_educativa@cdhidalgo.tecnm.mx">ext_educativa@cdhidalgo.tecnm.mx</a> | (786) 1549023 ext. 223</div>
+						<div class="contacto">Correo: <a href="ext_educativa@cdhidalgo.tecnm.mx">ext_educativa@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 223</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Ing. Isrrael Gutiérrez Granados - Departamento de Centro de Negocios</div>
-						<div class="contacto">Correo: <a href="centro_negocios@cdhidalgo.tecnm.mx">centro_negocios@cdhidalgo.tecnm.mx</a> | (786) 1549024 ext. 224</div>
+						<div class="contacto">Correo: <a href="centro_negocios@cdhidalgo.tecnm.mx">centro_negocios@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 224</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">LCF. María Elena Patiño Martínez - Departamento de Contabilidad y Recursos Financieros</div>
-						<div class="contacto">Correo: <a href="contabilidad_recursos@cdhidalgo.tecnm.mx">contabilidad_recursos@cdhidalgo.tecnm.mx</a> | (786) 1549025 ext. 225</div>
+						<div class="contacto">Correo: <a href="contabilidad_recursos@cdhidalgo.tecnm.mx">contabilidad_recursos@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 225</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">Ing. Alejandro Romero Estrada - Departamento de Recursos Materiales y Servicios</div>
-						<div class="contacto">Correo: <a href="recursos_materiales@cdhidalgo.tecnm.mx">recursos_materiales@cdhidalgo.tecnm.mx</a> | (786) 1549026 ext. 226</div>
+						<div class="contacto">Correo: <a href="recursos_materiales@cdhidalgo.tecnm.mx">recursos_materiales@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 226</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">C. Claudia Leyva Altamirano - Departamento de Recursos Humanos</div>
-						<div class="contacto">Correo: <a href="recursos_humanos@cdhidalgo.tecnm.mx">recursos_humanos@cdhidalgo.tecnm.mx</a> | (786) 1549027 ext. 227</div>
+						<div class="contacto">Correo: <a href="recursos_humanos@cdhidalgo.tecnm.mx">recursos_humanos@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 227</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">C. Albino Herrera García - Centro de Lenguas Extranjeras</div>
-						<div class="contacto">Correo: <a href="idiomas@cdhidalgo.tecnm.mx">idiomas@cdhidalgo.tecnm.mx</a> | (786) 1549028 ext. 228</div>
+						<div class="contacto">Correo: <a href="idiomas@cdhidalgo.tecnm.mx">idiomas@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 228</div>
 					</div>
 				</div>
 			</div>
