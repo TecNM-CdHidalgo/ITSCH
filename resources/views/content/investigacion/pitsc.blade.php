@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">¿ Qué es ?</h5>
                         <p class="card-text">Es el Programa para el Desarrollo Profesional Docente (PRODEP), que tiene como objetivo contribuir para que el personal docente y personal con funciones de dirección, de supervisión, de asesoría técnico-pedagógica y cuerpos académicos accedan y/o concluyan programas de formación, actualización académica, capacitación y/o proyectos de investigación para fortalecer el perfil necesario para el desempeño de sus funciones.</p>
-                        <a target="_blank" href="{{ asset('/documents/content/investigacion/pitsc/1_Información del Programa PRODEP.pdf') }}" class="btn btn-primary"> Más información</a>
+                        <a target="_blank" href="{{ asset('/documents/content/investigacion/pitsc/1-QUE ES EL S247 2025.df') }}" class="btn btn-primary"> Más información</a>
                     </div>
                 </div>
                 <br><br>
@@ -31,7 +31,7 @@
                         <p class="card-text">
                             La Contraloría Social es un grupo de beneficiarios, que, de manera organizada, verificaran el cumplimiento de las metas y la correcta aplicación de los recursos públicos asignados a Programas Presupuestales con recursos federales.
                         </p>
-                        <a target="_blank" href="{{ asset('documents/content/investigacion/pitsc/2.- Contraloria social 2023.pdf') }}" class="btn btn-primary"> Más información</a>
+                        <a target="_blank" href="{{ asset('documents/content/investigacion/pitsc/2-QUE ES LA CONTRALORIA SOCIAL 2025.pdf') }}" class="btn btn-primary"> Más información</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                                                         <td>Lineamientos
                                                             </td>
                                                         <td class="text-center">
-                                                            <a target="_blank" href="{{ asset('documents/content/investigacion/pitsc/documentos normativos/1.- Lineamientos CS 28-10-2016.pdf') }}">
+                                                            <a target="_blank" href="{{ asset('documents/content/investigacion/pitsc/3-normativos/1-Lineamientos 2024 S247.pdf') }}">
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button>
@@ -81,10 +81,10 @@
                                                         <td class="text-center">
                                                             <i class='fas fa-file-download' style='font-size:20px'></i>
                                                         </td>
-                                                        <td>Esquema de Contraloría Social 2023
+                                                        <td>Esquema de Contraloría Social
                                                             </td>
                                                         <td class="text-center">
-                                                        <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/documentos normativos/2.- ESQUEMA S247 PRODEP 2023.pdf') }}">
+                                                        <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/3-normativos/2-Esquema S247.pdf') }}">
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button>
@@ -95,9 +95,9 @@
                                                         <td class="text-center">
                                                             <i class='fas fa-file-download' style='font-size:20px'></i>
                                                         </td>
-                                                        <td>Programa Anual de Trabajo de Contraloría Social “PATCS” 2023 </td>
+                                                        <td>Guia Operativa </td>
                                                         <td class="text-center">
-                                                            <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/documentos normativos/3.- PATCS S247 PRODEP 2023.pdf') }}">
+                                                            <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/3-normativos/3-S247  Modelo 3 Guia O.pdf') }}">
 
                                                             <button class="btn btn-primary"  type="button">
                                                                 <i class='fas fa-download' style='font-size:20px'></i>
@@ -108,9 +108,9 @@
                                                         <td class="text-center">
                                                             <i class='fas fa-file-download' style='font-size:20px'></i>
                                                         </td>
-                                                        <td>Guía operativa de Contraloría Social 2023</td>
+                                                        <td>Modelo 4 PATCS</td>
                                                         <td class="text-center">
-                                                            <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/documentos normativos/4.- GUÍA OPERATIVA S247 PRODEP 2023.pdf') }}">
+                                                            <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/3-normativos/4-S247 2025 Modelo 4 PATCS.pdf') }}">
 
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
@@ -122,9 +122,9 @@
                                                         <td class="text-center">
                                                             <i class='fas fa-file-download' style='font-size:20px'></i>
                                                         </td>
-                                                        <td>Oficio de validación 2023</td>
+                                                        <td>Oficio de validación</td>
                                                         <td class="text-center">
-                                                            <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/documentos normativos/5.- OFICIO DE VALIDACIÓN S247 2023.pdf') }}">
+                                                            <a target="_blank"  href="{{ asset('documents/content/investigacion/pitsc/3-normativos/5-OF DE VALIDA S247.pdf') }}">
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button></a>
@@ -177,7 +177,7 @@
                                                             Anexo I. ACTA DE CONSTITUCIÓN DEL COMITÉ DE CONTRALORÍA SOCIAL
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="{{ asset('documents/content/investigacion/pitsc/Formatos de la Guia Operativa/Anexo 1 Acta Const.docx') }}" download>
+                                                            <a href="{{ asset('documents/content/investigacion/pitsc/3-normativos/5-S247 Anexo 1 Acta consti.pdf') }}" download>
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button>
@@ -192,7 +192,7 @@
                                                             Anexo II. ACTA DE SUSTITUCIÓN DE INTEGRANTE(S) DEL COMITÉ
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="{{ asset('documents/content/investigacion/pitsc/Formatos de la Guia Operativa/Anexo 2 Acta de Sust.docx') }}" download>
+                                                            <a href="{{ asset('documents/content/investigacion/pitsc/3-normativos/6-S247 Anexo 2 Acta Sust.pdf') }}" download>
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button>
@@ -207,7 +207,7 @@
                                                             Anexo III. MINUTA DE REUNIÓN DEL COMITÉ DE CONTRALORÍA SOCIAL
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="{{ asset('documents/content/investigacion/pitsc/Formatos de la Guia Operativa/Anexo 3 Mint reunión.docx') }}" download>
+                                                            <a href="{{ asset('documents/content/investigacion/pitsc/3-normativos/7-S247  2025 Anexo 3 Minuta.pdf') }}" download>
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button>
@@ -222,7 +222,7 @@
                                                             Anexo IV. INFORME DEL COMITÉ DE CONTRALORÍA SOCIAL
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="{{ asset('documents/content/investigacion/pitsc/Formatos de la Guia Operativa/Anexo 4 Informe.xlsx') }}" download>
+                                                            <a href="{{ asset('documents/content/investigacion/pitsc/3-normativos/8-S247 2025 Anexo 4 Inf.pdf') }}" download>
                                                                 <button class="btn btn-primary"  type="button">
                                                                     <i class='fas fa-download' style='font-size:20px'></i>
                                                                 </button>
@@ -240,14 +240,14 @@
                     </div>
                 </div>
                 <br>
-                <div class="card">
+                <!-- <div class="card">
                     <h5 class="card-header">   INFORMES TRIMESTRALES   </h5>
                     <div class="card-body">
                         <h5 class="card-title">Información de las actividades de Contraloría Social</h5>
                         <p class="card-text">Año 2022</p>
                         <a href="{{ asset('documents/content/investigacion/pitsc/1.- S247 INFORME F PRODEP-TecNM-2022.pdf') }}" target="_blank" class="btn btn-primary">Descargar</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="shadow-lg p-3 mb-5 bg-body rounded">
@@ -260,7 +260,7 @@
                     Procedente de las acciones de vigilancia y en caso de encontrarse irregularidades podrán presentarse quejas o denuncias a través de los siguientes mecanismos:
                     <br>
                     <p>Conoce más</p>
-                    <a href="{{ asset('documents/content/investigacion/pitsc/MECANISMOS PARA QUEJAS y DENUNCIAS 2023.pdf') }}" target="_blank">
+                    <a href="{{ asset('documents/content/investigacion/pitsc/4-MECANISMOS DE QUEJAS Y DENUNCIAS S247 2025.pdf') }}" target="_blank">
                         <button class="btn btn-primary"  type="button">
                             Descargar
                         </button>
@@ -268,7 +268,7 @@
                 </div>
             </div>
         </div>
-        <div class="shadow-lg p-3 mb-5 bg-body rounded">
+        <!-- <div class="shadow-lg p-3 mb-5 bg-body rounded">
             <div class="card">
                 <div class="card-header">
                      <h5>Sistema informático de contraloría social (Manual SICS)</h5>
@@ -286,7 +286,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <br><br>
 @endsection
