@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">¿ Qué es ?</h5>
                         <p class="card-text">Es el Programa para el Desarrollo Profesional Docente (PRODEP), que tiene como objetivo contribuir para que el personal docente y personal con funciones de dirección, de supervisión, de asesoría técnico-pedagógica y cuerpos académicos accedan y/o concluyan programas de formación, actualización académica, capacitación y/o proyectos de investigación para fortalecer el perfil necesario para el desempeño de sus funciones.</p>
-                        <a target="_blank" href="{{ asset('/documents/content/investigacion/pitsc/1-QUE ES EL S247 2025.df') }}" class="btn btn-primary"> Más información</a>
+                        <a target="_blank" href="{{ asset('/documents/content/investigacion/pitsc/1-QUE ES EL S247 2025.pdf') }}" class="btn btn-primary"> Más información</a>
                     </div>
                 </div>
                 <br><br>
