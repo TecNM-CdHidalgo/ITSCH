@@ -95,7 +95,9 @@
 		<div class="col-sm-3">
 			<h3>Noticias</h3>
 		</div>
-		<div class="col-sm-8"></div>
+		<div class="col-sm-8">
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/iZbT6Rr8GymBqeMH6'">Diagnostico psicologico</button>
+        </div>
 		<div class="col-sm-1">
 			<div id="occ-widget"></div>
 		</div>
