@@ -96,7 +96,9 @@
 			<h3>Noticias</h3>
 		</div>
 		<div class="col-sm-8">
-            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/iZbT6Rr8GymBqeMH6'">Diagnostico psicologico</button>
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/iZbT6Rr8GymBqeMH6'">Diagn&oacute;stico psicol&oacute;gico</button>
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/MwEn45Yf4WBvzAav5'">Diagn&oacute;stico educativo</button>
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/FS1wQbHHokCh1oqm7'">Diagn&oacute;stico m&eacute;dico</button>
         </div>
 		<div class="col-sm-1">
 			<div id="occ-widget"></div>
