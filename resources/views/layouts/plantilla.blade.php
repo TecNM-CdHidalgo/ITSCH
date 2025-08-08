@@ -68,7 +68,7 @@
         <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
         </a>
-        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgKS2ACkQ1hFt1UZzxqJKYABib2YChOlp51RaPZ8a0b8lg?e=fWgww0" title="Horarios del semestre" target="_blank">
+        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EsbShJg6D2tGreI9XT5llbQB15ZRBh4Ird-_rsQaGnZ42A?e=Q4OP01" title="Horarios del semestre" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
         </a>
         <a href="https://www.univim.edu.mx">
@@ -126,7 +126,7 @@
                 </ul>
                 <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>               
-                <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">Créditos</a>
+                <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">STA</a>
                 <a class="dropdown-item"  href="https://evaltutor.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
                 <a class="dropdown-item"  href="{{ route('alumnos.encuestasservicio') }}">Encuestas de servicios</a>
                 <a class="dropdown-item"  href="https://sed.cdhidalgo.tecnm.mx/">Evaluacion Docente</a>                
@@ -146,7 +146,7 @@
                     <a class="text-black dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
                     <a class="text-black dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
                     <a class="text-black dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
-                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EgKS2ACkQ1hFt1UZzxqJKYABib2YChOlp51RaPZ8a0b8lg?e=fWgww0" target="_blank">Horarios</a>
+                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EsbShJg6D2tGreI9XT5llbQB15ZRBh4Ird-_rsQaGnZ42A?e=Q4OP01" target="_blank">Horarios</a>
                     <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
                     <a class="text-black dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
                     <a class="text-black dropdown-item"  href="https://caracterizacion.cdhidalgo.tecnm.mx/alumno/">Examen psicometrico</a>

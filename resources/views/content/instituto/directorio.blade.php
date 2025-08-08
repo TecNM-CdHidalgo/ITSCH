@@ -157,14 +157,14 @@
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">M.C. Guillermo Capistrano Zúñiga Neria - División de Ingeniería Mecatrónica</div>
+						<div class="nombre-puesto">MTRO. Gabriel Casarrubias Guerrero - División de Ingeniería Mecatrónica</div>
 						<div class="contacto">Correo: <a href="mecatronica@cdhidalgo.tecnm.mx">mecatronica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 211</div>
 					</div>
 				</div>
 				<div class="persona">
-					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">M.C. Lizeth Yazmín Soria Leal - División de Ingeniería Bioquímica</div>
+						<div class="nombre-puesto">MTRO. Salvador Orozco Montes - División de Ingeniería Bioquímica</div>
 						<div class="contacto">Correo: <a href="bioquimica@cdhidalgo.tecnm.mx">bioquimica@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 212</div>
 					</div>
 				</div>
