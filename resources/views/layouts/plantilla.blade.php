@@ -299,10 +299,12 @@
                     <a class="dropdown-item" href="{{route('vinculacion.informacion')}}">Información</a>
                     <a class="dropdown-item" href="{{route('vinculacion.servcio-social')}}">Servicio Social</a>
                     <a class="dropdown-item" href="{{route('vinculacion.residencias')}}">Residencias Profesionales</a>
+                    <a class="dropdown-item" href="https://vinculacion.cdhidalgo.tecnm.mx/banco-de-residencias">Banco de Residencias Profesionales</a>
                     <a class="dropdown-item" href="{{route('vinculacion.banco_proyectos',1)}}">Banco de Proyectos</a>
                     <a class="dropdown-item" href="{{route('vinculacion.convenios')}}">  Convenios</a>
                     <a class="dropdown-item" href="{{route('vinculacion.cultura_deporte')}}">Cultura y deportes</a>
-                    <a class="dropdown-item" href="{{asset('documents/content/vinculacion/catálogo de servicios/catálogo de servicios 2024.pdf')}}" target="_blank">Catálogo de servicios</a>
+                    <a class="dropdown-item" href="https://vinculacion.cdhidalgo.tecnm.mx/catalogo-de-servicios" target="_blank">Catálogo de servicios</a>
+                    <a class="dropdown-item" href="https://vinculacion.cdhidalgo.tecnm.mx/" target="_blank">Consejo de Vinculación</a>
                 </div>
             </li>
 
