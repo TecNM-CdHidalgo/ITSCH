@@ -210,7 +210,7 @@
                 <a class="dropdown-item" href="{{ route('periodo.index') }}">Estados Financieros </a>
                 <a class="dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/webwin_cdhidalgo_tecnm_mx/EsgLgmm3nfxCkH6sDNf5BNABVpsvAeeRM882LE4JT_w6ng?e=8T5lM9" target="_blank">Evaluaciones docentes </a>
                 <a class="dropdown-item" href="{{ route('transparencia.informes') }}">Informes dirección</a>
-                <a class="dropdown-item" href="{{ route('transparencia.06_Indicadores_de_resultados_2do_trimestre_2025_itsch') }}">Indicadores de resultados</a>
+                <a class="dropdown-item" href="{{asset('documents/content/transparencia/06_Indicadores_de_resultados_2do_trimestre_2025_itsch.pdf')}}" target="_blank">Indicadores de resultados</a>
             </div>
         </li>
         <a href="http://itsch.edu.mx" class="mood"><img src="{{ asset('images/moodle.png') }}" alt='Moodle' title='Clases en linea ITSCH' class='img-fluid rounded'/></a>
