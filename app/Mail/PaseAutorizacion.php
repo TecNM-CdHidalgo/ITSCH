@@ -36,14 +36,15 @@ class PaseAutorizacion extends Mailable
      *
      * @return $this
      */
-    public function build()
+   public function build()
     {
-        return $this->view('emails.autorizacion')
-            ->with([
-                'pase' => $this->pase,
-                'trabajador' => $this->trabajador,
-                'jefe' => $this->jefe,
-            ]);
+    return $this->subject('Solicitud de Autorización de Pase de Salida')
+                ->view('emails.autorizacion')
+                ->with([
+                    'pase' => $this->pase,
+                    'trabajador' => $this->trabajador,
+                    'jefe' => $this->jefe,
+                ]);
     }
 }
 

@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 use App\Mail\PaseAutorizacion;
 use Illuminate\Support\Facades\Mail;
 use App\User;
+use Exception;
+use Illuminate\Validation\ValidationException;
 
 class PasesController extends Controller
 {
@@ -67,29 +69,67 @@ class PasesController extends Controller
      */
     public function store(Request $request)
     {
-        // Guardamos el id del usuario que solicita el pase
-        $request->merge(['user_id' => auth()->user()->id]);
-    
-        // Creamos el pase de salida
-        $pase = PasesSalida::create($request->all());
+        try {
+            // Iniciamos una transacción para asegurar la integridad de los datos
+            DB::beginTransaction();            
 
-        // Obtenemos el trabajador que está realizando la solicitud
-        $trabajador = User::find(auth()->user()->id); // Obtener al trabajador que está haciendo la solicitud
+            // Guardamos el id del usuario que solicita el pase
+            $request->merge(['user_id' => auth()->id()]);
 
-        // Obtenemos el jefe
-        $jefe = User::find($request->jefe_id);
+            // Creamos el pase de salida
+            $pase = PasesSalida::create($request->all());
 
-        // Verificamos si el jefe existe
-        if ($jefe) {
-            // Enviar correo al jefe con el nombre del trabajador que está solicitando el pase
+            if (!$pase) {
+                throw new Exception('Error al crear el pase de salida');
+            }
+
+            // Obtenemos el trabajador y el jefe
+            $trabajador = User::find(auth()->id());
+            $jefe = User::find($request->jefe_id);
+
+            if (!$trabajador) {
+                throw new Exception('Usuario trabajador no encontrado');
+            }
+
+            if (!$jefe) {
+                throw new Exception('Jefe no encontrado');
+            }
+
+            // Verificamos que el jefe tenga email
+            if (empty($jefe->email)) {
+                throw new Exception('El jefe no tiene un email registrado');
+            }
+
+            // Intentamos enviar el correo
             Mail::to($jefe->email)->send(new PaseAutorizacion($pase, $trabajador, $jefe));
-        }       
-    
-        return redirect()->route('pases.index')
-            ->with('msg','success')
-            ->with('msj', 'Pase de salida creado correctamente y correo enviado al jefe para autorización.');
-    }
 
+            // Si todo sale bien, confirmamos la transacción
+            DB::commit();
+
+            return redirect()->route('pases.index')
+                ->with('msg', 'success')
+                ->with('msj', 'Pase de salida creado correctamente y correo enviado al jefe para autorización.');
+
+        } catch (ValidationException $e) {
+            DB::rollBack();
+            return redirect()->back()
+                ->withErrors($e->errors())
+                ->withInput();
+                
+        } catch (Exception $e) {
+            DB::rollBack();
+            
+            // Log del error para debugging
+            logger()->error('Error en store de PasesSalida: ' . $e->getMessage());
+            
+            return redirect()->route('pases.index')
+                ->with('msg', 'error')
+                ->with('msj', 'Error al crear el pase: ' . $e->getMessage());
+        }
+    }
+    /**
+     * Display the specified resource.
+     */
     public function edit($id)
     {
         $pase = PasesSalida::join('users', 'pases_salidas.user_id', '=', 'users.id')
