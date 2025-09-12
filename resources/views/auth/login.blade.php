@@ -36,8 +36,8 @@
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                                 </div>
-                                <br>                               
-                                <a href="">Olvido su contraseña?</a>                              
+                                <br>  
+                                <a href="{{ route('password.request') }}" class="small text-muted">¿Olvidaste tu contraseña?</a>                                              
                                 <br>
                                 <br>
                                 <a href="https://github.com/kioselsa" target="about_blank" class="small text-muted" >Created by kioselsa</a>
