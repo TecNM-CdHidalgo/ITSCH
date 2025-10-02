@@ -192,7 +192,7 @@
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">IQ. Walter Iván Cortés Cruz - Departamento de Investigación y Ciencias Básicas</div>
+						<div class="nombre-puesto">Dra. Grisel Fierros Romero - Departamento de Investigación y Ciencias Básicas</div>
 						<div class="contacto">Correo: <a href="invest_ciencias_basicas@cdhidalgo.tecnm.mx">invest_ciencias_basicas@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 216</div>
 					</div>
 				</div>
@@ -248,7 +248,7 @@
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">Ing. Isrrael Gutiérrez Granados - Departamento de Centro de Negocios</div>
+						<div class="nombre-puesto">IGE. María de la Luz Alanis Chávez - Departamento de Centro de Negocios</div>
 						<div class="contacto">Correo: <a href="centro_negocios@cdhidalgo.tecnm.mx">centro_negocios@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 224</div>
 					</div>
 				</div>
