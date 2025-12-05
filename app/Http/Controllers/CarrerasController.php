@@ -445,8 +445,7 @@ class CarrerasController extends Controller
     /*Edicion de especialidades*/
     public function editEspecialidad($id)
     {
-        dd(Auth::User()->tipo);
-        if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "academica"){
+            if(Auth::User()->tipo != "administrador" && Auth::User()->tipo != "jefe"){
             return redirect()->route('home');
         }
 
