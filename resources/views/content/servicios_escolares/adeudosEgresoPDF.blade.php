@@ -87,15 +87,9 @@
     <div style="padding: 50px;"></div>
 
     <img src="" alt="Firma" width="150px">
-    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong>_______________________________ <br> Departamento de servicios escolares</strong></p>
+    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong>_______________________________ <br> Departamento de servicios escolares</strong></p>   
 
-    <div style="padding: 20px;"></div>
-
-    <img src="" alt="Firma" width="150px">
-    <p style="text-align: center; font-size: 20px; font-weight: bold; font-family: 'Palatino Linotype', serif;"><strong> _______________________________ <br>Biblioteca</strong></p>
-
-
-    <div style="padding: 20px;"></div>
+    <div style="padding: 60px;"></div>
 
     <p style="text-align: right; font-size: 16px; font-family: 'Palatino Linotype', serif;">
         Ciudad Hidalgo, Michoacán a {{ $fecha }}

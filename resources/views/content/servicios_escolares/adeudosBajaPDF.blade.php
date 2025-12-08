@@ -102,10 +102,20 @@
 
     <P>FECHA _____________________________</P>
 
-    <P style="text-align: center;">_________________________ <br><strong>FIRMA DEL INTERESADO</strong> </P>
-    <br><br>
-    <p style="text-align: center;">_______________________________ <br><strong>JEFE DEL DEPTO. DE SERVICIOS ESCOLARES</strong> </p>
-
+    <P style="text-align: center;">_________________________ <br>FIRMA DEL INTERESADO</P>
+    
+    <table class="firmas" style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="text-align: center; width: 50%;">
+                _______________________________<br>
+                JEFE DEL DEPTO. DE TUTORIAS
+            </td>
+            <td style="text-align: center; width: 50%;">
+                _______________________________<br>
+                JEFE DEL DEPTO. DE SERVICIOS ESCOLARES
+            </td>
+        </tr>
+    </table>
     <p style="text-align: right; font-size: 16px; font-family: 'Palatino Linotype', serif;">
         Ciudad Hidalgo, Michoacán a {{ $fecha }}
     </p>
