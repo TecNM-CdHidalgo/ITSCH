@@ -22,6 +22,10 @@
                         value="{{ $alumno?->alu_Nombre ?? 'No encontrado' }} {{ $alumno?->alu_ApePaterno ?? '' }} {{ $alumno?->alu_ApeMaterno ?? '' }}" readonly>
                     </div>
                     <div class="form-group">
+                        <label for="concepto">Concepto</label>
+                        <textarea  class="form-control" id="concepto" name="concepto" rows="3">{{ $adeudo->concepto }}</textarea>
+                    </div>
+                    <div class="form-group">
                         <label for="status">Status</label>
                         <select class="form-control" id="status" name="status">
                             <option value="pendiente">Pendiente</option>

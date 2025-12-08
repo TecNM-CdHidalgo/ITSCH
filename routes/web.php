@@ -308,7 +308,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('contenido/periodos/inicio', [TransparenciaController::class, 'periodos'])->name('periodos.inicio');
     Route::get('contenido/periodo/agregar', [TransparenciaController::class, 'perCreate'])->name('periodos.agregar');
     Route::get('contenido/periodo/modificar', [TransparenciaController::class, 'perUpdate'])->name('periodo.update');
-    Route::get('contenido/periodo/eliminar', [TransparenciaController::class, 'perDestroy'])->name('periodo.eliminar');
+    Route::get('contenido/periodo/eliminar', [TransparenciaController::class, 'perDestroy'])->name('periodo.eliminar');	
 
     //Rutas convenios
     Route::get('contenido/convenios/inicio',[ConvenioController::class,'index'])->name('convenios.inicio');

@@ -33,7 +33,7 @@ class AdeudosController extends Controller
         $controles = $adeudos->pluck('control')->toArray();
 
         if (empty($controles)) {
-            return view('admin.institucion.adeudos.index')->with('msg', 'error')->with('msj','¡No se encontraron adeudos pendientes!');
+            return view('admin.institucion.adeudos.index')->with('msg', 'error')->with('msj','¡No se encontraron adeudos pendientes!')->with('adeudos', $adeudos);
         }
 
         // Cargar todos los alumnos en una sola consulta
@@ -132,6 +132,7 @@ class AdeudosController extends Controller
         $adeudo = Adeudos::find($request->id);
         $adeudo->control = $request->control;
         $adeudo->status = $request->status;
+        $adeudo->concepto = $request->concepto;
         $adeudo->fecha_pago = Carbon::now();
         $adeudo->save();
         return redirect()->route('adeudos.index') ->with('success','¡El adeudo se actualizó correctamente!');
