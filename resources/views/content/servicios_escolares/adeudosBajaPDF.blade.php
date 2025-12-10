@@ -108,7 +108,7 @@
         <tr>
             <td style="text-align: center; width: 50%;">
                 _______________________________<br>
-                JEFE DEL DEPTO. DE TUTORIAS
+                DEPARTAMENTO DE TUTORIAS
             </td>
             <td style="text-align: center; width: 50%;">
                 _______________________________<br>
