@@ -35,6 +35,8 @@ Route::get('transparencia/informes', function(){return view('content.transparenc
 Route::get('transparencia/indicadores', function(){return view('content.transparencia.indicadores');})->name('transparencia.indicadores');
 Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');
 Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perConsultar'])->name('periodo.consultar');
+Route::get('transparencia/re', function(){return view('content.transparencia.reportes');})->name('transparencia.reportes');
+
 
 //Rutas de vinculación
 Route::get('vinculacion/bolsa-de-trabajo',function(){return view('content.vinculacion.bolsa-de-trabajo');})->name('vinculacion.bolsa-de-trabajo');
