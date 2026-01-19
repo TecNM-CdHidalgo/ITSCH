@@ -119,12 +119,14 @@
             <ul class="dropdown-menu">
                 <a  class="text-black dropdown-item" href="{{route('servicios_escolares.servicios')}}">Servicios Escolares</a>
                 <ul>
+                    <!-- <a class="dropdown-item" href="https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXASPIRANTE&psie=cdhidalgo&dummy=0">Aspirantes</a> -->
+                    <a class="dropdown-item" href="https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXESTUDIANTE&psie=cdhidalgo&dummy=0">SIE (Calificaciones)</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.titulos_cedulas')}}">Títulos y Cédulas</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.alumnos-traslados')}}">Alumnos de traslado</a>
                     <a class="text-black dropdown-item" href="{{route('servicios_escolares.constancias')}}">Solicitud de documentos oficiales</a>
                     <a class="text-black dropdown-item" href="{{ route('alumnos.adeudos') }}">Adeudos</a>                     
                 </ul>
-                <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a>
+                <!-- <a class="dropdown-item" href="http://www.itsch.edu.mx:8080/sicenet/">SICENET</a> -->
                 <a class="dropdown-item"  href="{{ route('alumnos.asesorias') }}">Asesorías académicas</a>               
                 <a class="dropdown-item"  href="https://creditos.cdhidalgo.tecnm.mx/">STA</a>
                 <a class="dropdown-item"  href="https://evaltutor.cdhidalgo.tecnm.mx/">Evaluación al tutor</a>
@@ -144,7 +146,8 @@
 
             <div class="dropdown-menu">
                     <a class="text-black dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
-                    <a class="text-black dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a>
+                    <!-- <a class="text-black dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a> -->
+                    <a class="text-black dropdown-item" href="https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXDOCENTE&psie=cdhidalgo&dummy=0">SIE (Calificaciones)</a>
                     <a class="text-black dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
                     <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EsbShJg6D2tGreI9XT5llbQB15ZRBh4Ird-_rsQaGnZ42A?e=Q4OP01" target="_blank">Horarios</a>
                     <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
