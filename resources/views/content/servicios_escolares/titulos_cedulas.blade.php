@@ -12,7 +12,7 @@
             <hr class="red">
             <p>
                 Cualquier duda o aclaración de forma individual les atenderemos en
-                servicios escolares o vía telefónica al 786 154 9000 ext. 125 o 167.
+                servicios escolares o vía telefónica al 786 154 9000 ext. 221.
             </p>
             <hr class="red">
             <h2>Documentos para descarga</h2>
@@ -94,16 +94,7 @@
                                 <i class='fas fa-download' style='font-size:20px'></i>
                             </a>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Formato de no adeudos</td>
-                        <td>
-                            <a type="button" class="btn btn-primary" href="{{ route('alumnos.adeudos') }}" data-toogle="tooltip" title="Constancia de no Adeudo para alumnos próximos a Titularse." target="_blank">
-                                <i class='fas fa-download' style='font-size:20px'></i>
-                            </a>
-                        </td>
-                    </tr>
+                    </tr>                   
                     <tr>
                         <td>7</td>
                         <td>Formato de firma</td>

@@ -24,11 +24,7 @@
                         <div class="panel-body">
                             Se considera residencia profesional a aquella actividad, realizada durante el desarrollo de un proyecto o en la aplicación práctica de un modelo, en cualquiera de las áreas de desarrollo establecidas, que definan una problemática y propongan una solución viable, a través de la participación directa del alumno en desempeños propios de su futura profesión.<br> Las <strong>Residencias Profesionales</strong> se plantean como un proceso de aprendizaje que implica la aplicación del conocimiento teórico adquirido en las aulas con diversas experiencias prácticas a las cuales propondrá respuesta dentro del ámbito laboral.
                             </p>
-                            <hr>
-                            <h5>Condiciones generales del convenio de Residencias Profesionales</h5>
-                            <a target="_blank" data-toogle="tooltip"  title="Encuesta del asesor externo " download href='{{asset('documents/content/vinculacion/residencias/cgcrp.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
-                            <br>
-                            <hr>
+                            <hr>                           
                             <h5>Lineamientos para la operación y acreditación de la residencia profesional</h5>
                             <a target="_blank" data-toogle="tooltip"  title="Lineamientos" download href='{{asset('documents/content/vinculacion/residencias/lineamiento_para_la_operacion_y_acreditacion_de_la_residencia_profesional.pdf')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a> </p>
                             <br>
@@ -47,7 +43,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-parent="#accordion1" data-toggle="collapse" href="#panel-02" aria-expanded="true" aria-controls="panel-02">
-                            <p style='font-size: 2.5em;'><h3 style="color: #9D2449;">DURACION</h3></p>
+                            <p style='font-size: 2.5em;'><h3 style="color: #9D2449;">DURACIÓN</h3></p>
                             </a>
                         </h4>
                         <button type="button" class="collpase-button collapsed" data-parent="#accordion1" data-toggle="collapse" href="#panel-02"></button>
@@ -101,23 +97,20 @@
                             <hr>
                             2. Solicitud de residencias.
                             (Periodo bien establecido fecha inicio y fecha final de residencias) entregarlo a la encargada de residencias al inicio de su residencia.<br>
-                            <hr>
-                            3. Convenio de residencias profesinales.
-                            (Llenar el convenio y entregarlo a la encargada de residencias y una copia a vinculación).
-                            <hr>
-                            4. Cardex con calificaciones.
+                            <hr>                            
+                            3. Cardex con calificaciones.
                             (Tener aprobado al menos 80% de créditos de su plan de estudio).
                             <hr>
-                            5. Carta de aceptación.
+                            4. Carta de aceptación.
                             (Hoja membretada y dirigida al jefe de carrera, debe incluir nombre del alumno, nombre de proyecto, asesor por parte de la empresa, fecha de inicio y fecha final de residencias).
                             <hr>
-                            6. Carta de presentación.
+                            5. Carta de presentación.
                             (La emite vinculación y se debe de entregar una copia a la encargada de residencias firmada y sellada por la empresa).
                             <hr>
-                            7. Constancia de Acreditación de servicio social.
+                            6. Constancia de Acreditación de servicio social.
                             (Entregarlo a la encargada de residencias al inicio de su residencia).
                             <hr>
-                            8. Acreditación de actividades complementarias.
+                            7. Acreditación de actividades complementarias.
                             (La emite el jefe de carrera).
                             </p>
                         </div>
@@ -171,30 +164,29 @@
                             <strong><u>IMPORTANTE:</u></strong>
                             <br><br>
                             TU EXPEDIENTE COMPLETO DEBE DE CONTENER LA SIGUIENTE DOCUMENTACIÓN:
-                            <br>
-                            <br>1.- Convenio
-                            <br> 2.- Solicitud de residencias
-                            <br>3.- Kardex
-                            <br>4.- Anteproyecto con firma de aceptación
-                            <br> 5.- Carta de presentación firmada y sellada de recibido por la empresa
-                            <br>6.- Carta de aceptación (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa)
-                            <br>7.- Constancia de acreditación del servicio social
-                            <br>8.- NOTA: ACTIVIDADES COMPLEMENTARIAS (SI YA ESTA EN EL KARDEX , YA NO ES NECESARIA).
-                            <br>9.- Cronograma (Si faltan firmas de la división, se colocarán una vez que entregues el expediente en físico)
-                            <br>10.- 4 Formatos de asesoría (con firmas del alumno y asesor interno)
-                            <br>11.- Carta de terminación de la empresa (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa).
-                            <br>12.- 3 Formatos de evaluación ( dos se generaban en la 2 y 4 revisión y en el que se evalua la estructura del proyecto  en la 4 revisión).
-                            <br>13.- Carta de liberación de residencias por parte del asesor interno.
-                            <br> 14.- Encuesta del asesor externo
-                            <br>15.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio"> https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio</a>
-                            <br> 16.- Memoria con su proyecto final, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno
+                            <br>                           
+                            <br>1.- Solicitud de residencias
+                            <br>2.- Kardex
+                            <br>3.- Anteproyecto con firma de aceptación
+                            <br>4.- Carta de presentación firmada y sellada de recibido por la empresa
+                            <br>5.- Carta de aceptación (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa)
+                            <br>6.- Constancia de acreditación del servicio social
+                            <br>7.- NOTA: ACTIVIDADES COMPLEMENTARIAS (SI YA ESTA EN EL KARDEX , YA NO ES NECESARIA).
+                            <br>8.- Cronograma (Si faltan firmas de la división, se colocarán una vez que entregues el expediente en físico)
+                            <br>9.- 4 Formatos de asesoría (con firmas del alumno y asesor interno)
+                            <br>10.- Carta de terminación de la empresa (en hoja membretada de la empresa, con periodo de residencia, firma y sello de la empresa).
+                            <br>11.- 3 Formatos de evaluación ( dos se generaban en la 2 y 4 revisión y en el que se evalua la estructura del proyecto  en la 4 revisión).
+                            <br>12.- Carta de liberación de residencias por parte del asesor interno.
+                            <br>13.- Encuesta del asesor externo
+                            <br>14.- No. De folio de encuesta de residencias profesionales de la pagina del campus <a href="https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio"> https://www.cdhidalgo.tecnm.mx/alumnos/encuestasservicio</a>
+                            <br>15.- Memoria con su proyecto final, en anexos o después de la portada adjuntar la carta de terminación de la empresa y carta de liberación del asesor interno
                             <br><br>
                             <strong> SIGUIENTES DOCUMENTOS SOLO SI:</strong>
                             <br>
-                            <br>17.- * La empresa no cuenta con sello u hoja membretada , se debe entregar oficio de la empresa dirigido al jefe de división.
-                            <br>18.- * Cambio de asesor. Entregar oficio por parte de la empresa por cambio de asesor.
-                            <br>19.-* Cambio de nombre de proyecto. Entregar oficio por cambio del nombre del proyecto.
-                            <br>20.-* Solicitud ante comité académico. Si solicitaste extensión, cambios de fecha, cambio de título, cambio de objetivos ante comité académico añadirlo.
+                            <br>16.- * La empresa no cuenta con sello u hoja membretada , se debe entregar oficio de la empresa dirigido al jefe de división.
+                            <br>17.- * Cambio de asesor. Entregar oficio por parte de la empresa por cambio de asesor.
+                            <br>18.-* Cambio de nombre de proyecto. Entregar oficio por cambio del nombre del proyecto.
+                            <br>19.-* Solicitud ante comité académico. Si solicitaste extensión, cambios de fecha, cambio de título, cambio de objetivos ante comité académico añadirlo.
                             </p>
 
                         </div>
@@ -247,12 +239,7 @@
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Solicitud de residencias " download href='{{asset('documents/content/vinculacion/residencias/carta presentacion.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
                             </p>
-                            <br>
-                            CONVENIO DE RESIDENCIAS PROFESIONALES.
-                            <p align="center">
-                            <a target="_blank" data-toogle="tooltip"  title="Convenio  de residencias " download href='{{asset('documents/content/vinculacion/residencias/Convenio de residencias.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
-                            </p>
-                            <br>
+                            <br>                           
                             CARTA DE ACEPTACIÓN.
                             <p align="center">
                             <a target="_blank" data-toogle="tooltip"  title="Carta de aceptacion  de residencias " download href='{{asset('documents/content/vinculacion/residencias/carta_aceptacionv1.docx')}}' type="button" download  class="btn btn-primary">     <i class='fas fa-download' style='font-size:20px'></i></a>
