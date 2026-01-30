@@ -68,7 +68,7 @@
         <a href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" title="Calendario Académico" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/calendario_icono.png') }}" alt="Calendario Académico">
         </a>
-        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EsbShJg6D2tGreI9XT5llbQB15ZRBh4Ird-_rsQaGnZ42A?e=Q4OP01" title="Horarios del semestre" target="_blank">
+        <a href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/IgDQ_RgxLMC6TY7ZyQ7KKnXhAefPRHdg52o0bNCTl-QoX1g?e=voRggs" title="Horarios del semestre" target="_blank">
         <img class="imgBand" src="{{ asset('images/banderas/horario.png') }}" alt="Horarios">
         </a>
         <a href="https://www.univim.edu.mx">
@@ -149,7 +149,7 @@
                     <!-- <a class="text-black dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a> -->
                     <a class="text-black dropdown-item" href="https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXDOCENTE&psie=cdhidalgo&dummy=0">SIE (Calificaciones)</a>
                     <a class="text-black dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
-                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/EsbShJg6D2tGreI9XT5llbQB15ZRBh4Ird-_rsQaGnZ42A?e=Q4OP01" target="_blank">Horarios</a>
+                    <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/IgDQ_RgxLMC6TY7ZyQ7KKnXhAefPRHdg52o0bNCTl-QoX1g?e=voRggs" target="_blank">Horarios</a>
                     <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
                     <a class="text-black dropdown-item"  href="{{ route('alumnos.exani') }}" >Exani</a>
                     <a class="text-black dropdown-item"  href="https://caracterizacion.cdhidalgo.tecnm.mx/alumno/">Examen psicometrico</a>
