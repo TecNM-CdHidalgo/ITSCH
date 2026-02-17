@@ -45,7 +45,7 @@
                     <td>{{ $esp->clave }}</td>
                     <td>{{ $esp->objetivo }}</td>
                     <td>
-                        <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" download type="button" class="btn btn-primary btn-sm" title="Descargar reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
+                        <a href="{{ asset('storage/carreras_archivos/'.$esp->nom_arch_ret) }}" target="_blank" type="button" class="btn btn-primary btn-sm" title="Ver reticula"><i class='fas fa-book' style='font-size:16px'></i></a>
                     </td>
                 </tr>
             @endforeach
