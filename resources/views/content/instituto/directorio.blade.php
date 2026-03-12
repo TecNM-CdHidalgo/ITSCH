@@ -171,7 +171,7 @@
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">MTI. Armando López Hernández - División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
+						<div class="nombre-puesto">Ing. Juan Carlos Hernández Mazcote - División de Ingeniería en Tecnologías de la Información y Comunicaciones</div>
 						<div class="contacto">Correo: <a href="tics@cdhidalgo.tecnm.mx">tics@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 213</div>
 					</div>
 				</div>
@@ -255,14 +255,14 @@
 				<div class="persona">
 					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">LCF. María Elena Patiño Martínez - Departamento de Contabilidad y Recursos Financieros</div>
+						<div class="nombre-puesto">CP. Agustín Mondragón Zetina - Departamento de Contabilidad y Recursos Financieros</div>
 						<div class="contacto">Correo: <a href="contabilidad_recursos@cdhidalgo.tecnm.mx">contabilidad_recursos@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 225</div>
 					</div>
 				</div>
 				<div class="persona">
 					<img src="{{asset('images/userh.png')}}" alt="Foto de persona">
 					<div class="info">
-						<div class="nombre-puesto">Ing. Alejandro Romero Estrada - Departamento de Recursos Materiales y Servicios</div>
+						<div class="nombre-puesto">Arq. Raúl Quintero Mora- Departamento de Recursos Materiales y Servicios</div>
 						<div class="contacto">Correo: <a href="recursos_materiales@cdhidalgo.tecnm.mx">recursos_materiales@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 226</div>
 					</div>
 				</div>
