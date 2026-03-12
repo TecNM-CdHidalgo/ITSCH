@@ -253,7 +253,7 @@
 					</div>
 				</div>
 				<div class="persona">
-					<img src="{{asset('images/userf.jpg')}}" alt="Foto de persona">
+					<img src="{{asset('images/userh.jpg')}}" alt="Foto de persona">
 					<div class="info">
 						<div class="nombre-puesto">CP. Agustín Mondragón Zetina - Departamento de Contabilidad y Recursos Financieros</div>
 						<div class="contacto">Correo: <a href="contabilidad_recursos@cdhidalgo.tecnm.mx">contabilidad_recursos@cdhidalgo.tecnm.mx</a> | (786) 1549000 ext. 225</div>
