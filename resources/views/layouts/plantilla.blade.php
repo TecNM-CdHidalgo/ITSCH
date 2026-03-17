@@ -112,6 +112,12 @@
     </button>
     <div class="collapse navbar-collapse " id="collapsibleNavBlanco" >
         <ul class="navbar-nav ml-auto bg-white ancho" >
+
+        <li class="nav-item dropdown  ml-4">
+            <a class="nav-link active" href="https://cdhidalgo.tecnm.mx/Noticias/Ver/289" >Aspirantes</a>
+            
+        </li>
+
         <li class="nav-item dropdown  ml-4">
             <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Alumnos
@@ -147,7 +153,7 @@
             <div class="dropdown-menu">
                     <a class="text-black dropdown-item" href="{{ route('institucion.sidi') }}">Sistema Digital de información (SIDI)</a>
                     <!-- <a class="text-black dropdown-item" href="https://bit.ly/3b04YFD">Sistema de control escolar (SICE)</a> -->
-                    <a class="text-black dropdown-item" href="https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXDOCENTE&psie=cdhidalgo&dummy=0">SIE (Calificaciones)</a>
+                    <a class="text-black dropdown-item" href="https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXDOCENTE&psie=cdhidalgo&dummy=0">SIE (profesores)</a>
                     <a class="text-black dropdown-item" href="https://climalaboral.cdhidalgo.tecnm.mx/Usuario.php">Encuesta de clima laboral</a>
                     <a class="text-black dropdown-item" href="https://tecitsch-my.sharepoint.com/:f:/g/personal/academica_cdhidalgo_tecnm_mx/IgDQ_RgxLMC6TY7ZyQ7KKnXhAefPRHdg52o0bNCTl-QoX1g?e=voRggs" target="_blank">Horarios</a>
                     <a class="text-black dropdown-item" href="{{ asset('documents/content/documentos_apoyo/calendario.pdf') }}" target="_blank">Calendario Académico</a>
