@@ -124,8 +124,36 @@
                             </tr>`;
                         $("#tabAdeudos tbody").append(fila);
                     },
-                    error: function(xhr, status, error) {
-                        console.error("Error en la solicitud:", error);
+                  error: function(xhr, status, error) {
+                        console.error("Status:", status);
+                        console.error("Error:", error);
+                        console.error("Response Text:", xhr.responseText);
+                        console.error("Status Code:", xhr.status);
+                        console.error("Response JSON:", xhr.responseJSON);
+                        
+                        // Si el servidor devuelve errores de validación de Laravel
+                        if (xhr.status === 422 && xhr.responseJSON) {
+                            console.error("Errores de validación:", xhr.responseJSON.errors);
+                            alert("Error de validación: " + JSON.stringify(xhr.responseJSON.errors));
+                        }
+                        // Si es error 500
+                        else if (xhr.status === 500) {
+                            console.error("Error interno del servidor");
+                            // Intenta extraer el error de Laravel
+                            if (xhr.responseText) {
+                                console.error("Detalle:", xhr.responseText);
+                            }
+                        }
+                        // Error 419 (CSRF)
+                        else if (xhr.status === 419) {
+                            console.error("Error CSRF - Actualiza la página");
+                            alert("La sesión expiró, recarga la página");
+                        }
+                        // Error 401 o 403
+                        else if (xhr.status === 401 || xhr.status === 403) {
+                            console.error("Error de autenticación/permiso");
+                        }
+                        
                         $("#btnBuscar").prop("disabled", false).text("Buscar");
                     }
                 });
