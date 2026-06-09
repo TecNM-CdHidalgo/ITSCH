@@ -112,7 +112,7 @@
             </td>
             <td style="text-align: center; width: 50%;">
                 _______________________________<br>
-                JEFE DEL DEPTO. DE SERVICIOS ESCOLARES
+                ENCARGADO DEL DEPARTAMENTO DE CONTROL ESCOLAR
             </td>
         </tr>
     </table>
