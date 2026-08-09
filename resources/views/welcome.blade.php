@@ -98,9 +98,9 @@
 		<div class="col-sm-8">
             <button type="button" class="btn btn-success btn-sm" onclick="location.href='https://cdhidalgo.sistemasie.app/cgi-bin/sie.pl?Opc=PINDEXASPIRANTE&psie=cdhidalgo&dummy=0'">Aspirantes</button>
             <button type="button" class="btn btn-success btn-sm" onclick="location.href='https://recibos.cdhidalgo.tecnm.mx/'">Ficha de pago</button>
-            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/iZbT6Rr8GymBqeMH6'">Diagn&oacute;stico psicol&oacute;gico</button>
-            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/MwEn45Yf4WBvzAav5'">Diagn&oacute;stico educativo</button>
-            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/FS1wQbHHokCh1oqm7'">Diagn&oacute;stico m&eacute;dico</button>
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/G6vPmsAE5BVr8cT77'">Diagn&oacute;stico psicol&oacute;gico</button>
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/N7JmBMxHthf3e4Sr7'">Diagn&oacute;stico educativo</button>
+            <button type="button" class="btn btn-info btn-sm" onclick="location.href='https://forms.gle/f3tpJPc6MBj36X3m8'">Diagn&oacute;stico m&eacute;dico</button>
         </div>
 		<div class="col-sm-1">
 			<div id="occ-widget"></div>
