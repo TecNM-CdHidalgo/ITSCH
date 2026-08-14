@@ -35,6 +35,7 @@ Route::get('transparencia/informes', function(){return view('content.transparenc
 Route::get('transparencia/indicadores', function(){return view('content.transparencia.indicadores');})->name('transparencia.indicadores');
 Route::get('contenido/periodo/index', [TransparenciaController::class, 'index'])->name('periodo.index');
 Route::get('contenido/periodo/consultar', [TransparenciaController::class, 'perConsultar'])->name('periodo.consultar');
+Route::get('contenido/transparencia/archivos/descargar/{id_arch}', [TransparenciaController::class, 'archDownload'])->name('transparencia.archivos.descargar');
 Route::get('transparencia/re', function(){return view('content.transparencia.reportes');})->name('transparencia.reportes');
 
 
@@ -306,7 +307,6 @@ Route::group(['middleware' => 'auth'],function(){
     //Rutas de transparencia
     Route::get('contenido/transparencia/archivos/agregar/{id_per}', [TransparenciaController::class, 'archPerAgregar'])->name('transparencia.archivos.agregar');
     Route::post('contenido/transparencia/archivos/guardar', [TransparenciaController::class, 'store'])->name('transparencia.archivos.guardar');
-	Route::get('contenido/transparencia/archivos/descargar/{id_arch}', [TransparenciaController::class, 'archDownload'])->name('transparencia.archivos.descargar');
     Route::get('contenido/transparencia/archivos/eliminar/{id_arch}', [TransparenciaController::class, 'archDestroy'])->name('transparencia.archivos.eliminar');
 	Route::post('contenido/transparencia/archivos/eliminar-todos/{id_per}', [TransparenciaController::class, 'archDestroyAll'])->name('transparencia.archivos.eliminarTodos');
     Route::get('contenido/periodos/inicio', [TransparenciaController::class, 'periodos'])->name('periodos.inicio');
