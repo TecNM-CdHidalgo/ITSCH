@@ -110,7 +110,7 @@ class TransparenciaController extends Controller
         }
 
         $periodo=Periodo::find($id_per);
-        $arch=Transparencia::where('id_periodo',$id_per)->get();
+        $arch=Transparencia::where('id_periodo',$id_per)->orderBy('nombre')->get();
         return view('admin.contenido.transparencia.crear')
         ->with('periodo',$periodo)
         ->with('arch',$arch);
@@ -140,14 +140,25 @@ class TransparenciaController extends Controller
             if(!Storage::has('public/transparencia/'.$periodo->nombre)){
             Storage::makeDirectory('public/transparencia/'.$periodo->nombre);
             }
-            if($request->has('arch'))
+            if($request->hasFile('arch'))
             {
-                $file =$request->arch;
-                $archExtension = $file->getClientOriginalExtension();
-                $archExtension = strtolower($archExtension);
-                if($archExtension == 'pdf' || $archExtension == 'doc' || $archExtension == "docx" || $archExtension == 'csv' || $archExtension == "xls" || $archExtension == "xlsx" ){
+                $files = $request->file('arch');
+                usort($files, function ($firstFile, $secondFile) {
+                    return strcasecmp($firstFile->getClientOriginalName(), $secondFile->getClientOriginalName());
+                });
+
+                foreach ($files as $file) {
+                    $archExtension = strtolower($file->getClientOriginalExtension());
+                    if($archExtension != 'pdf' && $archExtension != 'doc' && $archExtension != "docx" && $archExtension != 'csv' && $archExtension != "xls" && $archExtension != "xlsx" ){
+                        DB::rollback();
+                        return Redirect()->back()->with('error','¡La extencion del archivo no es valida!');
+                    }
+                }
+
+                foreach ($files as $file) {
+                    $archExtension = strtolower($file->getClientOriginalExtension());
                     $path = storage_path().'/app/public/transparencia/'.$periodo->nombre;
-                    $name = 'arch'.time().'.'.strtolower($archExtension);
+                    $name = 'arch'.uniqid().'.'.$archExtension;
                     $file->move($path,$name);
                     //Guardamos el nombre del archivo en la tabla de transparencia
                     $nom_orig=$file->getClientOriginalName();
@@ -157,8 +168,6 @@ class TransparenciaController extends Controller
                     $nombre=substr($nom_orig,0,(strlen($nom_orig))-(strlen($archExtension)+1));
                     $transparencia->nombre = strtoupper($nombre);
                     $transparencia->save();
-                }else{
-                    return Redirect()->back()->with('error','¡La extencion del archivo no es valida!');
                 }
             }
         }
@@ -172,7 +181,7 @@ class TransparenciaController extends Controller
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
         return Redirect()->back()
-        ->with('success','¡El archivo se dio de alta correctamente!');
+        ->with('success','¡Los archivos se dieron de alta correctamente!');
     }
 
 

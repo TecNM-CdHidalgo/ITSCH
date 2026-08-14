@@ -9,7 +9,7 @@
             <div class="col-sm-7"></div>
             <div class="col-sm-5">
                 <div class="input-group mb-3">
-                    <input type="file" name="arch" id="arch" required class="form-control">
+                    <input type="file" name="arch[]" id="arch" required multiple class="form-control">
                     <input type="hidden" name="id" readonly value="{{ $periodo->id }}">
                     <div class="input-group-append">
                         <button type="submit" title="Cargar archivo" class="btn btn-success btn-sm"><i class='fas fa-cloud-upload-alt' style='font-size:14px'></i></button>
