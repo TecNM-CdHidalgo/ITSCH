@@ -19,6 +19,12 @@
         </div>
     </form>
     <hr>
+    @if ($arch->count())
+        <form action="{{ route('transparencia.archivos.eliminarTodos',$periodo->id) }}" method="post" class="text-right mb-3" onsubmit="return confirm('¿Eliminar todos los archivos de este periodo?');">
+            @csrf
+            <button type="submit" title="Eliminar todos los archivos" class="btn btn-danger btn-sm"><i class='far fa-trash-alt' style='font-size:14px'></i> Eliminar todos</button>
+        </form>
+    @endif
     <div class="table-responsive">
         <table class="table">
             <thead>

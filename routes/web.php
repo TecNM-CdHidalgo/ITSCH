@@ -308,6 +308,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::post('contenido/transparencia/archivos/guardar', [TransparenciaController::class, 'store'])->name('transparencia.archivos.guardar');
 	Route::get('contenido/transparencia/archivos/descargar/{id_arch}', [TransparenciaController::class, 'archDownload'])->name('transparencia.archivos.descargar');
     Route::get('contenido/transparencia/archivos/eliminar/{id_arch}', [TransparenciaController::class, 'archDestroy'])->name('transparencia.archivos.eliminar');
+	Route::post('contenido/transparencia/archivos/eliminar-todos/{id_per}', [TransparenciaController::class, 'archDestroyAll'])->name('transparencia.archivos.eliminarTodos');
     Route::get('contenido/periodos/inicio', [TransparenciaController::class, 'periodos'])->name('periodos.inicio');
     Route::get('contenido/periodo/agregar', [TransparenciaController::class, 'perCreate'])->name('periodos.agregar');
     Route::get('contenido/periodo/modificar', [TransparenciaController::class, 'perUpdate'])->name('periodo.update');

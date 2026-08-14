@@ -23,7 +23,7 @@ class TransparenciaController extends Controller
         $periodos=Periodo::all();
         $u_reg=Periodo::all()->last();
         $per_sel=Periodo::select('nombre','id')->first()->get();
-        $arch=Transparencia::where('id_periodo',$per_sel[0]->id)->get();
+        $arch=$this->ordenarArchivos(Transparencia::where('id_periodo',$per_sel[0]->id)->get());
         return view('content.transparencia.acceso_transparencia')
         ->with('arch',$arch)
         ->with('periodos',$periodos)
@@ -41,7 +41,7 @@ class TransparenciaController extends Controller
         //     ->with('msj', 'No tienes permiso para ver esta sección');
         // }
         $periodos=Periodo::all();
-        $arch=Transparencia::where('id_periodo',$request->periodo)->get();
+        $arch=$this->ordenarArchivos(Transparencia::where('id_periodo',$request->periodo)->get());
         $u_reg=Periodo::all()->last();
         $per_sel=Periodo::select('nombre')->where('id',$request->periodo)->get();
         return view('content.transparencia.acceso_transparencia')
@@ -61,7 +61,7 @@ class TransparenciaController extends Controller
             ->with('msg', 'error')
             ->with('msj', 'No tienes permiso para ver esta sección');
         }
-        $per=Periodo::all();
+        $per=Periodo::all().sortByDesc('id');
         return view('admin.contenido.transparencia.periodos')
         ->with('per',$per);
     }
@@ -110,7 +110,7 @@ class TransparenciaController extends Controller
         }
 
         $periodo=Periodo::find($id_per);
-        $arch=Transparencia::where('id_periodo',$id_per)->orderBy('nombre')->get();
+        $arch=$this->ordenarArchivos(Transparencia::where('id_periodo',$id_per)->get());
         return view('admin.contenido.transparencia.crear')
         ->with('periodo',$periodo)
         ->with('arch',$arch);
@@ -144,7 +144,7 @@ class TransparenciaController extends Controller
             {
                 $files = $request->file('arch');
                 usort($files, function ($firstFile, $secondFile) {
-                    return strcasecmp($firstFile->getClientOriginalName(), $secondFile->getClientOriginalName());
+                    return strnatcasecmp($firstFile->getClientOriginalName(), $secondFile->getClientOriginalName());
                 });
 
                 foreach ($files as $file) {
@@ -203,6 +203,13 @@ class TransparenciaController extends Controller
         return response()->download($pathToFile, $arch->nombre.'.'.$extension);
     }
 
+    private function ordenarArchivos($archivos)
+    {
+        return $archivos->sort(function ($primerArchivo, $segundoArchivo) {
+            return strnatcasecmp($primerArchivo->nombre, $segundoArchivo->nombre);
+        })->values();
+    }
+
 
 
     /**
@@ -243,6 +250,38 @@ class TransparenciaController extends Controller
         // Hacemos los cambios permanentes ya que no han habido errores
         DB::commit();
         return Redirect()->back()->with('success','¡El archivo se elimino correctamente!');
+    }
+
+    public function archDestroyAll($id_per)
+    {
+        if (!auth()->user()->hasAnyPermission(['VIP', 'eliminar_transparencia'])) {
+            return redirect()->route('home')
+            ->with('msg', 'error')
+            ->with('msj', 'No tienes permiso para ver esta sección');
+        }
+
+        $periodo = Periodo::find($id_per);
+        if($periodo == NULL){
+            return Redirect()->back()->with('error','¡No se encontro el periodo!');
+        }
+
+        DB::beginTransaction();
+        try
+        {
+            $archivos = Transparencia::where('id_periodo', $id_per)->get();
+            foreach ($archivos as $archivo) {
+                Storage::delete('public/transparencia/'.$periodo->nombre.'/'.$archivo->nom_arch);
+            }
+            Transparencia::where('id_periodo', $id_per)->delete();
+        }
+        catch (\Exception $e)
+        {
+            DB::rollback();
+            return Redirect()->back()->with('error','¡A ocurrido un error!');
+        }
+
+        DB::commit();
+        return Redirect()->back()->with('success','¡Todos los archivos se eliminaron correctamente!');
     }
 
     //Función para modificar el periodo
