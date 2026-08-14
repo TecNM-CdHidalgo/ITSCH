@@ -34,7 +34,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $ar->nombre }}</td>
                         <td>
-                            <a href="{{ asset('storage/transparencia/'.$periodo->nombre.'/'.$ar->nom_arch) }}" download type="button" title="Descargar" class="btn btn-primary btn-sm"><i class='fas fa-cloud-download-alt' style='font-size:14px'></i></a>
+                            <a href="{{ route('transparencia.archivos.descargar',$ar->id) }}" title="Descargar" class="btn btn-primary btn-sm"><i class='fas fa-cloud-download-alt' style='font-size:14px'></i></a>
                             <a href="{{ route('transparencia.archivos.eliminar',$ar->id) }}" type="button" title="Eliminar" class="btn btn-sm btn-danger"><i class='far fa-trash-alt' style='font-size:14px'></i></a>
                         </td>
                     </tr>

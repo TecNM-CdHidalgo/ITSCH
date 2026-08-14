@@ -184,6 +184,25 @@ class TransparenciaController extends Controller
         ->with('success','¡Los archivos se dieron de alta correctamente!');
     }
 
+    public function archDownload($id_arch)
+    {
+        $arch = Transparencia::find($id_arch);
+
+        if($arch == NULL){
+            return Redirect()->back()->with('error','¡No se encontro el archivo!');
+        }
+
+        $periodo = Periodo::find($arch->id_periodo);
+        $pathToFile = storage_path().'/app/public/transparencia/'.$periodo->nombre.'/'.$arch->nom_arch;
+
+        if(!file_exists($pathToFile)){
+            return Redirect()->back()->with('error','¡El archivo no se encuentra disponible!');
+        }
+
+        $extension = pathinfo($arch->nom_arch, PATHINFO_EXTENSION);
+        return response()->download($pathToFile, $arch->nombre.'.'.$extension);
+    }
+
 
 
     /**
