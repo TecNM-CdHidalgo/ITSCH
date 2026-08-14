@@ -1,4 +1,6 @@
 <IfModule mod_rewrite.c>
+    php_value max_file_uploads 100
+
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
