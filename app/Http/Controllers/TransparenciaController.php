@@ -20,9 +20,9 @@ class TransparenciaController extends Controller
         //     ->with('msg', 'error')
         //     ->with('msj', 'No tienes permiso para ver esta sección');
         // }
-        $periodos=Periodo::all();
-        $u_reg=Periodo::all()->last();
-        $per_sel=Periodo::select('nombre','id')->first()->get();
+        $periodos=Periodo::orderBy('id','desc')->get();
+        $u_reg=Periodo::orderBy('id','desc')->first();
+        $per_sel=Periodo::select('nombre','id')->orderBy('id','desc')->limit(1)->get();
         $arch=$this->ordenarArchivos(Transparencia::where('id_periodo',$per_sel[0]->id)->get());
         return view('content.transparencia.acceso_transparencia')
         ->with('arch',$arch)
@@ -40,9 +40,9 @@ class TransparenciaController extends Controller
         //     ->with('msg', 'error')
         //     ->with('msj', 'No tienes permiso para ver esta sección');
         // }
-        $periodos=Periodo::all();
+        $periodos=Periodo::orderBy('id','desc')->get();
         $arch=$this->ordenarArchivos(Transparencia::where('id_periodo',$request->periodo)->get());
-        $u_reg=Periodo::all()->last();
+        $u_reg=Periodo::orderBy('id','desc')->first();
         $per_sel=Periodo::select('nombre')->where('id',$request->periodo)->get();
         return view('content.transparencia.acceso_transparencia')
         ->with('arch',$arch)
@@ -61,7 +61,7 @@ class TransparenciaController extends Controller
             ->with('msg', 'error')
             ->with('msj', 'No tienes permiso para ver esta sección');
         }
-        $per=Periodo::all().sortByDesc('id');
+        $per=Periodo::orderBy('id','desc')->get();
         return view('admin.contenido.transparencia.periodos')
         ->with('per',$per);
     }
